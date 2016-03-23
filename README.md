@@ -1,5 +1,7 @@
 # Geste
 
+Un corpus de chansons de geste.
+
 Les textes médiévaux sont du domaine public.
 
 Le reste est mis à disposition selon une licence Creative Commons Attribution-NonCommercial 4.0 International License.
