@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/XML/1998/namespace" xmlns:ns1="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="Modele.xsd"/>
+  <xs:attributeGroup name="id">
+    <xs:attribute name="id" use="required" form="qualified" type="xs:ID">
+      <xs:annotation>
+        <xs:documentation>(identifiant) fournit un identifiant unique pour l'élément qui porte l'attribut</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attribute name="lang" type="ns1:data.language">
+    <xs:annotation>
+      <xs:documentation>(langue) indique la langue du contenu de l'élément en utilisant les codes du RFC 3066</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attributeGroup name="id1">
+    <xs:attribute name="id" use="required" form="qualified" type="xs:ID">
+      <xs:annotation>
+        <xs:documentation>(identifiant) fournit un identifiant unique au document (composé du mot-clé ed pour une édition numérisée, ms pour une transcription de manuscrit, crit pour une édition critique ; du nom du texte, sous une forme standard ; et du sigle du manuscrit, ou celui attribué au texte critique ou, pour une édition, du nom de famille du premier éditeur suivi d'un tiret et de la date, voir )</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+</xs:schema>
