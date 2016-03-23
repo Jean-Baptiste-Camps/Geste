@@ -2,6 +2,8 @@
 
 Un corpus de chansons de geste.
 
+*Ki volt oïr chançun de beau semblant…*
+
 Les développements présentés ici sont produits pour part, collaborativement, dans le cadre du projet LAKME (*Linguistically Annotated Corpora Using Machine Learning Techniques*, ENS/EPHE/ENC) et pour part dans le cadre de la thèse de doctorat de Jean-Baptiste Camps (Univ. Paris-Sorbonne).
 
 Les textes médiévaux sont du domaine public.
