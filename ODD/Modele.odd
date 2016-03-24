@@ -249,7 +249,7 @@
                         une référence <gi>biblFull</gi>, dans le cas d'une édition fondée sur un
                         document TEI préexistant, soit une notice de manuscrit <gi>msDesc</gi>, pour
                         la transcription d'un manuscrit. <specList>
-                            <specDesc key="bibl"/>
+                            <specDesc key="bibl"/><!-- TODO: ajouter biblStruct plutôt ? et retirer bibl? -->
                             <specDesc key="biblFull"/>
                             <specDesc key="msDesc"/>
                         </specList> Dans le cas d'une notice de manuscrit, les informations auront
@@ -2583,7 +2583,10 @@
                                 <classRef key="model.milestoneLike"/>
                                 <classRef key="model.noteLike"/>
                                 <!-- Voir le niveau que l'on veut définir pour les notes -->
+                                <!-- Rétablir le model.pPart.edit? Quitte à le redéfinir?-->
                                 <elementRef key="choice"/>
+                                <elementRef key="subst"/>
+                                <classRef key="model.pPart.transcriptional"/>
                             </alternate>
                         </content>
                         <attList>

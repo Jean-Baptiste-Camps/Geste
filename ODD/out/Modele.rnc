@@ -6,7 +6,7 @@ default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-03-23T20:05:24Z. .
+# Schema generated from ODD source 2016-03-24T20:34:42Z. .
 # TEI Edition: Version 2.9.1. Last updated on
 #	15th October 2015, revision 46ac023
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -2737,7 +2737,9 @@ w =
      | model.hiLike
      | model.milestoneLike
      | model.noteLike
-     | choice)+,
+     | choice
+     | subst
+     | model.pPart.transcriptional)+,
     att.global.attribute.xmlid,
     att.global.attribute.xmllang,
     att.global.linking.attribute.synch,

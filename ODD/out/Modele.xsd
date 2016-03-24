@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-03-23T20:05:17Z. .
+    Schema generated from ODD source 2016-03-24T20:34:25Z. .
     TEI Edition: Version 2.9.1. Last updated on
     	15th October 2015, revision 46ac023
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -4350,6 +4350,8 @@ Elements]</xs:documentation>
         <xs:element ref="ns1:model.milestoneLike"/>
         <xs:element ref="ns1:model.noteLike"/>
         <xs:element ref="ns1:choice"/>
+        <xs:element ref="ns1:subst"/>
+        <xs:group ref="ns1:model.pPart.transcriptional"/>
       </xs:choice>
       <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
       <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
