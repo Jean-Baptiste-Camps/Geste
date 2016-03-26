@@ -7,10 +7,19 @@
          <titleStmt>
             <title type="main">Floovant</title>
                  <title type="sub">Numérisation de l'édition de Guessard de 1858</title>
-                 <author/>
-                 <editor>H. Michelant</editor>
-                 <editor>F. Guessard</editor>
-                 <!-- Je ne sais pas si on mets les infos d'auteur et éditeurs de l'édition ici? -->
+                 <author>Anonyme</author>
+                 <editor xml:id="Guessard">
+                         <persName>
+                                 <forename>François</forename>
+                                 <surname>Guessard</surname>
+                         </persName>
+                 </editor>
+                 <editor xml:id="Michelant">
+                         <persName>
+                                 <forename>Henri</forename>
+                                 <surname>Michelant</surname>
+                         </persName>
+                 </editor>
             <respStmt xml:id="JBC">
                <resp>sous la direction de</resp>
                <persName>Jean-Baptiste Camps</persName>
@@ -36,10 +45,12 @@
                  <availability status="restricted">
                          <licence>Fichier de travail, à ne pas diffuser.</licence>
                  </availability>
+                 <!-- Revoir la licence -->
                  <date>2016-03-25</date>
          </publicationStmt>
          <sourceDesc>
                  <biblStruct>
+                         <monogr>
                          <title type="main">Floovant</title>
                          <title type="sub">Chanson de geste</title>
                          <editor xml:id="Michelant">
@@ -55,22 +66,29 @@
                                  </persName>
                          </editor>
                          <imprint><publisher>P. Jannet</publisher>
-                         <placeName>Paris</placeName>
-                                 <date>1858</date></imprint>
+                                 <pubPlace>Paris</pubPlace>
+                                 <date>1858</date>
+                         </imprint>
+                                 <imprint>
+                                         <publisher>F. Vieweg</publisher>
+                                         <pubPlace>Paris</pubPlace>
+                                         <date>1859</date>
+                                 </imprint>
+                         </monogr>
                  </biblStruct>
-                 <!-- imprint numero 2. -->
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <creation>
-            <origPlace cert="unknown" resp="#LI">Inconnue</origPlace>
-            <origDate cert="low" resp="#LI">Fin XIIe siècle</origDate>
+            <origPlace cert="unknown" resp="#Guessard #Michelant">Inconnue</origPlace>
+            <origDate cert="medium" resp="#Guessard #Michelant">XIIe siècle</origDate>
+            <origDate cert="medium" resp="#Arlima">Fin XIIe siècle</origDate>
          </creation>
-              <!-- responsabilités -->
          <langUsage>
-            <language cert="medium" resp="#LI" ident="fro" usage="100">Ancien français avec marques de dialecte lorrain</language>
+            <language cert="high" resp="Guessard" ident="xno" usage="80">Anglo-normand</language>
+                 <language cert="high" resp="Guessard" ident="fro-lorrain" usage="20">Dialecte lorrain</language>
          </langUsage>
-              <!-- REvoir fro-lorrain + note. -->
+           <!-- Le lorrain n'a pas d'identifiant selon la norme ISO. Nous avons donc repris l'identifiant utilisé par les Bibliothèques virtuelles humanistes. -->
       </profileDesc>
       <revisionDesc status="draft">
          <change who="JBC" when="2016-03-25" status="draft">Création du gabarit, transformation du fichier hocr en TEI et segmentation.</change>
@@ -80,45 +98,41 @@
       <front>
                   <!-- <lb/>FLOOVANT-->
               
-<pb facs="facsimile0308.bin.png" n="0308"/>
+<div type="colophon">
+        <pb facs="facsimile0308.bin.png" n="0308"/>
+      <p>   <lb/>Paris, imprimé par GUIRAUDET et JOUAUST, 338, rue S.-Honoré,
 
-         <lb/>Paris, imprimé par GUIRAUDET et JOUAUST, 338, rue S.-Honoré,
-
-<lb/>avec les caractères elzeviriens de P. JANNET.
+              <lb/>avec les caractères elzeviriens de P. JANNET.</p></div>
 
              
               <pb facs="facsimile0309.bin.png" n="0309"/> 
               <div type="page_de_titre">
-                      <head><lb/>Floovent</head>
-              <!-- Il y a une faute : c'est FLOOVANT. Doit-on corriger? 
-              Puis après : CHANSON DE GESTE -->
-
-<lb/>Publiée pour la premiere fois
+                     
+                      <head><lb/>FLOOVANT</head> 
+             
+<p><lb/>Publiée pour la premiere fois
 <lb/>d'après le manuscrit unique de Montpellier 
-                      <!-- PAR -->
-<lb/>MM. F. GUESSARD ET H. MICHELANT
+<lb/>MM. F. GUESSARD ET H. MICHELANT</p>
 
-<lb/>A PARIS
+<p><lb/>A PARIS
 <lb/>Chez F. VIEWEG, Libraire-Editeur
 <lb/>Maison A. FRANCK
-<lb/>RUE DE RICHELIEU, N° 67
+<lb/>RUE DE RICHELIEU, N° 67</p> 
               
-      
+      </div><div type="preface"> <!-- Arrêt le 26 mars au niveau de la fin du texte lacunaire (SOMMAIRE). Revoir conformité et validité doc. Vérifier que les sections sont bien fermées, que les balises sont partout similaires + remarques plus bas-->
 
 
                       <pb facs="facsimile0311.bin.png" n="0311"/>
-                      <div type="preface">
 
         
         <head><lb/>PRÉFACE.</head>
-        <!-- Pas de numéro de page -->
+       
         
-<lb/><hi rend="initiale">L</hi>e poëme de Floovant est l'une des
+<p><lb/>Le poëme de Floovant est l'une des
 <lb/>rares chansons de geste qui ne ren<lb break="no" rend="hyphen"/>trent point dans le cycle carlovin<lb break="no" rend="hyphen"/>gien proprement dit. Le sujet en est
 <lb/>tiré, pour parler comme l'auteur, de
-<!-- Il manque deux lignes ici. 
-        l'histoire du premier roi de France qui devint
-        chrétien.-->
+<lb/>l'histoire du premier roi de France qui devint
+<lb/>chrétien.
 <lb/>Floovant, selon notre poëte, étoit l'aîné des
 <lb/>quatre fils de Clovis. Dans sa jeunesse, il s'avisa
 <lb/>un jour de couper la barbe à son maître : grave
@@ -129,12 +143,11 @@
 <lb/>sept ans. De là une série d'aventures, de malheurs
 <lb/>et d'exploits ; de là le poëme qui les raconte.
 <lb/>Le trouvère anonyme à qui l'on doit ce récit ne
-<lb/>manque pas de le donner pour véridique ; à l'en<lb break="no" rend="hyphen"/>tendre, c'est de <q>bonne histoire</q>, et, si l'on en <!-- Problème de non validité ici -->
+<lb/>manque pas de le donner pour véridique ; à l'en<lb break="no" rend="hyphen"/>tendre, c'est de <q>bonne histoire</q>, et, si l'on en 
 
 <pb facs="facsimile0312.bin.png" n="0312"/>
-        <head><lb/>PRÉFACE.</head>
-        <!-- head pour titres courants? --> 
-        <!-- Numéro de la page n'apparaît pas -->
+        
+                              <!-- <head><lb/>PRÉFACE.</head>--> 
 
 <lb/>doute, qu'on aille s'en assurer en France, à Pa<lb break="no" rend="hyphen"/>ris. ll n'est pas d'auteur de chanson de geste qui
 <lb/>n'en ait dit autant, et qui n'eût été, le plus sou<lb break="no" rend="hyphen"/>vent, fort en peine de le prouver. Notre poëte
@@ -145,14 +158,14 @@
 <lb/>sa fable. Cette anecdote ne remonte pas, il est
 <lb/>vrai, jusqu'au règne de Clovis, et la barbe cou<lb break="no" rend="hyphen"/>pée ne le fut point, bien entendu, par Floovant,
 <lb/>mais par le roi Dagobert, de populaire mémoire.
-<lb/>C'est, du moins, ce que racontent les <q rend="written">Gesta Da- <!-- Titre : italique? J'ai mis q partout où il y avait de l'italique-->
-        <lb/>goberti</q><note><lb/>1. Cap. 6 et 7.</note>, auxquels les grandes chroniques de <!-- Comment baliser l'appel de note? -->
+<lb/>C'est, du moins, ce que racontent les <title>Gesta Da-
+<lb/>goberti</title><note><lb/>1. Cap. 6 et 7.</note>, auxquels les grandes chroniques de
 <lb/>France n'ont pas manqué d'emprunter le fait,
 <lb/>puisqu'il fut cause de la fondation de l'abbaye de
 <lb/>Saint-Denis.
-<lb/>On peut lire dans ces chroniques, au cha<lb break="no" rend="hyphen"/>pitre IIl du livre V, <hi>comment Dagobert coupa la
+<lb/>On peut lire dans ces chroniques, au cha<lb break="no" rend="hyphen"/>pitre IIl du livre V, <title>comment Dagobert coupa la
 <lb/>barbe de son maistre, et commenl son pere le cuida
-<lb/>prendre sur les tombes des corps saints</hi>. L'histoire
+<lb/>prendre sur les tombes des corps saints</title>. L'histoire
 <lb/>explique, si elle ne justifie pas, ce qui, dans
 <lb/>notre poëme, ne semble qu'une fantaisie ou un
 <lb/>tour d'écolier. Il paroît que Sadragesile, ainsi se
@@ -163,8 +176,7 @@
 
 <pb facs="facsimile0313.bin.png" n="0313"/>
 
-        <head><lb/>PRÉFACE.</head>
-<lb/>vij <!-- que fait-on du numéro de la page? -->
+                              <!-- <head><lb/>PRÉFACE.</head> <lb/>vij  -->
         
 <lb/>autorité et de sa haine. Il arriva de là qu'un jour,
 <lb/>en l'absence de Clotaire, Dagobert, pénétrant
@@ -193,9 +205,8 @@
 <lb/>Quoi qu'il en soit, la chanson de Floovant pa-
 
 <pb facs="facsimile0314.bin.png" n="0314"/>
-         <lb/>viij <!-- numéro page + place -->
-        <head><lb/>PRÉFACE.</head>
-
+                              <!-- <head><lb/>PRÉFACE. <lb/>viij</head>-->
+        
 <lb/>roît avoir obtenu un grand succès au moyen âge.
 <lb/>et cela dès le XIIe siècle. Il en est fait mention
 <lb/>dans un poëme qui remonte certainement jus<lb break="no" rend="hyphen"/>qu'à cette époque, dans le poëme d'Auberi le
@@ -203,11 +214,13 @@
 <lb/>leur chantant une chanson qu'il annonce en ces
 <lb/>termes :
 
-<q rend="written"><lb/>Or chanterai por voz esbanoier : <!-- comment dire que c'est hors texte, en caractères plus petits? -->
-<lb/>Je sai de geste les chansons commencier,
-<lb/>Oue nus jougleres ne m'en puet engingnier ;
-<lb/>Je sai assez dou bon roi Cloevier,
-        <lb/>De Floevent et dou vassal Richier </q> (1). <!-- note -->
+        <q rend="block">
+                <lb/>Or chanterai por voz esbanoier : 
+                <lb/>Oue nus jougleres ne m'en puet engingnier ;
+                <lb/>Je sai assez dou bon roi Cloevier,
+                <lb/>De Floevent et dou vassal Richier<note><lb/>1. <bibl>Ms. de la Bibl. Imp., anc. f. fr., n 72275, fol. 74
+                 <lb/>col. 1.</bibl></note>.
+        </q>
         
 <lb/>A cette désignation si exacte il est impossible de
 <lb/>ne pas reconnoître notre poëme.
@@ -216,24 +229,23 @@
 <lb/>Bodel fait évidemment allusion à la chanson de
 <lb/>Floovant lorsqu'il dit :
 
-<q rend="written"><lb/>Veritez est provée, com truis en la leçon,
-        <!-- Il manque deux lignes ici. 
-        Que cil [qui] tint de France premiers la region
-        Ot à non Clodoïs, que de fi le st on.-->
-<lb/>Peres fu Floovant, qui fist la mesprison
-        <lb/>De sa fille la bele, qui Aaliz ot non </q> (2). <!-- note -->
+        <q rend="block"><lb/>Veritez est provée, com truis en la leçon,
+        <lb/>Que cil [qui] tint de France premiers la region
+        <lb/>Ot à non Clodoïs, que de fi le st on.
+        <lb/>Peres fu Floovant, qui fist la mesprison
+                <lb/>De sa fille la bele, qui Aaliz ot non <note><lb/>2. <bibl>Edition de M. F. Michel, t. 1, p. 4.</bibl> - Nous corrigeons
+        <lb/>légèrement le passage, pour le rendre plus intelligible.</note>. 
+        </q>
         
 <lb/>Ajoutons que cette allusion ne se rapporte pas,
 <lb/>comme la première, à la version que nous pu<lb break="no" rend="hyphen"/>blions. Le passage cité semble imputer à Floo-
         
-        <note><lb/>1. Ms. de la Bibl. Imp., anc. f. fr., n 72275, fol. 74
-        <lb/>col. 1.</note>
-        <note>&gt;<lb/>2. Edition de M. F. Michel, t. 1, p. 4. - Nous corrigeons
-        <lb/>légèrement le passage, pour le rendre plus intelligible.</note>
+        
+        
 
 <pb facs="facsimile0315.bin.png" n="0315"/>
-        <head><lb/>PRÉFACE.</head>
-        <!-- numéro page -->
+        
+                              <!-- <head><lb/>PRÉFACE.</head> -->
 
 <lb/>vant un autre méfait que celui d'avoir coupé la
 <lb/>barbe à son maître. On verra ci-après qu'il a dû
@@ -247,47 +259,51 @@
 <lb/>point ignorer. Le troubadour Bertrand de Paris
 <lb/>de Rouergue nous a laissé une seule pièce, d'un
 <lb/>grand intérêt pour l'histoire littéraire, en ce qu'on
-<lb/>y retrouve la trace de plusieurs poëmes aujour<lb break="no" rend="hyphen"/>d'hui perdus. Cette pièce est un <q rend="term">sirventes</q> que le
+<lb/>y retrouve la trace de plusieurs poëmes aujour<lb break="no" rend="hyphen"/>d'hui perdus. Cette pièce est un <q xml:lang="it">sirventes</q> que le
 <lb/>troubadour adresse à son jongleur Gordon, pour
 <lb/>lui faire honte de son ignorance. Au nombre des
 <lb/>compositions qu'il lui reproche très fort de ne
 <lb/>point connoître se trouve celle que nous publions :
 
-<q rend="written"><lb/>Ni no sabetz novas de Floriven,
-        <lb/>Que pres premier de Fransa mandamen</q> (1). <!-- note -->
+        <q rend="block"><lb/>Ni no sabetz novas de Floriven,
+                <lb/>Que pres premier de Fransa mandamen<note><lb/>1. <bibl>Raynouard, <title>Choix des poésies originales des trouba<lb break="no" rend="hyphen"/>dours</title>, t. 5, p. 103.</bibl></note>.
+        </q> 
         
 <lb/>Nous n'hésitons pas à reconnoître dans Flori<lb break="no" rend="hyphen"/>ven le héros de notre poëme. Quant à cette dési<lb break="no" rend="hyphen"/>gnation :
 
-<q rend="written"><lb/>Que pres premier de Fransa mandamen,</q>
+                <q rend="block"><p><lb/>Que pres premier de Fransa mandamen,</p></q>
         
 <lb/>elle est susceptible de plusieurs interprétations,
 <lb/>mais doit s'entendre, selon nous, au sens indi-
-        <!-- Il manque deux lignes ici 
-        qué  par ces vers:
-        Cil Cloovis fu rois et prouz et poustéiz ;-->
+<lb/>qué  par ces vers:
+                              
+               <q rend="block"><lb/>Cil Cloovis fu rois et prouz et poustéiz ;
         
-<note><lb/>1. Raynouard, <q rend="written">Choix des poésies originales des trouba<lb break="no" rend="hyphen"/>dours</q>, t. 5, p. 103.</note>
+
 
 <pb facs="facsimile0316.bin.png" n="0316"/>
-        <head> <lb/>PRÉFACE.</head>
-        <!-- numéro de page -->
         
-<q rend="written"><lb/>De sa franche moilleir ot .IIII. fiz gantis. <!-- deux premières lignes pas en italique -->
-<lb/>Li ainez ot an non Floovain li marchis.
-<lb/>A celui commandai à garder son pais
-<lb/>Et trestote la terre, que en pié la tenist </q>(1). <!-- note -->
+        <!-- <head> <lb/>PRÉFACE.</head> -->
+        
+                <lb/>De sa franche moilleir ot .IIII. fiz gantis.
+                <lb/><hi>Li ainez ot an non Floovain li marchis.
+                <lb/>A celui commandai à garder son pais
+                <lb/>Et trestote la terre, que en pié la tenist</hi>
+                       <note><lb/>1. Ci-après, p. 1.</note>. 
+               </q>
 
 <lb/>Si la chanson de Floovant a été, jadis, ac-
-        <!-- Il manque deux lignes ici
-        cueillie avec faveur au midi comme au nord de
-        la France, elle n'a pas eu de succès à l'é- -->
+<lb/> cueillie avec faveur au midi comme au nord de
+<lb/>la France, elle n'a pas eu de succès à l'é- 
 <lb/>tranger.
 <lb/>On connoît l'ouvrage singulier qui, sous le
-<lb/>titre de <q rend="written">Reali di Francia</q>, est demeuré populaire
+<lb/>titre de <title>Reali di Francia</title>, est demeuré populaire
 <lb/>en Italie, où on le lit encore depuis le XIVe
-<lb/>siècle (2), où l'on n'a cessé de le réimprimer <!-- note -->
+<lb/>siècle <note><lb/>2. Les manuscrits les plus anciens des <title>Reali di Francia</title>
+<lb/>datent du milieu de ce siècle environ. Voyez l'excellente dis<lb break="no" rend="hyphen"/>sertation de M. Ranke dans <bibl>les Mémoires de l'académie de
+<lb/>Berlin, année 1837</bibl>.</note>, où l'on n'a cessé de le réimprimer
 <lb/>depuis la fin du siècle suivant. On sait que c'est
-<lb/>une compilation, un recueil de légendes (3), <!-- note -->
+<lb/>une compilation, un recueil de légendes <note><lb/>3. <q xml:lang="it">Secondo molte lezende che io ho attrovate e racolte insie<lb break="no" rend="hyphen"/>me</q>, dit l'auteur dans le titre de la première édition (Mo<lb break="no" rend="hyphen"/>dène, 1491).</note>, 
 <lb/>empruntées à nos anciens poëmes et disposées
 <lb/>suivant une chronologie fantastique, de manière
 <lb/>à former une sorte de tableau historique et gé<lb break="no" rend="hyphen"/>néalogique des rois et des hauts barons de France,
@@ -296,89 +312,88 @@
 <lb/>deux derniers sont demeurés inédits. Des six
 <lb/>livres publiés depuis si long-temps, le second
 <lb/>est consacré à l'histoire d'un guerrier du nom
-<lb/>de <q rend="foreign">Fioravante</q>, qui a pour père un roi de France
-<lb/>nommé <q rend="foreign">Fiorello</q>, et pour écuyer un paladin ap<lb break="no" rend="hyphen"/>pelé <q redn="foreign">Rizieri </q>. En rapprochant ces noms de ceux
+<lb/>de <q xml:lang="it">Fioravante</q>, qui a pour père un roi de France
+<lb/>nommé <q xml:lang="it">Fiorello</q>, et pour écuyer un paladin ap<lb break="no" rend="hyphen"/>pelé <q xml:lang="it">Rizieri </q>. En rapprochant ces noms de ceux
         
-<note><lb/>1. Ci-après, p. 1.</note>
-<note><lb/>2. Les manuscrits les plus anciens des <q rend="written">Reali di Francia</q>
-<lb/>datent du milieu de ce siècle environ. Voyez l'excellente dis<lb break="no" rend="hyphen"/>sertation de M. Ranke dans les Mémoires de l'académie de
-<lb/>Berlin, année 1837.</note>
-<note><lb/>3. <q rend="foreign">Secondo molte lezende che io ho attrovate e racolte insie<lb break="no" rend="hyphen"/>me</q>, dit l'auteur dans le titre de la première édition (Mo<lb break="no" rend="hyphen"/>dène, 1491).</note>
+
+
+
 
 <pb facs="facsimile0317.bin.png" n="0317"/>
-        <head><lb/>PRÉFACE.</head>
-        <!-- numéro de page -->
+        
+                              <!-- <head><lb/>PRÉFACE.</head> -->
 
 <lb/>que renferme l'un des témoignages ci-dessus
 <lb/>rapportés :
 
-<q rend="written"><lb/>Je sai assez dou bon roi <hi>Cloevier</hi> <!-- ici, en plus italique sur les noms : comment faire? -->
-<lb/>De <hi>Floevent</hi> et dou vassal <hi>Richier</hi>,</q>
+        <q rend="block"><p><lb/>Je sai assez dou bon roi <hi>Cloevier</hi> 
+        <lb/>De <hi>Floevent</hi> et dou vassal <hi>Richier</hi>,</p></q>
         
       
 <lb/>il étoit facile de reconnoître que le second livre
-lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb break="no" rend="hyphen"/>duction, plus ou moins altérée, du vieux poëme
+<lb/>;des <title>Reali di Francia</title> devoit être une repro<lb break="no" rend="hyphen"/>duction, plus ou moins altérée, du vieux poëme
 <lb/>françois dont la chanson d'Auberi le Bourgui<lb break="no" rend="hyphen"/>gnon nous attestoit l'existence. A défaut de l'ori<lb break="no" rend="hyphen"/>ginal, que l'on croyoit perdu, la copie pouvoit
 <lb/>donner une idée générale de ce poëme. Il est
 <lb/>aujourd'hui plus facile encore de s'assurer que
-<lb/>l'histoire de <q rend="foreign">Fioravante</q> n'est autre chose qu'une
+<lb/>l'histoire de <q xml:lang="it">Fioravante</q> n'est autre chose qu'une
 <lb/>version très libre de notre chanson de Floovant.
 <lb/>Il nous paroît inutile d'indiquer les points es<lb break="no" rend="hyphen"/>sentiels où les deux récits se rapprochent et se
 <lb/>confondent : on les apercevra du premier coup
 <lb/>d'oeil ; mais, pour guider le lecteur curieux qui
 <lb/>voudroit faire la comparaison, nous croyons
-<lb/>devoir lui signaler les noms sous lesquels il re<lb break="no" rend="hyphen"/>trouvera, dans les <q rend="written">Reali di Francia</q>, plusieurs des
+<lb/>devoir lui signaler les noms sous lesquels il re<lb break="no" rend="hyphen"/>trouvera, dans les <title>Reali di Francia</title>, plusieurs des
 <lb/>personnages importants du poëme françois. Il ne
 <lb/>s'agit pas, bien entendu, de simples modifica<lb break="no" rend="hyphen"/>tions comme celle qui transforme Floovant en
-<lb/><q rend="foreign">Fioravante</q>, et de Richier fait <q rend="foreign">Rizieri</q>, mais de
+<lb/><q xml:lang="it">Fioravante</q>, et de Richier fait <q xml:lang="it">Rizieri</q>, mais de
 <lb/>changements complets et assez nombreux, qui
 <lb/>peuvent un instant dérouter l'attention.
-<lb/>C'est ainsi que, dans les <q rend="written">Reali di Francia</q>, le vieux
+<lb/>C'est ainsi que, dans les <title>Reali di Francia</title>, le vieux
 <lb/>duc Sénéchal, à qui Floovant coupe la barbe,
-<lb/>prend le nom de <q rend="foreign">Salardo</q>, et de duc de Bour<lb break="no" rend="hyphen"/>gogne devient duc de Bretagne. L'amiral Galien
-<lb/>s'appelle <q rend="foreign">Galerano</q>; Ferragus, <q rend="foreign">Finau</q>. Les deux
+<lb/>prend le nom de <q xml:lang="it">Salardo</q>, et de duc de Bour<lb break="no" rend="hyphen"/>gogne devient duc de Bretagne. L'amiral Galien
+<lb/>s'appelle <q xml:lang="it">Galerano</q>; Ferragus, <q xml:lang="it">Finau</q>. Les deux
 <lb/>fils de Galien, Maudaran et Maudoire, se chan-
 
 <pb facs="facsimile0318.bin.png" n="0318"/>
          
-                           <head><lb/>PRÉFACE.</head>
-                       <!-- numéro page -->
-<lb/>gent en <q rend="foreign">Lione</q> et <q rend="foreign">Lionello</q>. Le roi Escorfan devient
-<lb/>il re Mambrino ; Urbain l'Allemand, Tebaldo di Li<lb break="no" rend="hyphen"/>man.
-
-<lb/>Mêmes changements dans les noms de fem<lb break="no" rend="hyphen"/>mes : Florette prend le nom d'Uliana, Maugalie
-<lb/>celui de Dusolina (1), et, par suite de différen<lb break="no" rend="hyphen"/>ces assez notables entre les deux récits, la riva<lb break="no" rend="hyphen"/>lité d'amour qui s'établit dans le poëme françois
+                           
+                              <!-- <head><lb/>PRÉFACE.</head> -->
+                              
+<lb/>gent en <q xml:lang="it">Lione</q> et <q xml:lang="it">Lionello</q>. Le roi Escorfan devient
+<lb/><q xml:lang="it">il re Mambrino</q> ; Urbain l'Allemand, <q xml:lang="it">Tebaldo di Li<lb break="no" rend="hyphen"/>man.</q>
+<lb/>Mêmes changements dans les noms de fem<lb break="no" rend="hyphen"/>mes : Florette prend le nom d'<q xml:lang="it">Uliana</q>, Maugalie
+        <lb/>celui de <q xml:lang="it">Dusolina</q>      <note><lb/>1. Dans le quatrième livre des <title>Reali</title>, une autre princesse
+        <lb/>sarrasine, quifavorise aussi l'évasion d'un prisonnier chré<lb break="no" rend="hyphen"/>tien qu'elle aime, porte les noms de <q xml:lang="it">Margalia</q> ou <q xml:lang="it">Malgaria</q>,
+<lb/>qui ne sont que des formes italiennes de Maugalie.</note>, et, par suite de différen<lb break="no" rend="hyphen"/>ces assez notables entre les deux récits, la riva<lb break="no" rend="hyphen"/>lité d'amour qui s'établit dans le poëme françois
 <lb/>entre Florette et Maugalie anime l'une contre
-<lb/>l'autre, dans la version italienne, non pas Uliana
-<lb/>et Dusolina, mais Dusolina et Galerana. Cette
+<lb/>l'autre, dans la version italienne, non pas <q xml:lang="it">Uliana</q>
+<lb/>et <q xml:lang="it">Dusolina</q>, mais <q xml:lang="it">Dusolina</q> et <q xml:lang="it">Galerana</q>. Cette
 <lb/>dernière est un personnage de plus introduit dans
-<lb/>l'action, et qui prend une partie du rôle de Flo<lb break="no" rend="hyphen"/>rette, dont l'autre est remplie par Uliana.
-<lb/>Les noms de lieux aussi ont subi, pour la plu<lb break="no" rend="hyphen"/>part, des changements analogues : Beaufort de<lb break="no" rend="hyphen"/>vient Darbena dans les Reali ; Basme ou Baume,
-<lb/>Balda, et le château Avenant prend le nom de
-<lb/>château de Monault.
+<lb/>l'action, et qui prend une partie du rôle de Flo<lb break="no" rend="hyphen"/>rette, dont l'autre est remplie par <q xml:lang="it">Uliana</q>.
+<lb/>Les noms de lieux aussi ont subi, pour la plu<lb break="no" rend="hyphen"/>part, des changements analogues : Beaufort de<lb break="no" rend="hyphen"/>vient <q xml:lang="it">Darbena</q> dans les <title>Reali</title> ; Basme ou Baume,
+<lb/><q xml:lang="it">Balda</q>, et le château Avenant prend le nom de
+<lb/>château de <q xml:lang="it">Monault</q>.
 <lb/>Malgré toutes ces différences, et d'autres qu'il
 <lb/>seroit superflu de noter, il n'en demeure pas moins
 <lb/>évident que la chanson de Floovant, soit sous
 <lb/>la forme où nous la publions, soit sous une forme
 <lb/>plus développée et déjà modifiée par quelque
-<lb/>jongleur françois, a fourni à l'auteur des Reali di
-<lb/>Francia la matière de son second livre, comme
+<lb/>jongleur françois, a fourni à l'auteur des <title>Reali di
+<lb/>Francia</title> la matière de son second livre, comme
 <lb/>elle a fourni sans doute l'idée première de la saga
-<lb/>islandoise qui porte pour titre : Flovents saga
-<lb/>Frakka Konungs (2).
-<lb/>1. Dans le quatrième livre des Reali, une autre princesse
-<lb/>sarrasine, qui favorise aussi l'évasion d'un prisonnier chré<lb break="no" rend="hyphen"/>tien qu'elle aime, porte les noms de Margalia ou Malgaria,
-<lb/>qui ne sont que des formes italiennes de Maugalie.
-<lb/>2. Catalogue manuscrit de sagas inédites communiqué par
-<lb/>M. Rafn. - Voy. aussi le rapport de M. Geffroy, Archives
-<lb/>des missions, t. 5, p. 222.
+<lb/>islandoise qui porte pour titre : <title>Flovents saga
+<lb/>Frakka Konungs</title> <note><lb/>2. Catalogue manuscrit de sagas inédites communiqué par
+<lb/>M. Rafn. - Voy. aussi le rapport de M. Geffroy, <title>Archives
+<lb/>des missions</title>, t. 5, p. 222.</note>.
+                         
+
 
 <pb facs="facsimile0319.bin.png" n="0319"/>
-         <lb/>PRÉFACE.
-<lb/>xiij
+        <!--  <lb/>PRÉFACE.
+<lb/>xiij-->
 
-<lb/>Nous ne connoissons pas le texte de cette sa<lb break="no" rend="hyphen"/>ga, qui est inédite ; mais on en conserve à Pa<lb break="no" rend="hyphen"/>ris (1) une traduction latine faite, en 1732, à Co<lb break="no" rend="hyphen"/>penhague, par un étudiant islandois nommé J.
-<lb/>Olaf (2), d'après six manuscrits, dont il a soigneu<lb break="no" rend="hyphen"/>sement relevé les variantes. Cette traduction et
+<lb/>Nous ne connoissons pas le texte de cette sa<lb break="no" rend="hyphen"/>ga, qui est inédite ; mais on en conserve à Pa<lb break="no" rend="hyphen"/>ris <note><lb/>1. Bibl. Imp., Anc. f. latin, ms. n. 8516.</note> une traduction latine faite, en 1732, à Co<lb break="no" rend="hyphen"/>penhague, par un étudiant islandois nommé J.
+<lb/>Olaf <note><lb/>2. L'avertissement qui précède cette traduction est signé
+<lb/>J. OLAVIUS, <title>Stud. lsl.</title></note>, d'après six manuscrits, dont il a soigneu<lb break="no" rend="hyphen"/>sement relevé les variantes. Cette traduction et
 <lb/>l'avertissement qui la précède permettent de
 <lb/>reconnoître l'origine françoise du récit scandi<lb break="no" rend="hyphen"/>nave, mais prouvent en même temps que ce récit
 <lb/>n'a pas été directement emprunté au poëme que
@@ -399,13 +414,12 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>Si le jeune étudiant de l'Université de Copen<lb break="no" rend="hyphen"/>hague avoit connu notre ancienne littérature, il
 <lb/>auroit pu beaucoup ajouter à ses judicieuses re<lb break="no" rend="hyphen"/>marques, et retrouver dans la saga de Flovent
 <lb/>tous les caractères d'une chanson de geste,
-<lb/>1. Bibl. Imp., Anc. f. latin, ms. n. 8516.
-<lb/>2. L'avertissement qui précède cette traduction est signé
-<lb/>J. OLAVIUS, Stud. lsl.
+    
+
 
 <pb facs="facsimile0320.bin.png" n="0320"/>
-         <lb/>xiv
-<lb/>PRÉFACE.
+        <!-- <lb/>xiv
+<lb/>PRÉFACE. -->
 
 <lb/>qui sont encore visibles pour nous à travers
 <lb/>deux traductions, et même trois, car c'est sans
@@ -432,16 +446,15 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>lui rend bien ; il l'étend roide mort à ses pieds,
 <lb/>et de là son exil.
 <lb/>Les aventures et les exploits de l'exilé sont ra<lb break="no" rend="hyphen"/>contés fort diversement par le poëme françois et
-<lb/>par la saga islandoise (1). La différence n'est pas
+<lb/>par la saga islandoise <note>lb/>1. L'histoire de Floovant, dans cette saga, se rapproche
+<lb/>beaucoup, non de celle de <q xml:lang="it">Fioravante</q>, mais de celle de son
+<lb/>grand-père <q xml:lang="it">Fiavo</q>, telle que la raconte le premier livre des
+<lb/><title>Reali di Francia</title>.</note>. La différence n'est pas
 <lb/>telle cependant qu'on ne puisse remarquer une
-<lb/>1. L'histoire de Floovant, dans cette saga, se rapproche
-<lb/>beaucoup, non de celle de Fioravante, mais de celle de son
-<lb/>grand-père Fiavo, telle que la raconte le premier livre des
-<lb/>Reali di Francia.
 
 <pb facs="facsimile0321.bin.png" n="0321"/>
-         <lb/>PRÉFACE.
-<lb/>xv
+        <!-- <lb/>PRÉFACE.
+<lb/>xv -->   
 
 <lb/>sensible analogie entre l'un et l'autre. C'est ainsi
 <lb/>que le rôle de Maugalie est rempli, dans la saga,
@@ -451,33 +464,35 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>elle encore, reçoit le baptême et devient reine
 <lb/>de France.
 <lb/>Il nous paroît, en somme, que la version fran<lb break="no" rend="hyphen"/>çoise de maître Simon, de Lyon, qui a été tra<lb break="no" rend="hyphen"/>duite en islandois vers la fin du XIVe siècle ou
-<lb/>au commencement du XVe (1), n'étoit qu'un ri<lb break="no" rend="hyphen"/>facimento, ou plutôt une imitation très libre de la
+<lb/>au commencement du XVe <note><lb/>1. A en juger par l'âge qu'ont assigné aux manuscrits de
+<lb/>la saga notre étudiant islandois et M. Geffroy.</note>, n'étoit qu'un <q xml:lang="it"> ri<lb break="no" rend="hyphen"/>facimento</q>, ou plutôt une imitation très libre de la
 <lb/>chanson que nous publions. L'auteur de cette
 <lb/>imitation nous fait tout l'effet d'avoir trouvé, un
 <lb/>jour, un vieux portrait de Floovant, qu'il aura
 <lb/>entièrement repeint et replacé dans le même ca<lb break="no" rend="hyphen"/>dre, doré à neuf.
 <lb/>Voilà tout ce que nous savons de l'histoire de no<lb break="no" rend="hyphen"/>tre poëme, dont l'unique manuscrit connu est con<lb break="no" rend="hyphen"/>servé à la bibliothèque de la Faculté de médecine
-<lb/>de Montpellier (2). C'est celui-là même que Sainte<lb break="no" rend="hyphen"/>Palaye signaloit, au siècle dernier, dans la biblio<lb break="no" rend="hyphen"/>thèque du président Bouhier (3), et qui porte en<lb break="no" rend="hyphen"/>core la reliure bien connue et un peu funèbre des
+<lb/>de Montpellier <note><lb/>2. Sous le n° 441. - Voy. le Catalogue général des ma<lb break="no" rend="hyphen"/>nuscrits des bibliothèques publiques des départements, t. 1,
+<lb/>p. 459, où notre poëme est désigné à tort sous le titre de
+<lb/><title>Roman de FLOOVAUT.</title></note>. C'est celui-là même que Sainte<lb break="no" rend="hyphen"/>Palaye signaloit, au siècle dernier, dans la biblio<lb break="no" rend="hyphen"/>thèque du président Bouhier <note><lb/>3. Bibl. Imp. Notices de manuscrits françois.</note>, et qui porte en<lb break="no" rend="hyphen"/>core la reliure bien connue et un peu funèbre des
 <lb/>manuscrits du savant président. Il forme un petit
 <lb/>volume in-8 de 49 feuillets, et contient, outre la
-<lb/>chanson de Floovant, le Dit de l'unicorne et du
-<lb/>1. A en juger par l'âge qu'ont assigné aux manuscrits de
-<lb/>la saga notre étudiant islandois et M. Geffroy.
-<lb/>2. Sous le n° 441. - Voy. le Catalogue général des ma<lb break="no" rend="hyphen"/>nuscrits des bibliothèques publiques des départements, t. 1,
-<lb/>p. 459, où notre poëme est désigné à tort sous le titre de
-<lb/>Roman de FLOOVAUT.
-<lb/>3. Bibl. Imp. Notices de manuscrits françois.
+<lb/>chanson de Floovant, le <title>Dit de l'unicorne et du
+
+
+        
 
 <pb facs="facsimile0322.bin.png" n="0322"/>
-         <lb/>xvj
-<lb/>PRÉFACE.
+        <!--   <lb/>xvj
+<lb/>PRÉFACE.-->  
 
-<lb/>serpent (1). Il a été écrit, selon toute apparence,
+<lb/>serpent</title> <note><lb/>1. Pièce publiée par M. Achille Jubinal dans son <bibl><title>Nouveau
+<lb/>recueil de Fabliaux</title>, t. 2, p. 113-123</bibl>, d'après le ms. 7218
+<lb/>de la Bibl. Imp.</note>. Il a été écrit, selon toute apparence,
 <lb/>au commencement du XIVe siècle. Le poëme que
 <lb/>nous publions ne s'y trouve pas complet : une
 <lb/>lacune assez considérable interrompt le récit ;
 <lb/>nous avons essayé de la combler dans le som<lb break="no" rend="hyphen"/>maire qu'on lira ci-après, en nous aidant des
-<lb/>Reali di Francia, qui heureusement, à cet en<lb break="no" rend="hyphen"/>droit, paroissent suivre le poëme de très près.
+<lb/><title>Reali di Francia</title>, qui heureusement, à cet en<lb break="no" rend="hyphen"/>droit, paroissent suivre le poëme de très près.
 <lb/>Si la chanson de Floovant n'offre pas un grand
 <lb/>intérêt littéraire, elle nous semble fort curieuse à
 <lb/>étudier au point de vue philologique. Elle est
@@ -493,18 +508,22 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>nous avons cru rencontrer des fautes évidentes ;
 <lb/>mais, en ce cas, on trouvera toujours dans les
 <lb/>notes le texte même de notre manuscrit.
-<lb/>1. Pièce publiée par M. Achille Jubinal dans son Nouveau
-<lb/>recueil de Fabliaux, t. 2, p. 113-123, d'après le ms. 7218
-<lb/>de Ia Bibl. Imp.
-</div>
+
+</p> 
+              </div>
+              <div type="sommaire">
 
 <pb facs="facsimile0323.bin.png" n="0323"/>
-<list>         <lb/><!--SOMMAIRE.-->
-<lb/><!--xvij-->
+
+              <head>SOMMAIRE</head>
+             
+                      <!--<lb/>xvij-->
+<list corresp="#L_001">         
+                              
 <item>
-<lb/>«Le premier roi de France qui devint chrétien
-<lb/>avoit nom Clovis, à ce que dit l'histoire.
-<lb/>- Ce Clovis fut un roi preux et puissant.
+<lb/>« Le premier roi de France qui devint chrétien
+<lb/>avoit nom Clovis, à ce que dit l'histoire. </item>
+<lb/><item> Ce Clovis fut un roi preux et puissant.
 <lb/>Il eut de sa femme quatre fils, dont l'aîné
 <lb/>fut le marquis Floovant. Clovis lui avoit confié la
 <lb/>garde de son royaume ; mais un méfait dont il se ren<lb break="no" rend="hyphen"/>dit coupable l'en fit bannir pour sept ans.</item> <item>Un jour
@@ -513,8 +532,8 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>Sénéchal, un haut et puissant seigneur dont le duché
 <lb/>s'étendoit jusqu'à Vienne, et lui dit : « Sénéchal, mon
 <lb/>fils Floovant est encore bien jeune, et a besoin de le<lb break="no" rend="hyphen"/>çons pour apprendre à manier les armes ; je vous le
-<lb/>confie.</item> <item>A vos ordres, Sire, lui répondit Sénéchal,
-<lb/>je lui enseignerai tout ce qu'il doit savoir. .</item> <item>Le duc
+<lb/>confie.- A vos ordres, Sire, lui répondit Sénéchal,
+<lb/>je lui enseignerai tout ce qu'il doit savoir. » </item> <item>Le duc
 <lb/>emmena Floovant à son hôtel. Le lendemain, après
 <lb/>avoir largement bu et mangé, il entra dans un verger
 <lb/>pour s'y reposer, tenant le jeune prince par la main.
@@ -523,12 +542,13 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>jusqu'au noeud du baudrier.</item> <item>Il faut savoir qu'à
 <lb/>cette époque, où tous les prud'hommes étoient barbus,
 <lb/>les clercs comme les laïques, lorsque quelqu'un étoit
+<lb/> soupçonné d'un larcin, on lui faisoit couper les gre<lb break="no" rend="hyphen"/>nons et toutes les tresses de la barbe, ce qui le cou-
 
-<lb/>Floovant.
-
+        <!-- <lb/>Floovant. -->
+        
 <pb facs="facsimile0324.bin.png" n="0324"/>
-         <lb/>xviij
-<lb/>SOMMAIRE.
+        <!--  <lb/>xviij
+<lb/>SOMMAIRE.-->
 
 <lb/>vroit de honte et l'empêchoit de se montrer.</item> <item>Pen<lb break="no" rend="hyphen"/>dant que le duc dormoit paisiblement, Floovant, qui
 <lb/>peloit une pomme avec un couteau très affilé, se mit
@@ -538,41 +558,46 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>et sa barbe coupés, et en devint presque fou de dou<lb break="no" rend="hyphen"/>leur. « Voilà, lui dit-il, un vilain tour, pour un
 <lb/>noble damoiseau tel que vous. Maudite soit l'heure où
 <lb/>vous fûtes engendré ! Je m'en vais me plaindre au roi
-<lb/>votre père, qui vous fera couper la tête et les mem<lb break="no" rend="hyphen"/>bres. .</item> <item>Effroi de Floovant, qui se jette en larmes
+<lb/>votre père, qui vous fera couper la tête et les mem<lb break="no" rend="hyphen"/>bres. »</item> <item>Effroi de Floovant, qui se jette en larmes
 <lb/>aux genoux de Sénéchal, implore sa merci, et cher<lb break="no" rend="hyphen"/>che a le fléchir par les plus belles promesses : il lui
 <lb/>donnera, dit-il, quinze châteaux, trente destriers ra<lb break="no" rend="hyphen"/>pides, et l'équipement de trois cents chevaliers.</item> <item>Le
 <lb/>duc, inébranlable, enveloppe sa tête d'un manteau de
-<lb/>soie et va trouver le roi de France. P. 1-4.
-<lb/>Clovis venoit de se lever et alloit entendre la messe
+<lb/>soie et va trouver le roi de France. P. 1-4. </item></list>
+                      <list>
+<lb/><item> Clovis venoit de se lever et alloit entendre la messe
 <lb/>lorsque le duc se précipite à ses pieds, découvre son
 <lb/>chef et lui montre sa barbe rase. « Sire duc, dit le
-<lb/>roi, qui donc vous a fait cet outrage .</item> <item>Sur ma foi,
-<lb/>Sire, c'est votre fils aîné, dont vous m'avez hier con<lb break="no" rend="hyphen"/>fié la garde. J'ai eu grand' peine à ne le point tuer. »
-<lb/>- Clovis, hors de lui, ordonne qu'on lui amène son
+<lb/>roi, qui donc vous a fait cet outrage ? - Sur ma foi,
+<lb/>Sire, c'est votre fils aîné, dont vous m'avez hier con<lb break="no" rend="hyphen"/>fié la garde. J'ai eu grand' peine à ne le point tuer. »</item> <item>
+<lb/>Clovis, hors de lui, ordonne qu'on lui amène son
 <lb/>fils, demande son épée et la tire du fourreau pour en
 <lb/>trancher la tête de Floovant.</item> <item>Intervention de la
 <lb/>reine, qui lui sauve la vie ; mais c'est à la condition
 <lb/>qu'il s'exilera pendant sept ans et jurera de ne point
 <lb/>rentrer en France.</item> <item>Serment de Floovant.</item> <item>Pro<lb break="no" rend="hyphen"/>clamation du roi qui interdit à ses vassaux de lui don<lb break="no" rend="hyphen"/>ner ni argent, ni armes, ni chevaux, ni vivres, sous
-<lb/>peine de perdre leurs fiefs.</item> <item>Départ de Floovant. <lb break="no" rend="hyphen"/>Il s'en va chez son hôte, bourgeois de haut parage,
+<lb/>peine de perdre leurs fiefs.</item> <item>Départ de Floovant. </item> <item> 
+<lb/>Il s'en va chez son hôte, bourgeois de haut parage,
 <lb/>qui l'hébergeoit souvent, lui emprunte une armure et
-<lb/>un cheval, prend congé de lui et sort de la ville. <lb break="no" rend="hyphen"/>Son écuyer, Richier, y rentroit presque en même
+<lb/>un cheval, prend congé de lui et sort de la ville. </item> <item>
+<lb/>Son écuyer, Richier, y rentroit presque en même
 <lb/>temps, de retour de la chasse. ll apprend avec douleur
 
 <pb facs="facsimile0325.bin.png" n="0325"/>
-         <lb/>SOMMAIRE.
-<lb/>xix
+        <!-- <lb/>SOMMAIRE.
+<lb/>xix -->
 
 <lb/>l'exil de Floovant, et prend aussitôt la résolution de
 <lb/>le suivre.</item> <item>Entrevue touchante de Richier et de la
-<lb/>reine.</item> <item>Départ de Richier. P. 4-7.
-<lb/>Cependant Clovis, toujours irrité, réunit ses ba<lb break="no" rend="hyphen"/>rons et leur dit : « Mon fils Floovant m'a déshonoré
+<lb/>reine.</item> <item>Départ de Richier.  P. 4-7. </item> </list>
+        <list>
+<item><lb/>Cependant Clovis, toujours irrité, réunit ses ba<lb break="no" rend="hyphen"/>rons et leur dit : « Mon fils Floovant m'a déshonoré
 <lb/>par l'outrage qu'il a fait à Sénéchal. Je n'ai pas osé
 <lb/>le punir à mon gré, car, sans cela, je lui aurois sé<lb break="no" rend="hyphen"/>paré la tête du buste ; mais les prêtres m'en ont dé<lb break="no" rend="hyphen"/>tourné. Puisque je n'ai pu faire ma volonté, qu'on
-<lb/>m'apporte un rasoir..</item> <item>On le lui apporte, il se
+<lb/>m'apporte un rasoir. » </item> <item>On le lui apporte, il se
 <lb/>coupe la barbe, et tous les barons en font autant.
-<lb/>P. 7-8.
-<lb/>Floovant est sorti de France ; il a traversé Châlons
+<lb/>P. 7-8.</item> </list>
+                      <list>
+<item><lb/>Floovant est sorti de France ; il a traversé Châlons
 <lb/>et est entré dans les Ardennes. Il chevauche seul,
 <lb/>songe amèrement aux suites de sa faute, et se sent
 <lb/>pris d'un profond découragement.</item> <item>Tout d'un coup
@@ -580,102 +605,121 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>roi Flore d'Ausai, un preux et vaillant sire, est en
 <lb/>guerre avec les Sarrasins, dont il a renié la foi. Si j'y
 <lb/>allois avant que la guerre soit terminée ! l'occasion
-<lb/>est belle pour y éprouver mon épée. .</item> <item>Son parti
+<lb/>est belle pour y éprouver mon épée. » </item> <item>Son parti
 <lb/>pris, il se dirige de ce côté par monts et par vaux.
-<lb/>- Chemin faisant, il aperçoit trois Sarrasins qui
-<lb/>maltraitent une jeune fille à coups de plat d'épée <lb break="no" rend="hyphen"/>Il hésite un moment, brandit sa lance, pique son
+<lb/></item> <item>Chemin faisant, il aperçoit trois Sarrasins qui
+<lb/>maltraitent une jeune fille à coups de plat d'épée. </item> <item>
+<lb/>Il hésite un moment, brandit sa lance, pique son
 <lb/>cheval, et s'élance au secours de la jeune fille, qu'il
 <lb/>délivre, après avoir tué deux des Sarrasins et mis en
 <lb/>fuite le troisième.</item> <item>C'est la fille du roi Flore qu'il a
-<lb/>ainsi délivrée. Elle lui raconte comment elle est tom<lb break="no" rend="hyphen"/>bée aux mains de ces Sarrasins, et le supplie de la re<lb break="no" rend="hyphen"/>conduire à Beaufort, auprès du roi son père. P. 8<lb break="no" rend="hyphen"/>10.
-<lb/>Non loin de là, Richier rencontre le Sarrasin qui
+        <lb/>ainsi délivrée. Elle lui raconte comment elle est tom<lb break="no" rend="hyphen"/>bée aux mains de ces Sarrasins, et le supplie de la re<lb break="no" rend="hyphen"/>conduire à Beaufort, auprès du roi son père. P. 8<lb break="no" rend="hyphen"/>10. </item> </list>
+<list>
+<item><lb/>Non loin de là, Richier rencontre le Sarrasin qui
 <lb/>a échappé aux coups de Floovant.</item> <item>« Qui es-tu,
-<lb/>écuyer ? lui demande le païen.</item> <item>Sire, répond Ri<lb break="no" rend="hyphen"/>chier, je suis en quête d'un jeune chevalier qui a dû
+<lb/>écuyer ? lui demande le païen. - Sire, répond Ri<lb break="no" rend="hyphen"/>chier, je suis en quête d'un jeune chevalier qui a dû
 <lb/>passer par ici hier ou aujourd'hui. L'avez-vous vu et
-<lb/>pouvez-vous me mettre sur ses traces .</item> <item>Oui, ri-
+<lb/>pouvez-vous me mettre sur ses traces ? - Oui, ri-
 
 
 <pb facs="facsimile0326.bin.png" n="0326"/>
-         <lb/>xx
-<lb/>SOMMAIRE.
+        <!--  <lb/>xx
+<lb/>SOMMAIRE.-->
 
 <lb/>baud, je l'ai vu, et n'en suis que plus affligé : il m'a
 <lb/>tué mes compagnons ; mais c'est toi qui paieras de ta
-<lb/>tête pour ton seigneur..</item> <item>Combat de Richier et du
-<lb/>Sarrasin.</item> <item>Mort du Sarrasin. P. 10-11.
-<lb/>Floovant, de son côté, fait la rencontre d'un grand
+<lb/>tête pour ton seigneur. » </item> <item>Combat de Richier et du
+<lb/>Sarrasin.</item> <item>Mort du Sarrasin. P. 10-11. </item>  </list>
+                      <list>
+<item> <lb/>Floovant, de son côté, fait la rencontre d'un grand
 <lb/>et hideux païen nommé Ferragus et fils du roi Ga<lb break="no" rend="hyphen"/>lien.</item> <item>Ferragus, ce jour-là, avoit tué plus de dix
 <lb/>chrétiens, dont il avoit pendu les têtes à l'arçon de sa
-<lb/>selle. « Qui es-tu, chevalier ? demande-t-il à Floo<lb break="no" rend="hyphen"/>vant.</item> <item>Je suis, répond Floovant, un pauvre sou<lb break="no" rend="hyphen"/>dart de Laon, et cette dame est la fille du sénéchal
-<lb/>Didier, que je conduis à son fiancé.</item> <item>Ami, reprend
+<lb/>selle. « Qui es-tu, chevalier ? demande-t-il à Floo<lb break="no" rend="hyphen"/>vant. - Je suis, répond Floovant, un pauvre sou<lb break="no" rend="hyphen"/>dart de Laon, et cette dame est la fille du sénéchal
+<lb/>Didier, que je conduis à son fiancé. - Ami, reprend
 <lb/>Ferragus, tu peux continuer ta route sans crainte ;
 <lb/>pour l'amour de la dame, je ne te ferai aucun mal,
 <lb/>car je me veux un peu divertir avec elle sous cet oli<lb break="no" rend="hyphen"/>vier. Mahomet, mon dieu, me saura gré d'avoir honni
-<lb/>une chrétienne.</item> <item>Si tu as l'audace de la toucher,
+<lb/>une chrétienne. - Si tu as l'audace de la toucher,
 <lb/>s'écrie Floovant, tu seras frappé de main de maître,
 <lb/>car je ne te prise un denier ni toi ni ton dieu Maho<lb break="no" rend="hyphen"/>met, que les truies ont mangé depuis plus de cent
-<lb/>ans. .</item> <item>Combat de Floovant et de Ferragus. <lb break="no" rend="hyphen"/>Comme ils sont aux prises, surviennent quatre Turcs
-<lb/>à la recherche de Ferragus (1). P. 11-14.
-<lb/>Galien, son père, a eu un songe : il a rêvé que Fer<lb break="no" rend="hyphen"/>ragus combattoit avec un lion, et que, près de succom<lb break="no" rend="hyphen"/>ber, il appeloit à son aide. Réveillé en sursant par cette
-<lb/>vision, il s'est informé de son fils, a appris qu'il étoit
-<lb/>absent, et a donné l'ordre de le rechercher de toutes parts.
-<lb/>Les quatre Turcs reconnoissent Ferragus, et, le ju<lb break="no" rend="hyphen"/>geant en danger, se précipitent sur Floovant, qu'ils dé<lb break="no" rend="hyphen"/>montent ; puis ils mettent pied à terre, le lient étroitement
-<lb/>et le maltraitent sans pitié.</item> <item>Non loin de là se trou<lb break="no" rend="hyphen"/>1. C'est ici que s'ouvre, dans le manuscrit, la lacune
+<lb/>ans. »</item> <item>Combat de Floovant et de Ferragus. </item> 
+<lb/> <item>Comme ils sont aux prises, surviennent quatre Turcs
+<lb/>à la recherche de Ferragus <note> <lb/>1. C'est ici que s'ouvre, dans le manuscrit, la lacune
 <lb/>que nous avons signalée. Dans la partie de notre sommaire
 <lb/>imprimée en italique, nous essayons de renouer le fil du
-<lb/>récit en nous aidant des Reali di Francia. (Voy., pour le
+<lb/>récit en nous aidant des <title>Reali di Francia</title>. (Voy., pour le
 <lb/>commencement de cette lacune, le chap. VIII du livre II
-<lb/>des Reali.)
+<lb/>des <title>Reali</title>.)</note>. P. 11-14.</item> </list>
+                                <list>
+<item rend="supplied"><lb/>Galien, son père, a eu un songe : il a rêvé que Fer<lb break="no" rend="hyphen"/>ragus combattoit avec un lion, et que, près de succom<lb break="no" rend="hyphen"/>ber, il appeloit à son aide. Réveillé en sursant par cette
+<lb/>vision, il s'est informé de son fils, a appris qu'il étoit
+<lb/>absent, et a donné l'ordre de le rechercher de toutes parts. </item></list>
+        <list>
+<item rend="supplied"><lb/>Les quatre Turcs reconnoissent Ferragus, et, le ju<lb break="no" rend="hyphen"/>geant en danger, se précipitent sur Floovant, qu'ils dé<lb break="no" rend="hyphen"/>montent ; puis ils mettent pied à terre, le lient étroitement
+        <lb/>et le maltraitent sans pitié.</item> <item rend="supplied">Non loin de là se trou-
 
 <pb facs="facsimile0327.bin.png" n="0327"/>
-         <lb/>SOMMAIRE.
-<lb/>xxj
+        <!-- <lb/>SOMMAIRE.
+<lb/>xxj -->
 
 <lb/>voit un vieux château en ruines ; les païens s'y retirent
 <lb/>pour panser les blessures de Ferragus, emmenant avec
-<lb/>eux leur prisonnier et la fille du roi Flore.
-<lb/>Richier, cependant, chevauchoit toujours sur les traces
-<lb/>de Floovant.</item> <item>Il arrive au lieu où son jeune seigneur
-<lb/>vient de combattre Ferraguus, y voit des tronçons de
+<lb/>eux leur prisonnier et la fille du roi Flore. </item> </list>
+                      <list>
+<item rend="supplied"><lb/>Richier, cependant, chevauchoit toujours sur les traces
+<lb/>de Floovant.</item> <item rend="supplied">Il arrive au lieu où son jeune seigneur
+<lb/>vient de combattre Ferragus, y voit des tronçons de
 <lb/>lances, des débris d'armes et le destrier de son maître ;
 <lb/>puis il entend près de là une voix gémissante, pousse son
-<lb/>cheval de ce côté, et, arrivé au château où s'est retiré Fer<lb break="no" rend="hyphen"/>ragus, y trouve Floovant attaché à une colonne.</item> <item>Com<lb break="no" rend="hyphen"/>bat de Richier contre les Sarrasins.</item> <item>Mort de Ferra<lb break="no" rend="hyphen"/>gus.</item> <item>Ses compagnons sont tués ou mis en fuite. <lb break="no" rend="hyphen"/>Floovant, ainsi délivré par son fidèle écuyer, reprend
+<lb/>cheval de ce côté, et, arrivé au château où s'est retiré Fer<lb break="no" rend="hyphen"/>ragus, y trouve Floovant attaché à une colonne.</item> <item rend="supplied">Com<lb break="no" rend="hyphen"/>bat de Richier contre les Sarrasins.</item> <item rend="supplied">Mort de Ferra<lb break="no" rend="hyphen"/>gus.</item> <item>Ses compagnons sont tués ou mis en fuite. </item>
+<item rend="supplied"><lb/> Floovant, ainsi délivré par son fidèle écuyer, reprend
 <lb/>avec lui le chemin de Beaufort pour y conduire la fille du
 <lb/>roi Flore ; mais de nouveaux dangers les menacent, de
-<lb/>nouveaux obstacles les arrêteront (1).
-<lb/>Comment Floovant et Richier sont abusés par un ri<lb break="no" rend="hyphen"/>baud qui leur fait boire un breuvage soporifique, com<lb break="no" rend="hyphen"/>ment ils le tuent et continuent leur chemin vers Beaufort.
-<lb/>(Reali, lib. II, cap. x.)
-<lb/>Comment Floovant et Richier combattent avec le roi
-<lb/>Mambrin ; comment Urbain l'Allemand (2), baron du roi
-<lb/>Flore, vient à leur secours avec mille chevaliers, recon<lb break="no" rend="hyphen"/>noît Florette, et rentre avec eux à Beaufort. (Reali,
-<lb/>cap. xi.)
-<lb/>Comment Floovant, Richier et Urbain l'Allemand
-<lb/>rendent Florette à son pére, et de la grande joie du roi
-<lb/>Flore. (Reali, cap. xii.)
-<lb/>1. Nous nous contentons ici de reproduire les sommaires
-<lb/>des chapitres des Reali di Francia, en changeant seulement
+<lb/>nouveaux obstacles les arrêteront <note><lb/>1. Nous nous contentons ici de reproduire les sommaires
+<lb/>des chapitres des <title>Reali di Francia</title>, en changeant seulement
 <lb/>les noms qui ne s'accordent point avec ceux des personnages
-<lb/>de notre poëme.
-<lb/>2. Nous retrouvons dans Urbain l'Allemand le Tebaldo di
-<lb/>Liman des Reali. D'après le compilateur italien, il devient
+<lb/>de notre poëme.</note>. </item></list>
+                        <list>
+<item rend="supplied"><lb/>Comment Floovant et Richier sont abusés par un ri<lb break="no" rend="hyphen"/>baud qui leur fait boire un breuvage soporifique, com<lb break="no" rend="hyphen"/>ment ils le tuent et continuent leur chemin vers Beaufort.
+<lb/><bibl>(<title>Reali</title>, <citedRange>lib. II, cap. x</citedRange>.)</bibl></item></list>
+                        <list>
+ <item rend="supplied"><lb/>Comment Floovant et Richier combattent avec le roi
+<lb/>Mambrin ; comment Urbain l'Allemand <note><lb/>2. Nous retrouvons dans Urbain l'Allemand le <q xml:lang="it">Tebaldo di
+<lb/>Liman</q> des <title>Reali</title>. D'après le compilateur italien, il devient
 <lb/>l'époux de Florette ; mais il ne sauroit prendre place avec le
 <lb/>même rôle dans la fable telle que nous la publions, puisqu'ici
 <lb/>Florette, après avoir vainement désiré de devenir la femme
-<lb/>de Floovant, se résigne à épouser Richier.
+<lb/>de Floovant, se résigne à épouser Richier.</note>, baron du roi
+<lb/>Flore, vient à leur secours avec mille chevaliers, recon<lb break="no" rend="hyphen"/>noît Florette, et rentre avec eux à Beaufort. <bibl>(<title>Reali</title>,
+<lb/><citedRange>cap. xi.</citedRange>)</bibl></item></list>
+                      <list>
+<item rend="supplied"><lb/>Comment Floovant, Richier et Urbain l'Allemand
+<lb/>rendent Florette à son pére, et de la grande joie du roi
+<lb/>Flore.<bibl>(<title>Reali</title>, <citedRange>cap. xii</citedRange>.)</bibl></item></list>
+
+
 
 <pb facs="facsimile0328.bin.png" n="0328"/>
-         <lb/>xxij
-<lb/>SOMMAIRE.
+        <!-- <lb/>xxij
+<lb/>SOMMAIRE. --> 
 
-<lb/>Ffoovant ne s'est point fait connoître au roi Flore ; il
-<lb/>se donne pour un pauvre chevalier qui cherche solde. <lb break="no" rend="hyphen"/>Le roi, qui admire sa vaillance, songe à s'en aider dans
-<lb/>la guerre qu'il soutient contre l'amiral Galien.</item> <item>Il le
+                      <list><item rend="supplied"><lb/>Floovant ne s'est point fait connoître au roi Flore ; il
+<lb/>se donne pour un pauvre chevalier qui cherche solde. </item> 
+<item rend="supplied"><lb/>Le roi, qui admire sa vaillance, songe à s'en aider dans
+<lb/>la guerre qu'il soutient contre l'amiral Galien.</item> <item rend="supplied">Il le
 <lb/>met à la tête de cinquante mille chevaliers, avec Urbain
 <lb/>l'Allemand, et l'expédition commence par l'attaqne d'un
-<lb/>des châteaux de Galien, le château Avenant (1).</item> <item>Siége
-<lb/>du château Avenant.</item> <item>Sortie des assiégés.</item> <item>Bataille
-<lb/>sous les murs du château.</item> <item>Défaite des Sarrasins. <lb break="no" rend="hyphen"/>(Reali, cap. XIII.)
-<lb/>A cette bataille assiste, du haut des murs, la belle
+<lb/>des châteaux de Galien, le château Avenant <note><lb/> 1. Le chapitre XIII des <title>Reali</title>, dont nous nous aidons ici,
+<lb/>ne fait aucune mention du château Avenant ; c'est au châ<lb break="no" rend="hyphen"/>teau de Monault, qui appartient au roi Flore, que Floovant
+<lb/>et ses compagnons vont s'établir, pour diriger de là leurt
+<lb/>attaques contre Galien.</note>.</item> <item rend="supplied">Siége
+<lb/>du château Avenant.</item> <item rend="supplied">Sortie des assiégés.</item> <item rend="supplied">Bataille
+<lb/>sous les murs du château.</item> <item rend="supplied">Défaite des Sarrasins.
+<lb/><bibl>(<title>Reali</title>, <citedRange>cap. XIII</citedRange>.)</bibl></item></list>
+                     
+                      <!-- Arrêt ici le 26 mars.  
+                     A reprendre : remplacer les paragraphes par des listes. Vérifier les notes : bibl+tite+citedRange. Vérifier les citations : block ou xml:lan="it"-->
+<p><item><lb/>A cette bataille assiste, du haut des murs, la belle
 <lb/>Maugalie, fille du roi Galien, entourée de trente
 <lb/>jeunes filles.</item> <item>Elle voit Floovant tailler en pièces
 <lb/>les Sarrasins, l'admire et s'éprend pour lui d'un
@@ -683,87 +727,88 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>que Mahomet te maudisse si tu ne viens me parler
 <lb/>d'amour ! Par grâce, retourne ton destrier, je ne lais<lb break="no" rend="hyphen"/>serai diriger aucun trait contre toi. Je veux faire de
 <lb/>toi mon ami et mon gonfalonier, et tu seras dans ma
-<lb/>chambre le maître de mes conseils. .</item> <item>Floovant la
+<lb/>chambre le maître de mes conseils. »</item> <item>Floovant la
 <lb/>regarde et lie avec elle un doux entretien ; mais Ri<lb break="no" rend="hyphen"/>chier survient, et, prenant son seigneur par l'écu,
 <lb/>éclate contre lui en railleries amères et en durs repro<lb break="no" rend="hyphen"/>ches.</item> <item>Floovant avoue son tort, et en demande
 <lb/>pardon à Richier.</item> <item>Retour à Beaufort.</item> <item>« Quelles
 <lb/>nouvelles du château Avenant ? demande le roi
-<lb/>Flore, qui est allé à la rencontre des vainqueurs. <lb break="no" rend="hyphen"/>Bonnes nouvelles, Sire, répond Urbain l'Allemand,
+<lb/>Flore, qui est allé à la rencontre des vainqueurs. -
+<lb/>Bonnes nouvelles, Sire, répond Urbain l'Allemand,
 <lb/>le champ de bataille nous est resté. Vous n'avez ja<lb break="no" rend="hyphen"/>mais vu mourir tant de gens. Les François ont fait
 <lb/>merveilles ; Floovant a tué aux Sarrasins Escorfan,
-<lb/>Dotalien, son ami, et l'amiral Gurtan. Il les a re<lb break="no" rend="hyphen"/>conduits à grands coups jusqu'à leur château. Mau<lb break="no" rend="hyphen"/>1. Le chapitre XIII des Reali, dont nous nous aidons ici,
-<lb/>ne fait aucune mention du château Avenant ; c'est au châ<lb break="no" rend="hyphen"/>teau de Monault, qui appartient au roi Flore, que Floovant
-<lb/>et ses compagnons vont s'établir, pour diriger de là leurt
-<lb/>attaques contre Galien.
+<lb/>Dotalien, son ami, et l'amiral Gurtan. Il les a re<lb break="no" rend="hyphen"/>conduits à grands coups jusqu'à leur château. Mau-
+
 
 <pb facs="facsimile0329.bin.png" n="0329"/>
-         <lb/>SOMMAIRE.
-<lb/>xxiij
+        <!-- <lb/>SOMMAIRE.
+<lb/>xxiij --> 
 
-<lb/>galie s'y trouvoit ; elle a eu pour Floovant de bien dou<lb break="no" rend="hyphen"/>ces paroles.</item> <item>Je n'ignore pas que les François sont
+<lb/>galie s'y trouvoit ; elle a eu pour Floovant de bien dou<lb break="no" rend="hyphen"/>ces paroles. - Je n'ignore pas que les François sont
 <lb/>de vaillants hommes », reprend le roi. Puis il offre à
-<lb/>Floovant telle part du butin qui lui conviendra. <lb break="no" rend="hyphen"/>Refus de Floovant, qui veut qu'on le distribue aux
-<lb/>pauvres soudarts. P. 14-16.
-<lb/>Floovant et Richier s'en vont à leur hôtel, où ils
+<lb/>Floovant telle part du butin qui lui conviendra. </item>
+<item><lb/> Refus de Floovant, qui veut qu'on le distribue aux
+<lb/>pauvres soudarts. </item> P. 14-16. </p>
+<p><item><lb/>Floovant et Richier s'en vont à leur hôtel, où ils
 <lb/>emmènent Urbain l'Allemand et nombre de cheva<lb break="no" rend="hyphen"/>liers.</item> <item>A cette vue, la jeune Florette, nu-pieds,
 <lb/>échevelée, un épervier au poing, descend, à leur
 <lb/>suite, du palais de son père, court à l'hôtel de Floo<lb break="no" rend="hyphen"/>vant, et s'asseyant près de lui : « Baisez-moi, beau
 <lb/>sire, lui dit-elle : il n'est point d'homme au monde
-<lb/>que je désire autant que vous.</item> <item>Je ne saurois, ma<lb break="no" rend="hyphen"/>dame, répond Floovant ; votre père a autour de lui
+<lb/>que je désire autant que vous. - Je ne saurois, ma<lb break="no" rend="hyphen"/>dame, répond Floovant ; votre père a autour de lui
 <lb/>maint chevalier vaillant dont je m'attirerois la haine.
 <lb/>Un pauvre étranger tel que moi, qui cherche solde,
-<lb/>ne doit point se rendre odieux.</item> <item>A votre gré ! re<lb break="no" rend="hyphen"/>prend la jeune fille. Je le vois bien, c'est pour Mau<lb break="no" rend="hyphen"/>galie, à qui vous avez tant parlé. Vous avez sujet de
+<lb/>ne doit point se rendre odieux. - A votre gré ! re<lb break="no" rend="hyphen"/>prend la jeune fille. Je le vois bien, c'est pour Mau<lb break="no" rend="hyphen"/>galie, à qui vous avez tant parlé. Vous avez sujet de
 <lb/>l'aimer, elle est si belle ! mais elle en aura cent comme
 <lb/>vous, car tous la courtisent et se pressent autour
 <lb/>d'elle. Quand l'un est mort, les autres lui succèdent.
 <lb/>- Vous la haïssez donc bien ? dit Floovant ; vous
-<lb/>avez sans doute à lui reprocher quelque outrage ! »
-<lb/>- A ces mots il appelle Urbain : « Faites sonner nos
+<lb/>avez sans doute à lui reprocher quelque outrage ! » </item>
+<item><lb/> A ces mots il appelle Urbain : « Faites sonner nos
 <lb/>clairons et armer nos gens ; nous chevaucherons toute
 <lb/>la nuit à la clarté de la lune, et malheur aux païens
-<lb/>s'ils sortent du château Avenant ! .</item> <item>Combat de
+<lb/>s'ils sortent du château Avenant ! » </item> <item>Combat de
 <lb/>nuit sous les murs du château.</item> <item>Nouvelle dêfaite
-<lb/>des Sarrasins, qui sont poussés jusqu'au Rhin et cul<lb break="no" rend="hyphen"/>butés dans le fleuve.</item> <item>Prise du château Avenant.
-<lb/>- On y trouve la belle Maugalie ; on l'amène à Floo<lb break="no" rend="hyphen"/>vant, dont elle implore la merci.</item> <item>Floovant la confie
+<lb/>des Sarrasins, qui sont poussés jusqu'au Rhin et cul<lb break="no" rend="hyphen"/>butés dans le fleuve.</item> <item>Prise du château Avenant. </item>
+<item><lb/> On y trouve la belle Maugalie ; on l'amène à Floo<lb break="no" rend="hyphen"/>vant, dont elle implore la merci.</item> <item>Floovant la confie
 <lb/>à la garde de Richier.</item> <item>Un Sarrasin en fuite est
 <lb/>allé à Baume, où réside l'amiral Galien.</item> <item>Il lui ap<lb break="no" rend="hyphen"/>prend le désastre des siens, la mort de son fils Ferra<lb break="no" rend="hyphen"/>gus, de son neveu Escorfan, le massacre de ses hom-
 
 <pb facs="facsimile0330.bin.png" n="0330"/>
-         <lb/>xxiv
-<lb/>SOMMAIRE.
+        <!--  <lb/>xxiv
+<lb/>SOMMAIRE. -->
 
 <lb/>mes, la prise de son château, la captivité de sa fille
-<lb/>Maugalie.</item> <item>« Qui donc a fait tout cela ? s'écrie Ga<lb break="no" rend="hyphen"/>lien.</item> <item>Par Mahomet, Sire, ce sont deux François
+<lb/>Maugalie.</item> <item>« Qui donc a fait tout cela ? s'écrie Ga<lb break="no" rend="hyphen"/>lien.- Par Mahomet, Sire, ce sont deux François
 <lb/>que le roi a mandés pour conquérir ton fief. L'un des
 <lb/>deux est un jouvencel d'une merveilleuse vaillance ;
-<lb/>c'est lui qui a tué ton fils Ferragu.</item> <item>Profonde
+<lb/>c'est lui qui a tué ton fils Ferragus.</item> <item>Profonde
 <lb/>douleur de Galien.</item> <item>Ses hommes le reconfortent, et
-<lb/>il se prépare à la vengeance. P. 16-20.
-<lb/>Le roi Flore vient avec ses fils et sa fille prendre
-<lb/>possession du château Avenant.</item> <item>Il offre pour ré<lb break="no" rend="hyphen"/>compense à Floovaft une partie de sa terre et sa fille
+<lb/>il se prépare à la vengeance. </item> P. 16-20. </p>
+<p><item><lb/>Le roi Flore vient avec ses fils et sa fille prendre
+<lb/>possession du château Avenant.</item> <item>Il offre pour ré<lb break="no" rend="hyphen"/>compense à Floovant une partie de sa terre et sa fille
 <lb/>Florette.</item> <item>Partage du butin.</item> <item>Entrevue de Flo<lb break="no" rend="hyphen"/>rette et de Maugalie. Elles se chargent d'injures, et
 <lb/>sont sur le point d'en venir aux mains lorsqu'on les
 <lb/>sépare.</item> <item>Le roi Flore confie à Floovant la garde du
-<lb/>château Avenant, et retourne à Beaufort avec Flo<lb break="no" rend="hyphen"/>rette et ses deux fils, Maudaran et Maudoire. P.
-<lb/>20-2 1.
-<lb/>Entrevue secrète et complot des deux frères, qu'une
+<lb/>château Avenant, et retourne à Beaufort avec Flo<lb break="no" rend="hyphen"/>rette et ses deux fils, Maudaran et Maudoire. </item> P.
+<lb/>20-21. </p>
+<p><item><lb/>Entrevue secrète et complot des deux frères, qu'une
 <lb/>même haine jalouse anime contre Floovant, et qui
 <lb/>redoutent son union avec Florette.</item> <item>Ils partent de
 <lb/>nuit et vont trouver le roi Galien, l'ennemi de leur
-<lb/>père. « Qui êtes vous, chevaliers ? leur demande Ga<lb break="no" rend="hyphen"/>lien.</item> <item>Sire, répond Maudaran, nous sommes les
+<lb/>père. « Qui êtes vous, chevaliers ? leur demande Ga<lb break="no" rend="hyphen"/>lien.- Sire, répond Maudaran, nous sommes les
 <lb/>fils du roi Flore, qui a abandonné Mahomet pour Jé<lb break="no" rend="hyphen"/>sus-Christ. Notre père est endiablé ; il a fait venir de
-<lb/>France deux soudarts, dont l'un a tué avant-hier vo<lb break="no" rend="hyphen"/>tre fils Ferragus. ll a aussi conquis votre fille Mau
-<lb/>galie, n'a pas daigné la prendre pour épouse, et l'a
+<lb/>France deux soudarts, dont l'un a tué avant-hier vo<lb break="no" rend="hyphen"/>tre fils Ferragus. ll a aussi conquis votre fille Mau<lb break="no" rend="hyphen"/>galie, n'a pas daigné la prendre pour épouse, et l'a
 <lb/>voulu donner à un sien écuyer. Nous avons refusé d'y
-<lb/>consetntir, et nous venons nous mettre sous la protec<lb break="no" rend="hyphen"/>tion de votre dieu, Mahomet. .</item> <item>Transporté de
+<lb/>consentir, et nous venons nous mettre sous la protec<lb break="no" rend="hyphen"/>tion de votre dieu, Mahomet. »</item> <item>Transporté de
 <lb/>joie à ces mots, Galien appelle un de ses mécréants,
-<lb/>et lui dit : « Faites apporter Mahomet devant moi. »
-<lb/>- On apporte le vilain, qui est fort gros, épais et
+<lb/>et lui dit : « Faites apporter Mahomet devant moi. » </item>
+<item><lb/> On apporte le vilain, qui est fort gros, épais et
 <lb/>carré. Il est forgé du plus fin or d'Arabie, embéguiné
+<lb/> comme une dame en couches, et sa tête brille comme
+<lb/> un cierge allumé. </item> <item> Maudaran et Maudoire tombent
 
 <pb facs="facsimile0331.bin.png" n="0331"/>
-         <lb/>SOMMAIRE.
-<lb/>xxv
+        <!-- <lb/>SOMMAIRE.
+<lb/>xxv -->   
 
 <lb/>en prières à ses pieds, et plus de mille Sarrasins unis<lb break="no" rend="hyphen"/>sent leurs voix à celles des deux frères pour implorer
 <lb/>la merci de Mahomet.</item> <item>Un vieux docteur païen,
@@ -772,14 +817,16 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>conduira en France jusque sous Montmartre ; mais
 <lb/>Maudaran se promet un succès plus prochain : avec
 <lb/>quatre mille hommes, il se fait fort, dès le lendemain,
-<lb/>de reprendre le château Avenant, et de livrer à Ga<lb break="no" rend="hyphen"/>lien les deux François qui en sont maîtres. P. 22<lb break="no" rend="hyphen"/>24.)
-<lb/>Galien met sous les ordres des deux frères quatre
+<lb/>de reprendre le château Avenant, et de livrer à Ga<lb break="no" rend="hyphen"/>lien les deux François qui en sont maîtres. </item> P. 22-
+<lb/>24.)</p>
+<p><item><lb/>Galien met sous les ordres des deux frères quatre
 <lb/>mille Persans, avec lesquels ils partent pendant la
 <lb/>nuit pour leur entreprise.</item> <item>Arrivés au château un
 <lb/>peu avant l'aube, ils laissent leurs hommes en arrière,
 <lb/>et se présentent seuls à la porte, dont l'entrée leur
-<lb/>est refusée.</item> <item>lls insistent et se nomment ; ils veu<lb break="no" rend="hyphen"/>lent parler, disent-ils, aux soudarts de France. <lb break="no" rend="hyphen"/>Le portier se laisse fléchir, et, à peine entré, Mauda<lb break="no" rend="hyphen"/>ran lui coupe la tête.</item> <item>Floovant et Richier sont
-<lb/>surpris pendant leur sommei.</item> <item>Après avoir tué
+<lb/>est refusée.</item> <item>lls insistent et se nomment ; ils veu<lb break="no" rend="hyphen"/>lent parler, disent-ils, aux soudarts de France. </item>
+<item><lb/>Le portier se laisse fléchir, et, à peine entré, Mauda<lb break="no" rend="hyphen"/>ran lui coupe la tête.</item> <item>Floovant et Richier sont
+<lb/>surpris pendant leur sommeil.</item> <item>Après avoir tué
 <lb/>deux Sarrasins, Richier, jugeant la résistance impos<lb break="no" rend="hyphen"/>sible, s'enfuit dans un bois voisin du château, en
 <lb/>chemise, et armé seulement de Joyeuse, l'épée de son
 <lb/>seigneur.</item> <item>Les païens emmènent Floovant pieds et
@@ -1082,9 +1129,11 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <lb/>depuis pour les François un terrible ennemi. Cou<lb break="no" rend="hyphen"/>ronné au moutier Saint-Remi avec la belle Maugalie,
 <lb/>Floovant devint roi de France après avoir appris à
 <lb/>endurer le malheur. P. 34-77.</item>
+</p>
+                      
 
-</list>
-
+              </div>
+<div type="errata">
 <pb facs="facsimile0341.bin.png" n="0341"/>
          <lb/>ERRATA.
 <lb/>xxxv
@@ -1102,7 +1151,7 @@ lb/&gt;des <q rend="written">Reali di Francia</q> devoit être une repro<lb brea
 <pb facs="facsimile0343.bin.png" n="0343"/>
          <!-- <lb/>FLOOVANT
  -->
-<lg type="laisse" n="">
+<lg type="laisse" n="I" xml:id="L_001">
 <lb/><l><w>SOIGNORS</w><pc type="supplied">,</pc> <w>or</w> <w>escoutez</w><pc type="supplied">,</pc> <w>que</w> <w>Dés</w> <w>vos</w> <w>soit</w></l>
 <lb/><l/>
 <lb/><l><pc type="supplied">.</pc><w>III</w><pc type="supplied">.</pc> <w>vers</w> <w>de</w> <w>bone</w> <w>estoire</w><pc type="supplied">,</pc> <w>se</w> <w>je</w> <w>les</w> <w>vos</w> <w>devis</w></l>
