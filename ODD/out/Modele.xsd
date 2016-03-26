@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-03-24T20:34:25Z. .
+    Schema generated from ODD source 2016-03-26T11:53:10Z. .
     TEI Edition: Version 2.9.1. Last updated on
     	15th October 2015, revision 46ac023
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -974,6 +974,100 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
+  <xs:attributeGroup name="att.citing.attributes">
+    <xs:attributeGroup ref="ns1:att.citing.attribute.unit"/>
+    <xs:attributeGroup ref="ns1:att.citing.attribute.from"/>
+    <xs:attributeGroup ref="ns1:att.citing.attribute.to"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.citing.attribute.unit">
+    <xs:attribute name="unit">
+      <xs:annotation>
+        <xs:documentation>identifie le type d'information que transmet l'élément, par exemple colonnes, pages, volume, etc.
+Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] part; 7] column</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="volume">
+                <xs:annotation>
+                  <xs:documentation>l'élément contient un numéro de volume.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="issue">
+                <xs:annotation>
+                  <xs:documentation>l'élément contient un numéro de livraison ou bien un numéro de volume et de livraison.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="page">
+                <xs:annotation>
+                  <xs:documentation>l'élément contient un nombre de pages ou l'étendue de sélection des pages.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="line">
+                <xs:annotation>
+                  <xs:documentation>the element contains a line number or line range.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="chapter">
+                <xs:annotation>
+                  <xs:documentation>(chapitre) l'élément contient une indication de chapitre (le numéro et/ou le titre)</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="part">
+                <xs:annotation>
+                  <xs:documentation>l'élément identifie une partie d'un livre ou une anthologie.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="column">
+                <xs:annotation>
+                  <xs:documentation>the element identifies a column.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.citing.attribute.from">
+    <xs:attribute name="from" type="ns1:data.word">
+      <xs:annotation>
+        <xs:documentation>specifies the starting point of the range of units indicated by the unit attribute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.citing.attribute.to">
+    <xs:attribute name="to" type="ns1:data.word">
+      <xs:annotation>
+        <xs:documentation>specifies the end-point of the range of units indicated by the unit attribute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
   <xs:group name="model.nameLike.agent">
     <xs:choice>
       <xs:element ref="ns1:name"/>
@@ -1362,6 +1456,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike">
     <xs:choice>
       <xs:element ref="ns1:bibl"/>
+      <xs:element ref="ns1:biblStruct"/>
       <xs:element ref="ns1:listBibl"/>
       <xs:element ref="ns1:biblFull"/>
       <xs:element ref="ns1:msDesc"/>
@@ -1370,6 +1465,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike_alternation">
     <xs:choice>
       <xs:element ref="ns1:bibl"/>
+      <xs:element ref="ns1:biblStruct"/>
       <xs:element ref="ns1:listBibl"/>
       <xs:element ref="ns1:biblFull"/>
       <xs:element ref="ns1:msDesc"/>
@@ -1378,6 +1474,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike_sequence">
     <xs:sequence>
       <xs:element ref="ns1:bibl"/>
+      <xs:element ref="ns1:biblStruct"/>
       <xs:element ref="ns1:listBibl"/>
       <xs:element ref="ns1:biblFull"/>
       <xs:element ref="ns1:msDesc"/>
@@ -1386,6 +1483,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike_sequenceOptional">
     <xs:sequence>
       <xs:element minOccurs="0" ref="ns1:bibl"/>
+      <xs:element minOccurs="0" ref="ns1:biblStruct"/>
       <xs:element minOccurs="0" ref="ns1:listBibl"/>
       <xs:element minOccurs="0" ref="ns1:biblFull"/>
       <xs:element minOccurs="0" ref="ns1:msDesc"/>
@@ -1394,6 +1492,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike_sequenceOptionalRepeatable">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:bibl"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:biblStruct"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:listBibl"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:biblFull"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:msDesc"/>
@@ -1402,6 +1501,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
   <xs:group name="model.biblLike_sequenceRepeatable">
     <xs:sequence>
       <xs:element maxOccurs="unbounded" ref="ns1:bibl"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:biblStruct"/>
       <xs:element maxOccurs="unbounded" ref="ns1:listBibl"/>
       <xs:element maxOccurs="unbounded" ref="ns1:biblFull"/>
       <xs:element maxOccurs="unbounded" ref="ns1:msDesc"/>
@@ -1699,6 +1799,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
     <xs:choice>
       <xs:element ref="ns1:address"/>
       <xs:element ref="ns1:date"/>
+      <xs:element ref="ns1:pubPlace"/>
       <xs:element ref="ns1:idno"/>
       <xs:element ref="ns1:availability"/>
     </xs:choice>
@@ -1764,9 +1865,11 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
     </xs:choice>
   </xs:group>
   <xs:group name="model.imprintPart">
-    <xs:sequence>
+    <xs:choice>
       <xs:element ref="ns1:publisher"/>
-    </xs:sequence>
+      <xs:element ref="ns1:biblScope"/>
+      <xs:element ref="ns1:pubPlace"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="model.physDescPart_sequenceOptional">
     <xs:sequence>
@@ -1867,7 +1970,10 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
     <xs:choice>
       <xs:element ref="ns1:model.respLike"/>
       <xs:group ref="ns1:model.imprintPart"/>
+      <xs:element ref="ns1:series"/>
+      <xs:element ref="ns1:citedRange"/>
       <xs:element ref="ns1:bibl"/>
+      <xs:element ref="ns1:textLang"/>
       <xs:element ref="ns1:availability"/>
       <xs:element ref="ns1:msIdentifier"/>
     </xs:choice>
@@ -3246,6 +3352,107 @@ Elements]</xs:documentation>
       </xs:attribute>
     </xs:complexType>
   </xs:element>
+  <xs:element name="analytic">
+    <xs:annotation>
+      <xs:documentation>(niveau analytique) contient des éléments descriptifs qui décrivent la bibliographie d'une ressource (par exemple un poème ou un article de revue) publiée à l'intérieur d'une monographie ou d'une ressource et non publiée de façon indépendante. [3.11.2.1. Analytic, Monographic, and Series Levels]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ns1:author"/>
+        <xs:element ref="ns1:editor"/>
+        <xs:element ref="ns1:respStmt"/>
+        <xs:element ref="ns1:title"/>
+        <xs:element ref="ns1:model.ptrLike"/>
+        <xs:element ref="ns1:date"/>
+        <xs:element ref="ns1:textLang"/>
+        <xs:element ref="ns1:idno"/>
+        <xs:element ref="ns1:availability"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monogr">
+    <xs:annotation>
+      <xs:documentation>(niveau monographique) contient des données bibliographiques décrivant un objet (par exemple une monographie ou une revue) publié comme un élément indépendant (i.e. matériellement séparé. [3.11.2.1. Analytic, Monographic, and Series Levels]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0">
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+            <xs:element maxOccurs="unbounded" ref="ns1:title"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:model.ptrLike"/>
+              <xs:element ref="ns1:idno"/>
+              <xs:element ref="ns1:textLang"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element ref="ns1:title"/>
+              <xs:element ref="ns1:model.ptrLike"/>
+              <xs:element ref="ns1:idno"/>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:textLang"/>
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="ns1:authority"/>
+            <xs:element ref="ns1:idno"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:availability"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:model.noteLike"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="ns1:idno"/>
+          <xs:element ref="ns1:model.ptrLike"/>
+          <xs:element ref="ns1:editor"/>
+          <xs:element ref="ns1:respStmt"/>
+        </xs:choice>
+        <xs:element ref="ns1:imprint"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="ns1:imprint"/>
+          <xs:element ref="ns1:biblScope"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="series">
+    <xs:annotation>
+      <xs:documentation>(informations sur la série) contient une information sur la série dans laquelle une monographie ou un autre élément bibliographique ont paru. [3.11.2.1. Analytic, Monographic, and Series Levels]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ns1:model.gLike"/>
+        <xs:element ref="ns1:title"/>
+        <xs:element ref="ns1:model.ptrLike"/>
+        <xs:element ref="ns1:editor"/>
+        <xs:element ref="ns1:respStmt"/>
+        <xs:element ref="ns1:biblScope"/>
+        <xs:element ref="ns1:idno"/>
+        <xs:element ref="ns1:textLang"/>
+        <xs:element ref="ns1:model.global"/>
+        <xs:element ref="ns1:availability"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="author" substitutionGroup="ns1:model.respLike">
     <xs:annotation>
       <xs:documentation>(auteur) dans une référence bibliographique contient le nom de la (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</xs:documentation>
@@ -3381,6 +3588,22 @@ Elements]</xs:documentation>
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="imprint">
+    <xs:annotation>
+      <xs:documentation>regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:choice>
+          <xs:group ref="ns1:model.imprintPart"/>
+          <xs:group ref="ns1:model.dateLike"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:respStmt"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="publisher">
     <xs:annotation>
       <xs:documentation>(éditeur) donne le nom de l'organisme responsable de la publication ou de la distribution d'un élément de la bibliographie. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</xs:documentation>
@@ -3389,6 +3612,46 @@ Elements]</xs:documentation>
       <xs:complexContent>
         <xs:extension base="ns1:macro.phraseSeq">
           <xs:attributeGroup ref="ns1:att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="biblScope">
+    <xs:annotation>
+      <xs:documentation>(extension d'une référence bibliographique) définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande. [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.citing.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="citedRange">
+    <xs:annotation>
+      <xs:documentation>(cited range) defines the range of cited content, often represented by pages or other units [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+          <xs:attributeGroup ref="ns1:att.citing.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pubPlace">
+    <xs:annotation>
+      <xs:documentation>(lieu de publication) contient le nom du lieu d'une publication. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.naming.attributes"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -3408,32 +3671,34 @@ Elements]</xs:documentation>
         <xs:group ref="ns1:model.biblPart"/>
         <xs:element ref="ns1:model.global"/>
       </xs:choice>
-      <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.corresp"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.synch"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.copyOf"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.next"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.prev"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.exclude"/>
-      <xs:attributeGroup ref="ns1:att.global.linking.attribute.select"/>
-      <xs:attributeGroup ref="ns1:att.global.analytic.attribute.ana"/>
-      <xs:attributeGroup ref="ns1:att.global.responsibility.attribute.cert"/>
-      <xs:attributeGroup ref="ns1:att.global.responsibility.attribute.resp"/>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
       <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
-      <xs:attribute name="status" default="draft">
-        <xs:annotation>
-          <xs:documentation>describes the status of a document either currently or, when associated with a dated element, at the time indicated.</xs:documentation>
-        </xs:annotation>
-        <xs:simpleType>
-          <xs:restriction base="xs:token">
-            <xs:enumeration value="draft">
-              <xs:annotation>
-                <xs:documentation/>
-              </xs:annotation>
-            </xs:enumeration>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
+      <xs:attributeGroup ref="ns1:att.docStatus.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="biblStruct">
+    <xs:annotation>
+      <xs:documentation>(référence bibliographique structurée) contient une référence bibliographique dans laquelle seuls des sous-éléments bibliographiques apparaissent et cela, selon un ordre déterminé. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:analytic"/>
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element ref="ns1:monogr"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:series"/>
+        </xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="ns1:model.noteLike"/>
+          <xs:element ref="ns1:idno"/>
+          <xs:element ref="ns1:model.ptrLike"/>
+          <xs:element ref="ns1:citedRange"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.docStatus.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="listBibl">
@@ -3545,6 +3810,31 @@ Elements]</xs:documentation>
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textLang">
+    <xs:annotation>
+      <xs:documentation>(langues du texte) décrit les langues et systèmes d'écriture utilisés dans un manuscrit (et non dans la description du manuscrit, dont les langues et systèmes d'écriture sont décrits dans l'élément langUsage). [3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.6.6. Languages and Writing Systems]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attribute name="mainLang" type="ns1:data.language">
+            <xs:annotation>
+              <xs:documentation>(langue principale) contient un code identifiant la langue principale du manuscrit.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="otherLangs">
+            <xs:annotation>
+              <xs:documentation>(autres langues) contient un ou plusieurs codes identifiant toute autre langue utilisée dans le manuscrit.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:list itemType="ns1:data.language"/>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
     </xs:complexType>
   </xs:element>
   <xs:element name="teiHeader">
@@ -3674,7 +3964,7 @@ Elements]</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="ns1:bibl"/>
+        <xs:element ref="ns1:biblStruct"/>
         <xs:element ref="ns1:biblFull"/>
         <xs:element ref="ns1:msDesc"/>
       </xs:choice>
@@ -5741,6 +6031,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
         <xs:group maxOccurs="unbounded" ref="ns1:model.pLike"/>
         <xs:sequence>
           <xs:element minOccurs="0" ref="ns1:summary"/>
+          <xs:element minOccurs="0" ref="ns1:textLang"/>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:msItemStruct"/>
         </xs:sequence>
       </xs:choice>
@@ -5785,8 +6076,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:colophon"/>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:decoNote"/>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:listBibl"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:bibl"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:bibl"/>
+              <xs:element ref="ns1:biblStruct"/>
+            </xs:choice>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:model.noteLike"/>
+            <xs:element minOccurs="0" ref="ns1:textLang"/>
           </xs:sequence>
         </xs:choice>
       </xs:sequence>

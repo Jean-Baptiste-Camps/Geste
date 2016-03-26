@@ -3,6 +3,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <!--
     TODO:
+    préciser gestion des références bibliographiques
     une fois que le modèle sera complètement écrit, il faudra modifier les descriptions d'éléments, pour qu'elles pointent vers le chapitre correspondant
     du modèle, et pas vers les Guidelines.
     Pour distinguer selon le statut du texte, faire des tests schématron en fonction de la valeur @status du revisionDesc (et le décrire dans le document ODD)
@@ -245,14 +246,50 @@
                     </p>
                     <p>Enfin, la description de la source intervient, dans un élément
                             <gi>sourceDesc</gi>. Celle-ci peut être soit une référence
-                        <gi>bibl</gi>, dans le cas de la numérisation d'un document imprimé, soit
+                        <gi>biblStruct</gi>, dans le cas de la numérisation d'un document imprimé, soit
                         une référence <gi>biblFull</gi>, dans le cas d'une édition fondée sur un
                         document TEI préexistant, soit une notice de manuscrit <gi>msDesc</gi>, pour
                         la transcription d'un manuscrit. <specList>
-                            <specDesc key="bibl"/><!-- TODO: ajouter biblStruct plutôt ? et retirer bibl? -->
+                            <specDesc key="biblStruct"/>
                             <specDesc key="biblFull"/>
                             <specDesc key="msDesc"/>
-                        </specList> Dans le cas d'une notice de manuscrit, les informations auront
+                        </specList> </p>
+                    <p>Pour une édition fondée sur la numérisation d'une édition imprimée, ayant connu deux impressions, 
+                    la section pourra prendre la forme suivante :
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <sourceDesc>
+                          <biblStruct>
+                            <monogr>
+                                <editor xml:id="Guessard">
+                                    <persName>
+                                        <forename>François</forename>
+                                        <surname>Guessard</surname>
+                                    </persName>
+                                </editor>
+                                <editor xml:id="Michelant">
+                                    <persName>
+                                        <forename>Henri</forename>
+                                        <surname>Michelant</surname>
+                                    </persName>
+                                </editor>
+                                <title type="main">Gui de Bourgogne</title> 
+                                <title type="sub">Chanson de geste</title>
+                                <imprint>
+                                    <publisher>P. Jannet</publisher>
+                                    <pubPlace>Paris</pubPlace>
+                                    <date>1858</date>
+                                </imprint>
+                                <imprint>
+                                    <publisher>F. Vieweg</publisher>
+                                    <pubPlace>Paris</pubPlace>
+                                    <date>1859</date>
+                                </imprint>
+                            </monogr>
+                        </biblStruct>
+                      </sourceDesc>
+                    </egXML>
+                    </p>
+                    <p>Dans le cas d'une notice de manuscrit, les informations auront
                         vocation à être détaillées. Elles seront exposées dans une autre section de
                         ce modèle (<ptr target="#DIV_MSDESC"/>). </p>
                     <p>Exemple complet: <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1474,7 +1511,7 @@
                     <elementSpec ident="sourceDesc" mode="change">
                         <content>
                             <alternate minOccurs="1" maxOccurs="1">
-                                <elementRef key="bibl"/>
+                                <elementRef key="biblStruct"/>
                                 <!-- TODO: remplacer par biblStruct? -->
                                 <elementRef key="biblFull"/>
                                 <elementRef key="msDesc"/>
@@ -1525,8 +1562,8 @@
                         </attList>
                     </elementSpec>
                     <moduleRef key="core"
-                        include="abbr add address addrLine author bibl cb choice corr date del editor email expan gap gb graphic head hi item l lb lg list listBibl
-                        name note num orig p pb publisher q ref reg resp respStmt rs sic term title unclear"/>
+                        include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice citedRange corr date del edition editor email expan extent gap gb graphic head hi imprint item l lb lg list listBibl
+                       monogr name note num orig p pb pubPlace publisher q ref reg resp respStmt rs series sic term textLang title unclear"/>
                     <!--Pour l'instant, j'inclus tout le module, à raffiner ensuite ou à garder intégralement?-->
                     <!-- J'exclus pour l'instant quote, privilégiant q, mais, en fait, => lequel utiliser pour le discours direct? -->
                     <!--<moduleRef key="core"/>-->
@@ -2178,7 +2215,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="bibl" mode="change">
+                    <!--<elementSpec ident="bibl" mode="change">
                         <attList>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
@@ -2198,7 +2235,10 @@
                                 </valList>
                             </attDef>
                         </attList>
-                    </elementSpec>
+                    </elementSpec>-->
+                    <!--<elementSpec ident="biblStruct"><!-\- Élément à préciser et documenter -\->
+                        
+                    </elementSpec>-->
                     <elementSpec ident="listBibl" mode="change">
                         <attList>
                             <attDef ident="xml:id" mode="delete"/>

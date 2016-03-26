@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-03-24T20:34:17Z. .
+DTD generated from ODD source 2016-03-26T11:53:05Z. .
 TEI Edition: Version 2.9.1. Last updated on
 	15th October 2015, revision 46ac023
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -426,6 +426,18 @@ seq CDATA  #IMPLIED'>
  %att.transcriptional.attribute.status;
  %att.transcriptional.attribute.cause;
  %att.transcriptional.attribute.seq;'> 
+<!ENTITY % att.citing.attribute.unit '
+unit %data.enumerated;  #IMPLIED'>
+
+<!ENTITY % att.citing.attribute.from '
+from %data.word;  #IMPLIED'>
+
+<!ENTITY % att.citing.attribute.to '
+to %data.word;  #IMPLIED'>
+<!ENTITY % att.citing.attributes '
+ %att.citing.attribute.unit;
+ %att.citing.attribute.from;
+ %att.citing.attribute.to;'> 
 <!ENTITY % model.nameLike.agent "name |orgName |persName"> 
 <!ENTITY % model.nameLike.agent_sequence "name, orgName, persName"> 
 <!ENTITY % model.nameLike.agent_sequenceOptional "name?, orgName?, persName?"> 
@@ -536,11 +548,11 @@ seq CDATA  #IMPLIED'>
 <!ENTITY % model.specDescLike_sequenceOptional ""> 
 <!ENTITY % model.specDescLike_sequenceOptionalRepeatable ""> 
 <!ENTITY % model.specDescLike_sequenceRepeatable ""> 
-<!ENTITY % model.biblLike "bibl |listBibl |biblFull |msDesc"> 
-<!ENTITY % model.biblLike_sequence "bibl, listBibl, biblFull, msDesc"> 
-<!ENTITY % model.biblLike_sequenceOptional "bibl?, listBibl?, biblFull?, msDesc?"> 
-<!ENTITY % model.biblLike_sequenceOptionalRepeatable "bibl*, listBibl*, biblFull*, msDesc*"> 
-<!ENTITY % model.biblLike_sequenceRepeatable "bibl+, listBibl+, biblFull+, msDesc+"> 
+<!ENTITY % model.biblLike "bibl |biblStruct |listBibl |biblFull |msDesc"> 
+<!ENTITY % model.biblLike_sequence "bibl, biblStruct, listBibl, biblFull, msDesc"> 
+<!ENTITY % model.biblLike_sequenceOptional "bibl?, biblStruct?, listBibl?, biblFull?, msDesc?"> 
+<!ENTITY % model.biblLike_sequenceOptionalRepeatable "bibl*, biblStruct*, listBibl*, biblFull*, msDesc*"> 
+<!ENTITY % model.biblLike_sequenceRepeatable "bibl+, biblStruct+, listBibl+, biblFull+, msDesc+"> 
 <!ENTITY % model.headLike "head"> 
 <!ENTITY % model.headLike_sequence "head"> 
 <!ENTITY % model.headLike_sequenceOptional "head?"> 
@@ -621,11 +633,11 @@ seq CDATA  #IMPLIED'>
 <!ENTITY % model.publicationStmtPart.agency_sequenceOptional "publisher?, authority?"> 
 <!ENTITY % model.publicationStmtPart.agency_sequenceOptionalRepeatable "publisher*, authority*"> 
 <!ENTITY % model.publicationStmtPart.agency_sequenceRepeatable "publisher+, authority+"> 
-<!ENTITY % model.publicationStmtPart.detail "address |date |idno |availability"> 
-<!ENTITY % model.publicationStmtPart.detail_sequence "address, date, idno, availability"> 
-<!ENTITY % model.publicationStmtPart.detail_sequenceOptional "address?, date?, idno?, availability?"> 
-<!ENTITY % model.publicationStmtPart.detail_sequenceOptionalRepeatable "address*, date*, idno*, availability*"> 
-<!ENTITY % model.publicationStmtPart.detail_sequenceRepeatable "address+, date+, idno+, availability+"> 
+<!ENTITY % model.publicationStmtPart.detail "address |date |pubPlace |idno |availability"> 
+<!ENTITY % model.publicationStmtPart.detail_sequence "address, date, pubPlace, idno, availability"> 
+<!ENTITY % model.publicationStmtPart.detail_sequenceOptional "address?, date?, pubPlace?, idno?, availability?"> 
+<!ENTITY % model.publicationStmtPart.detail_sequenceOptionalRepeatable "address*, date*, pubPlace*, idno*, availability*"> 
+<!ENTITY % model.publicationStmtPart.detail_sequenceRepeatable "address+, date+, pubPlace+, idno+, availability+"> 
 <!ENTITY % model.availabilityPart "licence"> 
 <!ENTITY % model.availabilityPart_sequence "licence"> 
 <!ENTITY % model.availabilityPart_sequenceOptional "licence?"> 
@@ -696,11 +708,11 @@ seq CDATA  #IMPLIED'>
 <!ENTITY % model.choicePart_sequenceOptional "sic?, corr?, reg?, orig?, unclear?, abbr?, expan?"> 
 <!ENTITY % model.choicePart_sequenceOptionalRepeatable "sic*, corr*, reg*, orig*, unclear*, abbr*, expan*"> 
 <!ENTITY % model.choicePart_sequenceRepeatable "sic+, corr+, reg+, orig+, unclear+, abbr+, expan+"> 
-<!ENTITY % model.imprintPart "publisher"> 
-<!ENTITY % model.imprintPart_sequence "publisher"> 
-<!ENTITY % model.imprintPart_sequenceOptional "publisher?"> 
-<!ENTITY % model.imprintPart_sequenceOptionalRepeatable "publisher*"> 
-<!ENTITY % model.imprintPart_sequenceRepeatable "publisher+"> 
+<!ENTITY % model.imprintPart "publisher |biblScope |pubPlace"> 
+<!ENTITY % model.imprintPart_sequence "publisher, biblScope, pubPlace"> 
+<!ENTITY % model.imprintPart_sequenceOptional "publisher?, biblScope?, pubPlace?"> 
+<!ENTITY % model.imprintPart_sequenceOptionalRepeatable "publisher*, biblScope*, pubPlace*"> 
+<!ENTITY % model.imprintPart_sequenceRepeatable "publisher+, biblScope+, pubPlace+"> 
 <!ENTITY % model.physDescPart "objectDesc |handDesc |scriptDesc |musicNotation |decoDesc |additions |bindingDesc |sealDesc |accMat"> 
 <!ENTITY % model.physDescPart_sequence "objectDesc, handDesc, scriptDesc, musicNotation, decoDesc, additions, bindingDesc, sealDesc, accMat"> 
 <!ENTITY % model.physDescPart_sequenceOptional "objectDesc?, handDesc?, scriptDesc?, musicNotation?, decoDesc?, additions?, bindingDesc?, sealDesc?, accMat?"> 
@@ -721,11 +733,11 @@ seq CDATA  #IMPLIED'>
 <!ENTITY % model.global_sequenceOptional "%model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?"> 
 <!ENTITY % model.global_sequenceOptionalRepeatable "%model.milestoneLike;*, %model.noteLike;*, %model.global.edit;*"> 
 <!ENTITY % model.global_sequenceRepeatable "%model.milestoneLike;+, %model.noteLike;+, %model.global.edit;+"> 
-<!ENTITY % model.biblPart "%model.respLike; |%model.imprintPart; |bibl |availability |msIdentifier"> 
-<!ENTITY % model.biblPart_sequence "%model.respLike;, %model.imprintPart;, bibl, availability, msIdentifier"> 
-<!ENTITY % model.biblPart_sequenceOptional "%model.respLike;?, %model.imprintPart;?, bibl?, availability?, msIdentifier?"> 
-<!ENTITY % model.biblPart_sequenceOptionalRepeatable "%model.respLike;*, %model.imprintPart;*, bibl*, availability*, msIdentifier*"> 
-<!ENTITY % model.biblPart_sequenceRepeatable "%model.respLike;+, %model.imprintPart;+, bibl+, availability+, msIdentifier+"> 
+<!ENTITY % model.biblPart "%model.respLike; |%model.imprintPart; |series |citedRange |bibl |textLang |availability |msIdentifier"> 
+<!ENTITY % model.biblPart_sequence "%model.respLike;, %model.imprintPart;, series, citedRange, bibl, textLang, availability, msIdentifier"> 
+<!ENTITY % model.biblPart_sequenceOptional "%model.respLike;?, %model.imprintPart;?, series?, citedRange?, bibl?, textLang?, availability?, msIdentifier?"> 
+<!ENTITY % model.biblPart_sequenceOptionalRepeatable "%model.respLike;*, %model.imprintPart;*, series*, citedRange*, bibl*, textLang*, availability*, msIdentifier*"> 
+<!ENTITY % model.biblPart_sequenceRepeatable "%model.respLike;+, %model.imprintPart;+, series+, citedRange+, bibl+, textLang+, availability+, msIdentifier+"> 
 <!ENTITY % model.frontPart ""> 
 <!ENTITY % model.frontPart_sequence ""> 
 <!ENTITY % model.frontPart_sequenceOptional ""> 
@@ -1057,6 +1069,11 @@ place NMTOKENS  #REQUIRED >
  %att.ranging.attribute.atMost;
  %att.ranging.attribute.confidence;
  %att.source.attribute.source; >
+<!--doc:(niveau analytique) contient des éléments descriptifs qui décrivent la bibliographie d'une ressource (par exemple un poème ou un article de revue) publiée à l'intérieur d'une monographie ou d'une ressource et non publiée de façon indépendante. [3.11.2.1. Analytic, Monographic, and Series Levels] -->
+<!ELEMENT analytic (author|editor|respStmt|title|%model.ptrLike;|date|textLang|idno|availability)*>
+<!ATTLIST analytic xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST analytic
+ %att.global.attributes; >
 <!--doc:(entrée d'apparat critique) contient une entrée dans un apparat critique, constituée d'un lemme facultatif et d'au moins une leçon. [12.1.1. The Apparatus Entry] -->
 <!ELEMENT app ((%model.milestoneLike;|%model.noteLike;|gap|space)*,(lem,(%model.milestoneLike;|%model.noteLike;|gap|space)*,(wit,(%model.milestoneLike;|%model.noteLike;|gap|space)*)?)?,((%model.rdgLike;,(%model.milestoneLike;|%model.noteLike;|gap|space)*,(wit,(%model.milestoneLike;|%model.noteLike;|gap|space)*)?)|(rdgGrp,(%model.milestoneLike;|%model.noteLike;|gap|space)*,(wit,(%model.milestoneLike;|%model.noteLike;|gap|space)*)?))*)>
 <!ATTLIST app xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1099,24 +1116,29 @@ status (free|unknown|restricted) "unknown"  >
 <!ELEMENT bibl (#PCDATA|%model.gLike;|%model.highlighted;|%model.pPart.data;|%model.pPart.edit;|%model.segLike;|%model.ptrLike;|%model.biblPart;|%model.global;)*>
 <!ATTLIST bibl xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST bibl
- %att.global.attribute.xmllang;
- %att.global.linking.attribute.corresp;
- %att.global.linking.attribute.synch;
- %att.global.linking.attribute.copyOf;
- %att.global.linking.attribute.next;
- %att.global.linking.attribute.prev;
- %att.global.linking.attribute.exclude;
- %att.global.linking.attribute.select;
- %att.global.analytic.attribute.ana;
- %att.global.responsibility.attribute.cert;
- %att.global.responsibility.attribute.resp;
+ %att.global.attributes;
+ %att.typed.attributes;
  %att.sortable.attributes;
-status (draft) "draft"  >
+ %att.docStatus.attributes; >
 <!--doc:(référence bibliographique totalement structurée) contient une référence bibliographique totalement structurée : tous les composants de la description du fichier TEI y sont présents. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2. The File Description 2.2.7. The Source Description 15.3.2. Declarable Elements] -->
 <!ELEMENT biblFull ((titleStmt,publicationStmt),sourceDesc*)>
 <!ATTLIST biblFull xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST biblFull
  %att.global.attributes;
+ %att.sortable.attributes;
+ %att.docStatus.attributes; >
+<!--doc:(extension d'une référence bibliographique) définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande. [3.11.2.5. Scopes and Ranges in Bibliographic Citations] -->
+<!ELEMENT biblScope %macro.phraseSeq;>
+<!ATTLIST biblScope xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST biblScope
+ %att.global.attributes;
+ %att.citing.attributes; >
+<!--doc:(référence bibliographique structurée) contient une référence bibliographique dans laquelle seuls des sous-éléments bibliographiques apparaissent et cela, selon un ordre déterminé. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements] -->
+<!ELEMENT biblStruct (analytic*,(monogr,series*)+,(%model.noteLike;|idno|%model.ptrLike;|citedRange)*)>
+<!ATTLIST biblStruct xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST biblStruct
+ %att.global.attributes;
+ %att.typed.attributes;
  %att.sortable.attributes;
  %att.docStatus.attributes; >
 <!--doc:(reliure) contient la description d'une reliure, i.e. du type de couverture, d'ais, etc., rencontrés. [10.7.3.1. Binding Descriptions] -->
@@ -1199,6 +1221,13 @@ target CDATA  #IMPLIED >
  %att.global.facs.attribute.facs;
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp; >
+<!--doc:(cited range) defines the range of cited content, often represented by pages or other units [3.11.2.5. Scopes and Ranges in Bibliographic Citations] -->
+<!ELEMENT citedRange %macro.phraseSeq;>
+<!ATTLIST citedRange xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST citedRange
+ %att.global.attributes;
+ %att.pointing.attributes;
+ %att.citing.attributes; >
 <!--doc:(collation) contient la description de l'organisation des feuillets ou bifeuillets d'un manuscrit [10.7.1. Object Description] -->
 <!ELEMENT collation %macro.specialPara;>
 <!ATTLIST collation xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1603,6 +1632,11 @@ rend (superscript|initiale|filigr|peint|litteraElongata|litteraNotabilior|detach
  %att.global.attributes;
  %att.sortable.attributes;
 type %data.enumerated;  #IMPLIED >
+<!--doc:regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique. [3.11.2.4. Imprint, Size of a Document, and Reprint Information] -->
+<!ELEMENT imprint (((%model.imprintPart;)|(%model.dateLike;)),respStmt*,(%model.global;)*)+>
+<!ATTLIST imprint xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST imprint
+ %att.global.attributes; >
 <!--doc:contient l'incipit d'une section d'un manuscrit, c'est-à-dire les mots commençant le texte proprement dit, à l'exclusion de toute rubrique qui pourrait les précéder, la transcription étant de longueur suffisante pour permettre l'identification de l'œuvre. De tels incipit étaient autrefois souvent utilisés à la place du titre de l'œuvre, pour l'identifier. [10.6.1. The msItem and msItemStruct Elements] -->
 <!ELEMENT incipit %macro.phraseSeq;>
 <!ATTLIST incipit xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1820,8 +1854,13 @@ scheme %data.pointer;  #IMPLIED >
 <!ATTLIST material
  %att.global.attributes;
  %att.canonical.attributes; >
+<!--doc:(niveau monographique) contient des données bibliographiques décrivant un objet (par exemple une monographie ou une revue) publié comme un élément indépendant (i.e. matériellement séparé. [3.11.2.1. Analytic, Monographic, and Series Levels] -->
+<!ELEMENT monogr ((((author|editor|respStmt),(author|editor|respStmt)*,title+,(%model.ptrLike;|idno|textLang|editor|respStmt)*)|((title|%model.ptrLike;|idno)+,(textLang|author|editor|respStmt)*)|(authority,idno))?,availability*,(%model.noteLike;)*,(idno|%model.ptrLike;|editor|respStmt)**,imprint,(imprint|biblScope)*)>
+<!ATTLIST monogr xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST monogr
+ %att.global.attributes; >
 <!--doc:(contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content] -->
-<!ELEMENT msContents ((%model.pLike;)+|(summary?,msItemStruct*))>
+<!ELEMENT msContents ((%model.pLike;)+|(summary?,textLang?,msItemStruct*))>
 <!ATTLIST msContents xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST msContents
  %att.global.attributes;
@@ -1856,7 +1895,7 @@ xml:id ID #REQUIRED >
 <!ATTLIST msIdentifier
  %att.global.attributes; >
 <!--doc:(description structurée d'un item de manuscrit) contient la description structurée d'un item ou d'une œuvre, dans le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit. [10.6.1. The msItem and msItemStruct Elements] -->
-<!ELEMENT msItemStruct ((locus|locusGrp)?,((%model.pLike;)+|(author*,respStmt*,title*,rubric?,incipit?,msItemStruct*,explicit?,finalRubric?,colophon*,decoNote*,listBibl*,bibl*,(%model.noteLike;)*)))>
+<!ELEMENT msItemStruct ((locus|locusGrp)?,((%model.pLike;)+|(author*,respStmt*,title*,rubric?,incipit?,msItemStruct*,explicit?,finalRubric?,colophon*,decoNote*,listBibl*,(bibl|biblStruct)*,(%model.noteLike;)*,textLang?)))>
 <!ATTLIST msItemStruct xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST msItemStruct
  %att.global.attributes;
@@ -2131,6 +2170,12 @@ age %data.enumerated;  #IMPLIED >
  %att.datable.attributes;
  %att.typed.attributes;
  %att.source.attributes; >
+<!--doc:(lieu de publication) contient le nom du lieu d'une publication. [3.11.2.4. Imprint, Size of a Document, and Reprint Information] -->
+<!ELEMENT pubPlace %macro.phraseSeq;>
+<!ATTLIST pubPlace xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST pubPlace
+ %att.global.attributes;
+ %att.naming.attributes; >
 <!--doc:(mention de publication) regroupe des informations concernant la publication ou la diffusion d’un texte électronique ou d’un autre type de texte. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description] -->
 <!ELEMENT publicationStmt ((%model.publicationStmtPart.agency;,(%model.publicationStmtPart.detail;)+))>
 <!ATTLIST publicationStmt xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2314,6 +2359,11 @@ contemporary %data.xTruthValue;  #IMPLIED >
  %att.segLike.attributes;
  %att.typed.attributes;
  %att.source.attributes; >
+<!--doc:(informations sur la série) contient une information sur la série dans laquelle une monographie ou un autre élément bibliographique ont paru. [3.11.2.1. Analytic, Monographic, and Series Levels] -->
+<!ELEMENT series (#PCDATA|%model.gLike;|title|%model.ptrLike;|editor|respStmt|biblScope|idno|textLang|%model.global;|availability)*>
+<!ATTLIST series xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST series
+ %att.global.attributes; >
 <!--doc:(lieu de peuplement) contient le nom d'un lieu de peuplement comme une cité, une ville ou un village, identifié comme une unité géo-politique ou administrative unique. [13.2.3. Place Names] -->
 <!ELEMENT settlement %macro.phraseSeq;>
 <!ATTLIST settlement xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2349,7 +2399,7 @@ contemporary %data.xTruthValue;  #IMPLIED >
 <!ATTLIST source
  %att.global.attributes; >
 <!--doc:(description de la source) décrit la source à partir de laquelle un texte électronique a été dérivé ou produit, habituellement une description bibliographique pour un texte numérisé, ou une expression comme "document numérique natif " pour un texte qui n'a aucune existence précédente. [2.2.7. The Source Description] -->
-<!ELEMENT sourceDesc (bibl|biblFull|msDesc)>
+<!ELEMENT sourceDesc (biblStruct|biblFull|msDesc)>
 <!ATTLIST sourceDesc xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST sourceDesc
  %att.global.attributes; >
@@ -2492,6 +2542,13 @@ flipping %data.truthValue;  #IMPLIED >
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
  %att.declaring.attributes; >
+<!--doc:(langues du texte) décrit les langues et systèmes d'écriture utilisés dans un manuscrit (et non dans la description du manuscrit, dont les langues et systèmes d'écriture sont décrits dans l'élément langUsage). [3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.6.6. Languages and Writing Systems] -->
+<!ELEMENT textLang %macro.phraseSeq;>
+<!ATTLIST textLang xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST textLang
+ %att.global.attributes;
+mainLang %data.language;  #IMPLIED
+otherLangs CDATA  #IMPLIED >
 <!--doc:(titre) contient le titre complet d'une oeuvre quelconque [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement] -->
 <!ELEMENT title %macro.paraContent;>
 <!ATTLIST title xmlns CDATA "http://www.tei-c.org/ns/1.0">

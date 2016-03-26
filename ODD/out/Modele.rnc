@@ -6,7 +6,7 @@ default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-03-24T20:34:42Z. .
+# Schema generated from ODD source 2016-03-26T11:53:17Z. .
 # TEI Edition: Version 2.9.1. Last updated on
 #	15th October 2015, revision 46ac023
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -586,6 +586,46 @@ att.transcriptional.attribute.seq =
   
   ## (séquence) assigne un numéro séquentiel relatif à l'ordre dans lequel les traits encodés portant cet attribut sont supposés être apparus.
   attribute seq { data.count }?
+att.citing.attributes =
+  att.citing.attribute.unit,
+  att.citing.attribute.from,
+  att.citing.attribute.to
+att.citing.attribute.unit =
+  
+  ## identifie le type d'information que transmet l'élément, par exemple colonnes, pages, volume, etc.
+  ## Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] part; 7] column
+  attribute unit {
+    
+    ## l'élément contient un numéro de volume.
+    "volume"
+    | 
+      ## l'élément contient un numéro de livraison ou bien un numéro de volume et de livraison.
+      "issue"
+    | 
+      ## l'élément contient un nombre de pages ou l'étendue de sélection des pages.
+      "page"
+    | 
+      ## the element contains a line number or line range.
+      "line"
+    | 
+      ## (chapitre) l'élément contient une indication de chapitre (le numéro et/ou le titre)
+      "chapter"
+    | 
+      ## l'élément identifie une partie d'un livre ou une anthologie.
+      "part"
+    | 
+      ## the element identifies a column.
+      "column"
+    | xsd:Name
+  }?
+att.citing.attribute.from =
+  
+  ## specifies the starting point of the range of units indicated by the unit attribute.
+  attribute from { data.word }?
+att.citing.attribute.to =
+  
+  ## specifies the end-point of the range of units indicated by the unit attribute.
+  attribute to { data.word }?
 model.nameLike.agent = name | orgName | persName
 model.nameLike.agent_alternation = name | orgName | persName
 model.nameLike.agent_sequence = name, orgName, persName
@@ -684,13 +724,16 @@ model.oddDecl_sequenceOptionalRepeatable = empty
 model.oddDecl_sequenceRepeatable = notAllowed
 model.phrase.xml = notAllowed
 model.specDescLike = notAllowed
-model.biblLike = bibl | listBibl | biblFull | msDesc
-model.biblLike_alternation = bibl | listBibl | biblFull | msDesc
-model.biblLike_sequence = bibl, listBibl, biblFull, msDesc
-model.biblLike_sequenceOptional = bibl?, listBibl?, biblFull?, msDesc?
+model.biblLike = bibl | biblStruct | listBibl | biblFull | msDesc
+model.biblLike_alternation =
+  bibl | biblStruct | listBibl | biblFull | msDesc
+model.biblLike_sequence = bibl, biblStruct, listBibl, biblFull, msDesc
+model.biblLike_sequenceOptional =
+  bibl?, biblStruct?, listBibl?, biblFull?, msDesc?
 model.biblLike_sequenceOptionalRepeatable =
-  bibl*, listBibl*, biblFull*, msDesc*
-model.biblLike_sequenceRepeatable = bibl+, listBibl+, biblFull+, msDesc+
+  bibl*, biblStruct*, listBibl*, biblFull*, msDesc*
+model.biblLike_sequenceRepeatable =
+  bibl+, biblStruct+, listBibl+, biblFull+, msDesc+
 model.headLike = head
 model.headLike_alternation = head
 model.headLike_sequence = head
@@ -756,7 +799,8 @@ model.placeStateLike_sequenceOptionalRepeatable =
 model.placeStateLike_sequenceRepeatable =
   model.placeNamePart_sequenceRepeatable+
 model.publicationStmtPart.agency = publisher | authority
-model.publicationStmtPart.detail = address | date | idno | availability
+model.publicationStmtPart.detail =
+  address | date | pubPlace | idno | availability
 model.availabilityPart = licence
 model.certLike = notAllowed
 model.descLike = notAllowed
@@ -782,7 +826,7 @@ model.pLike.front = head
 model.divBottomPart = notAllowed
 model.divBottom = model.divWrapper | model.divBottomPart
 model.choicePart = sic | corr | reg | orig | unclear | abbr | expan
-model.imprintPart = publisher
+model.imprintPart = publisher | biblScope | pubPlace
 model.physDescPart_sequenceOptional =
   objectDesc?,
   handDesc?,
@@ -845,7 +889,10 @@ model.global = model.milestoneLike | model.noteLike | model.global.edit
 model.biblPart =
   model.respLike
   | model.imprintPart
+  | series
+  | citedRange
   | bibl
+  | textLang
   | availability
   | msIdentifier
 model.frontPart = model.frontPart.drama
@@ -1836,6 +1883,59 @@ cb =
     attribute n { data.text },
     empty
   }
+analytic =
+  
+  ## (niveau analytique) contient des éléments descriptifs qui décrivent la bibliographie d'une ressource (par exemple un poème ou un article de revue) publiée à l'intérieur d'une monographie ou d'une ressource et non publiée de façon indépendante. [3.11.2.1. Analytic, Monographic, and Series Levels]
+  element analytic {
+    (author
+     | editor
+     | respStmt
+     | title
+     | model.ptrLike
+     | date
+     | textLang
+     | idno
+     | availability)*,
+    att.global.attributes,
+    empty
+  }
+monogr =
+  
+  ## (niveau monographique) contient des données bibliographiques décrivant un objet (par exemple une monographie ou une revue) publié comme un élément indépendant (i.e. matériellement séparé. [3.11.2.1. Analytic, Monographic, and Series Levels]
+  element monogr {
+    ((((author | editor | respStmt),
+       (author | editor | respStmt)*,
+       title+,
+       (model.ptrLike | idno | textLang | editor | respStmt)*)
+      | ((title | model.ptrLike | idno)+,
+         (textLang | author | editor | respStmt)*)
+      | (authority, idno))?,
+     availability*,
+     model.noteLike*,
+     (idno | model.ptrLike | editor | respStmt)*,
+     imprint,
+     (imprint | biblScope)*),
+    att.global.attributes,
+    empty
+  }
+series =
+  
+  ## (informations sur la série) contient une information sur la série dans laquelle une monographie ou un autre élément bibliographique ont paru. [3.11.2.1. Analytic, Monographic, and Series Levels]
+  element series {
+    (text
+     | model.gLike
+     | title
+     | model.ptrLike
+     | editor
+     | respStmt
+     | biblScope
+     | idno
+     | textLang
+     | model.global
+     | availability)*,
+    att.global.attributes,
+    empty
+  }
 author =
   
   ## (auteur) dans une référence bibliographique contient le nom de la (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]
@@ -1933,10 +2033,41 @@ title =
     }?,
     empty
   }
+imprint =
+  
+  ## regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]
+  element imprint {
+    (empty*,
+     ((model.imprintPart | model.dateLike), respStmt*, model.global*)+),
+    att.global.attributes,
+    empty
+  }
 publisher =
   
   ## (éditeur) donne le nom de l'organisme responsable de la publication ou de la distribution d'un élément de la bibliographie. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]
   element publisher { macro.phraseSeq, att.global.attributes, empty }
+biblScope =
+  
+  ## (extension d'une référence bibliographique) définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande. [3.11.2.5. Scopes and Ranges in Bibliographic Citations]
+  element biblScope {
+    macro.phraseSeq, att.global.attributes, att.citing.attributes, empty
+  }
+citedRange =
+  
+  ## (cited range) defines the range of cited content, often represented by pages or other units [3.11.2.5. Scopes and Ranges in Bibliographic Citations]
+  element citedRange {
+    macro.phraseSeq,
+    att.global.attributes,
+    att.pointing.attributes,
+    att.citing.attributes,
+    empty
+  }
+pubPlace =
+  
+  ## (lieu de publication) contient le nom du lieu d'une publication. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]
+  element pubPlace {
+    macro.phraseSeq, att.global.attributes, att.naming.attributes, empty
+  }
 bibl =
   
   ## (référence bibliographique.) contient une référence bibliographique faiblement structurée dans laquelle les sous-composants peuvent ou non être explicitement balisés. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]
@@ -1950,26 +2081,43 @@ bibl =
      | model.ptrLike
      | model.biblPart
      | model.global)*,
-    att.global.attribute.xmllang,
-    att.global.linking.attribute.corresp,
-    att.global.linking.attribute.synch,
-    att.global.linking.attribute.copyOf,
-    att.global.linking.attribute.next,
-    att.global.linking.attribute.prev,
-    att.global.linking.attribute.exclude,
-    att.global.linking.attribute.select,
-    att.global.analytic.attribute.ana,
-    att.global.responsibility.attribute.cert,
-    att.global.responsibility.attribute.resp,
+    att.global.attributes,
+    att.typed.attributes,
     att.sortable.attributes,
-    
-    ## describes the status of a document either currently or, when associated with a dated element, at the time indicated.
-    [ a:defaultValue = "draft" ]
-    attribute status {
-      
-      ##
-      "draft"
-    }?,
+    att.docStatus.attributes,
+    empty
+  }
+biblStruct =
+  
+  ## (référence bibliographique structurée) contient une référence bibliographique dans laquelle seuls des sous-éléments bibliographiques apparaissent et cela, selon un ordre déterminé. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]
+  element biblStruct {
+    (analytic*,
+     (monogr, series*)+,
+     (model.noteLike | idno | model.ptrLike | citedRange)*)
+    >> sch:pattern [
+         id =
+           "otinel-biblStruct-deprecate-altIdentifier-child-constraint-4"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:biblStruct"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "child::tei:idno"
+             role = "nonfatal"
+             "WARNING: use of deprecated method — the use of the idno element as a direct child of the biblStruct element will be removed from the TEI on 2016-09-18"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attributes,
+    att.typed.attributes,
+    att.sortable.attributes,
+    att.docStatus.attributes,
     empty
   }
 listBibl =
@@ -2007,7 +2155,7 @@ l =
       | rs
       | subst)+)
     >> sch:pattern [
-         id = "otinel-l-abstractModel-structure-l-constraint-4"
+         id = "otinel-l-abstractModel-structure-l-constraint-5"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2077,7 +2225,7 @@ lg =
          "         "
        ]
     >> sch:pattern [
-         id = "otinel-lg-abstractModel-structure-l-constraint-5"
+         id = "otinel-lg-abstractModel-structure-l-constraint-6"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2119,6 +2267,22 @@ lg =
       ## caractérise le groupe de vers comme constituant une laisse.
       "laisse"
     },
+    empty
+  }
+textLang =
+  
+  ## (langues du texte) décrit les langues et systèmes d'écriture utilisés dans un manuscrit (et non dans la description du manuscrit, dont les langues et systèmes d'écriture sont décrits dans l'élément langUsage). [3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.6.6. Languages and Writing Systems]
+  element textLang {
+    macro.phraseSeq,
+    att.global.attributes,
+    
+    ## (langue principale) contient un code identifiant la langue principale du manuscrit.
+    attribute mainLang { data.language }?,
+    
+    ## (autres langues) contient un ou plusieurs codes identifiant toute autre langue utilisée dans le manuscrit.
+    attribute otherLangs {
+      list { data.language* }
+    }?,
     empty
   }
 teiHeader =
@@ -2204,7 +2368,7 @@ sourceDesc =
   
   ## (description de la source) décrit la source à partir de laquelle un texte électronique a été dérivé ou produit, habituellement une description bibliographique pour un texte numérisé, ou une expression comme "document numérique natif " pour un texte qui n'a aucune existence précédente. [2.2.7. The Source Description]
   element sourceDesc {
-    (bibl | biblFull | msDesc), att.global.attributes, empty
+    (biblStruct | biblFull | msDesc), att.global.attributes, empty
   }
 biblFull =
   
@@ -2406,7 +2570,7 @@ body =
           ((model.divLike | model.divGenLike), model.global*)*)),
       (model.divBottom, model.global*)*)?)
     >> sch:pattern [
-         id = "otinel-div-abstractModel-structure-l-constraint-6"
+         id = "otinel-div-abstractModel-structure-l-constraint-7"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2426,7 +2590,7 @@ body =
          "         "
        ]
     >> sch:pattern [
-         id = "otinel-div-abstractModel-structure-p-constraint-7"
+         id = "otinel-div-abstractModel-structure-p-constraint-8"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3318,7 +3482,7 @@ ab =
   element ab {
     macro.paraContent
     >> sch:pattern [
-         id = "otinel-ab-abstractModel-structure-p-constraint-8"
+         id = "otinel-ab-abstractModel-structure-p-constraint-9"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3339,7 +3503,7 @@ ab =
          "         "
        ]
     >> sch:pattern [
-         id = "otinel-ab-abstractModel-structure-l-constraint-9"
+         id = "otinel-ab-abstractModel-structure-l-constraint-10"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3423,7 +3587,7 @@ dimensions =
   element dimensions {
     ((dim | model.dimLike)*)
     >> sch:pattern [
-         id = "otinel-dimensions-duplicateDim-constraint-10"
+         id = "otinel-dimensions-duplicateDim-constraint-11"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3445,7 +3609,7 @@ dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "otinel-dimensions-duplicateDim-constraint-11"
+         id = "otinel-dimensions-duplicateDim-constraint-12"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3467,7 +3631,7 @@ dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "otinel-dimensions-duplicateDim-constraint-12"
+         id = "otinel-dimensions-duplicateDim-constraint-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3695,7 +3859,7 @@ msIdentifier =
       idno?),
      (msName | altIdentifier)*)
     >> sch:pattern [
-         id = "otinel-msIdentifier-msId_minimal-constraint-13"
+         id = "otinel-msIdentifier-msId_minimal-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3793,7 +3957,7 @@ msContents =
   ## (contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content]
   element msContents {
     (model.pLike+
-     | (summary?, (msItemStruct)*)),
+     | (summary?, textLang?, (msItemStruct)*)),
     att.global.attributes,
     att.msExcerpt.attributes,
     
@@ -3820,8 +3984,9 @@ msItemStruct =
          colophon*,
          decoNote*,
          listBibl*,
-         (bibl)*,
-         model.noteLike*))),
+         (bibl | biblStruct)*,
+         model.noteLike*,
+         textLang?))),
     att.global.attributes,
     att.msExcerpt.attributes,
     
@@ -4085,7 +4250,7 @@ msPart =
       | (msContents?, physDesc?, history?, additional?, msPart*)))
     >> sch:pattern [
          id =
-           "otinel-msPart-deprecate-altIdentifier-child-constraint-14"
+           "otinel-msPart-deprecate-altIdentifier-child-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [

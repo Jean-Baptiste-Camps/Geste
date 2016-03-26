@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-03-24T20:34:08Z. .
+Schema generated from ODD source 2016-03-26T11:52:58Z. .
 TEI Edition: Version 2.9.1. Last updated on
 	15th October 2015, revision 46ac023
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
@@ -931,6 +931,52 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
          </attribute>
       </optional>
    </define>
+   <define name="att.citing.attributes">
+      <ref name="att.citing.attribute.unit"/>
+      <ref name="att.citing.attribute.from"/>
+      <ref name="att.citing.attribute.to"/>
+   </define>
+   <define name="att.citing.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifie le type d'information que transmet l'élément, par exemple colonnes, pages, volume, etc.
+Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] part; 7] column</a:documentation>
+            <choice>
+               <value>volume</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">l'élément contient un numéro de volume.</a:documentation>
+               <value>issue</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">l'élément contient un numéro de livraison ou bien un numéro de volume et de livraison.</a:documentation>
+               <value>page</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">l'élément contient un nombre de pages ou l'étendue de sélection des pages.</a:documentation>
+               <value>line</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element contains a line number or line range.</a:documentation>
+               <value>chapter</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chapitre) l'élément contient une indication de chapitre (le numéro et/ou le titre)</a:documentation>
+               <value>part</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">l'élément identifie une partie d'un livre ou une anthologie.</a:documentation>
+               <value>column</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a column.</a:documentation>
+               <data type="Name"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.citing.attribute.from">
+      <optional>
+         <attribute name="from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the starting point of the range of units indicated by the unit attribute.</a:documentation>
+            <ref name="data.word"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.citing.attribute.to">
+      <optional>
+         <attribute name="to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the end-point of the range of units indicated by the unit attribute.</a:documentation>
+            <ref name="data.word"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="model.nameLike.agent">
       <choice>
          <ref name="name"/>
@@ -1499,6 +1545,7 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <define name="model.biblLike">
       <choice>
          <ref name="bibl"/>
+         <ref name="biblStruct"/>
          <ref name="listBibl"/>
          <ref name="biblFull"/>
          <ref name="msDesc"/>
@@ -1507,6 +1554,7 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <define name="model.biblLike_alternation">
       <choice>
          <ref name="bibl"/>
+         <ref name="biblStruct"/>
          <ref name="listBibl"/>
          <ref name="biblFull"/>
          <ref name="msDesc"/>
@@ -1514,6 +1562,7 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    </define>
    <define name="model.biblLike_sequence">
       <ref name="bibl"/>
+      <ref name="biblStruct"/>
       <ref name="listBibl"/>
       <ref name="biblFull"/>
       <ref name="msDesc"/>
@@ -1521,6 +1570,9 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <define name="model.biblLike_sequenceOptional">
       <optional>
          <ref name="bibl"/>
+      </optional>
+      <optional>
+         <ref name="biblStruct"/>
       </optional>
       <optional>
          <ref name="listBibl"/>
@@ -1537,6 +1589,9 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
          <ref name="bibl"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="biblStruct"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="listBibl"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1549,6 +1604,9 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <define name="model.biblLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="bibl"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="biblStruct"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="listBibl"/>
@@ -1887,6 +1945,7 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
       <choice>
          <ref name="address"/>
          <ref name="date"/>
+         <ref name="pubPlace"/>
          <ref name="idno"/>
          <ref name="availability"/>
       </choice>
@@ -2012,6 +2071,8 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <define name="model.imprintPart">
       <choice>
          <ref name="publisher"/>
+         <ref name="biblScope"/>
+         <ref name="pubPlace"/>
       </choice>
    </define>
    <define name="model.physDescPart_sequenceOptional">
@@ -2182,7 +2243,10 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
       <choice>
          <ref name="model.respLike"/>
          <ref name="model.imprintPart"/>
+         <ref name="series"/>
+         <ref name="citedRange"/>
          <ref name="bibl"/>
+         <ref name="textLang"/>
          <ref name="availability"/>
          <ref name="msIdentifier"/>
       </choice>
@@ -3254,6 +3318,129 @@ Elements]</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="analytic">
+      <element name="analytic">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(niveau analytique) contient des éléments descriptifs qui décrivent la bibliographie d'une ressource (par exemple un poème ou un article de revue) publiée à l'intérieur d'une monographie ou d'une ressource et non publiée de façon indépendante. [3.11.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="author"/>
+               <ref name="editor"/>
+               <ref name="respStmt"/>
+               <ref name="title"/>
+               <ref name="model.ptrLike"/>
+               <ref name="date"/>
+               <ref name="textLang"/>
+               <ref name="idno"/>
+               <ref name="availability"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="monogr">
+      <element name="monogr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(niveau monographique) contient des données bibliographiques décrivant un objet (par exemple une monographie ou une revue) publié comme un élément indépendant (i.e. matériellement séparé. [3.11.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <group>
+            <optional>
+               <choice>
+                  <group>
+                     <choice>
+                        <ref name="author"/>
+                        <ref name="editor"/>
+                        <ref name="respStmt"/>
+                     </choice>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="author"/>
+                           <ref name="editor"/>
+                           <ref name="respStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                     <oneOrMore>
+                        <ref name="title"/>
+                     </oneOrMore>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="model.ptrLike"/>
+                           <ref name="idno"/>
+                           <ref name="textLang"/>
+                           <ref name="editor"/>
+                           <ref name="respStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                  </group>
+                  <group>
+                     <oneOrMore>
+                        <choice>
+                           <ref name="title"/>
+                           <ref name="model.ptrLike"/>
+                           <ref name="idno"/>
+                        </choice>
+                     </oneOrMore>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="textLang"/>
+                           <ref name="author"/>
+                           <ref name="editor"/>
+                           <ref name="respStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                  </group>
+                  <group>
+                     <ref name="authority"/>
+                     <ref name="idno"/>
+                  </group>
+               </choice>
+            </optional>
+            <zeroOrMore>
+               <ref name="availability"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="model.noteLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="idno"/>
+                  <ref name="model.ptrLike"/>
+                  <ref name="editor"/>
+                  <ref name="respStmt"/>
+               </choice>
+            </zeroOrMore>
+            <ref name="imprint"/>
+            <zeroOrMore>
+               <choice>
+                  <ref name="imprint"/>
+                  <ref name="biblScope"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="series">
+      <element name="series">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(informations sur la série) contient une information sur la série dans laquelle une monographie ou un autre élément bibliographique ont paru. [3.11.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="title"/>
+               <ref name="model.ptrLike"/>
+               <ref name="editor"/>
+               <ref name="respStmt"/>
+               <ref name="biblScope"/>
+               <ref name="idno"/>
+               <ref name="textLang"/>
+               <ref name="model.global"/>
+               <ref name="availability"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="author">
       <element name="author">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(auteur) dans une référence bibliographique contient le nom de la (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</a:documentation>
@@ -3372,11 +3559,67 @@ Elements]</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="imprint">
+      <element name="imprint">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+            <oneOrMore>
+               <choice>
+                  <group>
+                     <ref name="model.imprintPart"/>
+                  </group>
+                  <group>
+                     <ref name="model.dateLike"/>
+                  </group>
+               </choice>
+               <zeroOrMore>
+                  <ref name="respStmt"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="model.global"/>
+               </zeroOrMore>
+            </oneOrMore>
+         </group>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="publisher">
       <element name="publisher">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(éditeur) donne le nom de l'organisme responsable de la publication ou de la distribution d'un élément de la bibliographie. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="biblScope">
+      <element name="biblScope">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(extension d'une référence bibliographique) définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande. [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.citing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="citedRange">
+      <element name="citedRange">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cited range) defines the range of cited content, often represented by pages or other units [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.pointing.attributes"/>
+         <ref name="att.citing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="pubPlace">
+      <element name="pubPlace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lieu de publication) contient le nom du lieu d'une publication. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.naming.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3396,29 +3639,51 @@ Elements]</a:documentation>
                <ref name="model.global"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.attribute.xmllang"/>
-         <ref name="att.global.linking.attribute.corresp"/>
-         <ref name="att.global.linking.attribute.synch"/>
-         <ref name="att.global.linking.attribute.copyOf"/>
-         <ref name="att.global.linking.attribute.next"/>
-         <ref name="att.global.linking.attribute.prev"/>
-         <ref name="att.global.linking.attribute.exclude"/>
-         <ref name="att.global.linking.attribute.select"/>
-         <ref name="att.global.analytic.attribute.ana"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.typed.attributes"/>
          <ref name="att.sortable.attributes"/>
-         <optional>
-            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                       name="status"
-                       a:defaultValue="draft">
-               <a:documentation>describes the status of a document either currently or, when associated with a dated element, at the time indicated.</a:documentation>
+         <ref name="att.docStatus.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="biblStruct">
+      <element name="biblStruct">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(référence bibliographique structurée) contient une référence bibliographique dans laquelle seuls des sous-éléments bibliographiques apparaissent et cela, selon un ordre déterminé. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="analytic"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="monogr"/>
+               <zeroOrMore>
+                  <ref name="series"/>
+               </zeroOrMore>
+            </oneOrMore>
+            <zeroOrMore>
                <choice>
-                  <value>draft</value>
-                  <a:documentation/>
+                  <ref name="model.noteLike"/>
+                  <ref name="idno"/>
+                  <ref name="model.ptrLike"/>
+                  <ref name="citedRange"/>
                </choice>
-            </attribute>
-         </optional>
+            </zeroOrMore>
+         </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="otinel-biblStruct-deprecate-altIdentifier-child-constraint-4">
+            <rule context="tei:biblStruct">
+               <sch:report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
+                           xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                           test="child::tei:idno"
+                           role="nonfatal">WARNING: use of deprecated method — the use of the idno element as a direct child of the biblStruct element will be removed from the TEI on 2016-09-18</sch:report>
+            </rule>
+         </pattern>
+         <ref name="att.global.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3481,7 +3746,7 @@ Elements]</a:documentation>
                             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-l-abstractModel-structure-l-constraint-4">
+                  id="otinel-l-abstractModel-structure-l-constraint-5">
             <rule context="tei:l">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3541,7 +3806,7 @@ Elements]</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-lg-abstractModel-structure-l-constraint-5">
+                  id="otinel-lg-abstractModel-structure-l-constraint-6">
             <rule context="tei:lg">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3575,6 +3840,30 @@ Elements]</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caractérise le groupe de vers comme constituant une laisse.</a:documentation>
             </choice>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="textLang">
+      <element name="textLang">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(langues du texte) décrit les langues et systèmes d'écriture utilisés dans un manuscrit (et non dans la description du manuscrit, dont les langues et systèmes d'écriture sont décrits dans l'élément langUsage). [3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.6.6. Languages and Writing Systems]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="mainLang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(langue principale) contient un code identifiant la langue principale du manuscrit.</a:documentation>
+               <ref name="data.language"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="otherLangs">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(autres langues) contient un ou plusieurs codes identifiant toute autre langue utilisée dans le manuscrit.</a:documentation>
+               <list>
+                  <zeroOrMore>
+                     <ref name="data.language"/>
+                  </zeroOrMore>
+               </list>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -3706,7 +3995,7 @@ Elements]</a:documentation>
       <element name="sourceDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description de la source) décrit la source à partir de laquelle un texte électronique a été dérivé ou produit, habituellement une description bibliographique pour un texte numérisé, ou une expression comme "document numérique natif " pour un texte qui n'a aucune existence précédente. [2.2.7. The Source Description]</a:documentation>
          <choice>
-                                <ref name="bibl"/>
+                                <ref name="biblStruct"/>
                                 
                                 <ref name="biblFull"/>
                                 <ref name="msDesc"/>
@@ -4134,7 +4423,7 @@ Elements]</a:documentation>
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-div-abstractModel-structure-l-constraint-6">
+                  id="otinel-div-abstractModel-structure-l-constraint-7">
             <rule context="tei:div">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4146,7 +4435,7 @@ Elements]</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-div-abstractModel-structure-p-constraint-7">
+                  id="otinel-div-abstractModel-structure-p-constraint-8">
             <rule context="tei:div">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5565,7 +5854,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bloc anonyme) contient une unité de texte quelconque, de niveau "composant", faisant office de contenant anonyme pour une expression ou des éléments de niveau intermédiaire, analogue à un paragraphe mais sans sa portée sémantique. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-ab-abstractModel-structure-p-constraint-8">
+                  id="otinel-ab-abstractModel-structure-p-constraint-9">
             <rule context="tei:ab">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5577,7 +5866,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-ab-abstractModel-structure-l-constraint-9">
+                  id="otinel-ab-abstractModel-structure-l-constraint-10">
             <rule context="tei:ab">
                <report xmlns:tei="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5683,7 +5972,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-dimensions-duplicateDim-constraint-10">
+                  id="otinel-dimensions-duplicateDim-constraint-11">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5694,7 +5983,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-dimensions-duplicateDim-constraint-11">
+                  id="otinel-dimensions-duplicateDim-constraint-12">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5705,7 +5994,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-dimensions-duplicateDim-constraint-12">
+                  id="otinel-dimensions-duplicateDim-constraint-13">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5986,7 +6275,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-msIdentifier-msId_minimal-constraint-13">
+                  id="otinel-msIdentifier-msId_minimal-constraint-14">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6107,6 +6396,9 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
                <optional>
                   <ref name="summary"/>
                </optional>
+               <optional>
+                  <ref name="textLang"/>
+               </optional>
                <zeroOrMore>
                   <choice>
                      <ref name="msItemStruct"/>
@@ -6180,11 +6472,15 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
                   <zeroOrMore>
                      <choice>
                         <ref name="bibl"/>
+                        <ref name="biblStruct"/>
                      </choice>
                   </zeroOrMore>
                   <zeroOrMore>
                      <ref name="model.noteLike"/>
                   </zeroOrMore>
+                  <optional>
+                     <ref name="textLang"/>
+                  </optional>
                </group>
             </choice>
          </group>
@@ -6690,7 +6986,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-msPart-deprecate-altIdentifier-child-constraint-14">
+                  id="otinel-msPart-deprecate-altIdentifier-child-constraint-15">
             <rule context="tei:msPart">
                <sch:report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
