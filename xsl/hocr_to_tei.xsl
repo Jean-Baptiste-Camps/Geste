@@ -11,6 +11,10 @@
     par
     \n<! - - $1 - - >\n
     
+    (et quelques autres)
+    
+    Détection des items des sommaires
+    
     Détection des lg
     remplacer
     \n<lb/>(« )?([A-ZÉÈÔÀ]{2,})
