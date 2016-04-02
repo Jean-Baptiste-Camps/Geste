@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/home/flo/Documents/JB/CORPORA/Geste/ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Otinel_Guessard-1858.xml">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-<<<<<<< HEAD
                 <title type="main">Otinel</title><title/>
                 <title type="sub">Numérisation de l'édition de Guessard de
                     1858</title>
@@ -23,14 +22,10 @@
                         <surname>Michelant</surname>
                     </persName>
                 </editor>
-=======
-                <title/>
->>>>>>> ae136b577acd5439caef07e3509f124d9feb79c1
                 <respStmt xml:id="JBC">
                     <resp>sous la direction de</resp>
                     <persName>Jean-Baptiste Camps</persName>
                 </respStmt>
-<<<<<<< HEAD
                 <respStmt xml:id="EA">
                     <resp>édition numérique</resp>
                     <persName>Elena Albarran</persName>
@@ -85,29 +80,20 @@
                 </biblStruct>
             </sourceDesc>
         </fileDesc>
-        <profileDesc>
-            <creation>
+            <profileDesc><creation>
                 <origPlace cert="unknown" resp="EA">Inconnue</origPlace>
                 <origDate cert="medium" resp="EA">Pas beaucoup posterieure à la première moitié du XIIIe siècle</origDate>
             </creation>
+
             <langUsage>
-              <!-- Pas capable de completer -->  
+                <language cert="medium" resp="#JBC" ident="fro" usage="80">ancien français peu marqué (langue du ms. principal)</language>
+                <language cert="high" resp="#JBC" ident="xno" usage="19">anglo-normand (langue du ms. de contrôle)</language>
+                <language cert="low" resp="#JBC" ident="wln" usage="1">traits du Nord-Est ?</language>
             </langUsage>
-=======
-            </titleStmt>
-            <publicationStmt></publicationStmt>
-            <sourceDesc></sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <creation>
-                <origPlace cert="" resp=""/>
-                <origDate cert="" resp=""/>
-            </creation>
-            <langUsage></langUsage>
->>>>>>> ae136b577acd5439caef07e3509f124d9feb79c1
         </profileDesc>
         <revisionDesc status="draft">
-            <change who="JBC" when="2016-04-02" status="draft">Création du gabarit, transformation du fichier de ROC en TEI et segmentation.</change>
+            <change who="#EA" when="2016-04-02" status="draft">Début de l'encodage du fichier</change>
+            <change who="#JBC" when="2016-04-02" status="draft">Création du gabarit, transformation du fichier de ROC en TEI et segmentation.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -131,15 +117,12 @@
 <lb/>MDCCCLIX</div>
             <div type="preface">
                 <pb n="0195" facs="facsimile/0195.bin.png"/>
-<<<<<<< HEAD
 <!--Je viens de compléter les deux  premières lignes qui manquaient -->
 <!-- <lb/>PRÉFACE.-->               
-<lb/>La chanson d'Otinel est le récit d'une
+<p><lb/>La chanson d'Otinel est le récit d'une
 <lb/>expédition de Charlemagne en Lom-               
-=======
 <!-- Quelque chose à l'air de manquer ici -->
 <!-- <lb/>PRÉFACE.-->
->>>>>>> ae136b577acd5439caef07e3509f124d9feb79c1
 <lb/>bardie contre le Sarrasin Garsile ou
 <lb/>Marsile. Otinel, le héros de ce poë<lb rend="hyphen" break="no"/>me, y apparoit d'abord comme mes<lb rend="hyphen" break="no"/>sager de Garsile. A ce titre, il vient à Paris som<lb rend="hyphen" break="no"/>mer Charlemagne de rendre hommage au roi son
 <lb/>seigneur et d'abjurer la foi chrétienne ; mais, par
@@ -152,7 +135,7 @@
 <lb/>plus implacable, et, après avoir contribué autant
 <lb/>que personne à la défaite du païen, reçoit pour
 <lb/>récompense la main de Belisent et la couronne
-<lb/>de Lombardie.
+<lb/>de Lombardie.</p>
 <lb/>Quoiqu'il se dénoue en Italie, le poëme d'Oti<lb rend="hyphen" break="no"/>nel se rattache à l'histoire légendaire de la con-
 <pb n="0196" facs="facsimile/0196.bin.png"/>
 <!-- <lb/>PRÉFACE.-->
@@ -342,7 +325,9 @@
 <lb/>Cette chanson est la fleur de la geste du fils
 <lb/>de Pepin et des douze pairs. Les jon<lb rend="hyphen" break="no"/>gleurs n'ont pas épuisé la matière ; ils igno<lb rend="hyphen" break="no"/>rent une grande expédition qui donna fort
 <lb/>à faire à Charlemagne. P. 1-2</item> 
- <item>C'étoit à Pâ<lb rend="hyphen" break="no"/>ques (1); le roi tenoit cour plénière à Paris, entouré
+        <item>C'étoit à Pâ<lb rend="hyphen" break="no"/>ques<note>
+            <lb/>1. C'étoit le jour des SS. Innocents (28 déc.), d'après le
+            <lb/>ms. b. Voyez ci-après p. 76, aux Notes et Variantes.</note>; le roi tenoit cour plénière à Paris, entouré
 <lb/>des douze compagnons et d'une foule de princes, de
 <lb/>comtes, de barons et de chevaliers. Il étoit question
 <lb/>de retourner en Espagne pour y combattre le roi
@@ -357,8 +342,7 @@
 <lb/>auxquelles réplique Ogier, puis il s'avance vers le roi.
 <lb/>- « Je ne te salue pas, fait-il, parce que je ne le dois
 <lb/>point. Que Mahomet te confonde, toi et les tiens ! » <lb rend="hyphen" break="no"/>II poursutt sur ce ton ; mais Roland se rit de son
-<lb/>1. C'étoit le jour des SS. Innocents (28 déc.), d'après le
-<lb/>ms. b. Voyez ci-après p. 76, aux Notes et Variantes.
+
 <lb/>2. Marsile dans le ms. b. Voyez même page.
 <pb n="0206" facs="facsimile/0206.bin.png"/>
 <!-- <lb/>xvj

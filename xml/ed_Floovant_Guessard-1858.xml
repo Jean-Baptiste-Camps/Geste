@@ -91,8 +91,8 @@
                                 <origDate cert="medium" resp="#Arlima">Fin XIIe siècle</origDate>
                         </creation>
                         <langUsage>
-                                <language cert="high" resp="Guessard" ident="xno" usage="80"
-                                        >Anglo-normand</language>
+                                <language cert="high" resp="Guessard" ident="fro" usage="80"
+                                        >Ancien français</language>
                                 <language cert="high" resp="Guessard" ident="fro-lorrain" usage="20"
                                         >Dialecte lorrain</language>
                         </langUsage>
@@ -101,6 +101,7 @@
                 <revisionDesc status="draft">
                         <change who="JBC" when="2016-03-25" status="draft">Création du gabarit,
                                 transformation du fichier hocr en TEI et segmentation.</change>
+                        <change who="#LI" when="2016-04-01" status="draft">Fin de l'encodage du front. Début encodage body.</change>
                 </revisionDesc>
         </teiHeader>
         <text>
@@ -628,7 +629,7 @@
                                 <head>SOMMAIRE</head>
 
                                 <!--<lb/>xvij-->
-                                <list corresp="#L_001 #L_002 #L_003">
+                                <list corresp="#L_001 #L_002">
 
                                         <item>
                                                 <lb/>« Le premier roi de France qui devint chrétien
@@ -696,7 +697,7 @@
                                                 manteau de <lb/>soie et va trouver le roi de France.
                                                 P. 1-4. </item>
                                 </list>
-                                <list>
+                                <list corresp="#L_003 #L_004">
                                         <lb/>
                                         <item> Clovis venoit de se lever et alloit entendre la messe
                                                 <lb/>lorsque le duc se précipite à ses pieds,
@@ -742,7 +743,7 @@
                                                 <lb/>reine.</item>
                                         <item>Départ de Richier. P. 4-7. </item>
                                 </list>
-                                <list>
+                                <list corresp="#L_005">
                                         <item><lb/>Cependant Clovis, toujours irrité, réunit ses
                                                   ba<lb break="no" rend="hyphen"/>rons et leur dit :
                                                 « Mon fils Floovant m'a déshonoré <lb/>par l'outrage
@@ -755,7 +756,7 @@
                                         <item>On le lui apporte, il se <lb/>coupe la barbe, et tous
                                                 les barons en font autant. <lb/>P. 7-8.</item>
                                 </list>
-                                <list>
+                                <list corresp="#L_006 #L_007">
                                         <item><lb/>Floovant est sorti de France ; il a traversé
                                                 Châlons <lb/>et est entré dans les Ardennes. Il
                                                 chevauche seul, <lb/>songe amèrement aux suites de
@@ -786,7 +787,7 @@
                                                 son père. P. 8<lb break="no" rend="hyphen"/>10.
                                         </item>
                                 </list>
-                                <list>
+                                <list corresp="#L_007">
                                         <item><lb/>Non loin de là, Richier rencontre le Sarrasin qui
                                                 <lb/>a échappé aux coups de Floovant.</item>
                                         <item>« Qui es-tu, <lb/>écuyer ? lui demande le païen. -
@@ -806,7 +807,7 @@
                                         <item>Combat de Richier et du <lb/>Sarrasin.</item>
                                         <item>Mort du Sarrasin. P. 10-11. </item>
                                 </list>
-                                <list>
+                                <list corresp="#L_007 #L_008 #L_09 #L_010">
                                         <item>
                                                 <lb/>Floovant, de son côté, fait la rencontre d'un
                                                 grand <lb/>et hideux païen nommé Ferragus et fils du
@@ -844,7 +845,7 @@
                                                   <lb/>des <title>Reali</title>.)</note>. P.
                                                 11-14.</item>
                                 </list>
-                                <list>
+                                <list corresp="non">                                            <!-- que mettre dans corresp pour tous les passages du sommaire qui n'apparaissent pas dans le texte? -->
                                         <item rend="supplied"><lb/>Galien, son père, a eu un songe :
                                                 il a rêvé que Fer<lb break="no" rend="hyphen"/>ragus
                                                 combattoit avec un lion, et que, près de succom<lb
@@ -1746,11 +1747,21 @@
                 <body>
                         <!--JBC: Pour l'instant, 2468 vers pour 2533 attendus ! -->
                         
+                        <!-- Ne pas oublier de faire apparaître les identifiants des laisses dans le sommaire. -->
+                        
+                        <!-- QUESTIONS du 2 avril -->
+                        <!-- question pour les corrections qui apparaissent entre crochets et pas en note -->
+                        <!-- question pour persName : Dieu? -->
+                        <!-- question pour ce qu'on doit mettre dans le sommaire en corresp pour les parties de résumé du texte dans le sommaire? Pour l'instant : corresp="non". Si OK, à compléter pour chaque list -->
+                        <!-- que met-on pour signifier qu'il y a un trou dans le texte? gap? -->
+                        
+                        <!-- ARRET PAGE 15 début -->
+                        
+                        
                         
                         <!-- <pb facs="facsimile0307.bin.png" n="0307"/> -->
 
-                        <!-- Ne pas oublier de faire apparaître les identifiants des laisses dans le sommaire. -->
-                
+
 
                         <pb facs="facsimile0343.bin.png" n="0343"/>
                         <head><lb/>FLOOVANT</head>
@@ -3814,7 +3825,7 @@
                                         <w>an</w>
                                         <w>est</w>
                                         <w>tornez</w>
-                                        <w>Floovan</w>
+                                        <persName><w>Floovan</w></persName>
                                         <w>toz</w>
                                         <w>irez</w>
                                         <pc type="supplied">,</pc>
@@ -3892,7 +3903,7 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Floovam</w>
+                                        <persName><w>Floovam</w></persName>
                                         <w>si</w>
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
@@ -3905,7 +3916,7 @@
                                         <pc type="supplied">:</pc>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>E</w>
                                         <pc type="supplied">!</pc>
                                         <w>gantis</w>
@@ -3916,10 +3927,10 @@
                                         <w>armes</w>
                                         <w>me</w>
                                         <w>bailiez</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>vos</w>
                                         <w>an</w>
@@ -3928,10 +3939,10 @@
                                         <w>gré</w>
                                         <w>et</w>
                                         <w>volentiers</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Certes</w>
                                         <w>ja</w>
                                         <w rend="elision">n</w>
@@ -3939,45 +3950,49 @@
                                         <w>i</w>
                                         <w>perdrois</w>
                                         <w>valesant</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
-                                        <w>denier</w>
+                                        <pc type="supplied">.</pc></num>
+                                        <w>denier</w></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w rend="elision">Qu</w>
                                         <pc type="supplied">'</pc>
                                         <w>à</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>C</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>doubles</w>
                                         <w>ne</w>
-                                        <w>ra[n]de</w>
+                                                <choice>
+                                                        <corr><w>rande</w></corr>
+                                                        <sic><w>rade</w></sic>
+                                                </choice> <!-- Correction sans note -->
                                         <w>ancores</w>
                                         <w>voluntiers</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/><l>
+                                        <q>
                                         <pc type="supplied">«</pc>
                                         <w>Se</w>
-                                        <w>Dex</w>
+                                        <persName><w>Dex</w></persName>
                                         <w>me</w>
                                         <w>laise</w>
                                         <w>ancores</w>
                                         <w>an</w>
-                                        <w>France</w>
+                                        <placeName><w>France</w></placeName>
                                         <w>repairer</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>moult</w>
                                         <w>volentiers</w>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                         <pc type="supplied">,</pc>
                                         <w>li</w>
                                         <w>outes</w>
@@ -4021,9 +4036,9 @@
                                         <w>li</w>
                                         <w>a</w>
                                         <w>pandu</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>escu</w>
                                         <w>de</w>
                                         <w>cartier</w>
@@ -4032,12 +4047,14 @@
                                 <lb/><l>
                                         <w>Et</w>
                                         <w>en</w>
-                                        <w>[a]près</w>
+                                                  <corr><w>après</w></corr>
+                                                          <sic><w>près</w></sic>
+                                                                <!-- Correction sans note. Balise choice ne marche pas -->
                                         <w>li</w>
                                         <w>a</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>roit</w>
                                         <w>espié</w>
                                         <w>bailié</w>
@@ -4080,13 +4097,14 @@
                                         <w>ai</w>
                                         <w>commandé</w>
                                         <w>à</w>
-                                        <w>Deu</w>
+                                        <persName><w>Deu</w></persName>
                                         <w>le</w>
                                         <w>droiturier</w>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/><l>
                                         <w>Qu</w>
+                                        <pc type="supplied">'</pc>
                                         <w>i</w>
                                         <w>desfande</w>
                                         <w>son</w>
@@ -4113,7 +4131,7 @@
                                         <pc type="supplied">:</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Damedex</w>
+                                        <persName><w>Damedex</w></persName>
                                         <w>lou</w>
                                         <w>condue</w>
                                         <w>por</w>
@@ -4142,7 +4160,7 @@
                                         <w>es</w>
                                         <w>vos</w>
                                         <w>venir</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>son</w>
                                         <w>escuer</w>
@@ -4200,7 +4218,7 @@
                                 </l>
                                 <lb/><l>
                                         <w>Est</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>ses</w>
                                         <w>sires</w>
@@ -4216,9 +4234,9 @@
                                         <w>est</w>
                                         <w>meintenant</w>
                                         <w>en</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>corant</w>
                                         <w>destrié</w>
                                         <pc type="supplied">,</pc>
@@ -4226,7 +4244,7 @@
                                 <lb/><l>
                                         <w>Et</w>
                                         <w>jure</w>
-                                        <w>Damedeu</w>
+                                        <persName><w>Damedeu</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>le</w>
                                         <w>pere</w>
@@ -4248,7 +4266,8 @@
                                 <!-- <lb/>188-259
  --><!-- <lb/>FLOOVANT. -->
                                 <lb/><l>
-                                        <w>Qu</w>
+                                        <w rend="elision">Qu</w>
+                                        <pc type="supplied">'</pc>
                                         <w>après</w>
                                         <w>son</w>
                                         <w>seignor</w>
@@ -4256,7 +4275,7 @@
                                         <pc type="supplied">'</pc>
                                         <w>aile</w>
                                         <pc type="supplied">,</pc>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>le</w>
                                         <w>prisié</w>
                                         <pc type="supplied">.</pc>
@@ -4267,9 +4286,9 @@
                                         <w>poig</w>
                                         <w>a</w>
                                         <w>saisi</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>grant</w>
                                         <w>pel</w>
                                         <w>aguisié</w>
@@ -4281,19 +4300,28 @@
                                         <w>mere</w>
                                         <w>le</w>
                                         <w>vit</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>lou</w>
                                         <w>gerrer</w>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <w>en</w>
                                         <w>apelai</w>
                                         <pc type="supplied">,</pc>
                                         <w>si</w>
-                                        <w>la</w>
-                                        <w>hai</w>
+                                       <app> 
+                                               <lem>
+                                                       <choice>
+                                                               <corr><w>la</w>
+                                                               <w>hai</w></corr>
+                                                                <sic><w>le</w> <w>ha</w></sic>
+                                                       </choice>
+                                               </lem>
+                                                <note><lb/>P. 7, v. 4 : Si la hai esrainié. La pour le, hai pour <lb/>ha ou a. (Si
+                                        le a araisonné.)</note> 
+                                       </app>
                                         <w>esrainié</w>
                                         <pc type="supplied">;</pc>
                                 </l>
@@ -4323,7 +4351,7 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Merci</w>
                                         <pc type="supplied">,</pc>
                                         <w>fait</w>
@@ -4333,13 +4361,13 @@
                                         <w>sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>por</w>
-                                        <w>Deu</w>
+                                        <persName><w>Deu</w></persName>
                                         <w>lou</w>
                                         <w>droiturier</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Que</w>
                                         <w>de</w>
                                         <w>mon</w>
@@ -4350,15 +4378,15 @@
                                         <w>marci</w>
                                         <w>et</w>
                                         <w>pitié</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <w>-</w>
+                                        <pc type="supplied">-</pc>
                                         <w>Dame</w>
                                         <pc type="supplied">,</pc>
                                         <w>ce</w>
                                         <w>dit</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>por</w>
                                         <w>néant</w>
@@ -4367,7 +4395,7 @@
                                         <pc type="supplied">;</pc>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Certes</w>
                                         <w>ne</w>
                                         <w>li</w>
@@ -4377,7 +4405,7 @@
                                         <w>manbres</w>
                                         <w>trenchier</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/><l>
                                         <w>Atant</w>
@@ -4452,9 +4480,9 @@
                                         <w>est</w>
                                         <w>tornez</w>
                                         <w>sor</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>corant</w>
                                         <w>destrié</w>
                                         <pc type="supplied">,</pc>
@@ -4476,40 +4504,56 @@
                                         <w>Et</w>
                                         <w>chevauchai</w>
                                         <w>après</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>le</w>
                                         <w>prisié</w>
                                         <pc type="supplied">.</pc>
                                 </l>
-                                <!-- <lb/>FLOOVANT  -->s'an isi de la terre de France, <lb/><l>
-                                        <w>Chaalons</w>
+                                       </lg>
+                        
+                        <lg type="laisse" n="IV" xml:id="L_004">
+                                       <lb/><l>
+                                                <persName><w>FLOOVANT</w></persName>
+                                                <w rend="elision">s</w>
+                                                <pc type="supplied">'</pc>
+                                                <w>an</w> 
+                                               <w>isi</w>
+                                                <w>de</w>
+                                                <w>la</w>
+                                                <w>terre</w>
+                                                <w>de</w>
+                                                <placeName><w>France</w></placeName>
+                                                <pc type="supplied">.</pc>
+                                                </l>                
+                                        <lb/><l>
+                                        <placeName><w>Chaalons</w></placeName>
                                         <w>trespasai</w>
                                         <pc type="supplied">,</pc>
                                         <w>qui</w>
                                         <w>siet</w>
                                         <w>en</w>
                                         <w>la</w>
-                                        <w>Champene</w>
+                                        <placeName><w>Champene</w></placeName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/><l>
                                         <w>Et</w>
                                         <w>le</w>
-                                        <w>chaitel</w>
+                                        <placeName><w>chaitel</w>
                                         <w rend="elision">d</w>
                                         <pc type="supplied">'</pc>
-                                        <w>Anglers</w>
+                                        <w>Anglers</w></placeName>
                                         <pc type="supplied">,</pc>
                                         <w>et</w>
                                         <w>en</w>
-                                        <w>Ardenne</w>
+                                        <placeName><w>Ardenne</w></placeName>
                                         <w>an</w>
                                         <w>antre</w>
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/><l>
                                         <w>Reclaime</w>
-                                        <w>Damedeu</w>
+                                        <persName><w>Damedeu</w></persName>
                                         <w>en</w>
                                         <w>qui</w>
                                         <w>il</w>
@@ -4537,14 +4581,15 @@
                                         <w>li</w>
                                         <w>rois</w>
                                         <w>de</w>
-                                        <w>France</w>
+                                        <placeName><w>France</w></placeName>
                                         <pc type="supplied">.</pc>
-                                </l></lg>
-                        <lg type="laisse" n="">
+                                </l>
+                                </lg>
+                        <lg type="laisse" n="V" xml:id="L_005">
                                 <lb/>
                                 <l>
                                         <w>ROIS</w>
-                                        <w>Cloovis</w>
+                                        <persName><w>Cloovis</w></persName>
                                         <w>remest</w>
                                         <w>corroceus</w>
                                         <w>et</w>
@@ -4564,7 +4609,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Seignors</w>
                                         <pc type="supplied">,</pc>
                                         <w>ce</w>
@@ -4572,15 +4617,18 @@
                                         <w>li</w>
                                         <w>rois</w>
                                         <pc type="supplied">,</pc>
-                                        <w>maule[m]ant</w>
+                                        <choice>
+                                                <corr><w>maulemant</w></corr> <!-- Correctionn sans note -->
+                                                <sic><w>mauleant</w></sic>
+                                        </choice>
                                         <w>sui</w>
                                         <w>mienez</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
-                                        <w>Floovans</w>
+                                       <q> <pc type="supplied">«</pc>
+                                        <persName><w>Floovans</w></persName>
                                         <w>mes</w>
                                         <w>fiz</w>
                                         <w rend="elision">m</w>
@@ -4589,23 +4637,26 @@
                                         <w>honi</w>
                                         <w>et</w>
                                         <w>vergondé</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
-                                        <w>Senechaul</w>
+                                        <persName><w>Senechaul</w></persName>
                                         <w>mon</w>
                                         <w>dru</w>
-                                        <w>[a]</w>
+                                        <choice>
+                                                <corr><w>a</w></corr> <!-- Correction sans note -->
+                                                <sic>  </sic>
+                                        </choice>
                                         <w>aisi</w>
                                         <w>vorgondé</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w rend="elision">n</w>
                                         <pc type="supplied">'</pc>
@@ -4618,11 +4669,11 @@
                                         <w>à</w>
                                         <w>mon</w>
                                         <w>gré</w>
-                                        <pc type="supplied">:</pc>
+                                        <pc type="supplied">:</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Mon</w>
                                         <w>voloir</w>
                                         <pc type="supplied">,</pc>
@@ -4633,11 +4684,11 @@
                                         <w>dou</w>
                                         <w>bur</w>
                                         <w>servré</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Mas</w>
                                         <w>li</w>
                                         <w>clergie</w>
@@ -4648,7 +4699,7 @@
                                         <pc type="supplied">'</pc>
                                         <w>ai</w>
                                         <w>desloé</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
 
                                 <pb facs="facsimile0350.bin.png" n="0350"/>
@@ -4656,18 +4707,18 @@
 
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>me</w>
                                         <w>ditrent</w>
                                         <w>trestuit</w>
                                         <w>que</w>
                                         <w>saroie</w>
-                                        <w>apelez</w>
+                                        <w>apelez</w></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Mortriséors</w>
                                         <w>mauvais</w>
                                         <w>de</w>
@@ -4676,11 +4727,11 @@
                                         <pc type="supplied">'</pc>
                                         <w>ai</w>
                                         <w>angandré</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Et</w>
                                         <w>quant</w>
                                         <w>je</w>
@@ -4691,26 +4742,26 @@
                                         <w>lu</w>
                                         <w>ma</w>
                                         <w>volunté</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Moult</w>
                                         <w>tot</w>
                                         <w>me</w>
                                         <w>faites</w>
                                         <w>ci</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>rasour</w>
                                         <w>aporter</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Si</w>
                                         <w>ferai</w>
                                         <w>orandroit</w>
@@ -4719,7 +4770,7 @@
                                         <w>barbe</w>
                                         <w>autreté</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -4733,7 +4784,17 @@
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>ot</w>
-                                        <w>devisé</w>
+                                        <app>
+                                                <lem>
+                                                        <choice>
+                                                                <corr><w>devisé</w></corr>
+                                                                <sic>deviser</sic>
+                                                        </choice>
+                                                </lem>
+                                                <note><lb/>P. 8, v. 6 et 7 : Devisé, copé. Ces deux rimes se            <!-- note ici reproduite à cahcun des endroits conservés -->
+                                                        <lb/>lisent ainsi dans le manuscrit : deviser, coper, par suite <lb/>d'une
+                                                        distraction évidente du scribe. </note>
+                                        </app> 
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -4746,7 +4807,19 @@
                                         <w>li</w>
                                         <w>riches</w>
                                         <w>rois</w>
-                                        <w>copé</w>
+                                        <app>
+                                                <lem>
+                                                        <choice>
+                                                                <corr><w>copé</w></corr>
+                                                                <sic>coper</sic>
+                                                        </choice>
+                                                </lem>
+                                                <note>
+                                                        <lb/>P. 8, v. 6 et 7 : Devisé, copé. Ces deux rimes se
+                                                        <lb/>lisent ainsi dans le manuscrit : deviser, coper, par suite <lb/>d'une
+                                                        distraction évidente du scribe. 
+                                                </note>
+                                        </app>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -4817,21 +4890,21 @@
                                         <w>il</w>
                                         <w>péut</w>
                                         <w>an</w>
-                                        <w>France</w>
+                                        <placeName><w>France</w></placeName>
                                         <w>retorner</w>
                                         <pc type="supplied">.</pc>
                                 </l>
                         </lg>
-                        <lg type="laisse" n="">
+                        <lg type="laisse" n="VI" xml:id="L_006">
                                 <lb/>
                                 <l>
-                                        <w>FLOOVANS</w>
+                                        <persName><w>FLOOVANS</w></persName>
                                         <w rend="elision">s</w>
                                         <pc type="supplied">'</pc>
                                         <w>en</w>
                                         <w>isi</w>
                                         <w>de</w>
-                                        <w>France</w>
+                                        <placeName><w>France</w></placeName>
                                         <w>la</w>
                                         <w>garnie</w>
                                         <pc type="supplied">,</pc>
@@ -4854,22 +4927,22 @@
                                 <lb/>
                                 <l>
                                         <w>Reclamai</w>
-                                        <w>Damedeu</w>
+                                        <persName><w>Damedeu</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>le</w>
                                         <w>fiz</w>
-                                        <w>sainte</w>
-                                        <w>Mairie</w>
+                                        <persName><w>sainte</w>
+                                        <w>Mairie</w></persName>
                                         <pc type="supplied">:</pc>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ahi</w>
                                         <pc type="supplied">!</pc>
                                         <w>baus</w>
                                         <w>sire</w>
-                                        <w>Dex</w>
+                                        <persName><w>Dex</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>com</w>
                                         <w rend="elision">j</w>
@@ -4877,11 +4950,11 @@
                                         <w>estoie</w>
                                         <w>ier</w>
                                         <w>riches</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Il</w>
                                         <w rend="elision">n</w>
                                         <pc type="supplied">'</pc>
@@ -4892,14 +4965,14 @@
                                         <w rend="elision">jusqu</w>
                                         <pc type="supplied">'</pc>
                                         <w>an</w>
-                                        <w>terre</w>
+                                        <placeName><w>terre</w>
                                         <w rend="elision">d</w>
                                         <pc type="supplied">'</pc>
-                                        <w>Egite</w>
+                                        <w>Egite</w></placeName></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Que</w>
                                         <w>se</w>
                                         <w>il</w>
@@ -4908,11 +4981,11 @@
                                         <w>orguel</w>
                                         <w>ne</w>
                                         <w>felenie</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Que</w>
                                         <w>à</w>
                                         <w>plene</w>
@@ -4923,41 +4996,44 @@
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>atandise</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>A</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>XL</w>
                                         <pc type="supplied">.</pc>
-                                        <w>mil</w>
+                                        <w>mil</w></num>
                                         <w>omes</w>
                                         <w>as</w>
                                         <w>espées</w>
                                         <w>forbies</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Et</w>
                                         <w>or</w>
                                         <w>ai</w>
                                         <w>tot</w>
                                         <w>pordu</w>
                                         <w>por</w>
-                                        <w>[ma]</w>
+                                                <choice>
+                                                <corr><w>ma</w></corr>
+                                                <sic>  </sic>
+                                                </choice>
                                         <w>grant</w>
                                         <w>lecherie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Sire</w>
-                                        <w>Dex</w>
+                                        <persName><w>Dex</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>je</w>
                                         <w>ne</w>
@@ -4967,11 +5043,11 @@
                                         <w>terre</w>
                                         <w>me</w>
                                         <w>guie</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>ne</w>
                                         <w>porai</w>
@@ -4980,7 +5056,7 @@
                                         <w>ma</w>
                                         <w>chivalerie</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -4990,33 +5066,33 @@
                                         <w>ses</w>
                                         <w>danz</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Or</w>
                                         <w>ai</w>
                                         <w>je</w>
                                         <w>dit</w>
                                         <w>folie</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Por</w>
-                                        <w>saint</w>
+                                        <persName><w>saint</w>
                                         <w>Denis</w>
                                         <w>de</w>
-                                        <w>France</w>
+                                        <w>France</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w rend="elision">j</w>
                                         <pc type="supplied">'</pc>
                                         <w>ai</w>
                                         <w>pansé</w>
                                         <w>coardise</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>nus</w>
                                         <w>frans</w>
@@ -5028,11 +5104,11 @@
                                         <w>tel</w>
                                         <w>chose</w>
                                         <w>dire</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ne</w>
                                         <w>me</w>
                                         <w>priseroit</w>
@@ -5043,11 +5119,11 @@
                                         <w>de</w>
                                         <w>sa</w>
                                         <w>vie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Il</w>
                                         <w>ne</w>
                                         <w>ai</w>
@@ -5055,12 +5131,12 @@
                                         <w>de</w>
                                         <w>ci</w>
                                         <w>an</w>
-                                        <w>Tabarie</w>
-                                        <pc type="supplied">,</pc>
+                                        <placeName><w>Tabarie</w></placeName>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>je</w>
                                         <w>bien</w>
@@ -5072,11 +5148,11 @@
                                         <pc type="supplied">'</pc>
                                         <w>espée</w>
                                         <w>forbie</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Que</w>
                                         <w>an</w>
                                         <w>doue</w>
@@ -5084,26 +5160,26 @@
                                         <w>trestot</w>
                                         <w>ne</w>
                                         <w>porfandise</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Dou</w>
-                                        <w>roi</w>
+                                        <persName><w>roi</w>
                                         <w>Flore</w>
                                         <w rend="elision">d</w>
                                         <pc type="supplied">'</pc>
-                                        <w>Ausa</w>
+                                        <w>Ausa</w></persName>
                                         <w>ai</w>
                                         <w>la</w>
                                         <w>novele</w>
                                         <w>oïe</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>proz</w>
                                         <w>est</w>
@@ -5113,19 +5189,19 @@
                                         <w>de</w>
                                         <w>grant</w>
                                         <w>seignerie</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
 
                                 <pb facs="facsimile0351.bin.png" n="0351"/>
                                 <!-- <lb/>253-286
  -->
                                 <!-- <lb/>FLOOVANT. -->
-                                <lb/>
-                               <!-- <l/>-->
+                                
+                                <!-- <l/><lb/>-->
 
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Que</w>
                                         <w>Sarazins</w>
                                         <w>guerroient</w>
@@ -5136,11 +5212,11 @@
                                         <pc type="supplied">'</pc>
                                         <w>a</w>
                                         <w>guerpie</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>ainçois</w>
                                         <w>i</w>
@@ -5151,18 +5227,18 @@
                                         <w>an</w>
                                         <w>fut</w>
                                         <w>prise</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w rend="elision">G</w>
                                         <pc type="supplied">'</pc>
                                         <w>i</w>
                                         <w>fairroie</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>M</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>cous</w>
                                         <w>de</w>
                                         <w rend="elision">m</w>
@@ -5170,7 +5246,7 @@
                                         <w>espée</w>
                                         <w>forbie</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -5249,7 +5325,10 @@
                                         <w>li</w>
                                         <w>bois</w>
                                         <w>an</w>
-                                        <w>[re]sonne</w>
+                                        <choice>                                                <!-- choice refusé -->
+                                                <corr><w>resonne</w></corr>
+                                                <sic><w>sonne</w></sic>
+                                        </choice>
                                         <w>tot</w>
                                         <w>à</w>
                                         <w>une</w>
@@ -5259,7 +5338,7 @@
                                 <lb/>
                                 <l>
                                         <w>Quant</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>entant</w>
@@ -5289,7 +5368,7 @@
                                 <lb/>
                                 <l>
                                         <w>Reclaime</w>
-                                        <w>Damedeu</w>
+                                        <persName><w>Damedeu</w></persName>
                                         <w>qui</w>
                                         <w>tot</w>
                                         <w>a</w>
@@ -5299,7 +5378,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ahi</w>
                                         <pc type="supplied">!</pc>
                                         <w>biau</w>
@@ -5313,26 +5392,26 @@
                                         <w>que</w>
                                         <w>je</w>
                                         <w>die</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Lai</w>
                                         <w>voi</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>III</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>Sarazins</w>
                                         <w>plains</w>
                                         <w>de</w>
                                         <w>grant</w>
                                         <w>felenie</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Une</w>
                                         <w>pucele</w>
                                         <w>tienet</w>
@@ -5340,11 +5419,11 @@
                                         <w>moult</w>
                                         <w>ont</w>
                                         <w>envaïe</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>je</w>
                                         <w>me</w>
@@ -5356,11 +5435,11 @@
                                         <w>ferai</w>
                                         <w>grant</w>
                                         <w>folie</w>
-                                        <pc type="supplied">:</pc>
+                                        <pc type="supplied">:</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Pordu</w>
                                         <w>ai</w>
                                         <w>mon</w>
@@ -5371,7 +5450,7 @@
                                         <w>ma</w>
                                         <w>vie</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -5381,16 +5460,16 @@
                                         <w>ses</w>
                                         <w>danz</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Or</w>
                                         <w>ai</w>
                                         <w>dit</w>
                                         <w>couardise</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Onques</w>
                                         <w>homs</w>
                                         <w>de</w>
@@ -5399,11 +5478,11 @@
                                         <w>ne</w>
                                         <w>pansai</w>
                                         <w>felenie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>ne</w>
                                         <w>lairoie</w>
@@ -5414,13 +5493,13 @@
                                         <pc type="supplied">'</pc>
                                         <w>or</w>
                                         <w>de</w>
-                                        <w>Pavie</w>
+                                        <placeName><w>Pavie</w></placeName></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ne</w>
-                                        <w>Chalons</w>
+                                        <placeName><w>Chalons</w></placeName>
                                         <w>la</w>
                                         <w>pucelle</w>
                                         <w>et</w>
@@ -5430,7 +5509,7 @@
                                         <w>me</w>
                                         <w>guie</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -5460,7 +5539,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Seignors</w>
                                         <pc type="supplied">,</pc>
                                         <w>laisiez</w>
@@ -5473,11 +5552,11 @@
                                         <pc type="supplied">'</pc>
                                         <w>anmanroiz</w>
                                         <w>mie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Bien</w>
                                         <w>voi</w>
                                         <w>que</w>
@@ -5489,7 +5568,7 @@
                                         <w>ou</w>
                                         <w>ravie</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -5524,7 +5603,7 @@
                                 <lb/>
                                 <l>
                                         <w>Vers</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w rend="elision">s</w>
                                         <pc type="supplied">'</pc>
                                         <w>en</w>
@@ -5536,12 +5615,12 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>en</w>
                                         <w>fiert</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>an</w>
                                         <w>la</w>
                                         <w>targe</w>
@@ -5616,7 +5695,7 @@
                                 </l>
 
                                 <pb facs="facsimile0352.bin.png" n="0352"/>
-                                <!-- <lb/>FLOOVANT. -->
+                                <!-- <lb/>FLOOVANT. -->     <!-- <lb/>287-319-->
 
                                 <lb/>
                                 <l>
@@ -5645,7 +5724,7 @@
                                         <pc type="supplied">'</pc>
                                         <w>elme</w>
                                         <w>de</w>
-                                        <w>Pavie</w>
+                                        <placeName><w>Pavie</w></placeName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -5675,12 +5754,10 @@
                                         <w>poitrine</w>
                                         <pc type="supplied">.</pc>
                                 </l>
-                                <!-- <lb/>287-319
- -->
                                 <lb/>
                                 <l>
                                         <w>Li</w>
-                                        <w>tiers</w>
+                                        <num><w>tiers</w></num>
                                         <w rend="elision">s</w>
                                         <pc type="supplied">'</pc>
                                         <w>en</w>
@@ -5690,9 +5767,9 @@
                                         <w>quant</w>
                                         <w>vit</w>
                                         <w>les</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>II</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>ocire</w>
                                         <pc type="supplied">.</pc>
                                 </l>
@@ -5713,22 +5790,22 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>li</w>
                                         <w>demande</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>es</w>
                                         <w>tu</w>
                                         <pc type="supplied">,</pc>
                                         <w>bele</w>
                                         <w>amie</w>
-                                        <pc type="supplied">?</pc>
+                                        <pc type="supplied">?</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
@@ -5740,38 +5817,38 @@
                                         <w>sarai</w>
                                         <w>bien</w>
                                         <w>dire</w>
-                                        <pc type="supplied">:</pc>
+                                        <pc type="supplied">:</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>File</w>
                                         <w>suis</w>
                                         <w>le</w>
-                                        <w>roi</w>
-                                        <w>Flore</w>
+                                        <persName><w>roi</w>
+                                        <w>Flore</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>qui</w>
                                         <w>tint</w>
-                                        <w>Ardenois</w>
+                                        <placeName><w>Ardenois</w></placeName>
                                         <w>quite</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
-                                        <w>Ausais</w>
+                                        <q><pc type="supplied">«</pc>
+                                        <placeName><w>Ausais</w></placeName>
                                         <w>et</w>
-                                        <w>Lohereine</w>
+                                        <placeName><w>Lohereine</w></placeName>
                                         <pc type="supplied">,</pc>
-                                        <w>Bauviaire</w>
+                                        <placeName><w>Bauviaire</w></placeName>
                                         <w>et</w>
-                                        <w>Osteriche</w>
-                                        <pc type="supplied">.</pc>
+                                        <placeName><w>Osteriche</w></placeName>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Sarazins</w>
                                         <w>le</w>
                                         <w>guerroient</w>
@@ -5782,28 +5859,28 @@
                                         <pc type="supplied">'</pc>
                                         <w>a</w>
                                         <w>guerpie</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
-                                        <pc type="supplied">.</pc>
+                                        <q><pc type="supplied">«</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>IIII</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>felons</w>
                                         <w>paiens</w>
                                         <w>en</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>recot</w>
                                         <w>me</w>
                                         <w>pritrent</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Et</w>
                                         <w>je</w>
                                         <w>lor</w>
@@ -5811,25 +5888,25 @@
                                         <w>à</w>
                                         <w>lor</w>
                                         <w>abergerie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
-                                        <pc type="supplied">.</pc>
+                                        <q><pc type="supplied">«</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>IIIl</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>jors</w>
                                         <w>ai</w>
                                         <w>foï</w>
                                         <w>pormi</w>
                                         <w>ceste</w>
                                         <w>gaudine</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ces</w>
                                         <w>Sarazins</w>
                                         <w>trovai</w>
@@ -5837,17 +5914,17 @@
                                         <w>que</w>
                                         <w>li</w>
                                         <w>cors</w>
-                                        <w>Dex</w>
+                                        <persName><w>Dex</w></persName>
                                         <w>maudie</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>ne</w>
                                         <w>fust</w>
-                                        <w>Deu</w>
+                                        <persName><w>Deu</w></persName>
                                         <w>et</w>
                                         <w>vos</w>
                                         <pc type="supplied">,</pc>
@@ -5856,13 +5933,13 @@
                                         <pc type="supplied">'</pc>
                                         <w>éussent</w>
                                         <w>onie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>A</w>
-                                        <w>Biaufor</w>
+                                        <placeName><w>Biaufor</w></placeName>
                                         <w rend="elision">m</w>
                                         <pc type="supplied">'</pc>
                                         <w>anportez</w>
@@ -5874,15 +5951,15 @@
                                         <pc type="supplied">'</pc>
                                         <w>as</w>
                                         <w>garie</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Dame</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>vos</w>
                                         <w rend="elision">n</w>
@@ -5890,11 +5967,11 @@
                                         <w>i</w>
                                         <w>remendroiz</w>
                                         <w>mie</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Si</w>
                                         <w>vanroiz</w>
                                         <w>fors</w>
@@ -5905,40 +5982,40 @@
                                         <w>ou</w>
                                         <w>à</w>
                                         <w>vile</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                         </lg>
-                        <lg type="laisse" n="">
+                        <lg type="laisse" n="VII" xml:id="L_007">
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>DAME</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>montez</w>
                                         <w>sor</w>
                                         <w>cest</w>
                                         <w>destrier</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>De</w>
                                         <w>ces</w>
                                         <w>autres</w>
                                         <w>ne</w>
                                         <w>quier</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>trestot</w>
                                         <w>soul</w>
                                         <w>bailer</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -5947,7 +6024,7 @@
                                         <w>est</w>
                                         <w>montée</w>
                                         <pc type="supplied">,</pc>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>tint</w>
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
@@ -5956,7 +6033,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Damedex</w>
+                                        <persName><w>Damedex</w></persName>
                                         <w>les</w>
                                         <w>condue</w>
                                         <w>por</w>
@@ -5970,8 +6047,9 @@
                                         <w>Ancui</w>
                                         <w>lor</w>
                                         <w>avandrai</w>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>ancombriés</w>
                                         <w>si</w>
                                         <w>fiers</w>
@@ -5998,9 +6076,9 @@
                                         <w>pout</w>
                                         <w>combatre</w>
                                         <w>à</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>V</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>forsz</w>
                                         <w>chevaliers</w>
                                         <pc type="supplied">,</pc>
@@ -6026,7 +6104,7 @@
                                         <w>si</w>
                                         <w>dirons</w>
                                         <w>de</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -6070,7 +6148,7 @@
                                 <lb/>
                                 <l>
                                         <w>Que</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>avoit</w>
                                         <w>à</w>
                                         <w>la</w>
@@ -6079,8 +6157,18 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/>
-                                <l>
-                                        <w>[Cil]</w>
+                                <l><lb/>
+                                        <app>
+                                                <lem>
+                                                        <choice>
+                                                                <corr><w>Cil</w></corr>
+                                                                <orig><w>Il</w></orig>                 <!-- Rajout de orig car leçon donnée en note différente de leçon corrigée dans le texte -->
+                                                                <sic><w>A</w></sic>
+                                                        </choice>
+                                                </lem>
+                                                <note>P. 10, v. 33 : [Il] les plaint. Leçon
+                                                        du manus<lb/>crit : A les plaint. </note>
+                                        </app>
                                         <w>les</w>
                                         <w>plaint</w>
                                         <w>et</w>
@@ -6098,7 +6186,7 @@
 
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ahi</w>
                                         <pc type="supplied">!</pc>
                                         <w>tant</w>
@@ -6108,11 +6196,11 @@
                                         <pc type="supplied">,</pc>
                                         <w>nobiles</w>
                                         <w>chevaliers</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Alas</w>
                                         <pc type="supplied">!</pc>
                                         <w>com</w>
@@ -6122,11 +6210,11 @@
                                         <w>tréi</w>
                                         <w>et</w>
                                         <w>anginez</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Jemais</w>
                                         <w>en</w>
                                         <w>nule</w>
@@ -6138,23 +6226,23 @@
                                         <pc type="supplied">'</pc>
                                         <w>on</w>
                                         <w>prisier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Quant</w>
                                         <w>si</w>
                                         <w>sumes</w>
                                         <w>honiz</w>
                                         <w>por</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>sol</w>
                                         <w>chevalier</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -6181,7 +6269,7 @@
                                         <w>esrant</w>
                                         <w>lou</w>
                                         <w>nobile</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -6191,9 +6279,9 @@
                                         <w>an</w>
                                         <w>son</w>
                                         <w>col</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>grant</w>
                                         <w>pel</w>
                                         <w>agusé</w>
@@ -6206,46 +6294,46 @@
                                         <w>li</w>
                                         <w>escrie</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>es</w>
                                         <w>tu</w>
                                         <pc type="supplied">,</pc>
                                         <w>escuiers</w>
-                                        <pc type="supplied">?</pc>
+                                        <pc type="supplied">?</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>ce</w>
                                         <w>dit</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>bien</w>
                                         <w>le</w>
                                         <w>vos</w>
                                         <w>sai</w>
                                         <w>noncier</w>
-                                        <pc type="supplied">:</pc>
+                                        <pc type="supplied">:</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>vois</w>
                                         <w>ici</w>
                                         <w>après</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>novel</w>
-                                        <w>chevalier</w>
+                                        <w>chevalier</w></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>por</w>
                                         <w>ici</w>
@@ -6256,11 +6344,11 @@
                                         <w>ennuit</w>
                                         <w>ou</w>
                                         <w>ier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Et</w>
                                         <w>se</w>
                                         <w>vos</w>
@@ -6272,11 +6360,11 @@
                                         <w rend="elision">m</w>
                                         <pc type="supplied">'</pc>
                                         <w>avoiisés</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Oïl</w>
                                         <pc type="supplied">,</pc>
                                         <w>gloz</w>
@@ -6290,11 +6378,11 @@
                                         <w>je</w>
                                         <w>plux</w>
                                         <w>irez</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Mes</w>
                                         <w>compaignons</w>
                                         <w>ai</w>
@@ -6303,11 +6391,11 @@
                                         <w>ocis</w>
                                         <w>et</w>
                                         <w>detrenchiez</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Por</w>
                                         <w>amors</w>
                                         <w>ton</w>
@@ -6317,34 +6405,34 @@
                                         <w>ja</w>
                                         <w>le</w>
                                         <w>chief</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Vos</w>
                                         <w>i</w>
                                         <w>mantez</w>
                                         <pc type="supplied">,</pc>
                                         <w>cuvers</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                         <w>ce</w>
                                         <w>li</w>
                                         <w>a</w>
                                         <w>dit</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Richiers</w>
+                                        <persName><w>Richiers</w></persName>
                                         <w>tint</w>
                                         <w>an</w>
                                         <w>sa</w>
                                         <w>main</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>grant</w>
                                         <w>pel</w>
                                         <w>agusié</w>
@@ -6397,9 +6485,9 @@
                                         <w>en</w>
                                         <w>plux</w>
                                         <w>de</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>II</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>cartiers</w>
                                         <pc type="supplied">:</pc>
                                 </l>
@@ -6415,7 +6503,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Richiers</w>
+                                        <persName><w>Richiers</w></persName>
                                         <w>vit</w>
                                         <w>le</w>
                                         <w>aubert</w>
@@ -6444,9 +6532,9 @@
                                         <pc type="supplied">,</pc>
                                         <w>si</w>
                                         <w>chosit</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>espié</w>
                                 </l>
                                 <lb/>
@@ -6493,7 +6581,7 @@
                                 <lb/>
                                 <l>
                                         <w>Et</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>chevauche</w>
                                         <pc type="supplied">,</pc>
                                         <w>ne</w>
@@ -6511,9 +6599,9 @@
                                         <w>dou</w>
                                         <w>bois</w>
                                         <w>trovai</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>chevalier</w>
                                         <pc type="supplied">,</pc>
                                 </l>
@@ -6539,9 +6627,9 @@
                                         <w>son</w>
                                         <w>coul</w>
                                         <w>fut</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>vilains</w>
                                         <w>chargiez</w>
                                         <pc type="supplied">.</pc>
@@ -6551,12 +6639,12 @@
                                         <w>Il</w>
                                         <w>ot</w>
                                         <w>non</w>
-                                        <w>Fernagu</w>
+                                        <persName><w>Fernagu</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>fiz</w>
                                         <w>le</w>
                                         <w>roi</w>
-                                        <w>Galiem</w>
+                                        <persName><w>Galiem</w></persName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -6585,9 +6673,9 @@
                                         <w>ocis</w>
                                         <w>jusque</w>
                                         <w>à</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>X</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>crestiens</w>
                                         <pc type="supplied">;</pc>
                                 </l>
@@ -6607,7 +6695,7 @@
                                 <lb/>
                                 <l>
                                         <w>Quant</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>le</w>
                                         <w>vit</w>
                                         <pc type="supplied">,</pc>
@@ -6627,66 +6715,66 @@
                                         <pc type="supplied">'</pc>
                                         <w>escrie</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>es</w>
                                         <w>tu</w>
                                         <pc type="supplied">,</pc>
                                         <w>chevalier</w>
-                                        <pc type="supplied">?</pc>
+                                        <pc type="supplied">?</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                       <q> <pc type="supplied">-</pc>
                                         <w>Sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>ne</w>
                                         <w>lou</w>
                                         <w>vos</w>
                                         <w>quier</w>
                                         <w>noier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                       <q> <pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>suis</w>
                                         <w>de</w>
-                                        <w>Monloüm</w>
-                                        <pc type="supplied">.</pc>
+                                        <placeName><w>Monloüm</w></placeName>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>povres</w>
                                         <w>soudoier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ceste</w>
                                         <w>dame</w>
                                         <w>fut</w>
                                         <w>file</w>
                                         <w>au</w>
                                         <w>senechaul</w>
-                                        <w>Didier</w>
-                                        <pc type="supplied">;</pc>
+                                        <persName><w>Didier</w></persName>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>ai</w>
                                         <w>servi</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>II</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>anz</w>
                                         <pc type="supplied">,</pc>
                                         <w>puis</w>
@@ -6696,11 +6784,11 @@
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>autrier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Si</w>
                                         <w>la</w>
                                         <w>mains</w>
@@ -6712,23 +6800,23 @@
                                         <w>el</w>
                                         <w>ai</w>
                                         <w>formant</w>
-                                        <w>chier</w>
+                                        <w>chier</w></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Amis</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
-                                        <w>Fernaguz</w>
+                                        <persName><w>Fernaguz</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>aséur</w>
                                         <w>chevauchiez</w>
-                                        <pc type="supplied">:</pc>
+                                        <pc type="supplied">:</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Por</w>
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
@@ -6740,27 +6828,27 @@
                                         <w>sarez</w>
                                         <w>vos</w>
                                         <w>tochiez</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Car</w>
                                         <w>je</w>
                                         <w>me</w>
                                         <w>voel</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>pou</w>
                                         <w>o</w>
                                         <w>lui</w>
                                         <w>abelaier</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Mon</w>
                                         <w>depor</w>
                                         <w>an</w>
@@ -6768,12 +6856,12 @@
                                         <w>desoz</w>
                                         <w>cel</w>
                                         <w>olivier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
-                                        <w>Maonmot</w>
+                                        <q><pc type="supplied">«</pc>
+                                        <persName><w>Maonmot</w></persName>
                                         <w>nostre</w>
                                         <w>dex</w>
                                         <w>si</w>
@@ -6783,11 +6871,11 @@
                                         <w>aura</w>
                                         <w>plux</w>
                                         <w>chier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Por</w>
                                         <w>tant</w>
                                         <w rend="elision">qu</w>
@@ -6798,15 +6886,15 @@
                                         <w>loi</w>
                                         <w>es</w>
                                         <w>cretié</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>-</w>
+                                        <q><pc type="supplied">-</pc>
                                         <w>Sire</w>
                                         <pc type="supplied">,</pc>
                                         <w>dit</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>or</w>
                                         <w>tot</w>
@@ -6814,11 +6902,11 @@
                                         <w rend="elision">l</w>
                                         <pc type="supplied">'</pc>
                                         <w>eploitier</w>
-                                        <pc type="supplied">!</pc>
+                                        <pc type="supplied">!</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Bien</w>
                                         <w>i</w>
                                         <w>puetz</w>
@@ -6827,11 +6915,11 @@
                                         <w>prover</w>
                                         <w>et</w>
                                         <w>esaier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>tant</w>
                                         <w>as</w>
@@ -6841,11 +6929,11 @@
                                         <w>à</w>
                                         <w>li</w>
                                         <w>tochier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Ja</w>
                                         <w>te</w>
                                         <w>verras</w>
@@ -6856,33 +6944,33 @@
                                         <pc type="supplied">'</pc>
                                         <w>onme</w>
                                         <w>fier</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Car</w>
                                         <w>toi</w>
                                         <w>ne</w>
-                                        <w>Mahonmot</w>
+                                        <persName><w>Mahonmot</w></persName>
                                         <w>ne</w>
                                         <w>pris</w>
                                         <w>pas</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>denier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Bien</w>
                                         <w>a</w>
                                         <w>pasé</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>C</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>anz</w>
                                         <w>que</w>
                                         <w>truies</w>
@@ -6891,7 +6979,7 @@
                                         <w>ont</w>
                                         <w>maingié</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/>
                                 <l>
@@ -6912,25 +7000,53 @@
                                 <lb/>
                                 <l>
                                         <w>A</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>escrie</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>es</w>
                                         <w>tu</w>
                                         <pc type="supplied">,</pc>
                                         <w>chevalier</w>
-                                        <pc type="supplied">?</pc>
+                                        <pc type="supplied">?</pc></q>
                                 </l>
+                                <lb/><l> <q><pc type="supplied">«</pc>
+                                        <w>Por</w>
+                                        <persName><w>Mahonmot</w></persName>
+                                        <w>mun</w>
+                                        <w>deu</w>
+                                        <pc type="supplied">,</pc>
+                                        <w>ja</w>
+                                        <w>i</w>
+                                        <w>perdras</w>
+                                        <w>le</w>
+                                        <w>chiés</w>
+                                        <pc type="supplied">,</pc>
+                                </q></l>
+                                <lb/><l> <q><pc type="supplied">«</pc>
+                                        <w>Por</w>
+                                        <w>amor</w>
+                                        <w>à</w>
+                                        <w>la</w>
+                                        <w>dame</w>
+                                        <w>que</w>
+                                        <w>tu</w>
+                                        <w>vez</w>
+                                        <w>derenier</w>
+                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">»</pc></q>
+                                        
+                                </l>    
                         </lg>
-                        <lg type="laisse" n="">
+                        
+                        <lg type="laisse" n="VIII" xml:id="L_008">
                                 <lb/>
                                 <l>
                                         <w>LI</w>
                                         <w>Turs</w>
                                         <w>voit</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <pc type="supplied">,</pc>
                                         <w>à</w>
                                         <w>pou</w>
@@ -6953,13 +7069,13 @@
                                         <w>li</w>
                                         <w>vint</w>
                                         <w>de</w>
-                                        <w>Cartaige</w>
+                                        <placeName><w>Cartaige</w></placeName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
                                 <l>
                                         <w>Et</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>le</w>
                                         <w>suen</w>
                                         <pc type="supplied">,</pc>
@@ -6981,8 +7097,10 @@
                                         <w>doner</w>
                                         <w>sor</w>
                                         <w>les</w>
-                                        <w>doré[e]s</w>
-                                        <w>tar[g]es</w>
+                                                <corr><w>dorées</w></corr> <!-- choice refusé ici -->
+                                                 <sic><w>dorés</w></sic>                       
+                                        <corr><w>targes</w></corr>
+                                        <sic><w>tares</w></sic>  <!-- idem -->
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/>
@@ -7047,10 +7165,10 @@
 
                                 <lb/>
                                 <l>
-                                        <w>Fernaguz</w>
+                                        <persName><w>Fernaguz</w></persName>
                                         <w>vai</w>
                                         <w>requerre</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>par</w>
                                         <w>grant</w>
                                         <w>raige</w>
@@ -7058,7 +7176,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Seignors</w>
+                                        <space/><w>Seignors</w>
                                         <pc type="supplied">,</pc>
                                         <w>plait</w>
                                         <w>vos</w>
@@ -7066,7 +7184,7 @@
                                         <w>quels</w>
                                         <w>hons</w>
                                         <w>fut</w>
-                                        <w>Fernaguz</w>
+                                        <persName><w>Fernaguz</w></persName>
                                         <pc type="supplied">?</pc>
                                 </l>
                                 <lb/>
@@ -7116,7 +7234,7 @@
                                 <l>
                                         <w>Vet</w>
                                         <w>ferir</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>desor</w>
                                         <w>son</w>
                                         <w>elme</w>
@@ -7126,9 +7244,9 @@
                                 <lb/>
                                 <l>
                                         <w>Que</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>III</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>des</w>
                                         <w>mestres</w>
                                         <w>serres</w>
@@ -7169,7 +7287,7 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>Damedex</w>
+                                        <persName><w>Damedex</w></persName>
                                         <w>le</w>
                                         <w>gari</w>
                                         <w rend="elision">qu</w>
@@ -7200,7 +7318,7 @@
                                 <lb/>
                                 <l>
                                         <w>Quant</w>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>le</w>
                                         <w>voit</w>
                                         <pc type="supplied">,</pc>
@@ -7227,7 +7345,7 @@
                                 <l>
                                         <w>Vet</w>
                                         <w>ferir</w>
-                                        <w>Fernagu</w>
+                                        <persName><w>Fernagu</w></persName>
                                         <w>desus</w>
                                         <w>son</w>
                                         <w>elme</w>
@@ -7264,7 +7382,8 @@
                                 </l>
                                 <lb/>
                                 <l>
-                                        <w>S</w>
+                                        <w rend="elision">S</w>
+                                        <pc type="supplied">'</pc>
                                         <w>or</w>
                                         <w>ne</w>
                                         <w>tornast</w>
@@ -7280,10 +7399,10 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                         </lg>
-                        <lg type="laisse" n="">
+                        <lg type="laisse" n="IX" xml:id="L_009">
                                 <lb/>
                                 <l>
-                                        <w>FLOOVANS</w>
+                                        <persName><w>FLOOVANS</w></persName>
                                         <w>a</w>
                                         <w>broichié</w>
                                         <w>son</w>
@@ -7310,7 +7429,7 @@
                                 <l>
                                         <w>Vet</w>
                                         <w>ferir</w>
-                                        <w>Fernagu</w>
+                                        <persName><w>Fernagu</w></persName>
                                         <w>sor</w>
                                         <w>sun</w>
                                         <w>elme</w>
@@ -7319,9 +7438,9 @@
                                 <lb/>
                                 <l>
                                         <w>Que</w>
-                                        <pc type="supplied">.</pc>
+                                       <num> <pc type="supplied">.</pc>
                                         <w>III</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>des</w>
                                         <w>maitres</w>
                                         <w>serres</w>
@@ -7355,9 +7474,9 @@
                                         <w>destre</w>
                                         <w>an</w>
                                         <w>abat</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>cartier</w>
                                         <pc type="supplied">;</pc>
                                 </l>
@@ -7388,24 +7507,52 @@
                                 <lb/>
                                 <l>
                                         <w>Et</w>
-                                        <w>Fernagu</w>
+                                        <persName><w>Fernagu</w></persName>
                                         <w rend="elision">s</w>
                                         <pc type="supplied">'</pc>
                                         <w>escrie</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Tu</w>
                                         <w>me</w>
                                         <w>vauz</w>
                                         <w>anpirer</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
+                                </l>
+                                <lb/><l>
+                                        <q><pc type="supplied">«</pc>
+                                                <w>Ahi</w>
+                                                <pc type="supplied">!</pc>
+                                                <w>Maünmot</w>
+                                                <pc type="supplied">,</pc>
+                                                <w>sire</w>
+                                                <pc type="supplied">,</pc>
+                                                <w>car</w>
+                                                <w>me</w>
+                                                <w>venez</w>
+                                                <w>aider</w>
+                                                <pc type="supplied">!</pc>
+                                        </q>
+                                </l>
+                                <lb/><l><q><pc type="supplied">«</pc>
+                                        <w>Ainzçois</w>
+                                        <w>que</w>
+                                        <w>je</w>
+                                        <w>i</w>
+                                        <w>mure</w>
+                                        <pc type="supplied">,</pc>
+                                        <w>me</w>
+                                        <w>quit</w>
+                                        <w>je</w>
+                                        <w>vandïer</w>
+                                        <pc type="supplied">.</pc></q>          
                                 </l>
                         </lg>
-                        <lg type="laisse" n="">
+                        <lg type="laisse" n="X" xml:id="L_010">
                                 <lb/><l>
                                         <w>DOLANZ</w>
                                         <w>fut</w>
-                                        <w>Fernaguz</w>
+                                        <persName><w>Fernaguz</w></persName>
                                         <w>quant</w>
                                         <w>de</w>
                                         <w>lui</w>
@@ -7430,7 +7577,7 @@
                                 <lb/><l>
                                         <w>Si</w>
                                         <w>feri</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>sor</w>
                                         <w>sun</w>
                                         <w>elme</w>
@@ -7450,7 +7597,7 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <pb facs="facsimile0356.bin.png" n="0356"/>
-                                <lb/>14 <!-- <lb/>FLOOVANT. -->
+                                <!-- <lb/>14 <lb/>FLOOVANT. -->
                                 <lb/><l>
                                         <w>Vers</w>
                                         <w>la</w>
@@ -7493,7 +7640,7 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Damedex</w>
+                                        <persName><w>Damedex</w></persName>
                                         <w>le</w>
                                         <w>gari</w>
                                         <w>quant</w>
@@ -7521,7 +7668,8 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Desqu</w>
+                                        <w rend="elision">Desqu</w>
+                                        <pc type="supplied">'</pc>
                                         <w>an</w>
                                         <w>la</w>
                                         <w>terre</w>
@@ -7539,7 +7687,8 @@
                                         <w>autresi</w>
                                         <w>bruant</w>
                                         <w>com</w>
-                                        <w>foudr[e]</w>
+                                        <corr><w>foudre</w></corr> <!-- sans choice -->
+                                        <sic><w>foudr</w></sic>
                                         <w>qui</w>
                                         <w>descent</w>
                                         <pc type="supplied">.</pc>
@@ -7558,7 +7707,8 @@
                                         <pc type="supplied">;</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Dam[e]deu</w>
+                                        <corr><w>Damedeu</w></corr>
+                                        <sic><w>Damdeu</w></sic>
                                         <w>reclama</w>
                                         <pc type="supplied">,</pc>
                                         <w>le</w>
@@ -7591,14 +7741,14 @@
                                 <lb/><l>
                                         <w>Estes</w>
                                         <w>vos</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>IIII</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>Turs</w>
                                         <w>devers</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>I</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>desrubant</w>
                                         <pc type="supplied">,</pc>
                                 </l>
@@ -7614,7 +7764,7 @@
                                         <pc type="supplied">;</pc>
                                 </l>
                                 <lb/><l>
-                                        <w>Fernagu</w>
+                                        <persName><w>Fernagu</w></persName>
                                         <w>vont</w>
                                         <w>querant</w>
                                         <w>li</w>
@@ -7622,23 +7772,28 @@
                                         <w>puanz</w>
                                         <pc type="supplied">.</pc>
                                 </l>
+                        </lg>
+                        
+                        <gap/>
+                        
+                        <lg corresp="laisse" n="XI" xml:id="L_011"> 
                                 <lb/><l>
-                                        <w>Maugalie</w>
+                                        <persName><w>Maugalie</w></persName>
                                         <w>est</w>
                                         <w>as</w>
                                         <w>estre</w>
                                         <pc type="supplied">,</pc>
                                         <w>la</w>
                                         <w>file</w>
-                                        <w>Galié</w>
+                                        <persName><w>Galié</w></persName>
                                         <pc type="supplied">,</pc>
                                 </l>
                                 <lb/><l>
                                         <w>O</w>
                                         <w>le</w>
-                                        <pc type="supplied">.</pc>
+                                        <num><pc type="supplied">.</pc>
                                         <w>XXX</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></num>
                                         <w>pucelles</w>
                                         <w>à</w>
                                         <w>bliaus</w>
@@ -7651,7 +7806,7 @@
                                         <w>soi</w>
                                         <pc type="supplied">,</pc>
                                         <w>vit</w>
-                                        <w>Floovant</w>
+                                        <persName><w>Floovant</w></persName>
                                         <w>le</w>
                                         <w>fier</w>
                                         <pc type="supplied">,</pc>
@@ -7694,17 +7849,17 @@
                                         <w>li</w>
                                         <w>escria</w>
                                         <pc type="supplied">:</pc>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Qui</w>
                                         <w>es</w>
                                         <w>tu</w>
                                         <pc type="supplied">,</pc>
                                         <w>chevalier</w>
-                                        <pc type="supplied">?</pc>
+                                        <pc type="supplied">?</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
-                                        <w>Maonmoz</w>
+                                        <q><pc type="supplied">«</pc>
+                                       <persName> <w>Maonmoz</w></persName>
                                         <w>te</w>
                                         <w>maudie</w>
                                         <pc type="supplied">,</pc>
@@ -7713,10 +7868,10 @@
                                         <w>ai</w>
                                         <w>à</w>
                                         <w>bailier</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Se</w>
                                         <w>tu</w>
                                         <w>ne</w>
@@ -7726,10 +7881,10 @@
                                         <w>parler</w>
                                         <w>et</w>
                                         <w>donoier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Onques</w>
                                         <w>mais</w>
                                         <w>ne</w>
@@ -7738,10 +7893,10 @@
                                         <w>en</w>
                                         <w>estor</w>
                                         <w>commancier</w>
-                                        <pc type="supplied">.</pc>
+                                        <pc type="supplied">.</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Divai</w>
                                         <pc type="supplied">,</pc>
                                         <w>parole</w>
@@ -7751,10 +7906,10 @@
                                         <w>retorne</w>
                                         <w>ton</w>
                                         <w>destrié</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Je</w>
                                         <w>ne</w>
                                         <w>lairai</w>
@@ -7764,10 +7919,10 @@
                                         <w>traire</w>
                                         <w>ne</w>
                                         <w>lancier</w>
-                                        <pc type="supplied">;</pc>
+                                        <pc type="supplied">;</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>De</w>
                                         <w>toi</w>
                                         <w>ferai</w>
@@ -7776,10 +7931,10 @@
                                         <w>et</w>
                                         <w>mon</w>
                                         <w>confanoneir</w>
-                                        <pc type="supplied">,</pc>
+                                        <pc type="supplied">,</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <pc type="supplied">«</pc>
+                                        <q><pc type="supplied">«</pc>
                                         <w>Si</w>
                                         <w>saras</w>
                                         <w>an</w>
@@ -7789,10 +7944,10 @@
                                         <w>maitres</w>
                                         <w>consoiliers</w>
                                         <pc type="supplied">.</pc>
-                                        <pc type="supplied">»</pc>
+                                        <pc type="supplied">»</pc></q>
                                 </l>
                                 <lb/><l>
-                                        <w>Floovans</w>
+                                        <persName><w>Floovans</w></persName>
                                         <w>la</w>
                                         <w>regarde</w>
                                         <pc type="supplied">,</pc>
@@ -7809,9 +7964,41 @@
                                         <w>i</w>
                                         <w>est</w>
                                         <w>venuz</w>
-                                        <w>Richier</w>
+                                        <persName><w>Richier</w></persName>
                                         <pc type="supplied">,</pc>
                                 </l>
+                                <lb/><l>
+                                        <w>Si</w>
+                                        <w>ai</w>
+                                        <w>pris</w>
+                                        <w>son</w>
+                                        <w>seignour</w>
+                                        <w>por</w>
+                                        <w rend="elision">l</w>
+                                        <pc type="supplied">'</pc>
+                                        <w>escu</w>
+                                        <w>de</w>
+                                        <w>cartier</w>
+                                        <pc type="supplied">:</pc>
+                                </l>
+                                <lb/><l>
+                                        <q><pc type="supplied">«</pc>
+                                                <w>Vos</w>
+                                                <w>faites</w>
+                                                <w>que</w>
+                                                <w>mauvais</w>
+                                                <pc type="supplied">,</pc>
+                                                <w>quant</w>
+                                                <w>vos</w>
+                                                <w>ici</w>
+                                                <w>plaidier</w>
+                                                <pc type="supplied">;</pc>
+                                        </q>
+                                </l>
+                                
+                                <!-- arrêt ici au 2 avril -->
+                                
+                                
                                 <pb facs="facsimile0357.bin.png" n="0357"/>
                                 <!-- <lb/>FLOOVANT. -->
                                 <!-- <lb/>452-483
@@ -34846,11 +35033,18 @@
                         
                                 <pb facs="facsimile0420.bin.png" n="0420"/>
                         <!-- <lb/>FLOOVANT. <lb/>8o -->
+                        
                         <lb/>P. 7, v. 4 : Si la hai esrainié. La pour le, hai pour <lb/>ha ou a. (Si
-                        le a araisonné.) <lb/>P. 8, v. 6 et 7 : Devisé, copé. Ces deux rimes se
+                        le a araisonné.) 
+                        
+                        <lb/>P. 8, v. 6 et 7 : Devisé, copé. Ces deux rimes se
                         <lb/>lisent ainsi dans le manuscrit : deviser, coper, par suite <lb/>d'une
-                        distraction évidente du scribe. <lb/>P. 10, v. 33 : [Il] les plaint. Leçon
-                        du manus <lb/>crit : A les plaint. <lb/>P. 13, v. 2o : Sor son elme vergié.
+                        distraction évidente du scribe. 
+                        
+                        <lb/>P. 10, v. 33 : [Il] les plaint. Leçon
+                        du manus<lb/>crit : A les plaint. 
+                        
+                        <lb/>P. 13, v. 2o : Sor son elme vergié.
                         Le manuscrit <lb/>donne ici vergier, comme plus haut deviser et coper
                         <lb/>pour devisé et copé. <lb/>P. 16, v. 28 : <lb/>Asez tot m'an aroient
                         plusour et li archant. <lb/>Aroient pour haroient, haïroient. - Archant pour
