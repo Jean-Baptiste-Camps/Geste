@@ -24,11 +24,17 @@
                 </editor>
                 <respStmt xml:id="JBC">
                     <resp>sous la direction de</resp>
-                    <persName>Jean-Baptiste Camps</persName>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
                 </respStmt>
                 <respStmt xml:id="EA">
                     <resp>édition numérique</resp>
-                    <persName>Elena Albarran</persName>
+                    <persName>
+                        <forename>Elena</forename>
+                        <surname>Albarran</surname>
+                    </persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -80,645 +86,1372 @@
                 </biblStruct>
             </sourceDesc>
         </fileDesc>
-            <profileDesc><creation>
-                <origPlace cert="unknown" resp="EA">Inconnue</origPlace>
-                <origDate cert="medium" resp="EA">Pas beaucoup posterieure à la première moitié du XIIIe siècle</origDate>
-            </creation>
-
+            <profileDesc>
+                <creation>
+                    <origPlace cert="unknown" resp="#EA">Inconnue</origPlace>
+                    <origDate cert="medium" resp="#Guessard #Michelant" notBefore="1250" notAfter="1270">Pas beaucoup posterieure à la première moitié du XIIIe siècle</origDate>
+                </creation>
             <langUsage>
                 <language cert="medium" resp="#JBC" ident="fro" usage="80">ancien français peu marqué (langue du ms. principal)</language>
                 <language cert="high" resp="#JBC" ident="xno" usage="19">anglo-normand (langue du ms. de contrôle)</language>
                 <language cert="low" resp="#JBC" ident="wln" usage="1">traits du Nord-Est ?</language>
             </langUsage>
-        </profileDesc>
+            </profileDesc>
         <revisionDesc status="draft">
             <change who="#EA" when="2016-04-02" status="draft">Début de l'encodage du fichier</change>
             <change who="#JBC" when="2016-04-02" status="draft">Création du gabarit, transformation du fichier de ROC en TEI et segmentation.</change>
         </revisionDesc>
     </teiHeader>
+    
     <text>
+        
         <front>
+            
             <div type="page_de_titre">
+                
                 <pb n="0191" facs="facsimile/0191.bin.png"/>
-<lb/>CHANSON DE GESTE
+                
+<p>
+    <lb/>OTINEL
+</p> 
+                
+<p>
+    <lb/>CHANSON DE GESTE
+</p>
+                
 <pb n="0192" facs="facsimile/0192.bin.png"/>
-<lb/>Paris. - Imprimé par CHARLES JOUAUST, 338, r. S.-Honoré,
-<lb/>avec les caractères elzeviriens de P. JANNET.
+                
+<p>
+    <lb/>Paris. - Imprimé par CHARLES JOUAUST, 338, r. S.-Honoré,
+    <lb/>avec les caractères elzeviriens de P. JANNET.
+</p>
             </div>
-<div type="page_de_titre"><pb n="0193" facs="facsimile/0193.bin.png"/>
-<lb/>CHANS0N DE GESTE
-<lb/>Publiée pour la première fois, d'après les manuscrits
-<lb/>de Rome et de Middlehill
-<lb/>MM. F. GUESSARD ET H. MICHELANT
-<lb/>A PARIS
-<lb/>Chez F. VIEWEG, Libraire-Editeur
-<lb/>Maison A. FRANCK
-<lb/>RUE DE RICHELIEU, N° 67
-<lb/>MDCCCLIX</div>
+            
+            <div type="page_de_titre">
+                
+<pb n="0193" facs="facsimile/0193.bin.png"/>
+    
+<p>
+    <lb/>OTINEL   
+    <lb/>CHANS0N DE GESTE
+    <lb/>Publiée pour la première fois, d'après les manuscrits
+    <lb/>de Rome et de Middlehill
+    <lb/>MM. F. GUESSARD ET H. MICHELANT
+    <lb/>A PARIS
+    <lb/>Chez F. VIEWEG, Libraire-Editeur
+    <lb/>Maison A. FRANCK
+    <lb/>RUE DE RICHELIEU, N° 67
+    <lb/>MDCCCLIX
+</p>
+            </div>
+            
             <div type="preface">
-                <pb n="0195" facs="facsimile/0195.bin.png"/>
-<!--Je viens de compléter les deux  premières lignes qui manquaient -->
-<!-- <lb/>PRÉFACE.-->               
-<p><lb/>La chanson d'Otinel est le récit d'une
-<lb/>expédition de Charlemagne en Lom-               
-<!-- Quelque chose à l'air de manquer ici -->
-<!-- <lb/>PRÉFACE.-->
-<lb/>bardie contre le Sarrasin Garsile ou
-<lb/>Marsile. Otinel, le héros de ce poë<lb rend="hyphen" break="no"/>me, y apparoit d'abord comme mes<lb rend="hyphen" break="no"/>sager de Garsile. A ce titre, il vient à Paris som<lb rend="hyphen" break="no"/>mer Charlemagne de rendre hommage au roi son
-<lb/>seigneur et d'abjurer la foi chrétienne ; mais, par
-<lb/>un effet miraculeux de l'intervention divine,
-<lb/>c'est lui-même qui bientôt renie sa croyance et
-<lb/>abandonne la loi de Mahomet pour celle de Jé<lb rend="hyphen" break="no"/>sus-Christ. Filleul de Charlemagne, qui le fiance
-<lb/>à sa fille Belisent, Otinel prend place parmi les
-<lb/>douze pairs, marche avec eux contre Garsile,
-<lb/>dont il devient l'ennemi le plus acharné et le
-<lb/>plus implacable, et, après avoir contribué autant
-<lb/>que personne à la défaite du païen, reçoit pour
-<lb/>récompense la main de Belisent et la couronne
-<lb/>de Lombardie.</p>
-<lb/>Quoiqu'il se dénoue en Italie, le poëme d'Oti<lb rend="hyphen" break="no"/>nel se rattache à l'histoire légendaire de la con-
+                
+<pb n="0195" facs="facsimile/0195.bin.png"/>
+                
+<!-- <lb/>PRÉFACE.-->   
+                
+<p>
+    <lb/>La chanson d'Otinel est le récit d'une
+    <lb/>expédition de Charlemagne en Lom-               
+    <lb/>bardie contre le Sarrasin Garsile ou
+    <lb/>Marsile. Otinel, le héros de ce poë<lb rend="hyphen" break="no" 
+      />me, y apparoit d'abord comme mes<lb rend="hyphen" break="no" 
+      />sager de Garsile. A ce titre, il vient à Paris som<lb rend="hyphen" break="no" 
+      />mer Charlemagne de rendre hommage au roi son
+    <lb/>seigneur et d'abjurer la foi chrétienne ; mais, par
+    <lb/>un effet miraculeux de l'intervention divine,
+    <lb/>c'est lui-même qui bientôt renie sa croyance et
+    <lb/>abandonne la loi de Mahomet pour celle de Jé<lb rend="hyphen" break="no" 
+      />sus-Christ. Filleul de Charlemagne, qui le fiance
+    <lb/>à sa fille Belisent, Otinel prend place parmi les
+    <lb/>douze pairs, marche avec eux contre Garsile,
+    <lb/>dont il devient l'ennemi le plus acharné et le
+    <lb/>plus implacable, et, après avoir contribué autant
+    <lb/>que personne à la défaite du païen, reçoit pour
+    <lb/>récompense la main de Belisent et la couronne
+    <lb/>de Lombardie.
+</p>
+                
+<p>
+    <lb/>Quoiqu'il se dénoue en Italie, le poëme d'Oti<lb rend="hyphen" break="no" 
+      />nel se rattache à l'histoire légendaire de la con-
+    
 <pb n="0196" facs="facsimile/0196.bin.png"/>
+    
 <!-- <lb/>PRÉFACE.-->
-<lb/>quête de l'Espagne par Charlemagne, et s'inter<lb rend="hyphen" break="no"/>cale, comme une sorte de parenthèse, dans le
-<lb/>récit de cette grande expédition. L'auteur sup<lb rend="hyphen" break="no"/>pose, en effet, qu'après la prise de Pampe<lb rend="hyphen" break="no"/>lune (1) Charlemagne est rentré en France avec
-<lb/>ses pairs, et qu'il est sur le point de retourner en
-<lb/>Espagne pour y combattre
-<lb/>... contre Garsilion,
-<lb/>Le roi d'Espaigne, qui tant par est felon (2),
-<lb/>lorsque Otinel arrive à Paris et s'annonce en ces
-<lb/>termes :
-<lb/>L'idée de ce retour en France de Charlema<lb rend="hyphen" break="no"/>gne ne se retrouve nulle part ailleurs, que nous
-<lb/>sachions. La chanson de Roland annonce, dès
-<lb/>le début, que l'empereur a été en Espagne
-<lb/>sept ans tous pleins. Ce long séjour et les dif<lb rend="hyphen" break="no"/>ficultés de la conquête ont été encore augmen<lb rend="hyphen" break="no"/>tés et exagérés dans le poëme de Gui de Bour<lb rend="hyphen" break="no"/>gogne, l'un des derniers sans doute, avec ce<lb rend="hyphen" break="no"/>lui d'Otinel, non-seulement du petit cycle d'Es<lb rend="hyphen" break="no"/>pagne, mais même du cycle carlovingien tout
-<lb/>entier. A entendre l'auteur de Gui de Bourgo<lb rend="hyphen" break="no"/>gne, ce n'est pas sept ans, mais vingt-sept ans,
-<lb/>1. Voy. p. 18 le discours de Clarel, qui dit en parlant de
-<lb/>3. Ibid.
+    
+    <lb/>quête de l'Espagne par Charlemagne, et s'inter<lb rend="hyphen" break="no" 
+      />cale, comme une sorte de parenthèse, dans le
+    <lb/>récit de cette grande expédition. L'auteur sup<lb rend="hyphen" break="no" 
+      />pose, en effet, qu'après la prise de Pampe<lb rend="hyphen" break="no" 
+      />lune (1) Charlemagne est rentré en France avec
+    <lb/>ses pairs, et qu'il est sur le point de retourner en
+    <lb/>Espagne pour y combattre
+</p>
+ 
+<p>
+    <lb/>... contre Garsilion,
+    <lb/>Le roi d'Espaigne, qui tant par est felon
+        <note>
+            <lb/>2.Ci-après, p.2.<!-- EST- CE QUE JE DOIS AJOUTER DES NOTES JUSTE EN BAS DE LA LIGNE OU ELLES SONT INDIQUÉES?  EXEMPLE LIGNE LE ROI D'ESPAGNE-->               
+        </note>
+</p>
+                
+<p>
+    <lb/>lorsque Otinel arrive à Paris et s'annonce en ces
+    <lb/>termes :
+</p>
+                
+<p>
+    <lb/>Seignors, dit il, Otes m'apele l'on;
+    <lb/>D'Espaigne sui, la noble region (3)
+</p>  
+                
+<p>
+    <lb/>L'idée de ce retour en France de Charlema<lb rend="hyphen" break="no" 
+      />gne ne se retrouve nulle part ailleurs, que nous
+    <lb/>sachions. La chanson de Roland annonce, dès
+    <lb/>le début, que l'empereur a été en Espagne
+    <lb/>sept ans tous pleins. Ce long séjour et les dif<lb rend="hyphen" break="no" 
+      />ficultés de la conquête ont été encore augmen<lb rend="hyphen" break="no" 
+      />tés et exagérés dans le poëme de Gui de Bour<lb rend="hyphen" break="no" 
+      />gogne, l'un des derniers sans doute, avec ce<lb rend="hyphen" break="no" 
+      />lui d'Otinel, non-seulement du petit cycle d'Es<lb rend="hyphen" break="no" 
+      />pagne, mais même du cycle carlovingien tout
+    <lb/>entier. A entendre l'auteur de Gui de Bourgo<lb rend="hyphen" break="no" 
+      />gne, ce n'est pas sept ans, mais vingt-sept ans,
+    <lb/>1. Voy. p. 18 le discours de Clarel, qui dit en parlant de 
+    <lb/>Roland: «Je ne l'aime point et j'en ai bien sujet, car dans 
+    <lb/>une joûte sous Pampelune, il m'a tué mon frère Sansoigne 
+    <lb/>de Montbran.
+    <lb/>2.Ci-après, p.2. <!-- EXEMPLE DE PRESENTATION DE NOTE DE BAS DE PAGE EN HAUT -->
+    <lb/>3. Ibid.
+    
 <pb n="0197" facs="facsimile/0197.bin.png"/>
+    
 <!-- <lb/>PRÉFACE.-->
-<!-- <lb/>vij
---><lb/>que Charlemagne combattit contre Marsile sans
-<lb/>revoir la France.
-<lb/>Pourquoi donc notre poëte a-t-il ainsi contra<lb rend="hyphen" break="no"/>rié la tradition ? C'est que, selon nous, il vouloit
-<lb/>rattacher sa chanson aux poëmes déjà célèbres
-<lb/>qui racontoient la conquête de l'Espagne, et,
-<lb/>ne trouvant plus de place sur le même théâ<lb rend="hyphen" break="no"/>tre pour y développer une action, il a été con<lb rend="hyphen" break="no"/>traint de transporter ailleurs ses personnages.
-<lb/>Il a donc imaginé que Charlemagne étoit rentré
-<lb/>en France, et que, durant ce temps, Marsile
-<lb/>étoit allé prendre Rome, puis s'établir solide<lb rend="hyphen" break="no"/>ment en Lombardie dans une ville fortifiée. C'est
-<lb/>de là que part Otinel pour venir à Paris s'acquit<lb rend="hyphen" break="no"/>ter de son message ; c'est là aussi que le poëme
-<lb/>se dénoue.
-<lb/>Il résulte de cette invention que tous les per<lb rend="hyphen" break="no"/>sonnages importants de la chanson d'Otinel sont
-<lb/>bien connus, à l'exception du héros. L'au<lb rend="hyphen" break="no"/>teur, il est vrai, pour mieux rattacher sa com<lb rend="hyphen" break="no"/>position à d'autres, a fait de lui un neveu de
-<lb/>Ferragus ; mais ce nom d'Otinel n'en est pas
-<lb/>moins un nom nouveau, qu'on chercheroit inu<lb rend="hyphen" break="no"/>tilement dans la chronique de Turpin et dans
-<lb/>tous nos anciens poëmes. Il n'a aucun rapport,
-<lb/>comme on pourroit être tenté de le croire, avec
-<lb/>le surnom du célèbre Rainouart : c'est simple<lb rend="hyphen" break="no"/>ment un diminutif du nom à double forme Otes,
-<lb/>Oton ; et la preuve en est que, dans le cours du
-<lb/>récit, ces formes simples remplacent plus d'une
-<lb/>fois la forme diminutive (1).
-<lb/>1. Dans l'un des manuscrits de notre poëme, celui de Midd<lb rend="hyphen" break="no"/>lehill, on rencontre deux fois la forme Otuel, très lisible. Dans
+<!-- <lb/>vij-->
+    
+    <lb/>que Charlemagne combattit contre Marsile sans
+    <lb/>revoir la France.
+</p>
+                
+<p>
+    <lb/>Pourquoi donc notre poëte a-t-il ainsi contra<lb rend="hyphen" break="no" 
+      />rié la tradition ? C'est que, selon nous, il vouloit
+    <lb/>rattacher sa chanson aux poëmes déjà célèbres
+    <lb/>qui racontoient la conquête de l'Espagne, et,
+    <lb/>ne trouvant plus de place sur le même théâ<lb rend="hyphen" break="no" 
+      />tre pour y développer une action, il a été con<lb rend="hyphen" break="no" 
+      />traint de transporter ailleurs ses personnages.
+    <lb/>Il a donc imaginé que Charlemagne étoit rentré
+    <lb/>en France, et que, durant ce temps, Marsile
+    <lb/>étoit allé prendre Rome, puis s'établir solide<lb rend="hyphen" break="no" 
+      />ment en Lombardie dans une ville fortifiée. C'est
+    <lb/>de là que part Otinel pour venir à Paris s'acquit<lb rend="hyphen" break="no" 
+      />ter de son message ; c'est là aussi que le poëme
+    <lb/>se dénoue.
+</p>
+                
+<p>
+    <lb/>Il résulte de cette invention que tous les per<lb rend="hyphen" break="no" 
+      />sonnages importants de la chanson d'Otinel sont
+    <lb/>bien connus, à l'exception du héros. L'au<lb rend="hyphen" break="no" 
+      />teur, il est vrai, pour mieux rattacher sa com<lb rend="hyphen" break="no" 
+      />position à d'autres, a fait de lui un neveu de
+    <lb/>Ferragus ; mais ce nom d'Otinel n'en est pas
+    <lb/>moins un nom nouveau, qu'on chercheroit inu<lb rend="hyphen" break="no" 
+      />tilement dans la chronique de Turpin et dans
+    <lb/>tous nos anciens poëmes. Il n'a aucun rapport,
+    <lb/>comme on pourroit être tenté de le croire, avec
+    <lb/>le surnom du célèbre Rainouart : c'est simple<lb rend="hyphen" break="no" 
+      />ment un diminutif du nom à double forme Otes,
+    <lb/>Oton ; et la preuve en est que, dans le cours du
+    <lb/>récit, ces formes simples remplacent plus d'une
+    <lb/>fois la forme diminutive (1).
+</p>
+                
+<p>
+    <lb/>1. Dans l'un des manuscrits de notre poëme, celui de Midd<lb rend="hyphen" break="no" 
+      />lehill, on rencontre deux fois la forme Otuel, très lisible. Dans
+    <lb/>le poëme anglois, dont il sera parlé ci-aprés, on lit toujours
+    <lb/>Otuwel. De même, dans des chartes angloises du 13e siècle,
+    <lb/>on trouve Otwel de Needham, Otuel de Bovill, et en même
+    <lb/>temps, Odenell de Unframoill, Odinellus, Otynellus, Otenel<lb rend="hyphen" break="no" 
+      />lus, etc.
+<!-- J'AI RECOPIÉ LA NOTE ICI ENSEMBLE, ET PAS SEPARÉE EN DEUX PAGES, C'EST CORRECT? -->
+    
 <pb n="0198" facs="facsimile/0198.bin.png"/>
+</p>
+                
 <!-- <lb/>viij
 --><!-- <lb/>PRÉFACE.-->
-<lb/>On souhaiteroit que le caractère et le rôle d'O<lb rend="hyphen" break="no"/>tinel fussent aussi nouveaux que son nom ; mais
-<lb/>le plus grand mérite du poëme composé à sa
-<lb/>gloire est d'être très court. Il n'y faut chercher
-<lb/>aucune de ces beautés natives qui éclatent dans
-<lb/>les plus anciennes chansons de geste. C'est une
-<lb/>œuvre de la décadence, intéressante toutefois à
-<lb/>ce titre, et comme terme de comparaison, pour le
-<lb/>critique et pour l'historien littéraire.
-<lb/>Quoiqu'elle nous paroisse une des dernières
-<lb/>productions de notre poésie héroïque du moyen
-<lb/>âge, la chanson d'Otinel n'est pourtant pas de
-<lb/>beaucoup postérieure à la première moitié du
-<lb/>XIIIe siècle. Quatre vers seulement nous permet<lb rend="hyphen" break="no"/>tent d'en juger ainsi. Ils se trouvent comme
-<lb/>égarés au folio 106 v° d'un manuscrit de la Bi<lb rend="hyphen" break="no"/>bliothèque impériale, qui renferme les enseigne<lb rend="hyphen" break="no"/>ments Trebor (1). On les y lit sous cette forme :
-<lb/>Rolans a dit au paien mescréant :
-<lb/>« Je te desfi de ce jour en avant. »
-<lb/>Dit Otinel : « Et je tei ensement ;
-<lb/>La mort mon pere Fernagu te demant » (2).
-<lb/>Bien qu'ils diffèrent un peu de ceux qu'on lira
-<lb/>le poëme anglois, dont il sera parlé ci-aprés, on lit toujours
-<lb/>Otuwel. De même, dans des chartes angloises du 13e siècle,
-<lb/>on trouve Otwel de Needham, Otuel de Bovill, et en même
-<lb/>temps, Odenell de Unframoill, Odinellus, Otynellus, Otenel<lb rend="hyphen" break="no"/>lus, etc.
-<lb/>Notre-Dame.
-<lb/>2. On voit que dans la version d'où ces vers sont tirés
-<lb/>Otinel étoit le fils, et non le neveu, de Ferragus.
+                
+<p>
+    <lb/>On souhaiteroit que le caractère et le rôle d'O<lb rend="hyphen" break="no" 
+      />tinel fussent aussi nouveaux que son nom ; mais
+    <lb/>le plus grand mérite du poëme composé à sa
+    <lb/>gloire est d'être très court. Il n'y faut chercher
+    <lb/>aucune de ces beautés natives qui éclatent dans
+    <lb/>les plus anciennes chansons de geste. C'est une
+    <lb/>œuvre de la décadence, intéressante toutefois à
+    <lb/>ce titre, et comme terme de comparaison, pour le
+    <lb/>critique et pour l'historien littéraire.
+</p>
+                
+<p>
+    <lb/>Quoiqu'elle nous paroisse une des dernières
+    <lb/>productions de notre poésie héroïque du moyen
+    <lb/>âge, la chanson d'Otinel n'est pourtant pas de
+    <lb/>beaucoup postérieure à la première moitié du
+    <lb/>XIIIe siècle. Quatre vers seulement nous permet<lb rend="hyphen" break="no" 
+      />tent d'en juger ainsi. Ils se trouvent comme
+    <lb/>égarés au folio 106 v° d'un manuscrit de la Bi<lb rend="hyphen" break="no" 
+      />bliothèque impériale, qui renferme les enseigne<lb rend="hyphen" break="no" 
+      />ments Trebor (1). On les y lit sous cette forme :
+
+                
+<q rend="block">
+    <lb/>Rolans a dit au paien mescréant :
+    <lb/>« Je te desfi de ce jour en avant. »
+    <lb/>Dit Otinel : « Et je tei ensement ;
+    <lb/>La mort mon pere Fernagu te demant »<note>
+            <lb/>2. On voit que dans la version d'où ces vers sont tirés<!-- EXEMPLE DE PRESENTATION DE NOTE DE BAS DE PAGE EN HAUT -->
+            <lb/>Otinel étoit le fils, et non le neveu, de Ferragus. 
+        </note>.
+</q>
+ </p>               
+<p>
+    <lb/>Bien qu'ils diffèrent un peu de ceux qu'on lira
+</p>
+                
+<p> <!-- VOILA LA NOTE DONT JE PARLE -->
+    <lb/>le poëme anglois, dont il sera parlé ci-aprés, on lit toujours
+    <lb/>Otuwel. De même, dans des chartes angloises du 13e siècle,
+    <lb/>on trouve Otwel de Needham, Otuel de Bovill, et en même
+    <lb/>temps, Odenell de Unframoill, Odinellus, Otynellus, Otenel<lb rend="hyphen" break="no" 
+      />lus, etc.
+    <lb/>1.Ou sans doute les enseignements Robert, dont Trebor
+    <lb/>n'est que l'anagramme. Ce ms. est le n° 273 du fonds de 
+    <lb/>Notre-Dame.
+    <lb/>2. On voit que dans la version d'où ces vers sont tirés
+    <lb/>Otinel étoit le fils, et non le neveu, de Ferragus.
+    
 <pb n="0199" facs="facsimile/0199.bin.png"/>
+</p>
+                
 <!-- <lb/>PRÉFACE.-->
-<lb/>ci-après (p. 15, v. 22-26), il est impossible, ce<lb rend="hyphen" break="no"/>pendant, de méconnoître l'identité des deux pas<lb rend="hyphen" break="no"/>sages; et, comme ces quatre vers sont d'une écri<lb rend="hyphen" break="no"/>ture de l'an 1250 ou environ, nous en concluons
-<lb/>naturellement que le poëme dont ils font partie
-<lb/>est antérieur à cette époque. Les deux manu<lb rend="hyphen" break="no"/>scrits dont nous nous servons pour notre édition
-<lb/>ne nous permettroient pas cette conclusion, puis<lb rend="hyphen" break="no"/>qu'ils sont, l'un et l'autre, du XIVe siècle.
-<lb/>Nous n'apercevons nulle part, dans les mo<lb rend="hyphen" break="no"/>numents de notre ancienne littérature, aucun té<lb rend="hyphen" break="no"/>moignage, aucune allusion qui se rapportent à
-<lb/>la chanson d'Otinel ; mais la littérature angloise
-<lb/>nous en offre deux traductions libres ou imita<lb rend="hyphen" break="no"/>tions en vers, qui ont été analysées par Ellis
-<lb/>dans ses Specimens of early english metrical roman<lb rend="hyphen" break="no"/>ces, sous le titre de Sir Otuel (1). De ces deux
-<lb/>ouvrages, l'un est demeuré manuscrit, l'autre a
-<lb/>été publié en 1836, pour le club d'Abbotsford,
-<lb/>par M. Nicholson (2). L'analyse d'Ellis suffiroit
-<lb/>à démontrer que l'Otinel françois a servi de mo<lb rend="hyphen" break="no"/>dèle aux auteurs de Sir Otuel ; mais la publica<lb rend="hyphen" break="no"/>tion de M. Nicholson le démontre bien mieux
-<lb/>encore. Que le poëme de Sir Otuel soit écrit with
-<lb/>great spirit and animation, comme nous l'assure
-<lb/>le savant éditeur, nous l'accordons volontiers ;
-<lb/>mais il n'est point original, ainsi qu'il est facile
-<lb/>1. A new edition, revised by J. O. Halliwel ; London,
-<lb/>1848, 1 vol. in-8, p. 357-379.
-<lb/>2. The romances of Rouland and Vernagu, and Sir Otuel,
-<lb/>from the Auchinleck manuscript, printed at Edinburgh,
-<lb/>M.DCCC.XXXVI, presented to the members of the Abbots<lb rend="hyphen" break="no"/>ford club by Alexander Nicholson.
+                
+<p>
+    <lb/>ci-après (p. 15, v. 22-26), il est impossible, ce<lb rend="hyphen" break="no" 
+      />pendant, de méconnoître l'identité des deux pas<lb rend="hyphen" break="no" 
+      />sages; et, comme ces quatre vers sont d'une écri<lb rend="hyphen" break="no" 
+      />ture de l'an 1250 ou environ, nous en concluons
+    <lb/>naturellement que le poëme dont ils font partie
+    <lb/>est antérieur à cette époque. Les deux manu<lb rend="hyphen" break="no" 
+      />scrits dont nous nous servons pour notre édition
+    <lb/>ne nous permettroient pas cette conclusion, puis<lb rend="hyphen" break="no" 
+      />qu'ils sont, l'un et l'autre, du XIVe siècle.
+</p>
+                
+<p>
+    <lb/>Nous n'apercevons nulle part, dans les mo<lb rend="hyphen" break="no" 
+      />numents de notre ancienne littérature, aucun té<lb rend="hyphen" break="no" 
+      />moignage, aucune allusion qui se rapportent à
+    <lb/>la chanson d'Otinel ; mais la littérature angloise
+    <lb/>nous en offre deux traductions libres ou imita<lb rend="hyphen" break="no" 
+      />tions en vers, qui ont été analysées par Ellis
+    <lb/>dans ses Specimens of early english metrical roman<lb rend="hyphen" break="no" 
+      />ces, sous le titre de Sir Otuel (1). De ces deux
+    <lb/>ouvrages, l'un est demeuré manuscrit, l'autre a
+    <lb/>été publié en 1836, pour le club d'Abbotsford,
+    <lb/>par M. Nicholson (2). L'analyse d'Ellis suffiroit
+    <lb/>à démontrer que l'Otinel françois a servi de mo<lb rend="hyphen" break="no" 
+      />dèle aux auteurs de Sir Otuel ; mais la publica<lb rend="hyphen" break="no" 
+      />tion de M. Nicholson le démontre bien mieux
+    <lb/>encore. Que le poëme de Sir Otuel soit écrit with
+    <lb/>great spirit and animation, comme nous l'assure
+    <lb/>le savant éditeur, nous l'accordons volontiers ;
+    <lb/>mais il n'est point original, ainsi qu'il est facile
+                
+<!-- Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->     
+                
+    <lb/>1. A new edition, revised by J. O. Halliwel ; London,
+    <lb/>1848, 1 vol. in-8, p. 357-379.
+    <lb/>2. The romances of Rouland and Vernagu, and Sir Otuel,
+    <lb/>from the Auchinleck manuscript, printed at Edinburgh,
+    <lb/>M.DCCC.XXXVI, presented to the members of the Abbots<lb rend="hyphen" break="no" 
+      />ford club by Alexander Nicholson.
+    
 <pb n="0200" facs="facsimile/0200.bin.png"/>
+                
 <!-- <lb/>PRÉFACE.-->
-<lb/>de s'en convaincre en le comparant au texte fran<lb rend="hyphen" break="no"/>çois que nous publions.
-<lb/>La chanson d'Otinel n'a pas seulement tra<lb rend="hyphen" break="no"/>versé la Manche ; elle paroît avoir pénétré
-<lb/>jusqu'en Islande. Dans un catalogue de sa<lb rend="hyphen" break="no"/>gas inédites, qui nous a été communiqué par
-<lb/>M. Rafn, nous trouvons la mention d'un récit
-<lb/>intitulé Otinel rimur. Nous voyons aussi dans
-<lb/>une compilation islandoise qui a pour titre Saga
-<lb/>Karla Magnusar og Kappa Hans un épisode où
-<lb/>reparoît, sous la forme Otuel, le nom de notre
-<lb/>héros.
-<lb/>Nous avons inutilement recherché ce nom dans
-<lb/>les Reali di Francia, dans la Spagna istoriata et
-<lb/>dans les nombreux poëmes italiens dont le sujet
-<lb/>est d'origine françoise. Un seul petit poëme po<lb rend="hyphen" break="no"/>pulaire, que nous avons sous les yeux, est inti<lb rend="hyphen" break="no"/>tulé : Istoria di Ottinello et Giulia, dove s'intendono
-<lb/>varie disgrazie a loro accadute e come al fine si
-<lb/>sposarono (Lucca, con permesso) ; mais ce poë<lb rend="hyphen" break="no"/>me n'a aucun rapport avec le nôtre.
-<lb/>Nous ne connoissons que deux manuscrits de
-<lb/>la chanson d'Otinel : l'un est conservé à Rome,
-<lb/>dans la bibliothèque du Vatican ; l'autre fait par<lb rend="hyphen" break="no"/>tie de la riche bibliothèque de sir Thomas Phil<lb rend="hyphen" break="no"/>lipps, a Middlehill.
-<lb/>Le manuscrit de Rome, inscrit sous le n° 1616
-<lb/>au catalogue de la bibliothèque de la reine de
-<lb/>chemin. Il se compose d'ouvrages ou de fragments
-<lb/>Suède, est un petit in-8° de 124 feuillets en par<lb rend="hyphen" break="no"/>d'ouvrages très divers, qui paroissent depuis
+                
+<!-- VOILÀ CE QUE JE DISAIS Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->                   
+
+    <lb/>de s'en convaincre en le comparant au texte fran<lb rend="hyphen" break="no" 
+      />çois que nous publions.
+</p>
+                
+<p>
+    <lb/>La chanson d'Otinel n'a pas seulement tra<lb rend="hyphen" break="no" 
+      />versé la Manche ; elle paroît avoir pénétré
+    <lb/>jusqu'en Islande. Dans un catalogue de sa<lb rend="hyphen" break="no"/>gas inédites, qui nous a été communiqué par
+    <lb/>M. Rafn, nous trouvons la mention d'un récit
+    <lb/>intitulé Otinel rimur. Nous voyons aussi dans
+    <lb/>une compilation islandoise qui a pour titre Saga
+    <lb/>Karla Magnusar og Kappa Hans un épisode où
+    <lb/>reparoît, sous la forme Otuel, le nom de notre
+    <lb/>héros.
+</p>
+                
+<p>
+    <lb/>Nous avons inutilement recherché ce nom dans
+    <lb/>les Reali di Francia, dans la Spagna istoriata et
+    <lb/>dans les nombreux poëmes italiens dont le sujet
+    <lb/>est d'origine françoise. Un seul petit poëme po<lb rend="hyphen" break="no" 
+      />pulaire, que nous avons sous les yeux, est inti<lb rend="hyphen" break="no" 
+      />tulé : Istoria di Ottinello et Giulia, dove s'intendono
+    <lb/>varie disgrazie a loro accadute e come al fine si
+    <lb/>sposarono (Lucca, con permesso) ; mais ce poë<lb rend="hyphen" break="no" 
+      />me n'a aucun rapport avec le nôtre.
+</p>
+                
+<p>
+    <lb/>Nous ne connoissons que deux manuscrits de
+    <lb/>la chanson d'Otinel : l'un est conservé à Rome,
+    <lb/>dans la bibliothèque du Vatican ; l'autre fait par<lb rend="hyphen" break="no" 
+      />tie de la riche bibliothèque de sir Thomas Phil<lb rend="hyphen" break="no" 
+      />lipps, a Middlehill.
+</p>
+                
+<p>
+    <lb/>Le manuscrit de Rome, inscrit sous le n° 1616
+    <lb/>au catalogue de la bibliothèque de la reine de
+    <lb/>chemin. Il se compose d'ouvrages ou de fragments
+    <lb/>Suède, est un petit in-8° de 124 feuillets en par<lb rend="hyphen" break="no" 
+      />d'ouvrages très divers, qui paroissent depuis
+    
 <pb n="0201" facs="facsimile/0201.bin.png"/>
+    
 <!-- <lb/>PRÉFACE.-->
-<lb/>longtemps réunis et reliés ensemble. Il a appar<lb rend="hyphen" break="no"/>tenu à l'abbaye de Fleury, comme l'indique la
-<lb/>mention ci-après, qui se lit au verso du fol. 20,
-<lb/>et qui remonte au XIIe siècle : Hic est liber sancti
-<lb/>Benedicti Floriacensis, quem si quis furatus fuerit,
-<lb/>vel aliquo ingenio tulerit, anathema sit. De la même
-<lb/>main, à ce qu'il semble, a été écrit plus bas ce
-<lb/>vers singulier :
-<lb/>Sepe comesta bovis caro plus placet, auget amorem.
-<lb/>Le manuscrit est de ceux qui, pour un temps,
-<lb/>ont appartenu à la France ; on y voit le timbre
-<lb/>de la bibliothèque nationale à côté de celui de
-<lb/>la bibliothèque apostolique. Il contient :
-<lb/>1° (Du fol. 1 au fol. 16 v°). Tractatus magistri
-<lb/>Guidonis Augensis super musica. - XIIe siècle.
-<lb/>2° (Fol. 17 et 18r°). Sept fables de Phè<lb rend="hyphen" break="no"/>dre (1). - XIe siècle.
-<lb/>3° (Fol. 18 v° et 19 r°). Oratio sancta. - XIIe
-<lb/>siècle. - Incipit :
-<lb/>O mi custos, o mi heros, mi pater misericors.
-<lb/>4° (Fol. 19 et 20). Kurie eleison. Grec et latin
-<lb/>interlinéaire. Le grec est écrit en caractères ro<lb rend="hyphen" break="no"/>mains : Olin tin imeran (tota die) - tin suchim
-<lb/>1. De bove et asino. - Cervus ad fontem laudat cornua. <lb rend="hyphen" break="no"/>Vulpis ad corvum. - Canis ad ovem, lupus testis. - Mulier
-<lb/>parturiens ad virum. - Canis parturiens ad alteram. - Leo
-<lb/>deficiens, aper, taurus, asellus. - C'est le manuscrit de P.
-<lb/>Daniel.
+    
+    <lb/>longtemps réunis et reliés ensemble. Il a appar<lb rend="hyphen" break="no" 
+      />tenu à l'abbaye de Fleury, comme l'indique la
+    <lb/>mention ci-après, qui se lit au verso du fol. 20,
+    <lb/>et qui remonte au XIIe siècle : Hic est liber sancti
+    <lb/>Benedicti Floriacensis, quem si quis furatus fuerit,
+    <lb/>vel aliquo ingenio tulerit, anathema sit. De la même
+    <lb/>main, à ce qu'il semble, a été écrit plus bas ce
+    <lb/>vers singulier :
+</p>
+                
+<p>
+    <lb/>Sepe comesta bovis caro plus placet, auget amorem.
+</p>
+                
+<p>
+    <lb/>Le manuscrit est de ceux qui, pour un temps,
+    <lb/>ont appartenu à la France ; on y voit le timbre
+    <lb/>de la bibliothèque nationale à côté de celui de
+    <lb/>la bibliothèque apostolique. Il contient :
+</p>
+                
+<p>
+    <lb/>1° (Du fol. 1 au fol. 16 v°). Tractatus magistri
+    <lb/>Guidonis Augensis super musica. - XIIe siècle.
+</p>
+                
+<p>
+    <lb/>2° (Fol. 17 et 18r°). Sept fables de Phè<lb rend="hyphen" break="no" 
+      />dre (1). - XIe siècle.
+</p>
+                
+<p>
+    <lb/>3° (Fol. 18 v° et 19 r°). Oratio sancta. - XIIe
+    <lb/>siècle. - Incipit :
+</p>
+                
+<q rend="block">
+    <lb/>O mi custos, o mi heros, mi pater misericors.
+</q>
+                
+<p>
+    <lb/>4° (Fol. 19 et 20). Kurie eleison. Grec et latin
+    <lb/>interlinéaire. Le grec est écrit en caractères ro<lb rend="hyphen" break="no" 
+      />mains : Olin tin imeran (tota die) - tin suchim
+</p>
+                
+<!-- VOILÀ CE QUE JE DISAIS Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->                  
+                
+<p>
+    <lb/>1. De bove et asino. - Cervus ad fontem laudat cornua.<lb rend="hyphen" break="no" 
+      />Vulpis ad corvum. - Canis ad ovem, lupus testis. - Mulier
+    <lb/>parturiens ad virum. - Canis parturiens ad alteram. - Leo
+    <lb/>deficiens, aper, taurus, asellus. - C'est le manuscrit de P.
+    <lb/>Daniel.
+    
 <pb n="0202" facs="facsimile/0202.bin.png"/>
+</p>
+                
 <!-- <lb/>xij
 --><!-- <lb/>PRÉFACE.-->
-<lb/>(animam) - tin proseuchin (orationem) - ké
-<lb/>(et) - simion (signum). - XIIe siècle.
-<lb/>5° (Du fol. 21 au fol. 92). Le roman de Fier<lb rend="hyphen" break="no"/>abras, en vers françois, incomplet ; manuscrit
-<lb/>daté de l'année 1318.
-<lb/>6° (Du fol. 93 au fol. 102 v°, et du fol. 109
-<lb/>au fol. 124 et dernier). Le roman d'Otinel. <lb rend="hyphen" break="no"/>XIVe siècle.
-<lb/>Ce poëme est incomplet. On y remarque une
-<lb/>première lacune dès le début, au fol. 93 v° du
-<lb/>manuscrit. Une seconde lacune, plus considéra<lb rend="hyphen" break="no"/>ble, s'ouvre au fol. 103. Ce feuillet et les sui<lb rend="hyphen" break="no"/>vants, jusques et y compris le feuillet 108, ap<lb rend="hyphen" break="no"/>partiennent au roman de Fierabras et ont été
-<lb/>reliés par erreur avec le roman d'Otinel.
-<lb/>Le manuscrit de Middlehill est inscrit sous le
-<lb/>n° 8345 au catalogue de la bibliothèque de sir
-<lb/>Thomas Phillipps (1). C'est un petit in-folio, vé<lb rend="hyphen" break="no"/>lin à deux colonnes, d'une écriture du XIVe siè<lb rend="hyphen" break="no"/>cle, intitulé au dos : Ancient mss. in french. La
-<lb/>chanson d'Otinel y occupe les feuillets 210 à
-<lb/>221. Sir Thomas Phillipps a bien voulu permet<lb rend="hyphen" break="no"/>tre qu'on en prît une copie, qui a été faite par
-<lb/>M. le docteur Ch. Sachs, jeune savant allemand,
-<lb/>chargé naguère par M. H. Fortoul d'une mission
-<lb/>en Angleterre.
-<lb/>Ce manuscrit est complet, mais parfois si in<lb rend="hyphen" break="no"/>correct que nous avons dû renoncer à le pu<lb rend="hyphen" break="no"/>1. Catalogus librorum mss. in bibliotheca D. Thomæ Phil<lb rend="hyphen" break="no"/>lipps, Bart. A. D. 1837. Impressus typis Mediomontanis,
-<lb/>mense maio 1837.
+                
+<!-- VOILÀ CE QUE JE DISAIS Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->                  
+                
+<p>
+    <lb/>(animam) - tin proseuchin (orationem) - ké
+    <lb/>(et) - simion (signum). - XIIe siècle.
+</p>
+                
+<p>
+    <lb/>5° (Du fol. 21 au fol. 92). Le roman de Fier<lb rend="hyphen" break="no" 
+      />abras, en vers françois, incomplet ; manuscrit
+    <lb/>daté de l'année 1318.
+</p>
+                
+<p>
+    <lb/>6° (Du fol. 93 au fol. 102 v°, et du fol. 109
+    <lb/>au fol. 124 et dernier). Le roman d'Otinel.<lb rend="hyphen" break="no" 
+      />XIVe siècle.
+</p>
+                
+<p>
+    <lb/>Ce poëme est incomplet. On y remarque une
+    <lb/>première lacune dès le début, au fol. 93 v° du
+    <lb/>manuscrit. Une seconde lacune, plus considéra<lb rend="hyphen" break="no" 
+      />ble, s'ouvre au fol. 103. Ce feuillet et les sui<lb rend="hyphen" break="no" 
+      />vants, jusques et y compris le feuillet 108, ap<lb rend="hyphen" break="no" 
+      />partiennent au roman de Fierabras et ont été
+    <lb/>reliés par erreur avec le roman d'Otinel.
+</p>
+                
+<p>
+    <lb/>Le manuscrit de Middlehill est inscrit sous le
+    <lb/>n° 8345 au catalogue de la bibliothèque de sir
+    <lb/>Thomas Phillipps (1). C'est un petit in-folio, vé<lb rend="hyphen" break="no" 
+      />lin à deux colonnes, d'une écriture du XIVe siè<lb rend="hyphen" break="no" 
+      />cle, intitulé au dos : Ancient mss. in french. La
+    <lb/>chanson d'Otinel y occupe les feuillets 210 à
+    <lb/>221. Sir Thomas Phillipps a bien voulu permet<lb rend="hyphen" break="no" 
+      />tre qu'on en prît une copie, qui a été faite par
+    <lb/>M. le docteur Ch. Sachs, jeune savant allemand,
+    <lb/>chargé naguère par M. H. Fortoul d'une mission
+    <lb/>en Angleterre.
+</p>
+                
+<p>
+    <lb/>Ce manuscrit est complet, mais parfois si in<lb rend="hyphen" break="no" 
+      />correct que nous avons dû renoncer à le pu<lb rend="hyphen" break="no" 
+      />
+</p>
+                
+<!-- VOILÀ CE QUE JE DISAIS Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->                  
+                
+<p>
+    <lb/>1. Catalogus librorum mss. in bibliotheca D. Thomæ Phil<lb rend="hyphen" break="no" 
+      />lipps, Bart. A. D. 1837. Impressus typis Mediomontanis,
+    <lb/>mense maio 1837.
+    
 <pb n="0203" facs="facsimile/0203.bin.png"/>
+</p>
+                
 <!-- <lb/>PRÉFACE.-->
-<!-- <lb/>xiij
---><lb/>blier en entier. Nous nous en sommes aidés seu<lb rend="hyphen" break="no"/>lement pour remplir les lacunes du manuscrit de
-<lb/>Rome et pour en corriger le texte, qui n'est pas
-<lb/>non plus très pur, mais qui, à tout prendre, est
-<lb/>encore préférable à celui du manuscrit de Midd<lb rend="hyphen" break="no"/>lehill. Ce mélange de textes écrits dans des dia<lb rend="hyphen" break="no"/>lectes différents offre sans doute une fâcheuse bi<lb rend="hyphen" break="no"/>garrure ; mais de deux inconvénients nous avons
-<lb/>choisi le moindre, en l'atténuant singulièrement
-<lb/>par l'indication précise des points où commen<lb rend="hyphen" break="no"/>cent et finissent les morceaux de rapport. On
-<lb/>trouvera cette indication aux Notes et variantes.
-<lb/>Nous désignons par a le manuscrit de Rome,
-<lb/>par b celui de Middlehill.</div>
+<!-- <lb/>xiij-->
+<!-- VOILÀ CE QUE JE DISAIS Comment signaler que le paragrapgh se ferme à la page suivante et que le texte qui suit c'est une note de bas de page? -->      
+                
+<p>
+    <lb/>blier en entier. Nous nous en sommes aidés seu<lb rend="hyphen" break="no" 
+      />lement pour remplir les lacunes du manuscrit de
+    <lb/>Rome et pour en corriger le texte, qui n'est pas
+    <lb/>non plus très pur, mais qui, à tout prendre, est
+    <lb/>encore préférable à celui du manuscrit de Midd<lb rend="hyphen" break="no" 
+      />lehill. Ce mélange de textes écrits dans des dia<lb rend="hyphen" break="no" 
+      />lectes différents offre sans doute une fâcheuse bi<lb rend="hyphen" break="no" 
+      />garrure ; mais de deux inconvénients nous avons
+    <lb/>choisi le moindre, en l'atténuant singulièrement
+    <lb/>par l'indication précise des points où commen<lb rend="hyphen" break="no" 
+      />cent et finissent les morceaux de rapport. On
+    <lb/>trouvera cette indication aux Notes et variantes.
+</p>
+                
+<p>
+    <lb/>Nous désignons par a le manuscrit de Rome,
+    <lb/>par b celui de Middlehill.
+</p>
+            </div>
 
-<div type="sommaire"><!-- <lb/>SOMMAIRE-->.
+            <div type="sommaire">
+                
+<!-- <lb/>SOMMAIRE-->
+                
     <pb n="0205" facs="facsimile/0205.bin.png"/>
+                
     <list>
+        
     <!--<lb/>XV-->
+        
     <item>
-<lb/>Cette chanson est la fleur de la geste du fils
-<lb/>de Pepin et des douze pairs. Les jon<lb rend="hyphen" break="no"/>gleurs n'ont pas épuisé la matière ; ils igno<lb rend="hyphen" break="no"/>rent une grande expédition qui donna fort
-<lb/>à faire à Charlemagne. P. 1-2</item> 
-        <item>C'étoit à Pâ<lb rend="hyphen" break="no"/>ques<note>
-            <lb/>1. C'étoit le jour des SS. Innocents (28 déc.), d'après le
-            <lb/>ms. b. Voyez ci-après p. 76, aux Notes et Variantes.</note>; le roi tenoit cour plénière à Paris, entouré
-<lb/>des douze compagnons et d'une foule de princes, de
-<lb/>comtes, de barons et de chevaliers. Il étoit question
-<lb/>de retourner en Espagne pour y combattre le roi
-<lb/>Garsile (2), lorsqu'un messager arrive à Paris, vient
-<lb/>au palais, demande Charlemagne</item> 
- <item>« D'où êtes<lb rend="hyphen" break="no"/>vous ? qui êtes-vous ? lui dit Ogier, auquel il s'a<lb rend="hyphen" break="no"/>dresse</item> 
- <item>On m'appelle Otinel, répond le messager,
-<lb/>je suis d'Espagne, et c'est le puissant roi Garsile qui
-<lb/>m'envoie à Charles le felon</item> 
- <item>Le voilà, continue
-<lb/>Ogier ; voilà aussi son neveu Roland et le comte Oli<lb rend="hyphen" break="no"/>vier. » P. 2-3. -Le Sarrasin s'emporte en invectives,
-<lb/>auxquelles réplique Ogier, puis il s'avance vers le roi.
-<lb/>- « Je ne te salue pas, fait-il, parce que je ne le dois
-<lb/>point. Que Mahomet te confonde, toi et les tiens ! » <lb rend="hyphen" break="no"/>II poursutt sur ce ton ; mais Roland se rit de son
+        <lb/>Cette chanson est la fleur de la geste du fils
+        <lb/>de Pepin et des douze pairs. Les jon<lb rend="hyphen" break="no" 
+          />gleurs n'ont pas épuisé la matière ; ils igno<lb rend="hyphen" break="no" 
+          />rent une grande expédition qui donna fort
+        <lb/>à faire à Charlemagne. P. 1-2
+    </item> 
+        
+    <item>
+         <lb/>C'étoit à Pâ<lb rend="hyphen" break="no"/>ques<note>
+                 <lb/>1. C'étoit le jour des SS. Innocents (28 déc.), d'après le
+                 <lb/>ms. b. Voyez ci-après p. 76, aux Notes et Variantes.
+            </note>
+         <lb/>; le roi tenoit cour plénière à Paris, entouré
+         <lb/>des douze compagnons et d'une foule de princes, de
+         <lb/>comtes, de barons et de chevaliers. Il étoit question
+         <lb/>de retourner en Espagne pour y combattre le roi
+         <lb/>Garsile (2), lorsqu'un messager arrive à Paris, vient
+         <lb/>au palais, demande Charlemagne
+     </item> 
+        
+     <item>
+         <lb/>« D'où êtes<lb rend="hyphen" break="no" 
+           />vous ? qui êtes-vous ? lui dit Ogier, auquel il s'a<lb rend="hyphen" break="no"
+         />dresse
+     </item>  
+        
+     <item>
+         <lb/>On m'appelle Otinel, répond le messager,
+         <lb/>je suis d'Espagne, et c'est le puissant roi Garsile qui
+         <lb/>m'envoie à Charles le felon
+     </item> 
+        
+     <item>
+         <lb/>Le voilà, continue
+         <lb/>Ogier ; voilà aussi son neveu Roland et le comte Oli<lb rend="hyphen" break="no" 
+           />vier. » P. 2-3. -Le Sarrasin s'emporte en invectives,
+         <lb/>auxquelles réplique Ogier, puis il s'avance vers le roi.
+         <lb/>- « Je ne te salue pas, fait-il, parce que je ne le dois
+         <lb/>point. Que Mahomet te confonde, toi et les tiens ! »<lb rend="hyphen" break="no" 
+           />II poursutt sur ce ton ; mais Roland se rit de son
 
-<lb/>2. Marsile dans le ms. b. Voyez même page.
+         <lb/>2. Marsile dans le ms. b. Voyez même page.
+         
 <pb n="0206" facs="facsimile/0206.bin.png"/>
+         
 <!-- <lb/>xvj
 --><!-- <lb/>SOMMAIRE-->.
-<lb/>insolence et de ses menaces. Il l'assure qu'il peut
-<lb/>continuer sans rien craindre, et le roi confirme cette
-<lb/>assurance pour huit jours. </item> 
- <item>Je ne crains rien de
-<lb/>personne, reprend Otinel, tant que j'aurai Courrou<lb rend="hyphen" break="no"/>ceuse à mon côté, cette epée qui a tranché la tête à
-<lb/>mille François, il y a moins de neuf mois</item> 
- <item>Et où
-<lb/>donc, frère ? demande le roi</item> 
- <item>Vous ne le saurez que
-<lb/>trop », réplique le païen ; puis il annonce à Charlema<lb rend="hyphen" break="no"/>gne que Rome, sa puissante cité, a été détruite par le
-<lb/>roi Garsile, et que plus de vingt mille hommes y ont
-<lb/>péri sous les coups des Sarrasins. Quant à lui, il a si bien
-<lb/>frappé de son épée qu'il en a eu pour huit jours les
-<lb/>poings enflés. P. 3-4</item> 
- <item>A cette nouvelle, l'assistance
-<lb/>se soulève ; Estout de Langres menace le messager ;
-<lb/>Roland rappelle qu'il est inviolable ; mais un Provençal
-<lb/>mal avisé surprend Otinel par derrière et le renverse.
-<lb/>Le Sarrasin se relève et lui tranche la tête</item> 
- <item>Grand
-<lb/>tumulte dans l'assemblée</item> 
- <item>Otinel est contraint de
-<lb/>remettre son épée à Roland pour éviter quelque nou<lb rend="hyphen" break="no"/>veau malheur</item> 
- <item>« Exposez votre message, et ensuite
-<lb/>allez-vous en », lui dit le neveu de Charlemagne.
-<lb/>P. 4-6</item> 
- <item>« Charles, fait Otinel, voici ce que te
-<lb/>mande mon seigneur : Abandonne la foi chrétienne,
-<lb/>crois à Mahomet et deviens son homme, toi et tous
-<lb/>les tiens, puis viens t'en au puissant roi Garsile ; il te
-<lb/>donnera avoir et richesses, te laissera la Normandie
-<lb/>et l'Angleterre, donnera la Russie à ton neveu Ro<lb rend="hyphen" break="no"/>land, l'Esclavonie à Olivier ; mais, pour la France,
-<lb/>elle est donnée à Floriant de Syrie : c'est lui qui en
-<lb/>mande Charlemagne à ses barons</item> 
- <item>Il n'en sera pas
-<lb/>sera le maître et seigneur</item> 
- <item>Qu'en dites-vous ? de<lb rend="hyphen" break="no"/>ainsi, s'écrient-ils. Guide-nous, grand empereur,
-<lb/>jusqu'à ce que nous trouvions cette maudite engeance,
-<lb/>et malheur au roi Garsile si nous le rencontrons en ba<lb rend="hyphen" break="no"/>taille. </item> 
- <item>Réponse dédaigneuse d'Otinel</item> 
- <item>Le duc
-<lb/>Naimes l'interroge : « Si Charles assemble son ost, où
-<lb/>pourra-t-il trouver le roi Garsile </item> 
- <item>Quelle folie ! dit
-<lb/>le Sarrasin. Si vous venez là, vous y périrez tous. Les
+         
+         <lb/>insolence et de ses menaces. Il l'assure qu'il peut
+         <lb/>continuer sans rien craindre, et le roi confirme cette
+         <lb/>assurance pour huit jours. 
+     </item> 
+        
+     <item>
+         <lb/>Je ne crains rien de
+         <lb/>personne, reprend Otinel, tant que j'aurai Courrou<lb rend="hyphen" break="no" 
+           />ceuse à mon côté, cette epée qui a tranché la tête à
+         <lb/>mille François, il y a moins de neuf mois
+     </item> 
+        
+     <item>
+         <lb/>Et où
+         <lb/>donc, frère ? demande le roi
+     </item> 
+        
+     <item>
+         <lb/>Vous ne le saurez que
+         <lb/>trop », réplique le païen ; puis il annonce à Charlema<lb rend="hyphen" break="no" 
+           />gne que Rome, sa puissante cité, a été détruite par le
+         <lb/>roi Garsile, et que plus de vingt mille hommes y ont
+         <lb/>péri sous les coups des Sarrasins. Quant à lui, il a si bien
+         <lb/>frappé de son épée qu'il en a eu pour huit jours les
+         <lb/>poings enflés. P. 3-4
+     </item> 
+        
+     <item>
+         <lb/>A cette nouvelle, l'assistance
+         <lb/>se soulève ; Estout de Langres menace le messager ;
+         <lb/>Roland rappelle qu'il est inviolable ; mais un Provençal
+         <lb/>mal avisé surprend Otinel par derrière et le renverse.
+         <lb/>Le Sarrasin se relève et lui tranche la tête
+     </item> 
+        
+     <item>
+         <lb/>Grand
+         <lb/>tumulte dans l'assemblée
+     </item> 
+        
+     <item>
+         <lb/>Otinel est contraint de
+         <lb/>remettre son épée à Roland pour éviter quelque nou<lb rend="hyphen" break="no" 
+           />veau malheur
+     </item> 
+        
+     <item>
+         <lb/>« Exposez votre message, et ensuite
+         <lb/>allez-vous en », lui dit le neveu de Charlemagne.
+         <lb/>P. 4-6
+     </item> 
+        
+     <item>
+         <lb/>« Charles, fait Otinel, voici ce que te
+         <lb/>mande mon seigneur : Abandonne la foi chrétienne,
+         <lb/>crois à Mahomet et deviens son homme, toi et tous
+         <lb/>les tiens, puis viens t'en au puissant roi Garsile ; il te
+         <lb/>donnera avoir et richesses, te laissera la Normandie
+         <lb/>et l'Angleterre, donnera la Russie à ton neveu Ro<lb rend="hyphen" break="no" 
+           />land, l'Esclavonie à Olivier ; mais, pour la France,
+         <lb/>elle est donnée à Floriant de Syrie : c'est lui qui en
+         <lb/>mande Charlemagne à ses barons
+     </item> 
+        
+     <item>
+         <lb/>Il n'en sera pas
+         <lb/>sera le maître et seigneur
+     </item> 
+        
+     <item>
+         <lb/>Qu'en dites-vous ? de<lb rend="hyphen" break="no" 
+           />ainsi, s'écrient-ils. Guide-nous, grand empereur,
+         <lb/>jusqu'à ce que nous trouvions cette maudite engeance,
+         <lb/>et malheur au roi Garsile si nous le rencontrons en ba<lb rend="hyphen" break="no" 
+           />taille.
+     </item> 
+        
+     <item>
+         <lb/>Réponse dédaigneuse d'Otinel
+     </item> 
+        
+     <item>
+         <lb/>Le duc
+         <lb/>Naimes l'interroge : « Si Charles assemble son ost, où
+         <lb/>pourra-t-il trouver le roi Garsile
+     </item> 
+        
+     <item>
+         <lb/>Quelle folie ! dit
+         <lb/>le Sarrasin. Si vous venez là, vous y périrez tous. Les
+         
 <pb n="0207" facs="facsimile/0207.bin.png"/>
+         
 <!-- <lb/>SOMMAIRE-->.
-<!-- <lb/>xvij
---><lb/>païens sont plus de trois cent mille ; ils ont en Lom<lb rend="hyphen" break="no"/>bardie une cité qu'on appelle Atilie, construite et for<lb rend="hyphen" break="no"/>tifiée entre deux cours d'eau. Dieu ne créa personne
-<lb/>capable de la leur enlever. Si Charles y vient avec son
-<lb/>ost, on verra aux coups d'épée qui a belle amie ;
-<lb/>mais vous n'y viendrez pas, vieillard, si vous m'en
-<lb/>croyez ; vous ne romprez plus de lances, vous ne par
-<lb/>tirez plus de boucliers ; jamais pucelle n'aura envie
-<lb/>de vous : restez chez vous, et gardez qu'il n'y entre
-<lb/>escoufle, corneille ni pie. » P. 6-8</item> 
- <item>Fureur du duc
-<lb/>Naimes à ces paroles ; il se tire la barbe si fort que tout
-<lb/>son front en rougit</item> 
- <item>« Tu ne t'en retournerois pas,
-<lb/>dit Roland, et tu mourrois aujourd'hui de ma main,
-<lb/>n'étoit l'assurance que je t'ai donnée</item> 
- <item>Sans doute,
-<lb/>dit Otinel. Eh bien donc, allons sur le pré demain ma<lb rend="hyphen" break="no"/>tin, seul à seul. </item> 
- <item>Roland accepte le défi ; les deux ad<lb rend="hyphen" break="no"/>versaires échangent leurs paroles et s'assurent mutuel<lb rend="hyphen" break="no"/>lement. P. 8-9</item> 
- <item>Charlemagne veut savoir de quel
-<lb/>lignage est Otinel</item> 
- <item>« Sire, répond-il, je suis le fils du
-<lb/>roi Galien : toute la Marche est à moi. Le roi Gar<lb rend="hyphen" break="no"/>sile est mon cousin germain, et le noble Ferragus,
-<lb/>que Roland m'a tué, étoit mon oncle. C'est une af<lb rend="hyphen" break="no"/>faire qui se videra demain</item> 
- <item>Tu es assez gentil (no<lb rend="hyphen" break="no"/>ble), repart le roi ; il est malheureux que tu ne sois
-<lb/>point baptisé</item> 
- <item>Ce seroit une honte pour moi, dit le
-<lb/>Sarrasin ; car votre Dieu ne vaut pas deux parisis. »
-<lb/>Charlemagne donne l'ordre au chambellan Renier
-<lb/>de conduire Otinel à la maison Garnier (1), et de donner
-<lb/>cent sous à l'hôte pour son manger. Il le recom<lb rend="hyphen" break="no"/>mande, en outre, aux soins du duc Naimes et d'Ogier
-<lb/>le Danois. P. 9-10</item> 
- <item>Souper de l'empereur</item> 
- <item>Le
-<lb/>lendemain, il assiste à la messe, qui est chantée par
-<lb/>l'abbé de Saint-Omer</item> 
- <item>Offrande : Charles donne
-<lb/>un hanap d'or rempli de parisis ; Roland offre son
-<lb/>épée Durandal, qu'il rachète au prix de dix marcs.
-<lb/>- Le Sarrasin vient, après la messe, pour sommer
-<lb/>1. Quelque grande hôtellerie de Paris.
-<lb/>Otinel.
+<!-- <lb/>xvij-->
+         
+         <lb/>païens sont plus de trois cent mille ; ils ont en Lom<lb rend="hyphen" break="no" 
+           />bardie une cité qu'on appelle Atilie, construite et for<lb rend="hyphen" break="no" 
+           />tifiée entre deux cours d'eau. Dieu ne créa personne
+         <lb/>capable de la leur enlever. Si Charles y vient avec son
+         <lb/>ost, on verra aux coups d'épée qui a belle amie ;
+         <lb/>mais vous n'y viendrez pas, vieillard, si vous m'en
+         <lb/>croyez ; vous ne romprez plus de lances, vous ne par
+         <lb/>tirez plus de boucliers ; jamais pucelle n'aura envie
+         <lb/>de vous : restez chez vous, et gardez qu'il n'y entre
+         <lb/>escoufle, corneille ni pie. » P. 6-8
+     </item> 
+        
+     <item>
+         <lb/>Fureur du duc
+         <lb/>Naimes à ces paroles ; il se tire la barbe si fort que tout
+         <lb/>son front en rougit
+     </item> 
+        
+     <item>
+         <lb/>« Tu ne t'en retournerois pas,
+         <lb/>dit Roland, et tu mourrois aujourd'hui de ma main,
+         <lb/>n'étoit l'assurance que je t'ai donnée
+     </item> 
+        
+     <item>
+         <lb/>Sans doute,
+         <lb/>dit Otinel. Eh bien donc, allons sur le pré demain ma<lb rend="hyphen" break="no" 
+           />tin, seul à seul.
+     </item> 
+        
+     <item>
+         <lb/>Roland accepte le défi ; les deux ad<lb rend="hyphen" break="no" 
+           />versaires échangent leurs paroles et s'assurent mutuel<lb rend="hyphen" break="no" 
+           />lement. P. 8-9
+     </item> 
+        
+     <item>
+         <lb/>Charlemagne veut savoir de quel
+         <lb/>lignage est Otinel
+     </item> 
+        
+     <item>
+         <lb/>« Sire, répond-il, je suis le fils du
+         <lb/>roi Galien : toute la Marche est à moi. Le roi Gar<lb rend="hyphen" break="no" 
+           />sile est mon cousin germain, et le noble Ferragus,
+         <lb/>que Roland m'a tué, étoit mon oncle. C'est une af<lb rend="hyphen" break="no" 
+           />faire qui se videra demain
+     </item> 
+        
+     <item>
+         <lb/>Tu es assez gentil (no<lb rend="hyphen" break="no" 
+           />ble), repart le roi ; il est malheureux que tu ne sois
+         <lb/>point baptisé
+     </item> 
+        
+     <item>
+         <lb/>Ce seroit une honte pour moi, dit le
+         <lb/>Sarrasin ; car votre Dieu ne vaut pas deux parisis. »
+         <lb/>Charlemagne donne l'ordre au chambellan Renier
+         <lb/>de conduire Otinel à la maison Garnier (1), et de donner
+         <lb/>cent sous à l'hôte pour son manger. Il le recom<lb rend="hyphen" break="no" 
+           />mande, en outre, aux soins du duc Naimes et d'Ogier
+         <lb/>le Danois. P. 9-10
+     </item> 
+        
+     <item>
+         <lb/>Souper de l'empereur
+     </item> 
+        
+     <item>
+         <lb/>Le
+         <lb/>lendemain, il assiste à la messe, qui est chantée par
+         <lb/>l'abbé de Saint-Omer
+     </item> 
+        
+     <item>
+         <lb/>Offrande : Charles donne
+         <lb/>un hanap d'or rempli de parisis ; Roland offre son
+         <lb/>épée Durandal, qu'il rachète au prix de dix marcs.
+         <lb/>- Le Sarrasin vient, après la messe, pour sommer
+         <lb/>1. Quelque grande hôtellerie de Paris.
+         <lb/>Otinel.
+         
 <pb n="0208" facs="facsimile/0208.bin.png"/>
+         
 <!-- <lb/>xviij
 --><!-- <lb/>SOMMAIRE-->.
-<lb/>Roland de sa parole</item> 
- <item>Préparatifs du combat. <lb rend="hyphen" break="no"/>Roland est armé par les douze pairs</item> 
- <item>Description
-<lb/>de son armure. P. 10-1I</item> 
- <item>Son coursier Blan<lb rend="hyphen" break="no"/>chard</item> 
- <item>Il prend congé de Charlemagne pour com<lb rend="hyphen" break="no"/>battre le Sarrasin</item> 
- <item>Charlemagne le recommande
-<lb/>à Dieu et lui donne sa bénédiction</item> 
- <item>Otinel de<lb rend="hyphen" break="no"/>mande au roi un haubert, un écu, un heaume et un
-<lb/>épieu ; pour un destrier, il en a un, le meilleur qui se
-<lb/>puisse voir, et le tranchant de son épée taille bien.
-<lb/>- C'est à sa fille Belisent que Charlemagne confie le
-<lb/>soin d'armer le Sarrasin. Elle s'en acquitte de la
-<lb/>meilleure grâce du monde, avec l'aide de deux de ses
-<lb/>damoiselles : Flandrine de Montbel et Rosette de
-<lb/>Ruissel</item> 
- <item>Description de l'armure d'Otine</item> 
- <item>Son
-<lb/>coursier Migrados</item> 
- <item>Otinel demande à Belisent son
-<lb/>congé. Elle l'engage à se bien garder de Durandal.
-<lb/>P. 12-14</item> 
- <item>Les deux adversaires sont mis en présence.
-<lb/>- Charlemagne, accoudé à sa grande fenêtre, donne
-<lb/>le signal du combat</item> 
- <item>Roland et Otinel se défient et
-<lb/>en viennent aux prises</item> 
- <item>Récit du combat</item> 
- <item>Après
-<lb/>de grands coups de lances et d'épées, chacun des deux
-<lb/>adversaires a son cheval tué sous lui. P. 14-17. <lb rend="hyphen" break="no"/>Au plus fort de la lutte, Charlemagne s'agenouille, et,
-<lb/>tourné vers l'orient, adresse à Dieu une fervente
-<lb/>prière en faveur de Roland</item> 
- <item>Le neveu de Charle<lb rend="hyphen" break="no"/>magne, de son côté, conjure son adversaire d'aban<lb rend="hyphen" break="no"/>donner Mahomet pour croire en Jésus-Christ ; s'il y
-<lb/>consent, il aura pour récompense Belisent, la fille du
-<lb/>roi Charles, la cousine germaine de Roland</item> 
- <item>Sur
-<lb/>quoi il est raillé par Otinel : c'est un méchant clerc,
-<lb/>qui vient de manquer son premier sermon et qui ne
-<lb/>sait pas lire sa leçon. Otinel la lui apprendra</item> 
- <item>Le
-<lb/>combat, un moment interrompu, recommence plus ter<lb rend="hyphen" break="no"/>rible. P. 17-19</item> 
- <item>Prière des François, qui sont in<lb rend="hyphen" break="no"/>quiets du sort de Roland</item> 
- <item>Leur vœu est exaucé : le
-<lb/>Saint-Esprit, sous la forme d'une colombe, descend
-<lb/>sur Otinel et le convertit</item> 
- <item>Le Sarrasin renie ses
-<lb/>dieux, qui ne valent pas la couture d'un gant, et em-
+         
+         <lb/>Roland de sa parole
+     </item> 
+        
+     <item>
+         <lb/>Préparatifs du combat.<lb rend="hyphen" break="no" 
+           />Roland est armé par les douze pairs
+     </item> 
+        
+     <item>Description
+         <lb/>de son armure. P. 10-1I
+     </item> 
+        
+     <item>
+         <lb/>Son coursier Blan<lb rend="hyphen" break="no" 
+           />chard
+     </item> 
+        
+     <item>
+         <lb/>Il prend congé de Charlemagne pour com<lb rend="hyphen" break="no" 
+           />battre le Sarrasin
+     </item> 
+        
+     <item>
+         <lb/>Charlemagne le recommande
+         <lb/>à Dieu et lui donne sa bénédiction
+     </item> 
+        
+     <item>
+         <lb/>Otinel de<lb rend="hyphen" break="no" 
+           />mande au roi un haubert, un écu, un heaume et un
+         <lb/>épieu ; pour un destrier, il en a un, le meilleur qui se
+         <lb/>puisse voir, et le tranchant de son épée taille bien.
+         <lb/>- C'est à sa fille Belisent que Charlemagne confie le
+         <lb/>soin d'armer le Sarrasin. Elle s'en acquitte de la
+         <lb/>meilleure grâce du monde, avec l'aide de deux de ses
+         <lb/>damoiselles : Flandrine de Montbel et Rosette de
+         <lb/>Ruissel
+     </item> 
+        
+     <item>
+     <lb/>Description de l'armure d'Otine
+     </item> 
+        
+     <item>
+         <lb/>Son
+         <lb/>coursier Migrados
+     </item> 
+        
+     <item>
+         <lb/>Otinel demande à Belisent son
+         <lb/>congé. Elle l'engage à se bien garder de Durandal.
+         <lb/>P. 12-14
+     </item> 
+        
+     <item>
+         <lb/>Les deux adversaires sont mis en présence.
+         <lb/>- Charlemagne, accoudé à sa grande fenêtre, donne
+         <lb/>le signal du combat
+     </item> 
+        
+     <item>
+         <lb/>Roland et Otinel se défient et
+         <lb/>en viennent aux prises
+     </item> 
+        
+     <item>
+         <lb/>Récit du combat
+     </item> 
+        
+     <item>
+         <lb/>Après
+         <lb/>de grands coups de lances et d'épées, chacun des deux
+         <lb/>adversaires a son cheval tué sous lui. P. 14-17.<lb rend="hyphen" break="no" 
+           />Au plus fort de la lutte, Charlemagne s'agenouille, et,
+         <lb/>tourné vers l'orient, adresse à Dieu une fervente
+         <lb/>prière en faveur de Roland
+     </item> 
+        
+     <item>
+         <lb/>Le neveu de Charle<lb rend="hyphen" break="no" 
+           />magne, de son côté, conjure son adversaire d'aban<lb rend="hyphen" break="no" 
+           />donner Mahomet pour croire en Jésus-Christ ; s'il y
+         <lb/>consent, il aura pour récompense Belisent, la fille du
+         <lb/>roi Charles, la cousine germaine de Roland
+     </item> 
+        
+     <item>
+         <lb/>Sur
+         <lb/>quoi il est raillé par Otinel : c'est un méchant clerc,
+         <lb/>qui vient de manquer son premier sermon et qui ne
+         <lb/>sait pas lire sa leçon. Otinel la lui apprendra
+     </item> 
+        
+     <item>
+         <lb/>Le
+         <lb/>combat, un moment interrompu, recommence plus ter<lb rend="hyphen" break="no" 
+           />rible. P. 17-19
+     </item> 
+        
+     <item>
+         <lb/>Prière des François, qui sont in<lb rend="hyphen" break="no" 
+           />quiets du sort de Roland
+     </item> 
+        
+     <item>
+         <lb/>Leur vœu est exaucé : le
+         <lb/>Saint-Esprit, sous la forme d'une colombe, descend
+         <lb/>sur Otinel et le convertit
+     </item> 
+        
+     <item>
+         <lb/>Le Sarrasin renie ses
+         <lb/>dieux, qui ne valent pas la couture d'un gant, et em
+         -
 <pb n="0209" facs="facsimile/0209.bin.png"/>
+         
 <!-- <lb/>SOMMAIRE-->.
-<!-- <lb/>xix
---><lb/>brasse la foi chrétienne</item> 
- <item>Les deux adversaires tom<lb rend="hyphen" break="no"/>bent dans les bras l'un de l'autre, à la grande joie de
-<lb/>Charlemagne et de ses barons. P. 20-21</item> 
- <item>Roland
-<lb/>demande au roi sa fille Belisent pour Otinel</item> 
- <item>Con<lb rend="hyphen" break="no"/>sentement empressé du roi</item> 
- <item>Baptême d'Otinel par
-<lb/>l'archevêque Turpin. C'est Charlemagne qui est son
-<lb/>parrain. P. 22</item> 
- <item>Survient Belisent, fraîche et ver<lb rend="hyphen" break="no"/>meille comme une rose en fleur. « Fille, lui dit Charles,
-<lb/>qui vous auroit une nuit dans ses bras sentiroit sa va<lb rend="hyphen" break="no"/>leur doublée, et ne songeroit jamais à couardise. Ainsi
-<lb/>en sera-t-il d'Otinel, si Dieu lui donne vie. </item> 
- <item>Puis
-<lb/>s'adressant à son filleul : « Que Jésus te bénisse ! Main<lb rend="hyphen" break="no"/>tenant que tu as abandonné Mahomet, prends ma
-<lb/>fille, baron ; avec elle tu auras un riche domaine, tu
-<lb/>seras seigneur de toute la Lombardie</item> 
- <item>Sire, je ne
-<lb/>refuse pas, si la pucelle me veut », répond Otinel en
-<lb/>s'inclinan</item> 
- <item>Consentement de Belisent, qui s'estime
-<lb/>heureuse d'avoir un tel mari</item> 
- <item>Otinel la laissera au
-<lb/>pouvoir de son père jusqu'à l'issue de la guerre qui
-<lb/>s'apprête ; les noces se feront sous les murs d'Atilie,
-<lb/>quand il aura tué le roi Garsile. P. 23-24.
-<lb/>Préparatifs de la guerre. Charlemagne tient con<lb rend="hyphen" break="no"/>seil. L'expédition est fixée au mois d'avril suivant (1).
-<lb/>- A cette époque, l'ost s'assemble à Paris</item> 
- <item>Noms
-<lb/>des douze pairs qui s'y trouvent avec l'empereur. <lb rend="hyphen" break="no"/>Énumération par provinces des bandes de guerriers
-<lb/>qui y affluent de tous les points de l'Empire. P. 24<lb rend="hyphen" break="no"/>25</item> 
- <item>Départ</item> 
- <item>Itinéraire de l'armée</item> 
- <item>Arrivée et
-<lb/>campement sur les bords du Ton, en vue d'Atilie. <lb rend="hyphen" break="no"/>Construction d'un pont.
-<lb/>Pendant que l'armée se repose de ses marches,
-<lb/>Roland, Ogier et Olivier s'arment à l'insu de leurs
-<lb/>compagnons, passent le pont et se dirigent vers
-<lb/>Atilie, cherchant occasion de jouter</item> 
- <item>Dans le mê<lb rend="hyphen" break="no"/>1. D'après le ms. de Middlehill, qui donne pour date à
-<lb/>cette résolution le 28 décembre, jour des SS. Innocents, et
-<lb/>non le jour de Pâques, comme le ms. de Rome.
+<!-- <lb/>xix-->
+             
+         <lb/>brasse la foi chrétienne
+     </item> 
+        
+     <item>
+         <lb/>Les deux adversaires tom<lb rend="hyphen" break="no" 
+           />bent dans les bras l'un de l'autre, à la grande joie de
+         <lb/>Charlemagne et de ses barons. P. 20-21
+     </item> 
+        
+     <item>
+         <lb/>Roland
+         <lb/>demande au roi sa fille Belisent pour Otinel
+     </item> 
+        
+     <item>
+         <lb/>Con<lb rend="hyphen" break="no" 
+           />sentement empressé du roi
+     </item> 
+        
+     <item>
+         <lb/>Baptême d'Otinel par
+         <lb/>l'archevêque Turpin. C'est Charlemagne qui est son
+         <lb/>parrain. P. 22
+     </item> 
+        
+     <item>
+         <lb/>Survient Belisent, fraîche et ver<lb rend="hyphen" break="no" 
+           />meille comme une rose en fleur. « Fille, lui dit Charles,
+         <lb/>qui vous auroit une nuit dans ses bras sentiroit sa va<lb rend="hyphen" break="no" 
+           />leur doublée, et ne songeroit jamais à couardise. Ainsi
+         <lb/>en sera-t-il d'Otinel, si Dieu lui donne vie.
+     </item> 
+        
+     <item>
+         <lb/>Puis
+         <lb/>s'adressant à son filleul : « Que Jésus te bénisse ! Main<lb rend="hyphen" break="no" 
+           />tenant que tu as abandonné Mahomet, prends ma
+         <lb/>fille, baron ; avec elle tu auras un riche domaine, tu
+         <lb/>seras seigneur de toute la Lombardie
+     </item> 
+        
+     <item>
+         <lb/>Sire, je ne
+         <lb/>refuse pas, si la pucelle me veut », répond Otinel en
+         <lb/>s'inclinan
+     </item> 
+        
+     <item>
+         <lb/>Consentement de Belisent, qui s'estime
+         <lb/>heureuse d'avoir un tel mari
+     </item> 
+        
+     <item>
+         <lb/>Otinel la laissera au
+         <lb/>pouvoir de son père jusqu'à l'issue de la guerre qui
+         <lb/>s'apprête ; les noces se feront sous les murs d'Atilie,
+         <lb/>quand il aura tué le roi Garsile. P. 23-24.
+         <lb/>Préparatifs de la guerre. Charlemagne tient con<lb rend="hyphen" break="no" 
+           />seil. L'expédition est fixée au mois d'avril suivant (1).
+         <lb/>- A cette époque, l'ost s'assemble à Paris
+     </item> 
+        
+     <item>
+         <lb/>Noms
+         <lb/>des douze pairs qui s'y trouvent avec l'empereur.<lb rend="hyphen" break="no" 
+           />Énumération par provinces des bandes de guerriers
+         <lb/>qui y affluent de tous les points de l'Empire. P. 24<lb rend="hyphen" break="no" 
+           />25
+     </item> 
+        
+    <item>
+        <lb/>Départ
+    </item> 
+        
+     <item>
+         <lb/>Itinéraire de l'armée
+     </item> 
+        
+     <item>
+         <lb/>Arrivée et
+         <lb/>campement sur les bords du Ton, en vue d'Atilie.<lb rend="hyphen" break="no" 
+           />Construction d'un pont.
+         <lb/>Pendant que l'armée se repose de ses marches,
+         <lb/>Roland, Ogier et Olivier s'arment à l'insu de leurs
+         <lb/>compagnons, passent le pont et se dirigent vers
+         <lb/>Atilie, cherchant occasion de jouter
+     </item> 
+        
+     <item>
+         <lb/>Dans le mê<lb rend="hyphen" break="no" 
+           />1. D'après le ms. de Middlehill, qui donne pour date à
+         <lb/>cette résolution le 28 décembre, jour des SS. Innocents, et
+         <lb/>non le jour de Pâques, comme le ms. de Rome.
+         
 <pb n="0210" facs="facsimile/0210.bin.png"/>
+         
 <!-- <lb/>xx
 --><!-- <lb/>SOMMAIRE-->.
-<lb/>me temps, du côté de l'ennemi, quatre rois sarra<lb rend="hyphen" break="no"/>sins, Barsamin, roi de Ninive, Corsabre, Escorfaut
-<lb/>le tyran et Clarel, se sont aussi mis aux champs. P.
-<lb/>26-27</item> 
- <item>Ils chevauchent à plus d'une lieue de la vil<lb rend="hyphen" break="no"/>le, et, la menace à la bouche, s'entretiennent de Ro<lb rend="hyphen" break="no"/>land et d'Olivier</item> 
- <item>L'un d'eux surtout est animé
-<lb/>contre Roland des sentiments les plus hostiles ; il en
-<lb/>a bien sujet : son frère, Sansoigne de Monbrant, a pé<lb rend="hyphen" break="no"/>ri, sous les murs de Pampelune, de la main du redou<lb rend="hyphen" break="no"/>table neveu de Charlemagne. P. 27-28.
-<lb/>François et Sarrasins s'aperçoivent et courent les uns
-<lb/>sur les autres</item> 
- <item>Attaqué par Escorfaut (1), Roland l'a<lb rend="hyphen" break="no"/>bat mort de son destrier</item> 
- <item>Joute de Corsabre et d'O<lb rend="hyphen" break="no"/>gier ; mort de Corsabre</item> 
- <item>Joute d'Olivier et du roi de
-<lb/>Ninive ; mort du roi</item> 
- <item>Clarel, qui survit seul, veut
-<lb/>venger la mort de ses compagnons. Il a affaire suc
-<lb/>cessivement à Ogier et à Roland, puis, après une vi<lb rend="hyphen" break="no"/>goureuse défense, il finit par se rendre. P. 29-31.
-<lb/>- Les trois pairs, emmenant leur prisonnier, vont
-<lb/>donner contre une troupe de quinze cents Sarrasins
-<lb/>qui reviennent de fourrager</item> 
- <item>La rencontre est des
-<lb/>plus périlleuses ; mais elle ne peut s'éviter ; c'est
-<lb/>l'avis de chacun. « Sire Roland, dit Ogier, vous êtes
-<lb/>fort, hardi et redouté ; Olivier est un chevalier éprou<lb rend="hyphen" break="no"/>vé, et pour moi, je me suis tiré de maint pas diffici<lb rend="hyphen" break="no"/>le. Voici les païens : vous ne pouvez reculer ; n'atten<lb rend="hyphen" break="no"/>dez de secours que de vous-mêmes. </item> 
- <item>Et aussitôt,
-<lb/>au cri de Monjoie, s'engage cette lutte si inégale. P.
-<lb/>31-33</item> 
- <item>Roland, Olivier, le Danois, se multiplient,
-<lb/>frappent à coups redoublés et jonchent le sol de
-<lb/>morts</item> 
- <item>Hauteclaire, l'épée d'Olivier, s'est frayé à
-<lb/>travers les païens un tel chemin que quatre chars s'y
-<lb/>pourroient croiser</item> 
- <item>Épisodes divers. Blessé et
-<lb/>renversé deux fois, Ogier est contraint de rendre son
-<lb/>épée au roi Clarel, à celui qu'il emmenoit prisonnier
-<lb/>tout à l'heure. P. 33-35</item> 
- <item>Le captif est livré à huit
-<lb/>1. Ascanart, selon le ms. de Middlehill.
+         
+         <lb/>me temps, du côté de l'ennemi, quatre rois sarra<lb rend="hyphen" break="no" 
+           />sins, Barsamin, roi de Ninive, Corsabre, Escorfaut
+         <lb/>le tyran et Clarel, se sont aussi mis aux champs. P.
+         <lb/>26-27
+     </item> 
+        
+     <item>
+         <lb/>Ils chevauchent à plus d'une lieue de la vil<lb rend="hyphen" break="no" 
+           />le, et, la menace à la bouche, s'entretiennent de Ro<lb rend="hyphen" break="no" 
+           />land et d'Olivier
+     </item> 
+        
+     <item>
+         <lb/>L'un d'eux surtout est animé
+         <lb/>contre Roland des sentiments les plus hostiles ; il en
+         <lb/>a bien sujet : son frère, Sansoigne de Monbrant, a pé<lb rend="hyphen" break="no" 
+           />ri, sous les murs de Pampelune, de la main du redou<lb rend="hyphen" break="no" 
+           />table neveu de Charlemagne. P. 27-28.
+         <lb/>François et Sarrasins s'aperçoivent et courent les uns
+         <lb/>sur les autres
+     </item> 
+        
+     <item>
+         <lb/>Attaqué par Escorfaut (1), Roland l'a<lb rend="hyphen" break="no" 
+           />bat mort de son destrier
+     </item> 
+        
+     <item>
+         <lb/>Joute de Corsabre et d'O<lb rend="hyphen" break="no" 
+           />gier ; mort de Corsabre
+     </item> 
+        
+     <item>
+         <lb/>Joute d'Olivier et du roi de
+         <lb/>Ninive ; mort du roi
+     </item> 
+        
+     <item>
+         <lb/>Clarel, qui survit seul, veut
+         <lb/>venger la mort de ses compagnons. Il a affaire suc
+         <lb/>cessivement à Ogier et à Roland, puis, après une vi<lb rend="hyphen" break="no" 
+           />goureuse défense, il finit par se rendre. P. 29-31.
+         <lb/>- Les trois pairs, emmenant leur prisonnier, vont
+         <lb/>donner contre une troupe de quinze cents Sarrasins
+         <lb/>qui reviennent de fourrager
+     </item> 
+        
+     <item>
+         <lb/>La rencontre est des
+         <lb/>plus périlleuses ; mais elle ne peut s'éviter ; c'est
+         <lb/>l'avis de chacun. « Sire Roland, dit Ogier, vous êtes
+         <lb/>fort, hardi et redouté ; Olivier est un chevalier éprou<lb rend="hyphen" break="no" 
+           />vé, et pour moi, je me suis tiré de maint pas diffici<lb rend="hyphen" break="no" 
+           />le. Voici les païens : vous ne pouvez reculer ; n'atten<lb rend="hyphen" break="no" 
+           />dez de secours que de vous-mêmes. 
+     </item> 
+        
+     <item>
+         <lb/>Et aussitôt,
+         <lb/>au cri de Monjoie, s'engage cette lutte si inégale. P.
+         <lb/>31-33
+     </item> 
+        
+     <item>
+         <lb/>Roland, Olivier, le Danois, se multiplient,
+         <lb/>frappent à coups redoublés et jonchent le sol de
+        <lb/>morts
+     </item> 
+        
+     <item>
+         <lb/>Hauteclaire, l'épée d'Olivier, s'est frayé à
+         <lb/>travers les païens un tel chemin que quatre chars s'y
+         <lb/>pourroient croiser
+     </item> 
+        
+     <item>
+         <lb/>Épisodes divers. Blessé et
+         <lb/>renversé deux fois, Ogier est contraint de rendre son
+         <lb/>épée au roi Clarel, à celui qu'il emmenoit prisonnier
+         <lb/>tout à l'heure. P. 33-35
+     </item> 
+        
+     <item>
+         <lb/>Le captif est livré à huit
+         <lb/>1. Ascanart, selon le ms. de Middlehill.
 <pb n="0211" facs="facsimile/0211.bin.png"/>
+         
 <!-- <lb/>SOMMAIRE-->.
-<!-- <lb/>xx
---><lb/>Sarrasins, qui reçoivent l'ordre de le remettre à la
-<lb/>garde de la belle Alfamie, la fille du roi Garsile, l'a<lb rend="hyphen" break="no"/>mie de Clarel</item> 
- <item>Curiosité d'Alfamie : elle veut savoir
-<lb/>des gardes d'Ogier où et comment le chevalier a été
-<lb/>pris. Elle l'interroge lui-même sur son nom, sur son
-<lb/>pays. Aidée de deux gentilles pucelles, elle le dés<lb rend="hyphen" break="no"/>arme, lave ses plaies, le fait coucher, et lui donne à
-<lb/>manger d'une herbe douce et divine</item> 
- <item>Ogier s'endort.
-<lb/>A son réveil, il se sent tout léger et plus sain qu'une
-<lb/>prune de prunier.
-<lb/>Cependant, Roland et Olivier sont demeurés fer<lb rend="hyphen" break="no"/>mes sur le champ de bataille ; mais, si nombreux sont
-<lb/>encore leurs ennemis, si terribles les coups qui les as<lb rend="hyphen" break="no"/>saillent, qu'à la fin les deux guerriers prennent la fui<lb rend="hyphen" break="no"/>te. P. 35-37
-<lb/>Dans le même temps, au camp des François,
-<lb/>Otinel s'aperçoit de l'absence des trois pairs. <lb rend="hyphen" break="no"/>Il devine où ils sont allés, s'arme aussitôt, et part
-<lb/>lui-même avec sept cents chevaliers, non sans prier
-<lb/>le roi d'ordonner sur le champ l'attaque d'Atilie. <lb rend="hyphen" break="no"/>Le cor sonne ; les François courent aux armes et
-<lb/>se mettent en marche</item> 
- <item>Otinel les précède avec ses
-<lb/>chevaliers, qui sont ceux de Belisent</item> 
- <item>Son destrier
-<lb/>Flori</item> 
- <item>Son armure</item> 
- <item>Il rencontre Roland non
-<lb/>loin d'un vivier. « Sire Roland, lui dit-il, venez<lb rend="hyphen" break="no"/>vous de pêcher ? Pensez-vous à vous seul manger
-<lb/>tous les païens ? Par saint Riquier ! il y aura à ronger
-<lb/>et pour vous et pour moi. </item> 
- <item>Il regarde à sa droite,
-<lb/>et voit Olivier fuyant, poursuivi par un roi païen.
-<lb/>- Il court à la rescousse, et d'un fier coup de
-<lb/>lance délivre Olivier de son ennemi. P. 38-39. <lb rend="hyphen" break="no"/>Les compagnons d'Otinel imitent son exemple</item> 
- <item>Ex<lb rend="hyphen" break="no"/>ploits d'Estout de Langres, d'Isoré, de Gautier de
-<lb/>Termes, d'Engelier</item> 
- <item>Mort de Droon l'Allemand et
-<lb/>de Girard d'Orléans, tués par le Turc Arapater, pa<lb rend="hyphen" break="no"/>rent d'Otinel</item> 
- <item>Otinel les venge en tuant son pa<lb rend="hyphen" break="no"/>rent. P. 40-4</item> 
- <item>Fuite du roi Clarel et des siens.
-<lb/>- Ils rencontrent une bande de vingt mille Sarra-
+<!-- <lb/>xx-->
+         <lb/>Sarrasins, qui reçoivent l'ordre de le remettre à la
+         <lb/>garde de la belle Alfamie, la fille du roi Garsile, l'a<lb rend="hyphen" break="no" 
+           />mie de Clarel
+     </item> 
+        
+     <item>
+         <lb/>Curiosité d'Alfamie : elle veut savoir
+         <lb/>des gardes d'Ogier où et comment le chevalier a été
+         <lb/>pris. Elle l'interroge lui-même sur son nom, sur son
+         <lb/>pays. Aidée de deux gentilles pucelles, elle le dés<lb rend="hyphen" break="no" 
+           />arme, lave ses plaies, le fait coucher, et lui donne à
+         <lb/>manger d'une herbe douce et divine
+     </item> 
+        
+     <item>
+         <lb/>Ogier s'endort.
+         <lb/>A son réveil, il se sent tout léger et plus sain qu'une
+         <lb/>prune de prunier.
+         <lb/>Cependant, Roland et Olivier sont demeurés fer<lb rend="hyphen" break="no" 
+           />mes sur le champ de bataille ; mais, si nombreux sont
+         <lb/>encore leurs ennemis, si terribles les coups qui les as<lb rend="hyphen" break="no" 
+           />saillent, qu'à la fin les deux guerriers prennent la fui<lb rend="hyphen" break="no" 
+           />te. P. 35-37
+         <lb/>Dans le même temps, au camp des François,
+         <lb/>Otinel s'aperçoit de l'absence des trois pairs.<lb rend="hyphen" break="no" 
+           />Il devine où ils sont allés, s'arme aussitôt, et part
+         <lb/>lui-même avec sept cents chevaliers, non sans prier
+         <lb/>le roi d'ordonner sur le champ l'attaque d'Atilie.<lb rend="hyphen" break="no" 
+           />Le cor sonne ; les François courent aux armes et
+         <lb/>se mettent en marche
+     </item> 
+        
+     <item>
+         <lb/>Otinel les précède avec ses
+         <lb/>chevaliers, qui sont ceux de Belisent
+     </item> 
+        
+     <item>
+         <lb/>Son destrier
+         <lb/>Flori
+     </item> 
+        
+     <item>
+         <lb/>Son armure
+     </item> 
+        
+     <item>
+         <lb/>Il rencontre Roland non
+         <lb/>loin d'un vivier. « Sire Roland, lui dit-il, venez<lb rend="hyphen" break="no" 
+           />vous de pêcher ? Pensez-vous à vous seul manger
+         <lb/>tous les païens ? Par saint Riquier ! il y aura à ronger
+         <lb/>et pour vous et pour moi.
+     </item> 
+        
+     <item>
+         <lb/>Il regarde à sa droite,
+         <lb/>et voit Olivier fuyant, poursuivi par un roi païen.
+         <lb/>- Il court à la rescousse, et d'un fier coup de
+         <lb/>lance délivre Olivier de son ennemi. P. 38-39.<lb rend="hyphen" break="no" 
+           />Les compagnons d'Otinel imitent son exemple
+     </item> 
+        
+     <item>
+         <lb/>Ex<lb rend="hyphen" break="no" 
+           />ploits d'Estout de Langres, d'Isoré, de Gautier de
+         <lb/>Termes, d'Engelier
+     </item> 
+        
+     <item>
+         <lb/>Mort de Droon l'Allemand et
+         <lb/>de Girard d'Orléans, tués par le Turc Arapater, pa<lb rend="hyphen" break="no" 
+           />rent d'Otinel
+     </item> 
+        
+     <item>
+         <lb/>Otinel les venge en tuant son pa<lb rend="hyphen" break="no" 
+           />rent. P. 40-4
+     </item> 
+        
+     <item>
+         <lb/>Fuite du roi Clarel et des siens.
+         <lb/>- Ils rencontrent une bande de vingt mille Sarra-
+         
 <pb n="0212" facs="facsimile/0212.bin.png"/>
+         
 <!-- <lb/>xxij
---><!-- <lb/>SOMMAIRE-->.
-<lb/>sins qui vient à leur secours. La bataille recommence<lb rend="hyphen" break="no"/>roit si le jour ne venoit à manquer</item> 
- <item>Clarel rentre
-<lb/>dans Atilie, monte aux créneaux, et de là interroge
-<lb/>Otinel : « Qui es-tu donc, et de quel lignage, toi qui
-<lb/>montres une telle valeur de baron </item> 
- <item>Je suis Oti<lb rend="hyphen" break="no"/>nel, fils de Galien et de Ludie ; je suis baptisé ; le roi
-<lb/>Charles m'a donné la Lombardie et sa fille Belisent,
-<lb/>la belle, l'accomplie. De ma vie je n'aimerai les
-<lb/>païens</item> 
- <item>Tu es fou, reprend Clarel, tu es enchanté ;
-<lb/>reviens à toi, baron, répare l'outrage que tu as fait à
-<lb/>Mahomet en le reniant, et je te réconcilierai avec le
-<lb/>roi Garsile. </item> 
- <item>A son tour, Otinel veut convertir le
-<lb/>roi Clarel à la foi chrétienne, et lui faire abandonner
-<lb/>ses dieux, qui ne valent pas une pomme pourrie.
-<lb/>« Toi et ton Dieu, vous ne valez pas une pie », ré<lb rend="hyphen" break="no"/>et celle de Jesus-Christ. P. 43-45.
-<lb/>- Les Bourguignons et les Allemands à la garde du
-<lb/>camp</item> 
- <item>Le lendemain, l'empereur est levé de grand
-<lb/>matin ; il va se promener près de la ville</item> 
- <item>In<lb rend="hyphen" break="no"/>terpellé par le roi Clarel, il se fait connoître. <lb rend="hyphen" break="no"/>Echange de menaces et d'injures entre Clarel et
-<lb/>Charlemagne</item> 
- <item>« Ne t'en fais pas accroire, dit Cla<lb rend="hyphen" break="no"/>rel au roi de France, tes jours sont usés, tu es si vieux
-<lb/>que tu en es tout rassoté</item> 
- <item>Mauvais mâtin, reprend
-<lb/>le roi hors de lui, tu seras honni et confondu ! Qu'on
-<lb/>m'apporte mes armes, dit-il à ses hommes. » Mais
-<lb/>Otinel intervient et requiert le roi de lui laisser cette
-<lb/>bataille, engagé qu'il est dès la veille avec Clarel.
-<lb/>- Consentement de Charlemagne. P. 46-48. <lb rend="hyphen" break="no"/>Otinel est armé par Olivier ; c'est Belisent qui lui
-<lb/>tient l'étrier</item> 
- <item>Rencontre des deux adversaires. <lb rend="hyphen" break="no"/>Récit du combat</item> 
- <item>Mort de Clarel. P. 49-53. <lb rend="hyphen" break="no"/>Alfamie, à cette nouvelle, fait attacher Ogier à un
-<lb/>poteau et le fait torturer par cinq païens. P. 53-54.
+--><!-- <lb/>SOMMAIRE-->
+         
+         <lb/>sins qui vient à leur secours. La bataille recommence<lb rend="hyphen" break="no" 
+           />roit si le jour ne venoit à manquer
+     </item> 
+        
+     <item>
+         <lb/>Clarel rentre
+         <lb/>dans Atilie, monte aux créneaux, et de là interroge
+         <lb/>Otinel : « Qui es-tu donc, et de quel lignage, toi qui
+         <lb/>montres une telle valeur de baron 
+     </item> 
+        
+     <item>
+         <lb/>Je suis Oti<lb rend="hyphen" break="no" 
+           />nel, fils de Galien et de Ludie ; je suis baptisé ; le roi
+         <lb/>Charles m'a donné la Lombardie et sa fille Belisent,
+         <lb/>la belle, l'accomplie. De ma vie je n'aimerai les
+         <lb/>païens
+     </item> 
+        
+     <item>
+         <lb/>Tu es fou, reprend Clarel, tu es enchanté ;
+         <lb/>reviens à toi, baron, répare l'outrage que tu as fait à
+         <lb/>Mahomet en le reniant, et je te réconcilierai avec le
+         <lb/>roi Garsile.
+     </item> 
+        
+     <item>
+         <lb/>A son tour, Otinel veut convertir le
+         <lb/>roi Clarel à la foi chrétienne, et lui faire abandonner
+         <lb/>ses dieux, qui ne valent pas une pomme pourrie.
+         <lb/>« Toi et ton Dieu, vous ne valez pas une pie », ré<lb rend="hyphen" break="no" 
+           />et celle de Jesus-Christ. P. 43-45.
+         <lb/>- Les Bourguignons et les Allemands à la garde du
+         <lb/>camp
+     </item> 
+        
+     <item>
+         <lb/>Le lendemain, l'empereur est levé de grand
+         <lb/>matin ; il va se promener près de la ville
+     </item> 
+        
+     <item>
+         <lb/>In<lb rend="hyphen" break="no" 
+           />terpellé par le roi Clarel, il se fait connoître.<lb rend="hyphen" break="no" 
+           />Echange de menaces et d'injures entre Clarel et
+         <lb/>Charlemagne
+     </item> 
+        
+     <item>
+         <lb/>« Ne t'en fais pas accroire, dit Cla<lb rend="hyphen" break="no" 
+           />rel au roi de France, tes jours sont usés, tu es si vieux
+         <lb/>que tu en es tout rassoté
+     </item> 
+        
+     <item>
+         <lb/>Mauvais mâtin, reprend
+         <lb/>le roi hors de lui, tu seras honni et confondu ! Qu'on
+         <lb/>m'apporte mes armes, dit-il à ses hommes. » Mais
+         <lb/>Otinel intervient et requiert le roi de lui laisser cette
+         <lb/>bataille, engagé qu'il est dès la veille avec Clarel.
+         <lb/>- Consentement de Charlemagne. P. 46-48.<lb rend="hyphen" break="no" 
+           />Otinel est armé par Olivier ; c'est Belisent qui lui
+         <lb/>tient l'étrier
+     </item> 
+        
+     <item>
+         <lb/>Rencontre des deux adversaires.<lb rend="hyphen" break="no" 
+           />Récit du combat
+     </item> 
+        
+     <item>
+         <lb/>Mort de Clarel. P. 49-53.<lb rend="hyphen" break="no" 
+           />Alfamie, à cette nouvelle, fait attacher Ogier à un
+         <lb/>poteau et le fait torturer par cinq païens. P. 53-54.
+         
 <pb n="0213" facs="facsimile/0213.bin.png"/>
+         
 <!-- <lb/>SOMMAIRE-->.
-<!-- <lb/>xxiij
---><lb/>- Douleur du roi Garsile : il s'apprête à venger la
-<lb/>mort de Clarel</item> 
- <item>L'ost des François se prépare aussi
-<lb/>à la bataille</item> 
- <item>Charlemagne confie son enseigne au
-<lb/>duc Naimes, et, à cette occasion, lui fait don de son
-<lb/>destrier Volant, et le saisit de cinq châteaux par la
-<lb/>remise de son gant. P. 54-56</item> 
- <item>On se met en mar<lb rend="hyphen" break="no"/>che. Naimes fait développer l'enseigne de Char<lb rend="hyphen" break="no"/>lemagne. Le roi Garsile fait lever son étendart.
-<lb/>- La bataille s'engage</item> 
- <item>Joute de Floriant de
-<lb/>Syrie et de Roland ; mort de Floriant. P. 56-58.
-<lb/>- Exploit d'Olivier</item> 
- <item>L'ost des François essuie
-<lb/>un choc si violent qu'il plie et recule plus de qua<lb rend="hyphen" break="no"/>torze arpents en arrière. P. 58-60</item> 
- <item>Un jeune che<lb rend="hyphen" break="no"/>valier, Hardouin, fait prisonnier le roi Corsabre,
-<lb/>coupe la tête à dix autres païens, et par là rend cou<lb rend="hyphen" break="no"/>rage aux François, qu'il ramène en avant. P. 60-61.
-<lb/>- Otinel, de son côté, répand partout l'épouvante
-<lb/>et la mort</item> 
- <item>Sombre fureur du roi Garsile</item> 
- <item>Ses
-<lb/>efforts pour soutenir la lutte</item> 
- <item>Mais Otinel, Oli<lb rend="hyphen" break="no"/>vier, Turpin, Roland, Engelier, Gautier le Nor<lb rend="hyphen" break="no"/>mand, Geoffroi d'Anjou et Hernaut l'Allemand se
-<lb/>réunissent pour accabler leurs ennemis</item> 
- <item>Charlema<lb rend="hyphen" break="no"/>gne voit avec joie ses barons prendre le dessus ; mais
-<lb/>il songe avec regret à Ogier captif. P. 61-65. <lb rend="hyphen" break="no"/>Durant ce temps, le Danois profite d'un moment
-<lb/>où il n'est point surveillé pour briser ses fers</item> 
- <item>Une
-<lb/>fois libre, sans autre arme que ses poings carrés, il
-<lb/>assomme ses cinq gardes, court à l'écurie, où il re<lb rend="hyphen" break="no"/>trouve son destrier et ses armes, en ressort tout armé
-<lb/>et monté, tranche la tête au portier, qui fait mine de
-<lb/>verrouiller l'huis, et, d'une traite, court jusqu'au
-<lb/>champ de bataille, où ses compagnons l'accueillent
-<lb/>par des transports de joie. P. 65-69</item> 
- <item>Avec un tel
-<lb/>renfort, ces fiers jouteurs décident de la journée.
-<lb/>- Garsile voit qu'il a tout perdu, pique son cheval
-<lb/>et s'enfuit vers la ville ; mais Otinel le poursuit, l'at<lb rend="hyphen" break="no"/>teint, et le provoque par des paroles amères, puis es<lb rend="hyphen" break="no"/>saie de lui faire renier Mahomet</item> 
- <item>« Mauvais rené-
+<!-- <lb/>xxiij-->
+         
+         <lb/>- Douleur du roi Garsile : il s'apprête à venger la
+         <lb/>mort de Clarel
+     </item> 
+        
+     <item>
+         <lb/>L'ost des François se prépare aussi
+         <lb/>à la bataille
+     </item> 
+        
+     <item>
+         <lb/>Charlemagne confie son enseigne au
+         <lb/>duc Naimes, et, à cette occasion, lui fait don de son
+         <lb/>destrier Volant, et le saisit de cinq châteaux par la
+         <lb/>remise de son gant. P. 54-56
+     </item> 
+        
+     <item>
+         <lb/>On se met en mar<lb rend="hyphen" break="no" 
+           />che. Naimes fait développer l'enseigne de Char<lb rend="hyphen" break="no" 
+           />lemagne. Le roi Garsile fait lever son étendart.
+         <lb/>- La bataille s'engage
+     </item> 
+        
+     <item>
+         <lb/>Joute de Floriant de
+         <lb/>Syrie et de Roland ; mort de Floriant. P. 56-58.
+         <lb/>- Exploit d'Olivier
+     </item> 
+        
+     <item>
+         <lb/>L'ost des François essuie
+         <lb/>un choc si violent qu'il plie et recule plus de qua<lb rend="hyphen" break="no" 
+           />torze arpents en arrière. P. 58-60
+     </item> 
+        
+     <item>
+         <lb/>Un jeune che<lb rend="hyphen" break="no" 
+           />valier, Hardouin, fait prisonnier le roi Corsabre,
+         <lb/>coupe la tête à dix autres païens, et par là rend cou<lb rend="hyphen" break="no" 
+           />rage aux François, qu'il ramène en avant. P. 60-61.
+         <lb/>- Otinel, de son côté, répand partout l'épouvante
+         <lb/>et la mort
+     </item>
+        
+     <item>
+         <lb/>Sombre fureur du roi Garsile
+     </item> 
+        
+     <item>
+         <lb/>Ses
+         <lb/>efforts pour soutenir la lutte
+     </item> 
+        
+     <item>
+         <lb/>Mais Otinel, Oli<lb rend="hyphen" break="no" 
+           />vier, Turpin, Roland, Engelier, Gautier le Nor<lb rend="hyphen" break="no" 
+           />mand, Geoffroi d'Anjou et Hernaut l'Allemand se
+         <lb/>réunissent pour accabler leurs ennemis
+     </item> 
+        
+     <item>
+         <lb/>Charlema<lb rend="hyphen" break="no" 
+           />gne voit avec joie ses barons prendre le dessus ; mais
+         <lb/>il songe avec regret à Ogier captif. P. 61-65.
+         </item>
+        </list>
+                <!-- Début d'un nouveau paragraphe de liste -->
+                <list corresp="#L_40"><!-- Contenu qui correspond à telle et telle laisse (strophe) -->
+        <item>Durant ce temps, le Danois profite d'un moment
+         <lb/>où il n'est point surveillé pour briser ses fers
+     </item> 
+        
+     <item>
+         <lb/>Une
+         <lb/>fois libre, sans autre arme que ses poings carrés, il
+         <lb/>assomme ses cinq gardes, court à l'écurie, où il re<lb rend="hyphen" break="no" 
+           />trouve son destrier et ses armes, en ressort tout armé
+         <lb/>et monté, tranche la tête au portier, qui fait mine de
+         <lb/>verrouiller l'huis, et, d'une traite, court jusqu'au
+         <lb/>champ de bataille, où ses compagnons l'accueillent
+         <lb/>par des transports de joie. P. 65-69
+     </item> 
+        
+     <item>
+         <lb/>Avec un tel
+         <lb/>renfort, ces fiers jouteurs décident de la journée.
+         <lb/>- Garsile voit qu'il a tout perdu, pique son cheval
+         <lb/>et s'enfuit vers la ville ; mais Otinel le poursuit, l'at<lb rend="hyphen" break="no" 
+           />teint, et le provoque par des paroles amères, puis es<lb rend="hyphen" break="no" 
+           />saie de lui faire renier Mahomet
+     </item> 
+        
+    <item>
+        <lb/>« Mauvais rené-
+        
 <pb n="0214" facs="facsimile/0214.bin.png"/>
+        
 <!-- <lb/>xxiv
---><!-- <lb/>SOMMAIRE-->.
-<lb/>gat, lui dit Garsile, tu vas payer cher ton abandon de
-<lb/>la loi de Mahomet. Si je n'en tire vengeance, je ne
-<lb/>me prise un pois. » P. 69-71. Combat de Garsile
-<lb/>et d'Otinel P. 71</item> 
- <item>Garsile est vaincu et se rend à
-<lb/>Roland, qui survient au moment de sa défait</item> 
- <item>Le
-<lb/>douleur</item> 
- <item>Les François achèvent leur victoire : la
-<lb/>ville est prise et mise à sang. P. 72</item> 
- <item>En ce moment
-<lb/>solennel, Charlemagne appelle près de lui sa fille et
-<lb/>Otinel</item> 
- <item>Mariage des deux fiancés</item> 
- <item>Charlermagne
-<lb/>partage entre ses barons le royaume conquis ; Otinel
-<lb/>en est proclamé seigneur et roi</item> 
- <item>Départ de Char<lb rend="hyphen" break="no"/>lemagne, son retour à Paris</item> 
- <item>Otinel fut un grand
-<lb/>roi et redouté : il protégea et glorifia le christianis<lb rend="hyphen" break="no"/>me. Sa fin fut belle. Que Dieu ait son âme ! Amen.</item></list>
-</div>
-<div type="errata">
-    <!-- Quelque chose a l'air d'avoir sauté ici -->
-    <p><lb/>P. 73 74.</p>
-</div>
+--><!-- <lb/>SOMMAIRE-->
+        
+         <lb/>gat, lui dit Garsile, tu vas payer cher ton abandon de
+         <lb/>la loi de Mahomet. Si je n'en tire vengeance, je ne
+         <lb/>me prise un pois. » P. 69-71. Combat de Garsile
+         <lb/>et d'Otinel P. 71
+    </item> 
+        
+    <item>
+        <lb/>Garsile est vaincu et se rend à
+        <lb/>Roland, qui survient au moment de sa défait
+    </item> 
+        
+    <item>
+        <lb/>Le
+        <lb/>douleur
+    </item> 
+    <item>
+        <lb/>Les François achèvent leur victoire : la
+        <lb/>ville est prise et mise à sang. P. 72
+    </item> 
+        
+    <item>
+        <lb/>En ce moment
+        <lb/>solennel, Charlemagne appelle près de lui sa fille et
+        <lb/>Otinel
+    </item> 
+        
+    <item>
+        <lb/>Mariage des deux fiancés
+    </item> 
+        
+    <item>
+        <lb/>Charlermagne
+        <lb/>partage entre ses barons le royaume conquis ; Otinel
+        <lb/>en est proclamé seigneur et roi
+    </item> 
+        
+    <item>
+        <lb/>Départ de Char<lb rend="hyphen" break="no" 
+          />lemagne, son retour à Paris
+    </item> 
+        
+    <item>
+        <lb/>Otinel fut un grand
+        <lb/>roi et redouté : il protégea et glorifia le christianis<lb rend="hyphen" break="no" 
+        />me. Sa fin fut belle. Que Dieu ait son âme ! Amen. <lb/>P. 73 74.
+    </item>
+        
+        
+     </list>
+                
+        </div>
+           
         </front>
     <body>
         <!--JBC: Pour l'instant, 2113 vers pour 2133 attendus ! -->
@@ -23250,9 +23983,7 @@
                 <w>chalonjant</w>
                 <pc type="supplied">;</pc>
             </l>
-            <l>
                 <l><w>Qui</w> <w>il</w> <w>consuit</w><pc type="supplied">,</pc> <w>il</w> <w rend="elision">n</w><pc type="supplied">'</pc><w>a</w> <w>de</w> <w>mort</w> <w>garant</w><pc type="supplied">.</pc></l>
-            </l>
         </lg>
         <lg type="laisse" n="">
             <lb/>
@@ -23784,7 +24515,7 @@
                 <pc type="supplied">.</pc>
             </l>
         </lg>
-        <lg type="laisse" n="">
+        <lg type="laisse" n="40" xml:id="L_40"><!-- Corriger ce numéro mis à titre d'exemple -->
             <lb/>
             <l>
                 <w>LI</w>
