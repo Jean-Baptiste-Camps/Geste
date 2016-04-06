@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-04-01T12:10:43Z. .
+DTD generated from ODD source 2016-04-06T14:22:26Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -467,11 +467,11 @@ to %teidata.word;  #IMPLIED'>
 <!ENTITY % model.nameLike.agent_sequenceOptional "name?, orgName?, persName?"> 
 <!ENTITY % model.nameLike.agent_sequenceOptionalRepeatable "name*, orgName*, persName*"> 
 <!ENTITY % model.nameLike.agent_sequenceRepeatable "name+, orgName+, persName+"> 
-<!ENTITY % model.segLike "w |pc |seg"> 
-<!ENTITY % model.segLike_sequence "w, pc, seg"> 
-<!ENTITY % model.segLike_sequenceOptional "w?, pc?, seg?"> 
-<!ENTITY % model.segLike_sequenceOptionalRepeatable "w*, pc*, seg*"> 
-<!ENTITY % model.segLike_sequenceRepeatable "w+, pc+, seg+"> 
+<!ENTITY % model.segLike "w |c |pc |seg"> 
+<!ENTITY % model.segLike_sequence "w, c, pc, seg"> 
+<!ENTITY % model.segLike_sequenceOptional "w?, c?, pc?, seg?"> 
+<!ENTITY % model.segLike_sequenceOptionalRepeatable "w*, c*, pc*, seg*"> 
+<!ENTITY % model.segLike_sequenceRepeatable "w+, c+, pc+, seg+"> 
 <!ENTITY % model.hiLike "hi"> 
 <!ENTITY % model.hiLike_sequence "hi"> 
 <!ENTITY % model.hiLike_sequenceOptional "hi?"> 
@@ -1195,6 +1195,13 @@ contemporary %teidata.xTruthValue;  #IMPLIED >
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
  %att.declaring.attributes; >
+<!--doc:(caractère) représente un caractère [17.1. Linguistic Segment Categories] -->
+<!ELEMENT c %macro.xtext;>
+<!ATTLIST c xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST c
+ %att.global.attributes;
+ %att.segLike.attributes;
+ %att.typed.attributes; >
 <!--doc:(réclames) décrit le système utilisé pour s'assurer que les cahiers formant un manuscrit ou un incunable sont dans le bon ordre, typiquement au moyen d'annotations en bas de page. [10.3.7. Catchwords, Signatures, Secundo Folio] -->
 <!ELEMENT catchwords %macro.phraseSeq;>
 <!ATTLIST catchwords xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1298,7 +1305,8 @@ target CDATA  #IMPLIED >
  %att.ranging.attribute.atLeast;
  %att.ranging.attribute.atMost;
  %att.ranging.attribute.confidence;
- %att.source.attribute.source; >
+ %att.source.attribute.source;
+type %teidata.enumerated;  "editorial"  >
 <!--doc:(pays) contient le nom d'une unité géo-politique, comme une nation, un pays, une colonie ou une communauté, plus grande ou administrativement supérieure à une région et plus petite qu'un bloc. [13.2.3. Place Names] -->
 <!ELEMENT country %macro.phraseSeq;>
 <!ATTLIST country xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1598,6 +1606,12 @@ n CDATA  #REQUIRED >
 <!ATTLIST handDesc
  %att.global.attributes;
 hands %teidata.count;  #IMPLIED >
+<!--doc:(note sur une main) décrit un style d'écriture ou une main qui sont reconnus dans un manuscrit. [10.7.2. Writing, Decoration, and Other Notations] -->
+<!ELEMENT handNote %macro.specialPara;>
+<!ATTLIST handNote xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST handNote
+ %att.global.attributes;
+ %att.handFeatures.attributes; >
 <!--doc:(reprise de main) marque le début d'une section du texte écrite par une nouvelle main ou le début d'une nouvelle séance d'écriture. [11.3.2.1. Document Hands] -->
 <!ELEMENT handShift  EMPTY>
 <!ATTLIST handShift xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2628,7 +2642,7 @@ type (main|sub) #IMPLIED >
  %att.ranging.attribute.atMost;
  %att.ranging.attribute.confidence;
  %att.source.attribute.source;
-reason (illegible|damage|facsimile) #REQUIRED >
+reason (illegible|damage|facsimile|lectio) #REQUIRED >
 <!--doc:(mot) représente un mot grammatical (pas nécessairement orthographique) [17.1. Linguistic Segment Categories] -->
 <!ELEMENT w (#PCDATA|%model.gLike;|seg|_DUMMY_gap|_DUMMY_space|%model.hiLike;|%model.milestoneLike;|%model.noteLike;|choice|subst|%model.pPart.transcriptional;)*>
 <!ATTLIST w xmlns CDATA "http://www.tei-c.org/ns/1.0">
