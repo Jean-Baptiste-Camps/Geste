@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-04-01T12:10:50Z. .
+    Schema generated from ODD source 2016-04-06T14:22:32Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2647,6 +2647,16 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
           <xs:attributeGroup ref="tei:att.ranging.attribute.atMost"/>
           <xs:attributeGroup ref="tei:att.ranging.attribute.confidence"/>
           <xs:attributeGroup ref="tei:att.source.attribute.source"/>
+          <xs:attribute name="type" default="editorial">
+            <xs:annotation>
+              <xs:documentation>caractérise l'élément en utilisant n'importe quel système ou typologie de classification approprié.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -2991,6 +3001,11 @@ Normalization 12. Critical Apparatus]</xs:documentation>
                         <xs:enumeration value="facsimile">
                           <xs:annotation>
                             <xs:documentation>problème dû au document de substitution</xs:documentation>
+                          </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="lectio">
+                          <xs:annotation>
+                            <xs:documentation>difficulté due à la substance de la leçon (incompréhensible, aberrante, …)</xs:documentation>
                           </xs:annotation>
                         </xs:enumeration>
                       </xs:restriction>
@@ -4270,6 +4285,16 @@ Elements]</xs:documentation>
       <xs:attributeGroup ref="tei:att.global.attributes"/>
     </xs:complexType>
   </xs:element>
+  <xs:element name="handNote">
+    <xs:annotation>
+      <xs:documentation>(note sur une main) décrit un style d'écriture ou une main qui sont reconnus dans un manuscrit. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:macro.specialPara"/>
+      <xs:attributeGroup ref="tei:att.global.attributes"/>
+      <xs:attributeGroup ref="tei:att.handFeatures.attributes"/>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="creation">
     <xs:annotation>
       <xs:documentation>(création) contient des informations concernant la création d’un texte. [2.4.1. Creation 2.4. The Profile Description]</xs:documentation>
@@ -4949,6 +4974,20 @@ Elements]</xs:documentation>
       </xs:attribute>
     </xs:complexType>
   </xs:element>
+  <xs:element name="c" substitutionGroup="tei:model.segLike">
+    <xs:annotation>
+      <xs:documentation>(caractère) représente un caractère [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:macro.xtext">
+          <xs:attributeGroup ref="tei:att.global.attributes"/>
+          <xs:attributeGroup ref="tei:att.segLike.attributes"/>
+          <xs:attributeGroup ref="tei:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="pc" substitutionGroup="tei:model.segLike">
     <xs:annotation>
       <xs:documentation>(punctuation character) contient un caractère ou une chaîne de caractères considérés comme un signe de ponctuation unique. [17.1. Linguistic Segment Categories]</xs:documentation>
@@ -4956,6 +4995,7 @@ Elements]</xs:documentation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="tei:model.gLike"/>
+        <xs:element ref="tei:c"/>
         <xs:group ref="tei:model.pPart.edit"/>
       </xs:choice>
       <xs:attributeGroup ref="tei:att.global.attribute.xmlid"/>
@@ -6800,7 +6840,10 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</xs:documenta
     <xs:complexType>
       <xs:choice>
         <xs:group maxOccurs="unbounded" ref="tei:model.pLike"/>
-        <xs:element minOccurs="0" ref="tei:summary"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:element maxOccurs="unbounded" ref="tei:handNote"/>
+        </xs:sequence>
       </xs:choice>
       <xs:attributeGroup ref="tei:att.global.attributes"/>
       <xs:attribute name="hands" type="xs:nonNegativeInteger">

@@ -610,7 +610,7 @@
                     les documents. Ils permettent la représentation de phénomènes courants et moins
                     spécifiques</p>
                 <div>
-                    <head>Annotation</head>
+                    <head>Annotation et apparat</head>
                     <p>L'élément <gi>note</gi> permet d'annoter un texte, et peut correspondre à
                         toutes sortes de notes, indépendamment de leur emplacement physique. Elles
                         peuvent être caractérisées par l'emploi d'un attribut <att>type</att>,
@@ -688,9 +688,11 @@
                         <app>
                             <lem wit="#Guessard"><w>XXVII</w></lem>
                             <rdg wit="#b"><w>vint</w> <w>e</w> <w>sis</w></rdg>
-                            <rdg wit="#A"><w>XXXVII</w></rdg>
+                            <rdg wit="#a"><w>XXXVII</w></rdg>
                         </app>
                     </egXML>
+                        En revanche, lorsque le lemme correspond à la correction de la leçon d'un manuscrit, on pourra utiliser à l'intérieur
+                        de l'élément <gi>lem</gi> les éléments <gi>choice</gi>, <gi>sic</gi> et <gi>corr</gi>, présentés dans la section suivante.
                     </p>
                     <!--<p>La méthode d'encodage des variantes doit être </p>-->
                     <!-- TODO: ajouter variant-encoding 'parallel segmentation' -->
@@ -699,12 +701,24 @@
                     <head>Interventions éditoriales simples</head>
                     <p>Les corrections éditoriales des édition numérisées peuvent être représentées par l'élément <gi>corr</gi>, éventuellement accompagné 
                         de l'enregistrement de la leçon originale par l'élément <gi>sic</gi>; dans ce cas, les deux sont enregistrés en parallèle
-                        avec l'élément <gi>choice</gi> Pour les corrections éditoriales des éditions allographétiques, voir infra (<!--<ptr target=""/>-->).
+                        à l'intérieur de l'élément <gi>choice</gi> Pour les corrections éditoriales des éditions allographétiques, voir infra (<!--<ptr target=""/>-->).
                         <specList>
-                            <specDesc key="corr"/>
+                            <specDesc key="corr" atts="type"/>
                             <specDesc key="sic"/>
                             <specDesc key="choice"/>
                         </specList>
+                        On distinguera, le cas échéant, les corrections qui correspondent à des <foreign xml:lang="lat">errata</foreign>, et pas à des interventions
+                        éditoriales proprement dites, par l'utilisation de l'attribut <att>type</att>, avec la valeur <val>erratum</val>.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <w>
+                                <choice>
+                                    <sic>vene</sic>
+                                    <corr type="erratum" resp="#Guessard #Michelant" cert="high">venez</corr>
+                            </choice>
+                            </w>
+                        </egXML>
+                    </p>
+                    <p>
                         On prendra bien soin, en outre, de préciser les mentions de responsabilité et, le cas échéant, de degré de certitude (sur lesquelles, voir infra <ptr target="#DIV_CERTRESP"/>).
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <w>
@@ -712,13 +726,23 @@
                                     <corr resp="#Guessard #Michelant" cert="unknown">XXVII</corr>
                                     <sic>XXXVII</sic>
                                 </choice>
-                            </w>
-                            <note><lb/>Leçon de a : .XXXVII. anz ; mais plus loin, (p. 2, v. 17 ;
-                                <lb/>p. 3, v. 9) le même manuscrit donne .XXVII. Nous 
-                                <lb/>rétablissons donc ici cette leçon, qui semble la bonne, 
-                                <lb/>pour mettre le poëte d'accord avec lui-même. On lit 
-                                <lb/>d'ailleurs dans b : <q>vint e sis</q>. 
-                            </note>
+                            </w> 
+                        </egXML>
+                    </p>
+                    <p>Enfin, quand un éditeur corrige la variante du manuscrit sur lequel il s'appuie, on pourra utiliser ces éléments en combinaison 
+                    avec <gi>app</gi>, <gi>lem</gi> et <gi>rdg</gi>
+                        <!-- TODO: mettre un vrai exemple -->
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <app>
+                                <lem wit="#a">
+                                    <choice>
+                                        <sic><w>tenir</w> <w>et</w> <w>batisier</w></sic>
+                                        <corr resp="#Untel" cert="unknown"><w>batisier</w> <w>et</w> <w>tenir</w></corr>
+                                    </choice>
+                                </lem>
+                                <rdg wit="#b"/>
+                                <note resp="#Untel" cert="unknown">Nous corrigeons la leçon de a, en raison de la rime. Le passage manque dans le ms. b.</note>
+                            </app>
                         </egXML>
                     </p>
                 </div>
@@ -1471,7 +1495,7 @@
                     xml:lang="fr">
                     <!-- Sélection à faire parmi les informations du teiHeader-->
                     <moduleRef key="header"
-                        include="authority availability biblFull creation change fileDesc idno licence teiHeader language langUsage profileDesc publicationStmt publisher revisionDesc sourceDesc titleStmt"/>
+                        include="authority availability biblFull creation change fileDesc handNote idno licence teiHeader language langUsage profileDesc publicationStmt publisher revisionDesc sourceDesc titleStmt"/>
                     <elementSpec ident="teiHeader" mode="change">
                         <content>
                             <sequence>
@@ -1747,7 +1771,15 @@
                             <attDef ident="min" mode="delete"/>
                             <attDef ident="max" mode="delete"/>
                             <!--<attDef ident="cert" mode="delete"/>-->
-                            <attDef ident="type" mode="delete"/>
+                            <attDef ident="type" mode="change">
+                                <defaultVal>editorial</defaultVal>
+                                <valList mode="add">
+                                    <valItem ident="editorial" ><gloss>correction éditoriale</gloss>
+                                        <desc>caractérise une correction correspondant à une intervention de l'éditeur sur la leçon d'un manuscrit</desc>
+                                    </valItem>
+                                    <valItem ident="erratum"><desc>caractérise la correction d'une coquille, ou de toute autre erreur extérieure à la tradition manuscrite</desc></valItem>
+                                </valList>
+                            </attDef>
                             <attDef ident="subtype" mode="delete"/>
                         </attList>
                     </elementSpec>
@@ -1952,6 +1984,9 @@
                                     </valItem>
                                     <valItem ident="facsimile">
                                         <desc>problème dû au document de substitution</desc>
+                                    </valItem>
+                                    <valItem ident="lectio">
+                                        <desc>difficulté due à la substance de la leçon (incompréhensible, aberrante, …)</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2603,8 +2638,12 @@
                     </elementSpec>
                     <!-- Pourquoi, ô grand pourquoi, supprimer att.textCritical? Au grand contraire, on va devoir le redéfinir en détail. -->
                     <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="delete"/>
-                    <moduleRef key="analysis" include="pc w"/>
-                    <!-- je retire c -->
+                    <moduleRef key="analysis" include="c pc w"/>
+                    <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
+                    tel que je le vois
+                        reg/orig, qui peut avoir g comme alternative, définit une lettre et un allographe qui s'y rattache, tous deux abstraits
+                        c permet d'apporter un complément d'information sur une réalisation donnée
+                    -->
                     <elementSpec ident="w" mode="change">
                         <!-- Modification du contenu -->
                         <content>
@@ -2862,7 +2901,7 @@
                     </elementSpec>
                     <!-- retirés: notamment msItem (d'autres également: informations biblioth.)-->
                     <moduleRef key="msdescription"
-                        include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItemStruct msName msPart musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
+                        include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItemStruct msName msPart musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc scriptNote seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
                     <!-- À voir ce qu'on fait de celui-là -->
                     <elementSpec ident="msDesc" mode="change">
                         <content>
