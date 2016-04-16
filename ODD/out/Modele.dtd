@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-04-06T14:22:26Z. .
+DTD generated from ODD source 2016-04-16T14:18:01Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -974,8 +974,9 @@ defective %teidata.xTruthValue;  "false" '>
  %att.global.analytic.attribute.ana;
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
- %att.typed.attributes;
-xml:id ID #REQUIRED >
+ %att.typed.attribute.subtype;
+xml:id ID #REQUIRED
+type (ed|ms|crit) #REQUIRED >
 <!ATTLIST TEI xsi:schemaLocation CDATA #IMPLIED
  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
  >
@@ -1663,7 +1664,7 @@ new %teidata.pointer;  #REQUIRED >
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
  %att.written.attributes;
-rend (superscript|initiale|filigr|peint|litteraElongata|litteraNotabilior|detach|2l|4l|5l) #REQUIRED >
+rend (superscript|initiale|filigr|peint|litteraElongata|litteraNotabilior|detach|2l|4l|5l) #IMPLIED >
 <!--doc:(histoire) rassemble les éléments servant à donner un historique complet du manuscrit ou d'une partie du manuscrit. [10.8. History] -->
 <!ELEMENT history ((origin,(provenance)*,(acquisition)*))>
 <!ATTLIST history xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1814,6 +1815,7 @@ Elements 7.2.5. Speech Contents] -->
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
  %att.declaring.attributes;
+xml:id ID #IMPLIED
 n CDATA  #REQUIRED
 type (laisse) #REQUIRED >
 <!--doc:contient des informations légales applicables au texte, notamment le contrat de licence définissant les droits d'utilisation. [2.2.4. Publication, Distribution, Licensing, etc.] -->

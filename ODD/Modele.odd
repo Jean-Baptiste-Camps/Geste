@@ -129,12 +129,13 @@
                     <p>Les documents ont pour racine l'élément <gi>TEI</gi>, et se décomposent en un
                             <gi>teiHeader</gi>, comportant des métadonnées de niveau document, et
                             <gi>text</gi>, contenant l'édition proprement dite. <specList>
-                            <specDesc key="TEI" atts="xml:id"/>
+                            <specDesc key="TEI" atts="xml:id type"/>
                             <specDesc key="teiHeader"/>
                             <specDesc key="text"/>
                         </specList>
                     </p>
-                    <p>L'élément <gi>TEI</gi> doit porter un identifiant <att>xml:id</att>, qui doit
+                    <p>L'élément <gi>TEI</gi> doit porter obligatoirement un <att>type</att>, définissant si le document contient une édition numérisée (<val>ed</val>),
+                        une transcription de ms. (<val>ms</val>) ou une restitution critique (<val>crit</val>), ainsi qu'un identifiant <att>xml:id</att>, qui doit
                         être unique au niveau du corpus, et adopte une forme standardisée, composée
                         de trois éléments séparés par des soulignements : <!-- TODO: rendre compatible CTS, et ajouter la doc. à la spécification de l'élément TEI -->
                         <list>
@@ -150,13 +151,13 @@
                         </list>
                         <eg>Numérisation de l'édition</eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="ed_Gui-de-Bourgogne_Guessard-1858">
+                            <TEI xml:id="ed_Gui-de-Bourgogne_Guessard-1858" type="ed">
                                 <!--  -->
                             </TEI>
                         </egXML>
                         <eg>Transcription du ms. P4 de la <title>Chanson d'Aspremont</title></eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="ms_Aspremont_P4">
+                            <TEI xml:id="ms_Aspremont_P4" type="ms">
                                 <!--  -->
                             </TEI>
                         </egXML>
@@ -164,7 +165,7 @@
                                 Roland</title></eg>
                         <!-- TODO: revoir la notion de texte critique telle qu'on l'entend pour ces éditions. Plutôt relevé des variantes + textes critiques -->
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="crit_Roland_β">
+                            <TEI xml:id="crit_Roland_β" type="crit">
                                 <!--  -->
                             </TEI>
                         </egXML>
@@ -913,7 +914,7 @@
                     <head>Décoration, lettrines et mise en valeur du texte</head>
                     <p>Les lettrines, et autres types de mise en valeur ou décoration de portions de
                         texte, sont marquées par l'emploi de l'élément <gi>hi</gi>. L'attribut
-                            <att>rend</att>, obligatoire, est utilisé pour préciser, par une série
+                            <att>rend</att>, obligatoire dans le cas des transcriptions de manuscrit, est utilisé pour préciser, par une série
                         de valeurs séparées par des espaces, la nature de la décoration. <specDesc
                             key="hi" atts="rend"/>
                     </p>
@@ -1667,12 +1668,19 @@
                     </elementSpec>
                     <elementSpec ident="hi" mode="change">
                         <!-- @rend à définir avec vallist -->
+                        <constraintSpec scheme="isoschematron" ident="rend-obligatoire-transcriptions">
+                            <constraint>
+                                <s:assert
+                                    test="not(/TEI[@type='ms']) or (/TEI[@type='ms'] and not(//hi[not(@rend)]) )"
+                                    >l'attribut @rend est obligatoire pour l'élément hi dans les transcriptions de manuscrit</s:assert>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
                             <attDef ident="sameAs" mode="delete"/>
                             <attDef ident="facs" mode="delete"/>
-                            <attDef ident="rend" mode="change" usage="req">
+                            <attDef ident="rend" mode="change" usage="rec">
                                 <valList mode="add" type="closed">
                                     <!-- Quelques généralités -->
                                     <valItem ident="superscript">
@@ -2344,7 +2352,7 @@
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:id" mode="change" usage="rec"/><!-- ou seulement obligatoire dans la version définitive? -->
                             <attDef ident="rend" mode="delete"/>
                             <attDef ident="sameAs" mode="delete"/>
                             <attDef ident="facs" mode="delete"/>
@@ -2501,6 +2509,21 @@
                     <elementSpec ident="TEI" mode="change">
                         <attList>
                             <attDef ident="version" mode="delete"/>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="add" type="closed">
+                                    <valItem ident="ed">
+                                        <gloss>édition</gloss>
+                                        <desc>précise que le document contient une édition numérisée</desc></valItem>
+                                    <valItem ident="ms">
+                                        <gloss>manuscrit</gloss>
+                                       <desc> précise que le document contient une transcription de manuscrit</desc>
+                                    </valItem>
+                                    <valItem ident="crit">
+                                        <gloss>texte critique</gloss>
+                                        <desc>précise que le document contient un apparat de variantes permettant la restitution d'un ou plusieurs textes critiques</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                             <attDef ident="xml:id" mode="change" usage="req">
                                 <desc>fournit un identifiant unique au document (composé du mot-clé
                                         <q>ed</q> pour une édition numérisée, <q>ms</q> pour une

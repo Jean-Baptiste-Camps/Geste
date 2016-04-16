@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-04-06T14:22:32Z. .
+    Schema generated from ODD source 2016-04-16T14:18:07Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2392,7 +2392,7 @@ Suggested values include: 1] page_de_titre; 2] preface; 3] sommaire; 4] errata; 
           <xs:attributeGroup ref="tei:att.global.responsibility.attribute.cert"/>
           <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
           <xs:attributeGroup ref="tei:att.written.attributes"/>
-          <xs:attribute name="rend" use="required">
+          <xs:attribute name="rend">
             <xs:annotation>
               <xs:documentation>(interprétation) indique comment l'élément en question a été rendu ou présenté dans le texte source</xs:documentation>
             </xs:annotation>
@@ -4044,6 +4044,7 @@ Elements]</xs:documentation>
       <xs:attributeGroup ref="tei:att.global.responsibility.attribute.cert"/>
       <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
       <xs:attributeGroup ref="tei:att.declaring.attributes"/>
+      <xs:attributeGroup ref="xml:id"/>
       <xs:attribute name="n" use="required" type="xs:string">
         <xs:annotation>
           <xs:documentation>(nombre) donne un nombre (ou une autre étiquette) pour un élément, qui n'est pas nécessairement unique dans le document TEI.</xs:documentation>
@@ -4485,8 +4486,32 @@ Elements]</xs:documentation>
       <xs:attributeGroup ref="tei:att.global.analytic.attribute.ana"/>
       <xs:attributeGroup ref="tei:att.global.responsibility.attribute.cert"/>
       <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
-      <xs:attributeGroup ref="tei:att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:att.typed.attribute.subtype"/>
       <xs:attributeGroup ref="xml:id1"/>
+      <xs:attribute name="type" use="required">
+        <xs:annotation>
+          <xs:documentation>caractérise l'élément en utilisant n'importe quel système ou typologie de classification approprié.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="ed">
+              <xs:annotation>
+                <xs:documentation>(édition) précise que le document contient une édition numérisée</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ms">
+              <xs:annotation>
+                <xs:documentation>(manuscrit) précise que le document contient une transcription de manuscrit</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="crit">
+              <xs:annotation>
+                <xs:documentation>(texte critique) précise que le document contient un apparat de variantes permettant la restitution d'un ou plusieurs textes critiques</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="text" substitutionGroup="tei:model.resourceLike">
