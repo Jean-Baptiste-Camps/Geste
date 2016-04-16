@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Floovant_Guessard-1858">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Floovant_Guessard-1858" type="ed">
         <!-- Songerà ajouter att.typed (@type, @subtype) pour les corrections (distinction errata / interventions éditoriales) -->
 
         <teiHeader>
@@ -86,9 +86,9 @@
                         <creation>
                                 <origPlace cert="unknown" resp="#Guessard #Michelant"
                                         >Inconnue</origPlace>
-                                <origDate cert="medium" resp="#Guessard #Michelant">XIIe
+                                <origDate cert="medium" resp="#Guessard #Michelant" notBefore="1101" notAfter="1200">XIIe
                                         siècle</origDate>
-                                <origDate cert="medium" resp="#Arlima">Fin XIIe siècle</origDate>
+                                <origDate cert="medium" resp="#Arlima" notBefore="1180" notAfter="1200">Fin XIIe siècle</origDate>
                         </creation>
                         <langUsage>
                                 <language cert="high" resp="Guessard" ident="fro" usage="80"
@@ -9095,9 +9095,9 @@
                                         <w>atandanz</w>
                                         <pc type="supplied">,</pc></q>
                                 </l>
-                                <lb/>
+                                <!--<lb/>
                                 <l/>
-
+-->
                                 <lb/>
                                 <l>
                                         <q><pc type="supplied">«</pc>
@@ -17491,7 +17491,7 @@
                                 </l>
                         </lg>
                         
-                        <lg type="laisse" n="XXXII" xml:id="#L_032">                             
+                        <lg type="laisse" n="XXXII" xml:id="L_032">                             
                                 <lb/><l>
                                         <persName><w>EMELONS</w></persName>
                                         <w>prist</w>
@@ -17697,7 +17697,7 @@
                                 </l>
                         </lg>
                         
-                        <lg type="laisse" n="XXXIII" xml:id="#L_033">                         
+                        <lg type="laisse" n="XXXIII" xml:id="L_033">                         
                                 <lb/>
                                 <l>
                                         <w>DE</w>
@@ -17803,7 +17803,7 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                         </lg>
-                        <lg type="laisse" n="XXXIV" xml:id="#L_034">
+                        <lg type="laisse" n="XXXIV" xml:id="L_034">
                                 <lb/><l>
                                         <persName><w>RICHIERS</w></persName>
                                         <w>point</w>
