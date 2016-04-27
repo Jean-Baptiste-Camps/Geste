@@ -83,6 +83,8 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="draft">
+      <change who="AC" when="2016-04-27" status="draft">Insertion des notes et corrections sur 
+      la totalité du texte, début de la relecture et vérification des notes.</change>
       <change who="AC" when="2016-04-21" status="draft">Révision du texte finie, début de l'insertion
       des notes et des corrections (jusqu'à la page 40)</change>
       <change who="AC" when="2016-04-20" status="draft">Avancement du texte jusqu'à la vue
@@ -2045,7 +2047,7 @@
       </div>
     </front>
     <body>
-      <!--JBC: Pour l'instant, 4236  vers pour 4304 attendus ! -->
+      <!--JBC: Pour l'instant, 4237  vers pour 4304 attendus ! -->
       <pb facs="facsimile0049.bin.png" n="0049"/>
       <head>GUI DE BOURGOGNE</head>
       <lg n="I" type="laisse" xml:id="L_001">
@@ -2547,7 +2549,7 @@
           <pc type="supplied">-</pc>
           <q>
             <app>
-              <lem>
+              <lem wit="#a">
                 <corr resp="#Guessard" cert="unknown">
                   <w>En</w>
                 </corr>
@@ -2746,11 +2748,9 @@
           </q>
         </l>
         <lb/>
- <!-- NOTE SUIVANTE A VERIFIER -->       
+ <!-- ******************* NOTE SUIVANTE A CORRIGER JEUDI 28 ********************* -->       
         <app>
-          <note resp="#Guessard">
-            <lb/>Après ce vers, b ajoute : 
-          </note>
+          <lem wit="#a"/>
           <rdg wit="#b">
             <l>
               <w>Et</w>
@@ -2767,6 +2767,9 @@
               <pc type="supplied">.</pc>
             </l>
           </rdg>
+          <note resp="#Guessard">
+            <lb/>Après ce vers, b ajoute : 
+          </note>
         </app>
         <l>
           <pc type="supplied">«</pc>
@@ -3983,7 +3986,7 @@
           <pc type="supplied">«</pc>
           <q>
             <app>
-              <lem wit="a">
+              <lem wit="#a">
                 <w>Va</w>
                 <w>moi</w>
                 <pc type="supplied">,</pc>
@@ -4946,8 +4949,10 @@
           <pc type="supplied">.</pc>
         </l>
         <lb/>
+<!-- NOTE A VERIFIER -->        
         <app>
-          <rdg wit="b"/>
+          <lem wit="#a"></lem>
+          <rdg wit="#b"/>
           <note resp="#Guessard">Entre ces deux vers se placent dans le manuscrit b <lb/> trois tirades où sont
           brievement racontées des défaites <lb/> de Charlemagne.</note>  
         </app>
@@ -5173,11 +5178,12 @@
           <w>sers</w>
 <!-- CORRECTION A VERIFIER -->
           <app>
-            <lem>
-              premerai
-              <corr resp="#Guessard">
-                n
-              </corr>
+            <lem wit="#a">
+              <w>premerai
+                <corr resp="#Guessard">
+                  n
+                </corr>
+              </w>
             </lem>
           </app>
           <w>contrové</w>
@@ -5193,8 +5199,10 @@
           <pc type="supplied">'</pc>
           <w>ost</w>
           <app>
-            <lem>s
-              <corr resp="#Guessard">e</corr>
+            <lem wit="#a">
+              <w>s
+                <corr resp="#Guessard">e</corr>
+              </w>
             </lem>
           </app>
           <w>est</w>
@@ -9110,7 +9118,7 @@
         </l>
         <lb/>
         <l>
-          <w>Jusc</w>
+          <w rend="elision">Jusc</w>
           <pc type="supplied">'</pc>
           <w>à</w>
           <w rend="elision">l</w>
@@ -11424,7 +11432,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>un</w>
           <w>mort</w>
@@ -11886,7 +11894,7 @@
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>lor</w>
@@ -13818,7 +13826,7 @@
           <pc type="supplied">«</pc>
           <q>
             <app>
-              <lem>
+              <lem wit="#a">
                 <w>E<corr resp="#Guessard">n</corr></w>
               </lem>
             </app>
@@ -13970,7 +13978,7 @@
         </l>
         <lb/>
         <l>
-          <w>Jusqu</w>
+          <w rend="elision">Jusqu</w>
           <pc type="supplied">'</pc>
           <w>à</w>
           <w rend="elision">l</w>
@@ -15023,7 +15031,7 @@
         </l>
         <lb/>
         <l>
-          <!-- NOTE ? -->
+<!-- ##############  NOTE ? ###################-->
           <w>(Tous</w>
           <w>porris</w>
           <w>les</w>
@@ -15038,7 +15046,7 @@
         <l>
           <w>Et</w>
           <app>
-            <lem wit="#Guessar">
+            <lem wit="#Guessard">
               <w>si</w>
             </lem>
           </app>
@@ -15171,7 +15179,7 @@
         <!--          <lb/>26 GUI DE BOURGOGNE. 817-850 -->
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>les</w>
@@ -15230,7 +15238,7 @@
         </l>
         <lb/>
         <l>
-          <w>N</w>
+          <w rend="elision">N</w>
           <pc type="supplied">'</pc>
           <w>i</w>
           <w>avoit</w>
@@ -15270,7 +15278,7 @@
         </l>
         <lb/>
         <l>
-          <w>S</w>
+          <w rend="elision">S</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>ot</w>
@@ -16920,8 +16928,9 @@
           <pc type="supplied">,</pc>
           <app>
             <lem wit="#Guessard">
-              <w>[dist]</w>
+              <w>dist</w>
             </lem>
+            <rdg wit="#a"/>
           </app>
           <w>Naimes</w>
           <pc type="supplied">,</pc>
@@ -17688,6 +17697,7 @@
               <w>Guion</w>
               <pc type="supplied">,</pc>
             </lem>
+            <rdg wit="#a"/>
           </app>
           </q>
         </l>
@@ -18365,7 +18375,7 @@
         </l>
         <lb/>
         <l>
-          <w>S</w>
+          <w rend="elision">S</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>ne</w>
@@ -19349,9 +19359,9 @@
           <w>compain</w>
           <w>Hardré</w>
           <pc type="supplied">;</pc>
-        </l>
-        <lb/>
+<!-- VERIFIER CETTE NOTE ##################### -->     
         <app>
+          <lem wit="#a"/>
           <rdg wit="#b">
             <w>Tebalt</w>
             <w>et</w>
@@ -19366,6 +19376,7 @@
             <lb/>b ajoute, après ce vers : <lb/> <q>Tebalt et Alori, Malvaisin et Mauré.</q>
           </note>
         </app>
+        </l>
         <l>
           <w>Cil</w>
           <w>Sires</w>
@@ -20800,7 +20811,7 @@
         </l>
         <lb/>
         <l>
-          <w>N</w>
+          <w rend="elision">N</w>
           <pc type="supplied">'</pc>
           <w>en</w>
           <w>mantirent</w>
@@ -21449,7 +21460,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>empereres</w>
           <w>de</w>
@@ -21878,7 +21889,7 @@
         </l>
         <lb/>
         <l>
-          <w>Jusc</w>
+          <w rend="elision">Jusc</w>
           <pc type="supplied">'</pc>
           <w>às</w>
           <w>trés</w>
@@ -22048,7 +22059,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>emperere</w>
           <w>de</w>
@@ -22315,7 +22326,7 @@
               <pc type="supplied">.</pc>
             </rdg>
  <!-- NOTE NECESSAIRE ICI ?-->           
-            <note resp="#Guessard">Leçon de a : <lb/> <q>Que vous a il mesfait ? Bertran li respondi.</q>
+            <note resp="#Guessard">Leçon de b : <lb/> <q>Que vous a il mesfait ? Bertran li respondi.</q>
             </note>
           </app>
         </l>
@@ -22684,7 +22695,7 @@
             </rdg>
  <!-- NOTE NECESSAIRE ICI ? -->           
             <note resp="#Guessard">
-              Leçon de a : <q>Enfant, fait il, je vous</q>
+              <lb/>Leçon de a : <q>Enfant, fait il, je vous</q>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -22741,7 +22752,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>emperere</w>
           <w>de</w>
@@ -22781,7 +22792,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>emperere</w>
           <w>de</w>
@@ -22882,7 +22893,6 @@
             qui est un cordon.
             </note>
           </app>
-          <w>guige</w>
           <pc type="supplied">,</pc>
           <w>mist</w>
           <w>le</w>
@@ -22906,7 +22916,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>escherpe</w>
           <w>cordowane</w>
@@ -23707,7 +23717,7 @@
           <pc type="supplied">,</pc>
           <w>dist</w>
           <app>
-            <lem> <!-- wit non exprimé dans les notes... resp#Guessard ??-->
+            <lem wit="#Guessard"> 
                 <w>Boydans</w>
             </lem>
             <rdg wit="#a">
@@ -24086,7 +24096,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>empereres</w>
           <w rend="elision">l</w>
@@ -24115,7 +24125,7 @@
         </l>
         <lb/>
         <l>
-          <w>Jusc</w>
+          <w rend="elision">Jusc</w>
           <pc type="supplied">'</pc>
           <w>au</w>
           <w>maistre</w>
@@ -24247,7 +24257,7 @@
         </l>
         <lb/>
         <l>
-          <w>D</w>
+          <w rend="elision">D</w>
           <pc type="supplied">'</pc>
           <w>ont</w>
           <w>il</w>
@@ -24645,7 +24655,18 @@
           <w>barbe</w>
           <w>dont</w>
           <w>li</w>
-          <w>peus</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>peus</w>
+            </lem>
+            <rdg wit="#a">
+              <w>peust</w>
+            </rdg>
+            <note resp="#Guessard">On lit dans a : <q>peust</q>, qui est inadmissible ; 
+              nous corri<lb break="no" rend="hyphen"/>geons et lisons : <q>peus</q> pour 
+            <q>pels</q>, poil.
+            </note>
+          </app>
           <w>est</w>
           <w>mellez</w>
           <pc type="supplied">,</pc>
@@ -24743,7 +24764,7 @@
         </l>
         <lb/>
         <l>
-          <w>S</w>
+          <w rend="elision">S</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>li</w>
@@ -24799,7 +24820,7 @@
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>li</w>
@@ -25225,9 +25246,23 @@
           <w>méismes</w>
           <w>ses</w>
           <w>cors</w>
-          <w>est</w>
-          <w>maintenant</w>
-          <w>montez</w>
+          <app>
+            <lem wit="#a">
+              <w>est</w>
+              <w>maintenant</w>
+              <w>montez</w>
+            </lem>
+            <rdg wit="#b">
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>est</w>
+              <w>maintenant</w>
+              <w>armez</w>
+            </rdg>
+            <note>
+              <lb/>Leçon de b : <q>s'est</q> maintenant <q>armez</q>.
+            </note>
+          </app>
           <pc type="supplied">;</pc>
         </l>
         <lb/>
@@ -25404,7 +25439,7 @@
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>ne</w>
@@ -26299,6 +26334,16 @@
             <w>mult</w>
             <w>fel</w>
             <w>et</w>
+            <app>
+              <lem wit="#Guessard"/>
+              <rdg wit="#a">
+                <w>mult</w>
+              </rdg>
+              <note resp="#Guessard">
+                On lit dans a : <q><hi>mult</hi>fel et <hi>mult</hi>des<lb break="no" 
+                  rend="hyphen"/>mesurez</q>, leçon qui fausse le vers.
+              </note>
+            </app>
             <w>desmesurez</w>
             <pc type="supplied">.</pc>
           </q>
@@ -26329,6 +26374,14 @@
             <w>eves</w>
             <w>i</w>
             <w>acourent</w>
+            <note>
+              <lb/>.III. eves i acourent..... <lb/>Voyez p. 86, v. 3 : Sivirent les .IIII. eves. 
+              <lb/>Si l'on adopte cette seconde leçon, il faudra lire ici :
+              <lb/><q>L'une a non Rupane, l'autre Marne des guez ; <lb/> Si i cort 
+                <hi>Anviron</hi>.....</q>
+              <lb/>que nous n'avons osé considérer comme l'une des <lb/>quatre rivières aimantées qui
+              couloient à Montor<lb break="no" rend="hyphen"/>gueil.
+            </note>
             <w>devant</w>
             <w>par</w>
             <w>les</w>
@@ -26521,13 +26574,11 @@
           <pc type="supplied">'</pc>
           <w>enfes</w>
           <app>
-            <lem> <!-- pas de wit -->
-              <corr resp="#Guessard">
+            <lem wit="#Guessard"> 
                 <w>Guis</w>
-              </corr>
             </lem>
+            <rdg wit="#a"/>
           </app>
-          
           <pc type="supplied">,</pc>
           <q>
             <w rend="elision">m</w>
@@ -26999,7 +27050,7 @@
         </l>
         <lb/>
         <l>
-          <w>S</w>
+          <w rend="elision">S</w>
           <pc type="supplied">'</pc>
           <w>a</w>
           <w>véu</w>
@@ -27499,11 +27550,10 @@
           <w>à</w>
           <w>Luiserne</w>
           <app>
-            <lem> <!-- pas de wit -->
-              <corr resp="#Guessard">
+            <lem wit="#Guessard"> 
                 <w>la</w>
-              </corr>
             </lem>
+            <rdg wit="#a"/>
           </app>
           <w>grant</w>
           <pc type="supplied">.</pc>
@@ -27883,14 +27933,11 @@
           <q>
             <w>Lasses</w>
             <pc type="supplied">,</pc>
-            
-              <!-- SYNTAXE TEI A VERIFIER --> 
-              <app>
-                <lem> <!-- pas de wit -->
+             <app>
+                <lem wit="#a"> <!-- pas de wit -->
                   <w>maléureuse<corr resp="#Guessard">s</corr></w>
                 </lem>
               </app>
-            
             <pc type="supplied">!</pc>
             <w>com</w>
             <w>nos</w>
@@ -28094,26 +28141,24 @@
         <!-- <lb/>Gui de Bourgogne.   4 -->
 
         <pb facs="facsimile0098.bin.png" n="0098"/>
-        <lb/>
         <!--50-->
         <!-- <lb/>GUI DE BOURGOGNE. 1615-1647 -->
         <lb/>
         <l>
-          <!-- VEIRIFER LA SYNTAXE AVEC LE <q> -->
+<!-- ######### VERIFIER LA SYNTAXE AVEC LE <q> #############-->
           <pc type="supplied">»</pc>
           <q>
             <w>Sire</w>
           </q>
           <app>
-            <lem>
-              <corr resp="#Guessard">
+            <lem wit="#Guessard">
                 <q>
                   <w>Guis</w>
                 </q>
                 <pc type="supplied">,</pc>
                 <w>ce</w>
-              </corr>
             </lem>
+            <rdg wit="#a"/>
           </app>
           <w>dist</w>
           <w>il</w>
@@ -28210,7 +28255,18 @@
           <q>
             <w>Quant</w>
             <w>lui</w>
-            <w>vient</w>
+            <app>
+              <lem wit="#a">
+                <w>vient</w>
+              </lem>
+              <rdg wit="#b">
+                <w>ert</w>
+              </rdg>
+              <note>
+                <lb/><q>Quant lui <hi>vient</hi> à plaisir, panre le nous lera.</q> 
+                <lb/>Leçon de b : <lb/><q>Quant lui <hi>ert</hi> à plaisir...</q>
+              </note>
+            </app>
             <w>à</w>
             <w>plaisir</w>
             <pc type="supplied">,</pc>
@@ -28315,11 +28371,10 @@
           <w>Icelui</w>
           <w>jor</w>
           <app>
-            <lem> <!-- no wit -->
-              <corr resp="#Guessard">
+            <lem wit="#Guessard"> 
                 <w>illec</w>
-              </corr>
             </lem>
+            <rdg wit="#a"/>
           </app>
           <w>les</w>
           <w>convint</w>
@@ -28995,11 +29050,10 @@
             <w>bien</w>
             <w>chevalier</w>
             <app>
-              <lem> <!-- no wit -->
-                <corr resp="#Guessard">
+              <lem wit="#Guessard"> 
                   <w>ferir</w>
-                </corr>
               </lem>
+              <rdg wit="#a"/>
             </app>
             <w>et</w>
             <w>ancontrer</w>
@@ -29392,11 +29446,13 @@
                 </corr>
               </choice>
             </lem>
-            <rdg wit="#a"/> <!-- A VERIFIER CAR LA CORRECTION VIENT DU 
-              MEME MANUSCRIT AILLEURS-->
-            <note resp="#Guessard"> <!-- doit-on garder la même disposition du texte que dans la note? -->
-              Vers de dix syllabes seulement. La correction est empruntée au premier vers
-              de plusieurs des tirades précédentes.
+            <rdg wit="#a"/> 
+ <!-- A VERIFIER CAR LA CORRECTION VIENT DU MEME MANUSCRIT AILLEURS-->
+            <note resp="#Guessard"> 
+              <lb/>Leçon de a :
+              <lb/><q>Li enfes Guis regarda Maucabré.</q> <lb/>Vers de dix syllabes seulement. 
+              La correction est em<lb break="no" rend="hyphen"/>pruntée au premier vers de plusieurs
+              des tirades pré<lb break="no" rend="hyphen"/>cédentes. 
             </note>
           </app>
           <w>regarda</w>
@@ -29420,9 +29476,21 @@
         </l>
         <lb/>
         <l>
-          <w>En</w>
-          <w>arcage</w>
-          <w>grezois</w>
+          <app>
+            <lem wit="#a">
+              <w>En</w>
+              <w>arcage</w>
+              <w>grezois</w>
+            </lem>
+            <rdg wit="#b">
+              <w>En</w>
+              <w>parole</w>
+              <w>grejoise</w>
+            </rdg>
+            <note resp="#Guessard"><lb/><q>En arcage grezois.....</q>Leçon de b : <q>En parole
+            grejoise</q>
+            </note>
+          </app>
           <pc type="supplied">,</pc>
           <w>que</w>
           <w>il</w>
@@ -30185,8 +30253,9 @@
         </l>
         <lb/>
         <l>
+          <q>
           <app>
-            <lem> <!-- no wit -->
+            <lem wit="#a"> <!-- no wit -->
               <choice>
                 <sic>
                   <w>Que</w>
@@ -30206,12 +30275,11 @@
               </choice>
             </lem> <!-- VERIFIER LA NOTE - POINTAGE ? -->
             <note resp="#Guessard" cert="unknown">
-              Vers de dix syllabes seulement. L'addition de <q>et</q> semble naturelle,
-              et <q>conduie</q>, qui a le même sens que <q>maint</q>, est employé vingt fois
-              dans le poëme en semblable cas.
+              Vers de dix syllabes seulement. L'addition de <q>et</q> <lb/>semble naturelle,
+              et <q>conduie</q>, qui a le même sens que<lb/> <q>maint</q>, est employé vingt fois
+              dans le poëme en sem<lb break="no" rend="hyphen"/>blable cas.
             </note>
           </app>
-          <q> <!-- quote ici ? -->
             <pc type="supplied">,</pc>
             <w rend="elision">s</w>
             <pc type="supplied">'</pc>
@@ -30267,10 +30335,27 @@
           <w>li</w>
           <w>rois</w>
           <pc type="supplied">,</pc>
-          <w>il</w>
-          <w>et</w>
-          <w>sa</w>
-          <w>compaignie</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>il</w>
+              <w>et</w>
+              <w>sa</w>
+              <w>compaignie</w>
+            </lem>
+            <rdg wit="#a">
+              <w>et</w>
+              <w>il</w>
+              <w>et</w>
+              <w>sa</w>
+              <w>grant</w>
+              <w>compaignie</w>
+            </rdg>
+            <note>
+              <lb/><q>Or chevauche li rois, il et sa compaignie.</q>
+              <lb/>Leçon de a : <lb/><q>Or chevauche li rois, <hi>et</hi> il et sa <hi>grant</hi> 
+                compaignie.</q> 
+            </note>
+          </app>
           <pc type="supplied">;</pc>
         </l>
         <lb/>
@@ -30290,15 +30375,19 @@
           <w>Parmi</w>
           <w>la</w>
           <app>
-            <lem> <!-- wit = #a ? -->
+            <lem wit="#Guessard"> <!-- wit = #a ? -->
+ <!-- ###### VOIR COMMENT FAIRE POUR CE CAS PARTICULIER ################## -->             
                 <corr resp="#Guessard" cert="unknown"> <!-- il s'agit d'un ajout-->
                   <w>maistre</w>
                 </corr>
             </lem>
+            <rdg wit="#a"/>
             <note resp="#Guessard"> 
-              <q>Maistre</q> manque ici dans le manuscrit a. Au dixième vers de la tirade
-              suivante, c'est le mot <q>porte</q> qui manque, comme l'indique le manuscrit b, 
-              qui donne posterne. Nous complétons ces deux vers l'un par l'autre.
+              <lb/><q>Parmi la [maistre] porte.</q> <lb/><q>Maistre</q> manque ici dans le manuscrit 
+              a. Au dixième<lb/>vers de la tirade suivante, c'est le mot porte qui manque, 
+              <lb/>comme l'indique le manuscrit b, qui donne posterne. <lb/>Nous complétons ces 
+              deux vers l'un par l'autre.
+              <lb/>
             </note>
           </app>
           <w>porte</w>
@@ -30323,7 +30412,22 @@
         <lb/>
         <l>
           <w>Chevaus</w>
-          <w>virent</w>
+          <app>
+            <lem wit="#a">
+              <choice>
+                <sic>
+                  <w>vinrent</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>virent</w>
+                </corr>
+              </choice>
+            </lem>
+            <note>
+              <lb/>Chevaus virent..... <lb/>Nous corrigeons le manuscrit, qui donne
+              vinrent. 
+            </note>
+          </app>
           <w>et</w>
           <w>murs</w>
           <w>et</w>
@@ -30514,7 +30618,8 @@
           <w>tor</w>
           <pc type="supplied">,</pc>
           <app>
-            <lem> <!-- no wit -->
+            <lem wit="#a"> 
+<!-- ###### VERIFIER CES CAS OÙ ON TROUVE UNE CORRECTION ENTRE CROCHETS SANS EXPLICATION #### -->              
               <corr resp="#Guessard" cert="unknown">
                 <w>el</w>
                 <w>chief</w>
@@ -30637,13 +30742,14 @@
         </l>
         <lb/>
         <l>
-          <w>Jusc</w>
+          <w rend="elision">Jusc</w>
           <pc type="supplied">'</pc>
           <w>à</w>
           <w>la</w>
           <w>maistre</w>
           <app>
-            <lem> <!-- no wit ? a ? cf. au-dessus "maistre" -->
+<!-- ###### QUE FAIRE AVEC CE CAS PARTICULIER ? ################ -->            
+            <lem wit="#a"> <!-- no wit ? a ? cf. au-dessus "maistre" -->
               <corr resp="#Guessard" cert="unknown"> 
                 <w>porte</w>
               </corr>
@@ -30710,9 +30816,22 @@
           <w rend="elision">s</w>
           <pc type="supplied">'</pc>
           <w>ot</w>
-          <w>le</w>
-          <w>poil</w>
-          <w>levé</w>
+          <app>
+            <lem wit="#a">
+              <w>le</w>
+              <w>poil</w>
+              <w>levé</w>
+            </lem>
+            <rdg wit="#b">
+              <w>large</w>
+              <w>le</w>
+              <w>nez</w>
+            </rdg>
+            <note resp="#Guessard">
+              <lb/><q>Il ot les sorcils grans et s'ot <hi>le poil levé</hi>.</q> <lb/>Leçon
+              de b : <q>et s'ot <hi>large le nez</hi></q>. 
+            </note>
+          </app>
           <pc type="supplied">,</pc>
         </l>
         <lb/>
@@ -30908,7 +31027,7 @@
           <w>est</w>
           <w>sor</w>
           <app>
-            <lem> <!-- no wit -->
+            <lem wit="#a"> 
               <corr resp="#Guessard" cert="unknown">
                 ses
               </corr>
@@ -31164,7 +31283,7 @@
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>en</w>
@@ -31376,20 +31495,27 @@
           </q>
           <pc type="supplied">,</pc>
           
-          <app> <!-- REVOIR LA SYNTAXE DES CORR ANTERIEURES -->
-            <lem wit="#Guessard"> 
-              <w>dist</w> <!-- j'intègre ici "dist" dans la correction car "ce" a été suppr -->
-              <w rend="elision">l</w>
-              <pc type="supplied">'</pc>
-              <w>enfes</w>
+          <app> 
+            <lem wit="#a"> 
+              <choice>
+                <sic>
+                  <w>ce</w>
+                  <w>dist</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>dist</w> 
+                  <w rend="elision">l</w>
+                  <pc type="supplied">'</pc>
+                  <w>enfes</w>
+                </corr>
+              </choice>
             </lem>
-            <rdg wit="#a">
-              <w>ce</w>
-              <w>dist</w>
-            </rdg>
-            <note resp="#Guessard">
-              Nous corrigeons le manuscrit en rentranchant <q>ce</q> et en reproduisant ici
-              une forme qui se retrouve en vingt autres passages.
+            <note resp="#Guessard" cert="unknown">
+              <lb/><q>Seignor, dist <hi>[l'enfes]</hi> Guis, envers
+              moi entandés.</q> 
+              <lb/>Leçon de a : <lb/><q>Seignor, ce dist Guis, envers moi entandés.</q> <lb/>Nous
+              corrigeons le manuscrit en retranchant ce et en <lb/>reproduisant ici une forme qui se
+              retrouve en vingt<lb/>autres passages.
             </note>
           </app>
           <w>Guis</w>
@@ -31483,7 +31609,7 @@
         </l>
         <lb/>
         <l>
-          <w>N</w>
+          <w rend="elision">N</w>
           <pc type="supplied">'</pc>
           <w>i</w>
           <w>vodroit</w>
@@ -31715,7 +31841,18 @@
         <l>
           <w>Desus</w>
           <w>le</w>
-          <w>faudestuef</w>
+          <app>
+            <lem wit="#a">
+              <w>faudestuef</w>
+            </lem>
+            <rdg wit="#b">
+              <w>faldestol</w>
+            </rdg>
+            <note>
+              <lb/><q>Desus le <hi>faudestuef</hi> se sist li rois prisiés.</q> <lb/>Leçon de b :
+              <q>faldestol</q>. 
+            </note>
+          </app>
           <w>se</w>
           <w>sist</w>
           <w>li</w>
@@ -34079,8 +34216,13 @@
         <l>
           <w>Et</w>
           <w>Bertrans</w>
-<!-- CORRECTION NON EXPLIQUEE A BALISER-->
-          <w>[et]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>et</w>
+              </corr>
+            </lem>
+          </app>
           <w>Turpin</w>
           <pc type="supplied">,</pc>
           <w>Estous</w>
@@ -35503,10 +35645,15 @@
             <w rend="elision">Qu</w>
             <pc type="supplied">'</pc>
             <w>il</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w rend="elision">[n</w>
-            <pc type="supplied">'</pc>
-            <w>a]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                   <w rend="elision">n</w>
+                   <pc type="supplied">'</pc>
+                   <w>a</w>
+                </corr>
+              </lem>
+            </app>
             <w>meillor</w>
             <pc type="supplied">,</pc>
             <w>ce</w>
@@ -36241,8 +36388,13 @@
             <pc type="supplied">'</pc>
             <w>irïons</w>
             <w>ja</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>[tous]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>tous</w>
+                </corr>
+              </lem>
+            </app>
             <w>de</w>
             <w>traïson</w>
             <w>reter</w>
@@ -37272,16 +37424,36 @@
         </l>
         <lb/>
         <l>
-  <!-- CORRECTION A BALISER : CF VUE 188 -->
-          <w>[Or</w>
-          <w rend="elision">s</w>
-          <pc type="supplied">'</pc>
-          <w>en</w>
-          <w>va</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes</w>
-          <w>Guis]</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>Or</w>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>va</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w>Guis</w>
+            </lem>
+            <rdg wit="#a">
+              <w rend="elision">L</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>va</w>
+            </rdg>
+            <note>
+              <lb/><q><hi>[Or s'en va l'enfes Guis]</hi> qui Diex croisse bonté.</q>
+              <lb/>Ce vers n'a que dix syllabes dans le manuscrit a : <lb/><q>L'enfes s'en va qui 
+              Diex croisse bonté.</q> 
+              <lb/>Nous proposons de le corriger comme ci-dessus, et <lb/>nous répétons cette 
+              correction deux vers plus bas, où <lb/>on lit dans le même manuscrit : 
+              <lb/><q>L'enfes s'en va sous l'Olivier ramé. </q>
+            </note>
+          </app>
           <pc type="supplied">,</pc>
           <w>qui</w>
           <w>Diex</w>
@@ -37306,16 +37478,32 @@
         </l>
         <lb/>
         <l>
-  <!-- CORRECTION A BALISER : CF VUES 188 ET 189 -->
-          <w>[Or</w>
-          <w rend="elision">s</w>
-          <pc type="supplied">'</pc>
-          <w>en</w>
-          <w>va</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes</w>
-          <w>Guis]</w>
+<!-- ############### CAS PARTICULIER CF CORRECTION AU-DESSUS ############# -->
+          <app>
+            <lem wit="#Guessard">
+              <w>Or</w>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>va</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w>Guis</w>
+            </lem>
+            <rdg wit="#a">
+              <w rend="elision">L</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>va</w>
+            </rdg>
+            <note>
+              <!-- QUE METTRE ? -->
+            </note>
+          </app>
           <w>sous</w>
           <w rend="elision">l</w>
           <pc type="supplied">'</pc>
@@ -37490,22 +37678,48 @@
           <pc type="supplied">,</pc>
  <!-- CORRECTION DEJA BALISEE A VERIFIER -->        
           <app>
-            <lem wit="#b"><w>molt</w>
+            <lem wit="#b">
+              <w>molt</w>
               <w>semble</w>
               <w>bien</w>
-              <w>vassal</w></lem>
-            <rdg wit="#a">Le cors ot gent et bien fait contreval.</rdg>
-            <note resp="#Guessard">Encore un vers de dix syllabes dans le manuscrit a : <lb/><q>Le
-                cors ot gent et bien fait contreval.</q>
-              <lb/>b nous fournit la correction.</note>
+              <w>vassal</w>
+            </lem>
+            <rdg wit="#a">
+              <w>Le</w> 
+              <w>cors</w> 
+              <w>ot</w> 
+              <w>gent</w> 
+              <w>et</w> 
+              <w>bien</w> 
+              <w>fait</w> 
+              <w>contreval</w>
+              <pc type="supplied">.</pc>
+            </rdg>
+            <note resp="#Guessard"><lb/><q>Le cors ot gent, bien fait, 
+              [<hi rend="superscript">b</hi>molt semble bien
+              vassal.]</q> 
+              <lb/>Encore un vers de dix syllabes dans le manuscrit a : <lb/><q>Le cors ot gent et
+              bien fait contreval.</q> <lb/>b nous fournit la correction. 
+            </note>
           </app>
           <pc type="supplied">,</pc>
         </l>
         <lb/>
         <l>
           <w>Les</w>
-    <!-- CORRECTION A BALISER : CF VUE 189 -->
-          <w>[jambes]</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>jambes</w>
+            </lem>
+            <rdg wit="#a">
+              <w>chevaus</w>
+            </rdg>
+            <note>
+              <lb/><q>Les <hi>[jambes]</hi> fors et longes por séoir sor cheval.</q>
+              <lb/>Leçon, évidemment fautive, du manuscrit a : 
+              <lb/><q>Les chevaus fors et longes..... </q>
+            </note>
+          </app>
           <w>fors</w>
           <w>et</w>
           <w>longes</w>
@@ -37623,9 +37837,13 @@
             <w>sire</w>
           </q>
           <pc type="supplied">,</pc>
-    <!-- CORRECTION NON JUSTIFIEE A BALISER -->      
-          <w>[dist</w>
-          <w>it]</w>
+          <app>
+            <lem wit="#a"/>
+            <rdg wit="#Guessard">
+              <w>dist</w>
+              <w>it</w>
+            </rdg>
+          </app>
           <pc type="supplied">,</pc>
           <q>
             <w>par</w>
@@ -38948,7 +39166,7 @@
         <lb/>
         <l>
           <pc type="supplied">«</pc>
- <!-- TRAITEMENT DE LA PARENTHESE ? --> 
+ <!-- ########## TRAITEMENT DE LA PARENTHESE ? ############# --> 
           <q>
             <w>Et</w>
             <w>quistrent</w>
@@ -39318,7 +39536,18 @@
           <w>i</w>
           <w>ot</w>
           <w>tous</w>
-          <w>séélés</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>séélés</w>
+            </lem>
+            <rdg wit="#a">
+              scelés
+            </rdg>
+            <note>
+              <lb/><q>.XXIIII. topaees i ot tout séélés.</q> 
+              <lb/>Le manuscrit a donne <q>scelés</q>, qui fausse le vers. 
+            </note>
+          </app>
           <pc type="supplied">;</pc>
         </l>
         <lb/>
@@ -39532,8 +39761,13 @@
           <w>Qui</w>
           <w>ne</w>
           <w>menjue</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[mie]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>mie</w>
+              </corr>
+            </lem>
+          </app>
           <w rend="elision">d</w>
           <pc type="supplied">'</pc>
           <w>avoine</w>
@@ -39734,7 +39968,7 @@
         </l>
         <lb/>
         <l>
-          <w>C</w>
+          <w rend="elision">C</w>
           <pc type="supplied">'</pc>
           <w>or</w>
           <w>i</w>
@@ -40470,8 +40704,7 @@
           <q>
             <w>Faites</w>
             <pc type="supplied">.</pc>
-  <!-- LETTRE SUSCRITE -->          
-            <w>IIIc</w>
+            <w>III<hi rend="superscript">c</hi></w>
             <pc type="supplied">.</pc>
             <w>paiens</w>
             <w>fervestir</w>
@@ -40651,9 +40884,13 @@
           <w>il</w>
           <w>les</w>
           <w>ont</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[perciés</w>
-          <w>]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>perciés</w>
+              </corr>
+            </lem>
+          </app>
           <w>et</w>
           <w>frais</w>
           <w>et</w>
@@ -41295,15 +41532,39 @@
         <lb/>
         <l>
  <!-- CORRECTION A BALISER : CF VUE 189 -->
-          <w>[Lores]</w>
+          <app>
+            <lem wit="#Guessard">
+               <w>Lores</w>
+            </lem>
+            <rdg wit="#a">
+              <w>Lors</w>
+            </rdg>
+<!-- ########## QUE FAIRE DANS LE CAS DE CETTE NOTE ? ###########" -->           
+            <note resp="#Guessard">
+              <lb/><q><hi>[Lores]</hi> ne doutast il .IIII. rois coronés.</q> <lb/>Le manuscrit a 
+              donne <q>lors</q>, qui fausse le vers. Au lieu <lb/>de <q>rois coronés</q>, on lit dans 
+              b : <q>Turcs defaez</q>. 
+            </note>
+          </app>
           <w>ne</w>
           <w>doutast</w>
           <w>il</w>
           <pc type="supplied">.</pc>
           <w>IIII</w>
           <pc type="supplied">.</pc>
-          <w>rois</w>
-          <w>coronés</w>
+          <app>
+            <lem wit="#a">
+              <w>rois</w>
+              <w>coronés</w>
+            </lem>
+            <rdg wit="b">
+              <w>Turcs</w>
+              <w>defaez</w>
+            </rdg>
+            <note>
+<!-- ##### METTRE UNE NOTE ICI ? ###################### -->              
+            </note>
+          </app>
           <pc type="supplied">.</pc>
         </l>
         <lb/>
@@ -41671,8 +41932,7 @@
           <w>Plus</w>
           <w>de</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE -->
-          <w>IIIIc</w>
+          <w>IIII<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>mailles</w>
           <pc type="supplied">,</pc>
@@ -41771,7 +42031,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>enfes</w>
           <w>Guis</w>
@@ -42077,7 +42337,7 @@
         </l>
         <lb/>
         <l>
-          <w>Jusqu</w>
+          <w rend="elision">Jusqu</w>
           <pc type="supplied">'</pc>
           <w>el</w>
           <w>neu</w>
@@ -42153,8 +42413,7 @@
           <w>Plus</w>
           <w>de</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE -->
-          <w>IIIIc</w>
+          <w>IIII<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>mailles</w>
           <w>en</w>
@@ -43572,10 +43831,15 @@
           <w rend="elision">l</w>
           <pc type="supplied">'</pc>
           <w>entent</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w rend="elision">[l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>enfes</w>
+              </corr>
+            </lem>
+          </app>
           <w>Guis</w>
           <pc type="supplied">,</pc>
           <w>si</w>
@@ -44438,7 +44702,7 @@
         </l>
         <lb/>
         <l>
-          <w>L</w>
+          <w rend="elision">L</w>
           <pc type="supplied">'</pc>
           <w>enfes</w>
           <w>Guis</w>
@@ -46093,7 +46357,7 @@
         </l>
         <lb/>
         <l>
- <!-- VERIFIER LE TEXTE DIFFICILEMENT LISIBLE AVEC LE LIVRE -->
+ <!-- ############# VERIFIER LE TEXTE DIFFICILEMENT LISIBLE AVEC LE LIVRE ######### -->
           <pc type="supplied">«</pc>
           <q>
             <w>Par</w>
@@ -46127,7 +46391,7 @@
         </l>
         <lb/>
         <l>
- <!-- VERIFIER LE TEXTE DIFFICILEMENT LISIBLE AVEC LE LIVRE -->
+ <!-- ####### VERIFIER LE TEXTE DIFFICILEMENT LISIBLE AVEC LE LIVRE ########## -->
           <pc type="supplied">-</pc>
           <q>
             <w>Tais</w>
@@ -46425,8 +46689,7 @@
             <w>ci</w>
             <w>à</w>
             <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE -->
-            <w>XIIm</w>
+            <w>XII<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
           </q>
         </l>
@@ -46579,8 +46842,7 @@
           <w>Bien</w>
           <w>furent</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->
-          <w>XIIm</w>
+          <w>XII<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>sor</w>
           <w>les</w>
@@ -46871,9 +47133,14 @@
             <w>Amis</w>
           </q>
           <w>ce</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-          <w>[li</w>
-          <w>dist]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>li</w>
+                <w>dist</w>
+              </corr>
+            </lem>
+          </app>
           <w>Guis</w>
           <pc type="supplied">:</pc>
           <pc type="supplied">«</pc>
@@ -46891,9 +47158,14 @@
             <w>Je</w>
             <w>voi</w>
             <w>ici</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-            <w>[vers</w>
-            <w>nos]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>vers</w>
+                  <w>nos</w>
+                </corr>
+              </lem>
+            </app>
             <w>mult</w>
             <w>fiere</w>
             <w>gent</w>
@@ -46914,8 +47186,7 @@
             <w>ci</w>
             <w>à</w>
             <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->
-            <w>XVm</w>
+            <w>XV<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <pc type="supplied">:</pc>
           </q>
@@ -47009,8 +47280,13 @@
             <w rend="elision">m</w>
             <pc type="supplied">'</pc>
             <w>aït</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-            <w>[Diex]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>Diex</w>
+                </corr>
+              </lem>
+            </app>
           </q>
           <pc type="supplied">,</pc>
           <w>dist</w>
@@ -48279,8 +48555,11 @@
             <w>Mais</w>
             <pc type="supplied">,</pc>
             <w>par</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-            <w>cel[e]</w>
+            <app>
+              <lem wit="#a">
+                <w>cel<corr resp="#Guessard">e</corr></w>
+              </lem>
+            </app>
             <w>corone</w>
             <w>dont</w>
             <w>il</w>
@@ -48715,8 +48994,11 @@
           <pc type="supplied">,</pc>
           <q>
             <w>gentils</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>est[es]</w>
+            <app>
+              <lem wit="#a">
+                <w>est <corr resp="#Guessard">es</corr></w>
+              </lem>
+            </app>
             <w>et</w>
             <w>ber</w>
             <pc type="supplied">;</pc>
@@ -48744,12 +49026,24 @@
             <w>Comment</w>
             <pc type="supplied">!</pc>
           </q>
- <!-- CORRECTION A BALISER : CF VUE 189 -->
-          <w>[bdist</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes</w>
-          <w>Guis]</w>
+          <app>
+            <lem wit="#Guessard">
+              <w>dist</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w>Guis</w>
+            </lem>
+            <rdg wit="#a">
+              <w>dist</w>
+              <w>li</w>
+              <w>angres</w>
+            </rdg>
+            <note>
+              <lb/><q>Comment ! dist <hi>[l'enfes Guis]</hi>, dans viellars radotés.</q>
+              <lb/>Leçon du manuscrit a : <lb/><q>Comment ! dist li angres, dans.....</q> <lb/>
+            </note>
+          </app>
           <pc type="supplied">,</pc>
           <q>
             <w>dans</w>
@@ -49229,8 +49523,11 @@
           <pc type="supplied">«</pc>
           <q>
             <w>Mais</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-            <w>Drago[la]ns</w>
+            <app>
+              <lem wit="#a">
+                <w>Drago<corr resp="#Guessard">la</corr>ns</w>
+              </lem>
+            </app>
             <w>mes</w>
             <w>fils</w>
             <pc type="supplied">,</pc>
@@ -50075,8 +50372,7 @@
           <w>Bien</w>
           <w>furent</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->
-          <w>XVm</w>
+          <w>XV<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>esléu</w>
           <w>et</w>
@@ -51028,8 +51324,11 @@
         <l>
           <pc type="supplied">-</pc>
           <q>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>E[n]</w>
+            <app>
+              <lem wit="#a">
+                <w>E<corr resp="#Guessard">n</corr></w>
+              </lem>
+            </app>
             <w>non</w>
             <w>Dieu</w>
             <pc type="supplied">,</pc>
@@ -51252,8 +51551,11 @@
             <w>aït</w>
           </q>
           <pc type="supplied">,</pc>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[ce]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">ce</corr>
+            </lem>
+          </app>
           <w>dist</w>
           <w>Karlemaine</w>
           <w>au</w>
@@ -51598,7 +51900,6 @@
             <pc type="supplied">,</pc>
           </q>
         </l>
-
 
         <pb facs="facsimile0143.bin.png" n="0143"/>
         <lb/>
@@ -52443,8 +52744,11 @@
             <w>loger</w>
             <w>vostre</w>
             <w>ost</w>
- <!-- CORRECTION INJUSTIFIEE A BALISER -->
-            <w>contreva[l]</w>
+            <app>
+              <lem wit="#a">
+                <w>contreva<corr resp="#Guessard">l</corr></w>
+              </lem>
+            </app>
             <w>cest</w>
             <w>larris</w>
             <pc type="supplied">,</pc>
@@ -52690,7 +52994,20 @@
           <pc type="supplied">'</pc>
           <w>ele</w>
           <w>voit</w>
- <!-- CORRECTION A BALISER : CF VUE 189 -->
+          <app>
+            <lem wit="#b">
+              <w>Guion</w>
+            </lem>
+            <rdg wit="#a">
+              <w>Karlon</w>
+            </rdg>
+            <note>
+ <!-- #### PARENTHESES A CONSERVER ICI ? ###############"" -->             
+              <lb/><q>Où qu'ele voit <hi>[<hi rend="superscript">b</hi>Guion]</hi>, gentement li a 
+                dit.</q>
+              <lb/>Leçon de a : <q>Karlon</q>. C'est une faute manifeste.
+            </note>
+          </app>
           <w>[bGuion]</w>
           <pc type="supplied">,</pc>
           <w>gentement</w>
@@ -52891,8 +53208,7 @@
         <lb/>
         <l>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->
-          <w>IIc</w>
+          <w>II<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>furent</w>
           <w>ensamble</w>
@@ -52947,7 +53263,7 @@
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
+          <w rend="elision">Qu</w>
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>les</w>
@@ -53583,7 +53899,7 @@
             <w>Diex</w>
             <w>me</w>
             <w>benéie</w>
- <!-- VERIFIER LA JUSTESSE DE LA PONCTUATION DANS LE LIVRE -->
+ <!-- #### VERIFIER LA JUSTESSE DE LA PONCTUATION DANS LE LIVRE #### -->
             <pc type="supplied">!</pc>
           </q>
         </l>
@@ -53681,8 +53997,13 @@
             <w>Et</w>
             <w>se</w>
             <w>vos</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>[les]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>les</w>
+                </corr>
+              </lem>
+            </app>
             <w>véés</w>
             <w>commencer</w>
             <w>la</w>
@@ -54316,9 +54637,14 @@
         <lb/>
         <l>
           <w>Estout</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[de</w>
-          <w>Lengre]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>de</w>
+                <w>Lengre</w>
+              </corr>
+            </lem>
+          </app>
           <pc type="supplied">,</pc>
           <w>ausi</w>
           <w>Berart</w>
@@ -54471,8 +54797,13 @@
         <l>
           <w>Bien</w>
           <w>voit</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[que]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>que</w>
+              </corr>
+            </lem>
+          </app>
           <w rend="elision">n</w>
           <pc type="supplied">'</pc>
           <w>i</w>
@@ -54734,8 +55065,13 @@
             <pc type="supplied">'</pc>
             <w>i</w>
             <w>perdrois</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>[de]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>de</w>
+                </corr>
+              </lem>
+            </app>
             <w>voir</w>
             <w>vaillant</w>
             <pc type="supplied">.</pc>
@@ -54829,8 +55165,7 @@
           <w>Plus</w>
           <w>de</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->
-          <w>XXXm</w>
+          <w>XXX<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>homes</w>
           <pc type="supplied">;</pc>
@@ -55125,8 +55460,11 @@
           <w>les</w>
           <w>armes</w>
           <w>sans</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>poi[n]t</w>
+          <app>
+            <lem wit="#a">
+              <w>poi<corr resp="#Guessard">n</corr>t</w>
+            </lem>
+          </app>
           <w>de</w>
           <w>delaier</w>
           <pc type="supplied">.</pc>
@@ -55230,7 +55568,7 @@
             <w>vile</w>
             <w>est</w>
             <w>nostre</w>
- <!-- VERIFIER LA JUSTESSE DE LA PONCTUATION DANS LE LIVRE -->
+ <!-- ####### VERIFIER LA JUSTESSE DE LA PONCTUATION DANS LE LIVRE ##### -->
             <pc type="supplied">!</pc>
             <w>pensons</w>
             <w>de</w>
@@ -55445,7 +55783,7 @@
           <pc type="supplied">'</pc>
           <w>autre</w>
           <pc type="supplied">:</pc>
- <!-- METTRE UNE QUOTE ICI ? -->         
+ <!-- ########### METTRE UNE QUOTE ICI ? ############ -->         
           <w>Ci</w>
           <w>a</w>
           <w>mult</w>
@@ -55706,9 +56044,8 @@
           <w>A</w>
           <w>plus</w>
           <w>de</w>
-          <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->         
-          <w>XXXm</w>
+          <pc type="supplied">.</pc>       
+          <w>XXX<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>qui</w>
           <w>en</w>
@@ -55723,9 +56060,8 @@
           <w>Huidelon</w>
           <w>an</w>
           <w>ot</w>
-          <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->         
-          <w>XXXm</w>
+          <pc type="supplied">.</pc> 
+          <w>XXX<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>et</w>
           <pc type="supplied">.</pc>
@@ -55736,11 +56072,28 @@
         </l>
         <lb/>
         <l>
-          <w>Et</w>
-          <w>Guis</w>
-          <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->         
-          <w>Lm</w>
+          <app>
+            <lem wit="a">
+              <choice>
+                <sic>
+                  <w>Et</w>
+                  <w rend="elision">l</w>
+                  <pc type="supplied">'</pc>
+                  <w>enfes</w>
+                </sic>
+                <corr resp="#Guessard">
+                   <w>Et</w>
+                   <w>Guis</w>
+                </corr>
+              </choice>
+              <note>
+                <lb/>Nous supprimons devant Gui <q>l'enfes</q>, qui se lit dans <lb/>le manuscrit a, 
+                et qui fausse le vers.
+              </note>
+            </lem>
+          </app>
+          <pc type="supplied">.</pc>     
+          <w>L<hi rend="superscript">m</hi></w>
           <pc type="supplied">,</pc>
           <w>qui</w>
           <w>tuit</w>
@@ -55805,7 +56158,7 @@
         </l>
         <lb/>
         <l>
-          <w>D</w>
+          <w rend="elision">D</w>
           <pc type="supplied">'</pc>
           <w>aler</w>
           <w>à</w>
@@ -56377,8 +56730,13 @@
             <w>ne</w>
             <w>mes</w>
             <w>fais</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->           
-            <w>[ne]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>ne</w>
+                </corr>
+              </lem>
+            </app>
             <w>mes</w>
             <w>diz</w>
             <pc type="supplied">,</pc>
@@ -56404,8 +56762,11 @@
         <l>
           <pc type="supplied">«</pc>
           <q>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->
-            <w>Vé[é]s</w>
+            <app>
+              <lem wit="#a">
+                <w>Vé<corr resp="#Guessard">é</corr>s</w>
+              </lem>
+            </app>
             <w>ci</w>
             <w>Huidelon</w>
             <pc type="supplied">:</pc>
@@ -56482,7 +56843,7 @@
           <w>plus</w>
           <w>de</w>
           <pc type="supplied">.</pc>
-          <w>Vc</w>
+          <w>V<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>mercis</w>
           <pc type="supplied">.</pc>
@@ -56985,9 +57346,8 @@
             <w>vos</w>
             <w>homes</w>
             <pc type="supplied">,</pc>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>Xm</w>
+            <pc type="supplied">.</pc>    
+            <w>X<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>compaignons</w>
             <pc type="supplied">,</pc>
@@ -57002,9 +57362,8 @@
             <pc type="supplied">'</pc>
             <w>en</w>
             <w>menrai</w>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>Xm</w>
+            <pc type="supplied">.</pc>       
+            <w>X<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>de</w>
             <w>mes</w>
@@ -57404,9 +57763,8 @@
           <w rend="elision">s</w>
           <pc type="supplied">'</pc>
           <w>adoubent</w>
-          <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->         
-          <w>XXm</w>
+          <pc type="supplied">.</pc>   
+          <w>XX<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>chevalier</w>
           <pc type="supplied">,</pc>
@@ -57482,8 +57840,11 @@
           <pc type="supplied">'</pc>
           <w>il</w>
           <w>les</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->         
-          <w>puis[t]</w>
+          <app>
+            <lem wit="#a">
+              <w>puis<corr resp="#Guessard">t</corr></w>
+            </lem>
+          </app>
           <w>raconduire</w>
           <w>sain</w>
           <w>et</w>
@@ -57691,9 +58052,8 @@
             <w>presant</w>
             <w>faire</w>
             <w>de</w>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>Xm</w>
+            <pc type="supplied">.</pc>    
+            <w>X<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>prisoniers</w>
             <pc type="supplied">:</pc>
@@ -57899,9 +58259,8 @@
           <pc type="supplied">«</pc>
           <q>
             <w>De</w>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>Xm</w>
+            <pc type="supplied">.</pc>    
+            <w>X<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>François</w>
             <pc type="supplied">,</pc>
@@ -58016,10 +58375,23 @@
           <pc type="supplied">«</pc>
           <q>
  <!-- CORRECTION A BALISER : CF VUE 189 -->
-            <w>[bSi</w>
-            <w>ne</w>
-            <w>fust</w>
-            <w>Huidelon]</w>
+            <app>
+              <lem wit="#b">
+                <w>Si</w>
+                <w>ne</w>
+                <w>fust</w>
+                <w>Huidelon</w>
+              </lem>
+              <rdg wit="#a">
+                <w>Et</w>
+                <w>Huidelon</w>
+              </rdg>
+              <note>
+                <lb/><q><hi>[Si ne fust Huidelon]</hi> qui me vint aïdier.</q> 
+                <lb/>Leçon de a : <q>Et Huidelon.</q> - Le vers est faux et 
+                inin<lb break="no" rend="hyphen"/>telligible. 
+              </note>
+            </app>
             <w>qui</w>
             <w>me</w>
             <w>vint</w>
@@ -58660,8 +59032,13 @@
           <w>el</w>
           <w>palais</w>
           <w>deslié</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->         
-          <w>[li]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>li</w>
+              </corr>
+            </lem>
+          </app>
           <w>enfant</w>
           <pc type="supplied">,</pc>
         </l>
@@ -58825,9 +59202,13 @@
             <w>Avés</w>
             <w>me</w>
             <w>vos</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->           
-            <w>[anuit</w>
-            <w>]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>anuit</w>
+                </corr>
+              </lem>
+            </app>
             <w>traï</w>
             <w>si</w>
             <w>faitemant</w>
@@ -59144,9 +59525,19 @@
           <q>
             <w>En</w>
             <w>une</w>
- <!-- CORRECTION A BALISER : CF VUE 190 -->           
-            <w>[bplanche</w>
-            <w>veille]</w>
+            <app>
+              <lem wit="#b">
+                <w>planche</w>
+                <w>veille</w>
+              </lem>
+              <rdg wit="#a">
+                <w>place</w>
+                <w>vies</w>
+              </rdg>
+              <note>
+<!-- ####### COMMENT TRAITER CE CAS ? #############" -->                
+              </note>
+            </app>
             <w>soffri</w>
             <w>mort</w>
             <w>et</w>
@@ -59161,9 +59552,18 @@
             <w>Ja</w>
             <w>ne</w>
             <w>crerai</w>
- <!-- CORRECTION A BALISER : CF VUE 190 -->           
-            <w>[ben</w>
-            <w>lui]</w>
+            <app>
+              <lem wit="#b">
+                <w>en</w>
+                <w>lui</w>
+              </lem>
+              <rdg wit="#a">
+                <w>celui</w>
+              </rdg>
+              <note>
+<!-- ########### COMMENT TRAITER CE CAS ? ############### -->                
+              </note>
+            </app>
             <pc type="supplied">,</pc>
             <w>ce</w>
             <w>te</w>
@@ -59670,8 +60070,11 @@
         <l>
           <w>SE</w>
           <w>là</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->         
-          <w>fuissié[s]</w>
+          <app>
+            <lem wit="#a">
+              <w>fuissié<corr resp="#Guerrard">s</corr></w>
+            </lem>
+          </app>
           <w>le</w>
           <w>jour</w>
           <pc type="supplied">,</pc>
@@ -59764,8 +60167,11 @@
           <w>en</w>
           <w>ont</w>
           <w>mis</w>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->         
-          <w>[François]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">François</corr>
+            </lem>
+          </app>
           <w>devant</w>
           <w>eus</w>
           <w>el</w>
@@ -59783,8 +60189,7 @@
           <w>ne</w>
           <w>tuassent</w>
           <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE -->         
-          <w>IIIIc</w>
+          <w>IIII<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>charpentier</w>
           <pc type="supplied">.</pc>
@@ -59821,8 +60226,13 @@
             <w>Hé</w>
             <w>Mahom</w>
             <pc type="supplied">!</pc>
- <!-- CORRECTION NON JUSTIFIEE A BALISER -->           
-            <w>[nostre]</w>
+            <app>
+              <lem wit="#a">
+                <corr resp="#Guessard">
+                  <w>nostre</w>
+                </corr>
+              </lem>
+            </app>
             <w>sire</w>
             <pc type="supplied">,</pc>
             <w>car</w>
@@ -60193,9 +60603,23 @@
             <w>despisoit</w>
             <w>Jhesu</w>
             <pc type="supplied">,</pc>
-            <w>le</w>
-            <w>fieus</w>
-            <w>Marie</w>
+            <app>
+              <lem wit="#a">
+                <choice>
+                  <sic>
+                    <w>le</w>
+                    <w>fieus</w>
+                    <w>sainte</w>
+                    <w>Marie</w>
+                  </sic>
+                  <corr resp="#Guessard">
+                    <w>le</w>
+                    <w>fieus</w>
+                    <w>Marie</w>
+                  </corr>
+                </choice>
+              </lem>
+            </app>
             <pc type="supplied">.</pc>
           </q>
         </l>
@@ -60923,9 +61347,8 @@
           <q>
             <w>Plus</w>
             <w>de</w>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>Cm</w>
+            <pc type="supplied">.</pc>      
+            <w>C<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>Turs</w>
             <pc type="supplied">,</pc>
@@ -61002,8 +61425,7 @@
         <l>
           <pc type="supplied">«</pc>
           <q>
-<!-- LETTRE SUSCRITE A BALISER -->            
-            <w>Vc</w>
+            <w>V<hi rend="superscript">c</hi></w>
             <pc type="supplied">.</pc>
             <w>dahais</w>
             <w>ait</w>
@@ -61345,9 +61767,8 @@
           <pc type="supplied">«</pc>
           <q>
             <w>Fetes</w>
-            <pc type="supplied">.</pc>
-<!-- LETTRE SUSCRITE A BALISER -->            
-            <w>IIIIm</w>
+            <pc type="supplied">.</pc>    
+            <w>IIII<hi rend="superscript">m</hi></w>
             <w>homes</w>
             <w>fervestir</w>
             <w>et</w>
@@ -61674,9 +62095,8 @@
           <w>Et</w>
           <w>furent</w>
           <w>bien</w>
-          <pc type="supplied">.</pc>
-<!-- LETTRE SUSCRITE A BALISER -->          
-          <w>Xm</w>
+          <pc type="supplied">.</pc>     
+          <w>X<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>sor</w>
           <w>les</w>
@@ -61833,8 +62253,11 @@
         <l>
           <w>Lors</w>
           <w>resamblent</w>
- <!-- CORRECTION D'APRES LE MANUSCRIT B A BALISER -->         
-          <w>[btuz]</w>
+          <app>
+            <lem wit="#b">
+              <w>tuz</w>
+            </lem>
+          </app>
           <w>angre</w>
           <w>de</w>
           <w>sainte</w>
@@ -62054,8 +62477,13 @@
           <pc type="supplied">,</pc>
           <w>qui</w>
           <w>miels</w>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->          
-          <w>[miels]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>miels</w>
+              </corr>
+            </lem>
+          </app>
           <w>chevauchent</w>
           <w>par</w>
           <w>estrif</w>
@@ -62809,9 +63237,8 @@
             <w>menrai</w>
             <w>avec</w>
             <w>moi</w>
-            <pc type="supplied">.</pc>
-<!-- LETTRE SUSCRITE A BALISER -->            
-            <w>Xm</w>
+            <pc type="supplied">.</pc>   
+            <w>X<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>ferarmés</w>
             <pc type="supplied">;</pc>
@@ -62859,8 +63286,11 @@
           <w>dist</w>
           <w rend="elision">l</w>
           <pc type="supplied">'</pc>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->          
-          <w>emper[er]e</w>
+          <app>
+            <lem wit="#a">
+              <w>emper<corr resp="#Guessard">er</corr>e</w>
+            </lem>
+          </app>
           <pc type="supplied">,</pc>
           <q>
             <w>à</w>
@@ -63881,9 +64311,8 @@
             <w>Et</w>
             <w>plus</w>
             <w>de</w>
-            <pc type="supplied">.</pc>
- <!-- LETTRE SUSCRITE A BALISER -->           
-            <w>XXXm</w>
+            <pc type="supplied">.</pc>  
+            <w>XXX<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>que</w>
             <w>Persans</w>
@@ -64202,8 +64631,13 @@
           <pc type="supplied">,</pc>
           <w>li</w>
           <w>preus</w>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->          
-          <w>[vassals]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>vassals</w>
+              </corr>
+            </lem>
+          </app>
           <pc type="supplied">,</pc>
           <w>est</w>
           <w>alés</w>
@@ -64217,8 +64651,13 @@
           <w>tuit</w>
           <w>li</w>
           <w>autre</w>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->          
-          <w>[aussi]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>aussi</w>
+              </corr>
+            </lem>
+          </app>
           <pc type="supplied">,</pc>
           <w>sens</w>
           <w>nule</w>
@@ -65257,18 +65696,26 @@
         </l>
         <lb/>
         <l>
+<!-- ####### INCLURE LES GUILLEMETS ET LE POINT DANS L'APP ? ########### -->          
           <pc type="supplied">«</pc>
           <q>
-<!-- CORRECTION A BALISER : CF VUE 190 -->            
-            <w>[bA</w>
-            <w>la</w>
-            <w>seint</w>
-            <w>Bastien</w>
-            <pc type="supplied">,</pc>
-            <w>tut</w>
-            <w>en</w>
-            <w>séez</w>
-            <w>créant]</w>
+            <app>
+              <lem wit="#b">
+                <w>A</w>
+                <w>la</w>
+                <w>seint</w>
+                <w>Bastien</w>
+                <pc type="supplied">,</pc>
+                <w>tut</w>
+                <w>en</w>
+                <w>séez</w>
+                <w>créant</w>
+              </lem>
+              <rdg wit="#a"/>
+              <note>
+                <lb/><q>[A la seint Bastien, tut en séez créant.]</q> <lb/>Ce vers manque dans a.
+              </note>
+            </app>
             <pc type="supplied">.</pc>
           </q>
         </l>
@@ -65367,8 +65814,7 @@
         <l>
           <w>Tel</w>
           <pc type="supplied">.</pc>
-<!-- LETTRE SUSCRITE A BALISER -->          
-          <w>Xm</w>
+          <w>X<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>furent</w>
           <w>liés</w>
@@ -65579,8 +66025,13 @@
         </l>
         <lb/>
         <l>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->          
-          <w>[Et]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                Et
+              </corr>
+            </lem>
+          </app>
           <w>quant</w>
           <w>il</w>
           <w>ne</w>
@@ -65963,7 +66414,6 @@
             <w>esté</w>
           </q>
         </l>
-
         <pb facs="facsimile0171.bin.png" n="0171"/>
         <!--<lb/>4107-4139 GUI DE BOURGOGNE.-->
         <lb/>
@@ -66067,8 +66517,13 @@
         <l>
           <w>Et</w>
           <w>Yvon</w>
-<!-- CORRECTION NON JUSTIFIEE A BALISER -->
-          <w>[et]</w>
+          <app>
+            <lem wit="#a">
+              <corr resp="#Guessard">
+                <w>et</w>
+              </corr>
+            </lem>
+          </app>
           <w>Yvoire</w>
           <w>et</w>
           <w>Haton</w>
@@ -66382,15 +66837,26 @@
         </l>
         <lb/>
         <l>
-<!-- CORRECTION A BALISER  : CF VUE 190 -->          
-          <w>[bCe</w>
-          <w>est</w>
-          <w>signefiance</w>
-          <w>ke</w>
-          <w>se</w>
-          <w>dei[vent]</w>
-          <w>armer]</w>
-          <pc type="supplied">.</pc>
+          <app>
+            <lem wit="#b">
+              <w>Ce</w>
+              <w>est</w>
+              <w>signefiance</w>
+              <w>ke</w>
+              <w>se</w>
+              <w>dei <corr resp="#Guessard">vent</corr></w>
+              <w>armer</w>
+              <pc type="supplied">.</pc>
+            </lem>
+            <rdg wit="#a"/>
+            <note>
+              <lb/><q>[<hi rend="superscript">b</hi> Ce est signefiance ke se dei[vent] armer.</q> 
+              <lb/>Ce vers n'est pas dans a, et se lit ainsi dans b : <lb/><q>C'est signefiance ke 
+               se deit armer.</q> 
+              <lb/>Les trois vers qui suivent celui-ci ne se trouvent pas <lb/>dans b. 
+<!-- ###### COMMENT TRAITER LES TROIS VERS SUIVANTS ? ##### -->              
+            </note>
+          </app>
         </l>
         <lb/>
         <l>
@@ -66755,8 +67221,21 @@
           <w rend="elision">l</w>
           <pc type="supplied">'</pc>
           <w>ost</w>
-          <w>itele</w>
-          <w>melodie</w>
+          <app>
+            <lem wit="#a">
+              <w>itele</w>
+              <w>melodie</w>
+            </lem>
+            <rdg wit="#b">
+              <w>une</w>
+              <w>tele</w>
+              <w>bundie</w>
+            </rdg>
+            <note>
+              <lb/><q>Dont oïssiés par l'ost itele melodie.</q> <lb/>Leçon de b : 
+              <q>une tele bundie</q>. 
+            </note>
+          </app>
         </l>
         <lb/>
         <l>
@@ -67156,7 +67635,7 @@
           <w>murs</w>
           <w>versés</w>
           <pc type="supplied">.</pc>
-          <w>IIIIm</w>
+          <w>IIII<hi rend="superscript">m</hi></w>
           <pc type="supplied">.</pc>
           <w>en</w>
           <w>entra</w>
@@ -67315,7 +67794,17 @@
           <w>cele</w>
           <w>part</w>
           <w>sont</w>
-          <w>guencis</w>
+          <app>
+            <lem wit="#a">
+              <w>guencis</w>
+            </lem>
+            <rdg wit="#b">
+              <w>vertis</w>
+            </rdg>
+            <note>
+              <lb/><q>Tost et isnelement cele part sont guencis.</q> <lb/>Leçon de b : <q>vertis</q>. 
+            </note>
+          </app>
           <pc type="supplied">,</pc>
         </l>
         <lb/>
@@ -68178,6 +68667,7 @@
           <w>fu</w>
           <w>moult</w>
           <w>grans</w>
+<!-- ####### JE NE COMPRENDS PAS CETTE CORRECTION DANS LES NOTES ######## -->            
           <w rend="elision">[bl</w>
           <pc type="supplied">'</pc>
           <w>asemblée]</w>
@@ -68523,10 +69013,24 @@
             <w>ne</w>
             <w>vostre</w>
             <w>ire</w>
-            <w>pris</w>
+            <app>
+              <lem wit="#Guessard">
+                <w>pris</w>
+              </lem>
+              <rdg wit="#a">
+                <w>ne</w>
+                <w>pris</w>
+                <w>pas</w>
+              </rdg>
+            </app>
             <w>une</w>
             <w>pome</w>
             <w>parée</w>
+            <note>
+              <lb/><q>Vous ne vostre ire pris une pome parée.</q>
+              <lb/>Nous corrigeons ainsi la leçon vicieuse de a, qui <lb/>donne ce vers faux : 
+              <lb/><q>Vous ne vostre ire ne pris pas une pome parée.</q>
+            </note>
             <pc type="supplied">.</pc>
           </q>
           <pc type="supplied">»</pc>
