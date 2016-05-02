@@ -1341,6 +1341,11 @@
             <div xml:id="DIV_NAMESDATES">
                 <!-- Une section de ce même type apparaît plus tard… -->
                 <head>Noms, dates, personnes et lieux</head>
+                
+                <!-- Différencier noms de personne/de lieu/d'organisation,... avec des éléments spécialisés
+                et élément générique typé pour les chevaux, épées, enseignes, etc.
+                
+                -->
 
             </div>
             <!--<div>
@@ -2033,10 +2038,19 @@
                             <attDef ident="resp" mode="delete"/>
                             <attDef ident="type" mode="change">
                                 <valList mode="add" type="closed">
-                                    <valItem ident="person"/>
-                                    <valItem ident="place"/>
+                                    <!--<valItem ident="person"/>
+                                    <valItem ident="place"/>-->
                                     <valItem ident="enseigne">
                                         <desc>caractérise une enseigne.</desc>
+                                    </valItem>
+                                    <valItem ident="cheval">
+                                        <desc>caractérise un nom de cheval</desc>
+                                    </valItem>
+                                    <valItem ident="épée">
+                                        <desc>caractérise un nom d'épée</desc>
+                                    </valItem>
+                                    <valItem ident="peuple">
+                                        <desc>caractérise un nom de peuple, au sens large (français, sarrasin, païens, etc.)</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
