@@ -2,7 +2,14 @@
     type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Floovant_Guessard-1858" type="ed">
-      
+      <!-- Pour l'instant 2535 vers pour 2533 selon Guessard et Michelant
+      Vérifier peut-être les vues
+      0356
+      0364
+      0370 => problème localisé sur cette vue, manque de texte et substitution par un autre
+      0371
+      0379
+      -->
 
         <teiHeader>
                 <fileDesc>
@@ -14496,6 +14503,7 @@
                                         <w>apale</w>
                                         <pc type="supplied">:</pc>
                                 </l>
+                                <!-- $$ JBC: problème dans la suite du texte, à corriger $$ -->
                                 <lb/>
                                 <l>
                                         <w>Et</w>
@@ -37127,9 +37135,8 @@
                                         <pc type="supplied">.</pc>
                                 </l>
                         </lg>
-                        <lg type="laisse" n="LXVII" xml:id="L_067">
                                 <lb/>
-                                <l>
+                                <ab>
                                         <app>
                                                 <lem>
                                                         <choice><corr resp="#Guessard #Michelant"><w>EXPLICIT</w></corr>
@@ -37140,17 +37147,13 @@
                                         <w>ROMANZ</w>
                                         <w>DE</w>
                                         <w>FLOOVAN</w>
-                                </l>
                                 <lb/>
-                                <l>
                                         <w>ET</w>
                                         <w>DOU</w>
                                         <w>ROY</w>
                                         <w>CLOOV1S</w>
                                         <pc type="supplied">.</pc>
-                                </l>
-                        </lg>
-
+                                </ab>
                 </body>
                 <back>
                         
