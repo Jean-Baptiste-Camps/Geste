@@ -83,6 +83,8 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="draft">
+      <change who="AC" when="2016-05-04" status="draft">Vérification et correction des notes
+        et variantes jusqu'à la ligne 61142</change>
       <change who="AC" when="2016-04-27" status="draft">Insertion des notes et corrections sur 
       la totalité du texte, début de la relecture et vérification des notes.</change>
       <change who="AC" when="2016-04-21" status="draft">Révision du texte finie, début de l'insertion
@@ -6350,9 +6352,6 @@
               </q>
             </l>
           </lem>
- <!-- ################## A FAIRE LE 4 MAI : FINIR D'ENCODER LE TEXTE DE b, METTRE DES POINTEURS 
-   POUR LES VERS REFERENCES, METTRE LA NOTE EN FORME ########################################## 
- ###################### ATTENTION AU DISCOURS DIRECT ########################################-->
           <rdg wit="#b">
             <lb/>
             <gap/>
@@ -6512,9 +6511,11 @@
               <w>sun</w>
               <w>compainon</w>
               <pc type="supplied">.</pc>
-              <!-- ##### QUE FAIRE DE CE SIC ? ##### -->
-                (sic) 
-                
+<!-- ######################## QUE FAIRE DE CE SIC ? ############################### -->
+              <app>  
+              <note resp="#Guessard">(sic)</note> 
+              </app>
+            </l>
             <lb/>
               <l>
                 <w>Tut</w>
@@ -6531,86 +6532,766 @@
               </l>
               
               <gap/>
-              <lb/> « <q>sinon, 
-                douce France ira à sa perte ; le plus fort</q> <lb/>« <q>enlèvera au plus faible sa 
-                  maison. Faison un roi</q>
-              <lb/>« <q>Ke nus tendra en France en pes et à reson :</q>
-              <lb/>« <q>Ja ne valt un réalme san segnor un boton.</q> » 
-              <lb/>Et li enfant dient : « <q>Et nos ben l'otréum.</q> » 
-              <lb/>La seconde tirade est, au commencement, une répéti<lb break="no" rend="hyphen"/>tion 
-              de la première, et, en quelques points, se rap<lb break="no" rend="hyphen"/>proche 
-              beaucoup pour la forme du texte du manu<lb break="no" rend="hyphen"/>scrit a ; mais après
-              le seizième vers se trouve un discours <lb/>du fils cadet de Ganelon, qui est une invention 
-              toute <lb/>nouvelle, et semble annoncer une version remaniée : 
-              <lb/>Un des fiz Guenelon s'en est en pez levez ;
-              <lb/>Maucion ot <corr resp="#Guessard">à</corr> nun, si fu 
-              <corr resp="#Guessard">li fiz</corr> mainés. 
-              <lb/>Grant fu e parcréu, si ot pendant le nés, 
-              <lb/>Si ot la barbe rousse, et fu molt <corr resp="#Guessard">lonc</corr> et lez. 
-              <lb/>..............................
-              <lb/>« <q>Bertran, dit Maucion, certes ben dit assez :</q> 
-              <lb/>« <q>Si l'em feit rei en France, je m'en sui presentez,</q> 
-              <lb/>« <q>Si demant la corone, ke vos la me donez.</q> 
-              <lb/>« <q>Si de mei feites rei, grant honur en aurez,</q>
-              <lb/>« <q>Kar vos serrez por mei enhaucé et amez.</q>
-              <lb/>« <q>Baruns, je seie reis, si vus lecomandez ;</q> 
-              <lb/>« <q>Molt ert bien enploïe en mei la realtez,</q> 
-              <lb/>« <q>Kar je sui gentils hom e de grant parentez :</q> 
-              <lb/>« <q>Alorin est mi niep, e mun cosin Hardrez,</q> 
-              <lb/>« <q>Et Richart mun parent e Focher le barbez,</q> 
-              <lb/>« <q>Et Isoart li jesnes e Brihan li einnez,</q> 
-              <lb/>« <q>Malveisin e Malingres, et Miles et Forrés.</q> 
-              <lb/>« <q>Ne sai ke plus en die ; trop sui enparentez.</q> 
-              <lb/>« <q>E si est mun pere Gnenes, k'od Karlon est alez ;</q>
-              <lb/>« <q>Sa serur od a femme, si ke ben le savez :</q> 
-              <lb/>« <q>Pur ce dei en France estre haltement coronez.</q> » 
-              <lb/>...................................................
-              <lb/>E dit Estus de Lengres : « <q>Trop vos estes hastez ;</q> 
-              <lb/>« <q>N'atendist<corr resp="#Guessard">es</corr> pas tant ke fussez apelez.</q> 
-              <lb/>« <q>Maucion, teisez vos ; n'en déussez parler.</q> » 
-              <lb/>Ici se termine la seconde tirade. 
-              <lb/>Estout de Langres continue : « <q>Bertrand a bien parlé</q>, <lb/>dit-il, 
-              <q>cherchons un prudhomme parmi nous pour en <lb/>faire un roi. Je ne parle pas de moi ; 
-                si je voulois la <lb/>couronne, je l'aurois et serois roi de France, quoi <lb/>qu'on en 
-                pût dire ; mais je ne veux pas l'être, j'ai le <lb/>cœur trop felon. Il y faut un homme 
-                sage et plein de <lb/>grand amour, qui garde et conduise le pays par la <lb/>douceur.</q> 
-              - <q>Je me suis présenté le premier</q>, reprend <lb/>Maucion, 
-              <lb/>« <q>Si demand la corone, je la ruis à vos tuz ; </q>
-              <lb/>« <q>Si d'altre fetes rei, ja n'ert si gentils homs</q> 
-              <lb/>« <q>Je n'en prenge la teste par desuz le mentons.</q> » 
-              <lb/>Estout de Langres, sans s'effrayer du ton menaçant <lb/>de Maucion, reprend à son tour : 
-              <lb/>« <q>Je dirrai mun pensé, ki k'en peise ne ki non :</q> 
-              <lb/>« <q>Ben <corr resp="#Guessard">vos</corr> déussez tere, en nun Deu, Maucions,</q> 
-              <lb/>« <q>Vos e vostre lignage avez esté tuz jurs,</q> 
-              <lb/>« <q>E tut vostre ancessur, retté de tréicuns.</q> 
-              <lb/>« <q>Dehait <corr resp="#Guessard">ait</corr> traitres rei el col et el mentun !</q> 
-              <lb/>Pour mettre fin à ce débat, Berard est d'avis qu'il <lb/>faut aller au moutier 
-              implorer l'intervention de Dieu. <lb/>« <q>Choisissons parmi nous</q>, dit-il, <q>quatre cents 
-                des plus <lb/>sages, qui prêteront le serment sur les évangiles de <lb/>faire un roi du 
-                mieux qu'ils sauront. Le roi une fois <lb/>nommé, s'il refuse, on lui coupera la tête.</q> 
-              -<q>Par <lb/>ma foi</q>, dist Estout de Langres, <q>voilà qui est 
-                raison<lb break="no" rend="hyphen"/>able.</q> »
-              <lb/>Ainsi se termine la troisième tirade.
-              <lb/>Al conseil de Berart se sunt tuz acordez : 
-              <lb/>Quatre cent eslisent de vaillanz bachelers, 
-              <lb/>Ke sur les relikes e sur seinz unt jurés 
-              <lb/>K<corr resp="#Guessard">e</corr> il eslirrunt <corr resp="#Guessard">rei</corr>, 
-              solum lur léaltez, 
-              <lb/>Trestut le plus prodomme k<corr resp="#Guessard">e</corr> il porrunt trover. 
-              <lb/>Mais Maucion proteste d'avance contre le résultat de <lb/>l'élection, s'il ne lui 
-              est pas favorable :
-              <lb/>« <q>Ne m'ubliez vos mie, je m'en sui presentez :</q> 
-              <lb/>« <q>Si d'altri fetes rei, vos perdrez m'amistez ;</q> 
-              <lb/>« <q>Mal vos porchacerei, si serez puis grevez.</q> » 
-              <lb/>Sur quoi, Estout de Langres menace Maucion d'un <lb/>bâton qu'il trouve à sa 
-              portée : 
-              <lb/>Il le prinst à deu mains, si l'ad en halt levez ; 
-              <lb/>Ja éust à Maucion parmi le chef donez
-              <lb/>Quant son lignage l'at <corr resp="#Guessard">et</corr> sustret et ostez. 
-              <lb/>Cette scène terminée, le récit continue comme dans <lb/>le manuscrit a, et à peu 
-              près dans les mêmes termes.<lb/>Bertrand propose de choisir pour roi le fils de Sanson 
-              <lb/>de Bourgogne, le jeune Gui, le héros de ce poëme. <lb/>
-            </note>
+            
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc> 
+              <q>
+                <w>Ke</w>
+                <w>nus</w>
+                <w>tendra</w>
+                <w>en</w>
+                <w>France</w>
+                <w>en</w>
+                <w>pes</w>
+                <w>et</w>
+                <w>à</w>
+                <w>reson</w>
+                <pc type="supplied">:</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc> 
+              <q>
+                <w>Ja</w>
+                <w>ne</w>
+                <w>valt</w>
+                <w>un</w>
+                <w>réalme</w>
+                <w>san</w>
+                <w>segnor</w>
+                <w>un</w>
+                <w>boton</w>
+                <pc type="supplied">.</pc>
+              </q> 
+              <pc type="supplied">»</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>li</w>
+              <w>enfant</w>
+              <w>dient</w>
+              <pc type="supplied">:</pc>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Et</w>
+                <w>nos</w>
+                <w>ben</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>otréum</w>
+                <pc type="supplied">.</pc>
+              </q> 
+              <pc type="supplied">»</pc>
+            </l>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <w>Un</w>
+              <w>des</w>
+              <w>fiz</w>
+              <w>Guenelon</w>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>est</w>
+              <w>en</w>
+              <w>pez</w>
+              <w>levez</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Maucion</w>
+              <w>ot</w>
+              <w><corr resp="#Guessard">à</corr></w>
+              <w>nun</w>
+              <pc type="supplied">,</pc>
+              <w>si</w>
+              <w>fu</w>
+              <app>
+                <lem wit="#b">
+                <choice>
+                  <sic/>
+                  <corr resp="#Guessard">
+                    <w>li</w>
+                    <w>fiz</w>
+                  </corr>
+                </choice>
+                </lem>
+              </app>
+              <w>mainés</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Grant</w>
+              <w>fu</w>
+              <w>e</w>
+              <w>parcréu</w>
+              <pc type="supplied">,</pc>
+              <w>si</w>
+              <w>ot</w>
+              <w>pendant</w>
+              <w>le</w>
+              <w>nés</w>
+              <pc type="supplied">,</pc>
+            </l> 
+            <lb/>
+            <l>
+              <w>Si</w>
+              <w>ot</w>
+              <w>la</w>
+              <w>barbe</w>
+              <w>rousse</w>
+              <pc type="supplied">,</pc>
+              <w>et</w>
+              <w>fu</w>
+              <w>molt</w>
+              <w><corr resp="#Guessard">lonc</corr></w>
+              <w>et</w>
+              <w>lez</w>
+              <pc type="supplied">.</pc>
+            </l>
+            
+            <gap/>
+            
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Bertran</w>
+                <pc type="supplied">,</pc>
+                <w>dit</w> 
+                <w>Maucion</w>
+                <pc type="supplied">,</pc>
+                <w>certes</w>
+                <w>ben</w>
+                <w>dit</w>
+                <w>assez</w>
+                <pc type="supplied">:</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>em</w>
+                <w>feit</w>
+                <w>rei</w>
+                <w>en</w>
+                <w>France</w>
+                <pc type="supplied">,</pc>
+                <w>je</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>sui</w>
+                <w>presentez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w>demant</w>
+                <w>la</w>
+                <w>corone</w>
+                <pc type="supplied">,</pc>
+                <w>ke</w>
+                <w>vos</w>
+                <w>la</w>
+                <w>me</w>
+                <w>donez</w>
+                <pc type="supplied">.</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w>de</w>
+                <w>mei</w>
+                <w>feites</w>
+                <w>rei</w>
+                <pc type="supplied">,</pc>
+                <w>grant</w>
+                <w>honur</w>
+                <w>en</w>
+                <w>aurez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Kar</w>
+                <w>vos</w>
+                <w>serrez</w>
+                <w>por</w>
+                <w>mei</w>
+                <w>enhaucé</w>
+                <w>et</w>
+                <w>amez</w>
+                <pc type="supplied">.</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Baruns</w>
+                <pc type="supplied">,</pc> 
+                <w>je</w>
+                <w>seie</w>
+                <w>reis</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>vus</w>
+                <w>lecomandez</w>
+                <pc type="supplied">;</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Molt</w>
+                <w>ert</w>
+                <w>bien</w>
+                <w>enploïe</w>
+                <w>en</w>
+                <w>mei</w>
+                <w>la</w>
+                <w>realtez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Kar</w>
+                <w>je</w>
+                <w>sui</w>
+                <w>gentils</w>
+                <w>hom</w>
+                <w>e</w>
+                <w>de</w>
+                <w>grant</w>
+                <w>parentez</w>
+                <pc type="supplied">:</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Alorin</w>
+                <w>est</w>
+                <w>mi</w>
+                <w>niep</w>
+                <pc type="supplied">,</pc>
+                <w>e</w>
+                <w>mun</w>
+                <w>cosin</w>
+                <w>Hardrez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Et</w>
+                <w>Richart</w>
+                <w>mun</w>
+                <w>parent</w>
+                <w>e</w>
+                <w>Focher</w>
+                <w>le</w>
+                <w>barbez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Et</w>
+                <w>Isoart</w>
+                <w>li</w>
+                <w>jesnes</w>
+                <w>e</w>
+                <w>Brihan</w>
+                <w>li</w>
+                <w>einnez</w>
+                <pc type="supplied">,</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Malveisin</w>
+                <w>e</w>
+                <w>Malingres</w>
+                <pc type="supplied">,</pc>
+                <w>et</w>
+                <w>Miles</w>
+                <w>et</w>
+                <w>Forrés</w>
+                <pc type="supplied">.</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Ne</w>
+                <w>sai</w>
+                <w>ke</w>
+                <w>plus</w>
+                <w>en</w>
+                <w>die</w>
+                <pc type="supplied">;</pc>
+                <w>trop</w>
+                <w>sui</w>
+                <w>enparentez</w>
+                <pc type="supplied">.</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>E</w>
+                <w>si</w>
+                <w>est</w>
+                <w>mun</w>
+                <w>pere</w>
+                <w>Guenes</w>
+                <pc type="supplied">,</pc>
+                <w rend="elision">k</w>
+                <pc type="supplied">'</pc>
+                <w>od</w>
+                <w>Karlon</w>
+                <w>est</w>
+                <w>alez</w>
+                <pc type="supplied">;</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Sa</w>
+                <w>serur</w>
+                <w>od</w>
+                <w>a</w>
+                <w>femme</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>ke</w>
+                <w>ben</w>
+                <w>le</w>
+                <w>savez</w>
+                <pc type="supplied">:</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Pur</w>
+                <w>ce</w>
+                <w>dei</w>
+                <w>en</w>
+                <w>France</w>
+                <w>estre</w>
+                <w>haltement</w>
+                <w>coronez</w>
+                <pc type="supplied">.</pc>
+              </q>
+              <pc type="supplied">»</pc>
+            </l>
+            <lb/>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <w>E</w>
+              <w>dit</w>
+              <w>Estus</w>
+              <w>de</w>
+              <w>Lengres</w>
+              <pc type="supplied">:</pc>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Trop</w>
+                <w>vos</w>
+                <w>estes</w>
+                <w>hastez</w>
+                <pc type="supplied">;</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w rend="elision">N</w>
+                <pc type="supplied">'</pc>
+                <w>atendist<corr resp="#Guessard">es</corr></w> 
+                <w>pas</w>
+                <w>tant</w>
+                <w>ke</w>
+                <w>fussez</w>
+                <w>apelez</w>
+                <pc type="supplied">.</pc>
+              </q>
+            </l>
+            <lb/>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Maucion</w>
+                <pc type="supplied">,</pc> 
+                <w>teisez</w>
+                <w>vos</w>
+                <pc type="supplied">;</pc>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>en </w>
+                <w>déussez</w>
+                <w>parler</w>
+                <pc type="supplied">.</pc>
+              </q>
+              <pc type="supplied">»</pc>
+            </l>
+            <lb/>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w>demand</w>
+                <w>la</w>
+                <w>corone</w>
+                <pc type="supplied">,</pc>
+                <w>je</w>
+                <w>la</w>
+                <w>ruis</w>
+                <w>à</w>
+                <w>vos</w>
+                <w>tuz</w>
+                <pc type="supplied">;</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>altre</w>
+                <w>fetes</w>
+                <w>rei</w>
+                <pc type="supplied">,</pc>
+                <w>ja</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>ert</w>
+                <w>si</w>
+                <w>gentils</w>
+                <w>homs</w>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Je</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>prenge</w>
+                <w>la</w>
+                <w>teste</w>
+                <w>par</w>
+                <w>desuz</w>
+                <w>le</w>
+                <w>mentons</w>
+                <pc type="supplied">.</pc>
+              </q> 
+              <pc type="supplied">»</pc>
+            </l>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Je</w>
+                <w>dirrai</w>
+                <w>mun</w>
+                <w>pensé</w>
+                <pc type="supplied">,</pc>
+                <w>ki</w>
+                <w rend="elision">k</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>peise</w>
+                <w>ne</w>
+                <w>ki</w>
+                <w>non</w>
+                <pc type="supplied">:</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Ben</w>
+                <w><corr resp="#Guessard">vos</corr></w>
+                <w>déussez</w>
+                <w>tere</w>
+                <pc type="supplied">,</pc>
+                <w>en</w>
+                <w>nun</w>
+                <w>Deu</w>
+                <pc type="supplied">,</pc>
+                <w>Maucions</w>
+                <pc type="supplied">,</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Vos</w>
+                <w>e</w>
+                <w>vostre</w>
+                <w>lignage</w>
+                <w>avez</w>
+                <w>esté</w>
+                <w>tuz</w>
+                <w>jurs</w>
+                <pc type="supplied">,</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>E</w>
+                <w>tut</w>
+                <w>vostre</w>
+                <w>ancessur</w>
+                <pc type="supplied">,</pc>
+                <w>retté</w>
+                <w>de</w>
+                <w>tréicuns</w>
+                <pc type="supplied">.</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Dehait</w>
+                <w><corr resp="#Guessard">ait</corr></w>
+                <w>traitres</w>
+                <w>rei</w>
+                <w>el</w>
+                <w>col</w>
+                <w>et</w>
+                <w>el</w>
+                <w>mentun</w>
+                <pc type="supplied">!</pc>
+              </q>
+            </l>
+            <lb/>
+            <l>
+                <w>Al</w>
+                <w>conseil</w>
+                <w>de</w>
+                <w>Berart</w>
+                <w>se</w>
+                <w>sunt</w>
+                <w>tuz</w>
+                <w>acordez</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Quatre</w>
+              <w>cent</w>
+              <w>eslisent</w>
+              <w>de</w>
+              <w>vaillanz</w>
+              <w>bachelers</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Ke</w>
+              <w>sur</w>
+              <w>les</w>
+              <w>relikes</w>
+              <w>e</w>
+              <w>sur</w>
+              <w>seinz</w>
+              <w>unt</w>
+              <w>jurés</w>
+            </l>
+            <lb/>
+            <l>
+              <w>K<corr resp="#Guessard">e</corr></w>
+              <w>il</w>
+              <w>eslirrunt</w>
+              <w><corr resp="#Guessard">rei</corr></w>
+              <pc type="supplied">,</pc>
+              <w>solum</w>
+              <w>lur</w>
+              <w>léaltez</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Trestut</w>
+              <w>le</w>
+              <w>plus</w>
+              <w>prodomme</w>
+              <w>k<corr resp="#Guessard">e</corr></w>
+              <w>il</w>
+              <w>porrunt</w>
+              <w>trover</w>
+              <pc type="supplied">.</pc>
+            </l>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Ne</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>ubliez</w>
+                <w>vos</w>
+                <w>mie</w>
+                <pc type="supplied">,</pc>
+                <w>je</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>sui</w>
+                <w>presentez</w>
+                <pc type="supplied">:</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Si</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>altri</w>
+                <w>fetes</w>
+                <w>rei</w>
+                <pc type="supplied">,</pc>
+                <w>vos</w>
+                <w>perdrez</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>amistez</w>
+                <pc type="supplied">;</pc>
+              </q> 
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Mal</w>
+                <w>vos</w>
+                <w>porchacerei</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>serez</w>
+                <w>puis</w>
+                <w>grevez</w>
+                <pc type="supplied">.</pc>
+              </q> 
+              <pc type="supplied">»</pc>
+            </l>
+            
+            <gap/>
+            
+            <lb/>
+            <l>
+              <w>Il</w>
+              <w>le</w>
+              <w>prinst</w>
+              <w>à</w>
+              <w>deu</w>
+              <w>mains</w>
+              <pc type="supplied">,</pc>
+              <w>si</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>ad</w>
+              <w>en</w>
+              <w>halt</w>
+              <w>levez</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Ja</w>
+              <w>éust</w>
+              <w>à</w>
+              <w>Maucion</w>
+              <w>parmi</w>
+              <w>le</w>
+              <w>chef</w>
+              <w>donez</w>
+            </l>
+            <lb/>
+            <l>
+              <w>Quant</w>
+              <w>son</w>
+              <w>lignage</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>at</w>
+              <w><corr resp="#Guessard">et</corr></w>
+              <w>sustret</w>
+              <w>et</w>
+              <w>ostez</w>
+              <pc type="supplied">.</pc>
+            </l>
           </rdg>
           <note resp="#Guessard">
                <lb/><q>Et li enfant de France se furent aüné.</q>
@@ -6717,10 +7398,10 @@
               <lb/>de Bourgogne, le jeune Gui, le héros de ce poëme. <lb/>
           </note>
           <note resp="#AC">
-            Guessard n'a pas transcrit l'intégralité des xxx vers, nous marquons les parties 
-            lacunes par l'élément gap
+            Guessard n'a pas transcrit l'intégralité des 166 vers du manuscrit b, nous marquons les 
+            lacunes par l'élément gap.
           </note>
-        </app> <!-- ############################ A LA ####################### -->
+        </app> 
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -7586,8 +8267,8 @@
               <pc type="supplied">.</pc>
             </rdg>          
             <note resp="#Guessard">
-              <lb/>Que lour enfans garisse et lor riches maris. 
-              <lb/>Leçon de b : de mort et de perils.</note>
+              <lb/><q>Que lour enfans garisse et lor riches maris.</q> 
+              <lb/>Leçon de b : <q>de mort et de perils.</q></note>
           </app>
           
         </l>
@@ -12133,577 +12814,581 @@
       
       <lg n="XII" type="laisse" xml:id="L_012">
         <lb/>
-        <l>
-          <w>MULT</w>
-          <w>fu</w>
-          <w>fors</w>
-          <w>la</w>
-          <w>bataille</w>
-          <w>à</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>estour</w>
-          <w>commencier</w>
-          <pc type="supplied">;</pc>
-<!-- ############## LA NOTE EST-ELLE BIEN PLACEE ? ################# -->
+        <app>
+          <lem wit="#a">
+            <l>
+              <w>MULT</w>
+              <w>fu</w>
+              <w>fors</w>
+              <w>la</w>
+              <w>bataille</w>
+              <w>à</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>estour</w>
+              <w>commencier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Bien</w>
+              <w>i</w>
+              <w>fierent</w>
+              <w>ensamble</w>
+              <w>li</w>
+              <w>Guion</w>
+              <w>chevalier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Là</w>
+              <w>oïssiez</w>
+              <w>grant</w>
+              <w>bruit</w>
+              <w>à</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>estour</w>
+              <w>commencier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Car</w>
+              <w rend="elision">d</w>
+              <pc type="supplied">'</pc>
+              <w>Espaigne</w>
+              <w>an</w>
+              <w>i</w>
+              <w>firent</w>
+              <pc type="supplied">.</pc>
+              <w>IIII<hi rend="superscript">m</hi></w>
+              <pc type="supplied">.</pc>
+              <w>trebuchier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Quant</w>
+              <w>les</w>
+              <w>lances</w>
+              <w>sont</w>
+              <w>fraites</w>
+              <pc type="supplied">,</pc>
+              <w>traient</w>
+              <w>les</w>
+              <w>brans</w>
+              <w rend="elision">d</w>
+              <pc type="supplied">'</pc>
+              <w>acier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Là</w>
+              <w>véissiés</w>
+              <w>le</w>
+              <w>jor</w>
+              <w>tel</w>
+              <w>estour</w>
+              <w>commencier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Tant</w>
+              <w>bras</w>
+              <w>et</w>
+              <w>tante</w>
+              <w>espaulle</w>
+              <w>et</w>
+              <w>itant</w>
+              <w>hanepier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w rend="elision">L</w>
+              <pc type="supplied">'</pc>
+              <w>un</w>
+              <w>mort</w>
+              <w>desore</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>autre</w>
+              <w>verser</w>
+              <w>et</w>
+              <w>trebuchier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>foïr</w>
+              <w>par</w>
+              <w>ces</w>
+              <w>chans</w>
+              <w>tant</w>
+              <w>auferrant</w>
+              <w>destrier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Lor</w>
+              <w>regnes</w>
+              <w>traïnant</w>
+              <w>qui</w>
+              <w>erent</w>
+              <w>estraier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Là</w>
+              <w>véissiez</w>
+              <w>le</w>
+              <w>jor</w>
+              <w>tante</w>
+              <w>teste</w>
+              <w>tranchier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Qui</w>
+              <w>as</w>
+              <w>paien</w>
+              <w>torna</w>
+              <w>à</w>
+              <w>mult</w>
+              <w>grant</w>
+              <w>encombrier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Qui</w>
+              <w>le</w>
+              <w>jor</w>
+              <w>fust</w>
+              <w>el</w>
+              <w>champ</w>
+              <w>et</w>
+              <w>vousist</w>
+              <w>bon</w>
+              <w>coursier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Ja</w>
+              <w>ne</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>en</w>
+              <w>estéust</w>
+              <w>à</w>
+              <w>son</w>
+              <w>voisin</w>
+              <w>plaidier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Ne</w>
+              <w>ostage</w>
+              <w>livrer</w>
+              <w>por</w>
+              <w>son</w>
+              <w>cheval</w>
+              <w>paier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Atant</w>
+              <w>es</w>
+              <w>Cornicas</w>
+              <pc type="supplied">,</pc>
+              <w>qui</w>
+              <w>Diex</w>
+              <w>doinst</w>
+              <w>ancombrier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Bien</w>
+              <w>fu</w>
+              <w>armés</w>
+              <w>li</w>
+              <w>glous</w>
+              <w>à</w>
+              <w>guise</w>
+              <w rend="elision">d</w>
+              <pc type="supplied">'</pc>
+              <w>ome</w>
+              <w>fier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Hauberc</w>
+              <w>ot</w>
+              <w>et</w>
+              <w>bon</w>
+              <w>hiaume</w>
+              <w>et</w>
+              <w>espée</w>
+              <w rend="elision">d</w>
+              <pc type="supplied">'</pc>
+              <w>acier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>tenoit</w>
+              <w>en</w>
+              <w>son</w>
+              <w>poing</w>
+              <pc type="supplied">.</pc>
+              <w>I</w>
+              <pc type="supplied">.</pc>
+              <w>roit</w>
+              <w>trenchant</w>
+              <w>espier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Quant</w>
+              <w>il</w>
+              <w>voit</w>
+              <w>son</w>
+              <w>linage</w>
+              <w>si</w>
+              <w>vilment</w>
+              <w>depecier</w>
+              <pc type="supplied">,</pc>
+            </l>
+    
+            <pb facs="facsimile0067.bin.png" n="0067"/>
+            <!--584-616 GUI DE BOURGOGNE.-->
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>dit</w>
+              <w>en</w>
+              <w>son</w>
+              <w>corage</w>
+              <pc type="supplied">,</pc>
+              <w rend="elision">s</w>
+              <pc type="supplied">'</pc>
+              <w>il</w>
+              <w>ne</w>
+              <w>le</w>
+              <w>puet</w>
+              <w>vengier</w>
+              <pc type="supplied">:</pc>
+            </l>
+            <lb/>
+            <l>
+              <pc type="supplied">«</pc>
+              <q>
+                <w>Je</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>prise</w>
+                <w>mie</w>
+                <w>la</w>
+                <w>monte</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>un</w>
+                <w>denier</w>
+                <pc type="supplied">.</pc>
+              </q>
+              <pc type="supplied">»</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Quant</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w>Guis</w>
+              <w>le</w>
+              <w>voit</w>
+              <pc type="supplied">,</pc>
+              <w>ne</w>
+              <w>le</w>
+              <w>vout</w>
+              <w>espargnier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Qui</w>
+              <w>véist</w>
+              <w>au</w>
+              <w>baron</w>
+              <w>son</w>
+              <w>espiel</w>
+              <w>paumoier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Par</w>
+              <w>desus</w>
+              <w>les</w>
+              <w>enarmes</w>
+              <w>et</w>
+              <w>sous</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>escu</w>
+              <w>plongier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Bien</w>
+              <w>li</w>
+              <w>péust</w>
+              <w>menbrer</w>
+              <w>de</w>
+              <w>noble</w>
+              <w>chevalier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>Cornicas</w>
+              <w>se</w>
+              <w>paine</w>
+              <w>de</w>
+              <w>sa</w>
+              <w>honte</w>
+              <w>vangier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Jhesu</w>
+              <w>Crist</w>
+              <w>le</w>
+              <w>maudie</w>
+              <pc type="supplied">,</pc>
+              <w>le</w>
+              <w>verai</w>
+              <w>justicier</w>
+              <pc type="supplied">!</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Il</w>
+              <w>broche</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>auferrant</w>
+              <pc type="supplied">,</pc>
+              <w>et</w>
+              <w>rois</w>
+              <w>Guis</w>
+              <w>le</w>
+              <w>corsier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Mervilleus</w>
+              <w>cos</w>
+              <w>se</w>
+              <w>donent</w>
+              <w>es</w>
+              <w>escus</w>
+              <w>de</w>
+              <w>quartier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Li</w>
+              <w>paiens</w>
+              <w>fiert</w>
+              <w>Guion</w>
+              <pc type="supplied">,</pc>
+              <w>ne</w>
+              <w>le</w>
+              <w>volt</w>
+              <w>espargnier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Tant</w>
+              <w>sont</w>
+              <w>fort</w>
+              <w>li</w>
+              <w>hauberc</w>
+              <w>nes</w>
+              <w>porent</w>
+              <w>ampirier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Par</w>
+              <w>droite</w>
+              <w>vive</w>
+              <w>force</w>
+              <w>convint</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>espiel</w>
+              <w>brisier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>enfes</w>
+              <w>Guis</w>
+              <w>le</w>
+              <w>fiert</w>
+              <pc type="supplied">,</pc>
+              <w>qui</w>
+              <w>le</w>
+              <w>corage</w>
+              <w>ot</w>
+              <w>fier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Li</w>
+              <w>tains</w>
+              <w>ne</w>
+              <w>li</w>
+              <w>vermaus</w>
+              <w>ne</w>
+              <w>li</w>
+              <w>ot</w>
+              <w>puis</w>
+              <w>mestier</w>
+            </l>
+            <lb/>
+            <l>
+              <w>Que</w>
+              <w>le</w>
+              <w>fer</w>
+              <w>ne</w>
+              <w>li</w>
+              <w>face</w>
+              <w>ou</w>
+              <w>vermeil</w>
+              <w>sanc</w>
+              <w>baignier</w>
+              <pc type="supplied">;</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Tant</w>
+              <w>com</w>
+              <w>hanste</w>
+              <w>li</w>
+              <w>dure</w>
+              <w>le</w>
+              <w>fist</w>
+              <w>mort</w>
+              <w>trebuchier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Lors</w>
+              <w>escrie</w>
+              <q>
+                <w>Borgoigne</w>
+                <pc type="supplied">!</pc>
+              </q>
+              <w>por</w>
+              <w>sa</w>
+              <w>gent</w>
+              <w>ralier</w>
+              <pc type="supplied">.</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Il</w>
+              <w rend="elision">n</w>
+              <pc type="supplied">'</pc>
+              <w>avoit</w>
+              <w>dame</w>
+              <w>en</w>
+              <w>char</w>
+              <pc type="supplied">,</pc>
+              <w>tant</w>
+              <w>féist</w>
+              <w>à</w>
+              <w>proisier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Ne</w>
+              <w>tenist</w>
+              <w>en</w>
+              <w>sa</w>
+              <w>main</w>
+              <w>son</w>
+              <w>livre</w>
+              <w>ou</w>
+              <w>son</w>
+              <w>sautier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w>Et</w>
+              <w>prie</w>
+              <w>Damedieu</w>
+              <pc type="supplied">,</pc>
+              <w>le</w>
+              <w>verai</w>
+              <w>justicier</w>
+              <pc type="supplied">,</pc>
+            </l>
+            <lb/>
+            <l>
+              <w rend="elision">Qu</w>
+              <pc type="supplied">'</pc>
+              <w>il</w>
+              <w>lor</w>
+              <w>enfans</w>
+              <w>garisse</w>
+              <w>de</w>
+              <w>mort</w>
+              <w>et</w>
+              <w rend="elision">d</w>
+              <pc type="supplied">'</pc>
+              <w>ancombrier</w>
+              <pc type="supplied">.</pc>
+            </l>
+          </lem>
+          <rdg wit="#b"/>
           <note resp="#Guessard">
-            <lb/>Mult fu fors la bataille à l'estour commencier. <lb/>Toute cette tirade manque
+            <lb/><q>Mult fu fors la bataille à l'estour commencier.</q> <lb/>Toute cette tirade manque
             dans le manuscrit b.
           </note>          
-        </l>
-        <lb/>
-        <l>
-          <w>Bien</w>
-          <w>i</w>
-          <w>fierent</w>
-          <w>ensamble</w>
-          <w>li</w>
-          <w>Guion</w>
-          <w>chevalier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Là</w>
-          <w>oïssiez</w>
-          <w>grant</w>
-          <w>bruit</w>
-          <w>à</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>estour</w>
-          <w>commencier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Car</w>
-          <w rend="elision">d</w>
-          <pc type="supplied">'</pc>
-          <w>Espaigne</w>
-          <w>an</w>
-          <w>i</w>
-          <w>firent</w>
-          <pc type="supplied">.</pc>
-          <w>IIII<hi rend="superscript">m</hi></w>
-          <pc type="supplied">.</pc>
-          <w>trebuchier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Quant</w>
-          <w>les</w>
-          <w>lances</w>
-          <w>sont</w>
-          <w>fraites</w>
-          <pc type="supplied">,</pc>
-          <w>traient</w>
-          <w>les</w>
-          <w>brans</w>
-          <w rend="elision">d</w>
-          <pc type="supplied">'</pc>
-          <w>acier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Là</w>
-          <w>véissiés</w>
-          <w>le</w>
-          <w>jor</w>
-          <w>tel</w>
-          <w>estour</w>
-          <w>commencier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Tant</w>
-          <w>bras</w>
-          <w>et</w>
-          <w>tante</w>
-          <w>espaulle</w>
-          <w>et</w>
-          <w>itant</w>
-          <w>hanepier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w rend="elision">L</w>
-          <pc type="supplied">'</pc>
-          <w>un</w>
-          <w>mort</w>
-          <w>desore</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>autre</w>
-          <w>verser</w>
-          <w>et</w>
-          <w>trebuchier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w>foïr</w>
-          <w>par</w>
-          <w>ces</w>
-          <w>chans</w>
-          <w>tant</w>
-          <w>auferrant</w>
-          <w>destrier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Lor</w>
-          <w>regnes</w>
-          <w>traïnant</w>
-          <w>qui</w>
-          <w>erent</w>
-          <w>estraier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Là</w>
-          <w>véissiez</w>
-          <w>le</w>
-          <w>jor</w>
-          <w>tante</w>
-          <w>teste</w>
-          <w>tranchier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Qui</w>
-          <w>as</w>
-          <w>paien</w>
-          <w>torna</w>
-          <w>à</w>
-          <w>mult</w>
-          <w>grant</w>
-          <w>encombrier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Qui</w>
-          <w>le</w>
-          <w>jor</w>
-          <w>fust</w>
-          <w>el</w>
-          <w>champ</w>
-          <w>et</w>
-          <w>vousist</w>
-          <w>bon</w>
-          <w>coursier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Ja</w>
-          <w>ne</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>en</w>
-          <w>estéust</w>
-          <w>à</w>
-          <w>son</w>
-          <w>voisin</w>
-          <w>plaidier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Ne</w>
-          <w>ostage</w>
-          <w>livrer</w>
-          <w>por</w>
-          <w>son</w>
-          <w>cheval</w>
-          <w>paier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Atant</w>
-          <w>es</w>
-          <w>Cornicas</w>
-          <pc type="supplied">,</pc>
-          <w>qui</w>
-          <w>Diex</w>
-          <w>doinst</w>
-          <w>ancombrier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Bien</w>
-          <w>fu</w>
-          <w>armés</w>
-          <w>li</w>
-          <w>glous</w>
-          <w>à</w>
-          <w>guise</w>
-          <w rend="elision">d</w>
-          <pc type="supplied">'</pc>
-          <w>ome</w>
-          <w>fier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Hauberc</w>
-          <w>ot</w>
-          <w>et</w>
-          <w>bon</w>
-          <w>hiaume</w>
-          <w>et</w>
-          <w>espée</w>
-          <w rend="elision">d</w>
-          <pc type="supplied">'</pc>
-          <w>acier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w>tenoit</w>
-          <w>en</w>
-          <w>son</w>
-          <w>poing</w>
-          <pc type="supplied">.</pc>
-          <w>I</w>
-          <pc type="supplied">.</pc>
-          <w>roit</w>
-          <w>trenchant</w>
-          <w>espier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Quant</w>
-          <w>il</w>
-          <w>voit</w>
-          <w>son</w>
-          <w>linage</w>
-          <w>si</w>
-          <w>vilment</w>
-          <w>depecier</w>
-          <pc type="supplied">,</pc>
-        </l>
-
-        <pb facs="facsimile0067.bin.png" n="0067"/>
-        <!--584-616 GUI DE BOURGOGNE.-->
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w>dit</w>
-          <w>en</w>
-          <w>son</w>
-          <w>corage</w>
-          <pc type="supplied">,</pc>
-          <w rend="elision">s</w>
-          <pc type="supplied">'</pc>
-          <w>il</w>
-          <w>ne</w>
-          <w>le</w>
-          <w>puet</w>
-          <w>vengier</w>
-          <pc type="supplied">:</pc>
-        </l>
-        <lb/>
-        <l>
-          <pc type="supplied">«</pc>
-          <q>
-            <w>Je</w>
-            <w>ne</w>
-            <w>me</w>
-            <w>prise</w>
-            <w>mie</w>
-            <w>la</w>
-            <w>monte</w>
-            <w rend="elision">d</w>
-            <pc type="supplied">'</pc>
-            <w>un</w>
-            <w>denier</w>
-            <pc type="supplied">.</pc>
-          </q>
-          <pc type="supplied">»</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Quant</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes</w>
-          <w>Guis</w>
-          <w>le</w>
-          <w>voit</w>
-          <pc type="supplied">,</pc>
-          <w>ne</w>
-          <w>le</w>
-          <w>vout</w>
-          <w>espargnier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Qui</w>
-          <w>véist</w>
-          <w>au</w>
-          <w>baron</w>
-          <w>son</w>
-          <w>espiel</w>
-          <w>paumoier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Par</w>
-          <w>desus</w>
-          <w>les</w>
-          <w>enarmes</w>
-          <w>et</w>
-          <w>sous</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>escu</w>
-          <w>plongier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Bien</w>
-          <w>li</w>
-          <w>péust</w>
-          <w>menbrer</w>
-          <w>de</w>
-          <w>noble</w>
-          <w>chevalier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w>Cornicas</w>
-          <w>se</w>
-          <w>paine</w>
-          <w>de</w>
-          <w>sa</w>
-          <w>honte</w>
-          <w>vangier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Jhesu</w>
-          <w>Crist</w>
-          <w>le</w>
-          <w>maudie</w>
-          <pc type="supplied">,</pc>
-          <w>le</w>
-          <w>verai</w>
-          <w>justicier</w>
-          <pc type="supplied">!</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Il</w>
-          <w>broche</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>auferrant</w>
-          <pc type="supplied">,</pc>
-          <w>et</w>
-          <w>rois</w>
-          <w>Guis</w>
-          <w>le</w>
-          <w>corsier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Mervilleus</w>
-          <w>cos</w>
-          <w>se</w>
-          <w>donent</w>
-          <w>es</w>
-          <w>escus</w>
-          <w>de</w>
-          <w>quartier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Li</w>
-          <w>paiens</w>
-          <w>fiert</w>
-          <w>Guion</w>
-          <pc type="supplied">,</pc>
-          <w>ne</w>
-          <w>le</w>
-          <w>volt</w>
-          <w>espargnier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Tant</w>
-          <w>sont</w>
-          <w>fort</w>
-          <w>li</w>
-          <w>hauberc</w>
-          <w>nes</w>
-          <w>porent</w>
-          <w>ampirier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Par</w>
-          <w>droite</w>
-          <w>vive</w>
-          <w>force</w>
-          <w>convint</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>espiel</w>
-          <w>brisier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w rend="elision">l</w>
-          <pc type="supplied">'</pc>
-          <w>enfes</w>
-          <w>Guis</w>
-          <w>le</w>
-          <w>fiert</w>
-          <pc type="supplied">,</pc>
-          <w>qui</w>
-          <w>le</w>
-          <w>corage</w>
-          <w>ot</w>
-          <w>fier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Li</w>
-          <w>tains</w>
-          <w>ne</w>
-          <w>li</w>
-          <w>vermaus</w>
-          <w>ne</w>
-          <w>li</w>
-          <w>ot</w>
-          <w>puis</w>
-          <w>mestier</w>
-        </l>
-        <lb/>
-        <l>
-          <w>Que</w>
-          <w>le</w>
-          <w>fer</w>
-          <w>ne</w>
-          <w>li</w>
-          <w>face</w>
-          <w>ou</w>
-          <w>vermeil</w>
-          <w>sanc</w>
-          <w>baignier</w>
-          <pc type="supplied">;</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Tant</w>
-          <w>com</w>
-          <w>hanste</w>
-          <w>li</w>
-          <w>dure</w>
-          <w>le</w>
-          <w>fist</w>
-          <w>mort</w>
-          <w>trebuchier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Lors</w>
-          <w>escrie</w>
-          <q>
-            <w>Borgoigne</w>
-            <pc type="supplied">!</pc>
-          </q>
-          <w>por</w>
-          <w>sa</w>
-          <w>gent</w>
-          <w>ralier</w>
-          <pc type="supplied">.</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Il</w>
-          <w rend="elision">n</w>
-          <pc type="supplied">'</pc>
-          <w>avoit</w>
-          <w>dame</w>
-          <w>en</w>
-          <w>char</w>
-          <pc type="supplied">,</pc>
-          <w>tant</w>
-          <w>féist</w>
-          <w>à</w>
-          <w>proisier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Ne</w>
-          <w>tenist</w>
-          <w>en</w>
-          <w>sa</w>
-          <w>main</w>
-          <w>son</w>
-          <w>livre</w>
-          <w>ou</w>
-          <w>son</w>
-          <w>sautier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w>Et</w>
-          <w>prie</w>
-          <w>Damedieu</w>
-          <pc type="supplied">,</pc>
-          <w>le</w>
-          <w>verai</w>
-          <w>justicier</w>
-          <pc type="supplied">,</pc>
-        </l>
-        <lb/>
-        <l>
-          <w rend="elision">Qu</w>
-          <pc type="supplied">'</pc>
-          <w>il</w>
-          <w>lor</w>
-          <w>enfans</w>
-          <w>garisse</w>
-          <w>de</w>
-          <w>mort</w>
-          <w>et</w>
-          <w rend="elision">d</w>
-          <pc type="supplied">'</pc>
-          <w>ancombrier</w>
-          <pc type="supplied">.</pc>
-        </l>
+        </app>
       </lg>
       
       <lg n="XIII" type="laisse" xml:id="L_013">
@@ -13937,9 +14622,8 @@
                 <pc type="supplied">.</pc>
               </rdg>            
               <note resp="#Guessard">
-                <lb/>Seignor, ce dit li enfes, or vous
-                apareilliez. 
-                <lb/>Leçon de b : kar vos agenuillez.
+                <lb/><q>Seignor, ce dit li enfes, or vous apareilliez.</q> 
+                <lb/>Leçon de b : <q>kar vos agenuillez.</q>
               </note>
             </app>
           </q>
@@ -14326,6 +15010,87 @@
         </l>
       </lg>
       
+      <app>
+        <lem wit="#a"/>
+        <rdg wit="#b">
+          <lb/>
+          <l>
+            <w>Or</w>
+            <w rend="elision">s</w>
+            <pc type="supplied">'</pc>
+            <w>en</w>
+            <w>vunt</w>
+            <w>li</w>
+            <w>messages</w>
+            <w>ki</w>
+            <w>Deus</w>
+            <w>pust</w>
+            <w>honorer</w>
+            <pc type="supplied">,</pc>
+          </l>
+          <lb/>
+          <l>
+            <w>E</w>
+            <w>menent</w>
+            <w>la</w>
+            <w>viande</w>
+            <w>à</w>
+            <w>Karlon</w>
+            <w>à</w>
+            <w>vis</w>
+            <w>fer</w>
+            <pc type="supplied">.</pc>
+          </l>
+          <gap/>
+          <lb/>
+          <l>
+            <w>Cil</w>
+            <w>gardent</w>
+            <w>les</w>
+            <w>passages</w>
+            <pc type="supplied">,</pc>
+            <w>les</w>
+            <w>destreis</w>
+            <w>et</w>
+            <w>les</w>
+            <w>guez</w>
+            <pc type="supplied">.</pc>
+          </l> 
+          <gap/>
+        </rdg>
+        <note resp="#Guessard">
+            <lb/>Or s'en vont li enfant qui oirrent lor chemin. 
+            <lb/>Entre la tirade qui commence par ce vers et celle <lb/>qui la précède se trouvent
+            dans le manuscrit b deux <lb/>tirades, l'une de 78, l'autre de 63 vers. 
+            <lb/>Première tirade : 
+            <lb/><q>Or s'en vunt li messages ki Deus pust honorer, 
+            <lb/>E menent la viande à Karlon à vis fer. </q>
+            <lb/>Après deux journées de marche, le convoi est en vue <lb/>de Montorgueil, une cité 
+            qui a résisté aux efforts de <lb/>Charlemagne et à un siége d'une année. Estout de 
+            <lb/>Langres veut qu'on la prenne et qu'on en déloge les <lb/>païens. Ses compagnons 
+            lui représentent la folie de <lb/>l'entreprise ; mais lui, il estime qu'il seroit 
+            honteux <lb/>de revoir Charlemagne sans avoir eu une rencontre <lb/>avec les
+            Sarrasins. Son voeu est bientôt exaucé : à une <lb/>lieue de là, le convoi est arrêté par
+            une bande de quatre <lb/>cents Sarrasins. 
+            <lb/><q>Cil gardent les passages, les destreis et les guez. </q>
+            <lb/>Leur chef Danemont, fils de Huidelon de Montor<lb break="no" rend="hyphen"
+            />gueil, réclame de chacun des chevaliers françois un <lb/>tribut de mille besans d'or.
+            - Indignation d'Estout de <lb/>Langres. - Il passe un gué qui le sépare de Dane<lb
+              break="no" rend="hyphen"/>mont et de sa troupe. - Rejeté dans l'eau par un <lb/>coup
+            terrible du chef sarrasin, il va périr, lorsque ses <lb/>compagnons accourent à son aide.
+            Un miracle les favo<lb break="no" rend="hyphen"/>rise : l'eau se retire pour les laisser
+            passer. 
+            <lb/>Deuxième tirade : 
+            <lb/>Combat des François et des Sarrasins. - Joute de <lb/>Danemont et d'Estout de 
+            Langres. - Le chef sarra<lb break="no" rend="hyphen"/>sin, abandonné par les siens, 
+            est contraint de prendre <lb/>la fuite avec eux, et va porter l'alarme à Montorgueil. 
+            <lb/>- Les François continuent leur route vers Luiserne. 
+          </note>
+        <note resp="#AC">Guessard n'a pas transcrit la totalité des tirades concernées dans le
+        manuscrit b. Nous indiquons les lacunes par l'élément gap.</note>
+      </app>
+      
+      
       <lg n="XV" type="laisse" xml:id="L_015">
         <lb/>
         <l>
@@ -14340,36 +15105,7 @@
           <w>oirrent</w>
           <w>lor</w>
           <w>chemin</w>
-          <pc type="supplied">:</pc>
- <!-- ################# EST-IL CORRECT DE METTRE LA NOTE ICI ? ###################" -->         
-          <note resp="#Guessard">
-            <lb/>Or s'en vont li enfant qui oirrent lor chemin. 
-            <lb/>Entre la tirade qui commence par ce vers et celle <lb/>qui la précède se trouvent
-            dans le manuscrit b deux <lb/>tirades, l'une de 78, l'autre de 63 vers. 
-            <lb/>Première tirade : 
-            <lb/>Or s'en vunt li messages ki Deus pust honorer, 
-            <lb/>E menent la viande à Karlon à vis fer. 
-            <lb/>Après deux journées de marche, le convoi est en vue <lb/>de Montorgueil, une cité 
-            qui a résisté aux efforts de <lb/>Charlemagne et à un siége d'une année. Estout de 
-            <lb/>Langres veut qu'on la prenne et qu'on en déloge les <lb/>païens. Ses compagnons 
-            lui représentent la folie de <lb/>l'entreprise ; mais lui, il estime qu'il seroit 
-            honteux <lb/>de revoir Charlemagne sans avoir eu une rencontre <lb/>avec les
-            Sarrasins. Son voeu est bientôt exaucé : à une <lb/>lieue de là, le convoi est arrêté par
-            une bande de quatre <lb/>cents Sarrasins. 
-            <lb/>Cil gardent les passages, les destreis et les guez. 
-            <lb/>Leur chef Danemont, fils de Huidelon de Montor<lb break="no" rend="hyphen"
-            />gueil, réclame de chacun des chevaliers françois un <lb/>tribut de mille besans d'or.
-            - Indignation d'Estout de <lb/>Langres. - Il passe un gué qui le sépare de Dane<lb
-              break="no" rend="hyphen"/>mont et de sa troupe. - Rejeté dans l'eau par un <lb/>coup
-            terrible du chef sarrasin, il va périr, lorsque ses <lb/>compagnons accourent à son aide.
-            Un miracle les favo<lb break="no" rend="hyphen"/>rise : l'eau se retire pour les laisser
-            passer. 
-            <lb/>Deuxième tirade : 
-            <lb/>Combat des François et des Sarrasins. - Joute de <lb/>Danemont et d'Estout de 
-            Langres. - Le chef sarra<lb break="no" rend="hyphen"/>sin, abandonné par les siens, 
-            est contraint de prendre <lb/>la fuite avec eux, et va porter l'alarme à Montorgueil. 
-            <lb/>- Les François continuent leur route vers Luiserne. 
-          </note>
+          <pc type="supplied">:</pc>       
         </l>
         <lb/>
         <l>
@@ -15128,6 +15864,11 @@
             <w>noif</w>
             <w>negier</w>
             <pc type="supplied">.</pc>
+            <note resp="#Guessard">
+              <lb/>P. 24 : Le quatorzième vers ne semble guère venir 
+              <lb/>à point après les autres. Nous pensons qu'il y a là une
+              <lb/>lacune.
+            </note>
           </q>
         </l>
         <lb/>
@@ -17824,10 +18565,11 @@
                  </sic>
               </lem> 
               <note resp="#Guessard">
-                <lb/>Cis jors est li cinquimes. 
+                <lb/><q>Cis jors est li cinquimes. </q>
                 <lb/>Le même personnage répond à la même question, <lb/>p. 31, v. 2 : 
-                Sire, hui à .XV. jours. Ces deux chiffres <lb/>ne sont pas d'accord ; 
-                il est donc probable qu'il faut <lb/>lire ici quinzimes au lieu de cinquimes. 
+                <q>Sire, hui à .XV. jours</q>. Ces deux chiffres <lb/>ne sont pas d'accord ; 
+                il est donc probable qu'il faut <lb/>lire ici <q>quinzimes</q> au lieu de 
+                <q>cinquimes</q>. 
               </note>
             </app>
             <pc type="supplied">,</pc>
@@ -18249,8 +18991,8 @@
                 <w>féis<corr resp="#Guessard">t</corr></w>
               </lem>
               <note resp="#Guessard">
-                <lb/>feis[t]. a donne <q>feis</q>, forme de la se<lb break="no" rend="hyphen"/>conde 
-                personne ; mais il faut ici la troisième.
+                <lb/><q>feis<corr resp="#Guessard">t</corr></q>. a donne <q>feis</q>, forme de la 
+                se<lb break="no" rend="hyphen"/>conde personne ; mais il faut ici la troisième.
               </note>
             </app>
             <w>lo</w>
@@ -20171,11 +20913,7 @@
           <w>compain</w>
           <w>Hardré</w>
           <pc type="supplied">;</pc>
-          <note resp="#Guessard">
-            <lb/>Atant es Ganelon et son compain Hardré. 
-            <lb/>b ajoute, après ce vers : 
-            <lb/>Tebalt et Alori, Malvaisin et Mauré.
-          </note>  
+        </l>
         <app>
           <lem wit="#a"/>
           <rdg wit="#b">
@@ -20188,8 +20926,12 @@
             <w>Mauré</w>
             <pc type="supplied">.</pc>
           </rdg>
+          <note resp="#Guessard">
+            <lb/><q>Atant es Ganelon et son compain Hardré.</q> 
+            <lb/>b ajoute, après ce vers : 
+            <lb/><q>Tebalt et Alori, Malvaisin et Mauré.</q>
+          </note>
         </app>
-        </l>
         <l>
           <w>Cil</w>
           <w>Sires</w>
@@ -20228,9 +20970,9 @@
               <pc type="supplied">.</pc>
             </rdg>           
             <note resp="#Guessard">
-              <lb/>Olivier de Viane a par non apelé. 
+              <lb/><q>Olivier de Viane a par non apelé</q>. 
               <lb/>Leçon de b : 
-              <lb/>Guenes veit Olivier, si l'a aresonez. 
+              <lb/><q>Guenes veit Olivier, si l'a aresonez</q>. 
             </note>
           </app>
         </l>
@@ -23137,8 +23879,9 @@
               <w>respondi</w>
               <pc type="supplied">.</pc>
             </rdg>
- <!-- NOTE NECESSAIRE ICI ?-->           
-            <note resp="#Guessard">Leçon de b : <lb/> <q>Que vous a il mesfait ? Bertran li respondi.</q>
+            <note resp="#Guessard">
+              <q>Que vous a il mesfait ? dist Torpin au vis fier.</q>
+              <lb/> Leçon de b : <lb/> <q>Que vous a il mesfait ? Bertran li respondi.</q>
             </note>
           </app>
         </l>
@@ -23504,10 +24247,11 @@
             </lem>
             <rdg wit="#a">
               <w>il</w>
-            </rdg>
- <!-- NOTE NECESSAIRE ICI ? -->           
+            </rdg>          
             <note resp="#Guessard">
-              <lb/>Leçon de a : <q>Enfant, fait il, je vous</q>
+              <lb/><q>Enfant, fait <corr resp="#Guessard">l'empereres</corr>, je vous demant 
+              congié.</q>
+              <lb/>Leçon de a : <q>Enfant, fait il, je vous.....</q>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -23700,7 +24444,9 @@
             <rdg wit="#b">
               <w>here</w>
             </rdg>
-            <note resp="#Guessard">Leçon de b : <lb/> <q>Karles vesti la here</q>... <lb/>leçon qui 
+            <note resp="#Guessard">
+              <lb/><q>Karles vesti la <q>guige</q>, mist le chapele et le chief.</q>
+              <lb/>Leçon de b : <lb/> <q>Karles vesti la <q>here</q>.....</q> <lb/>leçon qui 
               nous semble préférable. On se revêt d'une <lb/><q>haire</q>, et non d'une <q>guige</q>,
             qui est un cordon.
             </note>
@@ -24533,9 +25279,12 @@
                 <w>Boydans</w>
             </lem>
             <rdg wit="#a">
-              il
+              <w>il</w>
             </rdg>
-            <note resp="#Guessard">On lit dans a : <q>Seignor, dist il</q>.</note>
+            <note resp="#Guessard">
+              <lb/><q>Seignor, dist <q><corr resp="#Guessard">Boydans</corr></q>; entandez mon 
+                pensé.</q>
+              <lb/>On lit dans a : <q>Seignor, dist <q>il</q></q>.</note>
           </app>
           <pc type="supplied">,</pc>
           <q>
@@ -25474,7 +26223,9 @@
             <rdg wit="#a">
               <w>peust</w>
             </rdg>
-            <note resp="#Guessard">On lit dans a : <q>peust</q>, qui est inadmissible ; 
+            <note resp="#Guessard">
+              <lb/><q>Le saisi par la barbe, dont li <q>peus</q>est mellez.</q>
+              <lb/>On lit dans a : <q>peust</q>, qui est inadmissible ; 
               nous corri<lb break="no" rend="hyphen"/>geons et lisons : <q>peus</q> pour 
             <q>pels</q>, poil.
             </note>
@@ -26071,7 +26822,8 @@
               <w>maintenant</w>
               <w>armez</w>
             </rdg>
-            <note>
+            <note resp="#Guessard">
+              <lb/><q>Il méismes ses cors <q>est</q>maintenant <q>montez</q>.</q>
               <lb/>Leçon de b : <q>s'est</q> maintenant <q>armez</q>.
             </note>
           </app>
@@ -27152,8 +27904,8 @@
                 <w>mult</w>
               </rdg>
               <note resp="#Guessard">
-                On lit dans a : <q><hi>mult</hi>fel et <hi>mult</hi>des<lb break="no" 
-                  rend="hyphen"/>mesurez</q>, leçon qui fausse le vers.
+                <lb/>On lit dans a : <q><q>mult<q/>fel et <q>mult</q>des<lb break="no" 
+                  rend="hyphen"/>mesurez</q></q>, leçon qui fausse le vers. 
               </note>
             </app>
             <w>desmesurez</w>
@@ -27187,12 +27939,13 @@
             <w>i</w>
             <w>acourent</w>
             <note>
-              <lb/>.III. eves i acourent..... <lb/>Voyez p. 86, v. 3 : Sivirent les .IIII. eves. 
+              <lb/><q><q>.III.</q> eves i acourent.....</q> 
+              <lb/>Voyez p. 86, v. 3 : <q>Sivirent les <q>.IIII.</q> eves.</q> 
               <lb/>Si l'on adopte cette seconde leçon, il faudra lire ici :
               <lb/><q>L'une a non Rupane, l'autre Marne des guez ; <lb/> Si i cort 
-                <hi>Anviron</hi>.....</q>
-              <lb/>que nous n'avons osé considérer comme l'une des <lb/>quatre rivières aimantées qui
-              couloient à Montor<lb break="no" rend="hyphen"/>gueil.
+                <q>Anviron</q>.....</q>
+              <lb/>que nous n'avons osé considérer comme l'une des <lb/>quatre rivières aimantées 
+              qui couloient à Montor<lb break="no" rend="hyphen"/>gueil.
             </note>
             <w>devant</w>
             <w>par</w>
@@ -29075,8 +29828,8 @@
                 <w>ert</w>
               </rdg>
               <note>
-                <lb/><q>Quant lui <hi>vient</hi> à plaisir, panre le nous lera.</q> 
-                <lb/>Leçon de b : <lb/><q>Quant lui <hi>ert</hi> à plaisir...</q>
+                <lb/><q>Quant lui <q>vient</q> à plaisir, panre le nous lera.</q> 
+                <lb/>Leçon de b : <lb/><q>Quant lui <q>ert</q> à plaisir...</q>
               </note>
             </app>
             <w>à</w>
@@ -30258,11 +31011,11 @@
                 </corr>
               </choice>
             </lem>
-            <rdg wit="#a"/> 
- <!-- A VERIFIER CAR LA CORRECTION VIENT DU MEME MANUSCRIT AILLEURS-->
             <note resp="#Guessard"> 
+              <lb/><q><corr resp="#Guessard">L'enfes Guis de Borgoigne</corr> regarda Maucabré.</q>
               <lb/>Leçon de a :
-              <lb/><q>Li enfes Guis regarda Maucabré.</q> <lb/>Vers de dix syllabes seulement. 
+              <lb/><q>Li enfes Guis regarda Maucabré.</q> 
+              <lb/>Vers de dix syllabes seulement. 
               La correction est em<lb break="no" rend="hyphen"/>pruntée au premier vers de plusieurs
               des tirades pré<lb break="no" rend="hyphen"/>cédentes. 
             </note>
@@ -31067,7 +31820,7 @@
         <l>
           <q>
           <app>
-            <lem wit="#a"> <!-- no wit -->
+            <lem wit="#a"> 
               <choice>
                 <sic>
                   <w>Que</w>
@@ -31076,18 +31829,16 @@
                   <w>maint</w>
                 </sic>
                 <corr resp="#Guessard" cert="unknown">
-                  <q> <!-- quote ici ?? -->
                     <w>Et</w>
                     <w>que</w>
                     <w>il</w>
                     <w>te</w>
                     <w>conduie</w>
-                  </q>
                 </corr>
               </choice>
-            </lem> <!-- VERIFIER LA NOTE - POINTAGE ? -->
+            </lem> 
             <note resp="#Guessard" cert="unknown">
-              Vers de dix syllabes seulement. L'addition de <q>et</q> <lb/>semble naturelle,
+              Vers de dix syllabes seulement. - L'addition de <q>et</q> <lb/>semble naturelle,
               et <q>conduie</q>, qui a le même sens que<lb/> <q>maint</q>, est employé vingt fois
               dans le poëme en sem<lb break="no" rend="hyphen"/>blable cas.
             </note>
@@ -31148,23 +31899,27 @@
           <w>rois</w>
           <pc type="supplied">,</pc>
           <app>
-            <lem wit="#Guessard">
-              <w>il</w>
-              <w>et</w>
-              <w>sa</w>
-              <w>compaignie</w>
+            <lem wit="#a">
+              <choice>
+                <sic>
+                  <w>et</w>
+                  <w>il</w>
+                  <w>et</w>
+                  <w>sa</w>
+                  <w>grant</w>
+                  <w>compaignie</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>il</w>
+                  <w>et</w>
+                  <w>sa</w>
+                  <w>compaignie</w>
+                </corr>
+              </choice>
             </lem>
-            <rdg wit="#a">
-              <w>et</w>
-              <w>il</w>
-              <w>et</w>
-              <w>sa</w>
-              <w>grant</w>
-              <w>compaignie</w>
-            </rdg>
             <note>
               <lb/><q>Or chevauche li rois, il et sa compaignie.</q>
-              <lb/>Leçon de a : <lb/><q>Or chevauche li rois, <hi>et</hi> il et sa <hi>grant</hi> 
+              <lb/>Leçon de a : <lb/><q>Or chevauche li rois, <q>et</q> il et sa <q>grant</q> 
                 compaignie.</q> 
             </note>
           </app>
@@ -31187,18 +31942,20 @@
           <w>Parmi</w>
           <w>la</w>
           <app>
-            <lem wit="#Guessard"> <!-- wit = #a ? -->
- <!-- ###### VOIR COMMENT FAIRE POUR CE CAS PARTICULIER ################## -->             
-                <corr resp="#Guessard" cert="unknown"> <!-- il s'agit d'un ajout-->
+            <lem wit="#a"> 
+              <choice>
+                <sic/>
+                <corr resp="#Guessard">
                   <w>maistre</w>
                 </corr>
+              </choice>
             </lem>
             <rdg wit="#a"/>
             <note resp="#Guessard"> 
-              <lb/><q>Parmi la [maistre] porte.</q> <lb/><q>Maistre</q> manque ici dans le manuscrit 
-              a. Au dixième<lb/>vers de la tirade suivante, c'est le mot porte qui manque, 
-              <lb/>comme l'indique le manuscrit b, qui donne posterne. <lb/>Nous complétons ces 
-              deux vers l'un par l'autre.
+              <lb/><q>Parmi la <corr resp="#Guessard">maistre</corr> porte.</q> 
+              <lb/><q>Maistre</q> manque ici dans le manuscrit a. Au dixième<lb/>vers de la tirade 
+              suivante, c'est le mot porte qui manque, <lb/>comme l'indique le manuscrit b, qui 
+              donne posterne. <lb/>Nous complétons ces deux vers l'un par l'autre.
               <lb/>
             </note>
           </app>
@@ -31236,8 +31993,8 @@
               </choice>
             </lem>
             <note>
-              <lb/>Chevaus virent..... <lb/>Nous corrigeons le manuscrit, qui donne
-              vinrent. 
+              <lb/><q>Chevaus <q>virent</q>.....</q> <lb/>Nous corrigeons le manuscrit, qui donne
+              <q>vinrent</q>. 
             </note>
           </app>
           <w>et</w>
@@ -31640,8 +32397,8 @@
               <w>nez</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Il ot les sorcils grans et s'ot <hi>le poil levé</hi>.</q> <lb/>Leçon
-              de b : <q>et s'ot <hi>large le nez</hi></q>. 
+              <lb/><q>Il ot les sorcils grans et s'ot <q>le poil levé</q>.</q> <lb/>Leçon
+              de b : <q>et s'ot <q>large le nez</q></q>. 
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -32306,7 +33063,6 @@
             <w>Seignor</w>
           </q>
           <pc type="supplied">,</pc>
-          
           <app> 
             <lem wit="#a"> 
               <choice>
@@ -32323,11 +33079,11 @@
               </choice>
             </lem>
             <note resp="#Guessard" cert="unknown">
-              <lb/><q>Seignor, dist <hi>[l'enfes]</hi> Guis, envers
+              <lb/><q>Seignor, dist <q><corr resp="#Guessard">l'enfes</corr></q> Guis, envers
               moi entandés.</q> 
               <lb/>Leçon de a : <lb/><q>Seignor, ce dist Guis, envers moi entandés.</q> <lb/>Nous
-              corrigeons le manuscrit en retranchant ce et en <lb/>reproduisant ici une forme qui se
-              retrouve en vingt<lb/>autres passages.
+              corrigeons le manuscrit en retranchant <q>ce</q> et en <lb/>reproduisant ici une 
+              forme qui se retrouve en vingt<lb/>autres passages.
             </note>
           </app>
           <w>Guis</w>
@@ -32661,7 +33417,7 @@
               <w>faldestol</w>
             </rdg>
             <note>
-              <lb/><q>Desus le <hi>faudestuef</hi> se sist li rois prisiés.</q> <lb/>Leçon de b :
+              <lb/><q>Desus le <q>faudestuef</q> se sist li rois prisiés.</q> <lb/>Leçon de b :
               <q>faldestol</q>. 
             </note>
           </app>
@@ -38258,7 +39014,8 @@
               <w>va</w>
             </rdg>
             <note>
-              <lb/><q><hi>[Or s'en va l'enfes Guis]</hi> qui Diex croisse bonté.</q>
+              <lb/><q><q><corr resp="#Guessard">Or s'en va l'enfes Guis</corr></q> qui Diex 
+              croisse bonté.</q>
               <lb/>Ce vers n'a que dix syllabes dans le manuscrit a : <lb/><q>L'enfes s'en va qui 
               Diex croisse bonté.</q> 
               <lb/>Nous proposons de le corriger comme ci-dessus, et <lb/>nous répétons cette 
@@ -38313,7 +39070,7 @@
               <w>va</w>
             </rdg>
             <note>
-              <!-- QUE METTRE ? -->
+<!--#################################### CORRESP A METTRE ##################################"-->
             </note>
           </app>
           <w>sous</w>
@@ -38484,23 +39241,19 @@
           <w>cors</w>
           <w>ot</w>
           <w>gent</w>
-          <pc type="supplied">,</pc>
-          <w>bien</w>
-          <w>fait</w>
-          <pc type="supplied">,</pc>
- <!-- CORRECTION DEJA BALISEE A VERIFIER -->        
+          
           <app>
             <lem wit="#b">
+              <pc type="supplied">,</pc>
+              <w>bien</w>
+              <w>fait</w>
+              <pc type="supplied">,</pc>
               <w>molt</w>
               <w>semble</w>
               <w>bien</w>
               <w>vassal</w>
             </lem>
             <rdg wit="#a">
-              <w>Le</w> 
-              <w>cors</w> 
-              <w>ot</w> 
-              <w>gent</w> 
               <w>et</w> 
               <w>bien</w> 
               <w>fait</w> 
@@ -38508,8 +39261,8 @@
               <pc type="supplied">.</pc>
             </rdg>
             <note resp="#Guessard"><lb/><q>Le cors ot gent, bien fait, 
-              [<hi rend="superscript">b</hi>molt semble bien
-              vassal.]</q> 
+              <q><hi rend="superscript">b</hi>molt semble bien
+              vassal.</q></q> 
               <lb/>Encore un vers de dix syllabes dans le manuscrit a : <lb/><q>Le cors ot gent et
               bien fait contreval.</q> <lb/>b nous fournit la correction. 
             </note>
@@ -38520,14 +39273,18 @@
         <l>
           <w>Les</w>
           <app>
-            <lem wit="#Guessard">
-              <w>jambes</w>
+            <lem wit="#a">
+              <choice>
+                <sic>
+                  <w>chevaus</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>jambes</w>
+                </corr>
+              </choice>
             </lem>
-            <rdg wit="#a">
-              <w>chevaus</w>
-            </rdg>
             <note>
-              <lb/><q>Les <hi>[jambes]</hi> fors et longes por séoir sor cheval.</q>
+              <lb/><q>Les <q>jambes</q> fors et longes por séoir sor cheval.</q>
               <lb/>Leçon, évidemment fautive, du manuscrit a : 
               <lb/><q>Les chevaus fors et longes..... </q>
             </note>
@@ -40344,17 +41101,21 @@
           <pc type="supplied">.</pc>
           <w>XXIIII</w>
           <pc type="supplied">.</pc>
-          <w>topaces</w>
+          <w>topaees</w>
           <w>i</w>
           <w>ot</w>
           <w>tous</w>
           <app>
-            <lem wit="#Guessard">
-              <w>séélés</w>
+            <lem wit="#a">
+              <choice>
+                <sic>
+                  <w>scelés</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>séélés</w>
+                </corr>
+              </choice>
             </lem>
-            <rdg wit="#a">
-              scelés
-            </rdg>
             <note>
               <lb/><q>.XXIIII. topaees i ot tout séélés.</q> 
               <lb/>Le manuscrit a donne <q>scelés</q>, qui fausse le vers. 
@@ -41533,6 +42294,7 @@
             <w>la</w>
             <w>fausse</w>
             <w>posterne</w>
+<!--############## AJOUTER UN POINTAGE POUR LA NOTE PRECEDENTE ###################-->            
             <w>et</w>
             <w>conduire</w>
             <w>et</w>
@@ -42343,19 +43105,21 @@
         </l>
         <lb/>
         <l>
- <!-- CORRECTION A BALISER : CF VUE 189 -->
           <app>
-            <lem wit="#Guessard">
-               <w>Lores</w>
-            </lem>
-            <rdg wit="#a">
-              <w>Lors</w>
-            </rdg>
-<!-- ########## QUE FAIRE DANS LE CAS DE CETTE NOTE ? ###########" -->           
+            <lem wit="#a">
+              <choice>
+                <sic>
+                  <w>lors</w>
+                </sic>
+                <corr resp="#Guessard">
+                  <w>Lores</w>
+                </corr>
+              </choice>
+            </lem>    
+ <!-- ############### J'AI COUPE LA  NOTE, VERIFIER SI C'EST CORRECT #################" -->           
             <note resp="#Guessard">
               <lb/><q><hi>[Lores]</hi> ne doutast il .IIII. rois coronés.</q> <lb/>Le manuscrit a 
-              donne <q>lors</q>, qui fausse le vers. Au lieu <lb/>de <q>rois coronés</q>, on lit dans 
-              b : <q>Turcs defaez</q>. 
+              donne <q>lors</q>, qui fausse le vers. 
             </note>
           </app>
           <w>ne</w>
@@ -42369,12 +43133,13 @@
               <w>rois</w>
               <w>coronés</w>
             </lem>
-            <rdg wit="b">
+            <rdg wit="#b">
               <w>Turcs</w>
               <w>defaez</w>
             </rdg>
             <note>
-<!-- ##### METTRE UNE NOTE ICI ? ###################### -->              
+<!-- ##### VERIFIER SI NOTE COUPEE ICI OK ###################### -->   
+              Au lieu <lb/>de <q>rois coronés</q>, on lit dans b : <q>Turcs defaez</q>. 
             </note>
           </app>
           <pc type="supplied">.</pc>
@@ -49852,7 +50617,7 @@
               <w>angres</w>
             </rdg>
             <note>
-              <lb/><q>Comment ! dist <hi>[l'enfes Guis]</hi>, dans viellars radotés.</q>
+              <lb/><q>Comment ! dist <q>l'enfes Guis</q>, dans viellars radotés.</q>
               <lb/>Leçon du manuscrit a : <lb/><q>Comment ! dist li angres, dans.....</q> <lb/>
             </note>
           </app>
@@ -53813,14 +54578,12 @@
             <rdg wit="#a">
               <w>Karlon</w>
             </rdg>
-            <note>
- <!-- #### PARENTHESES A CONSERVER ICI ? ###############"" -->             
-              <lb/><q>Où qu'ele voit <hi>[<hi rend="superscript">b</hi>Guion]</hi>, gentement li a 
+            <note>       
+              <lb/><q>Où qu'ele voit <q><hi rend="superscript">b</hi>Guion</q>, gentement li a 
                 dit.</q>
               <lb/>Leçon de a : <q>Karlon</q>. C'est une faute manifeste.
             </note>
           </app>
-          <w>[bGuion]</w>
           <pc type="supplied">,</pc>
           <w>gentement</w>
           <w>li</w>
@@ -56884,17 +57647,17 @@
         </l>
         <lb/>
         <l>
+          <w>Et</w>
           <app>
             <lem wit="a">
               <choice>
                 <sic>
-                  <w>Et</w>
                   <w rend="elision">l</w>
                   <pc type="supplied">'</pc>
                   <w>enfes</w>
+                  <w>Gui</w>
                 </sic>
                 <corr resp="#Guessard">
-                   <w>Et</w>
                    <w>Guis</w>
                 </corr>
               </choice>
@@ -59186,7 +59949,6 @@
         <l>
           <pc type="supplied">«</pc>
           <q>
- <!-- CORRECTION A BALISER : CF VUE 189 -->
             <app>
               <lem wit="#b">
                 <w>Si</w>
@@ -59199,7 +59961,7 @@
                 <w>Huidelon</w>
               </rdg>
               <note>
-                <lb/><q><hi>[Si ne fust Huidelon]</hi> qui me vint aïdier.</q> 
+                <lb/><q><q>Si ne fust Huidelon</q> qui me vint aïdier.</q> 
                 <lb/>Leçon de a : <q>Et Huidelon.</q> - Le vers est faux et 
                 inin<lb break="no" rend="hyphen"/>telligible. 
               </note>
@@ -60347,7 +61109,10 @@
                 <w>vies</w>
               </rdg>
               <note>
-<!-- ####### COMMENT TRAITER CE CAS ? #############" -->                
+<!-- ####### J'AI COUPE/DEDOUBLE LA NOTE, EST-CE CORRECT ? #############" -->     
+                <lb/><q>En une <corr resp="#Guessard"><hi>planche veille</hi></corr>soffri
+                mort et ahan,</q>
+                <lb/>Leçon de a : <q>place vies</q>
               </note>
             </app>
             <w>soffri</w>
@@ -60373,7 +61138,10 @@
                 <w>celui</w>
               </rdg>
               <note>
-<!-- ########### COMMENT TRAITER CE CAS ? ############### -->                
+<!-- ########### IDEM ############### --> 
+                <lb/><q>Ja ne crerai <corr resp="#Guessard"><q><hi rend="superscript">b</hi>en 
+                  lui</q></corr>, ce te di vraiemant.</q>
+                <lb/>Leçon de a : <q>celui</q>
               </note>
             </app>
             <pc type="supplied">,</pc>
