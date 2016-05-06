@@ -23,8 +23,8 @@
             select="
             count(following::l[preceding::pb[1] is $monPb])
             +
-            count(following::lg[preceding::pb[1] is $monPb])
-            "/>
+            count(following::lg[preceding::pb[1] is $monPb and not(preceding::element()[1] is $monPb)])
+            "/><!-- Modification pour prendre en compte que, lorsqu'une laisse débute une page, il n'y a pas de saut de ligne -->
         <xsl:text>vers &#xA;</xsl:text>
         
     </xsl:template>
