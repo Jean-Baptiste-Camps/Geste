@@ -3,6 +3,16 @@
     type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- 
+  0095: 35vers X
+  0101: 33vers => 34 vers annoncés, 33 présents
+  0102: 35vers  X
+  0128: 32vers 
+  
+  
+  
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Gui-de-Bourgogne_Guessard-1858" type="ed">
   <teiHeader>
     <fileDesc>
@@ -83,6 +93,8 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="draft">
+      <change who="AC" when="2016-05-11" status="draft">Fin de la vérification des corrections. 
+      Pointage des laisses et début de l'insertion des pages manquantes</change>
       <change who="AC" when="2016-05-04" status="draft">Vérification et correction des notes
         et variantes jusqu'à la ligne 61142</change>
       <change who="AC" when="2016-04-27" status="draft">Insertion des notes et corrections sur 
@@ -642,7 +654,6 @@
             ne se point <lb/>dépouiller de ses armes avant de l'avoir prise. P. 11-13. </item>
         </list>
         <list corresp="#L_008 #L_009 #L010">
-          <!-- corresp -->
           <item>
             <lb/>Marche de l'armée sur la ville de Carsaude. </item>
           <item>
@@ -723,9 +734,9 @@
             <lb/>Consternation des jeu<lb break="no" rend="hyphen"/>nes chevaliers. Ils maudissent
             de nouveau l'heure où <lb/>ils ont couronné Gui de Bourgogne. P. 16-21. </item>
         </list>
-        <list>
-          <!-- corresp -->
-          <item>
+
+          <list corresp="#L_014">
+            <item>
             <lb/>Le jeune roi va reconnoître la tour qui domine la <lb/>ville, et qui est encore au
             pouvoir des Sarrasins, il <lb/>prie Dieu de lui laisser conquérir le grand palais qu'il
             <lb/>aperçoit. </item>
@@ -739,7 +750,7 @@
 
         <pb facs="facsimile0025.bin.png" n="0025"/>
         <!-- <lb/>SOMMAIRE.-->
-        <list>
+        <list corresp="#L_015 #L_016 #L_017">
           <!-- corresp -->
           <item>
             <lb/>Dans le même temps, le fils de Pepin vient de se <lb/>lever et s'est assis devant
@@ -793,7 +804,7 @@
             <lb/>mille, divisés en quatre corps, ils marchent à la <lb/>rencontre de leurs enfants.
             P. 22-25. </item>
         </list>
-        <list>
+        <list corresp="#L_017">
           <!-- corresp -->
           <item>
             <lb/>La ren<lb break="no" rend="hyphen"/>contre a lieu dans une vallée. </item>
@@ -837,7 +848,7 @@
               les Evangiles que s'il <lb/>vous peut rencontrer il vous séparera la tête du buste,
               <lb/>pour avoir laissé sa mère aussi longtemps veuve !</q> » <lb/>P. 26-27. </item>
         </list>
-        <list>
+        <list corresp="#L_018 #L_019 #L_020">
           <!-- corresp -->
           <item>
             <lb/>Même scène, dans le même temps, <lb/>entre le duc Eudes de Langres et son fils
@@ -852,7 +863,7 @@
         <!-- <lb/>SOMMAIRE.
                 <lb/>xxiij -->
 
-        <list>
+        <list corresp="#L_021 #L_022">
           <item>
             <lb/>En s'entretenant ainsi et en chevauchant côte à <lb/>côte, les pères et les fils
             sont arrivés au pavillon de <lb/>l'empereur. </item>
@@ -916,7 +927,7 @@
             <lb/>des siens. Il faut en savoir gré au jeune roi, au lieu <lb/>de le menacer. P.
             29-32. </item>
         </list>
-        <list>
+        <list corresp="#L_022">
           <!-- corresp -->
           <item>
             <lb/>Retour de Roland et d'Olivier ; leur étonnement, <lb/>leur joie, à la vue des bêtes
@@ -940,9 +951,10 @@
               ferai autant</q>, ajoute <lb/>Roland ; <q>laissons là ce vieux radoteur, et qu'il
               aille à <lb/>tous les diables.</q> » P. 32-33. </item>
         </list>
-        <list>
+        <list corresp="#L_023 #L_024">
           <!-- corresp -->
-          <item>- Survient Gane<lb break="no" rend="hyphen"/>lon, avec son compagnon Hardré : il
+          <item>
+            <lb/>Survient Gane<lb break="no" rend="hyphen"/>lon, avec son compagnon Hardré : il
             éclate en invec<lb break="no" rend="hyphen"/>tives contre ces garçons de France et
             contre leur roi ; <lb/>il conseille à Charlemagne de faire mettre à mort les <lb/>jeunes
             messagers. </item>
@@ -965,7 +977,7 @@
             ceux <lb/>de son maudit lignage. Ils ne tiendront que trop leur <lb/>serment à
             Roncevaux. P. 33-36. </item>
         </list>
-        <list>
+        <list corresp="#L_025 #L_026 #L_027 #L_028">
           <!-- corresp -->
           <item>
             <lb/>Distribution des vivres. </item>
@@ -998,7 +1010,7 @@
           <item>
             <lb/>Joie de Ro<lb break="no" rend="hyphen"/>land à cette nouvelle. P. 36-39 </item>
         </list>
-        <list>
+        <list corresp="#L_028 #L_029 #L_030">
           <!-- corresp -->
           <item>
             <lb/>Charlemagne prend congé des jeunes chevaliers. </item>
@@ -1033,7 +1045,7 @@
               <lb/>à notre seigneur Aquilant. Suivons-le et nous lui cou<lb break="no" rend="hyphen"
               />perons la tête.</q> » P. 39-41. </item>
         </list>
-        <list>
+        <list corresp="#L_030">
           <!-- corresp -->
           <item>
             <lb/>L'empereur, qui <lb/>entend ces paroles, implore l'assistance divine. </item>
@@ -1074,7 +1086,7 @@
             s'écrie Aquilant. <q>Frère, attendez-moi ici</q>, <lb/>dit-il au pèlerin ; <q>je reviens
               à vous dès que l'assaut <lb/>sera repoussé.</q> » P. 41-44. </item>
         </list>
-        <list>
+        <list corresp="#L_030 #L_031">
           <!-- corresp -->
           <item>
             <lb/>Pendant que les Sar<lb break="no" rend="hyphen"/>rasins s'élancent aux murailles,
@@ -1090,7 +1102,7 @@
             messagers de Gui de Bourgogne, et les charge <lb/>de demander pour lui l'assistance du
             jeune roi. <lb/>P. 44-46. </item>
         </list>
-        <list>
+        <list corresp="#L_032 #L_033 #L_034 #L_035 #L_036 #L_037 #L_038">
           <!-- corresp -->
           <item>
             <lb/>Dans le même temps, Gui de Bourgogne interroge <lb/>le pèlerin qui lui a donné
@@ -1119,7 +1131,7 @@
           <item>
             <lb/>Campement <lb/>de l'armée sur le bord d'une rivière. P. 46-50. </item>
         </list>
-        <list>
+        <list corresp="#L_038 #L_039 #L_040">
           <!-- corresp -->
           <item>
             <lb/>Conseil de guerre pour aviser aux moyens de pren<lb break="no" rend="hyphen"/>dre
@@ -1177,7 +1189,7 @@
             <lb/>Maucabré quitte <lb/>les chevaliers après leur avoir montré leur route. <lb/>P.
             50-53. </item>
         </list>
-        <list>
+        <list corresp="#L_040 #L_041 #L_042">
           <!-- corresp -->
           <item>
             <lb/>Entrée du roi Gui et de ses compagnons dans Mon<lb break="no" rend="hyphen"
@@ -1204,7 +1216,7 @@
           <item>
             <lb/>Cos<lb break="no" rend="hyphen"/>tume du roi sarrasin. P. 54-56. </item>
         </list>
-        <list>
+        <list corresp="#L_042 #L_043 #L_044 #L_045 #L_046">
           <!-- corresp -->
           <item>
             <lb/>Son discours. <lb/>- ll rappelle les conquêtes de Charlemagne, et re<lb break="no"
@@ -1248,7 +1260,7 @@
           <item>
             <lb/>Défaite et fuite des païens. P. 56-61. </item>
         </list>
-        <list>
+        <list corresp="#L_046 #L_047 #L_048 #L_049">
           <!-- corresp -->
           <item>
             <lb/>Restés maîtres du palais, les enfants de France ti<lb break="no" rend="hyphen"
@@ -1297,7 +1309,7 @@
               votre <lb/>seigneur lige</q>, dit Gui ; <q>c'est à moi qu'est confié votre <lb/>salut
               ; c'est moi qui me battrai pour vous délivrer.</q> » <lb/>P. 62-67. </item>
         </list>
-        <list>
+        <list corresp="#L_049 #L_050 #L_051">
           <!-- corresp -->
           <item>
             <lb/>Il sort. </item>
@@ -1325,7 +1337,7 @@
             <lb/>Huidelon leur impose silence : un homme <lb/>qui mange si bien, dit-il, ne sauroit
             jamais faire une <lb/>lâcheté. P. 67-69. </item>
         </list>
-        <list>
+        <list corresp="#L_051 #L_052 #L_053 #L_054">
           <!-- corresp -->
           <item>
             <lb/>Huidelon lui fait apporter <lb/>ses armes, lui donne un cheval et recommande aux
@@ -1345,7 +1357,7 @@
           <item>
             <lb/>Défis. <lb/>P. 69-72. </item>
         </list>
-        <list>
+        <list corresp="#L_055 #L_056 #L_057 #L_058">
           <!-- corresp -->
           <item>
             <lb/>Huidelon veut que les païens se tiennent coi, quand <pb
@@ -1365,7 +1377,7 @@
           <item>
             <lb/>Prière de Gui <lb/>de Bourgogne. P. 72-78. </item>
         </list>
-        <list>
+        <list corresp="#L_059 #L_060 #L_061 #L_062">
           <item>
             <lb/>Son cheval est tué. </item>
           <item>
@@ -1373,7 +1385,7 @@
           <item>
             <lb/>Le cheval de <lb/>Danemont est tué. P. 78-81. </item>
         </list>
-        <list>
+        <list corresp="#L_063 #L_064 #L_065 #L_066">
           <!-- corresp -->
           <item>
             <lb/>Combat à pied des <lb/>deux champions. </item>
@@ -1409,7 +1421,7 @@
           <item>
             <lb/>Reproches de Huidelon. P. 81-85. </item>
         </list>
-        <list>
+        <list corresp="#L_066">
           <!-- corresp -->
           <item>
             <lb/>Cependant Charlemagne, devant Luiserne, s'in<lb break="no" rend="hyphen"/>quiète de
@@ -1461,7 +1473,7 @@
               un seul de vous, quel qu'il soit, <lb/>s'il se fait connoître à son père, à qui je ne
               fasse sé<lb break="no" rend="hyphen"/>parer la tête du buste.</q> » P. 85-87. </item>
         </list>
-        <list>
+        <list corresp="#L_066 #L_067">
           <!-- corresp -->
           <item>
             <lb/>Huidelon <lb/>s'informe d'où sont ces chevaliers dont la venue cause <lb/>si grande
@@ -1496,7 +1508,7 @@
               dites un mot de plus <lb/>je vous ferai séparer la tête du buste.</q> » P. 87-89.
           </item>
         </list>
-        <list>
+        <list corresp="#L_068 #L_069">
           <!-- corresp -->
           <item>
             <lb/>La présence des vieux pairs de Charlemagne en<lb break="no" rend="hyphen"/>gage
@@ -1523,7 +1535,7 @@
             <lb/>L'archevêque Turpin apprête les <lb/>fonts, et baptise Huidelon, ses deux fils et
             ses hom<lb break="no" rend="hyphen"/>mes, au nombre de vingt mille. P. 89-92. </item>
         </list>
-        <list>
+        <list corresp="#L_070">
           <!-- corresp -->
           <item>
             <lb/>Mais <lb/>Huidelon veut encore faire baptiser sa femme, qui <lb/>est demeurée à
@@ -2049,7 +2061,7 @@
       </div>
     </front>
     <body>
-      <!--JBC: Pour l'instant, 4237  vers pour 4304 attendus ! -->
+      <!--JBC: Pour l'instant, 4236  vers pour 4304 attendus ! -->
       <pb facs="facsimile0049.bin.png" n="0049"/>
       <head>GUI DE BOURGOGNE</head>
       <lg n="I" type="laisse" xml:id="L_001">
@@ -26459,7 +26471,6 @@
         </l>
 
         <pb facs="facsimile0092.bin.png" n="0092"/>
-        <lb/>
         <!--44   <lb/>GUI DE BOURGOGNE. 1416-1449 -->
         <lb/>
         <l>
@@ -27578,7 +27589,6 @@
         </l>
 
         <pb facs="facsimile0094.bin.png" n="0094"/>
-        <lb/>
         <!--46   <lb/>GUI DE BOURGOGNE. 1483-1515 -->
         <lb/>
         <l>
@@ -28157,8 +28167,9 @@
         </l>
 
         <pb facs="facsimile0095.bin.png" n="0095"/>
-        <lb/>
-        <!--1516-1548 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/>
+          1516-1548 GUI DE BOURGOGNE.-->
         <!-- <lb/>47 -->
       </lg>
       
@@ -29710,7 +29721,6 @@
         <!-- <lb/>GUI DE BOURGOGNE. 1615-1647 -->
         <lb/>
         <l>
-<!-- ######### VERIFIER LA SYNTAXE AVEC LE <q> #############-->
           <pc type="supplied">»</pc>
           <q>
             <w>Sire</w>
@@ -31319,7 +31329,6 @@
         </l>
 
         <pb facs="facsimile0101.bin.png" n="0101"/>
-        <lb/>
         <!--1714-1747 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
@@ -31885,8 +31894,9 @@
 
 
         <pb facs="facsimile0102.bin.png" n="0102"/>
-        <lb/>
-        <!--54-->
+        
+        <!--<lb/>
+          54-->
         <!-- <lb/>GUI DE BOURGOGNE. 1748-1780 -->
       </lg>
       
@@ -35107,7 +35117,6 @@
 
 
         <pb facs="facsimile0108.bin.png" n="0108"/>
-        <lb/>
         <!--60-->
         <!-- <lb/>GUI DE BOURGOGNE. 1948-1981 -->
         <lb/>
@@ -35647,7 +35656,6 @@
         </l>
 
         <pb facs="facsimile0109.bin.png" n="0109"/>
-        <lb/>
         <!--1982-2014 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
@@ -36141,7 +36149,6 @@
 
 
         <pb facs="facsimile0110.bin.png" n="0110"/>
-        <lb/>
         <!--62-->
         <!-- <lb/>GUI DE BOURGOGNE. 2015-2048 -->
         <lb/>
@@ -39428,8 +39435,8 @@
         </l>
 
         <pb facs="facsimile0116.bin.png" n="0116"/>
-        <lb/>
-        <!--68-->
+        
+        <!--<lb/>68-->
         <!-- <lb/>GUI DE BOURGOGNE. 2216-2248 -->
         <lb/>
         <l>
@@ -39930,8 +39937,9 @@
         </l>
 
         <pb facs="facsimile0117.bin.png" n="0117"/>
-        <lb/>
-        <!--2249-2282 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/>
+          2249-2282 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -40464,8 +40472,8 @@
         </l>
 
         <pb facs="facsimile0118.bin.png" n="0118"/>
-        <lb/>
-        <!--70-->
+        
+        <!--<lb/>70-->
         <!-- <lb/>GUI DE BOURGOGNE. 2283-2315 -->
         <lb/>
         <l>
@@ -41481,8 +41489,9 @@
         </l>
 
         <pb facs="facsimile0120.bin.png" n="0120"/>
-        <lb/>
-        <!--72-->
+        
+        <!--<lb/>
+          72-->
         <!-- <lb/>GUI DE BOURGOGNE. 2349-2380 -->
         <lb/>
         <l>
@@ -43501,8 +43510,7 @@
         </l>
 
         <pb facs="facsimile0124.bin.png" n="0124"/>
-        <lb/>
-        <!--76-->
+        <!--<lb/> 76-->
         <!-- <lb/>GUI DE BOURGOGNE. 2482-2514 -->
         <lb/>
         <l>
@@ -45479,7 +45487,7 @@
         </l>
 
         <pb facs="facsimile0128.bin.png" n="0128"/>
-        <lb/>
+        <!--<lb/>-->
         <!--8o-->
         <!-- <lb/>GUI DE BOURGOGNE. 2613-2644 -->
         <lb/>
@@ -46446,8 +46454,8 @@
         <!-- <lb/>Gui de Bourgogne. -->
 
         <pb facs="facsimile0130.bin.png" n="0130"/>
-        <lb/>
-        <!--82-->
+       
+        <!-- <lb/>82-->
         <!-- <lb/>GUI DE BOURGOGNE. 2678-2710 -->
         <lb/>
         <l>
@@ -49667,8 +49675,8 @@
         </l>
 
         <pb facs="facsimile0136.bin.png" n="0136"/>
-        <lb/>
-        <!--88 <lb/> GUI DE BOURGOGNE. 2878-2911 -->
+        
+        <!--<lb/> 88 <lb/> GUI DE BOURGOGNE. 2878-2911 -->
         <lb/>
         <l>
           <pc type="supplied">.</pc>
@@ -50793,8 +50801,8 @@
         </l>
 
         <pb facs="facsimile0138.bin.png" n="0138"/>
-        <lb/>
-        <!--90  <lb/>GUI DE BOURGOGNE. 2945-2977 -->
+        
+        <!--<lb/> 90  <lb/>GUI DE BOURGOGNE. 2945-2977 -->
         <lb/>
         <l>
           <w>Où</w>
@@ -52894,7 +52902,115 @@
           <w>hardie</w>
           <pc type="supplied">,</pc>
         </l>
-
+        
+        <!-- Pages non numérisées -->
+        <!-- page 94 -->
+        <l>
+          <w>Se</w>
+          <w>ele</w>
+          <w>se</w>
+          <w>demoustre</w>
+          <pc type="supplied">,</pc>
+          <w>que</w>
+          <w>ne</w>
+          <w>perde</w>
+          <w>la</w>
+          <w>vie</w>
+          <pc type="supplied">.</pc>
+        </l>
+        <lb/>
+        <l>
+          <w>Cil</w>
+          <w>demanderent</w>
+          <w rend="elision">l</w>
+          <pc type="supplied">'</pc>
+          <w>eve</w>
+          <w>et</w>
+          <w>au</w>
+          <w>mangier</w>
+          <w rend="elision">s</w>
+          <pc type="supplied">'</pc>
+          <w>asistrent</w>
+          <pc type="supplied">.</pc>
+        </l>
+        <lb/>
+        <l>
+          <w>Quant</w>
+          <w>il</w>
+          <w>orent</w>
+          <w>mangié</w>
+          <pc type="supplied">,</pc>
+          <w>tuit</w>
+          <w>fors</w>
+          <w>des</w>
+          <w>trés</w>
+          <w>saillirent</w>
+          <pc type="supplied">.</pc>
+        </l>
+        <lb/>
+        <l>
+          <w>Dus</w>
+          <w>Naimes</w>
+          <w>de</w>
+          <w>Baviere</w>
+          <pc type="supplied">,</pc>
+          <w>à</w>
+          <w>la</w>
+          <w>barbe</w>
+          <w>florie</w>
+          <pc type="supplied">,</pc>
+        </l>
+        <lb/>
+        <l>
+          <w>Est</w>
+          <w>venus</w>
+          <w>à</w>
+          <w>Guion</w>
+          <pc type="supplied">,</pc>
+          <w>si</w>
+          <w>li</w>
+          <w>a</w>
+          <w>pris</w>
+          <w>à</w>
+          <w>dire</w>
+          <pc type="supplied">:</pc>
+        </l>
+        <l>
+          <pc type="supplied">«</pc>
+          <q>
+            <w>Sire</w>
+            <w>rois</w>
+            <pc type="supplied">,</pc>
+            <w>gentils</w>
+            <w>hom</w>
+            <pc type="supplied">,</pc>
+            <w>por</w>
+            <w>Dieu</w>
+            <w>le</w>
+            <w>fil</w>
+            <w>Marie</w>
+            <pc type="supplied">,</pc>
+          </q>
+        </l>
+        <l>
+          <pc type="supplied">«</pc>
+          <q>
+            <w>Vanrois</w>
+            <w>vous</w>
+            <w>à</w>
+            <w>Karlon</w>
+            <pc type="supplied">,</pc>
+            <w>le</w>
+            <w>roi</w>
+            <w>de</w>
+            <w>Saint</w>
+            <w>Denie</w>
+            <pc type="supplied">?</pc>
+          </q>
+          <pc type="supplied">»</pc>
+        </l>
+ <!-- ############################" PAGE A COMPLETER ##################### -->         
+        
         <pb facs="facsimile0142.bin.png" n="0142"/>
         <!--          <lb/>96 GUI DE BOURGOGNE. 3145-3177 -->
         <lb/>
@@ -54037,8 +54153,8 @@
         <!-- <lb/> Gui de Bourgogne. -->
 
         <pb facs="facsimile0144.bin.png" n="0144"/>
-        <lb/>
-        <!--98   <lb/>GUI DE BOURGOGNE. 3211-3244 -->
+        
+        <!--<lb/> 98   <lb/>GUI DE BOURGOGNE. 3211-3244 -->
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -54545,8 +54661,8 @@
         </l>
 
         <pb facs="facsimile0145.bin.png" n="0145"/>
-        <lb/>
-        <!--3245-3277 GUI DE BOURGOGNE.-->
+        
+        <!-- <lb/> 3245-3277 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <w>Gile</w>
@@ -55588,8 +55704,8 @@
         </l>
 
         <pb facs="facsimile0147.bin.png" n="0147"/>
-        <lb/>
-        <!--3312-3343 GUI DE BOURGOGNE.  <lb/>101 -->
+        
+        <!-- <lb/> 3312-3343 GUI DE BOURGOGNE.  <lb/>101 -->
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -56658,8 +56774,8 @@
         </l>
 
         <pb facs="facsimile0149.bin.png" n="0149"/>
-        <lb/>
-        <!--3377-3409 GUI DE BOURGOGNE.-->
+        
+        <!-- <lb/> 3377-3409 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -57678,8 +57794,8 @@
         </l>
 
         <pb facs="facsimile0151.bin.png" n="0151"/>
-        <lb/>
-        <!--3443-3475 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/> 3443-3475 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <w>Bien</w>
@@ -58692,8 +58808,8 @@
         </l>
 
         <pb facs="facsimile0153.bin.png" n="0153"/>
-        <lb/>
-        <!--3509-3541 GUI DE BOURGOGNE.-->
+        
+        <!-- <lb/> 3509-3541 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <pc type="supplied">«</pc>
@@ -59743,8 +59859,8 @@
         </l>
 
         <pb facs="facsimile0155.bin.png" n="0155"/>
-        <lb/>
-        <!--3576-3609 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/> 3576-3609 GUI DE BOURGOGNE.-->
         <!-- <lb/>109 -->
 
         <lb/>
@@ -61109,7 +61225,6 @@
                 <w>vies</w>
               </rdg>
               <note>
-<!-- ####### J'AI COUPE/DEDOUBLE LA NOTE, EST-CE CORRECT ? #############" -->     
                 <lb/><q>En une <corr resp="#Guessard"><hi>planche veille</hi></corr>soffri
                 mort et ahan,</q>
                 <lb/>Leçon de a : <q>place vies</q>
@@ -61138,7 +61253,6 @@
                 <w>celui</w>
               </rdg>
               <note>
-<!-- ########### IDEM ############### --> 
                 <lb/><q>Ja ne crerai <corr resp="#Guessard"><q><hi rend="superscript">b</hi>en 
                   lui</q></corr>, ce te di vraiemant.</q>
                 <lb/>Leçon de a : <q>celui</q>
@@ -61749,7 +61863,7 @@
           <w>mis</w>
           <app>
             <lem wit="#a">
-              <corr resp="#Guessard">François</corr>
+              <corr resp="#Guessard" cert="unknown">François</corr>
             </lem>
           </app>
           <w>devant</w>
@@ -61808,7 +61922,7 @@
             <pc type="supplied">!</pc>
             <app>
               <lem wit="#a">
-                <corr resp="#Guessard">
+                <corr resp="#Guessard" cert="unknown">
                   <w>nostre</w>
                 </corr>
               </lem>
@@ -61869,8 +61983,8 @@
         </l>
 
         <pb facs="facsimile0159.bin.png" n="0159"/>
-        <lb/>
-        <!--3710-3742 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/> 3710-3742 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <w>Fors</w>
@@ -62199,6 +62313,11 @@
                   </corr>
                 </choice>
               </lem>
+              <note>
+                <lb/><q>Por ce qu'il despisoit Jhesue, le fieus Marie.</q>
+                <lb/>Le manuscrit a porte : <q>le fieus sainte Marie.</q> Nous supprimons
+                <q>sainte</q>, qui fausse le vers.
+              </note>
             </app>
             <pc type="supplied">.</pc>
           </q>
@@ -62888,8 +63007,8 @@
 
         <pb facs="facsimile0161.bin.png" n="0161"/>
         <lb/>
-        <!--3376- 3808 GUI DE BOURGOGNE. 115-->
-        <lb/>
+        <!--<lb/> 3376- 3808 GUI DE BOURGOGNE. 115-->
+        
         <l>
           <pc type="supplied">«</pc>
           <q>
@@ -63837,6 +63956,9 @@
             <lem wit="#b">
               <w>tuz</w>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction de Guessard dans le texte sans justification.
+            </note>
           </app>
           <w>angre</w>
           <w>de</w>
@@ -63934,9 +64056,9 @@
         </l>
 
         <pb facs="facsimile0163.bin.png" n="0163"/>
-        <lb/>
-        <!--3843-3874 GUI DE BOURGOGNE.-->
-        <lb/>
+        
+        <!--<lb/> 3843-3874 GUI DE BOURGOGNE.-->
+        <lb/> 
         <l>
           <w>De</w>
           <w>ci</w>
@@ -64059,10 +64181,13 @@
           <w>miels</w>
           <app>
             <lem wit="#a">
-              <corr resp="#Guessard">
+              <corr resp="#Guessard" cert="unknown">
                 <w>miels</w>
               </corr>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction par Guessard dans le texte sans justification.
+            </note>
           </app>
           <w>chevauchent</w>
           <w>par</w>
@@ -64960,8 +65085,8 @@
 
         <pb facs="facsimile0165.bin.png" n="0165"/>
 
-        <lb/>
-        <!--3908-3941 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/> 3908-3941 GUI DE BOURGOGNE.-->
         <lb/>
         <l>
           <w>Les</w>
@@ -66028,8 +66153,8 @@
         </l>
 
         <pb facs="facsimile0167.bin.png" n="0167"/>
-        <lb/>
-        <!--3976-4007 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/>3976-4007 GUI DE BOURGOGNE.-->
         <!-- <lb/>121 -->
 
         <lb/>
@@ -66213,10 +66338,13 @@
           <w>preus</w>
           <app>
             <lem wit="#a">
-              <corr resp="#Guessard">
+              <corr resp="#Guessard" cert="unknown">
                 <w>vassals</w>
               </corr>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction par Guessard dans le texte sans justification.
+            </note>
           </app>
           <pc type="supplied">,</pc>
           <w>est</w>
@@ -66233,10 +66361,13 @@
           <w>autre</w>
           <app>
             <lem wit="#a">
-              <corr resp="#Guessard">
+              <corr resp="#Guessard" cert="unknown">
                 <w>aussi</w>
               </corr>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction par Guessard dans le texte sans justification.
+            </note>
           </app>
           <pc type="supplied">,</pc>
           <w>sens</w>
@@ -67027,7 +67158,7 @@
         </l>
 
         <pb facs="facsimile0169.bin.png" n="0169"/>
-        <lb/>
+        <!--<lb/>-->
         <!--4041-4072 GUI DE BOURGOGNE. 123-->
         <lb/>
         <l>
@@ -67275,8 +67406,7 @@
           </q> 
         </l>
         <lb/>
-        <l>
-<!-- ####### INCLURE LES GUILLEMETS ET LE POINT DANS L'APP ? ########### -->          
+        <l>       
           <pc type="supplied">«</pc>
           <q>
             <app>
@@ -67293,7 +67423,8 @@
               </lem>
               <rdg wit="#a"/>
               <note>
-                <lb/><q>[A la seint Bastien, tut en séez créant.]</q> <lb/>Ce vers manque dans a.
+                <lb/><q>A la seint Bastien, tut en séez créant.</q> 
+                <lb/>Ce vers manque dans a.
               </note>
             </app>
             <pc type="supplied">.</pc>
@@ -67611,6 +67742,9 @@
                 Et
               </corr>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction par Guessard dans le texte sans justification.
+            </note>
           </app>
           <w>quant</w>
           <w>il</w>
@@ -68103,6 +68237,9 @@
                 <w>et</w>
               </corr>
             </lem>
+            <note resp="#AC" cert="unknown">
+              Correction par Guessard dans le texte sans justification.
+            </note>
           </app>
           <w>Yvoire</w>
           <w>et</w>
@@ -68430,9 +68567,10 @@
             </lem>
             <rdg wit="#a"/>
             <note>
-              <lb/><q>[<hi rend="superscript">b</hi> Ce est signefiance ke se dei[vent] armer.</q> 
-              <lb/>Ce vers n'est pas dans a, et se lit ainsi dans b : <lb/><q>C'est signefiance ke 
-               se deit armer.</q> 
+              <lb/><q><hi rend="superscript">b</hi> Ce est signefiance ke se 
+                dei<corr resp="#Guessard">vent</corr> armer.</q> 
+              <lb/>Ce vers n'est pas dans a, et se lit ainsi dans b : 
+              <lb/><q>C'est signefiance ke se deit armer.</q> 
               <lb/>Les trois vers qui suivent celui-ci ne se trouvent pas <lb/>dans b. 
 <!-- ###### COMMENT TRAITER LES TROIS VERS SUIVANTS ? ##### -->              
             </note>
@@ -68440,41 +68578,56 @@
         </l>
         <lb/>
         <l>
-          <w>Qui</w>
-          <w>or</w>
-          <w>voldra</w>
-          <w>chançon</w>
-          <w>oïr</w>
-          <w>et</w>
-          <w>escouter</w>
-          <pc type="supplied">,</pc>
+          <app>
+            <lem wit="#a">
+              <w>Qui</w>
+              <w>or</w>
+              <w>voldra</w>
+              <w>chançon</w>
+              <w>oïr</w>
+              <w>et</w>
+              <w>escouter</w>
+              <pc type="supplied">,</pc>
+            </lem>
+            <rdg wit="#b"/>
+          </app>
         </l>
         <lb/>
         <l>
-          <w>Si</w>
-          <w>voist</w>
-          <w>isnelement</w>
-          <w>sa</w>
-          <w>boursse</w>
-          <w>desfermer</w>
-          <pc type="supplied">,</pc>
+          <app>
+            <lem wit="#a">          
+              <w>Si</w>
+              <w>voist</w>
+              <w>isnelement</w>
+              <w>sa</w>
+              <w>boursse</w>
+              <w>desfermer</w>
+              <pc type="supplied">,</pc>
+            </lem>
+            <rdg wit="#b"/>
+          </app>
         </l>
         <lb/>
         <l>
-          <w>Qu</w>
-          <pc type="supplied">'</pc>
-          <w>il</w>
-          <w>est</w>
-          <w>huimès</w>
-          <w>bien</w>
-          <w>tans</w>
-          <w rend="elision">qu</w>
-          <pc type="supplied">'</pc>
-          <w>il</w>
-          <w>me</w>
-          <w>doie</w>
-          <w>doner</w>
-          <pc type="supplied">.</pc>
+          <app>
+            <lem wit="#a">
+              <w>Qu</w>
+              <pc type="supplied">'</pc>
+              <w>il</w>
+              <w>est</w>
+              <w>huimès</w>
+              <w>bien</w>
+              <w>tans</w>
+              <w rend="elision">qu</w>
+              <pc type="supplied">'</pc>
+              <w>il</w>
+              <w>me</w>
+              <w>doie</w>
+              <w>doner</w>
+              <pc type="supplied">.</pc>
+            </lem>
+            <rdg wit="#b"/>
+          </app>
         </l>
       </lg>
       
@@ -68811,9 +68964,9 @@
               <w>tele</w>
               <w>bundie</w>
             </rdg>
-            <note>
-              <lb/><q>Dont oïssiés par l'ost itele melodie.</q> <lb/>Leçon de b : 
-              <q>une tele bundie</q>. 
+            <note resp="#Guessard">
+              <lb/><q>Dont oïssiés par l'ost <q>itele melodie</q>.</q> 
+              <lb/>Leçon de b : <q>une tele bundie</q>. 
             </note>
           </app>
         </l>
@@ -69382,7 +69535,8 @@
               <w>vertis</w>
             </rdg>
             <note>
-              <lb/><q>Tost et isnelement cele part sont guencis.</q> <lb/>Leçon de b : <q>vertis</q>. 
+              <lb/><q>Tost et isnelement cele part sont <q>guencis</q>.</q> 
+              <lb/>Leçon de b : <q>vertis</q>. 
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -69890,8 +70044,8 @@
         </l>
 
         <pb facs="facsimile0175.bin.png" n="0175"/>
-        <lb/>
-        <!--4238-4269 GUI DE BOURGOGNE.-->
+        
+        <!--<lb/> 4238-4269 GUI DE BOURGOGNE.-->
         <!-- <lb/>129 -->
 
         <lb/>
@@ -70247,11 +70401,29 @@
           <w>fu</w>
           <w>moult</w>
           <w>grans</w>
-<!-- ####### JE NE COMPRENDS PAS CETTE CORRECTION DANS LES NOTES ######## -->            
-          <w rend="elision">[bl</w>
-          <pc type="supplied">'</pc>
-          <w>asemblée]</w>
-          <pc type="supplied">;</pc>
+<!-- ####### PROBLEME DANS LA NOTE DE GUESSARD, OU ALORS JE N'AI PAS COMPRIS ######## -->    
+          <app>
+            <lem wit="#b">
+              <w rend="elision">l</w>
+              <pc type="supplied">'</pc>
+              <w>assemblée</w>
+            </lem>
+            <rdg wit="#a">
+              <w>la</w>
+              <w>mellée</w>
+            </rdg>
+            <note resp="#Guessard">
+              <q>Là dedens en Luiserne fu moult grans <q>l'assemblée</q>.</q>
+              <lb/>Leçon de <choice>
+                <sic>
+                  b
+                </sic>
+                <corr resp="#AC">
+                  a
+                </corr> </choice> : <q>la mellée</q>, qui revient au second vers 
+              <lb/>après celui-ci ; mais, cette fois, la leçon est bonne.
+            </note>
+          </app>
         </l>
         <lb/>
         <l>
@@ -70608,7 +70780,8 @@
             <w>parée</w>
             <note>
               <lb/><q>Vous ne vostre ire pris une pome parée.</q>
-              <lb/>Nous corrigeons ainsi la leçon vicieuse de a, qui <lb/>donne ce vers faux : 
+              <lb/>Nous corrigeons ainsi la leçon vicieuse de a, qui 
+              <lb/>donne ce vers faux : 
               <lb/><q>Vous ne vostre ire ne pris pas une pome parée.</q>
             </note>
             <pc type="supplied">.</pc>
@@ -70923,11 +71096,11 @@
         </l>
       </lg>
       <lb/>
-      <l>
-        <w>EXPLICIT</w>
-      </l>
+      <ab>
+        <w>EXPLIXIT</w>
+      </ab>
       <lb/>
-      <l>
+      <ab>
         <w>LI</w>
         <w>ROMANS</w>
         <w>DE</w>
@@ -70935,11 +71108,10 @@
         <w>DE</w>
         <w>BORGOIGNE</w>
         <pc type="supplied">.</pc>
-      </l>
+      </ab>
     </body>
     <back>
       <div type="variantes_et_notes">
-        <!-- Celles-ci seront peut-être à reporter dans le texte de la chanson, en utilisant note et app/lem | app/rdg, ainsi que corr et dans certains cas, note -->
         <p>
           <pb facs="facsimile0179.bin.png" n="0179"/>
           <lb/>NOTES ET VARIANTES. <listWit>
@@ -70949,8 +71121,10 @@
             <witness xml:id="b">b désigne le manuscrit de Londres.</witness>
           </listWit>
           <!-- <lb/>133 -->
-          <lb/>Voici le début, tel quel et sans essai de restitution, <lb/>du manuscrit conservé au
-          Musée britannique : <lb/>Oiez, seignurs baruns : Deu vus creisse buntez. <lb/>Ci vus
+        </p>
+          <p>
+            <lb/>Voici le début, tel quel et sans essai de restitution, <lb/>du manuscrit conservé au
+          Musée britannique : <q><lb/>Oiez, seignurs baruns : Deu vus creisse buntez. <lb/>Ci vus
           comencerai chançun de grant nobilité, <lb/>De Karlon l'emperere, le fort rei coroné,
           <lb/>Le meillur ke fust en la crestienté. <lb/>Vint e sis ans tut pleins, kar Deu l'ot
           mandé, <lb/>Fu Karles en Espaigne, cel estrange rengné ; <lb/>Burcs, citez, chastels i
@@ -70964,31 +71138,52 @@
           <!--          <lb/>134 GUI DE BOURGOGNE. -->
           <lb/>« Baruns, kar i aluns por seinte charité ; <lb/>« Kar si Deu cele aver nos ot
           destiné, <lb/>« Riche en poriuns fere nos povre parenté, <lb/>« Pus irruns en France ke
-          tant avuns desiré. » <lb/>P. 1, v. 4 : <lb/>.XXVII. anz tous plains acomplis et passez.
+          tant avuns desiré. » <lb/></q>
+          </p>
+          <p>
+          <lb/>P. 1, v. 4 : 
+            <lb/>.XXVII. anz tous plains acomplis et passez.
           <lb/>Leçon de a : .XXXVII. anz ; mais plus loin, (p. 2, v. 17 ; <lb/>p. 3, v. 9) le même
           manuscrit donne .XXVII. Nous <lb/>rétablissons donc ici cette leçon, qui semble la bonne,
-          <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b : vint e
-          sis. C'est un espace de temps qui<!-- Il paraît manquer quelque chose ici? -->
-          <lb/>Et mangiez les gastiaus, les poons, les ploviers. <lb/>Après ce vers, b ajoute :
-          <lb/>Et beviez le claré, le piment, le vin velz. <lb/>P. 2, v. 7 : <lb/>Riches en porroit
+          <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :<q> vint e
+          sis</q>. C'est un espace de temps qui <lb/> suffit et au delà à la fable imaginée par le trouvère.
+          </p>
+         <p>
+           <lb/>P. 2, v. 26 : 
+          <lb/><q>Et mangiez les gastiaus, les poons, les ploviers.</q> <lb/>Après ce vers, b ajoute :
+          <lb/><q>Et beviez le claré, le piment, le vin velz. </q><lb/>
+           </p>
+        <p>P. 2, v. 7 : <lb/>Riches en porroit
           estre no povre parenté. <lb/>b ajoute le vers ci-dessus (ligne 4), mais ne donne
           <lb/>point les sept premiers vers de la seconde tirade. <lb/>D'après ce manuscrit ce n'est
           pas Ogier qui répond à <lb/>Charlemagne, c'est Thierri l'Ardenois : <lb/>Dist Terri
           l'Ardenois : « Tu as le sen devé ; <lb/>« Vos ne fustes mie nez for por secle pener <lb/>«
           E pur gent destruire, honir et vergunder. <lb/>- Terri, dit Karlemaines, (1) molt grant
           tort en avez. <lb/>« Chascun n'ad k[e] une ame en sun cors à garder ; <lb/>« Si nel fetes
-          pur mei, si le fetes por Dé. » <lb/>P. 3, v. 14 : <lb/>[Dès Huiscent] sor la mer de ci que
+          pur mei, si le fetes por Dé. » 
+          </p>
+        <lb/>
+        <p>P. 3, v. 14 : <lb/>[Dès Huiscent] sor la mer de ci que
           à Saint Gile. <lb/>Leçon de a : d'Avignon sor la mer. <lb/>Nous empruntons notre
           correction à un vers qui <lb/>n'est que la répétition de celui-ci, et qui se lit plus
-          <lb/>bas, même page, v. 31. <lb/>1. Nous supprimons ici vos, qui fausse la mesure du vers.
+          <lb/>bas, même page, v. 31. </p>
+        <p><lb/>1. Nous supprimons ici vos, qui fausse la mesure du vers.</p>
             <pb facs="facsimile0181.bin.png" n="0181"/>
-          <lb/>NOTES ET VARIANTES. <lb/>P. 3, v. 25 : <lb/>Après parla Richars, li dus de Normendie.
-          <lb/>b ajoute : <lb/>C[e] est Richart sans pour, ke de Roen fu sire. <lb/>P. 4, v. 11 : Et
+          <!-- <lb/>NOTES ET VARIANTES. <lb/> -->
+        <p>P. 3, v. 25 : <lb/>Après parla Richars, li dus de Normendie.
+          <lb/>b ajoute : <lb/>C[e] est Richart sans pour, ke de Roen fu sire. </p>
+        <p><lb/>P. 4, v. 11 : Et
           car les me nomez. <lb/>Nous corrigeons ainsi le manuscrit a, qui donne : <lb/>Et car le
-          mes nomez. <lb/>P. 4, v. 30 : <lb/>Va moi, fai tost venir... <lb/>Il faudroit lire
-          peut-être : <lb/>Va, fai moi tost venir.... <lb/>P. 6, v. 21 : <!-- <lb/>135 -->
+          mes nomez. </p>
+        <p><lb/>P. 4, v. 30 : <lb/>Va moi, fai tost venir... <lb/>Il faudroit lire
+          peut-être : <lb/>Va, fai moi tost venir.... </p>
+        <p><lb/>P. 6, v. 21 : <!-- <lb/>135 -->
+        <lb/> Que .XII. liues grans nes convenist errer.
+        <lb/>Karles se regarda et vit François plorer.
           <lb/>Entre ces deux vers se placent dans le manuscrit b <lb/>trois tirades où sont
-          brievement racontées des défaites <lb/>de Charlemagne. <lb/>P. 7, v. 11 : <lb/>Et li
+          brievement racontées des défaites <lb/>de Charlemagne. </p>
+        <p>
+          <lb/>P. 7, v. 11 : <lb/>Et li
           enfant de France se furent aüné. <lb/>La partie du récit comprise entre ce vers et
           celui-ci, <lb/>Sire Guis de Borgoigne, dist Bertrant, çà venez <lb/>(p. 8, v. 12), est
           beaucoup plus développée dans le <lb/>manuscrit b ; au lieu de 37 vers, elle en renferme
@@ -71022,7 +71217,7 @@
           parent e Focher le barbez, <lb/>« Et Isoart li jesnes e Brihan li einnez, <lb/>« Malveisin
           e Malingres, et Miles et Forrés. <lb/>« Ne sai ke plus en die ; trop sui enparentez. <pb
             facs="facsimile0183.bin.png" n="0183"/>
-          <lb/>NOTES ET VARIANTES. 137 <lb/>« E si est mun pere Gnenes, k'od Karlon est alez ;
+          <!-- <lb/>NOTES ET VARIANTES. 137 <lb/> -->« E si est mun pere Gnenes, k'od Karlon est alez ;
           <lb/>« Sa serur od a femme, si ke ben le savez : <lb/>« Pur ce dei en France estre
           haltement coronez. » <lb/>E dit Estus de Lengres : « Trop vos estes hastez ; <lb/>«
           N'atendist[es] pas tant ke fussez apelez. <lb/>« Maucion, teisez vos ; n'en déussez
@@ -71042,7 +71237,8 @@
           de Dieu. <lb/>« Choisissons parmi nous, dit-il, quatre cents des plus <lb/>sages, qui
           prêteront le serment sur les évangiles de <lb/>faire un roi du mieux qu'ils sauront. Le
           roi une fois <lb/>nommé, s'il refuse, on lui coupera la tête. - Par <lb/>ma foi, dist
-          Estout de Langres, voilà qui est raison- <pb facs="facsimile0184.bin.png" n="0184"/>
+          Estout de Langres, voilà qui est raison<lb break="no" rend="hyphen"/>able. »
+          <lb/>Ainsi se termine la troisième tirade.<pb facs="facsimile0184.bin.png" n="0184"/>
           <!--          <lb/>138 GUI DE BOURGOGNE. -->
           <lb/>Al conseil de Berart se sunt tuz acordez : <lb/>Quatre cent eslisent de vaillanz
           bachelers, <lb/>Ke sur les relikes e sur seinz unt jurés <lb/>K[e] il eslirrunt [rei],
@@ -71055,15 +71251,21 @@
           <lb/>Quant son lignage l'at [et] sustret et ostez. <lb/>Cette scène terminée, le récit
           continue comme dans <lb/>le manuscrit a, et à peu près dans les mêmes termes.
           <lb/>Bertrand propose de choisir pour roi le fils de Sanson <lb/>de Bourgogne, le jeune
-          Gui, le héros de ce poëme. <lb/>P.7, v.3 : <lb/>Ileuc furent li sers premerain contrové.
+          Gui, le héros de ce poëme. 
+          </p>
+        <p><lb/>P.7, v.3 : <lb/>Ileuc furent li sers premerain contrové.
           <lb/>Cf. Beaumanoir sur l'état des personnes. L'une des <lb/>origines du servage est,
-          selon lui, celle qu'indique <lb/>ici notre trouvère. <lb/>P. 9, v. 30 : <lb/>Que lour
-          enfans garisse et lor riches maris. <lb/>Leçon de b : de mort et de perils. <lb/>P. 18, v.
-          14 : <lb/>Mult fu fors la bataille à l'estour commencier. <lb/>Toute cette tirade manque
-          dans le manuscrit b. <lb/>P. 21, v. 33 : <lb/>Seignor, ce dit li enfes, or vous
-          apareilliez. <lb/>Leçon de b : kar vos agenuillez. <lb/>P. 22, v. 27 : <lb/>Or s'en vont
+          selon lui, celle qu'indique <lb/>ici notre trouvère. </p>
+        <p><lb/>P. 9, v. 30 : <lb/>Que lour
+          enfans garisse et lor riches maris. <lb/>Leçon de b : de mort et de perils. </p>
+        <p><lb/>P. 18, v. 14 : <lb/>Mult fu fors la bataille à l'estour commencier. <lb/>Toute cette tirade manque
+          dans le manuscrit b. </p>
+        <p><lb/>P. 21, v. 33 : <lb/>Seignor, ce dit li enfes, or vous
+          apareilliez. <lb/>Leçon de b : kar vos agenuillez. </p>
+        <p>
+        <lb/>P. 22, v. 27 : <lb/>Or s'en vont
           li enfant qui oirrent lor chemin. <pb facs="facsimile0185.bin.png" n="0185"/>
-          <lb/>NOTES ET VARIANTES. <!-- <lb/>139 -->
+          <!-- <lb/>NOTES ET VARIANTES.  <lb/>139 -->
           <lb/>Entre la tirade qui commence par ce vers et celle <lb/>qui la précède se trouvent
           dans le manuscrit b deux <lb/>tirades, l'une de 78, l'autre de 63 vers. <lb/>Première
           tirade : <lb/>Or s'en vunt li messages ki Deus pust honorer, <lb/>E menent la viande à
@@ -71083,88 +71285,108 @@
           passer. <lb/>Deuxième tirade : <lb/>Combat des François et des Sarrasins. - Joute de
           <lb/>Danemont et d'Estout de Langres. - Le chef sarra<lb break="no" rend="hyphen"/>sin,
           abandonné par les siens, est contraint de prendre <lb/>la fuite avec eux, et va porter
-          l'alarme à Montorgueil. <lb/>- Les François continuent leur route vers Luiserne. <lb/>P.
+          l'alarme à Montorgueil. <lb/>- Les François continuent leur route vers Luiserne. 
+          </p>
+        <p>
+          <lb/>P.
           24 : Le quatorzième vers ne semble guère venir <lb/>à point après les autres. Nous pensons
-          qu'il y a là une <lb/>lacune. <lb/>P. 29, v. 11 : Cis jors est li cinquimes. <lb/>Le même
+          qu'il y a là une <lb/>lacune.</p><p> <lb/>P. 29, v. 11 : Cis jors est li cinquimes. <lb/>Le même
           personnage répond à la même question, <lb/>p. 31, v. 2 : Sire, hui à .XV. jours. Ces deux
           chiffres <pb facs="facsimile0186.bin.png" n="0186"/>
           <!--          <lb/>140 GUI DE BOURGOGNE. -->
           <lb/>ne sont pas d'accord ; il est donc probable qu'il faut <lb/>lire ici quinzimes au
-          lieu de cinquimes. <lb/>P. 33, v. 14 : <lb/>Atant es Ganelon et son compain Hardré. <lb/>b
-          ajoute, après ce vers : <lb/>Tebalt et Alori, Malvaisin et Mauré. <lb/>P. 33, v. 16 :
+          lieu de cinquimes. </p>
+        <p>
+          <lb/>P. 30, v. 3 : feis[t]. a donne feis, forme de la se<lb break="no" rend="hypen"/>conde
+          personne ; mais il faut ici la troisième.</p>
+        <p>
+            <lb/>P. 33, v. 14 : <lb/>Atant es Ganelon et son compain Hardré. <lb/>b
+          ajoute, après ce vers : <lb/>Tebalt et Alori, Malvaisin et Mauré. <lb/>
+          </p>
+        <p>P. 33, v. 16 :
           <lb/>Olivier de Viane a par non apelé. <lb/>Leçon de b : <lb/>Guenes veit Olivier, si l'a
-          aresonez. <lb/>P. 39, v. 4 : <lb/>Que vous a il mesfait ? dist Torpin au vis fier.
-          <lb/>Leçon de b : <lb/>Que vous a il mesfait ? Bertran li respondi. <lb/>P. 39, v. 26 :
+          aresonez. </p><p><lb/>P. 39, v. 4 : <lb/>Que vous a il mesfait ? dist Torpin au vis fier.
+          <lb/>Leçon de b : <lb/>Que vous a il mesfait ? Bertran li respondi. </p><p>
+            <lb/>P. 39, v. 26 :
           <lb/>Enfant, fait [l'empereres], je vous demant congié. <lb/>Leçon de a : <lb/>Enfant,
-          fait il, je vous..... <lb/>P. 40, v. 4 : <lb/>Karles vesti la guige, mist le chapel el
+          fait il, je vous..... </p><p><lb/>P. 40, v. 4 : <lb/>Karles vesti la guige, mist le chapel el
           chief. <lb/>Leçon de b : <lb/>Karles vesti la here..... <lb/>leçon qui nous semble
-          préférable. On se revêt d'une <lb/>haire, et non d'une guige, qui est un cordon. <lb/>P.
+          préférable. On se revêt d'une <lb/>haire, et non d'une guige, qui est un cordon. </p><p>
+            <lb/>P.
           41, v. 25 : <lb/>Seignor, dist [Boydans], entandez mon pensé. <lb/>On lit dans a :
-          Seignor, dist il. <lb/>P. 43, v. 19 : <lb/>Le saisi par la barbe, dont li peus est mellez.
+          Seignor, dist il. </p><p><lb/>P. 43, v. 19 : <lb/>Le saisi par la barbe, dont li peus est mellez.
           <lb/>On lit dans a : peust, qui est inadmissible ; nous corri<lb break="no" rend="hyphen"
-          />geons et lisons : veus pour pels, poil. <pb facs="facsimile0187.bin.png" n="0187"/>
-          <lb/>NOTES ET VARIANTES. 141 <lb/>Leçon de b : s'est maintenant armez. <lb/>P. 46, v. 19 :
+          />geons et lisons : veus pour pels, poil. </p><pb facs="facsimile0187.bin.png" n="0187"/>
+          <!-- <lb/>NOTES ET VARIANTES. 141 --> 
+          <p><lb/>P. 44, v. 21 : 
+            <lb/>Il méismes ses cors est maintenant montez.
+            <lb/>Leçon de b : s'est maintenant armez. </p><p><lb/>P. 46, v. 19 :
           On lit dans a : mult fel et mult des<lb break="no" rend="hyphen"/>mesurez, leçon qui
-          fausse le vers. <lb/>P. 46, v. 21 : <lb/>.III. eves i acourent..... <lb/>Voyez p. 86, v. 3
-          : Sivirent les .IIII. eves. <lb/>Si l'on adopte cette seconde leèon, il faudra lire ici :
+          fausse le vers. </p><p> <lb/>P. 46, v. 21 : <lb/>.III. eves i acourent..... <lb/>Voyez p. 86, v. 3
+          : Sivirent les .IIII. eves. <lb/>Si l'on adopte cette seconde leçon, il faudra lire ici :
+            <lb/>L'une a non Rupane, l'autre Marne des guez ;
+            <lb/>Si i cort Anviron.....
           <lb/>que nous n'avons osé considérer comme l'une des <lb/>quatre rivières aimantées qui
-          couloient à Montor<lb break="no" rend="hyphen"/>gueil. <lb/>P. 50, v. 9 : <lb/>Quant lui
-          vient à plaisir, panre le nous lera. <lb/>Leçon de b : <lb/>Quant lui ert à plaisir...
-          <lb/>P. 52, v. 16 : <lb/>[L'enfes Guis de Borgoigne] regarda Maucabré. <lb/>Leçon de a :
+          couloient à Montor<lb break="no" rend="hyphen"/>gueil. </p><p><lb/>P. 50, v. 9 : <lb/>Quant lui
+          vient à plaisir, panre le nous lera. <lb/>Leçon de b : <lb/>Quant lui ert à plaisir...</p>
+          <p><lb/>P. 52, v. 16 : <lb/>[L'enfes Guis de Borgoigne] regarda Maucabré. <lb/>Leçon de a :
           <lb/>Li enfes Guis regarda Maucabré. <lb/>Vers de dix syllabes seulement. La correction
           est em<lb break="no" rend="hyphen"/>pruntée au premier vers de plusieurs des tirades
-            pré<lb break="no" rend="hyphen"/>cédentes. <lb/>P. 52, v. 18 : <lb/>En arcage
-          grezois..... Leçon de b : En parole grejoise. <lb/>P. 53. v. 32 : <lb/>[Et] que il te
+            pré<lb break="no" rend="hyphen"/>cédentes. </p><p><lb/>P. 52, v. 18 : <lb/>En arcage
+          grezois..... Leçon de b : En parole grejoise. </p><p><lb/>P. 53. v. 32 : <lb/>[Et] que il te
           [conduie], s'il puet à sauveté. <lb/>Leçon de a : <lb/>Que il te maint, s'il puet, à
           sauveté. <lb/>Vers de dix syllabes seulement. - L'addition de et <lb/>semble naturelle, et
           conduie, qui a le même sens que <pb facs="facsimile0188.bin.png" n="0188"/>
           <!--          <lb/>142 GUI DE BOURGOGNE. -->
           <lb/>maint, est employé vingt fois dans le poëme en sem<lb break="no" rend="hyphen"
-          />blable cas. <lb/>P. 54, v. 1 : <lb/>Or chevauche li rois, il et sa compaignie.
-          <lb/>Leçon de a : <lb/>Or chevauche li rois, et il et sa grant compaignie. <lb/>P. 54, v.
+          />blable cas. </p><p><lb/>P. 54, v. 1 : <lb/>Or chevauche li rois, il et sa compaignie.
+          <lb/>Leçon de a : <lb/>Or chevauche li rois, et il et sa grant compaignie. 
+            </p><p><lb/>P. 54, v.
           3 : <lb/>Parmi la [maistre] porte. <lb/>Maistre manque ici dans le manuscrit a. Au dixième
           <lb/>vers de la tirade suivante, c'est le mot porte qui manque, <lb/>comme l'indique le
-          manuscrit b, qui donne posterne. <lb/>Nous complétons ces deux vers l'un par l'autre.
+          manuscrit b, qui donne posterne. <lb/>Nous complétons ces deux vers l'un par l'autre.</p><p>
           <lb/>P. 54, v. 5 : <lb/>Chevaus virent..... <lb/>Nous corrigeons le manuscrit, qui donne
-          vinrent. <lb/>P. 54, v. 30 : <lb/>Il ot les sorcils grans et s'ot le poil levé. <lb/>Leçon
-          de b : et s'ot large le nez. <lb/>P. 56, v. 7 : <lb/>Seignor, dist [l'enfes] Guis, envers
+          vinrent.</p><p> <lb/>P. 54, v. 30 : <lb/>Il ot les sorcils grans et s'ot le poil levé. <lb/>Leçon
+          de b : et s'ot large le nez. </p><p><lb/>P. 56, v. 7 : <lb/>Seignor, dist [l'enfes] Guis, envers
           moi entandés. <lb/>Leçon de a : <lb/>Seignor, ce dist Guis, envers moi entandés. <lb/>Nous
           corrigeons le manuscrit en retranchant ce et en <lb/>reproduisant ici une forme qui se
-          retrouve en vingt <lb/>Desus le faudestuef se sist li rois prisiés. <lb/>Leçon de b :
-          faldestol. <lb/>P. 67, v. 11 : <lb/>[Or s'en va l'enfes Guis] qui Diex croisse bonté.
+          retrouve en vingt autres passages.</p><p><lb/>P. 56, v. 28 : <lb/>Desus le faudestuef se sist li rois prisiés. <lb/>Leçon de b :
+          faldestol. </p><p><lb/>P. 67, v. 11 : <lb/>[Or s'en va l'enfes Guis] qui Diex croisse bonté.
           <lb/>Ce vers n'a que dix syllabes dans le manuscrit a : <lb/>L'enfes s'en va qui Diex
           croisse bonté. <pb facs="facsimile0189.bin.png" n="0189"/>
-          <lb/>NOTES ET VARIANTES. <!-- <lb/>143 -->
+          <!-- <lb/>NOTES ET VARIANTES. <lb/>143 -->
           <lb/>Nous proposons de le corriger comme ci-dessus, et <lb/>nous répétons cette correction
           deux vers plus bas, où <lb/>on lit dans le même manuscrit : <lb/>L'enfes s'en va sous
-          l'Olivier ramé. <lb/>P. 67, v. 24 : <lb/>Le cors ot gent, bien fait, [bmolt semble bien
+          l'Olivier ramé. </p><p><lb/>P. 67, v. 24 : <lb/>Le cors ot gent, bien fait, [bmolt semble bien
           vassal.] <lb/>Encore un vers de dix syllabes dans le manuscrit a : <lb/>Le cors ot gent et
-          bien fait contreval. <lb/>b nous fournit la correction. <lb/>Leçon, évidemment fautive, du
-          manuscrit a : <lb/>Les chevaus fors et longes..... <lb/>P. 71, v. 8 : <lb/>.XXIIII.
-          topaees i ot tout séélés. <lb/>Le manuscrit a donne scelés, qui fausse le vers. <lb/>P.
+          bien fait contreval. <lb/>b nous fournit la correction. </p><p><lb/>P. 67, v. 25 : <lb/>Les 
+            [jambes] fors et longues por séoir sor cheval. <lb/>Leçon, évidemment fautive, du
+          manuscrit a : <lb/>Les chevaus fors et longes..... </p><p><lb/>P. 71, v. 8 : <lb/>.XXIIII.
+          topaees i ot tout séélés. <lb/>Le manuscrit a donne scelés, qui fausse le vers. </p><p><lb/>P.
           75, v. 7 : <lb/>[Lores] ne doutast il .IIII. rois coronés. <lb/>Le manuscrit a donne lors,
-          qui fausse le vers. Au lieu <lb/>de rois coronés, on lit dans b : Turcs defaez. <lb/>P.
+          qui fausse le vers. Au lieu <lb/>de rois coronés, on lit dans b : Turcs defaez. </p><p><lb/>P.
           89, v. 22 : <lb/>Comment ! dist [l'enfes Guis], dans viellars radotés. <lb/>Leçon du
-          manuscrit a : <lb/>Comment ! dist li angres, dans..... <lb/>P. 99, v. 2 : <lb/>Où qu'ele
-          voit [bGuion], gentement li a dit. <lb/>Leçon de a : Karlon. C'est une faute manifeste.
-          <lb/>Nous supprimons devant Gui l'enfes, qui se lit dans <lb/>le manuscrit a, et qui
-          fausse le vers. <lb/>P. 109, v. 14 : <lb/>[Si ne fust Huidelon] qui me vint aïdier. <pb
+          manuscrit a : <lb/>Comment ! dist li angres, dans..... </p><p><lb/>P. 99, v. 2 : <lb/>Où qu'ele
+          voit [bGuion], gentement li a dit. <lb/>Leçon de a : Karlon. C'est une faute manifeste.</p><p>
+          <lb/>P. 104, v. 33 : <lb/>Et Guis .Lm. qui tuit furent créant. <lb/>Nous supprimons devant Gui 
+            l'enfes, qui se lit dans <lb/>le manuscrit a, et qui fausse le vers. </p><p> 
+              <lb/>P. 109, v. 14 : <lb/>[Si ne fust Huidelon] qui me vint aïdier. <pb
             facs="facsimile0190.bin.png" n="0190"/>
           <!--          <lb/>144 GUI DE BOURGOGNE. -->
           <lb/>Leçon de a : Et Huidelon. - Le vers est faux et inin<lb break="no" rend="hyphen"
-          />telligible. <lb/>P. 111, v. 18 et 19 : <lb/>En une [planche veille] soffri mort et ahan,
-          <lb/>Ja ne crerai [ben lui], ce te di vraiemant. <lb/>Leçons de a : place vies. - celui.
-          <lb/>P. 113, v. 23 : <lb/>Por ce qu'il despisoit Jhesu, le fieus Marie. <lb/>Le manuscrit
-          a porte : le fieus sainte Marie. Nous <lb/>supprimons sainte, qui fausse le vers. <lb/>P.
-          123, v. 17 : <lb/>[A la seint Bastien, tut en séez créant.] <lb/>Ce vers manque dans a.
+          />telligible. </p><p><lb/>P. 111, v. 18 et 19 : <lb/>En une [planche veille] soffri mort et ahan,
+          <lb/>Ja ne crerai [ben lui], ce te di vraiemant. <lb/>Leçons de a : place vies. - celui.</p>
+          <p><lb/>P. 113, v. 23 : <lb/>Por ce qu'il despisoit Jhesu, le fieus Marie. <lb/>Le manuscrit
+          a porte : le fieus sainte Marie. Nous <lb/>supprimons sainte, qui fausse le vers. </p><p><lb/>P.
+          123, v. 17 : <lb/>[A la seint Bastien, tut en séez créant.] <lb/>Ce vers manque dans a.</p><p>
           <lb/>P. 125, v. 28 : <lb/>[b Ce est signefiance ke se dei[vent] armer. <lb/>Ce vers n'est
           pas dans a, et se lit ainsi dans b : <lb/>C'est signefiance ke se deit armer. <lb/>Les
-          trois vers qui suivent celui-ci ne se trouvent pas <lb/>dans b. <lb/>P. 126, v. 21 :
-          <lb/>Dont oïssiés par l'ost itele melodie. <lb/>Leçon de b : une tele bundie. <lb/>P. 127,
-          v. 28 : <lb/>Tost et isnelement cele part sont guencis. <lb/>Leçon de b : vertis. <lb/>P.
+          trois vers qui suivent celui-ci ne se trouvent pas <lb/>dans b. </p><p><lb/>P. 126, v. 21 :
+          <lb/>Dont oïssiés par l'ost itele melodie. <lb/>Leçon de b : une tele bundie. </p><p><lb/>P. 127,
+          v. 28 : <lb/>Tost et isnelement cele part sont guencis. <lb/>Leçon de b : vertis. </p><p><lb/>P.
           129, v. 21 : <lb/>Là dedens en Luiserne fu [moult] grans b[l'asemblée]. <lb/>Leçon de b :
           la mellée, qui revient au second vers <lb/>après celui-ci ; mais, cette fois, la leçon est
-          bonne. <lb/>P. 130, v. 12 : <lb/>Vous ne vostre ire pris une pome parée. <lb/>Nous
+          bonne. </p><p><lb/>P. 130, v. 12 : <lb/>Vous ne vostre ire pris une pome parée. <lb/>Nous
           corrigeons ainsi la leçon vicieuse de a, qui <lb/>donne ce vers faux : <lb/>Vous ne vostre
           ire ne pris pas une pome parée. </p>
       </div>
