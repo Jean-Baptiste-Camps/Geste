@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_edition.css" title="edition" alternate="yes"?>
+<!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd" [
+<!ENTITY o-suscrit-or  '<choice><abbr>&#x0366;</abbr><expan>o<ex>r</ex></expan></choice>'>
+<!ENTITY mlt-mut "<choice><expan>mut</expan><abbr>ml<c rend='apos'>&#x0303;</c>t</abbr></choice>">
+<!ENTITY bin "<choice><expan>bin</expan><abbr>bn&#x0303;</abbr></choice>">
+<!ENTITY pro-pour-por "<choice><expan>p<ex>or</ex></expan><abbr>&#xA753;</abbr></choice>">
+<!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
+<!ENTITY Naimes "<choice><abbr>.N.</abbr><expan>N<ex>aimes</ex></expan></choice>">
+] >
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ms_Aspremont_P4" type="ms">
+    <!-- transcription diplomatique et allographétique du ms de Mende de la Chanson d'Aspremont-->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Aspremont</title>
+                <title type="sub">Transcription du fragment de Mende</title>
+                <respStmt>
+                    <resp>sous la direction de</resp>
+                    <persName xml:id="JBC">Jean-Baptiste Camps</persName>
+                </respStmt>
+                <!--<respStmt>
+                    <resp>transcription et encodage XML</resp>
+                    <persName xml:id=""></persName>
+                </respStmt>-->
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName><forename>Jean-Baptiste</forename><surname>Camps</surname></persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75012 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="restricted">
+                    <licence>Fichier de travail, à ne pas diffuser.</licence>
+                </availability>
+                <date>2016</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc xml:id="P4">
+                    <msIdentifier>
+                        <country>France</country>
+                        <settlement>Paris</settlement>
+                        <institution>Bibliothèque Nationale de France</institution>
+                        <repository>Département des manuscrits</repository>
+                        <collection>Nouvelles acquisitions françaises</collection>
+                        <idno>5094-II</idno>
+                        <altIdentifier type="olim">
+                            <country>France</country>
+                            <settlement>Mende</settlement>
+                            <institution>Archives départementales</institution>
+                            <collection>G</collection>
+                            <idno>236</idno>
+                        </altIdentifier>
+                        <msName type="sigle">P4</msName>
+                    </msIdentifier>
+                    <head>
+                        <title>Chanson d'Otinel</title>
+                        <title>Chanson d'Aspremont</title>
+                    </head>
+                    <history>
+                        <origin>
+                            <origPlace cert="high" resp="#JBC">Angleterre</origPlace>
+                            <origDate notBefore="1180" notAfter="1220" cert="high" resp="#JBC">fin du XIIe ou début du XIIIe siècle</origDate>
+                        </origin>
+                    </history>
+                    <additional>
+                        <surrogates> Fac-similé en ligne sur Gallica: <ref target="http://gallica.bnf.fr/ark:/12148/btv1b6000371s/f21.image.r=5094.langFR.zoom">http://gallica.bnf.fr/ark:/12148/btv1b6000371s/f21.image.r=5094.langFR.zoom</ref>.
+                        </surrogates>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origPlace cert="medium" resp="#AFLL">Sicile?</origPlace>
+                <origDate cert="high" resp="#AFLL" notBefore="1170" notAfter="1190">Fin du XIIe siècle, avant 1190</origDate><!-- à faire: ajouter la référence bibliographique soutenant cette affirmation -->
+            </creation>
+            <langUsage>
+                <language cert="high" resp="#JBC" ident="xno" usage="100">anglo-normand (langue du scribe ou couche principale)</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change when="20160306" who="#JBC" status="draft">Création du document et mise en place de la
+                transcription</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb n="8r" facs="facsimile/NAF-5094_08r.JPEG"/><!-- Début du feuillet -->
+            <cb n="a"/><!-- Début de la colonne -->
+            <lg type="laisse" n="III"><!-- Début d'une laisse -->
+                <!-- JBC: Je transcris les premières lignes à titre d'exemple -->
+                <lb/><!-- Début d'une ligne -->
+                <l><q><w rend="aggl"><hi rend="initiale detach">l</hi>&i;</w><w>tun</w>
+                        <w>con&s-long;e&i;l</w>
+                        <w rend="aggl">m</w><w>&a-rond;t</w>
+                        <add place="above"><w>me&i;&accent;nt</w></add>
+                        <w>me&s-long;t&i;&accent;r</w>
+                        <w>eu&ed-dierese;</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">&a-rond;</hi>&s-long;</w>
+                        <w>colp&s-long;</w>
+                        <w>doner</w>
+                        <w rend="aggl">&a-rond;l</w><w>br&a-rond;nt</w>
+                        <w rend="elision">d</w><w>&a-rond;c&i;&accent;r</w>
+                        <w>mulu</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">t</hi>e</w>
+                        <w>&a-rond;&i;</w>
+                        <w>de&u-pour-v;&a-rond;nt</w>
+                        <w>me&i;</w>
+                        <w>tut</w>
+                        <w>d&i;&accent;&s-long;</w>
+                        <w>&bin;</w>
+                        <w>coneu&ed-dierese;</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">t</hi>re&s-long;tut</w>
+                        <w>recu<add place="above">&u-pour-v;e</add>rent</w>
+                        <w>ent&tilde3-ur;<del rend="exponctué">re</del></w>
+                        <w>le</w>
+                        <w>tun</w>
+                        <w>e&s-long;cu</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">&a-rond;</hi>&i;nz</w>
+                        <add place="above"><w>ke</w></add>
+                        <w>le</w>
+                        <w>tun</w>
+                        <w>tre&s-long;o&r-rond;</w>
+                        <w rend="aggl">&i;</w><w>&s-long;e&i;t</w>
+                        <w>&u-pour-v;enu</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">V</hi>o&s-long;</w>
+                        <w>ert</w>
+                        <w rend="aggl">l&i;&accent;</w><w>m&i;<add place="above"
+                            >e</add>n&s-long;</w>
+                        <w rend="aggl">p&a-rond;r</w><w>m&a-rond;t&i;net</w>
+                        <w>rendu</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">M</hi>en</w>
+                        <w>e&s-long;c&i;ntre</w>
+                        <w>qu&a-rond;nt</w>
+                        <w rend="aggl">tu</w><w rend="elision"
+                            >l</w><w>&a-rond;&u-pour-v;er&s-long;</w>
+                        <w>&u-pour-v;e&v-pour-u;&ed-dierese;</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">M</hi>e</w>
+                        <w>d&i;r&a-rond;&s-long;</w>
+                        <w rend="elision">k</w><w>enke&s-long;</w>
+                        <w>grennu<add place="above">r</add></w>
+                        <w>ne</w>
+                        <w>fu</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">C</hi>&a-rond;r</w>
+                        <w rend="aggl">de</w><w>duner</w>
+                        <w>m&a-rond;r</w>
+                        <w>&s-long;err&a-rond;&s-long;</w>
+                        <w>e&s-long;&p-barré-per;du</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">t</hi>&a-rond;nt</w>
+                        <w>en</w><w>donez</w>
+                        <w>que</w>
+                        <w>tuz</w>
+                        <w>&a-rond;&i;ez</w>
+                        <w>&u-pour-v;encu</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">Q</hi>ue</w>
+                        <w>tut</w>
+                        <w rend="elision">&s-long;</w><w rend="aggl">en</w><w>&a-rond;ugent</w>
+                        <w>de</w>
+                        <w>&i-pour-j;&accent;o&i;&accent;e</w>
+                        <w>re&u-pour-v;e&s-long;tuz</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="4">
+                <lb/>
+                <l><w><hi rend="initiale filigr 2l">Q</hi>u&a-rond;nt</w>
+                    <w>l&i;</w>
+                    <w>duc</w>
+                    <w>&Naimes;</w>
+                    <w>ot</w>
+                    <w>p&a-rond;rler</w>
+                    <w>&s-long;un</w>
+                    <w>&s-long;e&i;n&u-pour-v;<add place="above">&R;</add></w></l>
+                <lb/>
+                <l><w><hi rend="initiale detach">&i;</hi>dunc</w>
+                    <w>ot</w>
+                    <subst>
+                        <del rend="exponctué"><w>gre</w></del>
+                        <add place="above"><w>&i-pour-j;o&i;e</w></add>
+                    </subst><note>Rattrapage par le scribe d'un homéotéleute.</note>
+                    <w>unche&s-long;</w>
+                    <w rend="elision">n</w><w>en</w>
+                    <w>ot</w>
+                    <w>grenur</w><pc type="supplied">.</pc></l>
+                <!--JBC: Suit le texte de base de l'édition Brandin, à modifier à partir du manuscrit -->
+                <lb/>
+                <l><q><w>Baron</w></q>  <w>fait</w>  <w>il</w>  <q><w>nel</w>  <w>tenés</w>  <w>a</w>  <w>folor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Cestui</w>  <w>servés</w>  <w>sans</w>  <w>nul</w>  <w>contreditor</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>apriés</w>  <w>Deu</w>  <w>a</w>  <w>sor</w>  <w>tols</w>  <w>le</w>  <w>valor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>G'en</w>  <w>sui</w>  <w>ostages</w>  <w>al</w>  <w>grant</w>  <w>et</w>  <w>al</w>  <w>menor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Tels</w>  <w>fix</w>  <w>i</w>  <w>vint</w>  <w>a</w>  <w>povre</w>  <w>vavassor</w></q></l>
+                <lb/>
+                <l><q><w>Qui</w>  <w>al</w>  <w>partir</w>  <w>sera</w>  <w>dus</w>  <w>u</w>  <w>contor</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="5">
+                <lb/>
+                <l><w>Li</w>  <w>archevesques</w>  <w>comença</w>  <w>a</w>  <w>parler</w></l>
+                <lb/>
+                <l><w>Gentix</w>  <w>hom</w>  <w>fu</w>  <w>et</w>  <w>jovenes</w>  <w>baceler</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>a</w>  <w>mervelles</w>  <w>se</w>  <w>fait</w>  <w>a</w>  <w>cort</w>  <w>amer</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>N'a</w>  <w>duc</w>  <w>en</w>  <w>France</w>  <w>tant</w>  <w>se</w>  <w>sace</w>  <w>pener</w></l>
+                <lb/>
+                <l><w>Que</w>  <w>si</w>  <w>grant</w>  <w>ost</w>  <w>voelle</w>  <w>a</w>  <w>la</w>  <w>cort</w>  <w>mener</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Il</w>  <w>aime</w>  <w>miols</w>  <w>cevax</w>  <w>a</w>  <w>acater</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>bieles</w>  <w>armes</w>  <w>por</w>  <w>vallés</w>  <w>adober</w></l>
+                <lb/>
+                <l><w>Que</w>  <w>il</w>  <w>ne</w>  <w>face</w>  <w>tresors</w>  <w>a</w>  <w>amasser</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>En</w>  <w>iretage</w>  <w>le</w>  <w>volt</w>  <w>enfin</w>  <w>clamer</w></l>
+                <lb/>
+                <l><w>Que</w>  <w>qui</w>  <w>volra</w>  <w>le</w>  <w>roi</w>  <w>desireter</w></l>
+                <lb/>
+                <l><w>Qu'il</w>  <w>doit</w>  <w>en</w>  <w>ost</w>  <w>ensanble</w>  <w>o</w>  <w>lui</w>  <w>aler</w></l>
+                <lb/>
+                <l><w>Porter</w>  <w>ses</w>  <w>armes</w>  <w>et</w>  <w>son</w>  <w>cheval</w>  <w>mener</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>soi</w>  <w>conbatre</w>  <w>sans</w>  <w>lui</w>  <w>desordener</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>A</w>  <w>l'apostolie</w>  <w>le</w>  <w>comence</w>  <w>a</w>  <w>monstrer</w></l>
+                <lb/>
+                <l><q><w>Sire</w>  <w>apostoles</w>  <w>ne</w>  <w>vos</w>  <w>en</w>  <w>doit</w>  <w>peser</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Nos</w>  <w>devons</w>  <w>molt</w>  <w>les</w>  <w>chevaliers</w>  <w>amer</w></q></l>
+                <lb/>
+                <l><q><w>Quant</w>  <w>nos</w>  <w>seons</w>  <w>a</w>  <w>nostre</w>  <w>halt</w>  <w>disner</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>nos</w>  <w>servons</w>  <w>de</w>  <w>matines</w>  <w>canter</w></q></l>
+                <lb/>
+                <l><q><w>Il</w>  <w>se</w>  <w>conbatent</w>  <w>por</w>  <w>la</w>  <w>tiere</w>  <w>garder</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>vos</w>  <w>et</w>  <w>jo</w>  <w>et</w>  <w>nostre</w>  <w>abes</w>  <w>Fromer</w></q></l>
+                <lb/>
+                <l><q><w>Devons</w>  <w>por</w>  <w>euls</w>  <w>nos</w>  <w>tresors</w>  <w>effondrer</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Tant</w>  <w>lor</w>  <w>en</w>  <w>doit</w>  <w>cascuns</w>  <w>de</w>  <w>nos</w>  <w>doner</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>il</w>  <w>nos</w>  <w>viegnent</w>  <w>servir</w>  <w>et</w>  <w>honorer</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="6">
+                <lb/>
+                <l><w>Ains</w>  <w>que</w>  <w>li</w>  <w>roi</w>  <w>s'asist</w>  <w>desos</w>  <w>le</w>  <w>pin</w></l>
+                <lb/>
+                <l><w>Ne</w>  <w>qu'il</w>  <w>se</w>  <w>liet</w>  <w>del</w>  <w>perron</w>  <w>marberin</w></l>
+                <lb/>
+                <l><w>les</w>  <w>dras</w>  <w>de</w>  <w>soie</w>  <w>de</w>  <w>palie</w>  <w>alixandrin</w></l>
+                <lb/>
+                <l><w>Les</w>  <w>bons</w>  <w>hanas</w>  <w>et</w>  <w>les</w>  <w>coupes</w>  <w>d'or</w>  <w>fin</w></l>
+                <lb/>
+                <l><w>Les</w>  <w>bials</w>  <w>ostoirs</w>  <w>maint</w>  <w>falcon</w>  <w>mostardin</w></l>
+                <lb/>
+                <l><w>Çals</w>  <w>a</w>  <w>donés</w>  <w>Carles</w>  <w>li</w>  <w>fix</w>  <w>Pepin</w></l>
+                <lb/>
+                <l><w>As</w>  <w>gentilx</w>  <w>homes</w>  <w>qui</w>  <w>sont</w>  <w>de</w>  <w>rice</w>  <w>lin</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lg type="laisse" n="7">
+                <lb/>
+                <l><w>Les</w>  <w>palefrois</w>  <w>les</w>  <w>cevals</w>  <w>les</w>  <w>deniers</w></l>
+                <lb/>
+                <l><w>Cels</w>  <w>done</w>  <w>Carles</w>  <w>as</w>  <w>povres</w>  <w>chevaliers</w></l>
+                <lb/>
+                <l><w>Le</w>  <w>vair</w>  <w>le</w>  <w>gris</w>  <w>et</w>  <w>les</w>  <w>corans</w>  <w>destriers</w></l>
+                <lb/>
+                <l><w>Les</w>  <w>falconcials</w>  <w>les</w>  <w>müés</w>  <w>esperviers</w></l>
+                <lb/>
+                <l><w>Ces</w>  <w>done</w>  <w>Carles</w>  <w>as</w>  <w>bacelers</w>  <w>legiers</w></l>
+                <lb/>
+                <l><w>As</w>  <w>damoisials</w>  <w>as</w>  <w>vallans</w>  <w>soldoiers</w></l>
+                <lb/>
+                <l><w>As</w>  <w>gentilx</w>  <w>homes</w>  <w>les</w>  <w>falcons</w>  <w>monteniers</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lg type="laisse" n="8">
+                <lb/>
+                <l><w>Tant</w>  <w>fist</w>  <w>li</w>  <w>rois</w>  <w>a</w>  <w>cascun</w>  <w>son</w>  <w>voloir</w></l>
+                <lb/>
+                <l><w>Quatre</w>  <w>sestiers</w>  <w>dona</w>  <w>de</w>  <w>son</w>  <w>avoir</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Trois</w>  <w>cens</w>  <w>cevalx</w>  <w>i</w>  <w>dona</w>  <w>on</w>  <w>le</w>  <w>soir</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Namles</w>  <w>parla</w>  <w>qui</w>  <w>ot</w>  <w>le</w>  <w>grant</w>  <w>savoir</w></l>
+                <lb/>
+                <l><q><w>Segnor</w></q>  <w>fait</w>  <w>il</w>  <q><w>se</w>  <w>jo</w>  <w>voel</w>  <w>dire</w>  <w>voir</w></q></l>
+                <lb/>
+                <l><q><w>A</w>  <w>cestui</w>  <w>doit</w>  <w>corone</w>  <w>el</w>  <w>cief</w>  <w>seoir</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>apriés</w>  <w>Deu</w>  <w>a</w>  <w>sor</w>  <w>tols</w>  <w>le</w>  <w>pooir</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="9">
+                <lb/>
+                <l><q><w>Oiés</w>  <w>segnor</w>  <w>que</w>  <w>deffent</w>  <w>Carlemaine</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>il</w>  <w>deffent</w>  <w>a</w>  <w>tols</w>  <w>çals</w>  <w>d'Alemagne</w></q></l>
+                <lb/>
+                <l><q><w>A</w>  <w>çals</w>  <w>de</w>  <w>Pulle</w>  <w>et</w>  <w>a</w>  <w>çals</w>  <w>de</w>  <w>Romagne</w></q></l>
+                <lb/>
+                <l><q><w>De</w>  <w>Lonbardie</w>  <w>de</w>  <w>France</w>  <w>et</w>  <w>de</w>  <w>Bretagne</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>si</w>  <w>deffent</w>  <w>a</w>  <w>tols</w>  <w>çals</w>  <w>d'Aquitagne</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>mar</w>  <w>i</w>  <w>ait</w>  <w>nul</w>  <w>si</w>  <w>hardi</w>  <w>catagne</w></q></l>
+                <lb/>
+                <l><q><w>Qui</w>  <w>escuier</w>  <w>nesune</w>  <w>espee</w>  <w>i</w>  <w>çagne</w></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>le</w>  <w>set</w>  <w>Carles</w>  <w>ja</w>  <w>n'iert</w>  <w>jors</w>  <w>ne</w>  <w>s'en</w>  <w>plagne</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>N'iert</w>  <w>tant</w>  <w>hardis</w>  <w>qu'en</w>  <w>sa</w>  <w>tiere</w>  <w>remagne</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="10">
+                <lb/>
+                <l><q><w>Nel</w>  <w>se</w>  <w>penst</w>  <w>ja</w>  <w>nus</w>  <w>hom</w>  <w>por</w>  <w>sa</w>  <w>posnee</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>chevaliers</w>  <w>face</w>  <w>en</w>  <w>sa</w>  <w>contree</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Viegnent</w>  <w>a</w>  <w>cort</w>  <w>quant</w>  <w>ele</w>  <w>iert</w>  <w>assanblee</w></q></l>
+                <lb/>
+                <l><q><w>Cascun</w>  <w>donra</w>  <w>u</w>  <w>escu</w>  <w>u</w>  <w>espee</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="11">
+                <lb/>
+                <l><q><w>Il</w>  <w>lor</w>  <w>donra</w>  <w>et</w>  <w>armes</w>  <w>et</w>  <w>destriers</w></q></l>
+                <lb/>
+                <l><q><w>Si</w>  <w>lor</w>  <w>donra</w>  <w>et</w>  <w>armes</w>  <w>et</w>  <w>deniers</w></q></l>
+                <lb/>
+                <l><q><w>Il</w>  <w>lor</w>  <w>donra</w>  <w>espees</w>  <w>u</w>  <w>destriers</w></q></l>
+                <lb/>
+                <l><q><w>Por</w>  <w>l'alïance</w>  <w>que</w>  <w>violt</w>  <w>avoir</w>  <w>premiers</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="12">
+                <lb/>
+                <l><w>Or</w>  <w>fu</w>  <w>li</w>  <w>rois</w>  <w>et</w>  <w>joiols</w>  <w>et</w>  <w>haitiés</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Nus</w>  <w>ne</w>  <w>s'en</w>  <w>part</w>  <w>de</w>  <w>lui</w>  <w>ne</w>  <w>soit</w>  <w>raiés</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Siet</w>  <w>mile</w>  <w>en</w>  <w>sont</w>  <w>vanté</w>  <w>et</w>  <w>aficiés</w></l>
+                <lb/>
+                <l><w>De</w>  <w>lui</w>  <w>servir</w>  <w>pres</w>  <w>et</w>  <w>apparelliés</w></l>
+                <lb/>
+                <l><w>Qui</w>  <w>devant</w>  <w>cho</w>  <w>n'i</w>  <w>portassent</w>  <w>lor</w>  <w>piés</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Doi</w>  <w>roi</w>  <w>se</w>  <w>lievent</w>  <w>et</w>  <w>Namles</w>  <w>fu</w>  <w>li</w>  <w>tiers</w></l>
+                <lb/>
+                <l><w>Devant</w>  <w>le</w>  <w>roi</w>  <w>es</w>  <w>les</w>  <w>agenolliés</w></l>
+                <lb/>
+                <l><q><w>Drois</w>  <w>emperere</w>  <w>se</w>  <w>vos</w>  <w>plaist</w>  <w>or</w>  <w>oiés</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Cho</w>  <w>dïent</w>  <w>cil</w>  <w>qui</w>  <w>ça</w>  <w>sont</w>  <w>apoiés</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>qui</w>  <w>ci</w>  <w>sont</w>  <w>sor</w>  <w>ces</w>  <w>palies</w>  <w>colciés</w></q></l>
+                <lb/>
+                <l><q><w>Sos</w>  <w>ciel</w>  <w>n'a</w>  <w>tiere</w>  <w>se</w>  <w>vos</w>  <w>le</w>  <w>voliiés</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>le</w>  <w>conquierent</w>  <w>as</w>  <w>fiers</w>  <w>de</w>  <w>lor</w>  <w>espiés</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Trop</w>  <w>vos</w>  <w>sont</w>  <w>priés</w>  <w>Sarrasin</w>  <w>herbergiés</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Molt</w>  <w>lor</w>  <w>en</w>  <w>poise</w>  <w>que</w>  <w>vos</w>  <w>tant</w>  <w>delaiés</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Ot</w>  <w>le</w>  <w>li</w>  <w>rois</w>  <w>molt</w>  <w>les</w>  <w>a</w>  <w>merciiés</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Puis</w>  <w>respondi</w>  <w>come</w>  <w>rois</w>  <w>droituriés</w></l>
+                <lb/>
+                <l><q><w>Jes</w>  <w>conquerrai</w>  <w>et</w>  <w>puis</w>  <w>si</w>  <w>les</w>  <w>aiés</w></q></l>
+                <lb/>
+                <l><q><w>Mais</w>  <w>que</w>  <w>tant</w>  <w>faites</w>  <w>que</w>  <w>de</w>  <w>moi</w>  <w>les</w>  <w>tegniés</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Li</w>  <w>mangiers</w>  <w>fu</w>  <w>pres</w>  <w>et</w>  <w>apparelliés</w></l>
+                <lb/>
+                <l><w>Les</w>  <w>napes</w>  <w>mises</w>  <w>et</w>  <w>li</w>  <w>vins</w>  <w>essaiés</w></l>
+                <lb/>
+                <l><w>Sor</w>  <w>les</w>  <w>salieres</w>  <w>ont</w>  <w>les</w>  <w>cotials</w>  <w>dreciés</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Par</w>  <w>mi</w>  <w>la</w>  <w>sale</w>  <w>tex</w>  <w>cent</w>  <w>en</w>  <w>veïssiés</w></l>
+                <lb/>
+                <l><w>Vestus</w>  <w>de</w>  <w>vair</w>  <w>et</w>  <w>d'ermines</w>  <w>delgiés</w></l>
+                <lb/>
+                <l><w>Fil</w>  <w>sont</w>  <w>a</w>  <w>contes</w>  <w>et</w>  <w>a</w>  <w>princes</w>  <w>proisiés</w></l>
+                <lb/>
+                <l><w>Ainz</w>  <w>que</w>  <w>li</w>  <w>rois</w>  <w>se</w>  <w>dreçast</w>  <w>sor</w>  <w>les</w>  <w>piés</w></l>
+                <lb/>
+                <l><w>Li</w>  <w>descendirent</w>  <w>al</w>  <w>perron</w>  <w>tes</w>  <w>daintiés</w></l>
+                <lb/>
+                <l><w>Dont</w>  <w>ainc</w>  <w>ne</w>  <w>fu</w>  <w>si</w>  <w>grains</w>  <w>ne</w>  <w>si</w>  <w>iriés</w></l>
+                <lb/>
+                <l><w>Ne</w>  <w>nus</w>  <w>frans</w>  <w>hom</w>  <w>si</w>  <w>mal</w>  <w>desconselliés</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lg type="laisse" n="13">
+                <lb/>
+                <l><w>Ainz</w>  <w>que</w>  <w>li</w>  <w>rois</w>  <w>soit</w>  <w>assis</w>  <w>al</w>  <w>mangier</w></l>
+                <lb/>
+                <l><w>Ne</w>  <w>qu'il</w>  <w>se</w>  <w>liet</w>  <w>de</w>  <w>son</w>  <w>perron</w>  <w>d'acier</w></l>
+                <lb/>
+                <l><w>En</w>  <w>mi</w>  <w>la</w>  <w>place</w>  <w>es</w>  <w>vos</w>  <w>un</w>  <w>chevalier</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Descendus</w>  <w>est</w>  <w>d'un</w>  <w>grant</w>  <w>fauve</w>  <w>destrier</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Auques</w>  <w>fu</w>  <w>maigres</w>  <w>las</w>  <w>fu</w>  <w>de</w>  <w>l'empirier</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Il</w>  <w>ot</w>  <w>un</w>  <w>mois</w>  <w>aconpli</w>  <w>avant</w>  <w>ier</w></l>
+                <lb/>
+                <l><w>Que</w>  <w>de</w>  <w>repos</w>  <w>nen</w>  <w>ot</w>  <w>un</w>  <w>jor</w>  <w>entier</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Mais</w>  <w>quil</w>  <w>veïst</w>  <w>a</w>  <w>l'oire</w>  <w>comencier</w></l>
+                <lb/>
+                <l><w>Sos</w>  <w>cieln'a</w>  <w>bieste</w>  <w>miols</w>  <w>se</w>  <w>fist</w>  <w>a</w>  <w>proisier</w></l>
+                <lb/>
+                <l><w>Ne</w>  <w>nul</w>  <w>en</w>  <w>tiere</w>  <w>tant</w>  <w>face</w>  <w>a</w>  <w>convoitier</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lg type="laisse" n="14">
+                <lb/>
+                <l><w>En</w>  <w>mi</w>  <w>la</w>  <w>place</w>  <w>li</w>  <w>vassax</w>  <w>descendié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Blont</w>  <w>ot</w>  <w>le</w>  <w>poil</w>  <w>menuëment</w>  <w>trechié</w></l>
+                <lb/>
+                <l><w>Sor</w>  <w>ses</w>  <w>espaules</w>  <w>l'ot</w>  <w>destrier</w>  <w>soi</w>  <w>colcié</w></l>
+                <lb/>
+                <l><w>Desci</w>  <w>as</w>  <w>hances</w>  <w>li</w>  <w>erent</w>  <w>arengié</w></l>
+                <lb/>
+                <l><w>Gros</w>  <w>iols</w>  <w>et</w>  <w>vairs</w>  <w>le</w>  <w>vis</w>  <w>rïant</w>  <w>et</w>  <w>lié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Ne</w>  <w>l'ot</w>  <w>pucele</w>  <w>plus</w>  <w>blanc</w>  <w>ne</w>  <w>delïé</w></l>
+                <lb/>
+                <l><w>Mais</w>  <w>que</w>  <w>del</w>  <w>caut</w>  <w>del</w>  <w>harle</w>  <w>l'ot</w>  <w>cangié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Gros</w>  <w>contre</w>  <w>cuer</w>  <w>et</w>  <w>le</w>  <w>vis</w>  <w>bien</w>  <w>taillié</w></l>
+                <lb/>
+                <l><w>Grans</w>  <w>bras</w>  <w>et</w>  <w>lons</w>  <w>et</w>  <w>le</w>  <w>pis</w>  <w>enforcié</w></l>
+                <lb/>
+                <l><w>Par</w>  <w>les</w>  <w>costés</w>  <w>fu</w>  <w>drois</w>  <w>et</w>  <w>alignié</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>droite</w>  <w>jambe</w>  <w>s'ot</w>  <w>bien</w>  <w>torné</w>  <w>le</w>  <w>pié</w></l>
+                <lb/>
+                <l><w>Molt</w>  <w>li</w>  <w>avint</w>  <w>l'esporon</w>  <w>qu'ot</w>  <w>calcié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Poi</w>  <w>trovissiés</w>  <w>home</w>  <w>si</w>  <w>ensegnié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>S'est</w>  <w>d'une</w>  <w>jupe</w>  <w>de</w>  <w>palie</w>  <w>despollié</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>remest</w>  <w>sengles</w>  <w>et</w>  <w>blïaut</w>  <w>entallié</w></l>
+                <lb/>
+                <l><w>Ki</w>  <w>as</w>  <w>costés</w>  <w>d'anbes</w>  <w>pars</w>  <w>fu</w>  <w>trenchié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Desçaint</w>  <w>le</w>  <w>brant</w>  <w>al</w>  <w>pun</w>  <w>d'or</w>  <w>entallié</w></l>
+                <lb/>
+                <l><w>A</w>  <w>un</w>  <w>Turcople</w>  <w>a</w>  <w>tolt</w>  <w>triers</w>  <w>soi</w>  <w>ballié</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Tint</w>  <w>son</w>  <w>gant</w>  <w>destre</w>  <w>entre</w>  <w>ses</w>  <w>mains</w>  <w>ploié</w></l>
+                <lb/>
+                <l><w>Pas</w>  <w>avant</w>  <w>altre</w>  <w>s'est</w>  <w>del</w>  <w>roi</w>  <w>aprocié</w></l>
+                <lb/>
+                <l><w>En</w>  <w>halt</w>  <w>parole</w>  <w>si</w>  <w>que</w>  <w>bien</w>  <w>l'entendié</w></l>
+                <lb/>
+                <l><q><w>Cil</w>  <w>Mahomet</w>  <w>que</w>  <w>paien</w>  <w>ont</w>  <w>proié</w></q></l>
+                <lb/>
+                <l><q><w>Par</w>  <w>cui</w>  <w>nos</w>  <w>somes</w>  <w>tenu</w>  <w>et</w>  <w>essalcié</w></q></l>
+                <lb/>
+                <l><q><w>Saut</w>  <w>Agolant</w>  <w>et</w>  <w>Aumont</w>  <w>le</w>  <w>proisié</w></q></l>
+                <lb/>
+                <l><q><w>Trïamodés</w>  <w>et</w>  <w>Gorhant</w>  <w>l'envoisié</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>tolt</w>  <w>le</w>  <w>pule</w>  <w>qui</w>  <w>oals</w>  <w>est</w>  <w>logié</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>il</w>  <w>confonde</w>  <w>Carle</w>  <w>l'otrecuidié</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>tols</w>  <w>icels</w>  <w>qui</w>  <w>tolt</w>  <w>t'ont</w>  <w>consellié</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>tu</w>  <w>nos</w>  <w>a</w>  <w>tant</w>  <w>longes</w>  <w>obliié</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>li</w>  <w>miens</w>  <w>sire</w>  <w>s'est</w>  <w>a</w>  <w>toi</w>  <w>corecié</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Ja</w>  <w>a</w>  <w>un</w>  <w>mois</w>  <w>par</w>  <w>tiere</w>  <w>chevalcié</w></q></l>
+                <lb/>
+                <l><q><w>Trestols</w>  <w>les</w>  <w>regnes</w>  <w>porpris</w>  <w>et</w>  <w>herbergié</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Bien</w>  <w>poés</w>  <w>dire</w>  <w>que</w>  <w>mal</w>  <w>as</w>  <w>esploitié</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Par</w>  <w>ton</w>  <w>oltrage</w>  <w>t'en</w>  <w>verras</w>  <w>essillié</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>jo</w>  <w>meïsmes</w>  <w>qui</w>  <w>cha</w>  <w>sui</w>  <w>envoié</w></q></l>
+                <lb/>
+                <l><q><w>Quant</w>  <w>cis</w>  <w>anials</w>  <w>me</w>  <w>fu</w>  <w>el</w>  <w>doit</w>  <w>baillé</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>fu</w>  <w>pas</w>  <w>laide</w>  <w>qui</w>  <w>le</w>  <w>m'i</w>  <w>enbatié</w></q></l>
+                <lb/>
+                <l><q><w>Par</w>  <w>druërie</w>  <w>la</w>  <w>li</w>  <w>ai</w>  <w>otroié</w></q></l>
+                <lb/>
+                <l><q><w>Ja</w>  <w>li</w>  <w>aniax</w>  <w>n'iert</w>  <w>fors</w>  <w>del</w>  <w>doit</w>  <w>sacié</w></q></l>
+                <lb/>
+                <l><q><w>Si</w>  <w>avrai</w>  <w>mort</w>  <w>un</w>  <w>Franc</w>  <w>de</w>  <w>mon</w>  <w>espié</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Amis</w></q>  <w>dist</w>  <w>Carles</w>  <q><w>or</w>  <w>en</w>  <w>ait</w>  <w>Dex</w>  <w>pitié</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="15">
+                <lb/>
+                <l><q><w>Sire</w>  <w>emperere</w>  <w>faites</w>  <w>moi</w>  <w>escolter</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Il</w>  <w>sont</w>  <w>trois</w>  <w>tieres</w>  <w>que</w>  <w>jo</w>  <w>sai</w>  <w>bien</w>  <w>nomer</w></q></l>
+                <lb/>
+                <l><q><w>Aise</w>  <w>a</w>  <w>non</w>  <w>l'une</w>  <w>et</w>  <w>Europe</w>  <w>sa</w>  <w>per</w></q></l>
+                <lb/>
+                <l><q><w>La</w>  <w>tierce</w>  <w>Alfrique</w>  <w>l'on</w>  <w>n'en</w>  <w>puet</w>  <w>puis</w>  <w>trover</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Icés</w>  <w>trois</w>  <w>tieres</w>  <w>departent</w>  <w>par</w>  <w>la</w>  <w>mer</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>fait</w>  <w>les</w>  <w>tieres</w>  <w>des</w>  <w>illes</w>  <w>desevrer</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>La</w>  <w>mellor</w>  <w>a</w>  <w>mes</w>  <w>sires</w>  <w>a</w>  <w>garder</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>L'autran</w>  <w>i</w>  <w>fisent</w>  <w>paien</w>  <w>un</w>  <w>sort</w>  <w>jeter</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Les</w>  <w>dos</w>  <w>devoient</w>  <w>a</w>  <w>la</w>  <w>tierce</w>  <w>acliner</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Por</w>  <w>cho</w>  <w>vieg</w>  <w>ceste</w>  <w>saisir</w>  <w>et</w>  <w>avoër</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>l'emperere</w>  <w>voist</w>  <w>la</w>  <w>a</w>  <w>lui</w>  <w>finer</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>En</w>  <w>l'ost</w>  <w>en</w>  <w>vigne</w>  <w>ne</w>  <w>l'ose</w>  <w>contrester</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Balant</w>  <w>m'apielent</w>  <w>issi</w>  <w>me</w>  <w>faç</w>  <w>nomer</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>serf</w>  <w>le</w>  <w>roi</w>  <w>de</w>  <w>messages</w>  <w>porter</w></q></l>
+                <lb/>
+                <l><q><w>Si</w>  <w>ne</w>  <w>sierf</w>  <w>pas</w>  <w>de</w>  <w>mençognes</w>  <w>conter</w></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>il</w>  <w>est</w>  <w>cose</w>  <w>qu'il</w>  <w>l'estuece</w>  <w>prover</w></q></l>
+                <lb/>
+                <l><q><w>Viers</w>  <w>un</w>  <w>vassal</w>  <w>le</w>  <w>voel</w>  <w>en</w>  <w>camp</w>  <w>mostrer</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>jo</w>  <w>irai</w>  <w>mes</w>  <w>armes</w>  <w>achater</w></q></l>
+                <lb/>
+                <l><q><w>De</w>  <w>l'or</w>  <w>d'Aufrique</w>  <w>que</w>  <w>j'ai</w>  <w>fait</w>  <w>aporter</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>li</w>  <w>tiens</w>  <w>hom</w>  <w>me</w>  <w>puet</w>  <w>en</w>  <w>camp</w>  <w>mater</w></q></l>
+                <lb/>
+                <l><q><w>En</w>  <w>mon</w>  <w>seel</w>  <w>ferai</w>  <w>ja</w>  <w>saeler</w></q></l>
+                <lb/>
+                <l><q><w>Unes</w>  <w>ensegnes</w>  <w>i</w>  <w>ferai</w>  <w>enbriever</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>tu</w>  <w>feras</w>  <w>a</w>  <w>mon</w>  <w>segnor</w>  <w>porter</w></q></l>
+                <lb/>
+                <l><q><w>Ja</w>  <w>mais</w>  <w>le</w>  <w>Far</w>  <w>nel</w>  <w>verras</w>  <w>trespasser</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>tu</w>  <w>nel</w>  <w>fais</w>  <w>tu</w>  <w>viols</w>  <w>del</w>  <w>tot</w>  <w>foler</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Tu</w>  <w>n'as</w>  <w>pas</w>  <w>gent</w>  <w>a</w>  <w>la</w>  <w>nostre</w>  <w>mater</w></q></l>
+                <lb/>
+                <l><q><w>Tant</w>  <w>te</w>  <w>querrons</w>  <w>que</w>  <w>te</w>  <w>porons</w>  <w>trover</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>te</w>  <w>garra</w>  <w>bos</w>  <w>ne</w>  <w>tiere</w>  <w>ne</w>  <w>mer</w></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>ne</w>  <w>t'en</w>  <w>pués</w>  <w>come</w>  <w>uns</w>  <w>oisials</w>  <w>voler</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Or</w>  <w>tien</w>  <w>mon</w>  <w>gage</w>  <w>se</w>  <w>tu</w>  <w>l'oses</w>  <w>penser</w></q></l>
+                <lb/>
+                <l><q><w>Viers</w>  <w>le</w>  <w>mioldre</w>  <w>home</w>  <w>que</w>  <w>tu</w>  <w>poras</w>  <w>trouver</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Or</w>  <w>tien</w>  <w>cest</w>  <w>brief</w>  <w>si</w>  <w>fai</w>  <w>dedens</w>  <w>garder</w></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>plus</w>  <w>n'i</w>  <w>troueves</w>  <w>que</w>  <w>tu</w>  <w>ne</w>  <w>m'os</w>  <w>conter</w></q></l>
+                <lb/>
+                <l><q><w>Si</w>  <w>me</w>  <w>fai</w>  <w>donc</w>  <w>si</w>  <w>vilment</w>  <w>demener</w></q></l>
+                <lb/>
+                <l><q><w>Come</w>  <w>laron</w>  <w>qui</w>  <w>est</w>  <w>pris</w>  <w>a</w>  <w>enbler</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Sor</w>  <w>le</w>  <w>mantiel</w>  <w>li</w>  <w>fist</w>  <w>le</w>  <w>brief</w>  <w>jeter</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Li</w>  <w>rois</w>  <w>le</w>  <w>balle</w>  <w>a</w>  <w>dant</w>  <w>abé</w>  <w>Fromer</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Cil</w>  <w>fraint</w>  <w>le</w>  <w>cire</w>  <w>si</w>  <w>comence</w>  <w>a</w>  <w>penser</w></q></l>
+                <lb/>
+                <l><q><w>Une</w>  <w>grant</w>  <w>piece</w>  <w>comença</w>  <w>a</w>  <w>garder</w></q></l>
+                <lb/>
+                <l><q><w>Del</w>  <w>cuer</w>  <w>del</w>  <w>ventre</w>  <w>comence</w>  <w>a</w>  <w>sospirer</w></q></l>
+                <lb/>
+                <l><q><w>D'ansdeus</w>  <w>les</w>  <w>iolx</w>  <w>comença</w>  <w>a</w>  <w>plorer</w></q></l>
+                <lb/>
+                <l><q><w>Lasque</w>  <w>les</w>  <w>dois</w>  <w>si</w>  <w>lait</w>  <w>le</w>  <w>brief</w>  <w>aler</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Turpins</w>  <w>de</w>  <w>Rains</w>  <w>le</w>  <w>vait</w>  <w>sus</w>  <w>relever</w></q></l>
+                <lb/>
+                <l><q><w>Sir</w>  <w>emperere</w>  <w>vos</w>  <w>faites</w>  <w>a</w>  <w>blasmer</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>a</w>  <w>tels</w>  <w>homes</w>  <w>faites</w>  <w>vos</w>  <w>briés</w>  <w>doner</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Jo</w>  <w>vi</w>  <w>jadis</w>  <w>quant</w>  <w>il</w>  <w>ert</w>  <w>baceler</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>cascun</w>  <w>jor</w>  <w>fu</w>  <w>al</w>  <w>vin</w>  <w>son</w>  <w>soller</w></q></l>
+                <lb/>
+                <l><q><w>Molt</w>  <w>li</w>  <w>oï</w>  <w>promettre</w>  <w>e</w>  <w>poi</w>  <w>doner</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Savés</w>  <w>quel</w>  <w>cose</w>  <w>li</w>  <w>fait</w>  <w>les</w>  <w>iolx</w>  <w>larmer</w></q></l>
+                <lb/>
+                <l><q><w>Or</w>  <w>cuide</w>  <w>il</w>  <w>son</w>  <w>tressor</w>  <w>esfondrer</w></q></l>
+                <lb/>
+                <l><q><w>Qu'il</w>  <w>nos</w>  <w>estuet</w>  <w>et</w>  <w>partir</w>  <w>et</w>  <w>doner</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Alés</w>  <w>sire</w>  <w>abes</w>  <w>vos</w>  <w>matines</w>  <w>canter</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Miols</w>  <w>lirrïés</w>  <w>la</w>  <w>vie</w>  <w>Saint</w>  <w>Omer</w></q></l>
+                <lb/>
+                <l><q><w>Mais</w>  <w>jel</w>  <w>lirai</w>  <w>quil</w>  <w>sarai</w>  <w>deviser</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="16">
+                <lb/>
+                <l><w>En</w>  <w>Fromer</w>  <w>l'abe</w>  <w>n'en</w>  <w>ot</w>  <w>que</w>  <w>corecier</w></l>
+                <lb/>
+                <l><w>De</w>  <w>soi</w>  <w>rescore</w>  <w>fu</w>  <w>sages</w>  <w>et</w>  <w>manier</w></l>
+                <lb/>
+                <l><q><w>Sire</w>  <w>arcevesques</w>  <w>ne</w>  <w>vos</w>  <w>doit</w>  <w>anuier</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>moi</w>  <w>et</w>  <w>vos</w>  <w>volroit</w>  <w>par</w>  <w>droit</w>  <w>jugier</w></q></l>
+                <lb/>
+                <l><q><w>On</w>  <w>nos</w>  <w>devroit</w>  <w>tols</w>  <w>les</w>  <w>menbres</w>  <w>trenchier</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Quant</w>  <w>nos</w>  <w>le</w>  <w>roi</w>  <w>avons</w>  <w>a</w>  <w>conseillier</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>le</w>  <w>penst</w>  <w>princes</w>  <w>qui</w>  <w>tiere</w>  <w>a</w>  <w>a</w>  <w>ballier</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>de</w>  <w>son</w>  <w>clerc</w>  <w>face</w>  <w>son</w>  <w>anparlier</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>mais</w>  <w>d'itant</w>  <w>qu'afiert</w>  <w>a</w>  <w>son</w>  <w>mestier</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>De</w>  <w>ses</w>  <w>pechiés</w>  <w>li</w>  <w>doit</w>  <w>il</w>  <w>bien</w>  <w>aidier</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Mais</w>  <w>a</w>  <w>tel</w>  <w>home</w>  <w>se</w>  <w>doit</w>  <w>bien</w>  <w>conseillier</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>al</w>  <w>besoing</w>  <w>li</w>  <w>puist</w>  <w>avoir</w>  <w>mestier</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>son</w>  <w>cors</w>  <w>voelle</w>  <w>por</w>  <w>le</w>  <w>sien</w>  <w>escangier</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Quant</w>  <w>l'emperere</w>  <w>les</w>  <w>ot</w>  <w>ansdeus</w>  <w>tenchier</w></l>
+                <lb/>
+                <l><w>Trestolte</w>  <w>s'ire</w>  <w>li</w>  <w>font</w>  <w>assoagier</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><q><w>Lassciés</w></q>  <w>dist</w>  <w>il</w>  <q><w>parler</w>  <w>le</w>  <w>messagier</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="17">
+                <lb/>
+                <l><w>Li</w>  <w>arcevesques</w>  <w>se</w>  <w>dreça</w>  <w>en</w>  <w>estant</w></l>
+                <lb/>
+                <l><w>Et</w>  <w>list</w>  <w>le</w>  <w>cartre</w>  <w>haltement</w>  <w>en</w>  <w>oiant</w></l>
+                <lb/>
+                <l><q><w>Oiés</w>  <w>bials</w>  <w>sire</w>  <w>que</w>  <w>vos</w>  <w>mande</w>  <w>Agolant</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Trois</w>  <w>tieres</w>  <w>sont</w>  <w>il</w>  <w>en</w>  <w>a</w>  <w>le</w>  <w>plus</w>  <w>grant</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>La</w>  <w>mer</w>  <w>d'Aufrique</w>  <w>en</w>  <w>est</w>  <w>venus</w>  <w>siglant</w></q></l>
+                <lb/>
+                <l><q><w>S'est</w>  <w>en</w>  <w>Calabre</w>  <w>arivés</w>  <w>cha</w>  <w>devant</w></q></l>
+                <lb/>
+                <l><q><w>N'i</w>  <w>a</w>  <w>remés</w>  <w>ne</w>  <w>feme</w>  <w>ne</w>  <w>enfant</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Balans</w>  <w>en</w>  <w>jure</w>  <w>Mahom</w>  <w>et</w>  <w>Tervagant</w></q></l>
+                <lb/>
+                <l><q><w>Bien</w>  <w>set</w>  <w>por</w>  <w>quoi</w>  <w>il</w>  <w>a</w>  <w>cest</w>  <w>maltalant</w></q></l>
+                <lb/>
+                <l><q><w>Por</w>  <w>sol</w>  <w>itant</w>  <w>qu'en</w>  <w>Deu</w>  <w>estes</w>  <w>creant</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>vostre</w>  <w>tieste</w>  <w>ne</w>  <w>tendés</w>  <w>sos</w>  <w>son</w>  <w>brant</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>de</w>  <w>sa</w>  <w>loi</w>  <w>n'estes</w>  <w>reconissant</w></q></l>
+                <lb/>
+                <l><q><w>Jo</w>  <w>ne</w>  <w>donroie</w>  <w>de</w>  <w>vo</w>  <w>vie</w>  <w>un</w>  <w>besant</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Dïent</w>  <w>Franchois</w>  <q><w>Bien</w>  <w>parole</w>  <w>Balant</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>bien</w>  <w>manache</w>  <w>et</w>  <w>de</w>  <w>bouce</w>  <w>et</w>  <w>de</w>  <w>gant</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="18">
+                <lb/>
+                <l><q><w>Oiés</w>  <w>segnor</w>  <w>encor</w>  <w>vos</w>  <w>sai</w>  <w>a</w>  <w>dire</w></q></l>
+                <lb/>
+                <l><q><w>Rois</w>  <w>Agolans</w>  <w>a</w>  <w>vers</w>  <w>Carle</w>  <w>grant</w>  <w>ire</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Crestïenté</w>  <w>violt</w>  <w>a</w>  <w>grant</w>  <w>tort</w>  <w>despire</w></q></l>
+                <lb/>
+                <l><q><w>A</w>  <w>ses</w>  <w>dos</w>  <w>mains</w>  <w>vos</w>  <w>volra</w>  <w>il</w>  <w>ocire</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Aumons</w>  <w>ses</w>  <w>fix</w>  <w>sera</w>  <w>a</w>  <w>Rome</w>  <w>sire</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="19">
+                <lb/>
+                <l><q><w>Oiés</w>  <w>segnor</w>  <w>dont</w>  <w>Agolans</w>  <w>tençone</w></q></l>
+                <lb/>
+                <l><q><w>Crestïenté</w>  <w>destruit</w>  <w>et</w>  <w>despersone</w></q></l>
+                <lb/>
+                <l><q><w>Aumont</w>  <w>son</w>  <w>fil</w>  <w>violt</w>  <w>coroner</w>  <w>a</w>  <w>Rome</w></q></l>
+                <lb/>
+                <l><q><w>Li</w>  <w>ques</w>  <w>que</w>  <w>soit</w>  <w>en</w>  <w>avra</w>  <w>la</w>  <w>corone</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="20">
+                <lb/>
+                <l><w>Turpins</w>  <w>parole</w>  <w>mais</w>  <w>n'a</w>  <w>talent</w>  <w>qu'il</w>  <w>rie</w></l>
+                <lb/>
+                <l><q><w>Rois</w>  <w>Agolans</w>  <w>en</w>  <w>vient</w>  <w>a</w>  <w>ost</w>  <w>banie</w></q></l>
+                <lb/>
+                <l><q><w>Par</w>  <w>siet</w>  <w>fois</w>  <w>sunt</w>  <w>cent</w>  <w>mil</w>  <w>que</w>  <w>que</w>  <w>nus</w>  <w>die</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Par</w>  <w>halte</w>  <w>mer</w>  <w>ont</w>  <w>lor</w>  <w>voie</w>  <w>acollie</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Rois</w>  <w>Troïens</w>  <w>ses</w>  <w>ainsnés</w>  <w>fix</w>  <w>les</w>  <w>guie</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Tant</w>  <w>en</w>  <w>i</w>  <w>a</w>  <w>n'est</w>  <w>nus</w>  <w>qui</w>  <w>voir</w>  <w>en</w>  <w>die</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Ains</w>  <w>que</w>  <w>vigniés</w>  <w>es</w>  <w>plains</w>  <w>de</w>  <w>Romenie</w></q></l>
+                <lb/>
+                <l><q><w>Ne</w>  <w>que</w>  <w>voiés</w>  <w>Vergans</w>  <w>ne</w>  <w>Ivorie</w></q></l>
+                <lb/>
+                <l><q><w>Deviers</w>  <w>Bretagne</w>  <w>iert</w>  <w>la</w>  <w>tiere</w>  <w>essillie</w></q></l>
+                <lb/>
+                <l><q><w>Crestïentés</w>  <w>en</w>  <w>iert</w>  <w>si</w>  <w>mal</w>  <w>ballie</w></q></l>
+                <lb/>
+                <l><q><w>N'i</w>  <w>avra</w>  <w>home</w>  <w>qui</w>  <w>ne</w>  <w>perde</w>  <w>la</w>  <w>vie</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>vos</w>  <w>meïsmes</w>  <w>quis</w>  <w>avés</w>  <w>en</w>  <w>ballie</w></q></l>
+                <lb/>
+                <l><q><w>Qui</w>  <w>consentés</w>  <w>ceste</w>  <w>novelerie</w></q></l>
+                <lb/>
+                <l><q><w>Metrés</w>  <w>le</w>  <w>col</w>  <w>sos</w>  <w>l'espee</w>  <w>forbie</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>il</w>  <w>tant</w>  <w>fait</w>  <w>que</w>  <w>il</w>  <w>ne</w>  <w>vos</w>  <w>ocie</w></q></l>
+                <lb/>
+                <l><q><w>Vos</w>  <w>ne</w>  <w>ferés</w>  <w>ja</w>  <w>mais</w>  <w>chevalerie</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>En</w>  <w>altre</w>  <w>tiere</w>  <w>averés</w>  <w>vos</w>  <w>ballie</w></q></l>
+                <lb/>
+                <l><q><w>Ki</w>  <w>vos</w>  <w>valra</w>  <w>une</w>  <w>serescalcie</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>A</w>  <w>icest</w>  <w>mot</w>  <w>est</w>  <w>la</w>  <w>cartre</w>  <w>fenie</w><pc type="supplied">.</pc></q></l>
+            </lg>
+            <lg type="laisse" n="21">
+                <lb/>
+                <l><w>Et</w>  <w>dist</w>  <w>Balans</w>  <w>al</w>  <w>mainne</w>  <w>empereor</w></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>dirai</w>  <w>jo</w>  <w>Agolant</w>  <w>mon</w>  <w>segnor</w></q></l>
+                <lb/>
+                <l><q><w>D'a</w>  <w>lui</w>  <w>conbatre</w>  <w>de</w>  <w>cho</w>  <w>n'i</w>  <w>a</w>  <w>nul</w>  <w>jor</w></q></l>
+                <lb/>
+                <l><q><w>Plus</w>  <w>que</w>  <w>mallart</w>  <w>o</w>  <w>le</w>  <w>müé</w>  <w>ostor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Cent</w>  <w>mile</w>  <w>sont</w>  <w>nostre</w>  <w>comenceor</w></q></l>
+                <lb/>
+                <l><q><w>Et</w>  <w>j'en</w>  <w>doi</w>  <w>estre</w>  <w>premerains</w>  <w>fereor</w></q></l>
+                <lb/>
+                <l><q><w>Jo</w>  <w>l'ai</w>  <w>en</w>  <w>fief</w>  <w>si</w>  <w>l'ont</w>  <w>mi</w>  <w>ancissor</w></q></l>
+                <lb/>
+                <l><q><w>Sor</w>  <w>un</w>  <w>ceval</w>  <w>si</w>  <w>blanc</w>  <w>come</w>  <w>une</w>  <w>flor</w></q></l>
+                <lb/>
+                <l><q><w>Mes</w>  <w>confanons</w>  <w>est</w>  <w>d'une</w>  <w>ynde</w>  <w>color</w></q></l>
+                <lb/>
+                <l><q><w>O</w>  <w>trois</w>  <w>lyons</w>  <w>petis</w>  <w>est</w>  <w>li</w>  <w>gregnor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Quant</w>  <w>vos</w>  <w>verrés</w>  <w>vos</w>  <w>gens</w>  <w>joster</w>  <w>as</w>  <w>lor</w></q></l>
+                <lb/>
+                <l><q><w>N'estes</w>  <w>pas</w>  <w>sages</w>  <w>se</w>  <w>vos</w>  <w>n'avés</w>  <w>paor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Se</w>  <w>vostre</w>  <w>joie</w>  <w>ne</w>  <w>vos</w>  <w>torne</w>  <w>a</w>  <w>dolor</w></q></l>
+                <lb/>
+                <l><q><w>De</w>  <w>ces</w>  <w>dols</w>  <w>iolx</w>  <w>ne</w>  <w>quier</w>  <w>estre</w>  <w>pïor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Ot</w>  <w>le</w>  <w>li</w>  <w>rois</w>  <w>a</w>  <w>poi</w>  <w>ne</w>  <w>muert</w>  <w>d'iror</w><pc type="supplied">.</pc></l>
+                <lb/>
+                <l><w>Ferir</w>  <w>le</w>  <w>volt</w>  <w>quant</w>  <w>dus</w>  <w>Namles</w>  <w>i</w>  <w>cort</w></l>
+                <lb/>
+                <l><q><w>Merchi</w>  <w>bials</w>  <w>sire</w>  <w>por</w>  <w>Deu</w>  <w>le</w>  <w>creator</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Ja</w>  <w>le</w>  <w>tenroient</w>  <w>a</w>  <w>mal</w>  <w>tolt</w>  <w>li</w>  <w>plusor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><w>Dist</w>  <w>l'emperere</w>  <q><w>Ja</w>  <w>ment</w>  <w>li</w>  <w>lecheor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Di</w>  <w>ton</w>  <w>segnor</w>  <w>sans</w>  <w>nul</w>  <w>contreditor</w></q></l>
+                <lb/>
+                <l><q><w>Que</w>  <w>quatre</w>  <w>mois</w>  <w>i</w>  <w>avra</w>  <w>de</w>  <w>se</w>  <w>jor</w></q></l>
+                <lb/>
+                <l><q><w>Qu'en</w>  <w>Aspremont</w>  <w>porterai</w>  <w>l'orieflor</w><pc type="supplied">.</pc></q></l>
+                <lb/>
+                <l><q><w>Tant</w>  <w>con</w>  <w>Dex</w>  <w>salve</w>  <w>mon</w>  <w>cors</w>  <w>et</w>  <w>ma</w>  <w>vigor</w></q></l>
+                <lb/>
+                <l><q><w>N'arai</w>  <w>jo</w>  <w>ja</w>  <w>nul</w>  <w>terriien</w>  <w>signor</w><pc type="supplied">.</pc></q></l>
+                <!-- JBC: les deux dernières laisses sont complètement absentes de Brandin: il est nécessaire de les transcrire complètement -->
+            </lg>
+            <!--<pb n="8v" facs="facsimile/NAF-5094_08v.JPEG"/>-->
+        </body>
+    </text>
+</TEI>
