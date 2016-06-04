@@ -2,7 +2,7 @@
 <?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../ODD/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Otinel_Guessard-1858.xml" type="ed">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Otinel_Guessard-1858" type="ed">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -1671,7 +1671,7 @@
         <!--JBC: Pour l'instant, 2133 vers pour 2133 attendus ! -->
         <pb n="0215" facs="facsimile/0215.bin.png"/>
         <lg type="laisse" n="I" xml:id="L_001">
-            <app><!-- Exemple de variante macrostructurelle -->
+            <app>
                 <lem wit="#a">
                     <lb/>
                     <l>
@@ -2676,24 +2676,408 @@
                 <rdg wit="#b">
                     <q rend="block">               
                         <lb/>
-                        <l><w>Seignors</w><pc type="supplied">,</pc> <w>ço</w> <w>fu</w> <w>le</w> <w>jor</w> <w>dunt</w> <w>li</w> <w>Innocent</w> <w>sunt</w> <pc type="supplied">;</pc></l>
+                        <l>
+                            <w>Seignors</w>
+                            <pc type="supplied">,</pc>
+                            <w>ço</w>
+                            <w>fu</w>
+                            <w>le</w>
+                            <w>jor</w>
+                            <w>dunt</w>
+                            <w>li</w> 
+                            <w>Innocent</w>
+                            <w>sunt</w> 
+                            <pc type="supplied">;</pc>
+                        </l>
                         <lb/>
-                        <l><w>A</w> <w>Paris</w> <w>est</w><pc type="supplied">,</pc> <w>en</w> <w>France</w><pc type="supplied">,</pc> <w>Charles</w> <w>de</w> <w>Cler[e]munt</w><pc type="supplied">,</pc></l>
+                        <l>
+                            <w>A</w>
+                            <placeName><w>Paris</w></placeName> 
+                            <w>est</w>
+                            <pc type="supplied">,</pc>
+                            <w>en</w> 
+                            <placeName><w>France</w></placeName>
+                            <pc type="supplied">,</pc> 
+                            <persName><w>Charles</w> 
+                            <w>de</w>
+                            <placeName><w>Cler[e]munt</w></placeName></persName>
+                            <pc type="supplied">,</pc>
+                        </l>
                         <lb/>
-                        <l><w>U</w> <w>tint</w> <w>sa</w> <w>curt</w> <w>plenere</w> <pc type="supplied">;</pc> <w>li</w> <w>duze</w> <w>per</w> <w>i</w> <w>sunt</w><pc type="supplied">.</pc></l>
+                        <l>
+                            <w>U</w> 
+                            <w>tint</w> 
+                            <w>sa</w> 
+                            <w>curt</w>
+                            <w>plenere</w> 
+                            <pc type="supplied">;</pc> 
+                            <w>li</w>
+                            <w>duze</w>
+                            <w>per</w>
+                            <w>i</w> 
+                            <w>sunt</w>
+                            <pc type="supplied">.</pc>
+                        </l>
                         <lb/>
-                        <l><w>Molt</w> <w>par</w> <w>est</w> <w>la</w> <w>joie</w> <w>grant</w> <w>que</w> <w>li</w> <w>baruns</w> <w>i</w> <w>funt</w><pc type="supplied">.</pc></l>
+                        <l>
+                            <w>Molt</w>
+                            <w>par</w> 
+                            <w>est</w> 
+                            <w>la</w>
+                            <w>joie</w> 
+                            <w>grant</w>
+                            <w>que</w> 
+                            <w>li</w>
+                            <w>baruns</w> 
+                            <w>i</w>
+                            <w>funt</w>
+                            <pc type="supplied">.</pc>
+                        </l>
                         <lb/>
-                        <l><w>Un</w> <w>plai</w> <w>ont</w> <w>establi</w> <w rend="elision">k</w><pc type="supplied">'</pc><w>en</w> <w>Espaine</w> <w>irunt</w> <pc type="supplied">(</pc><num>1</num><pc type="supplied">)</pc><pc type="supplied">,</pc></l>
+                        <l>
+                            <w>Un</w>
+                            <w>plai</w> 
+                            <w>ont</w>
+                            <w>establi</w>
+                            <w rend="elision">k</w>
+                            <pc type="supplied">'</pc>
+                            <w>en</w> 
+                            <placeName><w>Espaine</w></placeName>
+                            <w>irunt</w>
+                            <pc type="supplied">(</pc>
+                            <num>1</num>
+                            <pc type="supplied">)</pc>
+                            <pc type="supplied">,</pc>
+                        </l>
                         <note>
                             <lb/>1. Lisez ce vers sans élider l'e final d'Espaine, ou de
                             <lb/>cette façon :
                             <q rend="block">Un plai ont establi k'en Espaïne irunt.</q>
                         </note>
                         <lb/>
-                        <l><w>Sur</w> <w>le</w> <w>rei</w> <w>Marsilie</w> <pc type="supplied">;</pc> <w>le</w> <w>serement</w> <w>i</w> <w>funt</w> <pc type="supplied">:</pc></l>
+                        <l>
+                            <w>Sur</w> 
+                            <w>le</w>
+                            <w>rei</w> 
+                            <placeName><w>Marsilie</w></placeName> 
+                            <pc type="supplied">;</pc> 
+                            <w>le</w> 
+                            <w>serement</w>
+                            <w>i</w>
+                            <w>funt</w>
+                            <pc type="supplied">:</pc>
+                        </l>
                         <lb/>
-                        <l>Co ert après avril, quant herbe fresche aurunt.</l>
+                        <l>
+                            <w>Co</w> 
+                            <w>ert</w> 
+                            <w>après</w> 
+                            <w>avril</w>
+                            <pc type="supplied">,</pc>
+                            <w>quant</w>
+                            <w>herbe</w> 
+                            <w>fresche</w> 
+                            <w>aurunt</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Einz</w>
+                            <w>que</w> 
+                            <w>finent</w> 
+                            <w>lur</w> 
+                            <w>parole</w>
+                            <pc type="supplied">,</pc>
+                            <w>teles</w> 
+                            <w>noveles</w>
+                            <w>orunt</w>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Dunt</w>
+                            <w>vint</w>
+                            <w>mil</w> 
+                            <w>chevaler</w>
+                            <w>de</w> 
+                            <w>noz</w>
+                            <name type="peuple"><w>Franceiz</w></name> 
+                            <w>murunt</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                            <l>
+                                <w>Si</w>
+                                <persName><w>Dampnedeu</w></persName>
+                                <w rend="elision">n</w>
+                                <pc type="supplied">'</pc>
+                                <w>en</w>
+                                <w>pense</w>
+                                <pc type="supplied">,</pc>
+                                <w>qui</w>
+                                <w>sustent</w> 
+                                <w>tut</w>
+                                <w>le</w> 
+                                <w>mund</w>
+                                <pc type="supplied">.</pc>
+                            </l>
+                        <lb/>
+                        <l>
+                            <w>Un</w> 
+                            <name type="peuple"><w>Sarazin</w></name> 
+                            <w rend="elision">d</w>
+                            <pc type="supplied">'</pc>
+                            <placeName><w>Espaine</w></placeName>
+                            <pc type="supplied">,</pc>
+                            <w>qui</w> 
+                            <persName><w>Otuel</w></persName>
+                            <w>a</w>
+                            <w>nun</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Messager</w> 
+                            <persName><w>Garsi[li]e</w></persName>
+                            <pc type="supplied">,</pc>
+                            <w>bien</w>
+                            <w>resemble</w> 
+                            <w>barun</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Parmi</w> 
+                            <placeName><w>Paris</w></placeName> 
+                            <w>chevalche</w>
+                            <pc type="supplied">,</pc>
+                            <w>à</w> 
+                            <w>coite</w> 
+                            <w rend="elision">d</w>
+                            <pc type="supplied">'</pc>
+                            <w>spurun</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Ouant</w>
+                            <w>[cil]</w> 
+                            <w>vient</w>
+                            <w>al</w> 
+                            <w>paleis</w>
+                            <pc type="supplied">,</pc>
+                            <w>si</w>
+                            <w>descent</w> 
+                            <w>al</w>
+                            <w>perun</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Les</w> 
+                            <w>degrez</w>
+                            <w>monte</w>
+                            <pc type="supplied">,</pc>
+                            <w>si</w> 
+                            <w>demande</w>
+                            <persName><w>Charlun</w></persName>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <persName><w>Ogier</w></persName>
+                            <w>encontre</w>
+                            <w>e</w> 
+                            <persName><w>Galter</w></persName>
+                            <w>e</w> 
+                            <persName><w>Naimun</w></persName>
+                            <pc type="supplied">:</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc> 
+                            <w>Seignor</w> 
+                            <pc type="supplied">,</pc> 
+                            <w>fait</w>
+                            <w>li</w> 
+                            <w>paen</w>
+                            <pc type="supplied">,</pc>
+                            <w>kar</w>
+                            <w>me</w> 
+                            <w>mustrez</w>
+                            <persName><w>Charlun</w></persName>
+                            <pc type="supplied">;</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc>
+                            <w>Messager</w>
+                            <w>sui</w> 
+                            <w>un</w> 
+                            <w>rei</w> 
+                            <w>qui</w> 
+                            <w>ne</w> 
+                            <w rend="elision">l</w>
+                            <pc type="supplied">'</pc>
+                            <w>aime</w> 
+                            <w>un</w> 
+                            <w>butun</w>
+                            <pc type="supplied">.</pc>
+                            <pc type="supplied">»</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <w>Premer</w>
+                            <w>i</w> 
+                            <w>a</w> 
+                            <w>parlé</w> 
+                            <persName><w>Galter</w></persName>
+                            <pc type="supplied">,</pc> 
+                            <w>cil</w> 
+                            <w>de</w> 
+                            <placeName><w>Balun</w></placeName>
+                            <pc type="supplied">:</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc> 
+                            <w>Vei</w> 
+                            <w>le</w> 
+                            <w>tu</w> 
+                            <w>là</w> 
+                            <w>ù</w>
+                            <w>set</w> 
+                            <w>à</w> 
+                            <w>cel</w> 
+                            <w>fluri</w>
+                            <w>gernun</w>
+                            <pc type="supplied">;</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc>
+                            <w>Celui</w> 
+                            <w>o</w>  
+                            <w>la</w> 
+                            <w>grant</w>
+                            <w>barbe</w>
+                            <pc type="supplied">,</pc>
+                            <w>à</w>
+                            <w>cel</w> 
+                            <w>veir</w>
+                            <w>peliçun</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc>
+                            <w>Ço</w> 
+                            <w>est</w> 
+                            <persName><w>Rolland</w></persName>
+                            <w>si</w>
+                            <w>niés</w>
+                            <w>el</w> 
+                            <w>vermeil</w>
+                            <w>ciclatun</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc>
+                            <w>De</w> 
+                            <w rend="elision">l</w>
+                            <pc type="supplied">'</pc>
+                            <w>altre</w> 
+                            <w>part</w> 
+                            <w>véez</w>
+                            <w>ù</w> 
+                            <w>siet</w> 
+                            <w>son</w> 
+                            <w>compaignon</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc>
+                            <w>Le</w>
+                            <w>gentil</w>
+                            <w>conte</w> 
+                            <w>qui</w>
+                            <persName><w>Oliver</w></persName>
+                            <w>a</w> 
+                            <w>nun</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">«</pc> 
+                            <w>Ço</w>
+                            <w>sunt</w>
+                            <w>li</w>
+                            <w>duze</w> 
+                            <w>pier</w>
+                            <w>qui</w> 
+                            <w>lur</w> 
+                            <w>sunt</w>
+                            <w>envirun</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/>
+                        <l>
+                            <pc type="supplied">-</pc>
+                            <persName><w>Mahun</w></persName>
+                            <pc type="supplied">!</pc> 
+                            <w>fait</w>
+                            <w>li</w>
+                            <w>paen</w>
+                            <pc type="supplied">,</pc> 
+                            <w>ore</w> 
+                            <w>conus</w>
+                            <w>jo</w> 
+                            <persName><w>Charlun</w></persName>
+                            <pc type="supplied">.</pc>
+                            <pc type="supplied">»</pc>
+                        </l>
+                    </q>
+                </rdg>
+                <note>
+                    <p>P. 2, v. 5 :</p>
+                    
+                    <q rend="block">Tint sa cour Kalles à Paris sa meson.</q>
+                    
+                    <p>
+                        <lb/>C'est une correction que nous proposons pour réta<lb rend="hyphen" break="no" 
+                        />blir la mesure du vers. Voici la leçon du manus<lb rend="hyphen" break="no" 
+                        />crit a :
+                    </p>
+                    
+                    <q rend="block" >              
+                        <lb/>Ce fu à Pasques, si comme oï avon,
+                        <lb/>Que Kalles tint sa cour à Paris, sa meson.
+                    </q> 
+                    
+                    <p>
+                        <lb/>Ce vers excepté, tous ceux de la même tirade sont de 
+                        
+                        <pb n="0290" facs="facsimile/0290.bin.png"/>
+                        
+                        <lb/>dix syllabes. Dans le manuscrit b, au contraire, pres <lb rend="hyphen" break="no" 
+                        />que toute la tirade est en vers alexandrins, comme on
+                        <lb/>en peut juger :
+                    </p>
+                    
+                    <q rend="block">               
+                        <lb/>Seignors, ço fu le jor dunt li Innocent sunt ;
+                        <lb/>A Paris est, en France, Charles de Cler[e]munt,
+                        <lb/>U tint sa curt plenere ; li duze per i sunt.
+                        <lb/>Molt par est la joie grant que li baruns i funt.
+                        <lb/>Un plai ont establi k'en Espaine irunt (1),
+                        <note>
+                            <lb/>1. Lisez ce vers sans élider l'e final d'Espaine, ou de
+                            <lb/>cette façon :
+                            <q rend="block">Un plai ont establi k'en Espaïne irunt.</q>
+                        </note>
+                        <lb/>Sur le rei Marsilie ; le serement i funt :
+                        <lb/>Co ert après avril, quant herbe fresche aurunt.
                         <lb/>Einz que finent lur parole, teles noveles orunt
                         <lb/>Dunt vint mil chevaler de noz Franceiz murunt,
                         <lb/>Si Dampnedeu n'en pense, qui sustent tut le mund.
@@ -2714,13 +3098,8 @@
                         <lb/>« Ço sunt li duze pier qui lur sunt envirun.
                         <lb/>- Mahun ! fait li paen, ore conus jo Charlun. »
                     </q>
-                </rdg>
-                <note>
-                    <!-- reprendre la note ici. -->
                 </note>
             </app>
-            
-            
             
             </lg>
           <lg type="laisse" n="III" xml:id="L_003">
@@ -2762,7 +3141,8 @@
                             <lb/>dans le manuscrit anglo-normand elle est en ei.
                         </p>  
                     </note>
-                </app> <!-- VERIFIER SI C'EST BIEN FAIT : reprendre en mettant en base le texte de b et en variante le texte de a-->
+                </app> <!-- VERIFIER SI C'EST BIEN FAIT : correction macrostructurelle, 
+                    reprendre en mettant en base le texte de b et en variante le texte de a-->
                 
                 <w>devant</w>
                 <w>le</w>
@@ -3378,12 +3758,15 @@
                 <app>
                     <lem wit="#b"><w>senez</w></lem>
                     <note resp="#Guessard #Michelant">
-                        <!-- ... -->
+                        <p>P. 5, v. 6 :</p>
+                        
+                        <q rend="block">              
+                            <lb/>Un chevalier i sist qui fu mal senez.
+                            <lb/>Lisez comme s'il y avoit snez.
+                        </q>  
                     </note>
-                
                 </app>
                 
-                <!-- "LISEZ COMME S'IL Y AVOIT SNEZ: COMMENT NOTER ÇA? -->
                 <pc type="supplied">,</pc>
             </l>
             <lb/>
@@ -3994,7 +4377,7 @@
                 <w>te</w>
                 <w>donra</w>
                 <w>avoir</w>
-                <w>et</w><!-- Note d'apparat classique -->
+                <w>et</w>
                     <app>
                         <lem wit="#b"><w>manantie</w></lem>
                         <rdg wit="#a"><w>mantie</w></rdg>
@@ -4192,8 +4575,14 @@
                     <app>
                         <lem wit="#b"><w>vos</w></lem>
                         <rdg wit="#a"/>
-                        <!-- COMMENT SIGNALER UNE OMISSION? -->
-                        <note><!-- note à compléter --></note>
+
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 6, v. 27 :</p>
+                            
+                            <q rend="block">Ou'en dites [bvos] ma mesnie norie ?</q>
+                            
+                            <p>Vos est omis dans le manuscrit a.</p>
+                        </note>
                     </app>
                 
                 <pc type="supplied">,</pc>
@@ -4363,9 +4752,20 @@
                 <pc type="supplied">:</pc>
                 <q><pc type="supplied">«</pc>
                     <app>
-                        <lem wit="#b"><w>Ore</w></lem> <!-- COMMENT SIGNALER UNE OMISSION? -->
+                        <lem wit="#b"><w>Ore</w></lem> 
                         <rdg wit="#a"/>
-                        <!-- note à mettre -->
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 7, v. 7 et 8 :</p>
+                            
+                            <q rend="block">Dit Otinel : [bore] oi grant briconie.</q>
+                            
+                            <pb n="0293" facs="facsimile/0293.bin.png"/>
+                            
+                            <p>              
+                                <lb/>Ore est omis dans a. Ce même mot est omis encore
+                                <lb/>au vers suivant.
+                            </p>  
+                        </note>
                     </app>
                 
                 <w>oi</w>
@@ -4379,7 +4779,22 @@
                 <w>Tex</w>
                 <w>manace</w>
                     <app>
-                        <lem wit="#b"><w>ore</w></lem> <!-- IDEM -->
+                        <lem wit="#b">
+                            <w>ore</w>
+                        </lem>
+                        <rdg wit="#a"/>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 7, v. 7 et 8 :</p>
+                            
+                            <q rend="block">Dit Otinel : [bore] oi grant briconie.</q>
+                            
+                            <pb n="0293" facs="facsimile/0293.bin.png"/>
+                            
+                            <p>              
+                                <lb/>Ore est omis dans a. Ce même mot est omis encore
+                                <lb/>au vers suivant.
+                            </p>  
+                        </note>
                     </app>
                 
                 <w>le</w>
@@ -4447,7 +4862,11 @@
                 <w>vendra</w>
                 <w>a</w>
                 <w>bataille</w>
-                <w>re[n]gie</w> <!-- IDEM -->
+                    <app>
+                        <lem wit="#a"><w>re<corr resp="#Guessard #Michelant">n</corr>gie</w></lem>
+                        <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note> <!-- EJEMPLO NOTA PROPIA -->
+                    </app>
+                 
                 <pc type="supplied">.</pc></q>
             </l>
             <lb/>
@@ -4512,7 +4931,23 @@
                 <w>or</w>
                 <w>ne</w>
                 <w>me</w>
-                <w>çoille</w> <!-- PAS SÛRE; LIRE LA NOTE DANS L'OUVRAGE -->
+                    <app>
+                        <lem wit="#a">
+                           <w>çoille</w> 
+                        </lem>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 7, v. 18 :</p>
+                            
+                            <q rend="block">Paien message, or ne me çoille mie.</q>
+                            
+                            <p>              
+                                <lb/>Ne me cele pas. On trouve souvent, dans le manuscrit
+                                <lb/>a, oi pour ai, ei ou e simple. Soignorie pour seigneurie,
+                                <lb/>doloier pour delaier, etc.
+                            </p> 
+                        </note>
+                    </app>
+                 
                 <w>mie</w>
                 <pc type="supplied">;</pc></q>
             </l>
@@ -5206,7 +5641,11 @@
             <l>
                 <q><pc type="supplied">«</pc>
                 <w>Ne</w>
-                <w>[de]</w> <!-- PAS DE NOTE, QUOI FAIRE? -->
+                    <app>
+                        <lem wit="#a"><corr resp="#Guessard #Michelant"><w>de</w></corr></lem>
+                        <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                    </app>
+                 
                 <w>predome</w>
                 <w>servis</w>
                 <w>ne</w>
@@ -5279,7 +5718,7 @@
                            <w>ta</w>
                            <w>lei</w> 
                         </lem>
-                    </app> <!-- PAS SÛRE COMMENT SIGNALER ÇA -->
+                    </app> <!--Collation complète du vers à refaire PAS SÛRE COMMENT SIGNALER ÇA -->
                 
                 <w>quar</w>
                 <w>me</w>
@@ -5349,9 +5788,22 @@
                 <q><pc type="supplied">«</pc>
                 <w>Et</w>
                     <app>
-                        <!-- PAS SÛRE DE QUOI FAIRE -->
+                        <lem wit="#a">
+                            <placeName><w>Benoas</w></placeName>
+                        </lem>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 9, v. 16 :</p>
+                            
+                            <q rend="block">Et Benoas qui tant est de haut pris.</q>
+                            
+                            <p>               
+                                <lb/>Benoas est presque effacé dans le manuscrit a. C'est un                                
+                                <lb/>mot d'une lecture douteuse, et qui ne se retrouve
+                                <lb/>point dans b.
+                            </p> 
+                        </note>
                     </app>
-                <placeName><w>Benoas</w></placeName>  
+                  
                 <pc type="supplied">,</pc>
                 <w>qui</w>
                 <w>tant</w>
@@ -5595,7 +6047,29 @@
                     <lem wit="#b"> 
                         <w>si</w>
                     </lem>
-                </app> <!-- NOTE COMPLIQUÉE; PLUSIEURES PARTIES, COMMENT FAIRE? -->
+                    <rdg wit="#a"/>
+                    <note resp="#Guessard #Michelant">
+                        <p>P. 10, v. 5 et 8 :</p>
+                        
+                        <q rend="block">Puis [bsi] apele dus Naimes de Baivier.</q>
+                        
+                        <p>Si est omis dans a. Voici la leçon de b :</p>
+                        
+                        <q rend="block">               
+                            <lb/>Puis si apele le vielz chanu Richer,
+                            <lb/>Galter de Liuns e li Deneis Oger :
+                            <lb/>« Pernez, feit il, garde del chevaler....
+                            <lb/>« Sil servez bien de ço qu'il at mestier. »
+                        </q> 
+                        
+                        <p>              
+                            <lb/>Au lieu de ce dernier vers, que nous empruntons au
+                            <lb/>manuscrit b, on lit dans a :
+                        </p> 
+                        
+                        <q rend="block" >« Si le servez, se il n'a metier. »</q>
+                    </note>
+                </app> 
                
                 <w>apele</w>
                 <w>dus</w>
@@ -5630,16 +6104,92 @@
             <lb/>
             <l>
                 <q><pc type="supplied">«</pc>
-                <w>[bSil</w>
-                <w>servez</w>
-                <w>bien</w>
-                <w>de</w>
-                <w>ço</w>
-                <w rend="elision">qu</w>
-                <pc type="supplied">'</pc>
-                <w>il</w>
-                <w>at</w>
-                <w>mestier]</w> <!-- revenir à la note de la page 10 vers 5 et 8 -->
+                    <app>
+                        <lem wit="#b">
+                            <w>[bSil</w>
+                            <w>servez</w>
+                            <w>bien</w>
+                            <w>de</w>
+                            <w>ço</w>
+                            <w rend="elision">qu</w>
+                            <pc type="supplied">'</pc>
+                            <w>il</w>
+                            <w>at</w>
+                            <w>mestier]</w>
+                        </lem>
+                        <rdg wit="#a">
+                            <lb/>
+                                <w>Puis</w> 
+                                <w>si</w> 
+                                <w>apele</w>
+                                <w>le</w> 
+                                <w>vielz</w> 
+                                <w>chanu</w> 
+                                <w>Richer</w>
+                                <pc type="supplied">,</pc>
+                            
+                            <lb/>
+                            <w>Galter</w>
+                            <w>de</w> 
+                            <w>Liuns</w> 
+                            <w>e</w>
+                            <w>li</w>
+                            <w>Deneis</w> 
+                            <w>Oger</w> 
+                            <pc type="supplied">:</pc>
+                            
+                            <lb/>                           
+                            <pc type="supplied">«</pc>
+                            <w>Pernez</w>
+                            <pc type="supplied">,</pc> 
+                            <w>feit</w> 
+                            <w>il</w>
+                            <pc type="supplied">,</pc>
+                            <w>garde</w>
+                            <w>del</w> 
+                            <w>chevaler</w>
+                            <pc type="supplied">.</pc>
+                            <pc type="supplied">.</pc>
+                            <pc type="supplied">.</pc>
+                            
+                            <lb/>
+                           <pc type="supplied">«</pc> 
+                            <w>Sil</w>
+                            <w>servez</w> 
+                            <w>bien</w>
+                            <w>de</w> 
+                            <w>ço</w> 
+                            <w rend="elision">qu</w>
+                            <pc type="supplied">'</pc>
+                            <w>il</w>
+                            <w>at</w> 
+                            <w>mestier</w>
+                            <pc type="supplied">.</pc>
+                            <pc type="supplied">»</pc>
+                        </rdg>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 10, v. 5 et 8 :</p>
+                            
+                            <q rend="block">Puis [bsi] apele dus Naimes de Baivier.</q>
+                            
+                            <p>Si est omis dans a. Voici la leçon de b :</p>
+                            
+                            <q rend="block">               
+                                <lb/>Puis si apele le vielz chanu Richer,
+                                <lb/>Galter de Liuns e li Deneis Oger :
+                                <lb/>« Pernez, feit il, garde del chevaler....
+                                <lb/>« Sil servez bien de ço qu'il at mestier. »
+                            </q> 
+                            
+                            <p>              
+                                <lb/>Au lieu de ce dernier vers, que nous empruntons au
+                                <lb/>manuscrit b, on lit dans a :
+                            </p> 
+                            
+                            <q rend="block" >« Si le servez, se il n'a metier. »</q>
+                        </note>
+                    </app>
+                 
                 <pc type="supplied">.</pc>
                 <pc type="supplied">»</pc></q>
             </l>
@@ -5918,7 +6468,15 @@
                         <lem wit="#b">
                           <w>ore</w>  
                         </lem>
-                    </app> <!-- COMMENT SIGNALER UNE OMISSION? -->
+                        <rdg wit="#a"/>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 11, v. 2 :</p>
+                            
+                            <q rend="block">Dan rois, dit il, où est [bore] Rodlant.</q>
+                            
+                            <p>Ore est omis dans a.</p>
+                        </note>
+                    </app> 
                 
                 <persName><w>Rodlant</w></persName>
                 <pc type="supplied">,</pc></q>
@@ -6210,7 +6768,13 @@
             <l>
                 <w>Au</w>
                 <w>col</w>
-                <w>[li]</w> <!-- PAS DE NOTE, QUOI FAIRE? -->
+                <app>
+                    <lem wit="#a">
+                        <w>li</w>
+                    </lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>pendent</w>
                 <num><pc type="supplied">.</pc>
                 <w>I</w>
@@ -6615,11 +7179,35 @@
                 <w>ont</w>
                 <w>mené</w>
                 <persName><w>Rollant</w></persName>
-                <pc type="supplied">;</pc> <!-- MENTION D'UN VERS QUI N'APPARAIT PAS DANS UN DES TEXTES, QUOI FAIRE? -->
+                <pc type="supplied">;</pc> 
             </l>
             <app>
                 <lem wit="#a"/>
-                <rdg wit="#b"><!-- à compléter --></rdg>
+                <rdg wit="#b">
+                    <lb/>
+                    <w rend="elision">L</w>
+                    <pc type="supplied">'</pc>
+                    <w>une</w>
+                    <w>est</w>
+                    <w>Seine</w>
+                    <pc type="supplied">,</pc> 
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>autre</w>
+                    <w>Marne</w>
+                    <w>la</w> 
+                    <w>grant</w>
+                    <pc type="supplied">.</pc>
+                </rdg>
+                <note resp="#Guessard #Michelant">
+                    <p>P. 12, v. 19 :</p>
+                    
+                    <q rend="block">Entre .II. eves en ont mené Rollant.</q>
+                    
+                    <p>Aprés ce vers on lit dans b :</p>
+                    
+                    <q rend="block"></q>
+                </note>
             </app>
             <lb/>
             <l>
@@ -6657,7 +7245,14 @@
                         </choice>
                         <w>en</w>
                     </lem>
-                    <rdg wit="#b">le rei vint le messager</rdg><!-- vers à segmenter -->
+                    <rdg wit="#b">
+                        <lb/>
+                        <w>le</w>
+                        <w>rei</w> 
+                        <w>vint</w>
+                        <w>le</w>
+                        <w>messager</w>
+                    </rdg>
                     <note resp="#Guessard #Michelant">
                         <p>P. 12, v. 22 :</p>  
                         
@@ -6671,6 +7266,7 @@
                         <q rend="block">Devant le rei vint le messager estant.</q>
                     </note>
                 </app>
+                
                 <w>estant</w>
                 <pc type="supplied">:</pc>
             </l>
@@ -6880,7 +7476,7 @@
                         
                         <p>Ce vers ne se trouve point dans a.</p>
                     </note>
-                </app> <!-- VERIFIER -->
+                </app> 
                 
                 <pc type="supplied">:</pc>
             </l>
@@ -7177,15 +7773,32 @@
                         
                         <p>Leçon de a :</p>
                         
-                        <q rend="block">Dont movra à Rollant tel chebel.</q><!-- autre app pour chenbel/chebel -->
+                        <q rend="block">Dont movra à Rollant tel chebel.</q>
                     </note>
-                </app> <!-- VERIFIER -->
+                </app> 
                 
                 <w>movra</w>
                 <w>à</w>
                 <persName><w>Rollant</w></persName>
                 <w>tel</w>
-                <w>chenbel</w>
+                <app>
+                    <lem wit="#b">
+                        <w>chenbel</w>
+                    </lem>
+                    <rdg wit="#a">
+                        <w>chebel</w>
+                    </rdg>
+                    <note resp="#Guessard #Michelant">
+                        <p>P. 13, v. 28 :</p>
+                        
+                        <q rend="block">[bCeste] movra à Rollant tel chenbel.</q>
+                        
+                        <p>Leçon de a :</p>
+                        
+                        <q rend="block">Dont movra à Rollant tel chebel.</q>
+                    </note>
+                </app>
+                
                 <pc type="supplied">,</pc>
             </l>
             <lb/>
@@ -7193,7 +7806,11 @@
                 <w>Si</w>
                 <w>lonc</w>
                 <w>puet</w>
-                <w>[estre]</w> <!-- quoi faire? -->
+                <app>
+                    <lem wit="#a"><corr resp="#Guessard #Michelant"><w>estre</w></corr></lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>que</w>
                 <w>ne</w>
                 <w>li</w>
@@ -7224,7 +7841,11 @@
                 <w>noif</w>
                 <pc type="supplied">,</pc>
                 <w>à</w>
-                <num><w>[.I.]</w></num> <!-- QUOI FAIRE? -->
+                <app>
+                    <lem wit="#â"><corr resp="#Guessard #Michelant"><num><w>.I.</w></num></corr></lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>vert</w>
                 <w>lioncel</w>
                 <pc type="supplied">,</pc>
@@ -7309,7 +7930,11 @@
                 <w>Henist</w>
                 <w>et</w>
                 <w>grate</w>
-                <w>[ausi]</w> <!-- quoi faire? -->
+                <app>
+                    <lem wit="# "><corr resp="#Guessard #Michelant"><w>ausi</w></corr></lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>comme</w>
                 <w>porcel</w>
                 <pc type="supplied">.</pc>
@@ -7354,11 +7979,11 @@
                     <lem wit="#b">
                         <w>E</w>
                     </lem>
-                    <!-- omission -->
+                    <rdg wit="#a"/>
                     <note resp="#Guessard #Michelant">
                         <p>[E] est omis dans a.</p>
                     </note>
-                </app> <!-- VERIFIER -->
+                </app> 
                 
                 <w>de</w>
                 <w>batales</w>
@@ -7401,7 +8026,11 @@
                 <w rend="elision">s</w>
                 <pc type="supplied">'</pc>
                 <w>en</w>
-                <w>[est]</w> <!-- IDEM -->
+                <app>
+                    <lem wit="#a"><corr resp="#Guessard #Michelant"><w>est</w></corr></lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>tout</w>
                 <w>droit</w>
                 <w>alez</w>
@@ -7517,7 +8146,7 @@
                             
                             <q rend="block">Jamais n'ert par vos tenue citez.</q> 
                         </note>
-                    </app> <!-- VERIFIER -->
+                    </app> 
                 
                 <w>tenue</w>
                 <w>citez</w>
@@ -7880,11 +8509,34 @@
             <lb/>
             <l>
                 <pc type="supplied">«</pc>
-                <w>Je</w>
+                <w>Je</w><!-- je/jo à signaler -->
                 <w>te</w>
                 <w>defi</w>
-                <w>[dès</w> <!-- CORRECTION QUE JE NE SAIS PAS COMMENT SIGNALER -->
-                <w>ici]</w>
+                <app>
+                    <lem wit="#ed_Otinel_Guessard-1858">
+                     <corr resp="#Guessard #Michelant">
+                           <w>dès</w> 
+                           <w>ici</w>
+                     </corr>                        
+                    </lem>
+                    <!-- mettre a et b en variante -->
+                    <note resp="#Guessard #Michelant">
+                        <p>P. 15, v. 23 :</p>
+                        
+                        <q rend="block">Je te defi [dès ici] en avant.</q>
+                        
+                        <p>             
+                            <lb/>C'est une correction que nous proposons ; le vers est
+                            <lb/>faux dans les deux manuscrits :
+                        </p>  
+                        
+                        <q rend="block">               
+                            <lb/>a. - Je te defi de ci en avant.
+                            <lb/>b. - Jo te defi dès ci en avant.
+                        </q>  
+                    </note>
+                </app> <!-- VERIFIER -->
+                
                 <w>en</w>
                 <w>avant</w>
                 <pc type="supplied">.</pc>
@@ -8349,7 +9001,32 @@
                 <w>lessiez</w>
                 <w>sus</w>
                 <w>en</w>
-                <w>[estant]</w> <!-- NOTE COMPLIQUÉE, PAS SÛRE DE COMMENT LA FAIRE -->
+                    <app>
+                        <lem>
+                            <choice>
+                                <sic> 
+                                    <w>en</w>
+                                    <w>efiant</w>
+                                </sic>
+                            <corr resp="#Guessard #Michelant">
+                                <w>estant</w>
+                            </corr>
+                            </choice>
+                        </lem>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 16, v. 29 :</p>
+                            
+                            <q rend="block">Et le seignour lessiez sus en [estant].</q>
+                            
+                            <p>                
+                                <lb/>On lit dans a, au lieu de la correction proposée : en
+                                <lb/>efiant, qui ne nous paroît présenter aucun sens. La
+                                <lb/>leçon de b diffère beaucoup ici de celle de a, et ne
+                                <lb/>peut être d'aucun secours.
+                            </p> 
+                        </note>
+                    </app> 
+                 
                 <pc type="supplied">;</pc></q>
             </l>
             <lb/>
@@ -8733,6 +9410,7 @@
                          <pc type="supplied">'</pc>
                          <w>acuilt</w>
                     </lem>
+                    <rdg wit="#a"/>
                     <note resp="#Guessard #Michelant">
                         <p>P. 17, v. 30 et dernier :</p>
                         
@@ -8740,7 +9418,7 @@
                         
                         <p>L'acuilt est omis dans a :</p> 
                     </note>
-                </app> <!-- VERIFIER -->
+                </app> 
                
                 <w>comme</w>
                 <w>vaillant</w>
@@ -8836,7 +9514,7 @@
                             
                             <p>Leçon de a : lentemant.</p>
                         </note>
-                    </app> <!-- VERIFIER -->
+                    </app> 
                 
                 <pc type="supplied">.</pc>
                 <pc type="supplied">»</pc></q>
@@ -9364,6 +10042,7 @@
                         <lem wit="#b">
                             <w>Ke</w>
                         </lem>
+                        <rdg wit="#a"/>
                         <note resp="#Guessard #Michelant">
                             <p>P. 19, v. 16 et 17 :</p>
                             
@@ -9375,7 +10054,7 @@
                                 <lb/>pas dans le manuscrit b.
                             </p>   
                         </note>
-                    </app> <!-- VERIFIER -->
+                    </app> 
 
                 <w>ne</w>
                 <w>poras</w>
@@ -9391,7 +10070,26 @@
                 <q><pc type="supplied">«</pc>
                 <w>Vien</w>
                 <w>çà</w>
-                <persName><w>[Rollans]</w></persName> <!-- VOIR NOTE EN HAUT -->
+                    <app>
+                        <lem>
+                            <corr resp="#Guessard #Michelant">
+                                <persName><w>Rollans</w></persName>
+                            </corr>
+                        </lem>
+                        <rdg wit="#b"/>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 19, v. 16 et 17 :</p>
+                            
+                            <q rend="block">[bKe] ne poras dire ne ou ne non.</q>
+                            
+                            <p>              
+                                <lb/>ke est omis dans a. Le vers suivant, qui est faux, et
+                                <lb/>où nous proposons d'ajouter [Rollans], ne se retrouve
+                                <lb/>pas dans le manuscrit b.
+                            </p>   
+                        </note>
+                    </app>
+                 
                 <pc type="supplied">,</pc>
                 <w>car</w>
                 <w>je</w>
@@ -10340,6 +11038,7 @@
                         </corr>
                         </choice>
                     </lem>
+                    <rdg wit="#b"/>
                     <note resp="#Guessard #Michelant">
                         <p>P. 21, v. 28 :</p>
                         
@@ -10347,7 +11046,7 @@
                         
                         <p>             
                             <lb/>Au lieu de cette correction, on lit dans a : vint. Le
-                            <lb/>vers ne se trouve pas dans b.<!-- + variante de B à mettre au niveau du vers -->
+                            <lb/>vers ne se trouve pas dans b.
                         </p> 
                     </note> 
                 </app> 
@@ -10737,9 +11436,16 @@
                 <pc type="supplied">,</pc>
                 <w>ne</w>
                 <w>li</w>
-                <app> <!-- PAS SÛRE QUEL EST LE LEMME -->
+                <app> 
                     <lem wit="#a">
-                        <w>cha[n]gierent</w><!-- choice sic et corr à mettre -->
+                        <choice>
+                            <sic>
+                                <w>changèrent</w>
+                            </sic>
+                            <corr>
+                                <w>cha[n]gierent</w>
+                            </corr>
+                        </choice>
                     </lem>
                     
                     <note resp="#Guessard #Michelant">
@@ -10806,8 +11512,8 @@
                 <w>blanche</w>
                 <w>que</w>
                 <w>nule</w>
-                <w>magerie</w>
-                    <app> <!-- IDEM -->
+                    <app>
+                        <lem wit="#a"><w>magerie</w></lem>
                         <note resp="#Guessard #Michelant">
                             <p>P. 23, v. 8:  </p>
                             
@@ -10828,7 +11534,15 @@
                 <w>plus</w>
                 <w>vermoille</w>
                 <w>que</w>
-                <w>[la]</w> <!-- pas de note, quoi faire? -->
+                <app>
+                    <lem wit="#a">
+                        <corr resp="#Guessard #Michelant">
+                            <w>la</w>
+                        </corr>
+                    </lem>
+                    <note resp="#EA">Correction non signalée en apparat par Guessard et Michelant</note>
+                </app>
+                 
                 <w>rosse</w>
                 <w>florie</w>
                 <pc type="supplied">:</pc>
@@ -10880,10 +11594,12 @@
                 <pc type="supplied">;</pc></q>
             </l>
             <lb/>
-            <l>
-                <q><pc type="supplied">«</pc>
+          
                     <app>
-                        <lem wit="#b">
+                        <lem wit="#b">                            
+                            <lb/>
+                            <l>
+                            <pc type="supplied">«</pc>
                             <w>Si</w>
                             <w>sera</w>
                             <w>il</w>
@@ -10894,16 +11610,30 @@
                             <w>done</w>
                             <w>vie</w>
                             <pc type="supplied">,</pc>
+                            <lb/>
+                            <pc type="supplied">«</pc>
+                            <w>De</w>
+                            <w>quei</w>
+                            <w>Franceis</w>
+                            <w>ont</w>
+                            <w>li</w>
+                            <w>plusur</w>
+                            <w>envie</w>
+                            <pc type="supplied">.</pc>
+                            </l>
                         </lem>
                         <rdg wit="#a">
                             <lb/>
+                            <l>
                                 <w>Miex</w>
                                 <w>en</w>
                                 <w>devroit</w>
                                 <w>tote</w>
                                 <w>sa</w>
                                 <w>vie</w>
+                            </l>
                             <lb/>
+                            <l>
                                 <w>Pus</w>
                                 <w>dit</w>
                                 <w>dont</w>
@@ -10911,6 +11641,7 @@
                                 <w>ont</w>
                                 <w>envie</w>
                                 <pc type="supplied">.</pc>
+                            </l>
                         </rdg>
                         <note resp="#Guessard #Michelant">
                             <p>P. 23, v. 8 :</p>
@@ -10921,15 +11652,14 @@
                                 <lb/>Ce vers et le suivant sont faux et inintelligibles dans
                                 <lb/>le manuscrit a, où on lit :
                             </p>  
-                            <!-- Du coup, il faut mettre les deux vers en lemme, et les deux vers en variante -->
+  
                             <q rend="block">                               
                                 <lb/>Miex en devroit tote sa vie,
                                 <lb/>Pus dit dont plusors ont envie.
                             </q> 
                         </note>
-                    </app> <!-- VERIFIER -->
-                </q>
-            </l>
+                    </app> 
+            
             <lb/>
             <l>
                 <q><pc type="supplied">«</pc>
@@ -11147,8 +11877,28 @@
                 <w>Desus</w>
                 <w>paien</w>
                 <w>la</w>
-                <w>[pute</w> <!-- PAS SURE DE COMMENT NOTER ÇA, VOIR LE LIVRE-->
-                <w>gent]</w>
+                    <app>
+                        <lem wit="#a">
+                            <w>pute</w> 
+                            <w>gent</w>
+                        </lem>
+                        <rdg wit="#">
+                            <w>pugent</w>
+                        </rdg>
+                        <rdg wit="#b"/>
+                        <note resp="#Guessard #Michelant">
+                            <p>P. 23, v. 25 :</p>
+                            
+                            <q rend="block">Desus paien la [pute gent] haïe.</q>                
+                            
+                            <p>               
+                                <lb/>Leçon du manuscrit a : pugent, qui se reproduit
+                                <lb/>plusieurs fois pour pute gent. Le vers n'est pas dans
+                                <lb/>b.
+                            </p>    
+                        </note>
+                    </app>
+                
                 <w>haïe</w>
                 <pc type="supplied">,</pc></q>
             </l>
@@ -11541,21 +12291,23 @@
             <l>
                 <q><pc type="supplied">«</pc>
                     <app>
-                        <lem><!-- choice, sic, corr -->
+                        <lem wit="#b">
+                            <choice>
+                                <sic>
+                                    <w>À</w>
+                                    <w rend="elision">l</w>
+                                    <pc type="supplied">'</pc>
+                                    <w>entrée</w>
+                                    <w rend="elision">d</w>
+                                    <pc type="supplied">'</pc>
+                                    <w>averil</w>
+                                </sic>
                             <corr resp="#Guessard Michelant">
                                 <w>Avril</w>
                                 <w>entrant</w>
                             </corr>
+                            </choice>
                         </lem>
-                        <rdg wit="#b">
-                            <w>À</w>
-                            <w rend="elision">l</w>
-                            <pc type="supplied">'</pc>
-                            <w>entrée</w>
-                            <w rend="elision">d</w>
-                            <pc type="supplied">'</pc>
-                            <w>averil</w>
-                        </rdg>
                         <note resp="#Guessard #Michelant">
                             <p>P. 24, v. 25 :</p>
                             
@@ -11573,7 +12325,7 @@
                                 <lb/>temps, dont les exemples abondent.
                             </p> 
                         </note>
-                    </app> <!-- VERIFIER -->
+                    </app> 
 
                 <w>quant</w>
                 <w>marz</w>
@@ -11641,7 +12393,7 @@
             </l>
             <lb/>
             <l>
-                <w>N[e]</w> <!-- QUOI FAIRE? PAS DE NOTE -->
+                <w>N[e]</w> <!-- comment je separe le mot pour signaler la correction? -->
                 <w>ume</w>
                 <w>à</w>
                 <w>pié</w>
@@ -11748,11 +12500,54 @@
             </l>
             <lb/>
             <l>
-                <!-- PAS SÛRE DE COMMENT ANNOTER CETTE CORRECTION, VOIR LE LIVRE -->
-                <w>[E]</w><!-- choice, sic, corr -->
+                <app>
+                    <lem wit="#a">
+                        <choice>
+                            <sic/>
+                            <corr resp="#Guessard #Michelant">
+                                <w>E</w>
+                            </corr>
+                        </choice>
+                    </lem>
+                    <note resp="#Guessard #Michelant">
+                        <p>P. 25, v. 12 :</p>
+                        
+                        <q rend="block">[E] Bertoloi e [Otes] li guerreers.</q>                
+                        
+                        <p>             
+                            <lb/>Corrections proposées pour rétablir le vers, qui se lit
+                            <lb/>ainsi dans le manuscrit b :
+                        </p>  
+                        
+                        <q rend="block">Bertoloi li bier e Otinel li guerreers.</q>  
+                    </note>
+                </app>
+                
                 <persName><w>Bertoloi</w></persName>
                 <w>e</w>
-                <persName><w>[Otes]</w></persName>
+                <app>
+                    <lem wit="#a">
+                        <choice>
+                            <sic>Otinel</sic>
+                            <corr resp="#Guessard #Michelant">
+                                <persName><w>Otes</w></persName>
+                            </corr>
+                        </choice>
+                    </lem>
+                    <note resp="#Guessard #Michelant">
+                        <p>P. 25, v. 12 :</p>
+                        
+                        <q rend="block">[E] Bertoloi e [Otes] li guerreers.</q>                
+                        
+                        <p>             
+                            <lb/>Corrections proposées pour rétablir le vers, qui se lit
+                            <lb/>ainsi dans le manuscrit b :
+                        </p>  
+                        
+                        <q rend="block">Bertoloi li bier e Otinel li guerreers.</q>  
+                    </note>
+                </app>
+                
                 <w>li</w>
                 <w>guerreers</w>
                 <pc type="supplied">,</pc>
@@ -11911,7 +12706,7 @@
                     <lem wit="#a">
                          <w>Munte</w>
                          <w>li</w>
-                         <rs ref="#Charlemagne"><w>Reis</w></rs> <!-- EXEMPLE DE RÉFÉRENCEMENT -->
+                         <rs ref="#Charlemagne"><w>Reis</w></rs> 
                          <w>o</w>
                          <w>sa</w>
                          <w>chevalerie</w>
