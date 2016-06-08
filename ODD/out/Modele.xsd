@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-04-16T14:18:07Z. .
+    Schema generated from ODD source 2016-06-07T12:15:05Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4668,26 +4668,7 @@ Elements]</xs:documentation>
       <xs:attributeGroup ref="tei:att.witnessed.attributes"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="model.rdgPart" abstract="true">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:macro.phraseSeq">
-          <xs:attributeGroup ref="tei:att.global.attribute.xmllang"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.corresp"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.synch"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.copyOf"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.next"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.prev"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.exclude"/>
-          <xs:attributeGroup ref="tei:att.global.linking.attribute.select"/>
-          <xs:attributeGroup ref="tei:att.global.analytic.attribute.ana"/>
-          <xs:attributeGroup ref="tei:att.global.responsibility.attribute.cert"/>
-          <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
-          <xs:attributeGroup ref="tei:att.rdgPart.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="model.rdgPart" abstract="true"/>
   <xs:attributeGroup name="att.rdgPart.attributes">
     <xs:attributeGroup ref="tei:att.rdgPart.attribute.wit"/>
   </xs:attributeGroup>
@@ -4855,6 +4836,24 @@ Elements]</xs:documentation>
     <xs:annotation>
       <xs:documentation>(témoin) contient une liste d'une ou plusieurs abréviation(s) désignant des témoins attestant d'une leçon donnée, pour une version du texte. [12.1.4. Witness Information]</xs:documentation>
     </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:macro.phraseSeq">
+          <xs:attributeGroup ref="tei:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.corresp"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.synch"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.copyOf"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.next"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.prev"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.exclude"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.select"/>
+          <xs:attributeGroup ref="tei:att.global.analytic.attribute.ana"/>
+          <xs:attributeGroup ref="tei:att.global.responsibility.attribute.cert"/>
+          <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
+          <xs:attributeGroup ref="tei:att.rdgPart.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
   </xs:element>
   <xs:element name="listWit">
     <xs:annotation>
@@ -4904,6 +4903,24 @@ Elements]</xs:documentation>
           <xs:attributeGroup ref="tei:att.sortable.attributes"/>
         </xs:extension>
       </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lacunaStart" substitutionGroup="tei:model.rdgPart">
+    <xs:annotation>
+      <xs:documentation>(début d'une lacune) indique le début d'une lacune dans le texte d'un témoin textuel quasiment complet. [12.1.5. Fragmentary Witnesses]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="tei:att.global.attributes"/>
+      <xs:attributeGroup ref="tei:att.rdgPart.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lacunaEnd" substitutionGroup="tei:model.rdgPart">
+    <xs:annotation>
+      <xs:documentation>(fin d'une lacune) indique la fin d'une lacune dans le texte d'un témoin textuel quasiment complet [12.1.5. Fragmentary Witnesses]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="tei:att.global.attributes"/>
+      <xs:attributeGroup ref="tei:att.rdgPart.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="att.global.analytic.attributes">
