@@ -1331,6 +1331,17 @@
                   3e étage, notes critiques
                 -->
                 <div>
+                    <head>Lacunes</head>
+                    <p>Les lacunes se distinguent des omissions par leur nature seconde et leur cause externe (chute d'une feuillet, dégâts matériels, cahier manquant, etc.).
+                    Leur début et leur fin sont annoncées par des notes d'apparat contenant les éléments :
+                    <specList>
+                        <specDesc key="lacunaStart"/>
+                        <specDesc key="lacunaEnd"/>
+                    </specList>
+                        Ces balises sont contenues dans des notes qui s'accrochent aux deux portions extrêmes du texte correspondant, dans les autres témoins, à la lacune.
+                    </p>
+                </div>
+                <div>
                     <head>Notes de commentaire</head>
                     <p>Les notes de commentaire sont caractérisées par un type: <specList>
                             <specDesc key="note" atts="type"/>
@@ -1341,11 +1352,6 @@
             <div xml:id="DIV_NAMESDATES">
                 <!-- Une section de ce même type apparaît plus tard… -->
                 <head>Noms, dates, personnes et lieux</head>
-                
-                <!-- Différencier noms de personne/de lieu/d'organisation,... avec des éléments spécialisés
-                et élément générique typé pour les chevaux, épées, enseignes, etc.
-                
-                -->
 
             </div>
             <!--<div>
@@ -2038,19 +2044,10 @@
                             <attDef ident="resp" mode="delete"/>
                             <attDef ident="type" mode="change">
                                 <valList mode="add" type="closed">
-                                    <!--<valItem ident="person"/>
-                                    <valItem ident="place"/>-->
+                                    <valItem ident="person"/>
+                                    <valItem ident="place"/>
                                     <valItem ident="enseigne">
                                         <desc>caractérise une enseigne.</desc>
-                                    </valItem>
-                                    <valItem ident="cheval">
-                                        <desc>caractérise un nom de cheval</desc>
-                                    </valItem>
-                                    <valItem ident="épée">
-                                        <desc>caractérise un nom d'épée</desc>
-                                    </valItem>
-                                    <valItem ident="peuple">
-                                        <desc>caractérise un nom de peuple, au sens large (français, sarrasin, païens, etc.)</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2589,7 +2586,7 @@
                     </elementSpec>
                     <!-- À terme, on va peut-être virer les rdgGrp, à moins que l'on en ait besoin pour les traductions, mais sans doute pas? -->
                     <moduleRef key="textcrit"
-                        include="app lem listWit rdg rdgGrp wit witDetail witness"/>
+                        include="app lacunaStart lacunaEnd lem listWit rdg rdgGrp wit witDetail witness"/>
                     <elementSpec ident="app" mode="change">
                         <attList>
                             <attDef ident="type" mode="delete"/>

@@ -7,7 +7,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-16T14:18:15Z. .
+# Schema generated from ODD source 2016-06-07T12:15:14Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2953,7 +2953,7 @@ back =
     empty
   }
 model.rdgLike = rdg
-model.rdgPart = wit
+model.rdgPart = wit | lacunaStart | lacunaEnd
 att.rdgPart.attributes = att.rdgPart.attribute.wit
 att.rdgPart.attribute.wit =
   
@@ -3152,6 +3152,18 @@ witness =
     att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     empty
+  }
+lacunaStart =
+  
+  ## (début d'une lacune) indique le début d'une lacune dans le texte d'un témoin textuel quasiment complet. [12.1.5. Fragmentary Witnesses]
+  element lacunaStart {
+    empty, att.global.attributes, att.rdgPart.attributes, empty
+  }
+lacunaEnd =
+  
+  ## (fin d'une lacune) indique la fin d'une lacune dans le texte d'un témoin textuel quasiment complet [12.1.5. Fragmentary Witnesses]
+  element lacunaEnd {
+    empty, att.global.attributes, att.rdgPart.attributes, empty
   }
 att.global.analytic.attributes = att.global.analytic.attribute.ana
 att.global.analytic.attribute.ana =

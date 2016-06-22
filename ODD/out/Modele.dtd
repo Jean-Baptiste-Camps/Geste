@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-04-16T14:18:01Z. .
+DTD generated from ODD source 2016-06-07T12:14:59Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -831,11 +831,11 @@ source CDATA  #IMPLIED'>
 <!ENTITY % model.rdgLike_sequenceOptional "rdg?"> 
 <!ENTITY % model.rdgLike_sequenceOptionalRepeatable "rdg*"> 
 <!ENTITY % model.rdgLike_sequenceRepeatable "rdg+"> 
-<!ENTITY % model.rdgPart "wit"> 
-<!ENTITY % model.rdgPart_sequence "wit"> 
-<!ENTITY % model.rdgPart_sequenceOptional "wit?"> 
-<!ENTITY % model.rdgPart_sequenceOptionalRepeatable "wit*"> 
-<!ENTITY % model.rdgPart_sequenceRepeatable "wit+"> 
+<!ENTITY % model.rdgPart "wit |lacunaStart |lacunaEnd"> 
+<!ENTITY % model.rdgPart_sequence "wit, lacunaStart, lacunaEnd"> 
+<!ENTITY % model.rdgPart_sequenceOptional "wit?, lacunaStart?, lacunaEnd?"> 
+<!ENTITY % model.rdgPart_sequenceOptionalRepeatable "wit*, lacunaStart*, lacunaEnd*"> 
+<!ENTITY % model.rdgPart_sequenceRepeatable "wit+, lacunaStart+, lacunaEnd+"> 
 <!ENTITY % att.rdgPart.attribute.wit '
 wit CDATA  #IMPLIED'>
 <!ENTITY % att.rdgPart.attributes '
@@ -1720,6 +1720,18 @@ type %teidata.enumerated;  #IMPLIED >
  %att.global.responsibility.attribute.cert;
  %att.global.responsibility.attribute.resp;
 n CDATA  #IMPLIED >
+<!--doc:(fin d'une lacune) indique la fin d'une lacune dans le texte d'un témoin textuel quasiment complet [12.1.5. Fragmentary Witnesses] -->
+<!ELEMENT lacunaEnd  EMPTY>
+<!ATTLIST lacunaEnd xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST lacunaEnd
+ %att.global.attributes;
+ %att.rdgPart.attributes; >
+<!--doc:(début d'une lacune) indique le début d'une lacune dans le texte d'un témoin textuel quasiment complet. [12.1.5. Fragmentary Witnesses] -->
+<!ELEMENT lacunaStart  EMPTY>
+<!ATTLIST lacunaStart xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST lacunaStart
+ %att.global.attributes;
+ %att.rdgPart.attributes; >
 <!--doc:(langue utilisée) décrit les langues, variétés de langues, registres, dialectes, etc. présents à l’intérieur d’un texte. [2.4.2. Language Usage 2.4. The Profile Description 15.3.2. Declarable Elements] -->
 <!ELEMENT langUsage ((%model.pLike;)+|(language)+)>
 <!ATTLIST langUsage xmlns CDATA "http://www.tei-c.org/ns/1.0">
