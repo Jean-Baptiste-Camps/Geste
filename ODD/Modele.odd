@@ -1863,6 +1863,23 @@
                             </attDef>
                             <attDef ident="cert" mode="delete"/>
                             <!--<attDef ident="resp" mode="delete"/>-->
+                            <attDef ident="reason" mode="change" usage="req">
+                                <!-- TODO: voir s'il est pertinent de centraliser les valeurs de reason entre les différents attributs -->
+                                <valList mode="add" type="closed">
+                                    <valItem ident="illegible">
+                                        <desc>difficulté de lecture du document</desc>
+                                    </valItem>
+                                    <valItem ident="damage">
+                                        <desc>dégât sur le document</desc>
+                                    </valItem>
+                                    <valItem ident="facsimile">
+                                        <desc>problème dû au document de substitution</desc>
+                                    </valItem>
+                                    <valItem ident="lacuna">
+                                        <desc>lacune matérielle</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="add" mode="change">
