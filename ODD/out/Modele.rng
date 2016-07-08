@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-06-29T13:02:17Z. .
+Schema generated from ODD source 2016-07-07T14:13:02Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2765,6 +2765,7 @@ Normalization 12. Critical Apparatus]</a:documentation>
          <ref name="att.global.linking.attribute.exclude"/>
          <ref name="att.global.linking.attribute.select"/>
          <ref name="att.global.analytic.attribute.ana"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.timed.attributes"/>
          <ref name="att.editLike.attribute.evidence"/>
@@ -2815,9 +2816,11 @@ Normalization 12. Critical Apparatus]</a:documentation>
       <element name="add">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">( ajout) contient des lettres, des mots ou des phrases insérés dans le texte par un auteur, un copiste, un annotateur ou un correcteur. [3.4.3. Additions, Deletions, and Omissions]</a:documentation>
          <ref name="macro.paraContent"/>
+         <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.attribute.xmllang"/>
          <ref name="att.global.linking.attribute.corresp"/>
          <ref name="att.global.linking.attribute.synch"/>
+         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.linking.attribute.copyOf"/>
          <ref name="att.global.linking.attribute.next"/>
          <ref name="att.global.linking.attribute.prev"/>
