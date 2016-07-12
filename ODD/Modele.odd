@@ -2423,6 +2423,34 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    <elementSpec ident="q" mode="change">
+                        <content><!-- Alignement du contenu sur le modèle des vers… À terme, il vaudra mieux définir une macro commune -->
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <!--<classRef key="model.phrase"/>-->
+                                <!-- model.phrase à redéfinir pour restreindre -->
+                                <!--<classRef key="model.lPart"/>-->
+                                <!-- TODO: je retire pour l'instant cette classe, qui correspond à des éléments sur césure
+                                et rime qui n'apparaissent pas dans notre document.
+                                -->
+                                <classRef key="model.dateLike"/>
+                                <classRef key="model.global"/>
+                                <classRef key="model.hiLike"/>
+                                <classRef key="model.nameLike.agent"/>
+                                <!-- Redéfinir le modèle  model.pPart.edit pour distinguer ce qui peut apparaître ou non au niveau le plus élevé -->
+                                <classRef key="model.pPart.transcriptional"/>
+                                <!--TODO: Voir si on ne veut pas réduire les choix possibles à ce niveau, 
+                                    pour ne pas inclure orig et reg au niveau supérieur au mot-->
+                                <classRef key="model.qLike"/>
+                                <!-- Remplacement du model.inter trop généraliste par model.qLike -->
+                                <classRef key="model.segLike"/>
+                                <elementRef key="num"/>
+                                <classRef key="placeName"/>
+                                <classRef key="rs"/>
+                                <elementRef key="subst"/>
+                                <!-- Pour les cas de corrections à un niveau supérieur au mot -->
+                            </alternate>
+                        </content>
+                    </elementSpec>
                     <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete"/>
                     <!-- À restreindre avec les seules classes et macros nécessaires -->
                     <moduleRef key="tei"/>
