@@ -3,6 +3,8 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <!--
     TODO:
+    intégration @xml:lang (rendre obligatoire au moins à la racine et sur body).
+    fusion le document de LAKME/geste avec celui du dossier de thèse
     préciser gestion des références bibliographiques
     une fois que le modèle sera complètement écrit, il faudra modifier les descriptions d'éléments, pour qu'elles pointent vers le chapitre correspondant
     du modèle, et pas vers les Guidelines.
@@ -1880,6 +1882,9 @@
                                     </valItem>
                                     <valItem ident="lacuna">
                                         <desc>lacune matérielle</desc>
+                                    </valItem>
+                                    <valItem ident="sampling">
+                                        <desc>échantillonnage</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
