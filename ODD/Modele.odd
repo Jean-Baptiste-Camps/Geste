@@ -4,7 +4,9 @@
 <!--
     TODO:
     intégration @xml:lang (rendre obligatoire au moins à la racine et sur body).
-    fusion le document de LAKME/geste avec celui du dossier de thèse
+    ajout de mentioned, à restreindre aux notes et introd.
+    restreindre emph aux notes et introd.
+    supprimer damage du modèle ? (on ne l'utilise jamais)
     préciser gestion des références bibliographiques
     une fois que le modèle sera complètement écrit, il faudra modifier les descriptions d'éléments, pour qu'elles pointent vers le chapitre correspondant
     du modèle, et pas vers les Guidelines.
@@ -588,7 +590,7 @@
                             <specDesc key="orgName"/>
                             <specDesc key="placeName"/>
                             <specDesc key="name"/>
-                            <specDesc key="rs"/>
+                            <!--<specDesc key="rs"/>--><!-- TODO: je retire rs, qui est redondant avec name -->
                             <specDesc key="num"/>
                             <specDesc key="q"/>
                             <specDesc key="note"/>
@@ -749,11 +751,25 @@
                         </egXML>
                     </p>
                 </div>
-                <div><head>Citations</head>
-                    <p>Les citations, passages au discours direct, et autres formes de texte marqué comme étant d’une manière ou d'une autre différent du texte environnant, pour diverses raisons,
-                    sont encodés avec <gi>q</gi>:
+                <div><head>Discours direct et citations</head>
+                    <p>Les passages au discours direct sont encodés avec <gi>q</gi>:
                         <specList>
-                            <specDesc key="q"/>
+                            <specDesc key="q" atts="who"/>
+                        </specList>
+                    </p>
+                    <p>Pour indiquer le locuteur, il est recommandé d'utiliser les attributs de la classe
+                    <code>att.ascribed</code>:
+                        <specList>
+                            <specDesc key="att.ascribed"/>
+                        </specList>
+                    </p>
+                    <p>⚠ Dans une version ultérieure du modèle, il est possible que <gi>q</gi>
+                    soit abandonné au profit de l'élément plus spécialisé <gi>said</gi>.
+                    </p>
+                    <p>Pour les passages qui, dans l'introduction ou les notes, se distinguent du contexte
+                    environnant, on utilisera <gi>mentioned</gi>:
+                        <specList>
+                            <specDesc key="mentioned"/>
                         </specList>
                     </p>
                 </div>
@@ -1317,6 +1333,28 @@
                     </div>
                 </div>
             </div>
+            <div xml:id="DIV_VERSE">
+                <head>Versification et métrique</head>
+                <p>Les attributs de la classe <code>att.metrical</code> peuvent être employés pour décrire
+                    la métrique, ou spécifier les entorses à celle-ci:
+                    <specList>
+                        <specDesc key="att.metrical"/>
+                    </specList>
+                </p>
+                <p>Particulièrement, l'usage de l'attribut <att>real</att> est recommandé pour signaler
+                un écart (hypermétrie, hypométrie, etc.) entre la réalisation du vers et sa métrique supposée (décasyllabe, alexandrin, etc.):
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <l n="238" xml:id="M_l_238" real ="-3">
+                        <w>tut</w>
+                        <w>le</w>
+                        <w>trenche</w>
+                        <w>quanque</w>
+                        <w rend="elision">l</w>
+                        <w>esprant</w>
+                    </l>
+                </egXML>
+                </p>
+            </div>
             <div xml:id="DIV_TEXTCRIT">
                 <head>Apparat critique et annotations</head>
                 <!-- TODO: faut-il faire une section «éléments communs aux trois types de documents» 
@@ -1600,10 +1638,14 @@
                         </attList>
                     </elementSpec>
                     <moduleRef key="core"
-                        include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice citedRange corr date del edition editor email expan extent gap gb graphic head hi imprint item l lb lg list listBibl
-                       monogr name note num orig p pb pubPlace publisher q ref reg resp respStmt rs series sic term textLang title unclear"/>
+                        include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice citedRange corr date del edition editor email emph expan extent gap gb graphic head hi imprint item l lb lg list listBibl
+                        mentioned
+                       monogr name note num orig p pb pubPlace publisher q ref reg resp respStmt series sic term textLang title unclear"/>
+                    <!-- Retrait de rs -->
+                    <!-- ajout de mentioned (mention dans les notes et l'introd.) -->
                     <!--Pour l'instant, j'inclus tout le module, à raffiner ensuite ou à garder intégralement?-->
                     <!-- J'exclus pour l'instant quote, privilégiant q, mais, en fait, => lequel utiliser pour le discours direct? -->
+                    <!-- emph à détailler -->
                     <!--<moduleRef key="core"/>-->
                     <!--<elementSpec ident="sic" mode="change"/>-->
                     <elementSpec ident="gb" mode="change">
@@ -1631,6 +1673,16 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="note" mode="change">
+                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                            <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
+                            <constraint>
+                                <s:rule
+                                context="/tei:TEI[@type='ms' or @type = 'crit']/tei:text/tei:body//tei:note">
+                                <s:assert test="@type">Les notes
+                                    doivent être typées dans les transcriptions de ms. ou éditions à nouveaux frais.</s:assert>
+                            </s:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="type" mode="change">
                                 <valList mode="change" type="closed">
@@ -1681,10 +1733,11 @@
                     </elementSpec>
                     <elementSpec ident="hi" mode="change">
                         <!-- @rend à définir avec vallist -->
+                        <!-- TODO: cette contrainte ne marche pas -->
                         <constraintSpec scheme="isoschematron" ident="rend-obligatoire-transcriptions">
                             <constraint>
                                 <s:assert
-                                    test="not(/TEI[@type='ms']) or (/TEI[@type='ms'] and not(//hi[not(@rend)]) )"
+                                    test="not(/tei:TEI[@type='ms']) or (/tei:TEI[@type='ms'] and not(//tei:hi[not(@rend)]) )"
                                     >l'attribut @rend est obligatoire pour l'élément hi dans les transcriptions de manuscrit</s:assert>
                             </constraint>
                         </constraintSpec>
@@ -1853,7 +1906,7 @@
                             <attDef ident="rend" mode="delete"/>
                             <attDef ident="sameAs" mode="delete"/>
                             <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="change">
+                            <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="fol">
                                         <gloss>feuillet</gloss>
@@ -1866,6 +1919,8 @@
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <attDef ident="quantity" mode="change" usage="req"/>
+                            <attDef ident="cert" mode="delete"/>
                             <!--<attDef ident="cert" mode="delete"/>-->
                             <!--<attDef ident="resp" mode="delete"/>-->
                             <attDef ident="reason" mode="change" usage="req">
@@ -1888,6 +1943,7 @@
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <!--<attDef ident="resp" mode="delete"/>-->
                         </attList>
                     </elementSpec>
                     <elementSpec ident="add" mode="change">
@@ -2067,12 +2123,18 @@
                             <attDef ident="max" mode="delete"/>
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
-                            <attDef ident="type" mode="change">
+                            <attDef ident="type" mode="change" usage="req">
+                                <desc>le typage des noms propres est obligatoire. Pour les cas qui le permettent,
+                                    l'usage des éléments spécialisés <gi>persName</gi> et <gi>placeName</gi> est préférable.
+                                </desc>
                                 <valList mode="add" type="closed">
-                                    <valItem ident="person"/>
-                                    <valItem ident="place"/>
+                                    <valItem ident="épée"/>
+                                    <valItem ident="cheval"/>
                                     <valItem ident="enseigne">
-                                        <desc>caractérise une enseigne.</desc>
+                                        <desc>caractérise une enseigne (Monjoie, Naimant, Malo, etc.).</desc>
+                                    </valItem>
+                                    <valItem ident="peuple">
+                                        <desc>caractérise un peuple, au sens large (Sarrasins, Franceis, Danois, Païens, etc.).</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2099,10 +2161,10 @@
                     <elementSpec ident="abbr" mode="change">
                         <attList>
                             <attDef ident="type" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!--<attDef ident="xml:id" mode="delete"/>-->
                             <attDef ident="n" mode="delete"/>
                             <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
+                            <!--<attDef ident="sameAs" mode="delete"/>-->
                             <attDef ident="facs" mode="delete"/>
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
@@ -2356,7 +2418,7 @@
                                 <classRef key="model.segLike"/>
                                 <elementRef key="num"/>
                                 <classRef key="placeName"/>
-                                <classRef key="rs"/>
+                                <!--<classRef key="rs"/>-->
                                 <elementRef key="subst"/>
                                 <!-- Pour les cas de corrections à un niveau supérieur au mot -->
                             </alternate>
@@ -2450,7 +2512,6 @@
                                 <classRef key="model.segLike"/>
                                 <elementRef key="num"/>
                                 <classRef key="placeName"/>
-                                <classRef key="rs"/>
                                 <elementRef key="subst"/>
                                 <!-- Pour les cas de corrections à un niveau supérieur au mot -->
                             </alternate>
@@ -2637,6 +2698,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+                    <moduleRef key="verse" include="att.metrical"/>
                     <!-- À terme, on va peut-être virer les rdgGrp, à moins que l'on en ait besoin pour les traductions, mais sans doute pas? -->
                     <moduleRef key="textcrit"
                         include="app lacunaStart lacunaEnd lem listWit rdg rdgGrp wit witDetail witness"/>

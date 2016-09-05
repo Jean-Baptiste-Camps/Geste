@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2016-06-07T12:15:05Z. .
+    Schema generated from ODD source 2016-09-04T12:49:27Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1350,36 +1350,42 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
   </xs:group>
   <xs:group name="model.emphLike">
     <xs:choice>
+      <xs:element ref="tei:emph"/>
       <xs:element ref="tei:term"/>
       <xs:element ref="tei:title"/>
     </xs:choice>
   </xs:group>
   <xs:group name="model.emphLike_alternation">
     <xs:choice>
+      <xs:element ref="tei:emph"/>
       <xs:element ref="tei:term"/>
       <xs:element ref="tei:title"/>
     </xs:choice>
   </xs:group>
   <xs:group name="model.emphLike_sequence">
     <xs:sequence>
+      <xs:element ref="tei:emph"/>
       <xs:element ref="tei:term"/>
       <xs:element ref="tei:title"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="model.emphLike_sequenceOptional">
     <xs:sequence>
+      <xs:element minOccurs="0" ref="tei:emph"/>
       <xs:element minOccurs="0" ref="tei:term"/>
       <xs:element minOccurs="0" ref="tei:title"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="model.emphLike_sequenceOptionalRepeatable">
     <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:emph"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:term"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:title"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="model.emphLike_sequenceRepeatable">
     <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="tei:emph"/>
       <xs:element maxOccurs="unbounded" ref="tei:term"/>
       <xs:element maxOccurs="unbounded" ref="tei:title"/>
     </xs:sequence>
@@ -2135,7 +2141,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <xs:choice>
       <xs:group ref="tei:model.nameLike.agent"/>
       <xs:group ref="tei:model.placeStateLike"/>
-      <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:model.persNamePart"/>
     </xs:choice>
@@ -2144,7 +2149,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <xs:choice>
       <xs:group ref="tei:model.nameLike.agent_alternation"/>
       <xs:group ref="tei:model.placeStateLike_alternation"/>
-      <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:model.persNamePart_alternation"/>
     </xs:choice>
@@ -2153,7 +2157,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <xs:sequence>
       <xs:group ref="tei:model.nameLike.agent_sequence"/>
       <xs:group ref="tei:model.placeStateLike_sequence"/>
-      <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:model.persNamePart_sequence"/>
     </xs:sequence>
@@ -2162,7 +2165,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <xs:sequence>
       <xs:group minOccurs="0" ref="tei:model.nameLike.agent_sequenceOptional"/>
       <xs:group minOccurs="0" ref="tei:model.placeStateLike_sequenceOptional"/>
-      <xs:element minOccurs="0" ref="tei:rs"/>
       <xs:element minOccurs="0" ref="tei:idno"/>
       <xs:group minOccurs="0" ref="tei:model.persNamePart_sequenceOptional"/>
     </xs:sequence>
@@ -2171,7 +2173,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <xs:sequence>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:model.nameLike.agent_sequenceOptionalRepeatable"/>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:model.placeStateLike_sequenceOptionalRepeatable"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:rs"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:model.persNamePart_sequenceOptionalRepeatable"/>
     </xs:sequence>
@@ -2369,6 +2370,18 @@ Suggested values include: 1] page_de_titre; 2] preface; 3] sommaire; 4] errata; 
           <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
           <xs:attributeGroup ref="tei:att.declaring.attributes"/>
           <xs:attributeGroup ref="tei:att.written.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emph">
+    <xs:annotation>
+      <xs:documentation>(mis en valeur) marque des mots ou des expressions qui sont accentués ou mis en valeur pour un motif linguistique ou rhétorique. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:macro.paraContent">
+          <xs:attributeGroup ref="tei:att.global.attributes"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -2756,7 +2769,6 @@ Normalization 12. Critical Apparatus]</xs:documentation>
       <xs:attributeGroup ref="tei:att.global.responsibility.attribute.resp"/>
       <xs:attributeGroup ref="tei:att.timed.attributes"/>
       <xs:attributeGroup ref="tei:att.editLike.attribute.evidence"/>
-      <xs:attributeGroup ref="tei:att.dimensions.attribute.quantity"/>
       <xs:attributeGroup ref="tei:att.dimensions.attribute.extent"/>
       <xs:attributeGroup ref="tei:att.dimensions.attribute.precision"/>
       <xs:attributeGroup ref="tei:att.dimensions.attribute.scope"/>
@@ -2766,7 +2778,7 @@ Normalization 12. Critical Apparatus]</xs:documentation>
       <xs:attributeGroup ref="tei:att.ranging.attribute.max"/>
       <xs:attributeGroup ref="tei:att.ranging.attribute.confidence"/>
       <xs:attributeGroup ref="tei:att.source.attribute.source"/>
-      <xs:attribute name="unit">
+      <xs:attribute name="unit" use="required">
         <xs:annotation>
           <xs:documentation>noms des unités utilisées pour la mesure.</xs:documentation>
         </xs:annotation>
@@ -2783,6 +2795,20 @@ Normalization 12. Critical Apparatus]</xs:documentation>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="quantity" use="required">
+        <xs:annotation>
+          <xs:documentation>spécifie la longueur dans les unités indiquées</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:double xs:decimal">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="reason">
@@ -3074,21 +3100,6 @@ Normalization 12. Critical Apparatus]</xs:documentation>
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="rs">
-    <xs:annotation>
-      <xs:documentation>(chaîne de référence) contient un nom générique ou une chaîne permettant de s'y référer. [13.2.1. Personal Names 3.5.1. Referring Strings]</xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:macro.phraseSeq">
-          <xs:attributeGroup ref="tei:att.global.attributes"/>
-          <xs:attributeGroup ref="tei:att.naming.attributes"/>
-          <xs:attributeGroup ref="tei:att.typed.attributes"/>
-          <xs:attributeGroup ref="tei:att.source.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="email">
     <xs:annotation>
       <xs:documentation>(adresse de courrier électronique) contient l'adresse de courriel identifiant un emplacement où un courriel peut être envoyé. [3.5.2. Addresses]</xs:documentation>
@@ -3244,9 +3255,11 @@ Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</x
     <xs:complexType>
       <xs:complexContent>
         <xs:extension base="tei:macro.phraseSeq">
+          <xs:attributeGroup ref="tei:att.global.attribute.xmlid"/>
           <xs:attributeGroup ref="tei:att.global.attribute.xmllang"/>
           <xs:attributeGroup ref="tei:att.global.linking.attribute.corresp"/>
           <xs:attributeGroup ref="tei:att.global.linking.attribute.synch"/>
+          <xs:attributeGroup ref="tei:att.global.linking.attribute.sameAs"/>
           <xs:attributeGroup ref="tei:att.global.linking.attribute.copyOf"/>
           <xs:attributeGroup ref="tei:att.global.linking.attribute.next"/>
           <xs:attributeGroup ref="tei:att.global.linking.attribute.prev"/>
@@ -3995,7 +4008,6 @@ Elements]</xs:documentation>
         <xs:element ref="tei:model.segLike"/>
         <xs:element ref="tei:num"/>
         <xs:element ref="tei:placeName"/>
-        <xs:element ref="tei:rs"/>
         <xs:element ref="tei:subst"/>
       </xs:choice>
       <xs:attributeGroup ref="tei:att.global.attribute.xmlid"/>

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-06-07T12:14:59Z. .
+DTD generated from ODD source 2016-09-04T12:49:20Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -477,11 +477,11 @@ to %teidata.word;  #IMPLIED'>
 <!ENTITY % model.hiLike_sequenceOptional "hi?"> 
 <!ENTITY % model.hiLike_sequenceOptionalRepeatable "hi*"> 
 <!ENTITY % model.hiLike_sequenceRepeatable "hi+"> 
-<!ENTITY % model.emphLike "term |title"> 
-<!ENTITY % model.emphLike_sequence "term, title"> 
-<!ENTITY % model.emphLike_sequenceOptional "term?, title?"> 
-<!ENTITY % model.emphLike_sequenceOptionalRepeatable "term*, title*"> 
-<!ENTITY % model.emphLike_sequenceRepeatable "term+, title+"> 
+<!ENTITY % model.emphLike "emph |term |title"> 
+<!ENTITY % model.emphLike_sequence "emph, term, title"> 
+<!ENTITY % model.emphLike_sequenceOptional "emph?, term?, title?"> 
+<!ENTITY % model.emphLike_sequenceOptionalRepeatable "emph*, term*, title*"> 
+<!ENTITY % model.emphLike_sequenceRepeatable "emph+, term+, title+"> 
 <!ENTITY % model.highlighted "%model.hiLike; |%model.emphLike;"> 
 <!ENTITY % model.highlighted_sequence "%model.hiLike;, %model.emphLike;"> 
 <!ENTITY % model.highlighted_sequenceOptional "%model.hiLike;?, %model.emphLike;?"> 
@@ -747,11 +747,11 @@ to %teidata.word;  #IMPLIED'>
 <!ENTITY % model.addressLike_sequenceOptional "email?, address?"> 
 <!ENTITY % model.addressLike_sequenceOptionalRepeatable "email*, address*"> 
 <!ENTITY % model.addressLike_sequenceRepeatable "email+, address+"> 
-<!ENTITY % model.nameLike "%model.nameLike.agent; |%model.placeStateLike; |rs |idno |%model.persNamePart;"> 
-<!ENTITY % model.nameLike_sequence "%model.nameLike.agent;, %model.placeStateLike;, rs, idno, %model.persNamePart;"> 
-<!ENTITY % model.nameLike_sequenceOptional "%model.nameLike.agent;?, %model.placeStateLike;?, rs?, idno?, %model.persNamePart;?"> 
-<!ENTITY % model.nameLike_sequenceOptionalRepeatable "%model.nameLike.agent;*, %model.placeStateLike;*, rs*, idno*, %model.persNamePart;*"> 
-<!ENTITY % model.nameLike_sequenceRepeatable "%model.nameLike.agent;+, %model.placeStateLike;+, rs+, idno+, %model.persNamePart;+"> 
+<!ENTITY % model.nameLike "%model.nameLike.agent; |%model.placeStateLike; |idno |%model.persNamePart;"> 
+<!ENTITY % model.nameLike_sequence "%model.nameLike.agent;, %model.placeStateLike;, idno, %model.persNamePart;"> 
+<!ENTITY % model.nameLike_sequenceOptional "%model.nameLike.agent;?, %model.placeStateLike;?, idno?, %model.persNamePart;?"> 
+<!ENTITY % model.nameLike_sequenceOptionalRepeatable "%model.nameLike.agent;*, %model.placeStateLike;*, idno*, %model.persNamePart;*"> 
+<!ENTITY % model.nameLike_sequenceRepeatable "%model.nameLike.agent;+, %model.placeStateLike;+, idno+, %model.persNamePart;+"> 
 <!ENTITY % model.global "%model.milestoneLike; |%model.noteLike; |%model.global.edit;"> 
 <!ENTITY % model.global_sequence "%model.milestoneLike;, %model.noteLike;, %model.global.edit;"> 
 <!ENTITY % model.global_sequenceOptional "%model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?"> 
@@ -992,9 +992,11 @@ type (ed|ms|crit) #REQUIRED >
 <!ELEMENT abbr %macro.phraseSeq;>
 <!ATTLIST abbr xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST abbr
+ %att.global.attribute.xmlid;
  %att.global.attribute.xmllang;
  %att.global.linking.attribute.corresp;
  %att.global.linking.attribute.synch;
+ %att.global.linking.attribute.sameAs;
  %att.global.linking.attribute.copyOf;
  %att.global.linking.attribute.next;
  %att.global.linking.attribute.prev;
@@ -1440,6 +1442,11 @@ type %teidata.enumerated;  #IMPLIED >
 <!ATTLIST email xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST email
  %att.global.attributes; >
+<!--doc:(mis en valeur) marque des mots ou des expressions qui sont accentués ou mis en valeur pour un motif linguistique ou rhétorique. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language] -->
+<!ELEMENT emph %macro.paraContent;>
+<!ATTLIST emph xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST emph
+ %att.global.attributes; >
 <!--doc:(développement éditorial) contient une succession de lettres ajoutées par un éditeur ou un transcripteur pour développer une abréviation. [11.3.1.2. Abbreviation and Expansion] -->
 <!ELEMENT ex %macro.xtext;>
 <!ATTLIST ex xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1557,7 +1564,6 @@ ref %teidata.pointer;  #IMPLIED >
  %att.global.responsibility.attribute.resp;
  %att.timed.attributes;
  %att.editLike.attribute.evidence;
- %att.dimensions.attribute.quantity;
  %att.dimensions.attribute.extent;
  %att.dimensions.attribute.precision;
  %att.dimensions.attribute.scope;
@@ -1567,7 +1573,8 @@ ref %teidata.pointer;  #IMPLIED >
  %att.ranging.attribute.max;
  %att.ranging.attribute.confidence;
  %att.source.attribute.source;
-unit (fol|char) #IMPLIED
+unit (fol|char) #REQUIRED
+quantity %teidata.numeric;  #REQUIRED
 reason CDATA  #IMPLIED >
 <!--doc:(gathering begins) (gathering begins) marque le début d'un nouveau cahier dans un manuscrit transcrit. [3.10.3. Milestone
 Elements] -->
@@ -1702,7 +1709,7 @@ type %teidata.enumerated;  #IMPLIED >
  %att.global.attributes;
  %att.sortable.attributes; >
 <!--doc:(vers) contient un seul vers, éventuellement incomplet. [3.12.1. Core Tags for Verse 3.12. Passages of Verse or Drama 7.2.5. Speech Contents] -->
-<!ELEMENT l (%model.dateLike;|%model.global;|%model.hiLike;|%model.nameLike.agent;|%model.pPart.transcriptional;|%model.qLike;|%model.segLike;|num|_DUMMY_placeName|_DUMMY_rs|subst)+>
+<!ELEMENT l (%model.dateLike;|%model.global;|%model.hiLike;|%model.nameLike.agent;|%model.pPart.transcriptional;|%model.qLike;|%model.segLike;|num|_DUMMY_placeName|subst)+>
 <!ATTLIST l xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST l
  %att.global.attribute.xmlid;
@@ -2374,14 +2381,6 @@ Normalization 12. Critical Apparatus] -->
  %att.global.attributes;
  %att.personal.attributes;
  %att.typed.attributes; >
-<!--doc:(chaîne de référence) contient un nom générique ou une chaîne permettant de s'y référer. [13.2.1. Personal Names 3.5.1. Referring Strings] -->
-<!ELEMENT rs %macro.phraseSeq;>
-<!ATTLIST rs xmlns CDATA "http://www.tei-c.org/ns/1.0">
-<!ATTLIST rs
- %att.global.attributes;
- %att.naming.attributes;
- %att.typed.attributes;
- %att.source.attributes; >
 <!--doc:(rubrique) contient le texte d'une rubrique ou d'un intitulé propres à un item, c'est-à-dire des mots qui signalent le début du texte, qui incluent souvent la mention de son auteur et de son titre, et qui sont différenciés du texte lui-même, généralement à l'encre rouge, par une taille ou un style d'écriture particuliers, ou par tout autre procédé de ce genre. [10.6.1. The msItem and msItemStruct Elements] -->
 <!ELEMENT rubric %macro.phraseSeq;>
 <!ATTLIST rubric xmlns CDATA "http://www.tei-c.org/ns/1.0">

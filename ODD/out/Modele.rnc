@@ -7,7 +7,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-06-07T12:15:14Z. .
+# Schema generated from ODD source 2016-09-04T12:49:36Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -834,12 +834,12 @@ model.hiLike_sequence = hi
 model.hiLike_sequenceOptional = hi?
 model.hiLike_sequenceOptionalRepeatable = hi*
 model.hiLike_sequenceRepeatable = hi+
-model.emphLike = term | title
-model.emphLike_alternation = term | title
-model.emphLike_sequence = term, title
-model.emphLike_sequenceOptional = term?, title?
-model.emphLike_sequenceOptionalRepeatable = term*, title*
-model.emphLike_sequenceRepeatable = term+, title+
+model.emphLike = emph | term | title
+model.emphLike_alternation = emph | term | title
+model.emphLike_sequence = emph, term, title
+model.emphLike_sequenceOptional = emph?, term?, title?
+model.emphLike_sequenceOptionalRepeatable = emph*, term*, title*
+model.emphLike_sequenceRepeatable = emph+, term+, title+
 model.highlighted = model.hiLike | model.emphLike
 model.dateLike = date
 model.dateLike_alternation = date
@@ -1031,42 +1031,36 @@ model.nameLike =
   model.nameLike.agent
   | model.offsetLike
   | model.placeStateLike
-  | rs
   | idno
   | model.persNamePart
 model.nameLike_alternation =
   model.nameLike.agent_alternation
   | model.offsetLike_alternation
   | model.placeStateLike_alternation
-  | rs
   | idno
   | model.persNamePart_alternation
 model.nameLike_sequence =
   model.nameLike.agent_sequence,
   model.offsetLike_sequence,
   model.placeStateLike_sequence,
-  rs,
   idno,
   model.persNamePart_sequence
 model.nameLike_sequenceOptional =
   model.nameLike.agent_sequenceOptional?,
   model.offsetLike_sequenceOptional?,
   model.placeStateLike_sequenceOptional?,
-  rs?,
   idno?,
   model.persNamePart_sequenceOptional?
 model.nameLike_sequenceOptionalRepeatable =
   model.nameLike.agent_sequenceOptionalRepeatable*,
   model.offsetLike_sequenceOptionalRepeatable*,
   model.placeStateLike_sequenceOptionalRepeatable*,
-  rs*,
   idno*,
   model.persNamePart_sequenceOptionalRepeatable*
 model.nameLike_sequenceRepeatable =
   model.nameLike.agent_sequenceRepeatable+,
   model.offsetLike_sequenceRepeatable+,
   model.placeStateLike_sequenceRepeatable+,
-  rs+,
   idno+,
   model.persNamePart_sequenceRepeatable+
 model.global = model.milestoneLike | model.noteLike | model.global.edit
@@ -1189,6 +1183,10 @@ p =
     att.written.attributes,
     empty
   }
+emph =
+  
+  ## (mis en valeur) marque des mots ou des expressions qui sont accentués ou mis en valeur pour un motif linguistique ou rhétorique. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]
+  element emph { macro.paraContent, att.global.attributes, empty }
 hi =
   
   ## (mis en évidence) distingue un mot ou une expression comme graphiquement distincte du texte environnant, sans en donner la raison. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]
@@ -1464,7 +1462,6 @@ gap =
     att.global.responsibility.attribute.resp,
     att.timed.attributes,
     att.editLike.attribute.evidence,
-    att.dimensions.attribute.quantity,
     att.dimensions.attribute.extent,
     att.dimensions.attribute.precision,
     att.dimensions.attribute.scope,
@@ -1483,7 +1480,14 @@ gap =
       | 
         ## (caractère) 
         "char"
-    }?,
+    },
+    
+    ## spécifie la longueur dans les unités indiquées
+    attribute quantity {
+      xsd:double
+      | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+      | xsd:decimal
+    },
     
     ## donne la raison de l'omission. Les valeurs d'échantillon comprennent échantillonnage, illisible, inaudible, non pertinent, biffé, biffé et illisible.
     attribute reason {
@@ -1692,17 +1696,6 @@ name =
     }?,
     empty
   }
-rs =
-  
-  ## (chaîne de référence) contient un nom générique ou une chaîne permettant de s'y référer. [13.2.1. Personal Names 3.5.1. Referring Strings]
-  element rs {
-    macro.phraseSeq,
-    att.global.attributes,
-    att.naming.attributes,
-    att.typed.attributes,
-    att.source.attributes,
-    empty
-  }
 email =
   
   ## (adresse de courrier électronique) contient l'adresse de courriel identifiant un emplacement où un courriel peut être envoyé. [3.5.2. Addresses]
@@ -1784,9 +1777,11 @@ abbr =
   ## (abréviation) contient une abréviation quelconque. [3.5.5. Abbreviations and Their Expansions]
   element abbr {
     macro.phraseSeq,
+    att.global.attribute.xmlid,
     att.global.attribute.xmllang,
     att.global.linking.attribute.corresp,
     att.global.linking.attribute.synch,
+    att.global.linking.attribute.sameAs,
     att.global.linking.attribute.copyOf,
     att.global.linking.attribute.next,
     att.global.linking.attribute.prev,
@@ -2375,7 +2370,6 @@ l =
       | model.segLike
       | num
       | placeName
-      | rs
       | subst)+)
     >> sch:pattern [
          id = "otinel-l-abstractModel-structure-l-constraint-8"
