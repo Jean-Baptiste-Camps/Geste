@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
-<!-- TODO: att.global.facs à restreindre-->
+<!-- TODO: att.global.facs à restreindre, att.global.source aussi?-->
+<!-- Virer globalement @subtype?-->
 <!-- teidata.name n'est plus utilisé, de même que teidata.temporal.w3c. Bugs? -->
 <!--
     Revoir complètement le modèle, en commençant par retirer toutes les suppressions d'attributs au niveau
@@ -2410,7 +2411,7 @@
                         </attList>
                     </classSpec>
                     <!--  att.global.linking : à revoir et simplifier quand on travaillera sur la partie correspondante du modèle -->
-                    <classSpec type="atts" ident=" att.global.linking" module="tei" mode="change">
+                    <classSpec type="atts" ident="att.global.linking" module="tei" mode="change">
                         <attList>
                             <attDef ident="synch" mode="delete"/>
                             <attDef ident="copyOf" mode="delete"/><!-- À voir -->
