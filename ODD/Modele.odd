@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<!-- TODO: att.global.facs à restreindre-->
+<!-- teidata.name n'est plus utilisé, de même que teidata.temporal.w3c. Bugs? -->
 <!--
+    Revoir complètement le modèle, en commençant par retirer toutes les suppressions d'attributs au niveau
+    des éléments, et revoir en profondeur les classes du modèle.
+    
     TODO:
+    => ne plus (ou le moins possible) supprimer d'attributs au niveau des éléments, mais, en revanche, revoir l'ensemble des classes d'attributs conservées, et faire le tri
     intégration @xml:lang (rendre obligatoire au moins à la racine et sur body).
     ajout de mentioned, à restreindre aux notes et introd.
     restreindre emph aux notes et introd.
@@ -74,6 +80,7 @@
             </projectDesc>
         </encodingDesc>
         <revisionDesc>
+            <change who="#JBC" when="2017-02">Révision complète de la gestion des attributs.</change>
             <change who="#JBC" when="2016-03">Révision majeure du modèle, dans le cadre du début du
                 projet LAKME</change>
             <change who="#JBC" from="2014-08" to="2016-02">Modifications ponctuelles pour adapter
@@ -106,8 +113,8 @@
                         <item><ptr target="#DIV_CORE"/></item>
                         <item><ptr target="#DIV_CERTRESP"/></item>
                     </list> auxquelles peuvent être ajoutées les sections <list>
-                        <item><ptr target="#DIV_NAMESDATES"/></item>
                         <item><ptr target="#DIV_LING"/></item>
+                        <item><ptr target="#DIV_NAMESDATES"/></item>
                     </list>
                 </p>
                 <p>Dans le cas des <hi>transcriptions de manuscrits</hi>, s'ajoutent à l'ensemble
@@ -1389,11 +1396,6 @@
                     </p>
                 </div>
             </div>
-            <div xml:id="DIV_NAMESDATES">
-                <!-- Une section de ce même type apparaît plus tard… -->
-                <head>Noms, dates, personnes et lieux</head>
-
-            </div>
             <!--<div>
                 <head>Tables, formules et graphiques?</head>
                 
@@ -1473,7 +1475,7 @@
                     </egXML> En utilisant choice pour les substitutions. </p>
                 <p>NB: de cette façon, il n'y a pas besoin de typer les sic et corr.</p>
             </div>
-            <div>
+            <div xml:id="DIV_NAMESDATES">
                 <head>Noms, dates, personnes et lieux</head>
                 <p/>
                 <div>
@@ -1488,10 +1490,14 @@
                                 <specDesc key="forename"/>
                                 <specDesc key="nameLink"/>
                                 <!-- Voir s'il est pertinent de conserver cet élément -->
-                                <specDesc key="surname"/>
-                                <specDesc key="roleName"/>
+                                <!--<specDesc key="surname"/>-->
+                                <specDesc key="placeName"/>
+                            <!--<specDesc key="roleName"/>--><!-- NB: pour le moment, je crois que seul addName est employé dans l'encodage, car parfois délicat de distinguer nom aditionnel et 
+                            rôle 
+                            -->
                                 <!-- Pour les noms de fonctions, titres -->
                                 <specDesc key="addName"/>
+                            
                                 <!-- @type = "epithet" 
                   @ subtype = "familial", "geographical", "", 
                   /!\ NB: pour ne pas réinventer la poudre, voir s'il existe des typologie d'épithètes épiques employés dans les chansons de geste.  
@@ -1515,13 +1521,48 @@
               Note, how­ever, that the role a per­son has in a given con­text (such as wit­ness, de­fen­dant, etc. in a legal doc­u­ment) should not be en­coded using the role­Name el­e­ment, since this is in­tended to mark roles which func­tion as part of a per­son's name, not the role of the per­son bear­ing the name in gen­eral. In­for­ma­tion about roles, oc­cu­pa­tions, etc. of a per­son are en­coded within the per­son el­e­ment dis­cussed below in 13.3. Bi­o­graph­i­cal and Proso­po­graph­i­cal Data.
               
               Here are some fur­ther ex­am­ples of the usage of these el­e­ments:-->
+                            Il n'est pas fait de distinction entre nom additionnel et nom de rôle (<mentioned>li dus</mentioned> ou <mentioned>li reis</mentioned> sont
+                            encodés comme nom additionnels, au même titre que <mentioned>li daneis</mentioned>). 
+                            Les noms de terre ou de lieu accolés aux prénoms sont encodés avec <gi>placeName</gi>, dans la mesure où ils gardent 
+                            généralement leur sens originel.
+                            Ces éléments peuvent entrer en conjonction.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <!-- d'Aigremunt Baldewin l'afïez -->
+                                <persName><nameLink><w rend="elision">d</w></nameLink>
+                                    <placeName><w>Aigremunt</w></placeName>
+                                    <forename><w>Baldewin</w></forename>
+                                    <addName><w rend="elision">l</w>
+                                        <w>afïez</w></addName></persName>
+                                
+                                <!-- Balsami, li reis de Ninivant -->
+                                <persName>
+                                    <forename><w>Balsami</w></forename>
+                                    <pc type="supplied">,</pc> 
+                                    <addName>
+                                        <w>li</w>
+                                        <w>reis</w>
+                                        <w>de</w>
+                                        <placeName><w>Ninivant</w></placeName></addName>
+                                </persName>
+                            </egXML>
                         </p>
                     </div>
                     <div>
                         <head>Noms de lieux</head>
-                        <p>
+                        <p> Les noms de lieux sont encodés, sans précision supplémentaire, avec <!-- Sans doute quelque chose qui évoluera -->
                             <specList>
                                 <specDesc key="placeName"/>
+                            </specList>
+                        </p>
+                    </div>
+                    <div><head>Autres noms propres</head>
+                        <p>Les chansons de geste sont riches d'une variété d'autres noms propres, souvent relatives à l'équipement militaire du chevalier,
+                        et parmi lesquelles on retrouve l'épée, le cor, ou bien encore le destrier. 
+                        On y trouve également des noms de peuples, et une variété de noms propres ne désignant ni une personne ni un lieu. 
+                        Tous ceux-ci sont encodés en utilisant l'élément <gi>name</gi> et en précisant la valeur du nom par l'attribut
+                            <att>type</att>
+                            <specList>
+                                <specDesc key="name" atts="type"></specDesc>
                             </specList>
                         </p>
                     </div>
@@ -1538,6 +1579,15 @@
                                 <specDesc key="listPlace"/>
                             </specList>
                         </p>
+                        
+                        <p>Pour les personnes, les entrées prennent la forme</p>
+                        <!-- On va avoir besoin de personGrp en plus de person pour les peuples -->
+                        
+                        
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            
+                        </egXML>
+                        
                     </div>
                 </div>
             </div>
@@ -1547,7 +1597,9 @@
                     xml:lang="fr">
                     <!-- Sélection à faire parmi les informations du teiHeader-->
                     <moduleRef key="header"
-                        include="authority availability biblFull creation change fileDesc handNote idno licence teiHeader language langUsage profileDesc publicationStmt publisher revisionDesc sourceDesc titleStmt"/>
+                        include="authority availability biblFull creation change fileDesc handNote 
+                        idno licence teiHeader language langUsage profileDesc publicationStmt publisher 
+                        revisionDesc sourceDesc titleStmt"/>
                     <elementSpec ident="teiHeader" mode="change">
                         <content>
                             <sequence>
@@ -1673,6 +1725,9 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="note" mode="change">
+                        <classes>
+                            <memberOf key="att.placement" mode="delete"/>
+                        </classes>
                         <constraintSpec ident="typeNote" scheme="isoschematron">
                             <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
                             <constraint>
@@ -1706,30 +1761,12 @@
                                     <!--  -->
                                 </valList>
                             </attDef>
-                            <attDef ident="anchored" mode="delete"/>
+                            <attDef ident="anchored" mode="delete"/><!-- Retraits d'attributs propre à note -->
                             <attDef ident="targetEnd" mode="delete"/>
-                            <!--<attDef ident="xml:id" mode="delete"/>-->
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="place" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
                         </attList>
                     </elementSpec>
                     <elementSpec ident="p" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <!--<attDef ident="part" mode="change">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="N"/>
-                                </valList>
-                            </attDef>-->
-                        </attList>
+                        <!-- Plus de changement pour le moment -->
                     </elementSpec>
                     <elementSpec ident="hi" mode="change">
                         <!-- @rend à définir avec vallist -->
@@ -1742,10 +1779,6 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
                             <attDef ident="rend" mode="change" usage="rec">
                                 <valList mode="add" type="closed">
                                     <!-- Quelques généralités -->
@@ -1801,49 +1834,16 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="quote" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="term" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="ref" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="sic" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="corr" mode="change">
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
                             <!--<attDef ident="cert" mode="delete"/>-->
                             <attDef ident="type" mode="change">
                                 <defaultVal>editorial</defaultVal>
@@ -1854,58 +1854,33 @@
                                     <valItem ident="erratum"><desc>caractérise la correction d'une coquille, ou de toute autre erreur extérieure à la tradition manuscrite</desc></valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="choice" mode="change">
                         <!-- Modification du modèle de contenu: pas de choice directement dans un choice -->
+                        <!-- Affiner en obligeant des combinaisons abbr/expan? -->
                         <content>
                             <classRef key="model.choicePart" minOccurs="2" maxOccurs="unbounded"/>
                             <!-- Voir s'il faut limiter à strictement deux -->
                         </content>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                        </attList>
                     </elementSpec>
                     <elementSpec ident="reg" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>-->
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="orig" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                        </attList>
+                       
                     </elementSpec>
                     <elementSpec ident="gap" mode="change">
+                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                            <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
+                            <constraint>
+                                    <s:assert test="@quantity or (@min and @max)">Une quantité (@quantity)
+                                    ou un intervalle (@min et @max) doit être précisé pour l'élément gap</s:assert>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="hand" mode="delete"/>
-                            <attDef ident="agent" mode="delete"/>
-                            <!--<attDef ident="xml:id" mode="delete"/>-->
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
+                            <attDef ident="agent" mode="delete"/><!-- À voir -->
                             <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="fol">
@@ -1919,10 +1894,9 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="quantity" mode="change" usage="req"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
-                            <!--<attDef ident="resp" mode="delete"/>-->
+                            <attDef ident="quantity" mode="change" usage="rec"/>
+                            <attDef ident="min" mode="change" usage="rec"/>
+                            <attDef ident="max" mode="change" usage="rec"/>
                             <attDef ident="reason" mode="change" usage="req">
                                 <!-- TODO: voir s'il est pertinent de centraliser les valeurs de reason entre les différents attributs -->
                                 <valList mode="add" type="closed">
@@ -1943,23 +1917,10 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <!--<attDef ident="resp" mode="delete"/>-->
                         </attList>
                     </elementSpec>
                     <elementSpec ident="add" mode="change">
                         <attList>
-                            <!--<attDef ident="xml:id" mode="delete"/>-->
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <!--<attDef ident="sameAs" mode="delete"/>-->
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="status" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
-                            <!--<attDef ident="resp" mode="delete"/>-->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="above">
@@ -1999,7 +1960,6 @@
                                 TODO: je garde @type, mais enlève les valeurs prévues, qui ne me conviennent plus.
                             Néanmoins, on pourrait avoir besoin de @type pour différencier d'éventuels ajouts au texte des corrections du copiste
                             -->
-                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2011,8 +1971,6 @@
                     </elementSpec>
                     <elementSpec ident="del" mode="change">
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
                             <attDef ident="rend" mode="change" usage="req">
                                 <constraintSpec scheme="isoschematron" ident="repasse-only-in-subst">
                                     <constraint>
@@ -2049,17 +2007,6 @@
                                     <!--<valItem ident="strikethrough"/>-->
                                 </valList>
                             </attDef>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="hand" mode="delete"/>
-                            <attDef ident="status" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2090,39 +2037,10 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="hand" mode="delete"/>
-                            <attDef ident="agent" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
-                            <!--<attDef ident="resp" mode="delete"/>-->
                         </attList>
                     </elementSpec>
                     <elementSpec ident="name" mode="change">
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="full" mode="change">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="yes"/>
-                                </valList>
-                            </attDef>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <desc>le typage des noms propres est obligatoire. Pour les cas qui le permettent,
                                     l'usage des éléments spécialisés <gi>persName</gi> et <gi>placeName</gi> est préférable.
@@ -2139,82 +2057,36 @@
                                     <valItem ident="plante">
                                         <desc>caractérise un nom donné à une plante supposée porteuse de vertus</desc>
                                     </valItem>
+                                    <valItem ident="fête">
+                                        <desc>caractérise le nom d'une fête calendaire</desc>
+                                    </valItem>
                                     <valItem ident="peuple">
                                         <desc>caractérise un peuple, au sens large (Sarrasins, Franceis, Danois, Païens, etc.).</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="date" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="abbr" mode="change">
-                        <attList>
-                            <attDef ident="type" mode="delete"/>
-                            <!--<attDef ident="xml:id" mode="delete"/>-->
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <!--<attDef ident="sameAs" mode="delete"/>-->
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="expan" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
-                            <!--<attDef ident="resp" mode="delete"/>-->
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="head" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="pb" mode="change">
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
+                           
                             <attDef ident="facs" mode="change" usage="req">
                                 <gloss>renvoie au feuillet du facsimile</gloss>
                             </attDef>
                             <attDef ident="n" mode="change" usage="req"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
+                            
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2233,16 +2105,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="lb" mode="change">
-                        <attList>
-                            <!--<attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>-->
-                            <!--<attDef ident="rend" mode="delete"/>-->
-                            <attDef ident="sameAs" mode="delete"/>
-                            <!--<attDef ident="facs" mode="delete"/>-->
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="edRef" mode="delete"/>
-                        </attList>
+                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <gb n="A"/><!-- Début du cahier A du manuscrit -->
@@ -2261,14 +2124,8 @@
                     </elementSpec>
                     <elementSpec ident="cb" mode="change">
                         <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
                             <attDef ident="n" mode="change" usage="req"/>
-                            <!--<attDef ident="facs" mode="delete"/>-->
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="edRef" mode="delete"/>
+                            
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2287,37 +2144,16 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="editor" mode="change">
-                        <attList>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="ref" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="respStmt" mode="change">
-                        <attList>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="ref" mode="delete"/>
-                            <!--<attDef ident="xml:id" mode="change" usage="req"/>-->
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="resp" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="ref" mode="delete"/>
-                        </attList>
+                       
                     </elementSpec>
                     <elementSpec ident="title" mode="change">
                         <attList>
-                            <attDef ident="level" mode="delete"/>
                             <attDef ident="type" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="main">
@@ -2333,19 +2169,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="ref" mode="delete"/>
-                            <attDef ident="type" mode="change">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="main"/>
-                                    <valItem ident="sub"/>
-                                </valList>
-                            </attDef>
-                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2387,20 +2210,7 @@
                         
                     </elementSpec>-->
                     <elementSpec ident="listBibl" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="default" mode="change">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="false"/>
-                                </valList>
-                            </attDef>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="l" mode="change">
                         <content>
@@ -2435,13 +2245,11 @@
                                 <gloss>contient le numéro du vers (obligatoire pour la version
                                     définitive de l'édition)</gloss>
                             </attDef>
-                            <attDef ident="facs" mode="delete"/>
                             <!--                            <attDef ident="part" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="N"/>
                                 </valList>
                             </attDef>-->
-                            <attDef ident="part" mode="delete"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="lg" mode="change">
@@ -2457,9 +2265,6 @@
                         </content>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="rec"/><!-- ou seulement obligatoire dans la version définitive? -->
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
                             <!--<attDef ident="org" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="uniform"/>
@@ -2483,8 +2288,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="n" mode="change" usage="req"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2533,9 +2336,24 @@
                         car certaines de ces classes ou macros demeurent utilisées sur certains éléments. 
                         Songer à corriger cela
                     -->
+                    <classSpec type="atts" ident="att.cReferencing" module="tei" mode="delete"/>
+                    <classSpec type="atts" module="tei" ident="att.datable" mode="change">
+                        <remarks xml:lang="fr"><p>Cette‘superclasse’ fournit des attributs qui peuvent être employés
+                            pour donner des valeurs normalisées à des informations relatives au temps. 
+                            Les attributs de la classe att.datable.w3c sont fournis. En général, les valeurs possibles des attributs, limitées aux types de données W3C, 
+                            forment un sous-ensemble des valeurs que l'on trouve dans la norme ISO 8601. 
+                            Cependant, il n'est peut-être pas nécessaire de recourir aux possibilités très étendues des types de données de l'ISO. 
+                            Il existe en effet une bien plus grande offre logicielle pour le traitement des types de données W3C.</p></remarks>
+                    </classSpec>
                     <classSpec ident="att.datcat" type="atts" module="tei" mode="delete"/>
                     <!-- On va quand même vraisemblablement avoir besoin de front et de back -->
                     <classSpec ident="att.declarable" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.declaring" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.dimensions" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="extent" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.docStatus" module="tei" type="atts" mode="change">
                         <attList>
                             <attDef ident="status" mode="change" usage="rec">
@@ -2573,6 +2391,7 @@
                         </attList>
                     </classSpec>
                     <classSpec ident="att.divLike" module="tei" type="atts" mode="delete"/>
+                    <!-- TODO: att.edition > voir s'il faut le conserver ou non. Pour le moment, n'est pas utilisé. -->
                     <classSpec ident="att.editLike" module="tei" type="atts" mode="change">
                         <attList>
                             <!-- On garde evidence et on vire instant ? -->
@@ -2591,13 +2410,35 @@
                         </attList>
                     </classSpec>
                     <!--  att.global.linking : à revoir et simplifier quand on travaillera sur la partie correspondante du modèle -->
+                    <classSpec type="atts" ident=" att.global.linking" module="tei" mode="change">
+                        <attList>
+                            <attDef ident="synch" mode="delete"/>
+                            <attDef ident="copyOf" mode="delete"/><!-- À voir -->
+                            <attDef ident="next" mode="delete"/>
+                            <attDef ident="prev" mode="delete"/>
+                            <attDef ident="exclude" mode="delete"/>
+                            <attDef ident="select" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.global.rendition" type="atts" module="tei" mode="change">
                         <attList>
                             <attDef ident="style" mode="delete"/>
                             <attDef ident="rendition" mode="delete"/>
                         </attList>
                     </classSpec>
-                    <!-- att.naming peut-être à supprimer aussi -->
+                    <!-- att.naming peut-être à supprimer aussi. Oui, en tout cas pour le moment. 
+                    À voir si on le réintègre au moment de l'analyse littéraire
+                    Je le garde pour des questions d'architecture, mais je vire son contenu propre
+                    -->
+                    <classSpec type="atts" ident="att.internetMedia" module="tei" mode="delete"/>
+                    <classSpec type="atts" ident="att.media" module="tei" mode="delete"/>
+                    <classSpec type="atts" module="tei" ident="att.naming" mode="change">
+                        <attList>
+                            <attDef ident="role" mode="delete"/>
+                            <!-- Faut-il garder nymRef? -->
+                            <attDef ident="nymRef" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.personal" module="tei" type="atts" mode="change">
                         <!-- Il faudra à terme supprimer cette classe et rattacher directement celles de niveau inférieur à celles de
                         niveau supérieur
@@ -2607,12 +2448,21 @@
                             <attDef ident="sort" mode="delete"/>
                         </attList>
                     </classSpec>
+                    <classSpec type="atts" ident="att.pointing" module="tei" mode="change">
+                        <attList>
+                            <attDef ident="targetLang" mode="delete"/>
+                            <attDef ident="evaluate" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    <classSpec type="atts" ident="att.spanning" module="tei" mode="delete"/>
+                    <classSpec type="atts" ident="att.timed" module="tei" mode="delete"/>
                     <!-- Retrait des classes consacrées à la description de la correspondance -->
                     <classSpec ident="model.correspActionPart" type="model" module="tei"
                         mode="delete"/>
                     <classSpec ident="model.correspContextPart" type="model" module="tei"
                         mode="delete"/>
                     <classSpec ident="model.correspDescPart" type="model" module="tei" mode="delete"/>
+                    <classSpec type="model" ident="model.divBottom" module="tei" mode="delete"></classSpec>
                     <classSpec ident="model.global.meta" type="model" mode="delete"/>
                     <!-- Pas besoin pour l'instant -->
                     <!-- Retrait de : 
@@ -2629,17 +2479,22 @@
                     <classSpec ident="model.profileDescPart" type="model" module="tei" mode="delete"/>
                     <classSpec ident="model.teiHeaderPart" type="model" module="tei" mode="delete"/>
                     <!-- Passons aux macros -->
-                    <macroSpec ident="data.duration.iso" type="dt" module="tei" mode="delete"/>
-                    <macroSpec ident="data.duration.w3c" type="dt" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.duration.iso" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.duration.w3c" module="tei" mode="delete"/>
                     <!-- Je retire celle-ci qui n'est pas utilisée, mais à rajouter si besoin -->
                     <!-- Je garde data.pattern pour une éventuelle notation de la métrique -->
-                    <macroSpec ident="data.replacement" type="dt" module="tei" mode="delete"/>
-                    <macroSpec ident="data.temporal.iso" type="dt" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.namespace" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.pattern" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.replacement" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.temporal.iso" module="tei" mode="delete"/>
+                    <dataSpec ident="teidata.versionNumber" module="tei" mode="delete"></dataSpec>
 
                     <moduleRef key="textstructure" include="TEI back body front div text"/>
                     <elementSpec ident="TEI" mode="change">
                         <attList>
-                            <attDef ident="version" mode="delete"/>
+                            <attDef ident="version" mode="change" usage="rec">
+                                <defaultVal>P5</defaultVal>
+                            </attDef>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="ed">
@@ -2664,31 +2519,13 @@
                                     une édition, du nom de famille du premier éditeur suivi d'un
                                     tiret et de la date, voir <ptr target="#DIV_INFR"/>)</desc>
                             </attDef>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="text" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                        </attList>
+                       
                     </elementSpec>
                     <elementSpec ident="body" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                        </attList>
+                        
                         <!-- TODO: ajouter un exemple -->
                     </elementSpec>
                     <elementSpec ident="div" mode="change">
@@ -2705,94 +2542,41 @@
                         </attList>
                     </elementSpec>
                     <moduleRef key="verse" include="att.metrical"/>
-                    <!-- À terme, on va peut-être virer les rdgGrp, à moins que l'on en ait besoin pour les traductions, mais sans doute pas? -->
+                    
                     <moduleRef key="textcrit"
-                        include="app lacunaStart lacunaEnd lem listWit rdg rdgGrp wit witDetail witness"/>
+                        include="app lacunaStart lacunaEnd lem listWit rdg wit witDetail witness"/>
                     <elementSpec ident="app" mode="change">
                         <attList>
-                            <attDef ident="type" mode="delete"/>
+                            <attDef ident="xml:id" mode="change" usage="rec"/>
                             <attDef ident="from" mode="delete"/>
                             <attDef ident="to" mode="delete"/>
                             <attDef ident="loc" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
+                        <remarks xml:lang="fr"><p>Il est préférable que les lieux variants possèdent un <att>xml:id</att>.</p></remarks>
                     </elementSpec>
                     <elementSpec ident="lem" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <!--<attDef ident="cert" mode="delete"/>-->
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="rdg" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="rdgGrp" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="witDetail" mode="change">
                         <attList>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
                             <attDef ident="place" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="wit" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="listWit" mode="change">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="witness" mode="change">
-                        <attList>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
-                    <!-- Pourquoi, ô grand pourquoi, supprimer att.textCritical? Au grand contraire, on va devoir le redéfinir en détail. -->
-                    <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="delete"/>
+                    <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="change">
+                    <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->    
+                    </classSpec>
                     <moduleRef key="analysis" include="c pc w"/>
                     <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
                     tel que je le vois
@@ -2824,22 +2608,9 @@
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Vraisemblablement, on peut supprimer cet attribut servant à indiquer que l'élément parent est complet ou non.
                              À terme, on aura plutôt à modifier les classes d'attribut.
                             -->
-                            <!--<attDef ident="part" mode="change">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="N"/>
-                                </valList>
-                            </attDef>-->
-                            <attDef ident="part" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="lemmaRef" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="corresp" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
                             <!-- Si on ne peut pas utiliser ici mwa, qui a été retiré des Guidelines, utiliser une valeur par défaut -->
                             <attDef ident="rend" mode="change" usage="rec">
                                 <!--  -->
@@ -2868,13 +2639,11 @@
                         <attList>
                             <!-- Il faut reprendre les attributs de cet élément, en clarifiant l'usage de type
                             et celui de rend-->
-                            <attDef ident="force" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
+                            <attDef ident="force" mode="delete"/><!-- Voir, après la modélisation de la syntaxe, si on en a besoin -->
+                            <attDef ident="unit" mode="delete"/><!-- Voir si on en a besoin -->
                             <attDef ident="pre" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
                             <!--<attDef ident="rend" mode="change" usage="opt">
                             </attDef>-->
-                            <attDef ident="corresp" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="supplied">
@@ -2911,10 +2680,28 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <!--<moduleRef key="namesdates"/>-->
                     <!-- nameLink : pour le "de" Truc, mais pas forcément indispensable, à voir.-->
                     <moduleRef key="namesdates"
                         include="addName country forename listPerson listPlace nameLink orgName persName person placeName roleName settlement surname"/>
+                    <!-- Modèle de person et listPerson à préciser -->
+                    <classSpec type="atts" module="namesdates" ident="att.datable.iso" mode="delete"/>
+                    <classSpec type="atts" module="namesdates" ident="att.datable.custom" mode="delete"/>
+                    <elementSpec ident="person" module="namesdates" mode="change">
+                        <content>
+                            <alternate minOccurs="0"
+                                maxOccurs="unbounded">
+                                <classRef key="model.personPart"/>
+                                <classRef key="model.global"/>
+                            </alternate>
+                        </content>
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                        </attList>
+                        <remarks xml:lang="fr"><p>L'attribut <att>xml:id</att> est obligatoire pour l'indexation des
+                            personnes, afin de rendre systématiquement possible l'indexation des occurrences.</p></remarks>
+                    </elementSpec>
+                    
+                    
                     <moduleRef key="transcr"
                         include="am damage ex facsimile handShift space subst surface surfaceGrp zone"/>
                     <!-- TODO: configuration de facsimile, surface, surfaceGrp et zone à faire -->
@@ -2923,39 +2710,12 @@
                         <classes mode="change">
                             <memberOf key="model.choicePart" mode="delete"/>
                         </classes>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                        </attList>
+                        
                     </elementSpec>
                     <elementSpec ident="am" mode="change">
                         <classes mode="change">
                             <memberOf key="model.choicePart" mode="delete"/>
                         </classes>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="type" mode="delete"/>
-                            <attDef ident="subtype" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                        </attList>
                     </elementSpec>
                     <elementSpec ident="handShift" mode="change">
                         <attList>
@@ -2987,15 +2747,8 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="dim" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
+                            <!--<attDef ident="dim" mode="delete">
+                            </attDef>--><!-- Je le garde pour le moment, à réfléchir -->
                             <!--<attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>-->
                         </attList>
@@ -3024,21 +2777,7 @@
                                 <elementRef key="add"/>
                             </alternate>
                         </content>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="rend" mode="delete"/>
-                            <attDef ident="sameAs" mode="delete"/>
-                            <attDef ident="facs" mode="delete"/>
-                            <attDef ident="hand" mode="delete"/>
-                            <attDef ident="status" mode="delete"/>
-                            <attDef ident="unit" mode="delete"/>
-                            <attDef ident="quantity" mode="delete"/>
-                            <attDef ident="min" mode="delete"/>
-                            <attDef ident="max" mode="delete"/>
-                            <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                        </attList>
+                       
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <w>p<subst><del rend="repassé">lu</del><add place="inplace"
