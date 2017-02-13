@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
-<!-- TODO: att.global.facs à restreindre, att.global.source aussi?-->
-<!-- Virer globalement @subtype?-->
+<!-- Étape du grand nettoyage du modèle:
+   - revoir systématiquement les specs des éléments pour leurs attributs, contenus, classes, etc.
+   - revoir leur documentation, en comparant systématiquement avec la dernière version des Guidelines;
+   - réviser et nettoyer les commentaires
+   - rédiger les paragraphes de documentation manquants, et revoir globalement la doc;
+
+-->
 <!-- teidata.name n'est plus utilisé, de même que teidata.temporal.w3c. Bugs? -->
 <!--
-    Revoir complètement le modèle, en commençant par retirer toutes les suppressions d'attributs au niveau
-    des éléments, et revoir en profondeur les classes du modèle.
+    Revoir en profondeur les classes du modèle.
     
     TODO:
-    => ne plus (ou le moins possible) supprimer d'attributs au niveau des éléments, mais, en revanche, revoir l'ensemble des classes d'attributs conservées, et faire le tri
-    intégration @xml:lang (rendre obligatoire au moins à la racine et sur body).
-    ajout de mentioned, à restreindre aux notes et introd.
+    nettoyage à faire en probability, certainty et probCert. Voir aussi si on veut supprimer la valeur unknown.
+    
+    ajout de mentioned, à restreindre aux notes et introd. => le plus simple serait de restreindre l'utilisation du model.emphLike
     restreindre emph aux notes et introd.
+    
     supprimer damage du modèle ? (on ne l'utilise jamais)
     préciser gestion des références bibliographiques
+    
     une fois que le modèle sera complètement écrit, il faudra modifier les descriptions d'éléments, pour qu'elles pointent vers le chapitre correspondant
     du modèle, et pas vers les Guidelines.
+    
     Pour distinguer selon le statut du texte, faire des tests schématron en fonction de la valeur @status du revisionDesc (et le décrire dans le document ODD)
     TODO: revoir les modèles de contenu des éléments d'un niveau inférieur au vers (contenu des éléments w, …) et des éléments de niveau intermédiaire (del, add, etc.)
-    TODO: inclure c? et définir son usage.
     Supprimer l'élément <wit> ?
     
     %%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +59,7 @@
         : se décider déjà sur celle que l'on va faire concrètement, et celle qu'on réserve pour l'édition proprement dite
         : => ne corriger que celles qui relèvent d'un phénomène de surface, local, linguistique ou distraction et imputable au scribe (i.e. toujours cette idée de ne corriger que ce que le scribe aurait pu corriger lui-même ? Mais comment mieux définir ça?))?
       
-      * redéfinir les classes avec classRef / classSpec, à chaque fois qu'on peut faire les définitions à ce niveau plutôt qu'au niveau des éléments individuels.
+      * redéfinir les classes avec classSpec, à chaque fois qu'on peut faire les définitions à ce niveau plutôt qu'au niveau des éléments individuels.
         - faire la même chose pour les macros.
 -->
 <TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0"
@@ -141,9 +147,9 @@
                     <p>Les documents ont pour racine l'élément <gi>TEI</gi>, et se décomposent en un
                             <gi>teiHeader</gi>, comportant des métadonnées de niveau document, et
                             <gi>text</gi>, contenant l'édition proprement dite. <specList>
-                            <specDesc key="TEI" atts="xml:id type"/>
+                                <specDesc key="TEI" atts="type xml:id xml:lang"/>
                             <specDesc key="teiHeader"/>
-                            <specDesc key="text"/>
+                            <specDesc key="text" atts="xml:lang"/>
                         </specList>
                     </p>
                     <p>L'élément <gi>TEI</gi> doit porter obligatoirement un <att>type</att>, définissant si le document contient une édition numérisée (<val>ed</val>),
@@ -160,6 +166,7 @@
                             <item n="3">le sigle du manuscrit (ou celui attribué au texte critique),
                                 ou, pour une édition, le nom de famille du premier éditeur suivi
                                 d'un tiret et de la date.</item>
+                            <!-- TODO: revoir cela pour indiquer que l'on utilise les noms du DEAF -->
                         </list>
                         <eg>Numérisation de l'édition</eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -460,7 +467,10 @@
                     <head>Parties liminaires et finales</head>
                     <p>Principalement dans les numérisations d'éditions anciennes, il est possible
                         de subdiviser le contenu du <gi>front</gi> et du <gi>back</gi>, en faisant
-                        emploi de subdivisions: <specDesc key="div" atts="type"/>
+                        emploi de subdivisions: 
+                        <specList>
+                            <specDesc key="div" atts="type"/>
+                        </specList>
                     </p>
                     <p>À l'intérieur de ces subdivisions, il est nécessaire d'encoder paragraphes,
                         et éventuellement autres éléments de structuration de la prose: <specList>
@@ -474,8 +484,10 @@
                 <div>
                     <head>Le texte des chansons</head>
                     <p>Le texte des chansons est placé dans un élément <gi>body</gi>, au sein du
-                            <gi>text</gi>, dont il est le seul composant obligatoire. <specDesc
-                            key="body"/>
+                            <gi>text</gi>, dont il est le seul composant obligatoire. 
+                        <specList>
+                            <specDesc key="body"/>
+                        </specList>
                     </p>
                     <p>À l'intérieur de cet élément, le texte est structuré en laisses et vers, avec
                             <gi>lg</gi> et <gi>l</gi>
@@ -522,7 +534,9 @@
                     <head>Contenu des vers</head>
                     <p>Le contenu des vers se compose régulièrement de mots lexicaux (i.e. pouvant
                         être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi>:
+                        <specList>
                             <specDesc key="w" atts="xml:id rend lemma lemmaRef ana"/>
+                        </specList>
                     </p>
                     <p>Dans la version définitive de l'édition, l'attribut <att>xml:id</att> doit
                         être renseigné, de même que les attributs <att>lemma</att>,
@@ -924,6 +938,15 @@
                         permet de faire le lien vers le facsimile numérique. Il est obligatoire pour
                         les pages ; dans la version définitive, il le sera également pour les
                         colonnes et lignes. </p>
+                    <p>L'attribut <att>facs</att> est porté par les éléments de structure physique jusqu'au niveau de la ligne.
+                    Dans les cas où l'on souhaite réaliser une correspondance plus fine encore entre texte
+                    et zones d'images, on pourra le faire porter, pour une correspondance avec les mots graphiques,
+                    par <gi>space</gi>, et, pour une correspondance au niveau du caractère, par <gi>c</gi>.
+                        <specList>
+                            <specDesc key="space" atts="facs"/>
+                            <specDesc key="c" atts="facs"/>
+                        </specList>
+                    </p>
                     <p>Les dégâts d'une certaine ampleur sur la source sont signalés par l'élément
                             <gi>damage</gi>, lorsque ceux-ci n'entraînent pas de lacune dans la
                         transcription. Dans le cas contraire, c'est l'élément <gi>gap</gi> qui est
@@ -941,8 +964,11 @@
                     <p>Les lettrines, et autres types de mise en valeur ou décoration de portions de
                         texte, sont marquées par l'emploi de l'élément <gi>hi</gi>. L'attribut
                             <att>rend</att>, obligatoire dans le cas des transcriptions de manuscrit, est utilisé pour préciser, par une série
-                        de valeurs séparées par des espaces, la nature de la décoration. <specDesc
-                            key="hi" atts="rend"/>
+                        de valeurs séparées par des espaces, la nature de la décoration. 
+                        <specList>
+                            <specDesc
+                                key="hi" atts="rend"/>
+                        </specList>
                     </p>
                     <p>On prendra soin de noter qu'il est, la plupart du temps, pour la décoration,
                         nécessaire de donner plusieurs valeurs à cet attribut <att>rend</att>:
@@ -964,8 +990,11 @@
                     <p>Les mains et écritures présentes dans le manuscrit sont décrites dans sa
                         notice <gi>msDesc</gi> (voir supra, <ptr target="#DIV_MSDESC"/>).</p>
                     <p>Les changements de main dans le manuscrit sont signalés par l'utilisation
-                        d'un élément <gi>handShift</gi>. <specDesc key="handShift"
-                            atts="new scriptRef"/>
+                        d'un élément <gi>handShift</gi>. 
+                        <specList>
+                            <specDesc key="handShift"
+                                atts="new scriptRef"/>
+                        </specList>
                         <!-- TODO: concurrence entre @new et @scribeRef. Choisir entre les deux -->
                     </p>
                     <p>L'attribut <att>new</att> doit être obligatoirement présent, et pointer vers
@@ -989,7 +1018,9 @@
                         l'utilisation de l'élément <gi>choice</gi>, qui permet plusieurs
                         représentations concurrentes d'un même fait. Il permet notamment de
                         rattacher une variante de forme de lettre à une forme de référence.
-                            <specDesc key="choice"/>
+                            <specList>
+                                <specDesc key="choice"/>
+                            </specList>
                     </p>
                     <!-- TODO: voir s'il n'est pas plus opportun de documenter choice plus tôt -->
                     <!-- TODO: modification à faire au modèle choicePart: voir s'il est opportun de limiter à deux les occurrences de membres du model.choicePart
@@ -1187,7 +1218,10 @@
                     <div>
                         <head>Ponctuation</head>
                         <p> La ponctuation est marquée par l'emploi d'éléments<!-- TODO: traiter ponctuation éditoriale ailleurs -->
-                            <specDesc key="pc" atts="type subtype rend"/> L'attribut <att>type</att>
+                            <specList>
+                                <specDesc key="pc" atts="type subtype rend"/>
+                            </specList> 
+                            L'attribut <att>type</att>
                             permet de distinguer la ponctuation d'origine de la ponctuation
                             éditoriale. L'attribut <att>subtype</att> classifie les signes de
                             ponctuation originale, selon leur usage. <!-- Il y a deux choses à traiter: d'une part le sémantisme de la ponctuation médiévale 
@@ -1207,7 +1241,9 @@
                                 <specDesc key="w" atts="rend"/>
                             </specList> ainsi que, pour les cas de coupures internes à un mot
                             lexical, de l'élément <gi>space</gi><!-- TODO: faut-il rendre quantity obligatoire? -->
-                            <specDesc key="space"/>
+                            <specList>
+                                <specDesc key="space"/>
+                            </specList>
                         </p>
                         <p>Cela permet ainsi de traiter les cas de séparation de mots unis dans la
                             source, <eg>lɑflur</eg>
@@ -1258,8 +1294,11 @@
                     </div>
                     <div>
                         <head>Espacement</head>
-                        <p>Pour marquer explicitement des espaces, on pourra utiliser <specDesc
-                                key="space" atts="quantity unit"/>
+                        <p>Pour marquer explicitement des espaces, on pourra utiliser 
+                            <specList>
+                                <specDesc
+                                    key="space" atts="quantity unit"/>
+                            </specList>
                         </p>
                         <p>Cet élément peut ainsi permettre de signaler des espaces laissés blancs
                             par le copiste (initiales réservées, blanc laissé dans la ligne pour
@@ -1420,9 +1459,20 @@
             <div xml:id="DIV_LING">
                 <head>Interprétation et analyse (linguistique)</head>
                 <p>Les mots sont étiquetés linguistiquement en utilisant l'élément <gi>w</gi> et ses
-                    attributs <specDesc key="w" atts="lemma ana"/> L'attribut <att>ana</att> est
+                    attributs 
+                    <specList>
+                        <specDesc key="w" atts="lemma ana"/>
+                    </specList>
+                    L'attribut <att>ana</att> est
                     utilisé pour pointer vers les éléments d'analyse morphosyntaxique et syntaxique. </p>
-                <!-- Voir 17.4 Linguistic Annotation -->
+                <!-- Voir 17.4 Linguistic Annotation --><!-- TODO: à développer -->
+                <p>Dans les cas où l'on souhaite annoter au niveau du caractère, on pourra également utiliser
+                l'élément <gi>c</gi>:
+                    <specList>
+                        <specDesc key="c"/>
+                    </specList>
+                </p>
+                <!-- Signes de ponctuation, etc.? -->
 
             </div>
             <!-- Graphs et structures non-hiérarchiques laissées de côté pour l'instant     -->
@@ -1431,7 +1481,9 @@
                 <head>Degré de certitude et de précision, responsabilité</head>
                 <p>Les degrés de certitude, et les mentions de responsabilité, peuvent être ajoutés aux
                     éléments, par le biais des attributs fournis par la classe <code>att.global.responsibility</code>
-                    <specDesc key="att.global.responsibility"/>
+                    <specList>
+                        <specDesc key="att.global.responsibility"/>
+                    </specList>
                 </p>
                 <p>L'attribut <att>resp</att> contient un pointeur, correspondant à une déclaration d'identifiant <att>xml:id</att> 
                 d'une mention de responsabilité de l'entête.
@@ -1447,7 +1499,9 @@
                     </egXML>
                 </p>
                 <p>Le degré de certitude est exprimé par une valeur de type <val>data.certainty</val>
-                    <specDesc key="data.certainty"/>
+                    <specList>
+                        <specDesc key="teidata.certainty"/>
+                    </specList>
                 </p>
             </div>
             <!-- [TO BE CONTINUED]           -->
@@ -1704,6 +1758,9 @@
                     <elementSpec ident="gb" mode="change">
                         <desc> (gathering begins) marque le début d'un nouveau cahier dans un
                             manuscrit transcrit.</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
                         <!-- Désambiguation de la définition des Guidelines (suppr. gathering au profit de quire) -->
                         <attList>
                             <attDef ident="n" mode="change" usage="req"/>
@@ -1726,7 +1783,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="note" mode="change">
-                        <classes>
+                        <classes mode="change">
                             <memberOf key="att.placement" mode="delete"/>
                         </classes>
                         <constraintSpec ident="typeNote" scheme="isoschematron">
@@ -2081,13 +2138,14 @@
                         
                     </elementSpec>
                     <elementSpec ident="pb" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
                         <attList>
-                           
                             <attDef ident="facs" mode="change" usage="req">
                                 <gloss>renvoie au feuillet du facsimile</gloss>
                             </attDef>
                             <attDef ident="n" mode="change" usage="req"/>
-                            
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2106,7 +2164,9 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="lb" mode="change">
-                        
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <gb n="A"/><!-- Début du cahier A du manuscrit -->
@@ -2124,9 +2184,11 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="cb" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
                         <attList>
                             <attDef ident="n" mode="change" usage="req"/>
-                            
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2404,6 +2466,10 @@
                     les contenus fragmentés
                     -->
                     <classSpec ident="att.global" type="atts" module="tei" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="delete"/>
+                            <!-- Réfléchir à la nécessité de conserver @source partout -->
+                        </classes>
                         <attList>
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:space" mode="delete"/>
@@ -2457,6 +2523,11 @@
                     </classSpec>
                     <classSpec type="atts" ident="att.spanning" module="tei" mode="delete"/>
                     <classSpec type="atts" ident="att.timed" module="tei" mode="delete"/>
+                    <classSpec type="atts" ident="att.typed" module="tei" mode="change">
+                        <attList>
+                            <attDef ident="subtype" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <!-- Retrait des classes consacrées à la description de la correspondance -->
                     <classSpec ident="model.correspActionPart" type="model" module="tei"
                         mode="delete"/>
@@ -2494,7 +2565,7 @@
                     <elementSpec ident="TEI" mode="change">
                         <attList>
                             <attDef ident="version" mode="change" usage="rec">
-                                <defaultVal>P5</defaultVal>
+                                <defaultVal>5</defaultVal>
                             </attDef>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="add" type="closed">
@@ -2520,10 +2591,23 @@
                                     une édition, du nom de famille du premier éditeur suivi d'un
                                     tiret et de la date, voir <ptr target="#DIV_INFR"/>)</desc>
                             </attDef>
+                            <attDef ident="xml:lang" mode="change" usage="req">
+                                <remarks xml:lang="fr"><p>L'utilisation de <att>xml:lang</att> est obligatoire à la fois sur l'élément racine <gi>TEI</gi>
+                                    et sur les éléments <gi>text</gi>, dans la mesure où la langue principale du texte (ancien ou moyen français, ancien occitan, etc.) 
+                                    diffère de celle employée notamment dans le <gi>teiHeader</gi>. Il faut en outre préciser cet attribut à chaque fois que cela
+                                    est nécessaire.</p></remarks>
+                            </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="text" mode="change">
-                       
+                       <attList>
+                           <attDef ident="xml:lang" mode="change" usage="req">
+                               <remarks xml:lang="fr"><p>L'utilisation de <att>xml:lang</att> est obligatoire à la fois sur l'élément racine <gi>TEI</gi>
+                                   et sur les éléments <gi>text</gi>, dans la mesure où la langue principale du texte (ancien ou moyen français, ancien occitan, etc.) 
+                                   diffère de celle employée notamment dans le <gi>teiHeader</gi>. Il faut en outre préciser cet attribut à chaque fois que cela
+                                   est nécessaire.</p></remarks>
+                           </attDef>
+                       </attList>
                     </elementSpec>
                     <elementSpec ident="body" mode="change">
                         
@@ -2584,6 +2668,11 @@
                         reg/orig, qui peut avoir g comme alternative, définit une lettre et un allographe qui s'y rattache, tous deux abstraits
                         c permet d'apporter un complément d'information sur une réalisation donnée
                     -->
+                    <elementSpec ident="c" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
+                    </elementSpec>
                     <elementSpec ident="w" mode="change">
                         <!-- Modification du contenu -->
                         <content>
@@ -2608,6 +2697,13 @@
                                 <classRef key="model.pPart.transcriptional"/>
                             </alternate>
                         </content>
+                        <constraintSpec ident="noBlanksInW" scheme="isoschematron">
+                            <constraint>
+                                <s:assert test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]"
+                                    >Les mots (w) ne doivent pas contenir de nœuds de textes 
+                                    avec des blancs (utiliser space).</s:assert><!-- TODO: vérifier que fonctionne bien -->
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <!-- Vraisemblablement, on peut supprimer cet attribut servant à indiquer que l'élément parent est complet ou non.
                              À terme, on aura plutôt à modifier les classes d'attribut.
@@ -2724,6 +2820,9 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="space" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.facs" mode="add"/>
+                        </classes>
                         <attList>
                             <attDef ident="quantity" mode="change" usage="rec">
                                 <defaultVal>1</defaultVal>
