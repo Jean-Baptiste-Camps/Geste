@@ -5,10 +5,10 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-02-18T12:34:20Z. .
-TEI Edition: Version 3.1.1a. Last updated on
-	17th February 2017, revision 2379cd3
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.1a./
+Schema generated from ODD source 2017-02-18T14:29:09Z. .
+TEI Edition: Version 3.1.0. Last updated on
+	15th December 2016, revision d3f5e70
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
   
 --><!---->
    <define name="macro.paraContent">
@@ -734,46 +734,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    </define>
    <define name="att.naming.attributes">
       <ref name="att.canonical.attributes"/>
-   </define>
-   <define name="att.placement.attributes">
-      <ref name="att.placement.attribute.place"/>
-   </define>
-   <define name="att.placement.attribute.place">
-      <optional>
-         <attribute name="place">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifie où cet item se trouve.
-Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6] overleaf; 7] above; 8] end; 9] inline; 10] inspace</a:documentation>
-            <list>
-               <oneOrMore>
-                  <choice>
-                     <value>below</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">au-dessous de la ligne</a:documentation>
-                     <value>bottom</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dans la marge inférieure</a:documentation>
-                     <value>margin</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dans la marge (gauche, droite ou les deux en même temps)</a:documentation>
-                     <value>top</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dans la marge supérieure</a:documentation>
-                     <value>opposite</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sur la page opposée</a:documentation>
-                     <value>overleaf</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">de l'autre côté de la feuille</a:documentation>
-                     <value>above</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">au-dessus de la ligne</a:documentation>
-                     <value>end</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">à la fin, par exemple d'un chapitre ou d'un volume</a:documentation>
-                     <value>inline</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dans le corps du texte</a:documentation>
-                     <value>inspace</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dans un espace prédéfini, par exemple à gauche d'un scripteur précédent</a:documentation>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
-                  </choice>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
    </define>
    <define name="att.typed.attributes">
       <ref name="att.typed.attribute.type"/>
@@ -1861,7 +1821,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="model.biblLike"/>
          <ref name="model.eventLike"/>
          <ref name="model.persStateLike"/>
-         <ref name="name"/>
          <ref name="idno"/>
       </choice>
    </define>
@@ -2603,7 +2562,7 @@ Normalization 12. Critical Apparatus]</a:documentation>
             </attribute>
          </optional>
          <attribute name="reason">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne la raison de l'omission</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne la raison de l'omission. Les valeurs d'échantillon comprennent échantillonnage, illisible, inaudible, non pertinent, biffé, biffé et illisible.</a:documentation>
             <list>
                <oneOrMore>
                   <choice>
@@ -3045,7 +3004,6 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          </zeroOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
-         <ref name="att.placement.attributes"/>
          <ref name="att.written.attributes"/>
          <empty/>
       </element>
@@ -4123,10 +4081,12 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
             <choice>
                <value>ed</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(édition) précise que le document contient une édition numérisée</a:documentation>
-               <value>ms</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscrit) précise que le document contient une transcription de manuscrit</a:documentation>
+               <value>transcr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(transcription) précise que le document contient une transcription de témoin</a:documentation>
                <value>crit</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(texte critique) précise que le document contient un apparat de variantes permettant la restitution d'un ou plusieurs textes critiques</a:documentation>
+               <value>ms</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscrit) précise que le document contient la description d'un manuscrit</a:documentation>
             </choice>
          </attribute>
          <optional>
@@ -4921,7 +4881,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
    </define>
    <define name="pc">
       <element name="pc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(punctuation character) contient un caractère ou une chaîne de caractères considérés comme un signe de ponctuation unique. [17.1.2. Below the Word Level]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(punctuation character) contient un caractère ou une chaîne de caractères considérés comme un signe de ponctuation unique. [17.1. Linguistic Segment Categories]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
