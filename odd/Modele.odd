@@ -13,6 +13,7 @@
     Revoir en profondeur les classes du modèle.
     
     TODO:
+    rendre xml:lang obligatoire aussi sur body, ou sur body plutôt que text
     nettoyage à faire en probability, certainty et probCert. Voir aussi si on veut supprimer la valeur unknown.
     
     ajout de mentioned, à restreindre aux notes et introd. => le plus simple serait de restreindre l'utilisation du model.emphLike
@@ -155,7 +156,9 @@
                     <p>L'élément <gi>TEI</gi> doit porter obligatoirement un <att>type</att>, définissant si le document contient une édition numérisée (<val>ed</val>),
                         une transcription de ms. (<val>ms</val>) ou une restitution critique (<val>crit</val>), ainsi qu'un identifiant <att>xml:id</att>, qui doit
                         être unique au niveau du corpus, et adopte une forme standardisée, composée
-                        de trois éléments séparés par des soulignements : <!-- TODO: rendre compatible CTS, et ajouter la doc. à la spécification de l'élément TEI -->
+                        de trois éléments séparés par des soulignements : <!-- 
+                            TODO: rendre compatible CTS, et ajouter la doc. à la spécification de l'élément TEI
+                        -->
                         <list>
                             <item n="1">le mot-clé <q>ed</q> pour une édition numérisée, <q>ms</q>
                                 pour une transcription de manuscrit, <q>crit</q> pour une édition
@@ -163,20 +166,26 @@
                                 <!-- Dire plutôt: pour une édition critique à nouveaux frais, faite selon les principes de ce modèle, et contenant les variantes de tous les manuscrits, ainsi que la reconstitution de tous les archétypes -->
                             </item>
                             <item n="2">le nom du texte, sous une forme standard ;</item>
-                            <item n="3">le sigle du manuscrit (ou celui attribué au texte critique),
-                                ou, pour une édition, le nom de famille du premier éditeur suivi
-                                d'un tiret et de la date.</item>
+                            <item n="3">si applicable, le sigle du manuscrit (ou celui attribué au texte critique).</item>
                             <!-- TODO: revoir cela pour indiquer que l'on utilise les noms du DEAF -->
                         </list>
+                        Les références des textes seront prises dans une liste bibliographique permettant leur standardisation.
+                        Pour la base <title>Geste</title>, les sigles utilisés sont ceux de <bibl><author>Frankwalt Möhren</author> et <author>Elena Miller</author>, 
+                            <title>Dictionnaire Étymologique de l’Ancien Français: Bibliographie, complément bibliographique. Elektronische Fassung (DEAFBiblÉl)</title>, 
+                            <pubPlace>Heidelberg</pubPlace>, <date>2010-…</date>, 
+                            <ptr target="http://www.deaf-page.de/bibl_neu.php"/></bibl>.
+                        Pour les éditions numérisées, les sigles sont ainsi empruntés à cette bibliographie quand ils existent, et,
+                        pour les transcriptions et éditions critiques à nouveaux frais, le nom standard, sans l'extension d'édition, 
+                        est repris.
                         <eg>Numérisation de l'édition</eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="ed_Gui-de-Bourgogne_Guessard-1858" type="ed">
+                            <TEI xml:id="ed_GuiBourgG" type="ed">
                                 <!--  -->
                             </TEI>
                         </egXML>
                         <eg>Transcription du ms. P4 de la <title>Chanson d'Aspremont</title></eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="ms_Aspremont_P4" type="ms">
+                            <TEI xml:id="ms_Asprem_P4" type="ms">
                                 <!--  -->
                             </TEI>
                         </egXML>
@@ -184,7 +193,7 @@
                                 Roland</title></eg>
                         <!-- TODO: revoir la notion de texte critique telle qu'on l'entend pour ces éditions. Plutôt relevé des variantes + textes critiques -->
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <TEI xml:id="crit_Roland_β" type="crit">
+                            <TEI xml:id="crit_Rol_β" type="crit">
                                 <!--  -->
                             </TEI>
                         </egXML>

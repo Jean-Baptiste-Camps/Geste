@@ -1,0 +1,182 @@
+@import "tei_oxygen.css";
+
+body{
+    counter-reset:numVers;
+}
+
+/*Les régularisations de formes*/
+orig{
+    display:none
+}
+abbr{
+    display:none
+}
+
+expan{
+    content:normal;
+    font-style:normal;
+}
+reg{
+    content:normal;
+    font-style:normal;
+}
+
+pc[type = 'orig']
+{
+    display:none
+}
+
+sic::before{
+    content:'<'
+}
+
+sic::after{
+    content:'>'
+}
+corr::before{
+    content:'['
+}
+
+corr::after{
+    content:']'
+}
+
+
+/*Les majuscules*/
+/*name{
+    display:block
+}*/
+
+/* Un bidouillage made in oXygen qui ne fonctionne pas vraiment*/
+/*name::after{
+    /\*text-transform:capitalize;*\/
+    /\*text-transform:oxy_capitalize(inherit);*\/
+    content:oxy_capitalize(oxy_xpath(".//text()"));
+}
+name {
+    /\*text-transform:capitalize;*\/
+    /\*text-transform:oxy_capitalize(inherit);*\/
+    visibility:-oxy-collapse-text
+}*/
+
+/*Ce qui suit, standard, ne fonctionne avec oXygen que si on met chaque nom propre sur une ligne (block).*/
+/*persName{
+    display:block/\* fonctionne... *\/
+    /*display:inline-block; /\* Devrait fonctionner, mais pas avec oXygen*\/\*\/
+}
+persName{
+    text-transform:capitalize
+}*/
+
+/* Fonctionne, pour tout mettre en capitales...
+name{
+    display:inline-block/\* fonctionne... *\/
+    /*display:inline-block; /\* Devrait fonctionner, mais pas avec oXygen*\/\*\/
+}
+name{
+    text-transform:uppercase
+}*/
+
+/*name{
+    display:inline-block/\* fonctionne... *\/
+    /*display:inline-block; /\* Devrait fonctionner, mais pas avec oXygen*\/\*\/
+}
+name::first-letter{
+    text-transform:uppercase
+}*/
+
+name{
+    color:brown;
+}
+persName{
+    color:brown;
+}
+placeName{
+    color:brown;
+}
+
+/*Les règles d'espacement*/
+space[quantity="0.5"]{
+    content:""
+}
+
+/*w{
+    color:blue
+}*/
+
+w[rend="aggl"]::after{
+    content:" ";
+}
+
+w[rend="elision"]::after{
+    content:"'";
+}
+
+pb::before{
+    content:"[fol. ";
+    font-weight:bold;
+}
+pb::after{
+    content:"]";
+    font-weight:bold;
+}
+pb{
+    display:block;
+    content:attr(n);
+    color:blue;
+    font-weight:bold;
+}
+
+cb::before{
+    content:"[col. ";
+    font-weight:bold;
+}
+cb::after{
+    content:"]";
+    font-weight:bold;
+}
+cb{
+    display:block;
+    content:attr(n);
+    color:blue;
+    font-weight:bold;
+}
+
+lg::before{
+    display:block;
+    /*content:"[" attr(n)"]";*/
+    content:attr(n);
+    font-weight:bold;
+}
+
+
+l::before{
+    content:counter(numVers);
+    color:gray;
+    width:2em;
+    display:inline-block;
+    counter-increment:numVers;
+    /*border-right:1px solid black;*/
+}
+
+l::after{
+    content:attr(real);
+    color:red;
+    font-weight:bold;
+}
+
+w:not([rend])::after{
+    content:' '
+}
+w[rend="aggl"]::after{
+    content:" ";
+}
+
+w[rend="elision"]::after{
+    content:"'";
+}
+
+
+
+
+

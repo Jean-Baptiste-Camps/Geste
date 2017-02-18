@@ -1,0 +1,211 @@
+@import "tei_oxygen.css";
+
+/*Modifications à activer pour faciliter les relectures*/
+/*Supprimer l'affichage des commentaires et des notes*/
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
+/*note{
+    display:none
+}*/
+/*note[type="paleogr"]{
+    display:inherit
+}
+note[type="palaeographic"]{
+    display:inherit
+}*/
+/*Ne fonctionne pas, il faut donc désactiver dans le menu préférences/auteur... */
+/*oxy|comment {
+    display:none;
+}*/
+
+body{
+    counter-reset:lb;
+}
+
+corr::before{
+    content:"["
+}
+corr::after{
+    content:"]"
+}
+sic::before{
+    content:"<"
+}
+sic::after{
+    content:">"
+}
+/*sic::before{
+    content:"†"
+}
+sic::after{
+    content:"†"
+}*/
+sic{
+    display:inline
+}
+
+reg{
+    display:none
+}
+expan{
+    display:none
+}
+pc[type = 'supplied']
+{
+    display:none
+}
+
+space[quantity = "0.5"]{
+/*&#160; espace insécable, &#8201; : thin space, &#8202; : hair space, &#8239; : narrow no break space (ici, espace fine insécable)*/
+    content:" ";
+    text-decoration:underline;
+}
+
+space{
+    content:" ";
+    text-decoration:underline;
+}
+
+gb::before{
+    content:"[cah. ";
+    font-weight:bold;
+}
+gb::after{
+    content:"]";
+    font-weight:bold;
+}
+gb{
+    display:block;
+    content:attr(n);
+    color:blue;
+    font-weight:bold;
+}
+
+pb::before{
+    content:"[fol. ";
+    font-weight:bold;
+}
+pb::after{
+    content:"]";
+    font-weight:bold;
+}
+/*Pour le moment, je laisse tomber le décompte par  page au profit
+d'un décompte global*/
+pb{
+    display:block;
+    content:attr(n);
+    color:blue;
+    font-weight:bold;
+    /*counter-reset:lb;*/
+}
+cb::before{
+    content:"[col. ";
+    font-weight:bold;
+}
+cb::after{
+    content:"]";
+    font-weight:bold;
+}
+cb{
+    display:block;
+    content:attr(n);
+    color:blue;
+    font-weight:bold;
+    /*counter-reset:lb;*/
+}
+
+
+lg::before{
+    display:block;
+    /*content:"[" attr(n)"]";*/
+    content:attr(n);
+    font-weight:bold;
+}
+
+
+l::before{
+    content:counter(lb);
+    color:gray;
+    width:2em;
+    display:inline-block;
+    /*border-right:1px solid black;*/
+}
+
+lb{
+    counter-increment:lb;
+}
+
+/*Décoration, lettrines, initiales*/
+
+hi[rend="initiale peint 5l"]{
+    font-size:5em;  /*À ajuster, en fonction du nombre d'unités de réglure occupées par les lettrines*/
+}
+
+hi[rend="initiale filigr 4l"]{
+    font-size:4em;  /*À ajuster, en fonction du nombre d'unités de réglure occupées par les lettrines*/
+}
+
+hi[rend="initiale peint 2l"]{
+    font-size:2em;  /*À ajuster, en fonction du nombre d'unités de réglure occupées par les lettrines*/
+}
+
+hi[rend="initiale filigr 2l"]{
+    font-size:2em;  /*À ajuster, en fonction du nombre d'unités de réglure occupées par les lettrines*/
+}
+
+ 
+hi[rend="initiale detach"]{
+    font-size:120%;
+}
+/*hi[rend="initiale detach"]::after{
+    content:" ";
+}*/
+
+hi[rend="litteraNotabilior"]{
+    font-size:120%;
+}
+hi[rend="litteraElongata"]{
+    /*font-stretch:ultra-expanded;*/
+    /*transform : scale(1,2);*/ /*Normalement la bonne façon de faire, mais oXygen ne veut pas*/
+    /*transform:scaleY(2);*/
+    -webkit-transform:scale(1,3); /* Safari and Chrome */
+    -moz-transform:scale(1,3); /* Firefox */
+/*-ms-transform:scale(1,2);*/ /* IE 9+ */
+    -o-transform:scale(1,3); /* Opera */
+}
+
+/* Vérification de la segmentation*/
+w[rend="aggl"]{
+    color:blue;
+}
+
+w[rend="elision"]{
+    color:fuchsia;
+}
+
+w:not([rend])::after{
+    content:' '
+}
+
+name{
+    color:brown;
+}
+persName{
+    color:brown;
+}
+placeName{
+    color:brown;
+}
+rs{
+    color:brown;
+}
+
+/*g{
+    font-family:"Palemonas MUFI";
+}*/
+
+unclear{
+    color:red;
+    font-weight:bold;
+}
+
+

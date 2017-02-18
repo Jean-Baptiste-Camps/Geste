@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_imitatif.css" title="imitative" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_diplomatique.css" title="diplomatique" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_edition.css" title="edition" alternate="yes"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
 <!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd"[
 <!-- TILDES -->
 <!ENTITY tilde1-nasale-an "<choice><expan><ex>an</ex></expan><abbr>&#x0303;</abbr></choice>">
@@ -60,7 +60,7 @@
 <!ENTITY sols "<choice><expan>s<ex>ols</ex></expan><abbr>s<c rend='apos'>&#x0303;</c><pc type='orig'>.</pc></abbr></choice>">
 ]>
 <!-- transcription diplomatique et allographétique du manuscrit du Vatican Chanson de Fierabras-->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="ms" xml:id="ms_Fierabras_V">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="ms" xml:id="ms_Fier_V" xml:lang="fr">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -117,7 +117,7 @@
                 <origDate cert="low" resp="#JBC" notBefore="1167" notAfter="1200">Dernier tiers du XIIe siècle</origDate><!-- Datation et localisation à vérifier -->
             </creation>
             <langUsage>
-                <language cert="medium" resp="#JBC" ident="fro" usage="99">ancien français non marqué dialectalement (langue du scribe ou couche principale)</language>
+                <language cert="medium" resp="#JBC" ident="fro" usage="99">ancien français peu marqué dialectalement (langue du scribe ou couche principale)</language>
                 <language cert="low" resp="#JBC" ident="wln" usage="1">quelques traits du Nord-Est</language>
             </langUsage>
         </profileDesc>
@@ -125,7 +125,7 @@
             <change who="#JBC" from="2015" to="2016">Création du fichier, transcription et encodage de quatre feuillets.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:lang="fro">
         <body>
             <pb n="21r" facs="facsimile/reg-lat-1616_021.png"/><!-- Début d'un feuillet -->
             <lg type="laisse" n="XLa"><!-- Début d'une laisse -->
@@ -134,7 +134,7 @@
                     <w><hi rend="initiale detach"
                             >&v-pour-u;</hi>nc</w>
                     <w>au</w>
-                    <w>te&s-long;t</w><note>Le Person: Le quartier de la coiffe<p>Langlois (Notices des
+                    <w>te&s-long;t</w><note type="palaeographic">Le Person: Le quartier de la coiffe<p>Langlois (Notices des
                             manuscrits français et provençaux de Rome) a lu: Ung autest de la
                             coefe</p><p>Voir aussi ce qu'en écrivent Kroeber et Servois dans les
                             Anciens poëtes.</p></note>
@@ -210,7 +210,7 @@
                         /><w>co&s-long;te&ed-accent-tonique;</w></l>
                 <lb/>
                 <l><w><choice><abbr><hi rend="initiale detach">O</hi>l'.</abbr><expan>Ol<ex>ivier</ex></expan></choice></w>
-                    <w rend="aggl">l</w><w>a &p-barré-per;co&i;t</w>
+                    <w rend="aggl">l</w><w>a<space/>&p-barré-per;co&i;t</w>
                     <w>mout</w>
                     <w>la</w>
                     <w>b&i;en</w>
@@ -224,7 +224,7 @@
                     <w>b&r-rond;anc</w>
                     <w>q&i-suscrit-ui;</w>
                     <w>e&s-long;t</w>
-                    <w>le<space quantity="1"/>tre&ed-accent-tonique;</w><!--??--><note>Le Person: du branc d'acier tempré.<p>Ressemble bien à un r (vu sur le ms.).</p></note></l>
+                    <w>le<space quantity="1"/>tre&ed-accent-tonique;</w><!--??--><note type="palaeographic">Le Person: du branc d'acier tempré.<p>Ressemble bien à un r (vu sur le ms.).</p></note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">p</hi>ar</w>
                     <w>&d-oncial;e&s-long;o&r-rond;</w>
@@ -276,7 +276,7 @@
                 <l><w><hi rend="initiale detach">D</hi>uc</w>
                     <w>enz</w>
                     <w rend="aggl">en</w><w>m&i;e</w>
-                    <w rend="elision">l</w><w>e&s-long;ch&i;ne</w><note>Le Person: Entresi a l'esquinne. Lire
+                    <w rend="elision">l</w><w>e&s-long;ch&i;ne</w><note type="tradition">Le Person: Entresi a l'esquinne. Lire
                         Dunc (ajout du scribe à cause d'une hypométrie)?</note>
                     <w>la</w><space quantity="0.5"/><w>t&a-suscrit-ra;ch&i;e</w>
                     <w>&et-tironien-barre;</w>
@@ -299,7 +299,7 @@
                     <w>nus</w>
                     <w>maum&i;&s-long;</w>
                     <w>ne</w>
-                    <w>empere&ed-accent-tonique;</w><note>Le Person: Mais ainz n'i out boël malmis në entamé</note></l>
+                    <w>empere&ed-accent-tonique;</w><note type="tradition">Le Person: Mais ainz n'i out boël malmis në entamé</note></l>
                 <lb/>
                 <l><w rend="aggl"><hi rend="initiale detach">L</hi>&i;</w><w>&s-long;anc</w>
                     <w>a</w>
@@ -344,7 +344,7 @@
                     <w>a</w>
                     <w>l&i;</w>
                     <w>co&r-rond;s</w>
-                    <w>alume&ed-accent-tonique;</w><note>Le Person: enluminé</note></l>
+                    <w>alume&ed-accent-tonique;</w><note type="tradition">Le Person: enluminé</note></l>
                 <lb/>
                 <l><w><choice><abbr><hi rend="initiale detach">O</hi>l'.</abbr><expan>Ol<ex>ivier</ex></expan></choice></w>
                     <w>apela</w>
@@ -400,7 +400,7 @@
                 <l><w><hi rend="initiale detach">&et-tironien-barre;</hi></w>
                     <w>les</w>
                     <w>&d-oncial;&i;&accent;&u-pour-v;e&s-long;</w><!--d&i;[g]nes?-->
-                    <w>rel&i;&que-q-tilde;s</w><note>Le Person: Et les dignes reliques</note>
+                    <w>rel&i;&que-q-tilde;s</w><note type="tradition">Le Person: Et les dignes reliques</note>
                     <w>&d-oncial;om</w>
                     <w rend="aggl">&i;</w><w>a</w>
                     <w>tel</w>
@@ -650,7 +650,7 @@
                     <w>m&i;&accent;</w>
                     <w>po&i;&s-long;e</w>
                     <w>a</w>
-                    <unclear reason="illegible"><w>moulez</w></unclear><note>Le Person: Florenche, mout me grieve au
+                    <unclear reason="illegible"><w>moulez</w></unclear><note type="tradition">Le Person: Florenche, mout me grieve au
                         costé</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">L</hi>o&r-rond;s</w>
@@ -808,7 +808,7 @@
                     <w>&d-oncial;onr&a-rond;&i;&accent;</w>
                     <w>&v-pour-u;ne</w>
                     <w>g&a-suscrit-ra;nt</w>
-                    <w>&s-long;omeree</w><note>On peut s'interroger sur cette lecture. Godefroy, pour son
+                    <w>&s-long;omeree</w><note type="palaeographic">On peut s'interroger sur cette lecture. Godefroy, pour son
                         entrée «someree» (charge), ne connaît que cette seule occurrence, reprise
                         (toujours seule) par TL.</note></l>
                 <lb/>
@@ -1409,7 +1409,7 @@
                     <w>&que-q-tilde;</w>
                     <w>pl&tilde4-us;</w>
                     <w>n&i;&accent;</w>
-                    <w>&d-oncial;emo&r-rond;e&i;z</w><note>Le Person: v473, déplacé
+                    <w>&d-oncial;emo&r-rond;e&i;z</w><note type="tradition">Le Person: v473, déplacé
                         depuis après «Ge ferroi la bataille...»</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">Q</hi>&a-suscrit-ua;nt</w>
@@ -1419,7 +1419,7 @@
                     <w>a</w>
                     <w>.&i;.</w>
                     <w>r&i;&accent;s</w>
-                    <w>&i-pour-j;egez</w><note>Le Person: un ris getés</note></l>
+                    <w>&i-pour-j;egez</w><note type="tradition">Le Person: un ris getés</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">G</hi>ar&i;&accent;n</w>
                     <w>car</w>
@@ -1460,7 +1460,7 @@
                     <w>&Olivier_point-ol-apos-point;</w>
                     <w>car</w>
                     <w rend="aggl">&i;</w><w rend="elision">t</w><w>ont</w>
-                    <w rend="aggl">en</w><w>&u-pour-v;&i;&accent;otez</w><note>Le Person: il t'ont en
+                    <w rend="aggl">en</w><w>&u-pour-v;&i;&accent;otez</w><note type="tradition">Le Person: il t'ont en
                         viltés</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">M</hi>es</w>
@@ -1488,7 +1488,7 @@
                     <w rend="elision">l</w><w>en</w>
                     <w>q&i-suscrit-ui;e&r-rond;t</w>
                     <w>en</w>
-                    <w>eru&tilde1-nasale-m;p&r-rond;ez</w><note>Le Person: en Nerons prés</note></l>
+                    <w>eru&tilde1-nasale-m;p&r-rond;ez</w><note type="tradition">Le Person: en Nerons prés</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">G</hi>e</w>
                     <w rend="elision">t</w><w>&i;ro&i;</w>
@@ -1620,7 +1620,7 @@
                     <w>&et-tironien-barre;</w>
                     <w>&s-long;&i;</w>
                     <w>l'</w><w>a&tilde1-nasale-m;maene</w>
-                    <w rend="aggl">au</w><w>t&e-suscrit-re;z</w><note>Le Person: et si l'enmaigne as
+                    <w rend="aggl">au</w><w>t&e-suscrit-re;z</w><note type="tradition">Le Person: et si l'enmaigne as
                         trés</note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">S</hi>&i;</w>
@@ -1753,7 +1753,7 @@
                 <lb/>
                 <l><w><hi rend="initiale detach">&et-tironien-barre;</hi></w>
                     <w>tu</w>
-                    <w>t'</w><w>e&s-long; la&i;&s-long;eras</w>
+                    <w>t'</w><w>e&s-long;<space/>la&i;&s-long;eras</w>
                     <w>q&a-suscrit-ua;nt</w>
                     <w>que</w>
                     <w>puet</w>
@@ -1826,7 +1826,7 @@
                     <w>l&i;</w>
                     <w>quart</w>
                     <w>n</w><w rend="aggl">&i;</w><w>&s-long;era</w>
-                    <w>refu&s-long;ez</w><note>Est-ce une évocation de Fernagu et du pseudo-Turpin?
+                    <w>refu&s-long;ez</w><note type="tradition">Est-ce une évocation de Fernagu et du pseudo-Turpin?
                     </note></l>
                 <lb/>
                 <l><w><hi rend="initiale detach">C</hi>erte&s-long;</w>

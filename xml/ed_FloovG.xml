@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../ODD/out/Modele.rng" 
-    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../ODD/out/Modele.rng" 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_Floovant_Guessard-1858" type="ed">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_FloovG" type="ed" xml:lang="fr">
       <!-- Pour l'instant 2533 vers pour 2533 selon Guessard et Michelant
       Vérifier peut-être les vues
       0356: 33 X
@@ -69,13 +71,13 @@
                                         <monogr>
                                                 <title type="main">Floovant</title>
                                                 <title type="sub">Chanson de geste</title>
-                                                <editor xml:id="Michelant">
+                                                <editor sameAs="#Michelant">
                                                   <persName>
                                                   <forename>Henri</forename>
                                                   <surname>Michelant</surname>
                                                   </persName>
                                                 </editor>
-                                                <editor xml:id="Guessard">
+                                                <editor sameAs="#Guessard">
                                                   <persName>
                                                   <forename>Françoise</forename>
                                                   <surname>Guessard</surname>
@@ -119,7 +121,7 @@
                         <change who="#LI" when="2016-04-29" status="draft">Fin de l'encodage.</change>
                 </revisionDesc>
         </teiHeader>
-        <text>
+        <text xml:lang="fr">
                 <front>
                         <!-- <lb/>FLOOVANT-->
 
@@ -1716,7 +1718,7 @@
                                    <lb/>(de l'hôtel).</p>
                         </div>
                 </front>
-                <body>
+                <body xml:lang="fro">
                
                                   
                         <!-- <pb facs="facsimile0307.bin.png" n="0307"/> -->
@@ -15234,7 +15236,7 @@
                                         <w>et</w>
                                         <w>grant</w>
                                         <w>et</w>
-                                        <w> plenier</w>
+                                        <w>plenier</w>
                                         <pc type="supplied">.</pc>
                                         </l>    
 

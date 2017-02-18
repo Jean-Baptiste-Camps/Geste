@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TODO: terminer la fusion avec le fichier ClermontAspremont_token.xml + traiter les q-->
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_imitatif.css" title="imitative" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_diplomatique.css" title="diplomatique" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_edition.css" title="edition" alternate="yes"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
 <!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd" [
 <!ENTITY o-suscrit-or  '<choice><abbr>&#x0366;</abbr><expan>o<ex>r</ex></expan></choice>'>
 <!ENTITY mlt-mut "<choice><expan>mut</expan><abbr>ml<c rend='apos'>&#x0303;</c>t</abbr></choice>">
@@ -21,7 +21,7 @@
 <!ENTITY u-suscrit-ru "<choice><expan><ex>r</ex>u</expan><abbr>&#x0367;</abbr></choice>">
 ] >
 <!-- Traitement semi-automatique des q avec - et «/» à faire -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ms_Aspremont_C" type="ms">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ms_Asprem_C" type="ms" xml:lang="fr">
     <!-- transcription diplomatique et allographétique du ms de Clermont de la Chanson d'Aspremont-->
     <teiHeader>
         <fileDesc>
@@ -99,7 +99,7 @@
                 place de la transcription</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:lang="xno">
         <!-- Relecture d'ensemble et de détail nécessaire -->
         <body>
             <pb n="8r" facs="facsimile/ADClermont_1F2-01r.JPG"/>

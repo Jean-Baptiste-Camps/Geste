@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../ODD/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_imitatif.css" title="imitative" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_diplomatique.css" title="diplomatique" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../../../02_transcriptions/css/tei_otinel_edition.css" title="edition" alternate="yes"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
 <!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd" [
 <!ENTITY o-suscrit-or  '<choice><abbr>&#x0366;</abbr><expan>o<ex>r</ex></expan></choice>'>
 <!ENTITY mlt-mut "<choice><expan>mut</expan><abbr>ml<c rend='apos'>&#x0303;</c>t</abbr></choice>">
@@ -18,7 +18,7 @@
 <!ENTITY xpi-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>xp&#x0303;ı</abbr></choice>">
 <!ENTITY u-suscrit-ru "<choice><expan><ex>r</ex>u</expan><abbr>&#x0367;</abbr></choice>">
 ] >
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ms_Aspremont_P4" type="ms" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ms_Asprem_P4" type="ms" xml:lang="fr">
     <!-- transcription diplomatique et allographétique du ms de Mende de la Chanson d'Aspremont-->
     <teiHeader>
         <fileDesc>
@@ -245,7 +245,7 @@
                         <del rend="exponctué"><w>gre</w></del>
                         <add place="above"><w>&i-pour-j;o&i;e</w></add>
                     </subst>
-                        <note>Rattrapage par le scribe d'un homéotéleute.</note>
+                        <note type="tradition">Rattrapage par le scribe d'un homéotéleute.</note>
                     <w>unche&s-long;</w>
                     <w rend="elision">n</w>
                     <w>en</w>
@@ -457,7 +457,7 @@
                 <lb/>
                 <l>
                     <w><hi rend="initiale detach">&a-rond;</hi></w>
-                    <w rend="elision"> l</w>
+                    <w rend="elision">l</w>
                     <w>&a-rond;<space/>po&s-long;to&i;lle</w>
                     <w>le</w>
                     <w>co&tilde1-nasale-m;mence</w>
@@ -2241,7 +2241,7 @@
                     <q><w><hi rend="initiale detach">O</hi>r</w>
                         <w>t&i;en</w>
                         <w>mun</w>
-                        <unclear reason="lectio"><w><del rend="barré">gr</del>gn&a-rond;ge</w><note>Le 'gr' paraît barré, contre l'habitude du scribe qui est d'exponctuer.  Quel sens?</note></unclear>
+                        <unclear reason="lectio"><w><del rend="barré">gr</del>gn&a-rond;ge</w><note type="palaeographic">Le 'gr' paraît barré, contre l'habitude du scribe qui est d'exponctuer.  Quel sens?</note></unclear>
                         <w>&s-long;&i;</w>
                         <w>tu</w>
                         <w>le&s-long;</w>
@@ -2452,7 +2452,7 @@
                         <w>l&a-rond;run</w>
                         <w rend="aggl">k&i;</w>
                         <w>e&s-long;t</w>
-                        <w>entre <subst>
+                        <w>entre<space/><subst>
                                 <del rend="exponctué"><unclear reason="illegible">trez</unclear>
                                     <w>punt</w></del>
                                 <add place="above"><w>pr&i;&s-long;</w></add>
@@ -3824,11 +3824,11 @@
                     <w>del</w>
                     <w>re&i;&accent;</w>
                     <w rend="elision">q<choice>
-                            <abbr xml:id="abbr_quil_1">&#x0365;</abbr>
+                            <abbr xml:id="abbr_quil_2">&#x0365;</abbr>
                             <expan><ex>u</ex></expan>
                         </choice></w>
                     <w><choice>
-                            <abbr sameAs="#abbr_quil_1"/>
+                            <abbr sameAs="#abbr_quil_2"/>
                             <expan>i</expan>
                         </choice>l</w>
                     <!-- Abréviation quil pour qu'il -->

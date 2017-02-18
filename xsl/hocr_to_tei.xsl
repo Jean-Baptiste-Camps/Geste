@@ -5,6 +5,7 @@
     xmlns="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs xhtml"
     version="2.0">
+    <!-- TODO: modifier pour conserver les informations <facsimile/> pour les transcriptions de manuscripts -->
     <!-- Quelques post-traitements qui sont pour l'instant faits par rechercher et remplacer et qu'il conviendrait d'intégrer ici:
     remplacer
     \n(\s*<lb/>\d*\s*GUI DE BOURGOGNE.\s+[\d\-]+)\n 
