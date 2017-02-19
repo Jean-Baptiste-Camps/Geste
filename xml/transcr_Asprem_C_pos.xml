@@ -1,27 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: terminer la fusion avec le fichier ClermontAspremont_token.xml + traiter les q-->
-<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
-<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
-<!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd" [
-<!ENTITY o-suscrit-or  '<choice><abbr>&#x0366;</abbr><expan>o<ex>r</ex></expan></choice>'>
-<!ENTITY mlt-mut "<choice><expan>mut</expan><abbr>ml<c rend='apos'>&#x0303;</c>t</abbr></choice>">
-<!ENTITY bin "<choice><expan>bin</expan><abbr>bn&#x0303;</abbr></choice>">
-<!ENTITY pro-pour-por "<choice><expan>p<ex>or</ex></expan><abbr>&#xA753;</abbr></choice>">
-<!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
-<!ENTITY Girars "<choice><expan>G<ex>irars</ex></expan><abbr><pc type='orig'>.</pc>G<pc type='orig'>.</pc></abbr></choice>">
-<!ENTITY Karles "<choice><expan>K<ex>arles</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
-<!ENTITY Karle "<choice><expan>Karl<ex>e</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
-<!ENTITY Karlemaigne "<choice><expan>K<ex>arlemaigne</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
-<!ENTITY Naimes "<choice><abbr>.N.</abbr><expan>N<ex>aimes</ex></expan></choice>">
-<!ENTITY x-i-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>x&#x0365;</abbr></choice>">
-<!ENTITY xpi-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>xp&#x0303;ı</abbr></choice>">
-<!ENTITY u-suscrit-ru "<choice><expan><ex>r</ex>u</expan><abbr>&#x0367;</abbr></choice>">
-] >
-<!-- Traitement semi-automatique des q avec - et «/» à faire -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_Asprem_C" type="transcr" xml:lang="fr">
+<?xml version="1.0" encoding="UTF-8"?><!-- TODO: terminer la fusion avec le fichier ClermontAspremont_token.xml + traiter les q--><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?><?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?><?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?><!-- Traitement semi-automatique des q avec - et «/» à faire --><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_Asprem_C" type="transcr" xml:lang="fr" version="5">
     <!-- transcription diplomatique et allographétique du ms de Clermont de la Chanson d'Aspremont-->
     <teiHeader>
         <fileDesc>
@@ -75,8 +52,7 @@
                     <history>
                         <origin>
                             <origPlace cert="high" resp="#JBC">Angleterre</origPlace>
-                            <origDate cert="medium" resp="#JBC" notBefore="1201" notAfter="1233"
-                                >premier tiers du XIIIe siècle</origDate>
+                            <origDate cert="medium" resp="#JBC" notBefore="1201" notAfter="1233">premier tiers du XIIIe siècle</origDate>
                         </origin>
                     </history>
                     <!--<additional>
@@ -99,8 +75,8 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="draft">
-            <change when="2017-02" who="#JBC">Vérification et intégration de l'annotation linguistique</change>
-            <change when="2016-09" who="#AC">Correction des résultats de l'annotation linguistique par Pandora</change>
+            <change when="2017-02" who="#JBC" status="draft">Vérification et intégration de l'annotation linguistique</change>
+            <change when="2016-09" who="#AC" status="draft">Correction des résultats de l'annotation linguistique par Pandora</change>
             <change when="2016-03-06" who="#JBC" status="draft">Création du document et mise en
                 place de la transcription</change>
         </revisionDesc>
@@ -114,625 +90,621 @@
                 <gap reason="lacuna"/>
                 <!--<lb/><l><w><hi rend="initiale detach">E</hi>t</w> <w rend="elision">l</w><pc type="supplied">'</pc><w>apostoles</w> <w>les</w> <w>prist</w> <w>a</w> <w>esgarder</w><pc type="supplied">.</pc></l>
 <lb/><l><w><hi rend="initiale detach">A</hi>u</w> <w>duc</w> <w>Girart</w> <w>les</w> <w>comence</w> <w>a</w> <w>mostrer</w><pc type="supplied">.</pc></l>-->
-                <lb/>
-                <l>
+                <lb n="1"/>
+                <l n="1" xml:id="C_l_1">
                     <q>
-                    <w><hi rend="initiale detach">c</hi>e&s-long;</w>
-                    <w>c&e-suscrit-re;&a-rond;tu&r-long;e&s-rond-plongeant;</w>
-                    <w>que</w>
-                    <w>&i-pour-j;o</w>
-                    <w>&u-pour-v;e&i;</w>
-                    <w>l&a-rond;</w>
-                    <w>e&s-long;ter</w></q></l>
-                <lb/>
-                <l><q><w><hi rend="initiale detach">f</hi>&i;&s-long;t</w>
-                    <w>&d-oncial;eu</w>
-                    <w>pur</w>
-                    <w>ho&tilde1-nasale-m;me</w>
-                    <w>&s-long;&tilde2-er;&u-pour-v;&i;r</w>
-                    <w>e</w>
-                    <w>hono&r-rond;e&r-long;</w></q><pc type="supplied">.</pc></l>
-                <lb/>
-                <l><q><w><hi rend="initiale detach">v</hi>e&i;r</w></q>
-                    <w>&d-oncial;&i;t</w>
-                    <w>&Girars;</w>
+                    <w lemma="ce2" ana="#CATTEX2009_MS_pos_DETdem #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000001"><hi rend="initiale detach">c</hi>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="crïature" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000002">c<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><choice><reg>a</reg><orig>ɑ</orig></choice>tu<choice><reg>r</reg><orig>ɼ</orig></choice>e<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="que2" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000003">que</w>
+                    <w lemma="je" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000004"><choice><reg>j</reg><orig>ı</orig></choice>o</w>
+                    <w lemma="vëoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000005"><choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="là" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000006">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="ester" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000007">e<choice><reg>s</reg><orig>ſ</orig></choice>ter</w></q></l>
+                <lb n="2"/>
+                <l n="2" xml:id="C_l_2"><q><w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000008"><hi rend="initiale detach">f</hi><choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="dieu" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000009"><choice><reg>d</reg><orig>δ</orig></choice>eu</w>
+                    <w lemma="por2" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000010">pur</w>
+                    <w lemma="ome" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000011">ho<choice><expan><ex>m</ex></expan><abbr>̃</abbr></choice>me</w>
+                    <w lemma="servir" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000012"><choice><reg>s</reg><orig>ſ</orig></choice><choice><expan><ex>er</ex></expan><abbr>͛</abbr></choice><choice><reg>v</reg><orig>u</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>r</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000013">e</w>
+                    <w lemma="onorer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000014">hono<choice><reg>r</reg><orig>ꝛ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w></q><pc type="supplied">.</pc></l>
+                <lb n="3"/>
+                <l n="3" xml:id="C_l_3"><q><w lemma="voir" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000015"><hi rend="initiale detach">v</hi>e<choice><reg>i</reg><orig>ı</orig></choice>r</w></q>
+                    <w lemma="dire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000016"><choice><reg>d</reg><orig>δ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="girard" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000017"><choice><expan>G<ex>irars</ex></expan><abbr><pc type="orig">.</pc>G<pc type="orig">.</pc></abbr></choice></w>
                     <pc type="supplied">,</pc>
-                    <q> <w>c&ed-palatalisation-cedille;o</w>
-                    <w>ne</w>
-                    <w>qu&i;e&r-long;</w>
-                    <w>&i-pour-j;o</w>
-                    <w>celer</w></q><pc type="supplied">.</pc></l>
-                <lb/>
-                <l corresp="#edBrandin_I0988"><q><w><hi rend="initiale detach">e</hi>n</w>
-                    <w>nule</w>
-                    <w>t&tilde2-er;re</w>
-                    <w>que</w>
-                    <w>&s-long;e&i;t</w>
-                    <w>&d-oncial;e<space quantity="1"/>c&ed-palatalisation-cedille;&a-rond;</w>
-                    <w>l&a-rond;</w>
-                    <w>mer</w></q></l>
-                <lb/>
-                <l>
-                    <q><w><hi rend="initiale detach">n</hi>e</w>
-                    <w>purre&i;t</w>
-                    <w rend="elision">l</w>
+                    <q> <w lemma="ce1" ana="#CATTEX2009_MS_pos_PROdem #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000018">c<reg>̧</reg>o</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000019">ne</w>
+                    <w lemma="querre" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000020">qu<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
+                    <w lemma="je" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000021"><choice><reg>j</reg><orig>ı</orig></choice>o</w>
+                    <w lemma="celer1" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000022">celer</w></q><pc type="supplied">.</pc></l>
+                <lb n="4"/>
+                <l n="4" xml:id="C_l_4" corresp="#edBrandin_I0988"><q><w lemma="en1" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000023"><hi rend="initiale detach">e</hi>n</w>
+                    <w lemma="nul" ana="#CATTEX2009_MS_pos_DETind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000024">nule</w>
+                    <w lemma="terre" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000025">t<choice><expan><ex>er</ex></expan><abbr>͛</abbr></choice>re</w>
+                    <w lemma="qui" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_n" xml:id="C_w_000026">que</w>
+                    <w lemma="estre1" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000027"><choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="deça" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000028"><choice><reg>d</reg><orig>δ</orig></choice>e<space quantity="1" unit="chars"/>c<reg>̧</reg><choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000029">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="mer" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000030">mer</w></q></l>
+                <lb n="5"/>
+                <l n="5" xml:id="C_l_5">
+                    <q><w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000031"><hi rend="initiale detach">n</hi>e</w>
+                    <w lemma="pöoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_con #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000032">purre<choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000033" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>en</w>
-                    <w>&s-long;&i;</w>
-                    <w>bele&s-rond-plongeant;</w>
-                    <w>reco&u-pour-v;ere&r-long;</w></q><pc type="supplied">.</pc>
+                    <w lemma="on" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000034">en</w>
+                    <w lemma="si" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000035"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="bel1" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000036">bele<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="recovrer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000037">reco<choice><reg>v</reg><orig>u</orig></choice>ere<choice><reg>r</reg><orig>ɼ</orig></choice></w></q><pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <q><w><hi rend="initiale detach">s<!-- vérif forme--></hi>&i;</w>
+                <lb n="6"/>
+                <l n="6" xml:id="C_l_6">
+                    <q><w lemma="se" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000038"><hi rend="initiale detach">s<!-- vérif forme--></hi><choice><reg>i</reg><orig>ı</orig></choice></w>
                     <pc type="supplied">'</pc>
-                    <w>o&r-rond;e</w>
-                    <w>&u-pour-v;eolt</w>
-                    <w>&Karles;</w>
-                    <w>p&a-rond;r</w>
-                    <w>mo&tilde1-nasale-n;</w>
-                    <w>&con-9-tironien;&s-long;e&i;l</w>
-                    <w>o&u-pour-v;ere&r-long;</w></q>
+                    <w lemma="or4" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000039">o<choice><reg>r</reg><orig>ꝛ</orig></choice>e</w>
+                    <w lemma="voloir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000040"><choice><reg>v</reg><orig>u</orig></choice>eolt</w>
+                    <w lemma="charles" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000041"><choice><expan>K<ex>arles</ex></expan><abbr><pc type="orig">.</pc>k<pc type="orig">.</pc></abbr></choice></w>
+                    <w lemma="par" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000042">p<choice><reg>a</reg><orig>ɑ</orig></choice>r</w>
+                    <w lemma="mon1" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000043">mo<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice></w>
+                    <w lemma="conseil" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000044"><choice><expan><ex>con</ex></expan><abbr>ꝯ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice>l</w>
+                    <w lemma="ovrer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000045">o<choice><reg>v</reg><orig>u</orig></choice>ere<choice><reg>r</reg><orig>ɼ</orig></choice></w></q>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <q><w><hi rend="initiale detach">&i-long-pour-i;</hi>l</w>
-                    <w>le&s-long;</w>
-                    <w>fr&a-rond;</w>
-                    <w>tute&s-rond-plongeant;</w>
-                    <w>h&a-rond;uteme&tilde1-nasale-n;t</w>
-                    <w>m&a-rond;r&i;&ed-dierese;er</w>
+                <lb n="7"/>
+                <l n="7" xml:id="C_l_7">
+                    <q><w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000046"><hi rend="initiale detach"><choice><reg>i</reg><orig>J</orig></choice></hi>l</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000047">le<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_fut #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000048">fr<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="tot" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000049">tute<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="hautement" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000050">h<choice><reg>a</reg><orig>ɑ</orig></choice>uteme<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>t</w>
+                    <w lemma="marïer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000051">m<choice><reg>a</reg><orig>ɑ</orig></choice>r<choice><reg>i</reg><orig>ı</orig></choice><reg>̈</reg>er</w>
                     </q><pc type="supplied">.</pc>
                 </l>
             </lg>
             <lg type="laisse" n="521">
-                <lb/>
-                <l corresp="#edBrandin_I0992"><w><hi rend="initiale peint 2l"
-                        >L</hi>&i-long-pour-i;</w>
-                    <w>apo&s-long;to&i;le</w>
-                    <w>ne</w>
-                    <w>&u-pour-v;eut</w>
-                    <w>me&s-rond-plongeant;</w>
-                    <w>t&a-rond;rg&i;e&r-long;</w>
+                <lb n="8"/>
+                <l n="8" xml:id="C_l_8" corresp="#edBrandin_I0992"><w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000052"><hi rend="initiale peint 2l">L</hi><choice><reg>i</reg><orig>J</orig></choice></w>
+                    <w lemma="apostoile" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000053">apo<choice><reg>s</reg><orig>ſ</orig></choice>to<choice><reg>i</reg><orig>ı</orig></choice>le</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000054">ne</w>
+                    <w lemma="voloir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000055"><choice><reg>v</reg><orig>u</orig></choice>eut</w>
+                    <w lemma="mais1" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000056">me<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="targier2" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000057">t<choice><reg>a</reg><orig>ɑ</orig></choice>rg<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>e&s-long;</w>
-                    <w>arche&u-pour-v;e&s-long;que&s-rond-plongeant;</w>
+                <lb n="9"/>
+                <l n="9" xml:id="C_l_9">
+                    <w lemma="son4" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000058"><hi rend="initiale detach">s<!-- vérif forme--></hi>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="arcevesque" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000059">arche<choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>s</reg><orig>ſ</orig></choice>que<choice><reg>s</reg><orig></orig></choice></w>
                     <pc type="supplied">,</pc>
-                    <w>e&s-long;tre</w>
-                    <w rend="elision">l</w>
+                    <w lemma="estre4" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000060">e<choice><reg>s</reg><orig>ſ</orig></choice>tre</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000061" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>&a-rond;ut&e-suscrit-re;</w>
-                    <w>cle&r-long;g&i;e&r-long;</w>
+                    <w lemma="autre" ana="#CATTEX2009_MS_pos_ADJind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000062"><choice><reg>a</reg><orig>ɑ</orig></choice>ut<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="clergié" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000063">cle<choice><reg>r</reg><orig>ɼ</orig></choice>g<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">f</hi>unt</w>
-                    <w>lu&r-long;</w>
-                    <w>&a-rond;f&a-rond;&i;re</w>
-                    <w>e</w>
-                    <w>lur</w>
-                    <w>me&s-long;t&i;e&r-long;</w>
+                <lb n="10"/>
+                <l n="10" xml:id="C_l_10">
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000064"><hi rend="initiale detach">f</hi>unt</w>
+                    <w lemma="lor2" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000065">lu<choice><reg>r</reg><orig>ɼ</orig></choice></w>
+                    <w lemma="afaire2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000066"><choice><reg>a</reg><orig>ɑ</orig></choice>f<choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>re</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000067">e</w>
+                    <w lemma="lor2" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000068">lur</w>
+                    <w lemma="mestier" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000069">me<choice><reg>s</reg><orig>ſ</orig></choice>t<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">p</hi>&e-suscrit-re;m&i;e&r-long;ement</w>
-                    <w>le&s-rond-plongeant;</w>
-                    <w>f&i;re&tilde1-nasale-n;t</w>
-                    <w>p&i-suscrit-ri;n&s-long;e&i;&accent;gn&i;&accent;e&r-long;</w>
+                <lb n="11"/>
+                <l n="11" xml:id="C_l_11">
+                    <w lemma="premierement" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000070"><hi rend="initiale detach">p</hi><choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice>m<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice>ement</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000071">le<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000072">f<choice><reg>i</reg><orig>ı</orig></choice>re<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>t</w>
+                    <w lemma="prinseignier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000073">p<choice><expan><ex>r</ex>i</expan><abbr>ͥ</abbr></choice>n<choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig>gn<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">;</pc>
                 </l>
-                <lb/>
-                <l corresp="#edBrandin_I0996"><w><hi rend="initiale detach"
-                        >a</hi>p&e-suscrit-re;&ed-accent-tonique;&s-rond-plongeant;</w>
-                    <w>lur</w>
-                    <w>f&i;re&tilde1-nasale-n;t</w>
-                    <w>lu&r-long;</w>
-                    <w>m&a-rond;ntel&s-rond-plongeant;</w>
-                    <w>&d-oncial;e&s-long;l&a-rond;c&i;e&r-long;</w>
+                <lb n="12"/>
+                <l n="12" xml:id="C_l_12" corresp="#edBrandin_I0996"><w lemma="après" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_CAS_-" xml:id="C_w_000074"><hi rend="initiale detach">a</hi>p<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><reg>́</reg><choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_i" xml:id="C_w_000075">lur</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000076">f<choice><reg>i</reg><orig>ı</orig></choice>re<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>t</w>
+                    <w lemma="lor2" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000077">lu<choice><reg>r</reg><orig>ɼ</orig></choice></w>
+                    <w lemma="mantel" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000078">m<choice><reg>a</reg><orig>ɑ</orig></choice>ntel<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="deslacier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000079"><choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>s</reg><orig>ſ</orig></choice>l<choice><reg>a</reg><orig>ɑ</orig></choice>c<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">;</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach"
-                        >s<!-- vérif forme--></hi>engle&s-rond-plongeant;</w><!-- Y a-t-il eu un repassage de c en l? -->
-                    <w>&a-rond;&s-long;</w>
-                    <w>chem&i;&s-long;e</w>
+                <lb n="13"/>
+                <l n="13" xml:id="C_l_13">
+                    <w lemma="sangle" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000080"><hi rend="initiale detach">s<!-- vérif forme--></hi>engle<choice><reg>s</reg><orig></orig></choice></w><!-- Y a-t-il eu un repassage de c en l? -->
+                    <w lemma="a3+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000081"><choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="chemise" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_M_NOMB._s" xml:id="C_w_000082">chem<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
                     <pc type="supplied">,</pc>
-                    <w>&s-long;anz</w>
-                    <w>aut&e-suscrit-re;</w>
-                    <w>recon&s-long;e&r-long;</w>
+                    <w lemma="sans" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000083"><choice><reg>s</reg><orig>ſ</orig></choice>anz</w>
+                    <w lemma="autre" ana="#CATTEX2009_MS_pos_DETind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000084">aut<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="resconser" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_M_reconsſerɼ" xml:id="C_w_000085">recon<choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
-                    <w>funt</w>
-                    <w>le</w>
-                    <w>&i-pour-j;ur</w>
-                    <w>enz</w>
-                    <w>e&s-long;</w>
-                    <w>cu&u-pour-v;e&s-rond-plongeant;</w>
-                    <w>plung&i;er</w>
+                <lb n="14"/>
+                <l n="14" xml:id="C_l_14">
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000086"><hi rend="initiale detach">L</hi>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000087">funt</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000088">le</w>
+                    <w lemma="jor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000089"><choice><reg>j</reg><orig>ı</orig></choice>ur</w>
+                    <w lemma="enz" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000090">enz</w>
+                    <w lemma="en1+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000091">e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="cuve" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000092">cu<choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="plongier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000093">plung<choice><reg>i</reg><orig>ı</orig></choice>er</w>
                     <pc type="supplied">:</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&i-long-pour-i;</hi>luec</w>
-                    <w>le&s-long;</w>
-                    <w>f&i;rent</w>
-                    <w>b&a-rond;pt&i;z&i;er</w>
-                    <w>et</w>
-                    <w>le&u-pour-v;e&r-long;</w>
+                <lb n="15"/>
+                <l n="15" xml:id="C_l_15">
+                    <w lemma="iluec" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000094"><hi rend="initiale detach"><choice><reg>i</reg><orig>J</orig></choice></hi>luec</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000095">le<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000096">f<choice><reg>i</reg><orig>ı</orig></choice>rent</w>
+                    <w lemma="batisier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000097">b<choice><reg>a</reg><orig>ɑ</orig></choice>pt<choice><reg>i</reg><orig>ı</orig></choice>z<choice><reg>i</reg><orig>ı</orig></choice>er</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000098">et</w>
+                    <w lemma="lever" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000099">le<choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l corresp="#edBrandin_11000">
-                    <w><hi rend="initiale detach">A</hi></w>
-                    <w>l&a-rond;</w>
-                    <w>re&i;&accent;&ed-dierese;ne</w>
-                    <w>f&i;rent</w>
-                    <w>&s-long;uen</w>
-                    <w>nun</w>
-                    <w>ch&a-rond;ng&i;e&r-long;</w>
+                <lb n="16"/>
+                <l n="16" xml:id="C_l_16" corresp="#edBrandin_11000">
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000100"><hi rend="initiale detach">A</hi></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000101">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="röine1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000102">re<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig><reg>̈</reg>ne</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000103">f<choice><reg>i</reg><orig>ı</orig></choice>rent</w>
+                    <w lemma="suen" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000104"><choice><reg>s</reg><orig>ſ</orig></choice>uen</w>
+                    <w lemma="nom" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000105">nun</w>
+                    <w lemma="changier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000106">ch<choice><reg>a</reg><orig>ɑ</orig></choice>ng<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">;</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">C</hi>l&a-rond;re&i;ce</w>
-                    <w>ot</w>
-                    <w>nun</w>
+                <lb n="17"/>
+                <l n="17" xml:id="C_l_17">
+                    <w lemma="clareice" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000107"><hi rend="initiale detach">C</hi>l<choice><reg>a</reg><orig>ɑ</orig></choice>re<choice><reg>i</reg><orig>ı</orig></choice>ce</w>
+                    <w lemma="avoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000108">ot</w>
+                    <w lemma="nom" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000109">nun</w>
                     <pc type="supplied">,</pc>
-                    <w>me&s-long;</w>
-                    <w>mult</w>
-                    <w>f&a-rond;&i;t</w>
-                    <w rend="aggl">a</w>
-                    <w>p&tilde2-er-pour-re;&i;&s-long;&i;e&r-long;</w>
+                    <w lemma="mais1" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000110">me<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="mout" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000111">mult</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000112">f<choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000113" rend="aggl">a</w>
+                    <w lemma="prisier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000114">p<choice><expan><ex>re</ex></expan><abbr>͛</abbr></choice><choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
                 <!--<lb/><l><w><hi rend="initiale detach">A</hi>&i;nc</w> <w>&a-rond;</w> <w>&s-long;on</w> <w>ten&s-long;</w> <w>ne</w> <w>fu</w> <w>mel&d-oncial;re</w> <w>moll&i;er</w><pc type="supplied">.</pc></l>-->
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach"
-                        >a</hi>p&e-suscrit-re;&ed-accent-tonique;&s-rond-plongeant;</w>
-                    <w>le&s-long;</w>
-                    <w>f&i;rent</w>
-                    <w>e</w>
-                    <w>&u-pour-v;e&s-long;t&i;r</w>
-                    <w>e</w>
-                    <w>chauc&i;e&r-long;</w>
+                <lb n="18"/>
+                <l n="18" xml:id="C_l_18">
+                    <w lemma="après" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000115"><hi rend="initiale detach">a</hi>p<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><reg>́</reg><choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000116">le<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000117">f<choice><reg>i</reg><orig>ı</orig></choice>rent</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000118">e</w>
+                    <w lemma="vestir" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000119"><choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>s</reg><orig>ſ</orig></choice>t<choice><reg>i</reg><orig>ı</orig></choice>r</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000120">e</w>
+                    <w lemma="chaucier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000121">chauc<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">h</hi>u&i;&accent;</w>
-                    <w>me&s-long;</w>
-                    <w>&d-oncial;e&u-pour-v;u&tilde1-nasale-m;</w>
-                    <w>&a-rond;</w>
-                    <w>&Karle;</w>
+                <lb n="19"/>
+                <l n="19" xml:id="C_l_19">
+                    <w lemma="ui" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000122"><hi rend="initiale detach">h</hi>u<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig></w>
+                    <w lemma="mais1" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000123">me<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="devoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._1 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000124"><choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>v</reg><orig>u</orig></choice>u<choice><expan><ex>m</ex></expan><abbr>̃</abbr></choice></w>
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000125"><choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="charles" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000126"><choice><expan>Karl<ex>e</ex></expan><abbr><pc type="orig">.</pc>k<pc type="orig">.</pc></abbr></choice></w>
                     <!-- Entité Karle ou Karlon ? -->
-                    <w>rep&a-rond;&i;r&i;er</w>
+                    <w lemma="repairier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000127">rep<choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>r<choice><reg>i</reg><orig>ı</orig></choice>er</w>
                 </l>
-                <lb/>
-                <l corresp="#edBrandin_11004">
-                    <w rend="aggl"><hi rend="initiale detach">k</hi>&i;</w>
-                    <w>en</w>
-                    <w>k&a-rond;l&a-rond;bre</w>
-                    <w>fure&tilde1-nasale-n;t</w>
-                    <w>du&i;&accent;</w>
-                    <w>me&i;&s-long;</w>
-                    <w>ent&i;e&r-long;</w>
+                <lb n="20"/>
+                <l n="20" xml:id="C_l_20" corresp="#edBrandin_11004">
+                    <w lemma="qui" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000128" rend="aggl"><hi rend="initiale detach">k</hi><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="en1" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000129">en</w>
+                    <w lemma="calabre" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000130">k<choice><reg>a</reg><orig>ɑ</orig></choice>l<choice><reg>a</reg><orig>ɑ</orig></choice>bre</w>
+                    <w lemma="estre1" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000131">fure<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>t</w>
+                    <w lemma="deus" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_M_CAS_n" xml:id="C_w_000132">du<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig></w>
+                    <w lemma="mois" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_M_CAS_n" xml:id="C_w_000133">me<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="entier" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p #CATTEX2009_M_CAS_n" xml:id="C_w_000134">ent<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">a</hi></w>
-                    <w>&v-pour-u;ne</w>
-                    <w>&i;gl&i;&s-long;e</w>
-                    <w>f&i;&s-long;t</w>
-                    <num><pc type="orig">.</pc><w>xxx</w>
-                        <w>&i-plongeant-pour-i;</w><pc type="orig">.</pc></num>
-                    <w>ch&a-rond;rn&i;er</w>
+                <lb n="21"/>
+                <l n="21" xml:id="C_l_21">
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000135"><hi rend="initiale detach">a</hi></w>
+                    <w lemma="un" ana="#CATTEX2009_MS_pos_DETndf #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000136"><choice><reg>u</reg><orig>v</orig></choice>ne</w>
+                    <w lemma="eglise" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000137"><choice><reg>i</reg><orig>ı</orig></choice>gl<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000138">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <num><pc type="orig">.</pc><w lemma="trente" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000139">xxx</w>
+                        <w lemma="un" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000140"><choice><reg>i</reg><orig>ȷ</orig></choice></w><pc type="orig">.</pc></num>
+                    <w lemma="charnier3" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_M_CAS_n" xml:id="C_w_000141">ch<choice><reg>a</reg><orig>ɑ</orig></choice>rn<choice><reg>i</reg><orig>ı</orig></choice>er</w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&v-pour-u;</hi></w>
-                    <w>&s-long;e&s-long;</w>
-                    <w>mo&r-rond;z</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>mett&e-suscrit-re;</w>
-                    <w>e</w>
-                    <w>ap&a-rond;re&i;ll&i;e&r-long;</w>
+                <lb n="22"/>
+                <l n="22" xml:id="C_l_22">
+                    <w lemma="où" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_i" xml:id="C_w_000142"><hi rend="initiale detach"><choice><reg>u</reg><orig>v</orig></choice></hi></w>
+                    <w lemma="son4" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000143"><choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="morir" ana="#CATTEX2009_MS_pos_VERppe #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000144">mo<choice><reg>r</reg><orig>ꝛ</orig></choice>z</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000145">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="metre2" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000146">mett<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000147">e</w>
+                    <w lemma="apareillier1" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000148">ap<choice><reg>a</reg><orig>ɑ</orig></choice>re<choice><reg>i</reg><orig>ı</orig></choice>ll<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
-                    <w>le</w>
-                    <w>h&a-rond;ut</w>
-                    <w>ho&tilde1-nasale-m;me</w>
-                    <w>&s-long;&i;</w>
-                    <w>le</w>
-                    <w>ot</w>
-                    <w>auque&s-rond-plongeant;</w>
-                    <w>ch&i;e&r-long;</w>
+                <lb n="23"/>
+                <l n="23" xml:id="C_l_23">
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000149"><hi rend="initiale detach">e</hi></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000150">le</w>
+                    <w lemma="haut" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000151">h<choice><reg>a</reg><orig>ɑ</orig></choice>ut</w>
+                    <w lemma="ome" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000152">ho<choice><expan><ex>m</ex></expan><abbr>̃</abbr></choice>me</w>
+                    <w lemma="se" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000153"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000154">le</w>
+                    <w lemma="avoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000155">ot</w>
+                    <w lemma="auques" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000156">auque<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="chier" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000157">ch<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&i-long-pour-i;</hi>cel&s-long;</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>&i;l</w>
-                    <w>enterre&r-long;</w>
-                    <w>al</w>
-                    <w>mu&s-long;t&i;e&r-long;</w>
+                <lb n="24"/>
+                <l n="24" xml:id="C_l_24">
+                    <w lemma="icel" ana="#CATTEX2009_MS_pos_PROdem #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000158"><hi rend="initiale detach"><choice><reg>i</reg><orig>J</orig></choice></hi>cel<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000159">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000160"><choice><reg>i</reg><orig>ı</orig></choice>l</w>
+                    <w lemma="enterrer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000161">enterre<choice><reg>r</reg><orig>ɼ</orig></choice></w>
+                    <w lemma="a3+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000162">al</w>
+                    <w lemma="mostier" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000163">mu<choice><reg>s</reg><orig>ſ</orig></choice>t<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">t</hi>rente</w>
-                    <w>c&a-rond;no&i;ne&s-rond-plongeant;</w>
-                    <w rend="aggl">&i;</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>p&tilde3-ur;</w>
-                    <w>&d-oncial;eu</w>
-                    <w>p&tilde2-er-pour-re;&i;e&r-long;</w>
+                <lb n="25"/>
+                <l n="25" xml:id="C_l_25">
+                    <w lemma="trente" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000164"><hi rend="initiale detach">t</hi>rente</w>
+                    <w lemma="chanoine" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000165">c<choice><reg>a</reg><orig>ɑ</orig></choice>no<choice><reg>i</reg><orig>ı</orig></choice>ne<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="i2" ana="#CATTEX2009_MS_pos_PROadv" xml:id="C_w_000166" rend="aggl"><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000167">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="por2" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000168">p<choice><expan><ex>ur</ex></expan><abbr>᷑</abbr></choice></w>
+                    <w lemma="dieu" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000169"><choice><reg>d</reg><orig>δ</orig></choice>eu</w>
+                    <w lemma="priier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000170">p<choice><expan><ex>re</ex></expan><abbr>͛</abbr></choice><choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
             </lg>
             <lg type="laisse" n="522">
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach 2l">O</hi>ez</w>
-                    <w>que</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>&Karles;</w>
-                    <w rend="elision">l</w>
+                <lb n="26"/>
+                <l n="26" xml:id="C_l_26">
+                    <w lemma="öir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_imp #CATTEX2009_MS_PERS._2 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000171"><hi rend="initiale detach 2l">O</hi>ez</w>
+                    <w lemma="que2" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_r" xml:id="C_w_000172">que</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000173">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="charles" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000174"><choice><expan>K<ex>arles</ex></expan><abbr><pc type="orig">.</pc>k<pc type="orig">.</pc></abbr></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000175" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>empereur</w>
+                    <w lemma="emperëor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000176">empereur</w>
                     <pc type="supplied">:</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&p-barré-par;</hi></w>
-                    <w>tote</w>
-                    <w rend="elision">l</w>
+                <lb n="27"/>
+                <l n="27" xml:id="C_l_27">
+                    <w lemma="par" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000177"><hi rend="initiale detach"><choice><expan>p<ex>ar</ex></expan><abbr>ꝑ</abbr></choice></hi></w>
+                    <w lemma="tot" ana="#CATTEX2009_MS_pos_DETind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000178">tote</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000179" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>o&s-long;t</w>
-                    <w rend="aggl">en</w>
-                    <w>f&a-rond;&i;t</w>
-                    <w>c&i-suscrit-ri;e&ed-dierese;r</w>
-                    <w>un</w>
-                    <w>&i-pour-j;u&r-long;</w>
+                    <w lemma="ost" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000180">o<choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="en2" ana="#CATTEX2009_MS_pos_PROadv" xml:id="C_w_000181" rend="aggl">en</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000182">f<choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="crïer2" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000183">c<choice><expan><ex>r</ex>i</expan><abbr>ͥ</abbr></choice>e<reg>̈</reg>r</w>
+                    <w lemma="un" ana="#CATTEX2009_MS_pos_DETndf #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000184">un</w>
+                    <w lemma="jor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000185"><choice><reg>j</reg><orig>ı</orig></choice>u<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">k</hi>&i;</w>
-                    <w>ne</w>
-                    <w rend="elision">&s-long;</w>
+                <lb n="28"/>
+                <l n="28" xml:id="C_l_28">
+                    <w lemma="que4" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000186"><hi rend="initiale detach">k</hi><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000187">ne</w>
+                    <w lemma="soi1" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000188" rend="elision"><choice><reg>s</reg><orig>ſ</orig></choice></w>
                     <pc type="supplied">'</pc>
-                    <w>e<del rend="exponctué">n</del></w>
-                    <w>&a-rond;ut</w>
-                    <w>ne</w>
-                    <w rend="aggl">l&i;</w>
-                    <w>gr&a-rond;nt</w>
-                    <w rend="aggl">ne</w>
-                    <w rend="aggl">l&i;</w>
-                    <w rend="aggl">menu&r-long;</w>
+                    <w lemma="en2" ana="#CATTEX2009_MS_pos_PROadv" xml:id="C_w_000189">e<del rend="exponctué" status="unremarkable">n</del></w>
+                    <w lemma="aler" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000190"><choice><reg>a</reg><orig>ɑ</orig></choice>ut</w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000191">ne</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000192" rend="aggl">l<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="grant" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_graɑnt" xml:id="C_w_000193">gr<choice><reg>a</reg><orig>ɑ</orig></choice>nt</w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000194" rend="aggl">ne</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000195" rend="aggl">l<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="menor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_menurɼ" xml:id="C_w_000196" rend="aggl">menu<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">n</hi>e</w>
-                    <w>re&i;</w>
-                    <w>ne</w>
-                    <w>conte</w>
+                <lb n="29"/>
+                <l n="29" xml:id="C_l_29">
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000197"><hi rend="initiale detach">n</hi>e</w>
+                    <w lemma="roi2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000198">re<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000199">ne</w>
+                    <w lemma="conte1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000200">conte</w>
                     <pc type="supplied">,</pc>
-                    <w>che&u-pour-v;al&i;e&r-long;</w>
-                    <w>ne</w>
-                    <w>&u-pour-v;&a-rond;&u-pour-v;&a-rond;&s-long;ur</w>
+                    <w lemma="chevalier" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000201">che<choice><reg>v</reg><orig>u</orig></choice>al<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000202">ne</w>
+                    <w lemma="vavassor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000203"><choice><reg>v</reg><orig>u</orig></choice><choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>v</reg><orig>u</orig></choice><choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>ur</w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">N</hi>e</w>
-                    <w>r&i;che</w>
-                    <w>&d-oncial;uc</w>
-                    <w>ne</w>
-                    <w>p&i-suscrit-ri;nce</w>
-                    <w>ne</w>
-                    <w>cuntur</w>
+                <lb n="30"/>
+                <l n="30" xml:id="C_l_30">
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000204"><hi rend="initiale detach">N</hi>e</w>
+                    <w lemma="riche" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_MS_DEGRE_p #CATTEX2009_M_CAS_r" xml:id="C_w_000205">r<choice><reg>i</reg><orig>ı</orig></choice>che</w>
+                    <w lemma="duc2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000206"><choice><reg>d</reg><orig>δ</orig></choice>uc</w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000207">ne</w>
+                    <w lemma="prince" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000208">p<choice><expan><ex>r</ex>i</expan><abbr>ͥ</abbr></choice>nce</w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000209">ne</w>
+                    <w lemma="contor1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000210">cuntur</w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">a</hi></w>
-                    <w>lur</w>
-                    <w>&con-9-tironien;&s-long;e&i;l</w>
-                    <w>&u-pour-v;out</w>
-                    <w>le&i;&s-long;&s-long;&i;er</w>
-                    <w>&s-long;on</w>
-                    <w>hono&r-rond;</w>
+                <lb n="31"/>
+                <l n="31" xml:id="C_l_31">
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000211"><hi rend="initiale detach">a</hi></w>
+                    <w lemma="lor2" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000212">lur</w>
+                    <w lemma="conseil" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000213"><choice><expan><ex>con</ex></expan><abbr>ꝯ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice>l</w>
+                    <w lemma="voloir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000214"><choice><reg>v</reg><orig>u</orig></choice>out</w>
+                    <w lemma="laisser" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000215">le<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>er</w>
+                    <w lemma="son4" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000216"><choice><reg>s</reg><orig>ſ</orig></choice>on</w>
+                    <w lemma="onor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000217">hono<choice><reg>r</reg><orig>ꝛ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
             </lg>
             <lg type="laisse" n="523">
-                <lb/>
-                <l>
-                    <w rend="elision"><hi rend="initiale detach 2l">L</hi></w>
-                    <w>em&p-barré-per;eur</w>
-                    <w rend="elision">ne</w><!-- Vérif -->
-                    <w>&u-pour-v;out</w>
-                    <w>plu&s-long;</w>
-                    <w>&d-oncial;emo&r-rond;er</w>
+                <lb n="32"/>
+                <l n="32" xml:id="C_l_32">
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000218" rend="elision"><hi rend="initiale detach 2l">L</hi></w>
+                    <w lemma="emperëor" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000219">em<choice><expan>p<ex>er</ex></expan><abbr>ꝑ</abbr></choice>eur</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000220" rend="elision">ne</w><!-- Vérif -->
+                    <w lemma="voloir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000221"><choice><reg>v</reg><orig>u</orig></choice>out</w>
+                    <w lemma="plus" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000222">plu<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="demorer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000223"><choice><reg>d</reg><orig>δ</orig></choice>emo<choice><reg>r</reg><orig>ꝛ</orig></choice>er</w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&p-barré-par;</hi></w>
-                    <w>le</w>
-                    <w>&d-oncial;uc</w>
-                    <w>&Naimes;</w>
-                    <w>e</w>
-                    <w>&p-barré-par;</w>
-                    <w>le</w>
-                    <w>&u-pour-v;&i;el</w>
-                    <w>otuel</w>
+                <lb n="33"/>
+                <l n="33" xml:id="C_l_33">
+                    <w lemma="par" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000224"><hi rend="initiale detach"><choice><expan>p<ex>ar</ex></expan><abbr>ꝑ</abbr></choice></hi></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000225">le</w>
+                    <w lemma="duc2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000226"><choice><reg>d</reg><orig>δ</orig></choice>uc</w>
+                    <w lemma="naimes" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000227"><choice><abbr>.N.</abbr><expan>N<ex>aimes</ex></expan></choice></w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000228">e</w>
+                    <w lemma="par" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000229"><choice><expan>p<ex>ar</ex></expan><abbr>ꝑ</abbr></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000230">le</w>
+                    <w lemma="vieil" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000231"><choice><reg>v</reg><orig>u</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>el</w>
+                    <w lemma="otinel" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000232">otuel</w>
                     <note type="tradition">Var. Otuel ici, pour Otoër dans Brandin.</note>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">F</hi>&i;&s-long;t</w>
-                    <w rend="elision">l</w>
+                <lb n="34"/>
+                <l n="34" xml:id="C_l_34">
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000233"><hi rend="initiale detach">F</hi><choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000234" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>&a-rond;<space/>po&s-long;to&i;le</w>
-                    <w>e</w>
-                    <w>le</w>
-                    <w>&d-oncial;uc</w>
-                    <w>m&a-rond;n&d-oncial;e&r-long;</w>
+                    <w lemma="apostoile" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000235"><choice><reg>a</reg><orig>ɑ</orig></choice><space unit="chars" quantity="1"/>po<choice><reg>s</reg><orig>ſ</orig></choice>to<choice><reg>i</reg><orig>ı</orig></choice>le</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000236">e</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000237">le</w>
+                    <w lemma="duc2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000238"><choice><reg>d</reg><orig>δ</orig></choice>uc</w>
+                    <w lemma="mander" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000239">m<choice><reg>a</reg><orig>ɑ</orig></choice>n<choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
-                    <w>che&s-long;cun&s-rond-plongeant;</w>
-                    <w rend="elision">&d-oncial;</w>
+                <lb n="35"/>
+                <l n="35" xml:id="C_l_35">
+                    <w lemma="que4" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000240"><hi rend="initiale detach">Q</hi><choice><expan><ex>u</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="chascun" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000241">che<choice><reg>s</reg><orig>ſ</orig></choice>cun<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="de" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000242" rend="elision"><choice><reg>d</reg><orig>δ</orig></choice></w>
                     <pc type="supplied">'</pc>
-                    <w>el&s-long;</w>
-                    <w>&u-pour-v;&i;enge</w>
-                    <w rend="aggl">a</w>
-                    <w>lu&i;</w>
-                    <w>&p-barré-par;ler</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_i" xml:id="C_w_000243">el<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="venir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000244"><choice><reg>v</reg><orig>u</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>enge</w>
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000245" rend="aggl">a</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_i" xml:id="C_w_000246">lu<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="parler" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000247"><choice><expan>p<ex>ar</ex></expan><abbr>ꝑ</abbr></choice>ler</w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&v-pour-u;</hi>nc</w>
-                    <w rend="elision">l</w>
-                    <w>a<space/>po&s-long;to&i;le</w>
-                    <w rend="elision">n</w>
-                    <w>&i;</w>
-                    <w>o&s-long;e</w>
-                    <w>are&s-long;te&r-long;</w>
+                <lb n="36"/>
+                <l n="36" xml:id="C_l_36">
+                    <w lemma="onque" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000248"><hi rend="initiale detach"><choice><reg>u</reg><orig>v</orig></choice></hi>nc</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000249" rend="elision">l</w>
+                    <w lemma="apostoile" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000250">a<space unit="chars" quantity="1"/>po<choice><reg>s</reg><orig>ſ</orig></choice>to<choice><reg>i</reg><orig>ı</orig></choice>le</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000251" rend="elision">n</w>
+                    <w lemma="i2" ana="#CATTEX2009_MS_pos_PROadv" xml:id="C_w_000252"><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="oser" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000253">o<choice><reg>s</reg><orig>ſ</orig></choice>e</w>
+                    <w lemma="arester" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000254">are<choice><reg>s</reg><orig>ſ</orig></choice>te<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
-                    <w>o&r-rond;&d-oncial;enez</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>&a-rond;l</w>
-                    <w>o&s-long;t</w>
-                    <w>returne&r-long;</w>
+                <lb n="37"/>
+                <l n="37" xml:id="C_l_37">
+                    <w lemma="laissier" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000255"><hi rend="initiale detach">L</hi>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="ordener" ana="#CATTEX2009_MS_pos_VERppe #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000256">o<choice><reg>r</reg><orig>ꝛ</orig></choice><choice><reg>d</reg><orig>δ</orig></choice>enez</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000257">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="a3+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000258"><choice><reg>a</reg><orig>ɑ</orig></choice>l</w>
+                    <w lemma="ost" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000259">o<choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="retorner" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000260">returne<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
-                    <w>f&i;&s-long;t</w>
-                    <w>&a-rond;&s-long;</w>
-                    <w>mo&r-rond;&s-long;</w>
-                    <w>le&s-rond-plongeant;</w>
-                    <w>&a-rond;lme&s-rond-plongeant;</w>
-                    <w>com&a-rond;n&d-oncial;e&r-long;</w>
+                <lb n="38"/>
+                <l n="38" xml:id="C_l_38">
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000261"><hi rend="initiale detach">e</hi></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000262">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="a3+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000263"><choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="morir" ana="#CATTEX2009_MS_pos_VERppe #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000264">mo<choice><reg>r</reg><orig>ꝛ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000265">le<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="ame" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000266"><choice><reg>a</reg><orig>ɑ</orig></choice>lme<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="comander" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000267">com<choice><reg>a</reg><orig>ɑ</orig></choice>n<choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
-                    <w>vet</w>
-                    <w rend="elision">l</w>
-                    <w>&i;gl&i;&s-long;e</w>
-                    <w>&d-oncial;e&d-oncial;&i;er</w>
-                    <w>e</w>
-                    <w>&s-long;&a-rond;cre&r-long;</w>
+                <lb n="39"/>
+                <l n="39" xml:id="C_l_39">
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000268"><hi rend="initiale detach">e</hi></w>
+                    <w lemma="aler" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000269">vet</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000270" rend="elision">l</w>
+                    <w lemma="eglise" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000271"><choice><reg>i</reg><orig>ı</orig></choice>gl<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
+                    <w lemma="dediier" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000272"><choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>d</reg><orig>δ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>er</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000273">e</w>
+                    <w lemma="sacrer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000274"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>a</reg><orig>ɑ</orig></choice>cre<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
-                    <w>&i;l</w>
-                    <w>me&i;̈me&s-rond-plongeant;</w>
-                    <w>&u-pour-v;et</w>
-                    <w rend="aggl">l&a-rond;</w>
-                    <w>me&s-long;&s-long;e</w>
-                    <w>ch&a-rond;nter</w>
+                <lb n="40"/>
+                <l n="40" xml:id="C_l_40">
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000275"><hi rend="initiale detach">e</hi></w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000276"><choice><reg>i</reg><orig>ı</orig></choice>l</w>
+                    <w lemma="mëisme" ana="#CATTEX2009_MS_pos_ADJind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000277">me<choice><reg>i</reg><orig>ı</orig></choice>̈me<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="aler" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000278"><choice><reg>v</reg><orig>u</orig></choice>et</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000279" rend="aggl">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="messe" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000280">me<choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
+                    <w lemma="chanter" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000281">ch<choice><reg>a</reg><orig>ɑ</orig></choice>nter</w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&G;</hi>r&a-rond;nt</w>
-                    <w>fu</w>
-                    <w>l&a-rond;</w>
-                    <w>offeren&d-oncial;e</w>
-                    <w>p&tilde3-ur;</w>
-                    <w>le</w>
-                    <w>l&i;u</w>
-                    <w>eno&r-rond;e&r-long;</w>
+                <lb n="41"/>
+                <l n="41" xml:id="C_l_41">
+                    <w lemma="grant" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_n #CATTEX2009_MS_DEGRE_p #CATTEX2009_M_CAS_r" xml:id="C_w_000282"><hi rend="initiale detach"><choice><reg>g</reg><orig>G</orig></choice></hi>r<choice><reg>a</reg><orig>ɑ</orig></choice>nt</w>
+                    <w lemma="estre1" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000283">fu</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_n" xml:id="C_w_000284">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="ofrende" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_n" xml:id="C_w_000285">offeren<choice><reg>d</reg><orig>δ</orig></choice>e</w>
+                    <w lemma="por2" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000286">p<choice><expan><ex>ur</ex></expan><abbr>᷑</abbr></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000287">le</w>
+                    <w lemma="lieu" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000288">l<choice><reg>i</reg><orig>ı</orig></choice>u</w>
+                    <w lemma="onorer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000289">eno<choice><reg>r</reg><orig>ꝛ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">;</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">n</hi>e</w>
-                    <w>l&i;</w>
-                    <w>e&s-long;tut</w>
-                    <w>p&tilde3-ur;</w>
+                <lb n="42"/>
+                <l n="42" xml:id="C_l_42">
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000290"><hi rend="initiale detach">n</hi>e</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_i" xml:id="C_w_000291">l<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="estovoir1" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000292">e<choice><reg>s</reg><orig>ſ</orig></choice>tut</w>
+                    <w lemma="por2" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000293">p<choice><expan><ex>ur</ex></expan><abbr>᷑</abbr></choice></w>
                     <pc type="orig">.</pc>
-                    <w>v&i;&i;</w>
+                    <w lemma="set" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000294">v<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
                     <pc type="orig">.</pc>
-                    <w>c</w>
+                    <w lemma="cent" ana="#CATTEX2009_MS_pos_DETcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000295">c</w>
                     <pc type="orig">.</pc>
-                    <w>m&a-rond;r&s-long-plongeant;</w>
-                    <w>&d-oncial;one&r-long;</w>
+                    <w lemma="marc1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000296">m<choice><reg>a</reg><orig>ɑ</orig></choice>r<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="doner" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000297"><choice><reg>d</reg><orig>δ</orig></choice>one<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
                 <!--<lb/><l><w><hi rend="initiale detach">S</hi>e&s-long;&s-long;&a-rond;nte</w> <w>mo&i;ne&s-long;</w> <w>&i;</w> <w>&a-rond;</w> <w>f&a-rond;&i;t</w> <w>o&r-rond;&d-oncial;ener</w></l>
 <lb/><l><w><hi rend="initiale detach">E</hi>t</w> <w>g&a-rond;r&i;&s-long;on</w> <w>&a-rond;</w> <w>lo&r-rond;</w> <w>ue&s-long;</w> <w>e&s-long;to&r-rond;er</w></l>
 <lb/><l><w><hi rend="initiale detach">D</hi>ont</w> <w>&s-long;e</w> <w>poï&s-long;&s-long;ent</w> <w>r&i;chement</w> <w>&a-rond;to&r-rond;ner</w><pc type="supplied">.</pc></l>-->
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">L</hi>e</w>
-                    <w>&d-oncial;uc</w>
-                    <w>&Girars;</w>
-                    <w>f&i;&s-long;t</w>
-                    <w>&s-long;uen</w>
-                    <w>e&i;re</w>
-                    <w>&a-rond;p&e-suscrit-re;&s-long;te&r-long;</w>
+                <lb n="43"/>
+                <l n="43" xml:id="C_l_43">
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000298"><hi rend="initiale detach">L</hi>e</w>
+                    <w lemma="duc2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n #CATTEX2009_M_CAS_r" xml:id="C_w_000299"><choice><reg>d</reg><orig>δ</orig></choice>uc</w>
+                    <w lemma="girard" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000300"><choice><expan>G<ex>irars</ex></expan><abbr><pc type="orig">.</pc>G<pc type="orig">.</pc></abbr></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000301">f<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="suen" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000302"><choice><reg>s</reg><orig>ſ</orig></choice>uen</w>
+                    <w lemma="erre3" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000303">e<choice><reg>i</reg><orig>ı</orig></choice>re</w>
+                    <w lemma="aprester" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000304"><choice><reg>a</reg><orig>ɑ</orig></choice>p<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>te<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
-                    <w>mulz</w>
+                <lb n="44"/>
+                <l n="44" xml:id="C_l_44">
+                    <w lemma="que1" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000305"><hi rend="initiale detach">Q</hi><choice><expan><ex>u</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="mul3" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000306">mulz</w>
                     <pc type="supplied">,</pc>
-                    <w>que</w>
-                    <w>mule&s-rond-plongeant;</w>
+                    <w lemma="que1" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000307">que</w>
+                    <w lemma="mule5" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000308">mule<choice><reg>s</reg><orig></orig></choice></w>
                     <num><pc type="orig">.</pc>
-                        <w>xxx</w>
+                        <w lemma="trente" ana="#CATTEX2009_MS_pos_PROcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000309">xxx</w>
                         <pc type="orig">.</pc>
-                        <w>v&i;&i;</w>
+                        <w lemma="set" ana="#CATTEX2009_MS_pos_PROcar #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000310">v<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
                         <pc type="orig">.</pc></num>
-                    <w>&a-rond;&s-long;&s-long;emble&r-long;</w>
+                    <w lemma="assembler" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000311"><choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>emble<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
-                    <w>no&u-pour-v;ele&s-rond-plongeant;</w>
-                    <w>&x-i-cresti;&ed-dierese;ene&s-rond-plongeant;</w>
-                    <w>f&a-rond;&i;t</w>
-                    <w>aturne&r-long;</w>
+                <lb n="45"/>
+                <l n="45" xml:id="C_l_45">
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000312"><hi rend="initiale detach">L</hi>e<choice><reg>s</reg><orig>ſ</orig></choice></w>
+                    <w lemma="novel" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000313">no<choice><reg>v</reg><orig>u</orig></choice>ele<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="crestiien" ana="#CATTEX2009_MS_pos_NOMpro #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000314"><choice><expan>C<ex>rest</ex>i</expan><abbr>xͥ</abbr></choice><reg>̈</reg>ene<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000315">f<choice><reg>a</reg><orig>ɑ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice>t</w>
+                    <w lemma="atorner" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000316">aturne<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
-                    <w>&s-long;&i;</w>
-                    <w>le&s-rond-plongeant;</w>
-                    <w>funt</w>
-                    <w>&u-pour-v;e&s-long;t&i;r</w>
-                    <w>e</w>
-                    <w>&a-rond;ffuble&r-long;</w>
+                <lb n="46"/>
+                <l n="46" xml:id="C_l_46">
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000317"><hi rend="initiale detach">e</hi></w>
+                    <w lemma="si" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000318"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000319">le<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000320">funt</w>
+                    <w lemma="vestir" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000321"><choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>s</reg><orig>ſ</orig></choice>t<choice><reg>i</reg><orig>ı</orig></choice>r</w>
+                    <w lemma="et" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000322">e</w>
+                    <w lemma="afubler" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000323"><choice><reg>a</reg><orig>ɑ</orig></choice>ffuble<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&v-pour-u;</hi>ne</w>
-                    <w>c&e-suscrit-re;&a-rond;ture</w>
-                    <w>ne</w>
-                    <w>&s-long;o&r-rond;ent</w>
-                    <w>p&tilde3-ur;pen&s-long;er</w>
+                <lb n="47"/>
+                <l n="47" xml:id="C_l_47">
+                    <w lemma="un" ana="#CATTEX2009_MS_pos_DETndf #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000324"><hi rend="initiale detach"><choice><reg>u</reg><orig>v</orig></choice></hi>ne</w>
+                    <w lemma="crïature" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000325">c<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><choice><reg>a</reg><orig>ɑ</orig></choice>ture</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000326">ne</w>
+                    <w lemma="savoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000327"><choice><reg>s</reg><orig>ſ</orig></choice>o<choice><reg>r</reg><orig>ꝛ</orig></choice>ent</w>
+                    <w lemma="purpenser" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000328">p<choice><expan><ex>ur</ex></expan><abbr>᷑</abbr></choice>pen<choice><reg>s</reg><orig>ſ</orig></choice>er</w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">D</hi>e</w>
-                    <w>que&i;</w>
-                    <w rend="elision">l</w>
+                <lb n="48"/>
+                <l n="48" xml:id="C_l_48">
+                    <w lemma="de" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000329"><hi rend="initiale detach">D</hi>e</w>
+                    <w lemma="coi2" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_i" xml:id="C_w_000330">que<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000331" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>en</w>
-                    <w>&d-oncial;e&i;&accent;&u-pour-v;e</w>
-                    <w>fr&a-rond;nche</w>
-                    <w>fe&tilde1-nasale-m;me</w>
-                    <w>eno&r-rond;e&r-long;</w>
+                    <w lemma="on" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000332">en</w>
+                    <w lemma="devoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000333"><choice><reg>d</reg><orig>δ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice><orig>́</orig><choice><reg>v</reg><orig>u</orig></choice>e</w>
+                    <w lemma="franc1" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000334">fr<choice><reg>a</reg><orig>ɑ</orig></choice>nche</w>
+                    <w lemma="feme" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000335">fe<choice><expan><ex>m</ex></expan><abbr>̃</abbr></choice>me</w>
+                    <w lemma="onorer" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000336">eno<choice><reg>r</reg><orig>ꝛ</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
-                    <w rend="elision">l</w>
+                <lb n="49"/>
+                <l n="49" xml:id="C_l_49">
+                    <w lemma="que4" ana="#CATTEX2009_MS_pos_CONsub" xml:id="C_w_000337"><hi rend="initiale detach">Q</hi><choice><expan><ex>u</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000338" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>un</w>
-                    <w>pu&s-long;t</w>
-                    <w>cono&i;&s-long;t&e-suscrit-re;</w>
-                    <w>ne</w>
-                    <w>t&u-suscrit-ru;&u-pour-v;e&r-long;</w>
+                    <w lemma="on" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000339">un</w>
+                    <w lemma="pöoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_ipf #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000340">pu<choice><reg>s</reg><orig>ſ</orig></choice>t</w>
+                    <w lemma="conoistre" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000341">cono<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>t<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="ne2" ana="#CATTEX2009_MS_pos_CONcoo" xml:id="C_w_000342">ne</w>
+                    <w lemma="trover" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000343">t<choice><expan><ex>r</ex>u</expan><abbr>ͧ</abbr></choice><choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
-                    <w>l&a-rond;</w>
-                    <w>re&i;&ed-dierese;ne</w>
-                    <w>ne</w>
-                    <w>f&a-rond;ce</w>
-                    <w>p&e-suscrit-re;&s-long;ente&r-long;</w>
+                <lb n="50"/>
+                <l n="50" xml:id="C_l_50">
+                    <w lemma="que2" ana="#CATTEX2009_MS_pos_PROrel #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000344"><hi rend="initiale detach">Q</hi><choice><expan><ex>u</ex>e</expan><abbr>ͤ</abbr></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000345">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="röine1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000346">re<choice><reg>i</reg><orig>ı</orig></choice><reg>̈</reg>ne</w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000347">ne</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_sub #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000348">f<choice><reg>a</reg><orig>ɑ</orig></choice>ce</w>
+                    <w lemma="presenter" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000349">p<choice><expan><ex>r</ex>e</expan><abbr>ͤ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>ente<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>ur</w>
-                    <w>un</w>
-                    <w>mul</w>
-                    <w>fu&tilde1-nasale-n;t</w>
-                    <w>l&a-rond;</w>
-                    <w>re&i;&ed-dierese;ne</w>
-                    <w>mu&tilde1-nasale-n;te&r-long;</w>
+                <lb n="51"/>
+                <l n="51" xml:id="C_l_51">
+                    <w lemma="sor2" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000350"><hi rend="initiale detach">s<!-- vérif forme--></hi>ur</w>
+                    <w lemma="un" ana="#CATTEX2009_MS_pos_DETndf #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000351">un</w>
+                    <w lemma="mul3" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000352">mul</w>
+                    <w lemma="faire" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._p" xml:id="C_w_000353">fu<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>t</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000354">l<choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="röine1" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000355">re<choice><reg>i</reg><orig>ı</orig></choice><reg>̈</reg>ne</w>
+                    <w lemma="monter" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000356">mu<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>te<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">;</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">p</hi>o&i;</w>
-                    <w>pot</w>
-                    <w rend="elision">l</w>
+                <lb n="52"/>
+                <l n="52" xml:id="C_l_52">
+                    <w lemma="poi" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_r" xml:id="C_w_000357"><hi rend="initiale detach">p</hi>o<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="pöoir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000358">pot</w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000359" rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w>u&tilde1-nasale-n;</w>
-                    <w>&d-oncial;e</w>
-                    <w>&s-long;&i;</w>
-                    <w>bele&s-rond-plongeant;</w>
-                    <w>tru&u-pour-v;e&r-long;</w>
+                    <w lemma="on" ana="#CATTEX2009_MS_pos_PROind #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_n #CATTEX2009_MS_CAS_n" xml:id="C_w_000360">u<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice></w>
+                    <w lemma="de" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000361"><choice><reg>d</reg><orig>δ</orig></choice>e</w>
+                    <w lemma="si" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000362"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="bel1" ana="#CATTEX2009_MS_pos_ADJqua #CATTEX2009_MS_NOMB._p #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r #CATTEX2009_MS_DEGRE_p" xml:id="C_w_000363">bele<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="trover" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000364">tru<choice><reg>v</reg><orig>u</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">&v-pour-u;</hi>nke&s-rond-plongeant;</w>
-                    <w>l&i;</w>
-                    <w>&d-oncial;uc&s-rond-plongeant;</w>
-                    <w>ne</w>
-                    <w>&s-long;e</w>
-                    <w>&u-pour-v;out</w>
-                    <w>&con-9-tironien;&s-long;e&i;ll&i;e&r-long;</w>
+                <lb n="53"/>
+                <l n="53" xml:id="C_l_53">
+                    <w lemma="onque" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000365"><hi rend="initiale detach"><choice><reg>u</reg><orig>v</orig></choice></hi>nke<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="le" ana="#CATTEX2009_MS_pos_DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000366">l<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="duc2" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_n" xml:id="C_w_000367"><choice><reg>d</reg><orig>δ</orig></choice>uc<choice><reg>s</reg><orig></orig></choice></w>
+                    <w lemma="ne1" ana="#CATTEX2009_MS_pos_ADVneg" xml:id="C_w_000368">ne</w>
+                    <w lemma="soi1" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000369"><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
+                    <w lemma="voloir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_pst #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000370"><choice><reg>v</reg><orig>u</orig></choice>out</w>
+                    <w lemma="conseillier1" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000371"><choice><expan><ex>con</ex></expan><abbr>ꝯ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>e<choice><reg>i</reg><orig>ı</orig></choice>ll<choice><reg>i</reg><orig>ı</orig></choice>e<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                     <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">p</hi>&i-suscrit-ri;&s-long;t</w>
+                <lb n="54"/>
+                <l n="54" xml:id="C_l_54">
+                    <w lemma="prendre" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000372"><hi rend="initiale detach">p</hi><choice><expan><ex>r</ex>i</expan><abbr>ͥ</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>t</w>
                     <!--<w rend="elision">l</w>
                     <pc type="supplied">'</pc>
                     <w>&a-rond;</w>-->
-                    <w>l&a-rond;</w><!-- À mon avis, il faut plutot segmenter ainsi -->
-                    <w>&a-rond;l</w>
-                    <w>fre&i;n</w>
+                    <w lemma="il" ana="#CATTEX2009_MS_pos_PROper #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000373">l<choice><reg>a</reg><orig>ɑ</orig></choice></w><!-- À mon avis, il faut plutot segmenter ainsi -->
+                    <w lemma="a3+le" ana="#CATTEX2009_MS_pos_PRE.DETdef #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000374"><choice><reg>a</reg><orig>ɑ</orig></choice>l</w>
+                    <w lemma="frein" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_m #CATTEX2009_MS_CAS_r" xml:id="C_w_000375">fre<choice><reg>i</reg><orig>ı</orig></choice>n</w>
                     <pc type="supplied">,</pc>
-                    <w>&s-long;&i;</w>
-                    <w>&com-9-tironien;e&tilde1-nasale-n;c&ed-palatalisation-cedille;a</w>
-                    <w>&a-rond;</w>
-                    <w>&p-barré-par;ler</w>
+                    <w lemma="si" ana="#CATTEX2009_MS_pos_ADVgen #CATTEX2009_MS_DEGRE_-" xml:id="C_w_000376"><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="comencier" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000377"><choice><expan><ex>com</ex></expan><abbr>ꝯ</abbr></choice>e<choice><expan><ex>n</ex></expan><abbr>̃</abbr></choice>c<reg>̧</reg>a</w>
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000378"><choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="parler" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000379"><choice><expan>p<ex>ar</ex></expan><abbr>ꝑ</abbr></choice>ler</w>
                     <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>&a-rond;</w>
-                    <w>&d-oncial;rue&ed-dierese;r&i;e</w>
-                    <w>offr&i;</w>
-                    <w rend="aggl">a</w>
-                    <w>p&tilde2-er-pour-re;&s-long;ente&r-long;</w>
+                <lb n="55"/>
+                <l n="55" xml:id="C_l_55">
+                    <w lemma="son4" ana="#CATTEX2009_MS_pos_DETpos #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000380"><hi rend="initiale detach">s<!-- vérif forme--></hi><choice><reg>a</reg><orig>ɑ</orig></choice></w>
+                    <w lemma="drüerie" ana="#CATTEX2009_MS_pos_NOMcom #CATTEX2009_MS_NOMB._s #CATTEX2009_MS_GENRE_f #CATTEX2009_MS_CAS_r" xml:id="C_w_000381"><choice><reg>d</reg><orig>δ</orig></choice>rue<reg>̈</reg>r<choice><reg>i</reg><orig>ı</orig></choice>e</w>
+                    <w lemma="ofrir" ana="#CATTEX2009_MS_pos_VERcjg #CATTEX2009_MS_MODE_ind #CATTEX2009_MS_TEMPS_psp #CATTEX2009_MS_PERS._3 #CATTEX2009_MS_NOMB._s" xml:id="C_w_000382">offr<choice><reg>i</reg><orig>ı</orig></choice></w>
+                    <w lemma="a3" ana="#CATTEX2009_MS_pos_PRE" xml:id="C_w_000383" rend="aggl">a</w>
+                    <w lemma="presenter" ana="#CATTEX2009_MS_pos_VERinf" xml:id="C_w_000384">p<choice><expan><ex>re</ex></expan><abbr>͛</abbr></choice><choice><reg>s</reg><orig>ſ</orig></choice>ente<choice><reg>r</reg><orig>ɼ</orig></choice></w>
                 </l>
                 <!-- Suite à faire ; lg temporaire-->
                 </lg>
