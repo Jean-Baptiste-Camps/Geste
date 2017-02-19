@@ -3,13 +3,26 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     version="2.0">
     
+    <xsl:import href="workflow_numerotation.xsl"/>
+    
+    <!--TODO:  
+        Modifier la feuille pour préfixer les @ana, et inclure, quand nécessaire, les POS et flect. en M -->
     <xsl:variable name="POS_file" select="
-        concat(string-join(tokenize(base-uri(), '/')[position() != last()], '/'),
-        '/POS-tags/', 
-        substring-before(tokenize(base-uri(), '/')[last()], '_'), 
-        '_pos.xml')"/>
+        concat('../tag/', 
+        tokenize(base-uri(), '/')[last()])"/>
     
     <xsl:variable name="POS" select="document($POS_file)"/>
+    
+    <!-- Modification pour numéroter 
+        et intégrer les
+        pos en une seule compilation
+    -->
+    <xsl:template match="/">
+        <xsl:variable name="docNum">
+            <xsl:apply-templates mode="numerotation"/>
+        </xsl:variable>
+        <xsl:apply-templates select="$docNum/node()"/>
+    </xsl:template>
 
     <xsl:template match="node()|@*">
         <xsl:copy>
@@ -17,28 +30,58 @@
         </xsl:copy>
     </xsl:template>
     
+    
     <xsl:template match="tei:w">
         <xsl:variable name="monID" select="@xml:id"/>
         <xsl:variable name="mesPOS" select="$POS//row[ID = $monID]"/>
         <xsl:variable name="monAna">
             <xsl:for-each select="$mesPOS/(PPOS|MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']">
                 <xsl:text>#</xsl:text>
+                <xsl:text>CATTEX2009_MS_</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="local-name(.) ='PPOS'">
+                        <xsl:text>pos_</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="local-name(.) ='DEGRÉ'">
+                        <xsl:text>DEGRE_</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="local-name()"/>
+                        <xsl:text>_</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
                 <xsl:value-of select="."/>
                 <xsl:if test="position() != last()">
                 <xsl:text> </xsl:text>
                 </xsl:if>
             </xsl:for-each>
-            <xsl:for-each select="$mesPOS/(NOMB.-M|CAS-M|flect_M)">
+            <xsl:if test="$mesPOS/PPOSM[. != '']">
+                <xsl:text> #</xsl:text>
+                <xsl:text>CATTEX2009_M_</xsl:text>
+                <xsl:value-of select="."/>
+            </xsl:if>
+            <xsl:if test="$mesPOS/flectM[. != '']"><!-- Passons à la flexion en morphologie. On ne l'intègre que si elle diffère de celle en MS. -->
+                <xsl:variable name="mesFlectMS" select="$mesPOS/(MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']"/>
+                <xsl:for-each select="tokenize($mesPOS/flectM, '\|')">
+                    <xsl:variable name="maPosition" select="position()"/>
+                    <xsl:if test=". != $mesFlectMS[$maPosition]">
+                        <xsl:text> #</xsl:text>
+                        <xsl:text>CATTEX2009_M_</xsl:text>
+                        <xsl:value-of select="$mesFlectMS[$maPosition]/local-name()"/>
+                        <xsl:text>_</xsl:text>
+                        <xsl:value-of select="."/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:if>
+            <!--<xsl:for-each select="$mesPOS/(NOMB.-M|CAS-M|flect_M)">
                 <xsl:text> </xsl:text>
                 <xsl:text>#M:</xsl:text>
                 <xsl:value-of select="."/>
-            </xsl:for-each>
+            </xsl:for-each>-->
         </xsl:variable>
         <xsl:copy>
-            <xsl:attribute name="lemma" select="$mesPOS/PLEMMA"/><!-- TODO: il faudrait utiliser
-            ici normalize-unicode() en 'NFC', mais la feuille de création de tableaux ne la gère pas encore
-            -->
-            <xsl:attribute name="ana" select="$monAna"/>
+            <xsl:attribute name="lemma" select="normalize-space(normalize-unicode($mesPOS/PLEMMA, 'NFC'))"/>
+            <xsl:attribute name="ana" select="normalize-space(normalize-unicode($monAna, 'NFC'))"/>
             <xsl:apply-templates select=" node() |  @*"/>
         </xsl:copy>
     </xsl:template>

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Description des classes du jeu CATTEX2009 employés dans le corpus GESTE</title>
+            <author><forename>Sophie</forename><surname>Prévost</surname></author>
+            <author><forename>Céline</forename><surname>Guillot</surname></author>
+            <author><forename>Alexei</forename><surname>Lavrentiev</surname></author>
+            <author><forename>Serge</forename><surname>Heiden</surname></author>
+            <respStmt xml:id="JBC">
+               <resp>encodé en XML/TEI par</resp>
+               <persName>Jean-Baptiste Camps</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Document de travail</p>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct xml:id="Prévost2013">
+               <monogr>
+                  <title level="m">Jeu d’étiquettes morphosyntaxiques CATTEX2009</title>
+                  <author><forename>Sophie</forename><surname>Prévost</surname></author>
+                  <author><forename>Céline</forename><surname>Guillot</surname></author>
+                  <author><forename>Alexei</forename><surname>Lavrentiev</surname></author>
+                  <author><forename>Serge</forename><surname>Heiden</surname></author>
+                  <imprint>
+                     <pubPlace>Lyon</pubPlace>
+                     <date>2013</date>
+                     <note type="url">http://bfm.ens-lyon.fr/IMG/pdf/Cattex2009_2.0.pdf</note>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <!-- TODO: restreindre pour adapter à notre usage? -->
+        <classDecl>
+           <taxonomy xml:id="CATTEX2009">
+              <bibl>Jeux CATTEX2009 de la BFM... référence à compléter</bibl>
+              <taxonomy xml:id="CATTEX2009_MS">
+                 <desc>Version morpho-syntactique des étiquettes</desc>
+                 <taxonomy xml:id="CATTEX2009_MS_pos">
+                    <gloss>Catégorie et type</gloss>
+                    <category>
+                       <catDesc>Verbe</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_VERcjg">
+                          <catDesc>Verbe conjugué</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_VERinf">
+                          <catDesc>Verbe infinitif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_VERppe">
+                          <catDesc>Verbe participe passé</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_VERppa">
+                          <catDesc>Verbe participe présent</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Nom</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_NOMcom">
+                          <catDesc>Nom commun</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_NOMpro">
+                          <catDesc>Nom propre</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Adjectif</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_ADJqua">
+                          <catDesc>Adjectif qualificatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADJind">
+                          <catDesc>Adjectif indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADJcar">
+                          <catDesc>Adjectif cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADJord">
+                          <catDesc>Adjectif ordinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADJpos">
+                          <catDesc>Adjectif possessif</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Pronom</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_PROper">
+                          <catDesc>Pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROper.PROper">
+                          <catDesc>Pronom personnel + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROimp">
+                          <catDesc>Pronom impersonnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROadv">
+                          <catDesc>Pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROpos">
+                          <catDesc>Pronom possessif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROdem">
+                          <catDesc>Pronom démonstratif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROind">
+                          <catDesc>Pronom indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROcar">
+                          <catDesc>Pronom cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROord">
+                          <catDesc>Pronom ordinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROrel">
+                          <catDesc>Pronom relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROrel.PROper">
+                          <catDesc>Pronom relatif + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROrel.PROadv">
+                          <catDesc>Pronom relatif + pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROint">
+                          <catDesc>Pronom interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PROcom">
+                          <catDesc>Pronom composé</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Déterminant</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_DETdef">
+                          <catDesc>Déterminant défini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETndf">
+                          <catDesc>Déterminant indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETdem">
+                          <catDesc>Déterminant démonstratif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETpos">
+                          <catDesc>Déterminant possessif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETind">
+                          <catDesc>Déterminant indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETcar">
+                          <catDesc>Déterminant cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETrel">
+                          <catDesc>Déterminant relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETint">
+                          <catDesc>Déterminant interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_DETcom">
+                          <catDesc>Déterminant composé</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Adverbe</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_ADVgen">
+                          <catDesc>Adverbe général</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVgen.PROper">
+                          <catDesc>Adverbe général + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVgen.PROadv">
+                          <catDesc>Adverbe général + pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVneg">
+                          <catDesc>Adverbe négatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVneg.PROper">
+                          <catDesc>Adverbe négatif + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVint">
+                          <catDesc>Adverbe interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_ADVsub">
+                          <catDesc>Adverbe «subordonnant»</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Préposition</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_PRE">
+                          <catDesc>Préposition</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PRE.DETdef">
+                          <catDesc>Préposition + déterminant défini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PRE.DETcom">
+                          <catDesc>Préposition + déterminant composé</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PRE.DETrel">
+                          <catDesc>Préposition + déterminant relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PRE.PROper">
+                          <catDesc>Préposition + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PRE.PROrel">
+                          <catDesc>Préposition + pronom relatif</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Conjonction</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_CONcoo">
+                          <catDesc>Conjonction de coordination</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_CONsub">
+                          <catDesc>Conjonction de subordination</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_CONsub.PROper">
+                          <catDesc>Conjonction de subordination + pronom personnel</catDesc>
+                       </category>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_pos_INJ">
+                       <catDesc>Interjection</catDesc>
+                    </category>
+                    <category>
+                       <catDesc>Ponctuation</catDesc>
+                       <category xml:id="CATTEX2009_MS_pos_PONfbl">
+                          <catDesc>Ponctuation faible</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PONfrt">
+                          <catDesc>Ponctuation forte</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PONpga">
+                          <catDesc>Ponctuation parenthétique ouvrante</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PONpdr">
+                          <catDesc>Ponctuation parenthétique fermante</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_MS_pos_PONpxx">
+                          <catDesc>Ponctuation parenthétique indéterminée</catDesc>
+                       </category>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_pos_ETR">
+                       <catDesc>Mot étranger</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_pos_ABR">
+                       <catDesc>Abréviation</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_pos_RED">
+                       <catDesc>Mot redondant</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_pos_OUT">
+                       <catDesc>Mot non considéré</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_MODE">
+                    <gloss>Mode</gloss>
+                    <category xml:id="CATTEX2009_MS_MODE_ind">
+                       <catDesc>Indicatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_MODE_imp">
+                       <catDesc>Impératif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_MODE_con">
+                       <catDesc>Conditionnel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_MODE_sub">
+                       <catDesc>Subjonctif</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_TEMPS">
+                    <gloss>Temps</gloss>
+                    <category xml:id="CATTEX2009_MS_TEMPS_pst">
+                       <catDesc>Présent</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_TEMPS_ipf">
+                       <catDesc>Imparfait</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_TEMPS_fut">
+                       <catDesc>Futur</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_TEMPS_psp">
+                       <catDesc>Passé simple</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_PERS">
+                    <gloss>Personne</gloss>
+                    <category xml:id="CATTEX2009_MS_PERS_0">
+                       <catDesc>impersonnel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_PERS_1">
+                       <catDesc>Première personne</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_PERS_2">
+                       <catDesc>Deuxième personne</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_PERS_3">
+                       <catDesc>Troisième personne</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_NOMB.">
+                    <gloss>Nombre</gloss>
+                    <category xml:id="CATTEX2009_MS_NOMB._s">
+                       <catDesc>singulier</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_NOMB._p">
+                       <catDesc>pluriel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_NOMB._x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_GENRE">
+                    <gloss>Genre</gloss>
+                    <category xml:id="CATTEX2009_MS_GENRE_m">
+                       <catDesc>masculin</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_GENRE_f">
+                       <catDesc>féminin</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_GENRE_n">
+                       <catDesc>neutre</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_GENRE_x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_CAS">
+                    <gloss>Cas</gloss>
+                    <category xml:id="CATTEX2009_MS_CAS_n">
+                       <catDesc>nominatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_CAS_r">
+                       <catDesc>régime</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_CAS_i">
+                       <catDesc>régime indirect</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_CAS_x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_MS_DEGRE">
+                    <gloss>Degré</gloss>
+                    <category xml:id="CATTEX2009_MS_DEGRE_p">
+                       <catDesc>positif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_DEGRE_c">
+                       <catDesc>comparatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_DEGRE_s">
+                       <catDesc>superlatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_MS_DEGRE_-">
+                       <catDesc>non applicable</catDesc>
+                    </category>
+                 </taxonomy>
+              </taxonomy>
+              <taxonomy xml:id="CATTEX2009-max_M">
+                 <desc>Version morphologique pure des étiquettes</desc>
+                                  <taxonomy xml:id="CATTEX2009_M_pos">
+                    <gloss>Catégorie et type</gloss>
+                    <category>
+                       <catDesc>Verbe</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_VERcjg">
+                          <catDesc>Verbe conjugué</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_VERinf">
+                          <catDesc>Verbe infinitif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_VERppe">
+                          <catDesc>Verbe participe passé</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_VERppa">
+                          <catDesc>Verbe participe présent</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Nom</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_NOMcom">
+                          <catDesc>Nom commun</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_NOMpro">
+                          <catDesc>Nom propre</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Adjectif</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_ADJqua">
+                          <catDesc>Adjectif qualificatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADJind">
+                          <catDesc>Adjectif indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADJcar">
+                          <catDesc>Adjectif cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADJord">
+                          <catDesc>Adjectif ordinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADJpos">
+                          <catDesc>Adjectif possessif</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Pronom</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_PROper">
+                          <catDesc>Pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROper.PROper">
+                          <catDesc>Pronom personnel + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROimp">
+                          <catDesc>Pronom impersonnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROadv">
+                          <catDesc>Pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROpos">
+                          <catDesc>Pronom possessif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROdem">
+                          <catDesc>Pronom démonstratif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROind">
+                          <catDesc>Pronom indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROcar">
+                          <catDesc>Pronom cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROord">
+                          <catDesc>Pronom ordinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROrel">
+                          <catDesc>Pronom relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROrel.PROper">
+                          <catDesc>Pronom relatif + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROrel.PROadv">
+                          <catDesc>Pronom relatif + pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROint">
+                          <catDesc>Pronom interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PROcom">
+                          <catDesc>Pronom composé</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Déterminant</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_DETdef">
+                          <catDesc>Déterminant défini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETndf">
+                          <catDesc>Déterminant indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETdem">
+                          <catDesc>Déterminant démonstratif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETpos">
+                          <catDesc>Déterminant possessif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETind">
+                          <catDesc>Déterminant indéfini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETcar">
+                          <catDesc>Déterminant cardinal</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETrel">
+                          <catDesc>Déterminant relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETint">
+                          <catDesc>Déterminant interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_DETcom">
+                          <catDesc>Déterminant composé</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Adverbe</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_ADVgen">
+                          <catDesc>Adverbe général</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVgen.PROper">
+                          <catDesc>Adverbe général + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVgen.PROadv">
+                          <catDesc>Adverbe général + pronom adverbial</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVneg">
+                          <catDesc>Adverbe négatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVneg.PROper">
+                          <catDesc>Adverbe négatif + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVint">
+                          <catDesc>Adverbe interrogatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_ADVsub">
+                          <catDesc>Adverbe «subordonnant»</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Préposition</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_PRE">
+                          <catDesc>Préposition</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PRE.DETdef">
+                          <catDesc>Préposition + déterminant défini</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PRE.DETcom">
+                          <catDesc>Préposition + déterminant composé</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PRE.DETrel">
+                          <catDesc>Préposition + déterminant relatif</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PRE.PROper">
+                          <catDesc>Préposition + pronom personnel</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PRE.PROrel">
+                          <catDesc>Préposition + pronom relatif</catDesc>
+                       </category>
+                    </category>
+                    <category>
+                       <catDesc>Conjonction</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_CONcoo">
+                          <catDesc>Conjonction de coordination</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_CONsub">
+                          <catDesc>Conjonction de subordination</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_CONsub.PROper">
+                          <catDesc>Conjonction de subordination + pronom personnel</catDesc>
+                       </category>
+                    </category>
+                    <category xml:id="CATTEX2009_M_pos_INJ">
+                       <catDesc>Interjection</catDesc>
+                    </category>
+                    <category>
+                       <catDesc>Ponctuation</catDesc>
+                       <category xml:id="CATTEX2009_M_pos_PONfbl">
+                          <catDesc>Ponctuation faible</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PONfrt">
+                          <catDesc>Ponctuation forte</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PONpga">
+                          <catDesc>Ponctuation parenthétique ouvrante</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PONpdr">
+                          <catDesc>Ponctuation parenthétique fermante</catDesc>
+                       </category>
+                       <category xml:id="CATTEX2009_M_pos_PONpxx">
+                          <catDesc>Ponctuation parenthétique indéterminée</catDesc>
+                       </category>
+                    </category>
+                    <category xml:id="CATTEX2009_M_pos_ETR">
+                       <catDesc>Mot étranger</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_pos_ABR">
+                       <catDesc>Abréviation</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_pos_RED">
+                       <catDesc>Mot redondant</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_pos_OUT">
+                       <catDesc>Mot non considéré</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_MODE">
+                    <gloss>Mode</gloss>
+                    <category xml:id="CATTEX2009_M_MODE_ind">
+                       <catDesc>Indicatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_MODE_imp">
+                       <catDesc>Impératif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_MODE_con">
+                       <catDesc>Conditionnel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_MODE_sub">
+                       <catDesc>Subjonctif</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_TEMPS">
+                    <gloss>Temps</gloss>
+                    <category xml:id="CATTEX2009_M_TEMPS_pst">
+                       <catDesc>Présent</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_TEMPS_ipf">
+                       <catDesc>Imparfait</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_TEMPS_fut">
+                       <catDesc>Futur</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_TEMPS_psp">
+                       <catDesc>Passé simple</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_PERS">
+                    <gloss>Personne</gloss>
+                    <category xml:id="CATTEX2009_M_PERS_0">
+                       <catDesc>impersonnel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_PERS_1">
+                       <catDesc>Première personne</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_PERS_2">
+                       <catDesc>Deuxième personne</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_PERS_3">
+                       <catDesc>Troisième personne</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_NOMB.">
+                    <gloss>Nombre</gloss>
+                    <category xml:id="CATTEX2009_M_NOMB._s">
+                       <catDesc>singulier</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_NOMB._p">
+                       <catDesc>pluriel</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_NOMB._x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_GENRE">
+                    <gloss>Genre</gloss>
+                    <category xml:id="CATTEX2009_M_GENRE_m">
+                       <catDesc>masculin</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_GENRE_f">
+                       <catDesc>féminin</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_GENRE_n">
+                       <catDesc>neutre</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_GENRE_x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_CAS">
+                    <gloss>Cas</gloss>
+                    <category xml:id="CATTEX2009_M_CAS_n">
+                       <catDesc>nominatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_CAS_r">
+                       <catDesc>régime</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_CAS_i">
+                       <catDesc>régime indirect</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_CAS_x">
+                       <catDesc>non renseigné</catDesc>
+                    </category>
+                 </taxonomy>
+                 <taxonomy xml:id="CATTEX2009_M_DEGRE">
+                    <gloss>Degré</gloss>
+                    <category xml:id="CATTEX2009_M_DEGRE_p">
+                       <catDesc>positif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_DEGRE_c">
+                       <catDesc>comparatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_DEGRE_s">
+                       <catDesc>superlatif</catDesc>
+                    </category>
+                    <category xml:id="CATTEX2009_M_DEGRE_-">
+                       <catDesc>non applicable</catDesc>
+                    </category>
+                 </taxonomy>
+              </taxonomy>
+           </taxonomy>
+        </classDecl>
+     </encodingDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+  </text>
+</TEI>

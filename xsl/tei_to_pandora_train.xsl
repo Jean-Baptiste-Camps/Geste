@@ -50,12 +50,12 @@ avant de le normaliser
         <xsl:text>&#9;</xsl:text>
         <xsl:value-of select="normalize-unicode(@lemma, 'NFC')"/>
         <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="substring-after(tokenize(@ana, ' ')[1], '#')"/>
+        <xsl:value-of select="substring-after(tokenize(@ana, ' ')[matches(., 'CATTEX2009_MS_pos_')], 'CATTEX2009_MS_pos_')"/>
         <!--<xsl:text>(</xsl:text>-->
         <xsl:text>&#9;</xsl:text>
         <xsl:variable name="morph">
-            <xsl:for-each select="tokenize(@ana, ' ')[position() > 1]">
-                <xsl:value-of select="substring-after(., '#')"/>
+            <xsl:for-each select="tokenize(@ana, ' ')[matches(., 'CATTEX2009_MS_(MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRE)')]">
+                <xsl:value-of select="substring-after(., '#CATTEX2009_MS_')"/>
                 <xsl:if test="position() != last()"><xsl:text>|</xsl:text></xsl:if>
             </xsl:for-each>
         </xsl:variable>

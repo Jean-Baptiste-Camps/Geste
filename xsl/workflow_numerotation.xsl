@@ -17,13 +17,19 @@
     
     <!-- Serait possible de conserver certaines entités avec xsl:character-map -->
     
-    <xsl:template match="node()|@*">
+    <xsl:template match="/">
         <xsl:copy>
-            <xsl:apply-templates select="node()|@*"/>
+            <xsl:apply-templates mode="numerotation"/>
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tei:l">
+    <xsl:template match="node()|@*" mode="numerotation">
+        <xsl:copy>
+            <xsl:apply-templates select="node()|@*" mode="numerotation"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="tei:l" mode="numerotation">
         <xsl:variable name="number">
             <xsl:number format="1" level="any" from="tei:text" count="tei:l[not(@n)]"/><!-- On compte ceux qui ne sont pas numérotés, car une numérotation manuelle signifie qu'il y a un vers répété -->
         </xsl:variable>
@@ -32,31 +38,31 @@
             <xsl:when test="@n">
                 <xsl:copy>
                     <xsl:attribute name="xml:id" select="concat($sigle, '_l_', @n)"/>
-                    <xsl:apply-templates select="@*|node()"/>
+                    <xsl:apply-templates select="@*|node()" mode="numerotation"/>
                 </xsl:copy>
             </xsl:when>
            <xsl:otherwise>
                <xsl:copy>
                    <xsl:attribute name="n" select="$number"/>
                    <xsl:attribute name="xml:id" select="concat($sigle, '_l_', $number)"/>
-                   <xsl:apply-templates select="@*|node()"/>
+                   <xsl:apply-templates select="@*|node()" mode="numerotation"/>
                </xsl:copy>
            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="tei:w">
+    <xsl:template match="tei:w" mode="numerotation">
         <xsl:variable name="number">
             <xsl:number format="000001" level="any" from="tei:text"/>
         </xsl:variable>
         <xsl:variable name="sigle" select="ancestor::tei:TEI/descendant::tei:sourceDesc/tei:msDesc/@xml:id"/>
         <xsl:copy>
             <xsl:attribute name="xml:id" select="concat($sigle, '_w_',$number)"/>
-            <xsl:apply-templates select="@*|node()"/>
+            <xsl:apply-templates select="@*|node()" mode="numerotation"/>
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tei:lb">
+    <xsl:template match="tei:lb" mode="numerotation">
         <xsl:copy>
             <xsl:attribute name="n">
                 <xsl:choose>
