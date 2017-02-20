@@ -35,6 +35,9 @@ avant de le normaliser
     <xsl:template match="tei:abbr"/>
     <xsl:template match="tei:note"/>
     <xsl:template match="tei:sic"/>
+    <!-- TODO: traitement des tei:del ? Conserver celui-ci ? Et que faire des del de niveau supérieur?-->
+    <xsl:template match="tei:del[ancestor::tei:w]"/>
+    
     
     <xsl:template match="text()">
         <xsl:value-of select="normalize-space(.)"/>

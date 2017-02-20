@@ -62,7 +62,8 @@
             </xsl:if>
             <xsl:if test="$mesPOS/flectM[. != '']"><!-- Passons à la flexion en morphologie. On ne l'intègre que si elle diffère de celle en MS. -->
                 <xsl:variable name="mesFlectMS" select="$mesPOS/(MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']"/>
-                <xsl:for-each select="tokenize($mesPOS/flectM, '\|')">
+                <xsl:variable name="mesFlectM" select="tokenize($mesPOS/flectM, '\|')"/>
+                <xsl:for-each select="$mesFlectM">
                     <xsl:variable name="maPosition" select="position()"/>
                     <xsl:if test=". != $mesFlectMS[$maPosition]">
                         <xsl:text> #</xsl:text>
@@ -72,6 +73,21 @@
                         <xsl:value-of select="."/>
                     </xsl:if>
                 </xsl:for-each>
+                <!-- TODO: insérer traitement pour les cas où étiquette M plus longue que MS
+                TODO: le code suivant ne fonctionnera pas pour les cas où l'étiquette pos M diffère trop 
+                nettement de la pos MS (adj employé comme adverbe, etc.) => il faut compléter de manière systématique
+                -->
+                <xsl:if test="count($mesFlectM) > count($mesFlectMS)">
+                    <xsl:choose>
+                        <xsl:when test="$mesPOS/PPOSM = 'ADJqua' and $mesPOS/PPOS != 'ADJqua'">
+                            <xsl:text> #</xsl:text>
+                            <xsl:text>CATTEX2009_M_</xsl:text>
+                            <xsl:text>DEGRE</xsl:text>
+                            <xsl:text>_</xsl:text>
+                            <xsl:value-of select="."/>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:if>
             </xsl:if>
             <!--<xsl:for-each select="$mesPOS/(NOMB.-M|CAS-M|flect_M)">
                 <xsl:text> </xsl:text>
