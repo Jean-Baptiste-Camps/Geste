@@ -5,6 +5,10 @@
     
     <xsl:import href="workflow_numerotation.xsl"/>
     
+    <!-- TODO: intégrer les remarques faites dans la feuille d'annotation
+    sous une forme <note type="annotation"> ?
+    -->
+    
     <!--TODO:  
         Modifier la feuille pour préfixer les @ana, et inclure, quand nécessaire, les POS et flect. en M -->
     <xsl:variable name="POS_file" select="
