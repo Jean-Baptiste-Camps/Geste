@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-02-18T14:29:09Z. .
+Schema generated from ODD source 2017-07-08T14:49:19Z. .
 TEI Edition: Version 3.1.0. Last updated on
 	15th December 2016, revision d3f5e70
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -732,8 +732,105 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <data type="anyURI"/>
       </attribute>
    </define>
+   <define name="att.measurement.attributes">
+      <ref name="att.measurement.attribute.unit"/>
+      <ref name="att.measurement.attribute.quantity"/>
+      <ref name="att.measurement.attribute.commodity"/>
+   </define>
+   <define name="att.measurement.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unité) indique les unités de mesure utilisées ; il s'agit en général du symbole normalisé pour les unités dont on a besoin.
+Suggested values include: 1] m(metre) ; 2] kg(kilogram) ; 3] s(second) ; 4] Hz(hertz) ; 5] Pa(pascal) ; 6] Ω(ohm) ; 7] L(litre) ; 8] t(tonne) ; 9] ha(hectare) ; 10] Å(ångström) ; 11] mL(millilitre) ; 12] cm(centimetre) ; 13] dB(decibel) ; 14] kbit(kilobit) ; 15] Kibit(kibibit) ; 16] kB(kilobyte) ; 17] KiB(kibibyte) ; 18] MB(megabyte) ; 19] MiB(mebibyte) </a:documentation>
+            <choice>
+               <value>m</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mètre) unité SI (système international) de longueur</a:documentation>
+               <value>kg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilogramme) unité SI de masse</a:documentation>
+               <value>s</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(seconde) unité SI de temps</a:documentation>
+               <value>Hz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hertz) unité SI de fréquence</a:documentation>
+               <value>Pa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pascal) unité SI de pression</a:documentation>
+               <value>Ω</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ohm) unité SI de résistance électrique</a:documentation>
+               <value>L</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
+               <value>t</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tonne) 10³ kg</a:documentation>
+               <value>ha</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hectare) 1 hm²</a:documentation>
+               <value>Å</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ångström) 10⁻¹⁰ m</a:documentation>
+               <value>mL</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millilitre) </a:documentation>
+               <value>cm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimètre) </a:documentation>
+               <value>dB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(décibel) Voir remarques, ci-dessous.</a:documentation>
+               <value>kbit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilobit) 10³ ou 1000 bits</a:documentation>
+               <value>Kibit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibibit) 2¹⁰ ou 1024 bits</a:documentation>
+               <value>kB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilo-octet) 10³ ou 1000 octets</a:documentation>
+               <value>KiB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibioctet) 2¹⁰ ou 1024 octets</a:documentation>
+               <value>MB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mégaoctet) 10⁶ ou 1 000 000 octets</a:documentation>
+               <value>MiB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mébioctet) 2²⁰ ou 1 048 576 octets</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.measurement.attribute.quantity">
+      <optional>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quantité) spécifie le nombre des unités indiquées que comprend la mesure.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.measurement.attribute.commodity">
+      <optional>
+         <attribute name="commodity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(article) indique ce qui est mesuré.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.naming.attributes">
       <ref name="att.canonical.attributes"/>
+   </define>
+   <define name="att.notated.attributes">
+      <ref name="att.notated.attribute.notation"/>
+   </define>
+   <define name="att.notated.attribute.notation">
+      <optional>
+         <attribute name="notation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">précise le nom d'une notation définie précédemment, utilisée dans le contenu de l'élément.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+      </optional>
    </define>
    <define name="att.typed.attributes">
       <ref name="att.typed.attribute.type"/>
@@ -1117,6 +1214,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.measureLike">
       <choice>
          <ref name="num"/>
+         <ref name="measure"/>
          <ref name="dim"/>
          <ref name="height"/>
          <ref name="depth"/>
@@ -1126,6 +1224,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.measureLike_alternation">
       <choice>
          <ref name="num"/>
+         <ref name="measure"/>
          <ref name="dim"/>
          <ref name="height"/>
          <ref name="depth"/>
@@ -1134,6 +1233,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    </define>
    <define name="model.measureLike_sequence">
       <ref name="num"/>
+      <ref name="measure"/>
       <ref name="dim"/>
       <ref name="height"/>
       <ref name="depth"/>
@@ -1142,6 +1242,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.measureLike_sequenceOptional">
       <optional>
          <ref name="num"/>
+      </optional>
+      <optional>
+         <ref name="measure"/>
       </optional>
       <optional>
          <ref name="dim"/>
@@ -1161,6 +1264,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="num"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="measure"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="dim"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1176,6 +1282,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.measureLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="num"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="measure"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="dim"/>
@@ -1211,6 +1320,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.graphicLike">
       <choice>
          <ref name="graphic"/>
+         <ref name="formula"/>
       </choice>
    </define>
    <define name="model.offsetLike">
@@ -1517,7 +1627,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="biblStruct"/>
          <ref name="listBibl"/>
          <ref name="biblFull"/>
-         <ref name="msDesc"/>
       </choice>
    </define>
    <define name="model.biblLike_alternation">
@@ -1526,7 +1635,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="biblStruct"/>
          <ref name="listBibl"/>
          <ref name="biblFull"/>
-         <ref name="msDesc"/>
       </choice>
    </define>
    <define name="model.biblLike_sequence">
@@ -1534,7 +1642,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="biblStruct"/>
       <ref name="listBibl"/>
       <ref name="biblFull"/>
-      <ref name="msDesc"/>
    </define>
    <define name="model.biblLike_sequenceOptional">
       <optional>
@@ -1548,9 +1655,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="biblFull"/>
-      </optional>
-      <optional>
-         <ref name="msDesc"/>
       </optional>
    </define>
    <define name="model.biblLike_sequenceOptionalRepeatable">
@@ -1566,9 +1670,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="biblFull"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="msDesc"/>
-      </zeroOrMore>
    </define>
    <define name="model.biblLike_sequenceRepeatable">
       <oneOrMore>
@@ -1582,9 +1683,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="biblFull"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="msDesc"/>
       </oneOrMore>
    </define>
    <define name="model.headLike">
@@ -1639,6 +1737,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="listWit"/>
          <ref name="listPerson"/>
          <ref name="listPlace"/>
+         <ref name="table"/>
       </choice>
    </define>
    <define name="model.listLike_alternation">
@@ -1647,6 +1746,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="listWit"/>
          <ref name="listPerson"/>
          <ref name="listPlace"/>
+         <ref name="table"/>
       </choice>
    </define>
    <define name="model.listLike_sequence">
@@ -1654,6 +1754,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="listWit"/>
       <ref name="listPerson"/>
       <ref name="listPlace"/>
+      <ref name="table"/>
    </define>
    <define name="model.listLike_sequenceOptional">
       <optional>
@@ -1667,6 +1768,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="listPlace"/>
+      </optional>
+      <optional>
+         <ref name="table"/>
       </optional>
    </define>
    <define name="model.listLike_sequenceOptionalRepeatable">
@@ -1682,6 +1786,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="listPlace"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="table"/>
+      </zeroOrMore>
    </define>
    <define name="model.listLike_sequenceRepeatable">
       <oneOrMore>
@@ -1695,6 +1802,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="listPlace"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="table"/>
       </oneOrMore>
    </define>
    <define name="model.noteLike">
@@ -2169,6 +2279,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="citedRange"/>
          <ref name="bibl"/>
          <ref name="textLang"/>
+         <ref name="extent"/>
          <ref name="availability"/>
          <ref name="msIdentifier"/>
       </choice>
@@ -2812,6 +2923,24 @@ Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</a
          <empty/>
       </element>
    </define>
+   <define name="measure">
+      <element name="measure">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mesure) contient un mot ou une expression faisant référence à la quantité d'un objet ou d'un produit, comprenant en général un nombre, une unité et le nom d'un produit. [3.5.3. Numbers and
+Measures]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.measurement.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">précise le type de mesure exprimée dans la typologie adaptée.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="date">
       <element name="date">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(date) contient une date exprimée dans n'importe quel format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
@@ -3272,7 +3401,7 @@ Elements]</a:documentation>
             <zeroOrMore>
                <choice>
                   <ref name="imprint"/>
-          
+                  <ref name="extent"/>
                   <ref name="biblScope"/>
                </choice>
             </zeroOrMore>
@@ -3661,18 +3790,16 @@ Elements]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(langues du texte) décrit les langues et systèmes d'écriture utilisés dans un manuscrit (et non dans la description du manuscrit, dont les langues et systèmes d'écriture sont décrits dans l'élément langUsage). [3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.6.6. Languages and Writing Systems]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
-         <optional>
-            <attribute name="mainLang">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(langue principale) contient un code identifiant la langue principale du manuscrit.</a:documentation>
+         <attribute name="mainLang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(langue principale) contient un code identifiant la langue principale du manuscrit.</a:documentation>
+            <choice>
+               <data type="language"/>
                <choice>
-                  <data type="language"/>
-                  <choice>
-                     <value/>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  </choice>
+                  <value/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
-            </attribute>
-         </optional>
+            </choice>
+         </attribute>
          <optional>
             <attribute name="otherLangs">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(autres langues) contient un ou plusieurs codes identifiant toute autre langue utilisée dans le manuscrit.</a:documentation>
@@ -3731,6 +3858,14 @@ Elements]</a:documentation>
             </zeroOrMore>
       
          </group>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="extent">
+      <element name="extent">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(étendue) décrit la taille approximative d’un texte stocké sur son support, numérique ou non numérique, exprimé dans une unité quelconque appropriée. [2.2.3. Type and Extent of File 2.2. The File Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.7.1. Object Description]</a:documentation>
+         <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -3855,7 +3990,9 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                <group>
                   <ref name="titleStmt"/>
           
-          
+                  <optional>
+                     <ref name="extent"/>
+                  </optional>
                   <ref name="publicationStmt"/>
           
           
@@ -4033,6 +4170,15 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                </list>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="scriptNote">
+      <element name="scriptNote">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a particular script distinguished within the description of a manuscript or similar resource. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <ref name="macro.specialPara"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.handFeatures.attributes"/>
          <empty/>
       </element>
    </define>
@@ -5592,6 +5738,9 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             <optional>
                <ref name="msContents"/>
             </optional>
+            <zeroOrMore>
+               <ref name="msFrag"/>
+            </zeroOrMore>
             <optional>
                <ref name="physDesc"/>
             </optional>
@@ -5599,26 +5748,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             <optional>
                <ref name="additional"/>
             </optional>
-            <zeroOrMore>
-               <ref name="msPart"/>
-            </zeroOrMore>
          </group>
-         <ref name="att.global.attribute.n"/>
-         <ref name="att.global.attribute.xmllang"/>
-         <ref name="att.global.rendition.attribute.rend"/>
-         <ref name="att.global.linking.attribute.corresp"/>
-         <ref name="att.global.linking.attribute.sameAs"/>
-         <ref name="att.global.analytic.attribute.ana"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.global.source.attribute.source"/>
-         <ref name="att.sortable.attributes"/>
-         <ref name="att.typed.attributes"/>
-         <attribute name="xml:id">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifiant) fournit un identifiant unique pour l'élément qui porte l'attribut</a:documentation>
-            <data type="ID"/>
-         </attribute>
-         <empty/>
       </element>
    </define>
    <define name="catchwords">
@@ -5744,32 +5874,26 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    </define>
    <define name="locus">
       <element name="locus">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(locus) définit un emplacement au sein d'un manuscrit ou d'une partie de manuscrit, souvent une séquence, éventuellement discontinue, de références de feuillets. [10.3.5. References to Locations within a Manuscript]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(locus) définit une séquence continue de références de feuillets au sein d'un manuscrit ou d'une partie de manuscrit. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <ref name="macro.xtext"/>
          <ref name="att.global.attributes"/>
          <ref name="att.pointing.attributes"/>
-         <optional>
-            <attribute name="scheme">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(système) désigne le système de foliotation utilisé pour localiser la subdivision du manuscrit qui est en cours de description.</a:documentation>
-               <data type="anyURI"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="from">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(depuis) Spécifie, sous une forme normalisée, le point de départ de la localisation.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="to">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(jusqu'à) Spécifie, sous une forme normalisée, la borne de fin pour la localisation.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </attribute>
-         </optional>
+         <attribute name="scheme">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(système) désigne le système de foliotation utilisé pour localiser la subdivision du manuscrit qui est en cours de description, par le biais d'un pointeur vers un élément foliation.</a:documentation>
+            <data type="anyURI"/>
+         </attribute>
+         <attribute name="from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(depuis) Spécifie, sous une forme normalisée, le point de départ de la localisation.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+         <attribute name="to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(jusqu'à) Spécifie, sous une forme normalisée, la borne de fin pour la localisation.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -5780,12 +5904,6 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             <ref name="locus"/>
          </oneOrMore>
          <ref name="att.global.attributes"/>
-         <optional>
-            <attribute name="scheme">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(système) désigne le système de foliotation selon lequel les emplacements contenus dans le groupe sont définis.</a:documentation>
-               <data type="anyURI"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -5972,47 +6090,23 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="msIdentifier">
       <element name="msIdentifier">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifiant du manuscrit) Contient les informations requises pour identifier le manuscrit en cours de description. [10.4. The Manuscript Identifier]</a:documentation>
-         <group>
+         <choice>
             <group>
-               <optional>
-                  <ref name="placeName"/>
-               </optional>
-               <optional>
-                  <ref name="country"/>
-               </optional>
-               <optional>
-                  <ref name="settlement"/>
-               </optional>
-        
-               <optional>
-                  <ref name="institution"/>
-               </optional>
-        
-        
-               <optional>
-                  <ref name="repository"/>
-               </optional>
-        
-        
-               <zeroOrMore>
-                  <ref name="collection"/>
-               </zeroOrMore>
-        
-        
-               <optional>
-                  <ref name="idno"/>
-               </optional>
-        
+               <ref name="country"/>
+               <ref name="settlement"/>
+               <ref name="institution"/>
+               <ref name="repository"/>
+               <ref name="collection"/>
+               <ref name="idno"/>
             </group>
-      
-            <zeroOrMore>
-               <choice>
-                  <ref name="msName"/>
-                  <ref name="altIdentifier"/>
-               </choice>
-            </zeroOrMore>
-      
-         </group>
+            <ref name="msName"/>
+         </choice>
+         <zeroOrMore>
+            <ref name="msName"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="altIdentifier"/>
+         </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="otinel-msIdentifier-msId_minimal-constraint-report-16">
             <rule context="tei:msIdentifier">
@@ -6058,36 +6152,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
       <element name="altIdentifier">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(autre identifiant) Contient un autre ou un ancien identifiant pour un manuscrit, par exemple un numéro anciennement utilisé dans un catalogue. [10.4. The Manuscript Identifier]</a:documentation>
          <group>
-            <optional>
-               <ref name="placeName"/>
-            </optional>
-            <optional>
-               <ref name="country"/>
-            </optional>
-            <optional>
-               <ref name="settlement"/>
-            </optional>
-     
-            <optional>
-               <ref name="institution"/>
-            </optional>
-     
-     
-            <optional>
-               <ref name="repository"/>
-            </optional>
-     
-     
-            <optional>
-               <ref name="collection"/>
-            </optional>
-     
+            <ref name="country"/>
+            <ref name="settlement"/>
+            <ref name="institution"/>
+            <ref name="repository"/>
+            <ref name="collection"/>
             <ref name="idno"/>
-     
-            <optional>
-               <ref name="note"/>
-            </optional>
-     
          </group>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -6152,36 +6222,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="msContents">
       <element name="msContents">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content]</a:documentation>
-         <choice>
-      
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-      
-            <group>
-        
-               <optional>
-                  <ref name="summary"/>
-               </optional>
-        
-        
-               <optional>
-                  <ref name="textLang"/>
-               </optional>
-        
-        
-          
-        
-        
-               <zeroOrMore>
-                  <choice>
-            
-                     <ref name="msItemStruct"/>
-                  </choice>
-               </zeroOrMore>
-        
-            </group>
-         </choice>
+         <optional>
+            <ref name="summary"/>
+         </optional>
+         <oneOrMore>
+            <ref name="msItem"/>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.msExcerpt.attributes"/>
          <optional>
@@ -6197,109 +6243,50 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <empty/>
       </element>
    </define>
-   <define name="msItemStruct">
-      <element name="msItemStruct">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description structurée d'un item de manuscrit) contient la description structurée d'un item ou d'une œuvre, dans le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
-         <group>
-      
-            <optional>
-               <choice>
-                  <ref name="locus"/>
-                  <ref name="locusGrp"/>
-               </choice>
-            </optional>
-      
-            <choice>
-        
-               <oneOrMore>
-                  <ref name="model.pLike"/>
-               </oneOrMore>
-        
-               <group>
-          
-                  <zeroOrMore>
-                     <ref name="author"/>
-                  </zeroOrMore>
-          
-          
-                  <zeroOrMore>
-                     <ref name="respStmt"/>
-                  </zeroOrMore>
-          
-          
-                  <zeroOrMore>
-                     <ref name="title"/>
-                  </zeroOrMore>
-          
-          
-                  <optional>
-                     <ref name="rubric"/>
-                  </optional>
-          
-          
-                  <optional>
-                     <ref name="incipit"/>
-                  </optional>
-          
-          
-                  <zeroOrMore>
-                     <ref name="msItemStruct"/>
-                  </zeroOrMore>
-          
-          
-                  <optional>
-                     <ref name="explicit"/>
-                  </optional>
-          
-          
-                  <optional>
-                     <ref name="finalRubric"/>
-                  </optional>
-          
-          
-                  <zeroOrMore>
-                     <ref name="colophon"/>
-                  </zeroOrMore>
-          
-          
-                  <zeroOrMore>
-                     <ref name="decoNote"/>
-                  </zeroOrMore>
-          
-          
-                  <zeroOrMore>
-                     <ref name="listBibl"/>
-                  </zeroOrMore>
-          
-          
-                  <zeroOrMore>
-                     <choice>
-                        <ref name="bibl"/>
-                        <ref name="biblStruct"/>
-                     </choice>
-                  </zeroOrMore>
-          
-                  <optional>
-                     <ref name="filiation"/>
-                  </optional>
-            
-                  <zeroOrMore>
-                     <ref name="model.noteLike"/>
-                  </zeroOrMore>
-          
-          
-                  <optional>
-                     <ref name="textLang"/>
-                  </optional>
-          
-               </group>
-            </choice>
-         </group>
+   <define name="msItem">
+      <element name="msItem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(item de manuscrit) décrit une œuvre ou un item individualisés dans le contenu intellectuel d'un manuscrit ou d'une partie de manuscrit. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
+         <choice>
+            <ref name="locus"/>
+            <ref name="locusGrp"/>
+         </choice>
+         <optional>
+            <ref name="author"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="respStmt"/>
+         </zeroOrMore>
+         <ref name="title"/>
+         <ref name="idno"/>
+         <optional>
+            <ref name="note"/>
+         </optional>
+         <optional>
+            <ref name="rubric"/>
+         </optional>
+         <ref name="incipit"/>
+         <ref name="explicit"/>
+         <optional>
+            <ref name="finalRubric"/>
+         </optional>
+         <optional>
+            <ref name="colophon"/>
+         </optional>
+         <optional>
+            <ref name="decoNote"/>
+         </optional>
+         <optional>
+            <ref name="listBibl"/>
+         </optional>
+         <ref name="textLang"/>
+         <optional>
+            <ref name="filiation"/>
+         </optional>
          <ref name="att.global.attributes"/>
          <ref name="att.msExcerpt.attributes"/>
          <optional>
             <attribute name="class">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classe) spécifie la ou les catégories ou classes auxquelles l'item appartient.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">spécifie la ou les catégories ou classes auxquelles l'item appartient.</a:documentation>
                <list>
                   <oneOrMore>
                      <data type="anyURI"/>
@@ -6329,44 +6316,21 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    </define>
    <define name="physDesc">
       <element name="physDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description physique) contient la description physique complète d'un manuscrit ou d'une partie d'un manuscrit, éventuellement structurée en utilisant les éléments plus spécialisés appartenant à la classe model.physDescPart. [10.7. Physical Description]</a:documentation>
-         <group>
-      
-            <zeroOrMore>
-               <ref name="model.pLike"/>
-            </zeroOrMore>
-      
-      
-        
-            <optional>
-               <ref name="objectDesc"/>
-            </optional>
-            <optional>
-               <ref name="handDesc"/>
-            </optional>
-            <optional>
-               <ref name="scriptDesc"/>
-            </optional>
-            <optional>
-               <ref name="musicNotation"/>
-            </optional>
-            <optional>
-               <ref name="decoDesc"/>
-            </optional>
-            <optional>
-               <ref name="additions"/>
-            </optional>
-            <optional>
-               <ref name="bindingDesc"/>
-            </optional>
-            <optional>
-               <ref name="sealDesc"/>
-            </optional>
-            <optional>
-               <ref name="accMat"/>
-            </optional>
-      
-         </group>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description physique) contient la description physique complète d'un manuscrit ou d'un fragment d'un manuscrit, structurée en utilisant les éléments plus spécialisés appartenant à la classe model.physDescPart. [10.7. Physical Description]</a:documentation>
+         <ref name="objectDesc"/>
+         <ref name="handDesc"/>
+         <ref name="scriptDesc"/>
+         <optional>
+            <ref name="musicNotation"/>
+         </optional>
+         <ref name="decoDesc"/>
+         <optional>
+            <ref name="additions"/>
+         </optional>
+         <ref name="bindingDesc"/>
+         <optional>
+            <ref name="accMat"/>
+         </optional>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -6374,25 +6338,8 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="objectDesc">
       <element name="objectDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description d'objet) contient la description des composants matériels de l'objet en cours de traitement [10.7.1. Object Description]</a:documentation>
-         <choice>
-      
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-      
-            <group>
-        
-               <optional>
-                  <ref name="supportDesc"/>
-               </optional>
-        
-        
-               <optional>
-                  <ref name="layoutDesc"/>
-               </optional>
-        
-            </group>
-         </choice>
+         <ref name="supportDesc"/>
+         <ref name="layoutDesc"/>
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="form">
@@ -6408,38 +6355,15 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="supportDesc">
       <element name="supportDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description du support) Regroupe les éléments décrivant le support physique du texte du manuscrit. [10.7.1. Object Description]</a:documentation>
-         <choice>
-      
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-      
-            <group>
-        
-               <optional>
-                  <ref name="support"/>
-               </optional>
-        
-        
-          
-        
-        
-               <zeroOrMore>
-                  <ref name="foliation"/>
-               </zeroOrMore>
-        
-        
-               <optional>
-                  <ref name="collation"/>
-               </optional>
-        
-        
-               <optional>
-                  <ref name="condition"/>
-               </optional>
-        
-            </group>
-         </choice>
+         <ref name="support"/>
+         <ref name="extent"/>
+         <oneOrMore>
+            <ref name="foliation"/>
+         </oneOrMore>
+         <ref name="collation"/>
+         <optional>
+            <ref name="condition"/>
+         </optional>
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="material">
@@ -6608,7 +6532,9 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                </optional>
         
         
-          
+               <oneOrMore>
+                  <ref name="scriptNote"/>
+               </oneOrMore>
         
             </group>
          </choice>
@@ -6719,36 +6645,6 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <empty/>
       </element>
    </define>
-   <define name="sealDesc">
-      <element name="sealDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description des sceaux) décrit les sceaux ou autres objets attachés au manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments seal, complétés éventuellement par des éléments decoNote. [10.7.3.2. Seals]</a:documentation>
-         <choice>
-      
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-      
-            <group>
-        
-               <optional>
-                  <ref name="summary"/>
-               </optional>
-        
-        
-               <oneOrMore>
-                  <choice>
-                     <ref name="decoNote"/>
-                     <ref name="seal"/>
-                     <ref name="condition"/>
-                  </choice>
-               </oneOrMore>
-        
-            </group>
-         </choice>
-         <ref name="att.global.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="seal">
       <element name="seal">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(sceau) contient la description d'un sceau ou d'un objet similaire, attaché au manuscrit. [10.7.3.2. Seals]</a:documentation>
@@ -6795,9 +6691,9 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             <zeroOrMore>
                <ref name="provenance"/>
             </zeroOrMore>
-            <zeroOrMore>
+            <optional>
                <ref name="acquisition"/>
-            </zeroOrMore>
+            </optional>
          </group>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -6874,37 +6770,37 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <empty/>
       </element>
    </define>
-   <define name="msPart">
-      <element name="msPart">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unité codicologique d'un manuscrit) contient des informations sur un manuscrit ou sur une partie d'un manuscrit, distinct à l'origine, qui fait aujourd'hui partie d'un manuscrit composite. [10.10. Manuscript Parts]</a:documentation>
+   <define name="msFrag">
+      <element name="msFrag">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(fragment d'un manuscrit) contient des informations sur un fragment d'un manuscrit dispersé, aujourd'hui conservé séparément ou incorporé dans un autre manuscrit. [10.11. Manuscript Fragments]</a:documentation>
          <group>
-            <ref name="msIdentifier"/>
+            <choice>
+                <ref name="altIdentifier"/>
+                <ref name="msIdentifier"/>
+            </choice>
             <zeroOrMore>
                <ref name="model.headLike"/>
             </zeroOrMore>
             <choice>
-               <oneOrMore>
+                <oneOrMore>
                   <ref name="model.pLike"/>
                </oneOrMore>
-               <group>
-                  <optional>
+                <group>
+                    <optional>
                      <ref name="msContents"/>
                   </optional>
-                  <optional>
+                    <optional>
                      <ref name="physDesc"/>
                   </optional>
-                  <optional>
+                    <optional>
                      <ref name="history"/>
                   </optional>
-                  <optional>
+                    <optional>
                      <ref name="additional"/>
                   </optional>
-                  <zeroOrMore>
-                     <ref name="msPart"/>
-                  </zeroOrMore>
-               </group>
+                </group>
             </choice>
-         </group>
+        </group>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
          <empty/>
@@ -6922,6 +6818,83 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                <data type="anyURI"/>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="table">
+      <element name="table">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tableau) contient du texte affiché sous forme de tableau, en rangées et colonnes. [14.1.1. TEI Tables]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.headLike"/>
+                  <ref name="model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <choice>
+        
+          
+          
+               <zeroOrMore>
+                  <ref name="model.global"/>
+               </zeroOrMore>
+          
+        
+               <oneOrMore>
+                  <group>
+          
+                     <ref name="model.graphicLike"/>
+          
+          
+                     <zeroOrMore>
+                        <ref name="model.global"/>
+                     </zeroOrMore>
+          
+                  </group>
+               </oneOrMore>
+            </choice>
+      
+        
+          
+        
+        
+            <zeroOrMore>
+               <ref name="model.global"/>
+            </zeroOrMore>
+        
+      
+         </group>
+         <ref name="att.global.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <optional>
+            <attribute name="rows">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique le nombre de rangées dans le tableau.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="cols">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(colonnes) indique le nombre de colonnes dans chaque rangée du tableau.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="formula">
+      <element name="formula">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(formule) contient une formule mathématique ou tout autre type de formule [14.2. Formulæ and Mathematical Expressions]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.graphicLike"/>
+               <ref name="model.hiLike"/>       
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <ref name="att.notated.attributes"/>
          <empty/>
       </element>
    </define>

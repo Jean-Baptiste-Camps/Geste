@@ -14,6 +14,7 @@
 <!ENTITY Karles "<choice><expan>K<ex>arles</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
 <!ENTITY Karle "<choice><expan>K<ex>arle</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
 <!ENTITY Karlemaigne "<choice><expan>K<ex>arlemaigne</ex></expan><abbr><pc type='orig'>.</pc>k<pc type='orig'>.</pc></abbr></choice>">
+<!ENTITY aGl-agulant- "<choice><expan>ag<ex>u</ex>l<ex>ant</ex></expan><abbr>ɑGl&#x0303;</abbr></choice>">
 <!ENTITY x-i-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>x&#x0365;</abbr></choice>">
 <!ENTITY xpi-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>xp&#x0303;ı</abbr></choice>">
 <!ENTITY u-suscrit-ru "<choice><expan><ex>r</ex>u</expan><abbr>&#x0367;</abbr></choice>">
@@ -21,7 +22,10 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_Asprem_P4" type="transcr" xml:lang="fr">
     <!-- transcription diplomatique et allographétique du ms de Mende de la Chanson d'Aspremont-->
     <!-- TODO: confronter avec la transcription de Langlois (Romania) -->
-    <!-- TODO: il faudrait revoir la transcription de fond en comble -->
+    <!--
+        Allographes à examiner systématiquement et revoir:
+            - les formes des initiales détachées, notamment p/P.
+    -->
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -143,7 +147,7 @@
                     <w>tut</w>
                     <w>d&i;&accent;&s-long;</w>
                     <w>&bin;</w>
-                    <w>coneu&ed-dierese;</w></q>
+                    <w>coneu&ed-dierese;</w><pc type="orig">.</pc></q>
                 </l>
                 <lb/>
                 <l>
@@ -164,7 +168,9 @@
                     <w>tre&s-long;o&r-rond;</w>
                     <w rend="aggl">&i;</w>
                     <w>&s-long;e&i;t</w>
-                    <w>&u-pour-v;enu</w></q>
+                    <w>&u-pour-v;enu</w>
+                    <pc type="orig">.</pc>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -199,20 +205,29 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">c</hi>&a-rond;r</w>
-                        <w rend="aggl">de</w><w>duner</w>
+                    <q>
+                        <w><hi rend="initiale detach">c</hi>&a-rond;r</w>
+                        <w rend="aggl">de</w>
+                        <w>duner</w>
                         <w>m&a-rond;r</w>
                         <w>&s-long;err&a-rond;&s-long;</w>
-                        <w>e&s-long;&p-barré-per;du</w></q>
+                        <w>e&s-long;&p-barré-per;<sic>er</sic>du</w><note type="palaeographic"
+                            >le scribe a employé l'abréviation <mentioned>p</mentioned>
+                        barré, mais a également copié la séquence <mentioned>er</mentioned>.
+                        </note>
+                    </q>
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">t</hi>&a-rond;nt</w>
-                    <w>en</w><w>donez</w>
-                    <w>que</w>
-                    <w>tuz</w>
-                    <w>&a-rond;&i;ez</w>
-                    <w>&u-pour-v;encu</w></q>
+                    <q>
+                        <w><hi rend="initiale detach">t</hi>&a-rond;nt</w>
+                        <w rend="aggl">en</w>
+                        <w>donez</w>
+                        <w>que</w>
+                        <w>tuz</w>
+                        <w>&a-rond;e&i;z</w>
+                        <w>&u-pour-v;encu</w>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -255,7 +270,6 @@
                     <w>grenur</w>
                     <pc type="supplied">.</pc>
                 </l>
-                <!--JBC: Suit le texte de base de l'édition Brandin, à modifier à partir du manuscrit -->
                 <lb/>
                 <l>
                     <q><w><hi rend="initiale detach">B</hi>&a-rond;run</w></q>
@@ -340,8 +354,8 @@
                 <l>
                     <w>&G;ent&i;&accent;z</w>
                     <w>hum</w>
-                    <w>fud</w>
-                    <w>e</w>
+                    <w rend="aggl">fud</w>
+                    <w rend="aggl">e</w>
                     <w>&i-pour-j;o&i;fne</w>
                     <w>b&a-rond;chele&accent;r</w>
                 </l>
@@ -360,7 +374,6 @@
                 <lb/>
                 <l>
                     <w rend="elision"><hi rend="initiale detach">n</hi></w>
-                    <pc type="supplied">'</pc>
                     <w>&a-rond;</w>
                     <w>duc</w>
                     <w rend="aggl">en</w>
@@ -406,12 +419,12 @@
                     <w>fa&i;&accent;t</w>
                     <w>tre&s-long;or</w>
                     <w rend="aggl">&a-rond;&accent;</w>
-                    <w> &a-rond;&accent;m&a-rond;&s-long;&s-long;e<unclear reason="illegible"><del rend="exponctué">z</del></unclear>&R;</w>
+                    <w>&a-rond;&accent;m&a-rond;&s-long;&s-long;e<unclear reason="illegible"><del rend="exponctué">z</del></unclear>&R;</w>
                     <pc type="supplied">.</pc>
                 </l> 
                 <lb/>
                 <l>
-                    <w><hi rend="initiale detach">n</hi>e</w>
+                    <w><hi rend="initiale detach">N</hi>e</w>
                     <w>her&i;tage</w>
                     <w>ne</w>
                     <w>feu</w>
@@ -485,7 +498,7 @@
                         <w><hi rend="initiale detach">n</hi>u&s-long;</w>
                         <w>de&u-pour-v;u&tilde1-nasale-n;</w>
                         <w>&mlt-mut;</w>
-                        <w>les</w>
+                        <w>le<add place="above">s</add></w>
                         <w>che&u-pour-v;&a-rond;l&i;&accent;r&s-long;</w>
                         <w>&a-rond;mer</w>
                     </q>
@@ -525,10 +538,13 @@
                         <w>no&s-long;</w>
                         <w>e</w>
                         <unclear reason="illegible"><w>ce&s-long;t</w></unclear>
-                        <note type="palaeographic" resp="#JBC">Difficulté de lecture. Il semblerait que cinq lettres aient été repassées en quatre.</note>
+                        <note type="palaeographic" resp="#JBC">Difficulté de lecture. Il semblerait
+                            que cinq lettres aient été repassées en quatre. Langlois lit <mentioned>je</mentioned>,
+                        et on peut faire l'hypothèse que <mentioned>cest</mentioned>
+                            ait été repassé en <mentioned>je</mentioned>?</note>
                         <w>&u-pour-v;o&s-long;tre</w>
                         <w>&a-rond;bbe&s-long;</w>
-                        <w>fromer</w>
+                        <persName><w>fromer</w></persName>
                     </q>
                 </l>
                 <lb/>
@@ -580,7 +596,6 @@
                 <l>
                     <w><hi rend="initiale detach">n</hi>e</w>
                     <w rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
                     <w>&i;l</w>
                     <w rend="aggl">&s-long;e</w>
                     <w>dre&s-long;&s-long;e</w>
@@ -590,7 +605,7 @@
                 </l>
                 <lb/>
                 <l>
-                    <w><hi rend="initiale detach">l</hi>es</w>
+                    <w><hi rend="initiale detach">l</hi>e<add place="above">s</add></w>
                     <w>dr&a-rond;&s-long;</w>
                     <w>de</w>
                     <w>&s-long;e&i;&accent;</w>
@@ -610,15 +625,15 @@
                 </l>
                 <lb/>
                 <l>
-                    <w>Les</w><!-- s rond quasi suscrit -->
-                    <w>r&i;ches</w>
+                    <w>Le<add place="above">s</add></w>
+                    <w>r&i;che<add place="above">s</add></w>
                     <w>p&i;<add place="above">e</add>re&s-long;</w>
                     <w>e</w>
                     <w>le&s-long;</w>
                     <w>cope&s-long;</w>
                     <w rend="elision">d</w>
-                    <pc type="supplied">'</pc>
-                    <w rend="aggl">or</w><w>f&i;n</w>
+                    <w rend="aggl">o&r-rond;</w>
+                    <w>f&i;n</w>
                 </l>
                 <lb/>
                 <l>
@@ -677,6 +692,7 @@
                 <l>
                     <w><hi rend="initiale detach">L</hi>e&s-long;</w>
                     <w>f&a-rond;lcu&s-long;</w>
+                    <pc type="orig">.</pc>
                     <w>le&s-long;</w>
                     <w>muez</w>
                     <w>e&s-long;per&u-pour-v;&i;&accent;rz</w>
@@ -770,11 +786,12 @@
                     <w><hi rend="initiale detach">D</hi>e</w>
                     <w>ce&s-long;tu&i;</w>
                     <w>fa&i;te&s-long;</w>
-                    <w>&nostre;</w>
+                    <w rend="aggl">&nostre;</w>
                     <w>&s-long;&i;re</w>
-                    <w>e</w>
+                    <w rend="aggl">e</w>
                     <w>&u-pour-v;o&s-long;tre</w>
                     <w>e&accent;r</w>
+                    <pc type="orig">.</pc>
                 </l>
                 <lb/>
                 <l>
@@ -806,7 +823,6 @@
                         <w rend="aggl">&a-rond;</w><w>tuz</w>
                         <w>cel&s-long;</w>
                         <w rend="elision">d</w>
-                        <pc type="supplied">'</pc>
                         <w>&a-rond;lem&a-rond;&i;gne</w></q>
                 </l>
                 <lb/>
@@ -823,21 +839,23 @@
                     <q><w><hi rend="initiale detach">D</hi>e</w>
                         <w>lu&tilde1-nasale-n;b&a-rond;rd&i;&accent;e</w>
                         <w rend="elision">d</w>
-                        <pc type="supplied">'</pc><w>&a-rond;ngou</w>
+                        <w>&a-rond;ngou</w>
                         <w>e</w>
                         <w>&d-oncial;el</w>
                         <w>m&a-rond;&i;gne</w></q>
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">e</hi></w>
+                    <q>
+                        <w><hi rend="initiale detach">e</hi></w>
                         <w>&s-long;&i;l</w>
                         <w>defent</w>
-                        <w>&a-rond;</w>
-                        <w>tuz</w>
+                        <w rend="aggl">&a-rond;</w>
+                        <w rend="aggl">tuz</w>
                         <w>cel&s-long;</w>
                         <w>de</w>
-                        <w>bert&a-rond;&i;gne</w></q>
+                        <w>bert&a-rond;&i;gne</w>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -858,7 +876,8 @@
                         <w>d&a-rond;&tilde1-nasale-n;m&i;&s-long;el</w>
                         <unclear reason="damage"><w>negu<add place="above">l</add><del rend="exponctué">&s-long;</del></w><!-- exponctuation pas certaine -->
                             <w>e&s-long;pee</w>
-                            <w>c&ed-palatalisation-cedille;o&i;gne</w></unclear>
+                            <w>c&ed-palatalisation-cedille;o&i;gne</w></unclear><note type="palaeographic"
+                                >Langlois a lu <mentioned>negu<ex>n</ex>e e. ceigne</mentioned></note>
                     </q>
                 </l>
                 <lb/>
@@ -866,7 +885,7 @@
                     <q>
                         <w><hi rend="initiale detach">k&a-rond;</hi>r</w>
                         <w rend="elision">&s-long;</w>
-                        <w rend="aggl">&i;l</w>
+                        <w rend="aggl">&i;&accent;l</w>
                         <w>le</w>
                         <w>f&a-rond;&i;t</w>
                         <w>&i-pour-j;&a-rond;</w>
@@ -874,10 +893,11 @@
                         <w>ert</w>
                         <w>&i-pour-j;o&r-rond;</w>
                         <unclear reason="damage"><w rend="aggl">ne</w>
-                        <add place="above"><w rend="aggl">&s-long;</w><w>en</w></add>
-                        <w>p<gap reason="damage" quantity="5" unit="char"
-                                /></w></unclear><note type="palaeographic">il faut probablement lire <mentioned>plagne</mentioned> ou, selon
-                            Langlois, <mentioned>plaie</mentioned>.</note>
+                            <add place="above"><w rend="aggl">&s-long;</w><w>en</w></add>
+                            <w>p<gap reason="damage" quantity="5" unit="char"/></w></unclear>
+                        <note type="palaeographic">il faut probablement lire
+                                <mentioned>plagne</mentioned> ou, selon Langlois,
+                                <mentioned>plaie</mentioned>.</note>
                         <pc type="supplied">.</pc>
                     </q>
                 </l>
@@ -912,13 +932,15 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">k</hi>e</w>
-                        <w>chev&a-rond;l<unclear reason="illegible">&i;r</unclear></w>
+                    <q>
+                        <w><hi rend="initiale detach">k</hi>e</w>
+                        <w>chev&a-rond;l<unclear reason="illegible">&i;<add place="above">e</add>r</unclear></w>
                         <w>f&a-rond;ce</w>
-                        <w>en</w>
-                        <w>&s-long;&a-rond;</w>
+                        <w rend="aggl">en</w>
+                        <w rend="aggl">&s-long;&a-rond;</w>
                         <w>cuntre&i;e&accent;e&accent;</w>
-                        <pc type="supplied">.</pc></q>
+                        <pc type="supplied">.</pc>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -983,7 +1005,8 @@
                         <w>e&s-long;t</w>
                         <w rend="aggl">l&a-rond;</w>
                         <w>cho&s-long;e</w>
-                        <w>purp&a-rond;<add place="above">r</add>lle&ed-accent-tonique;</w>
+                        <w>purp&a-rond;<add place="above"
+                            >r</add>lle&ed-accent-tonique;</w>
                     </q>
                 </l>
                 <lb/>
@@ -1173,7 +1196,6 @@
                     <w>&s-long;e</w>
                     <w>p&a-rond;rte</w>
                     <w rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
                     <w>&i;l</w>
                     <w>ne</w>
                     <w>&s-long;e&i;t</w>
@@ -1230,14 +1252,16 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">D</hi>rez</w>
-                        <w>enperere</w>
+                    <q>
+                        <w><hi rend="initiale detach">D</hi>rez</w>
+                        <w>enperer</w>
                         <w>&s-long;&i;</w>
                         <add place="margin">w&s-long;</add>
                         <w>ple&i;t</w>
                         <w>or</w>
                         <w>o&i;ez</w>
-                        <pc type="supplied">.</pc></q>
+                        <pc type="supplied">.</pc>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -1270,7 +1294,6 @@
                     <q><w><hi rend="initiale detach">s<!-- vérif forme--></hi>uz</w>
                     <w>c&i;el</w>
                     <w rend="elision">n</w>
-                    <pc type="supplied">'</pc>
                     <w>&a-rond;t</w>
                     <w>t&tilde2-er;re</w>
                     <w>&s-long;&i;</w>
@@ -1284,10 +1307,10 @@
                         <w><hi rend="initiale detach">n</hi>e</w>
                         <w>l&a-rond;</w>
                         <w>cunquergent</w>
-                        <w>od</w>
+                        <w rend="aggl">od</w>
                         <w>fer&s-long;</w>
-                        <w>e</w>
-                        <w>od</w>
+                        <w rend="aggl">e</w>
+                        <w rend="aggl">od</w>
                         <w>e&s-long;p&i;&accent;e&accent;z</w>
                         <pc type="supplied">.</pc>
                     </q>
@@ -1331,7 +1354,8 @@
                 </l>
                 <lb/>               
                 <l>
-                    <q><w><hi rend="initiale detach">&M-oncial;</hi>&a-rond;&i;&s-long;</w>
+                    <q>
+                        <w><hi rend="initiale detach">&M-oncial;</hi>&a-rond;&i;&s-long;</w>
                         <w>&que-q-tilde;</w>
                         <w>t&a-rond;nt</w>
                         <w>fe&i;te&s-long;</w>
@@ -1339,8 +1363,9 @@
                         <w>de</w>
                         <w>mo&i;</w>
                         <w>l&a-rond;</w>
-                        <w>&u-pour-v;eng<add place="above">&i;</add>ez</w>
-                        <pc type="supplied">.</pc></q>
+                        <w>&u-pour-v;eng<add place="above">&i;</add>e&accent;z</w>
+                        <pc type="supplied">.</pc>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -1440,7 +1465,8 @@
                     <w>&s-long;&i;</w>
                     <w>gr&a-rond;<add place="above">&i;</add>nz</w>
                     <w>ne</w>
-                    <w rend="aggl">&s-long;&i;</w><w>&i;rr&i;ez</w>
+                    <w rend="aggl">&s-long;&i;&accent;</w>
+                    <w>&i;rr&i;&accent;ez</w>
                 </l>
                 <lb/>
                 <l>
@@ -1483,7 +1509,7 @@
                 <l>
                     <w><hi rend="initiale detach">&D;e</hi></w>
                     <w>re&i;</w>
-                    <w rend="elision">d</w>
+                    <w rend="elision">d</w><!-- d ou ligat de? -->
                     <w>&a-rond;ffr&i;che</w>
                     <w>e&s-long;</w>
                     <w>&u-pour-v;o&s-long;</w>
@@ -1547,9 +1573,8 @@
                     <w><hi rend="initiale detach">&M-oncial;</hi>&a-rond;&i;&accent;&s-long;</w>
                     <w rend="elision">q&i-suscrit-ui;l</w>
                     <w>&u-pour-v;e&i;&ed-dierese;&s-long;t</w>
-                    <w>&a-rond;</w>
+                    <w rend="aggl">&a-rond;</w>
                     <w rend="elision">l</w>
-                    <pc type="supplied">'</pc>
                     <w>e&i;re</w>
                     <w>co&tilde1-nasale-m;menc&i;&accent;er</w>
                 </l>
@@ -1558,12 +1583,12 @@
                     <w><hi rend="initiale detach">s<!-- vérif forme--></hi>uz</w>
                     <w>c&i;el</w>
                     <w rend="elision">n</w>
-                    <pc type="supplied">'</pc>
                     <w>&a-rond;t</w>
                     <w>be&s-long;te</w>
                     <w>pl&tilde4-us;</w>
-                    <w>fe&i;&s-long;t</w><!-- Faut-il marquer une diérèse (imaginaire)? -->
-                    <w>&a-rond;</w>
+                    <w>fe&i;&s-long;t</w>
+                    <!-- Faut-il marquer une diérèse (imaginaire)? -->
+                    <w rend="aggl">&a-rond;</w>
                     <w>&pre;&s-long;&i;e&accent;r</w>
                 </l>
                 <lb/>
@@ -1628,7 +1653,7 @@
                 <l>
                     <w><hi rend="initiale detach">&G;</hi>ro&s-long;</w>
                     <w>ot</w>
-                    <w>les</w>
+                    <w>le<add place="above">s</add></w>
                     <w>o&i;lz</w>
                     <w>le</w>
                     <w>v&i;&s-long;</w>
@@ -1692,7 +1717,7 @@
                     <w>le&s-long;</w>
                     <w>co&s-long;tez</w>
                     <w>g&r-rond;&a-rond;nt</w>
-                    <w>e</w>
+                    <w rend="aggl">e</w>
                     <w>&a-rond;l&i;&accent;gn&i;ez</w>
                 </l>
                 <lb/>
@@ -1771,7 +1796,8 @@
                 </l>
                 <lb/>
                 <l>
-                    <w><hi rend="initiale detach">D</hi>ece<add place="above">&i;</add>nt</w>
+                    <w><hi rend="initiale detach">D</hi>e<space/>ce<add place="above"
+                        >&i;</add>nt</w>
                     <w>le</w>
                     <w>br&a-rond;nt</w>
                     <w rend="aggl">&a-rond;l</w>
@@ -2035,7 +2061,7 @@
                         <w>me</w>
                         <w>ert</w>
                         <w>del</w>
-                        <w>de&i;&accent;t</w>
+                        <w>de&i;&accent;</w>
                         <w>me&i;&s-long;</w>
                         <w>&s-long;&a-rond;ch&i;&accent;e&ed-accent-tonique;</w>
                     </q>
@@ -2118,7 +2144,9 @@
                 <l>
                     <q><w><hi rend="initiale detach">&i-long-pour-i;</hi>cel&s-long;</w>
                         <w>tre&i;&s-long;</w>
-                        <w>te&i;re&s-long;</w>
+                        <w>te&i;re&s-long;</w><note type="palaeographic"
+                            >Langlois a lu <mentioned>terres</mentioned>,
+                        lecture qui reste envisageable.</note>
                         <w>qu&i;</w>
                         <w>funt</w>
                         <w><unclear reason="illegible">p&a-rond;rt&i;r</unclear></w>
@@ -2127,17 +2155,20 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">k</hi>&i;</w>
+                    <q>
+                        <w><hi rend="initiale detach">k</hi>&i;</w>
                         <w>funt</w>
                         <w>le&s-long;</w>
                         <w>&i;&accent;lle&s-long;</w>
-                        <w rend="aggl">e</w><w>l&a-rond;</w>
+                        <w rend="aggl">e</w>
+                        <w rend="aggl">l&a-rond;</w>
                         <w>t&tilde2-er;re</w>
                         <w>&s-long;e<subst>
                                 <del rend="exponctué">f</del>
                                 <add place="margin">ve</add>
                             </subst>rer</w>
-                        <pc type="supplied">.</pc></q>
+                        <pc type="supplied">.</pc>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -2333,7 +2364,7 @@
                 <l>
                     <add place="above"><w>&d-oncial;e</w></add>
                     <w><hi rend="initiale detach">&M-oncial;</hi>un</w>
-                    <w>&s-long;e&accent;el</w>
+                    <w>&s-long;e&accent;e&accent;l</w>
                     <w rend="aggl">fr&a-rond;&i;</w>
                     <w>&i-pour-j;&a-rond;</w>
                     <w>en&s-long;e&accent;e&accent;ler</w>
@@ -2473,7 +2504,7 @@
                         <w><hi rend="initiale detach">s<!-- vérif forme--></hi>&i;</w>
                         <w>me</w>
                         <w rend="aggl">f&a-rond;&i;te&s-long;</w>
-                        <w>&s-long;&i;</w>
+                        <w>&s-long;&i;&accent;</w>
                         <w>&u-pour-v;&i;&accent;lment</w>
                         <w>demener</w>
                     </q>
@@ -2651,7 +2682,7 @@
                     <q>
                         <w><hi rend="initiale detach">k</hi>&i;</w>
                         <w rend="aggl">a</w>
-                        <unclear reason="damage"><w>ce&s-long;</w></unclear><note type="palaeographic">Langlois a retenu la lecture <mentioned>tes</mentioned>, qui demeure possible.
+                        <unclear reason="damage"><w>te<add place="above">l</add>&s-long;</w></unclear><note type="palaeographic">Langlois a retenu la lecture <mentioned>tes</mentioned>.
                             On peut se demander si un <mentioned>l</mentioned> n'a pas été suscrit.
                         <!--Nous retenons, en l'absence d'indice contradictoire, la lecture <mentioned>ces</mentioned>, dans la mesure où le vers
                             fait emploi de la 2e personne du pluriel. Cet indice demeure néanmoins faible, étant donnée l'instabilité épique
@@ -2703,13 +2734,16 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">s<!-- vérif forme--></hi>&a-rond;c&i;ez</w>
-                    <w>que</w>
-                    <w>co</w>
-                    <w>lu&i;</w>
-                    <w>f&a-rond;&i;t</w>
-                    <w>le&s-long;</w>
-                    <w rend="aggl">o&i;l&i;&accent;z</w><w>lermer</w></q>
+                    <q>
+                        <w><hi rend="initiale detach">s<!-- vérif forme--></hi>&a-rond;c&i;ez</w>
+                        <w>que</w>
+                        <w>co</w>
+                        <w>lu&i;</w>
+                        <w>f&a-rond;&i;&accent;t</w>
+                        <w>le&s-long;</w>
+                        <w rend="aggl">o&i;l&i;&accent;z</w>
+                        <w>lermer</w>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -2746,7 +2780,7 @@
                             <del rend="barré"><w>lut&i;ez</w></del>
                         </subst>
                         <w>l&a-rond;</w>
-                        <w>v&i;&accent;e</w>
+                        <w>&u-pour-v;&i;&accent;e</w>
                         <w>&s-long;&a-rond;<add place="above">&i;</add>nt</w>
                         <w>homer</w>
                     </q>
@@ -2896,9 +2930,11 @@
                     <q>
                         <w><hi rend="initiale detach">k</hi>&i;</w>
                         <w rend="aggl">&a-rond;</w>
-                        <w>bu&i;<unclear reason="illegible">&s-rond-plongeant;</unclear>un</w><note type="palaeographic"
-                            >Langlois a retenu la lecture <mentioned>brugun</mentioned>, mais il nous semble devoir lire un <mentioned>s</mentioned>
-                        long.</note>
+                        <w>bu&i;<unclear reason="illegible">&s-rond-plongeant;</unclear>un</w><note type="palaeographic">Langlois a retenu la lecture <mentioned>brugun</mentioned>, mais il faut
+                            peut-etre lire un <mentioned>s</mentioned> long (voir aussi supra,
+                                <mentioned>deviser</mentioned>/<mentioned>dejuger</mentioned>). Une
+                            lecture <mentioned>buigun</mentioned> reste envisageable en
+                            anglo-normand (?).  </note>
                         <w>l&i;</w>
                         <w>pu&i;&s-long;&s-long;e</w>
                         <w>&a-rond;&u-pour-v;er</w>
@@ -3062,7 +3098,7 @@
                 <lb/>
                 <l>
                     <q>
-                        <w><hi rend="initiale detach">P</hi>ur</w>
+                        <w><hi rend="initiale detach">p</hi>ur</w>
                         <w>&s-long;ul</w>
                         <w>&i;t&a-rond;nt</w>
                         <w>que</w>
@@ -3099,12 +3135,16 @@
                 </l>
                 <lb/>
                 <l>
-                    <q><w><hi rend="initiale detach">P</hi>ur</w>
-                    <w>&u-pour-v;o&s-long;tre</w>
-                    <w>&u-pour-v;&i;e</w>
-                    <w rend="aggl">ne</w><w rend="aggl">do&r-rond;e&i;</w><w>ge</w>
-                    <w>un</w>
-                    <w>be&s-long;&a-rond;nt</w></q>
+                    <q>
+                        <w><hi rend="initiale detach">p</hi>ur</w>
+                        <w>&u-pour-v;o&s-long;tre</w>
+                        <w>&u-pour-v;&i;e</w>
+                        <w rend="aggl">ne</w>
+                        <w rend="aggl">do&r-rond;e&i;</w>
+                        <w>ge</w>
+                        <w>un</w>
+                        <w>be&s-long;&a-rond;nt</w>
+                    </q>
                 </l>
                 <lb/>
                 <l>
@@ -3137,7 +3177,6 @@
                     <w>&s-long;e&i;gnur&s-long;</w>
                     <w>uncho&r-rond;e</w>
                     <w>&u-pour-v;&tilde4-us;</w>
-                    <!-- Manque-t-il quelque chose (sai) ou est-ce effacé? -->
                     <unclear reason="illegible"
                         ><w rend="aggl">&a-rond;&i;</w></unclear><note type="palaeographic">nous suivons la lecture de Langlois.</note>
                         <w rend="aggl">&a-rond;</w><w>&d-oncial;&i;re</w></q>
@@ -3147,7 +3186,6 @@
                     <q>
                         <w>re&i;&s-long;</w>
                         <w>&a-rond;&G;ul&a-rond;nt</w>
-                        <!--G de Agulant à corriger partout -->
                         <w>&u-pour-v;&i;&accent;nt</w>
                         <w>ot</w>
                         <w>&mlt-mut;</w>
@@ -3176,7 +3214,9 @@
                     <w>&u-pour-v;o&s-long;</w> 
                     <w>&u-pour-v;oder&a-rond;t</w>
                     <w>&i;l</w>
-                    <w>oc&i;&accent;er</w>
+                    <unclear reason="illegible"><w>oc&i;&accent;<del rend="exponctué">e</del>r</w></unclear><note type="palaeographic"
+                        >l'exponctuation n'est pas certaine, ni la présence ou non 
+                        d'un <mentioned>e</mentioned> à la finale.</note>
                     <pc type="supplied">.</pc></q>
                 </l>
                 <lb/>
@@ -3259,7 +3299,7 @@
                         <w>&u-pour-v;er&s-long;</w>
                         <w>&x-i-cresti;en&s-long;</w>
                         <w>&s-long;e</w>
-                        <unclear reason="illegible"><w>&u-pour-v;&i;re</w></unclear>
+                        <w>&u-pour-v;&i;&accent;re</w>
                     </q>
                 </l>
                 <lb/>
@@ -3353,8 +3393,8 @@
                         <w><hi rend="initiale detach">&R;</hi>e&i;&accent;&s-long;</w>
                         <w>&a-rond;gul&a-rond;nt</w>
                         <w>&u-pour-v;&i;ent</w>
-                        <w>ot</w>
-                        <w>&s-long;&a-rond;</w>
+                        <w rend="aggl">ot</w>
+                        <w rend="aggl">&s-long;&a-rond;</w>
                         <w>b&a-rond;run&i;&accent;e</w>
                     </q>
                 </l>
@@ -3418,7 +3458,7 @@
                         <w>qu&i;</w>
                         <w>ver</w>
                         <w rend="aggl">en</w>
-                        <w>d&i;e&accent;</w>
+                        <w>d&i;&accent;e</w>
                         <pc type="supplied">.</pc>
                     </q>
                 </l>
@@ -3455,7 +3495,7 @@
                         <w>L&a-rond;</w>
                         <w>t&tilde2-er;re</w>
                         <w>ert</w>
-                        <unclear reason="damage"><w>&s-long;&a-rond;&s-long;&i;e</w></unclear><note type="palaeographic"
+                        <unclear reason="damage"><w>&s-long;&a-rond;&s-long;&i;&accent;e</w></unclear><note type="palaeographic"
                             >Langlois propose la lecture <mentioned>sasie</mentioned>, mais une lecture <mentioned>salie</mentioned>
                         ne serait pas impossible. On peut de toute façon supposer une confusion paléographique (cf. la leçon <mentioned>essilie</mentioned> présente dans la tradition).</note>
                         <!--<gap reason="damage" quantity="8" unit="char"/>-->
@@ -3480,7 +3520,8 @@
                 <lb/>
                 <l>
                     <q>
-                        <w rend="elision"><hi rend="initiale detach">n</hi></w><w>&i;</w>
+                        <w rend="elision"><hi rend="initiale detach">n</hi></w>
+                        <w>&i;</w>
                         <w>&a-rond;&u-pour-v;r&a-rond;</w>
                         <w>hu&tilde1-nasale-m;me</w>
                         <w>k&i;</w>
@@ -3488,7 +3529,7 @@
                         <w>perde</w>
                         <unclear reason="damage">
                             <w>l&a-rond;</w>
-                            <w>&u-pour-v;&i;e</w>
+                            <w>&u-pour-v;&i;&accent;e</w>
                         </unclear>
                     </q>
                 </l>
@@ -3639,7 +3680,7 @@
                 <lb/>
                 <l>
                     <q><w><hi rend="initiale detach">e</hi></w>
-                    <add place="above"><w>&i-long-pour-j;o</w> <w><unclear reason="illegible">en</unclear></w></add>
+                    <add place="above"><w>&i-pour-j;o</w> <w><unclear reason="illegible">en</unclear></w></add>
                     <w>de&i;</w>
                     <w>e&s-long;tre</w>
                     <w>le</w>
@@ -3651,10 +3692,10 @@
                     <q>
                         <w rend="aggl"><hi rend="initiale detach">&i-long-pour-j;</hi>o</w>
                         <w rend="elision-sans-aggl">l</w>
-                        <w>&a-rond;&i;</w>
-                        <w>en</w>
+                        <w rend="aggl">&a-rond;&i;</w>
+                        <w rend="aggl">en</w>
                         <w>f&i;u</w>
-                        <unclear reason="illegible"><w>&s-long;&i;</w>
+                        <unclear reason="illegible"><w rend="aggl">&s-long;&i;</w>
                         <w>urent</w></unclear>
                         <w rend="aggl">m&i;</w>
                         <w>&a-rond;nceu&ed-dierese;r</w>
@@ -3704,11 +3745,14 @@
                     <q>
                         <w><hi rend="initiale detach">Q</hi>u&a-rond;nt</w>
                         <w>&u-pour-v;o&s-long;</w>
-                        <w>&u-pour-v;errez</w><!-- veirez (Langlois) ou verrez? -->
+                        <w>&u-pour-v;errez</w>
+                        <note type="palaeographic">les lectures <mentioned>veirez</mentioned> ou
+                                <mentioned>verrez</mentioned> paraissent toutes deux possibles (voir
+                            aussi supra, <mentioned>teire</mentioned>).</note>
                         <w>&u-pour-v;o&s-rond-plongeant;</w>
                         <w>gent</w>
                         <w>&i-pour-j;u&s-long;te<add place="above">r</add></w>
-                        <w>&a-rond;&s-long;</w>
+                        <w rend="aggl">&a-rond;&s-long;</w>
                         <w>lur</w>
                     </q>
                 </l>
@@ -3759,7 +3803,7 @@
                     <w>le&s-long;</w>
                     <w>dux</w>
                     <w>&Naimes;</w>
-                    <w>&i;</w>
+                    <w rend="aggl">&i;</w>
                     <w>curt</w>
                 </l>
                 <lb/>
@@ -3831,7 +3875,7 @@
                 <l>
                     <q>
                         <w rend="elision"><hi rend="initiale detach">e</hi>n</w>
-                        <w>&a-rond;&s-long;p&tilde2-er-pour-re;munt</w>
+                        <w>&a-rond;&s-long;&pre;munt</w>
                         <!--<gap reason="damage" quantity="17" unit="char"/>-->
                         <unclear reason="damage"><w>po&r-rond;tera&i;&accent;</w>
                         <w rend="aggl">m&a-rond;</w>
@@ -3963,9 +4007,8 @@
                 </l>
                 <lb/>
                 <l>
-                    <!--<gap reason="illegible" quantity="6" unit="char"/>-->
                     <w rend="aggl"><hi rend="initiale detach">V</hi>&a-rond;</w>
-                    <w>to&s-long;t</w><!-- TODO: vérifier ces deux mots chez Langlois -->
+                    <w>to&s-long;t</w>
                     <w rend="aggl">&a-rond;</w>
                     <w>lu&i;</w>
                     <w>&que-q-tilde;</w>                    
@@ -3989,7 +4032,7 @@
                 <l>
                     <w><hi rend="initiale detach">s<!-- vérif forme--></hi>&i;</w>
                     <w rend="aggl">nel</w>
-                    <w>f&a-rond;&i;&accent;z</w>
+                    <unclear reason="damage"><w>f&a-rond;&i;&accent;z</w></unclear>
                     <w rend="aggl">&a-rond;</w>
                     <w>m&a-rond;lur</w>
                     <w>fu&s-long;</w><w>ne&ed-accent-tonique;</w>
@@ -4048,69 +4091,789 @@
                     <w>la</w>
                     <w>cr&i;&s-long;t&i;&ed-dierese;ente&ed-accent-tonique;</w>
                 </l>
-                <!-- TODO: fin de la transcription à faire plus tard -->
-                <!--<cb n="f"/>
-                <lb/>
-                <l>
+                <cb n="f"/>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">Q</hi>ue</w>
+                        <w rend="elision">&d-oncial;</w>
+                        <w>un</w>
+                        <unclear reason="illegible"><w rend="aggl">de<add place="above"
+                                >s</add></w><w>me&tilde1-nasale-m;bre</w></unclear>
+                        <note type="palaeographic">Langlois a lu <mentioned>membre</mentioned>(avec
+                            tilde abréviative), ce qui est envisageable mais non certain.</note>
+                        <w rend="aggl">ne</w>
+                        <w>&s-long;e&i;t</w>
+                        <w>de&s-long;<space/>hono&r-rond;e&ed-accent-tonique;</w>
+                        <pc type="supplied">:</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+            <q>
+                <!--<w><hi rend="initiale detach">V</hi></w>
+                <w>&i;l</w>
+                <w>&a-rond;vfr&a-rond;</w>
+                <w>u</w>
+                <w>p&i;e]</w>-->
+                <gap unit="char" quantity="14" reason="damage"/>
+                <w>&v-pour-u;</w>
+                <w>pu&i;g</w>
+                <w>cope</w><note type="palaeographic"
+                    >Le vers est presque illisible dans son ensemble,
+                nous suivons la leçon de Langlois pour la seconde moitié.</note>
+                <pc type="supplied">,</pc>
+            </q>
+        </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">&v-pour-u;</hi></w>
+                        <w>&a-rond;l</w>
+                        <unclear reason="damage"><w>mex</w></unclear>
+                        <w>ert</w>
+                        <w rend="aggl">&a-rond;&s-long;</w>
+                        <w>furche&s-long;</w>
+                        <w>enc&r-long;oe&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">p</hi>u&i;&s-long;</w>
+                        <w>te</w>
+                        <!--<w>ferr&a-rond;</w>-->
+                        <gap unit="char" quantity="4" reason="damage"/>
+                        <w rend="aggl">&s-long;&i;</w>
+                        <w>cu&tilde1-nasale-m;</w>
+                        <w>&a-rond;t</w>
+                        <w>en</w>
+                        <w>pen&s-long;e&ed-accent-tonique;</w>
+                        <pc type="supplied">:</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">t</hi>&a-rond;</w>
+                        <w>pr&i;me</w>
+                        <w>b&a-rond;rbe</w>
+                        <pc type="supplied">,</pc>
+                        <w>que</w>
+                        <w><gap unit="char" quantity="2" reason="illegible"/>&a-rond;&s-long;</w>
+                        <note type="palaeographic"
+                            >Langlois a lu <mentioned>tiens</mentioned>.</note>
+                        <w>en</w>
+                        <w>tel</w>
+                        <w>ch&i;<add place="above">e</add>rte&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">a</hi></w>
+                        <w>l&a-rond;</w>
+                        <w>m&a-rond;n&i;&accent;re</w>
+                        <w>de</w>
+                        <w>runc&i;n</w>
+                        <w>e&s-long;curt<del rend="exponctué"
+                            >&i;&ed-accent-tonique;</del>e&ed-accent-tonique;</w>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">t</hi>e</w>
+                        <w>ert</w>
+                        <w>recope&ed-accent-tonique;</w>
+                        <w rend="aggl">e</w>
+                        <w rend="aggl">le</w>
+                        <w>pe&i;l</w>
+                        <del rend="exponctué barré"><w>trench&i;e&ed-accent-tonique;</w></del>
+                        <add place="margin" hand="#main2"><w>t&u-suscrit-ru;n&s-long;une&ed-accent-tonique;</w></add>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">N</hi>e</w>
+                        <w>&a-rond;&u-pour-v;r&a-rond;&s-long;</w>
+                        <w>pel</w>
+                        <w>que</w>
+                        <w>ne</w>
+                        <w rend="aggl">te</w>
+                        <w>&s-long;e&i;t</w>
+                        <w>pele&ed-accent-tonique;</w>
+                        <pc type="supplied">;</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">e</hi></w>
+                        <w>pu&i;&s-long;</w>
+                        <unclear reason="damage"><w>&s-long;er&a-rond;&s-long;</w></unclear>
+                        <note type="palaeographic"> Ce mot est difficilement lisible, et nous
+                            suivons la lecture de Langlois.</note>
+                        <w rend="aggl">&a-rond;</w>
+                        <w>runc&i;n</w>
+                        <w>tr&a-rond;&i;&ed-dierese;ne&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w rend="aggl"><hi rend="initiale detach">T</hi>&a-rond;nt</w>
+                        <w>cu&tilde1-nasale-m;</w>
+                        <unclear reason="damage"><w>o&r-rond;e</w></unclear>
+                        <w>dure</w>
+                        <w>tute</w>
+                        <w>t&a-rond;</w>
+                        <w>po&ed-dierese;e&s-long;te&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">&v-pour-u;</hi>nque&s-long;</w>
+                        <w>pu&i;&s-long;</w>
+                        <w>le</w>
+                        <w>o&r-rond;e</w>
+                        <w>&que-q-tilde;</w>
+                        <w>&a-rond;&d-oncial;&a-rond;m</w>
+                        <w rend="aggl">fu</w>
+                        <w>furme&ed-accent-tonique;</w>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">e</hi></w>
+                        <w>tut</w>
+                        <w>l&i;</w>
+                        <w>munt</w>
+                        <w rend="aggl">l&i;</w>
+                        <w>fu</w>
+                        <w>&a-rond;b&a-rond;ndune&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">n</hi>e</w>
+                        <w>fu</w>
+                        <w>hu&tilde1-nasale-m;me</w>
+                        <w rend="aggl">&s-long;&i;</w>
+                        <w>&u-pour-v;&i;lement</w>
+                        <w>demene&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">&i-long-pour-i;</hi>tel</w>
+                        <w>e&s-long;t</w>
+                        <add place="above"><w rend="elision">l</w></add>
+                        <w>&i;re</w>
+                        <w rend="aggl">de</w>
+                        <w>&a-rond;&G;ul&a-rond;nt</w>
+                        <w rend="aggl">le</w>
+                        <w>&s-long;ene&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">n</hi>el</w>
+                        <w>co&r-rond;oc&i;&accent;er</w>
+                        <w rend="aggl">ne</w>
+                        <w>&s-long;&a-rond;e&ed-accent-tonique;&s-long;</w>
+                        <w rend="aggl">&s-long;&i;</w>
+                        <w>o&s-long;e&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <unclear reason="damage"><w><hi rend="initiale detach"
+                            >N</hi>um</w></unclear>
+                        <w>f&tilde2-er;r&a-rond;&s-long;</w>
+                        <w>tu</w>
+                        <pc type="supplied">,</pc>
+                        <w rend="elision">n</w>
+                        <w>e&s-long;</w>
+                        <w>p&a-rond;&s-long;</w>
+                        <w>&a-rond;</w>
+                        <w>co</w>
+                        <w>mudle&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">&i-long-pour-j;</hi>omble&s-long;</w>
+                        <w>hom</w>
+                        <w>e&s-long;</w>
+                        <pc type="supplied">,</pc>
+                        <w>&s-long;&i;</w>
+                        <w>&a-rond;&s-long;</w>
+                        <w>po&i;</w>
+                        <w>endure&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w rend="elision"><hi rend="initiale detach">n</hi></w>
+                        <w>&a-rond;&s-long;</w>
+                        <w>nul</w>
+                        <w>me&s-long;t&i;&accent;r</w>
+                        <w>fo&r-rond;&s-long;</w>
+                        <w rend="elision">d</w>
+                        <w>e&s-long;tre</w>
+                        <w>encurt&i;ne&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w rend="aggl"><hi rend="initiale detach">e</hi>n</w>
+                        <w>te&s-long;</w>
+                        <w>ch&a-rond;mbre&s-long;</w>
+                        <w>&s-long;e&i;gn&i;&accent;e&ed-accent-tonique;</w>
+                        <w>e</w>
+                        <w>&u-pour-v;entu&s-long;e&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">S</hi>o&u-pour-v;ent</w>
+                        <w>b&a-rond;&i;ngn&i;&accent;e&ed-accent-tonique;</w>
+                        <w rend="aggl">e</w>
+                        <w>chuch&i;&accent;e&ed-accent-tonique;</w>
+                        <w rend="aggl">e</w>
+                        <w>le&u-pour-v;e&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">C&ed-palatalisation-cedille;</hi>o</w>
+                        <w>&a-rond;f&i;er</w>
+                        <w rend="aggl">&a-rond;</w>
+                        <w>hume</w>
+                        <w>k&i;</w>
+                        <w>e&s-long;t</w>
+                        <w>de</w>
+                        <w>&i-pour-j;ombe</w>
+                        <w>e&accent;e&accent;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">D</hi>ehe&i;t</w>
+                        <w>re&i;&s-long;</w>
+                        <w>en</w>
+                        <w>&s-long;un</w>
+                        <w>p&a-rond;le&i;&s-long;</w>
+                        <w>m&a-rond;te&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">k</hi>&i;</w>
+                        <w>de</w>
+                        <w>t&a-rond;nt</w>
+                        <w>regne&s-long;</w>
+                        <w>e&s-long;t</w>
+                        <w>&s-long;&i;&accent;re&s-long;</w>
+                        <w>cl&a-rond;me&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">p</hi>u&i;&s-long;e</w>
+                        <w>e&s-long;tre</w>
+                        <w>de</w>
+                        <w>&s-long;un</w>
+                        <w>o&s-long;tel</w>
+                        <w>&i-pour-j;ute&ed-accent-tonique;</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">R</hi>ecre&a-rond;nt</w>
+                        <w>e&s-long;</w>
+                        <pc type="supplied">,</pc>
+                        <w>&i-pour-j;ol</w>
+                        <w>&s-long;&a-rond;&i;</w>
+                        <w rend="aggl">de</w>
+                        <w>&u-pour-v;er&i;te&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">p</hi>&a-rond;r</w>
+                        <w>te&i;</w>
+                        <w>&s-long;&a-rond;r&a-rond;z&i;&accent;n&s-long;</w>
+                        <w rend="aggl">en</w>
+                        <w>&u-pour-v;&i;lte&ed-accent-tonique;</w>
+                        <w>ch&a-rond;run</w>
+                        <pc type="supplied">:</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">n</hi></w>
+                        <w>&a-rond;&u-pour-v;erunt</w>
+                        <w>ver&s-long;</w>
+                        <w>qu&i;&accent;</w>
+                        <w>mu&s-long;trer</w>
+                        <w>lur</w>
+                        <w>frete&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">M</hi>ut</w>
+                        <w>e&s-long;t</w>
+                        <w>gr&a-rond;nt</w>
+                        <w>hunte</w>
+                        <w>hu&tilde1-nasale-m;me</w>
+                        <w>de</w>
+                        <w>tun</w>
+                        <w>e&accent;e&accent;&ed-accent-tonique;</w>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">Q</hi>ue</w>
+                        <w>&s-long;&i;&s-long;cle</w>
+                        <w>e&s-long;t</w>
+                        <w rend="aggl">de</w>
+                        <w>te</w>
+                        <w>encumbre&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                        <w>p&a-rond;r</w>
+                        <w>&i;cel</w>
+                        <w>deu</w>
+                        <w>qu&i;</w>
+                        <w>t&a-rond;nt</w>
+                        <w>&a-rond;&d-oncial;</w>
+                        <w>hum&i;l&i;te&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">Q</hi>ue</w>
+                        <w>&aGl-agulant-;</w>
+                        <w>me</w>
+                        <w>tene&i;&accent;t</w>
+                        <w rend="aggl">en</w>
+                        <w>tel</w>
+                        <w>ch&i;&accent;rter</w>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">Q</hi>ue</w>
+                        <w>&s-long;un</w>
+                        <w>me&s-long;&s-long;&a-rond;ge</w>
+                        <w rend="elision">t</w>
+                        <w>&a-rond;t</w>
+                        <w rend="aggl">p&a-rond;r</w>
+                        <w rend="aggl">m&a-rond;</w>
+                        <w>buche</w>
+                        <w>m&a-rond;nde&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">S</hi>uz</w>
+                        <w>c&i;&accent;l</w>
+                        <w rend="elision">n</w>
+                        <w>&a-rond;t</w>
+                        <w>hu&tilde1-nasale-m;me</w>
+                        <pc type="supplied">,</pc>
+                        <w>t&a-rond;nt</w>
+                        <del rend="exponctué">hu&tilde1-nasale-m;me</del>
+                        <w rend="aggl">cu&tilde1-nasale-m;</w>
+                        <w>l&i;&accent;</w>
+                        <w>munde</w>
+                        <w>&est-e-tilde;</w>
+                        <w>le&accent;e&accent;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">f</hi>o&r-rond;&s-long;</w>
+                        <w>&s-long;ul</w>
+                        <w>mun</w>
+                        <w>co&r-rond;&s-long;</w>
+                        <w>e</w>
+                        <w>mun</w>
+                        <w>br&a-rond;nt</w>
+                        <w>&a-rond;cere&ed-accent-tonique;</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">S</hi>&i;</w>
+                        <w>en</w>
+                        <w>ert</w>
+                        <w>p&a-rond;r</w>
+                        <w>me&i;&accent;</w>
+                        <w>le</w>
+                        <w>p&a-rond;&i;&s-long;</w>
+                        <w>&a-rond;qu&i;&accent;te&ed-accent-tonique;</w>
+                        <pc type="supplied">.</pc>
+                        <pc type="supplied">»</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">p</hi>&a-rond;r</w>
+                    <w rend="elision">l</w>
+                    <w>entre<space/>cop</w>
+                    <w>od</w>
+                    <w>le</w>
+                    <w>bon</w>
+                    <w>br&a-rond;nt</w>
+                    <w>&a-rond;cere&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
                     <w><hi rend="initiale detach">Q</hi>ue</w>
-                    <w>&d-oncial;un</w>
-                    <!-\- reste de la phrase illisible -\->
-                </l>
-                <lb/>
-                <l> <!-\- phrase entièrement illisible -\->
-                    <w/>
-                </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>l&i;</w>
+                    <w>pend&i;</w>
                     <w>&a-rond;l</w>
-                    <!-\- reste de la phrase illisible -\->
+                    <w>&s-long;ene&s-long;tre</w>
+                    <w>co&s-long;te&ed-accent-tonique;</w>
+                    <pc type="supplied">.</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">P&i;</hi>u&s-long;</w>
-                    <w/>
-                    <!-\- les deux mot suivants illisibles -\->
-                    <w/>                    
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>&i;&accent;re</w>
+                    <w rend="elision">l</w>
                     <w>&a-rond;t</w>
-                    <w rend="aggl">en</w>
-                    <w>pen&s-long;e</w>
+                    <w>t&a-rond;nt</w>
+                    <w rend="aggl">de</w>
+                    <w>feo&r-rond;re</w>
+                    <w>&i-pour-j;&accent;ete&ed-accent-tonique;</w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">T&a-rond;</hi></w>
-                    <w>prune</w>
-                    <w>b&a-rond;rbe</w>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">D</hi></w>
+                    <w>un</w>
+                    <w>dem&i;&accent;</w>
+                    <w>pele&accent;e&accent;</w>
+                    <w>l&i;</w>
+                    <w>p&a-rond;ce</w>
+                    <w>le</w>
+                    <w>br&a-rond;nd&i;&accent;re</w>
+                    <pc type="supplied">.</pc>
+                </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">L</hi>e</w>
                     <w>que</w>
-                    <w/>
-                    <!-\- mot illisible -\->
-                    <w>&a-rond;&s-long;</w>
+                    <w>&que-q-tilde;</w>
+                    <w>fu&s-long;t</w>
+                    <pc type="supplied">,</pc>
+                    <w>&s-long;en&s-long;</w>
+                    <w>&v-pour-u;</w>
+                    <w>fol&i;&accent;e</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
+                    <w rend="aggl"><hi rend="initiale detach">&i-long-pour-j;</hi>&a-rond;</w>
+                    <w rend="aggl">en</w>
+                    <w>fu&s-long;t</w>
+                    <w>&Karle;</w>
+                    <w>p&a-rond;r</w>
+                    <w>m&i;&accent;</w>
+                    <w>le</w>
+                    <w>ch&i;&accent;f</w>
+                    <w>elme&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">Q</hi>u&a-rond;nt</w>
+                    <w>&Naimes;</w>
+                    <w rend="aggl">od</w>
+                    <w>&s-long;e&s-long;</w>
+                    <w>br&a-rond;z</w>
+                    <w>&a-rond;cole&accent;e&accent;</w>
+                    <pc type="supplied">:</pc>
+                </l>
+        <lb/>
+        <l>
+            <unclear reason="illegible"><w><hi rend="initiale detach">P</hi>ar</w></unclear>
+            <w>fol</w>
+            <w>ne</w>
+            <w>t&i;nt</w>
+            <w rend="aggl">e</w>
+            <w>pur</w>
+            <w>demu&s-long;ure&ed-accent-tonique;</w>
+            <pc type="supplied">;</pc>
+        </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">E</hi></w>
+                    <w>tel&s-long;</w>
+                    <pc type="supplied">.</pc>
+                    <num><pc type="orig">.</pc><w>lx</w><pc type="orig">.</pc></num>
+                    <pc type="supplied">.</pc>
                     <w>en</w>
-                    <w>tel</w>
-                    <w/>
-                    <!-\- mot illisible -\->
+                    <w>&s-long;unt</w>
+                    <unclear reason="illegible"><add place="above"><w>o</w></add></unclear>
+                    <w>lu&i;</w>
+                    <w>&i-pour-j;&accent;ure&ed-accent-tonique;</w>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">a</hi></w>
-                    <w>l&a-rond;</w>
-                    <w>m&a-rond;&i;n</w>
-                    <!-\- pas sûre de ce mot -\->
-                    <w>de</w>
-                    <w/>
-                    <!-\- comprends pas le mot -\->
-                    <w>eleurt&i;&accent;e</w>
-                    <!-\- pas sûre de ce mot -\->
+        <lb/>
+        <l>
+                    <w rend="aggl"><hi rend="initiale detach">Q</hi>ue</w>
+                    <w rend="aggl">j&a-rond;</w>
+                    <w>u&s-long;ent</w>
+                    <w rend="aggl">le</w>
+                    <w>&s-long;&i;cle</w>
+                    <w>del&i;&u-pour-v;re&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
                 </l>
-                <lb/>
-                <l>
-                    <w><hi rend="initiale detach">T</hi>e</w>
-                    <w></w>
-                </l>-->
-                
-
-            <!--<pb n="8v" facs="facsimile/NAF-5094_08v.JPEG"/>-->
-            </lg>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>me&s-long;&s-long;&a-rond;ge</w>
+                    <w>d&i;&accent;e</w>
+                    <w>tut</w>
+                    <w>&s-long;un</w>
+                    <w>pen&s-long;e&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
+                    <unclear reason="illegible"><w><hi rend="initiale detach"
+                        >M</hi>e&i;&s-long;</w></unclear>
+                    <w rend="aggl">de</w>
+                    <w>plu&s-long;</w>
+                    <w>f&a-rond;&i;&accent;re</w>
+                    <w>ne</w>
+                    <w>lu&i;</w>
+                    <w>l&a-rond;&i;&s-long;&s-long;ez</w>
+                    <w>&s-long;un</w>
+                    <w>gre&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">k</hi>&a-rond;r</w>
+                    <w>&s-long;u<del rend="exponctué">n</del><add place="above"
+                        >r</add>qu&i;d&a-rond;nce</w>
+                    <w rend="elision">l</w>
+                    <w>&a-rond;&u-pour-v;r&a-rond;t</w>
+                    <w>tot</w>
+                    <w>&a-rond;fole&ed-accent-tonique;</w>
+                    <pc type="supplied">.</pc>
+                </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">Q</hi>u&a-rond;nt</w>
+                    <w>hoger</w>
+                    <w rend="elision">l</w>
+                    <w>ot</w>
+                    <pc type="supplied">,</pc>
+                    <w>pur</w>
+                    <w>po&i;</w>
+                    <w rend="elision">n</w>
+                    <w>e&s-long;t</w>
+                    <w>fo&r-rond;&s-long;ene&ed-accent-tonique;</w>
+                    <pc type="supplied">,</pc>
+                </l>
+        <lb/>
+        <l>
+            <w><hi rend="initiale detach">C</hi>olur</w>
+            <w>lu&i;</w>
+            <w>mue</w>
+            <pc type="supplied">,</pc>
+            <w>l&i;</w>
+            <w>&s-long;&a-rond;nc</w>
+            <w>l&i;</w>
+            <w>&est-e-tilde;</w>
+            <w>trouble&ed-accent-tonique;</w>
+            <pc type="supplied">,</pc>
+        </l>
+        <lb/>
+        <l>
+                    <w><hi rend="initiale detach">G</hi>ren&s-long;</w>
+                    <note type="linguistic">sic pour <mentioned>greus</mentioned>?</note>
+                    <w rend="aggl">e</w>
+                    <w>plen</w>
+                    <w rend="elision">d</w>
+                    <w>&i;&accent;re</w>
+                    <w rend="elision">&s-long;</w>
+                    <w>e&s-long;t</w>
+                    <w>&u-pour-v;&tilde2-er;&s-long;</w>
+                    <!-- TODO: tile droite pour er? -->
+                    <w>le<unclear reason="illegible"><del rend="gratté">&i;</del></unclear></w>
+                    <w>re&i;</w>
+                    <w>turne&ed-accent-tonique;</w>
+                </l>
+        <lb/>
+        <l>
+                    <w rend="aggl"><hi rend="initiale detach">E</hi>n</w>
+                    <w>&i;tel</w>
+                    <w>gu&i;&s-long;e</w>
+                    <note type="tradition">Langlois propose de rétablir <mentioned>si
+                            l'at</mentioned></note>
+                    <w rend="elision">l</w>
+                    <w>&a-rond;t</w>
+                    <w>&a-rond;re&s-long;une&ed-accent-tonique;</w>
+                    <pc type="supplied">.</pc>
+                </l>
+    </lg>
+    <lg type="laisse">
+        <lb/>
+        <l>
+            <w><hi rend="initiale filigr 2l">O</hi>ger</w>
+            <w>p&a-rond;role</w>
+            <w>k&i;</w>
+            <w>gref</w>
+            <w>&i;re</w>
+            <w>&s-long;u&s-long;prent</w>
+            <pc type="supplied">:</pc>
+        </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">D</hi>re&i;&accent;z</w>
+                        <w>enper&i;&accent;rer</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <w>fa&i;t</w>
+                    <w>&i;l</w>
+                    <pc type="supplied">,</pc>
+                    <q>
+                        <w rend="aggl">&a-rond;</w>
+                        <w>me</w><!-- marquer tonique? -->
+                        <w>entent</w>
+                    </q>
+                    <pc type="supplied">.</pc>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">p</hi>&a-rond;r</w>
+                        <w>&i;cel</w>
+                        <w>deu</w>
+                        <w rend="aggl">&a-rond;</w>
+                        <w>qu&i;</w>
+                        <w>l&i;</w>
+                        <w>munt</w>
+                        <w>&a-rond;pent</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">k</hi>&i;</w>
+                        <w>en</w>
+                        <w rend="aggl">l&a-rond;</w>
+                        <w>&u-pour-v;&i;rg&i;ne</w>
+                        <w>&u-pour-v;&i;nt</w>
+                        <w>p&a-rond;r</w>
+                        <w>&a-rond;nu&tilde1-nasale-n;cement</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">S</hi>e</w>
+                        <w>&a-rond;</w>
+                        <w>ce&s-long;te</w>
+                        <w>f&i;&accent;e</w>
+                        <w>p&a-rond;&s-long;&s-long;ez</w>
+                        <w>mun</w>
+                        <w>t&a-rond;lent</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">D</hi>e</w>
+                        <w>ce&s-long;t</w>
+                        <w>glutun</w>
+                        <w>k&i;</w>
+                        <w>c&i;&accent;</w>
+                        <w>&u-pour-v;e&i;&accent;</w>
+                        <w rend="aggl">en</w>
+                        <w>&pre;&s-long;ent</w>
+                    </q>
+                </l>
+        <lb/>
+        <l>
+                    <q>
+                        <w><hi rend="initiale detach">K</hi>e</w>
+                        <w>ore</w>
+                        <add place="above"><w>en</w></add>
+                        <w>dre&i;&accent;t</w>
+                        <w>ne</w>
+                        <w>prenge</w>
+                        <w>vengement</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+    </lg>
         </body>
     </text>
 </TEI>
