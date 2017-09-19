@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-07-08T14:49:19Z. .
+Schema generated from ODD source 2017-09-18T14:20:12Z. .
 TEI Edition: Version 3.1.0. Last updated on
 	15th December 2016, revision d3f5e70
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -732,76 +732,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <data type="anyURI"/>
       </attribute>
    </define>
-   <define name="att.measurement.attributes">
-      <ref name="att.measurement.attribute.unit"/>
-      <ref name="att.measurement.attribute.quantity"/>
-      <ref name="att.measurement.attribute.commodity"/>
-   </define>
-   <define name="att.measurement.attribute.unit">
-      <optional>
-         <attribute name="unit">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unité) indique les unités de mesure utilisées ; il s'agit en général du symbole normalisé pour les unités dont on a besoin.
-Suggested values include: 1] m(metre) ; 2] kg(kilogram) ; 3] s(second) ; 4] Hz(hertz) ; 5] Pa(pascal) ; 6] Ω(ohm) ; 7] L(litre) ; 8] t(tonne) ; 9] ha(hectare) ; 10] Å(ångström) ; 11] mL(millilitre) ; 12] cm(centimetre) ; 13] dB(decibel) ; 14] kbit(kilobit) ; 15] Kibit(kibibit) ; 16] kB(kilobyte) ; 17] KiB(kibibyte) ; 18] MB(megabyte) ; 19] MiB(mebibyte) </a:documentation>
-            <choice>
-               <value>m</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mètre) unité SI (système international) de longueur</a:documentation>
-               <value>kg</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilogramme) unité SI de masse</a:documentation>
-               <value>s</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(seconde) unité SI de temps</a:documentation>
-               <value>Hz</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hertz) unité SI de fréquence</a:documentation>
-               <value>Pa</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pascal) unité SI de pression</a:documentation>
-               <value>Ω</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ohm) unité SI de résistance électrique</a:documentation>
-               <value>L</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
-               <value>t</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tonne) 10³ kg</a:documentation>
-               <value>ha</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hectare) 1 hm²</a:documentation>
-               <value>Å</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ångström) 10⁻¹⁰ m</a:documentation>
-               <value>mL</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millilitre) </a:documentation>
-               <value>cm</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimètre) </a:documentation>
-               <value>dB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(décibel) Voir remarques, ci-dessous.</a:documentation>
-               <value>kbit</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilobit) 10³ ou 1000 bits</a:documentation>
-               <value>Kibit</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibibit) 2¹⁰ ou 1024 bits</a:documentation>
-               <value>kB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilo-octet) 10³ ou 1000 octets</a:documentation>
-               <value>KiB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibioctet) 2¹⁰ ou 1024 octets</a:documentation>
-               <value>MB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mégaoctet) 10⁶ ou 1 000 000 octets</a:documentation>
-               <value>MiB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mébioctet) 2²⁰ ou 1 048 576 octets</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.measurement.attribute.quantity">
-      <optional>
-         <attribute name="quantity">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quantité) spécifie le nombre des unités indiquées que comprend la mesure.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <data type="token">
-                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-               </data>
-               <data type="decimal"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
    <define name="att.measurement.attribute.commodity">
       <optional>
          <attribute name="commodity">
@@ -1457,6 +1387,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="unclear"/>
          <ref name="damage"/>
          <ref name="handShift"/>
+         <ref name="supplied"/>
       </choice>
    </define>
    <define name="model.pPart.transcriptional_alternation">
@@ -1470,6 +1401,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="unclear"/>
          <ref name="damage"/>
          <ref name="handShift"/>
+         <ref name="supplied"/>
       </choice>
    </define>
    <define name="model.pPart.transcriptional_sequence">
@@ -1482,6 +1414,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="unclear"/>
       <ref name="damage"/>
       <ref name="handShift"/>
+      <ref name="supplied"/>
    </define>
    <define name="model.pPart.transcriptional_sequenceOptional">
       <optional>
@@ -1510,6 +1443,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="handShift"/>
+      </optional>
+      <optional>
+         <ref name="supplied"/>
       </optional>
    </define>
    <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
@@ -1540,6 +1476,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="handShift"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="supplied"/>
+      </zeroOrMore>
    </define>
    <define name="model.pPart.transcriptional_sequenceRepeatable">
       <oneOrMore>
@@ -1568,6 +1507,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="handShift"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="supplied"/>
       </oneOrMore>
    </define>
    <define name="model.pPart.edit">
@@ -2419,7 +2361,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
                          xmlns:xi="http://www.w3.org/2001/XInclude"
                          xmlns="http://www.tei-c.org/ns/1.0"
                          xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                         test="not(/tei:TEI[@type='ms']) or (/tei:TEI[@type='ms'] and not(//tei:hi[not(@rend)]) )">l'attribut @rend est obligatoire pour l'élément hi dans les transcriptions de manuscrit</s:assert>
+                         test="not(/tei:TEI[@type='ms']) or (/tei:TEI[@type='ms'] and not(//tei:hi[not(@rend)]) )">l'attribut @rend est obligatoire pour l'élément hi dans les
+                                    transcriptions de manuscrit</s:assert>
             </rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
@@ -2614,8 +2557,9 @@ Normalization 12. Critical Apparatus]</a:documentation>
                          xmlns:xi="http://www.w3.org/2001/XInclude"
                          xmlns="http://www.tei-c.org/ns/1.0"
                          xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                         test="@quantity or (@min and @max)">Une quantité (@quantity)
-                                    ou un intervalle (@min et @max) doit être précisé pour l'élément gap</s:assert>
+                         test="@quantity or (@min and @max)">Une quantité
+                                    (@quantity) ou un intervalle (@min et @max) doit être précisé
+                                    pour l'élément gap</s:assert>
             </rule>
          </pattern>
          <ref name="att.global.attributes"/>
@@ -2927,9 +2871,66 @@ Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</a
       <element name="measure">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mesure) contient un mot ou une expression faisant référence à la quantité d'un objet ou d'un produit, comprenant en général un nombre, une unité et le nom d'un produit. [3.5.3. Numbers and
 Measures]</a:documentation>
-         <ref name="macro.phraseSeq"/>
+         <empty/>
          <ref name="att.global.attributes"/>
-         <ref name="att.measurement.attributes"/>
+         <ref name="att.measurement.attribute.commodity"/>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unité) indique les unités de mesure utilisées ; il s'agit en général du symbole normalisé pour les unités dont on a besoin.
+Suggested values include: 1] m(metre) ; 2] kg(kilogram) ; 3] s(second) ; 4] Hz(hertz) ; 5] Pa(pascal) ; 6] Ω(ohm) ; 7] L(litre) ; 8] t(tonne) ; 9] ha(hectare) ; 10] Å(ångström) ; 11] mL(millilitre) ; 12] cm(centimetre) ; 13] dB(decibel) ; 14] kbit(kilobit) ; 15] Kibit(kibibit) ; 16] kB(kilobyte) ; 17] KiB(kibibyte) ; 18] MB(megabyte) ; 19] MiB(mebibyte) </a:documentation>
+            <choice>
+               <value>m</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mètre) unité SI (système international) de longueur</a:documentation>
+               <value>kg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilogramme) unité SI de masse</a:documentation>
+               <value>s</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(seconde) unité SI de temps</a:documentation>
+               <value>Hz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hertz) unité SI de fréquence</a:documentation>
+               <value>Pa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pascal) unité SI de pression</a:documentation>
+               <value>Ω</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ohm) unité SI de résistance électrique</a:documentation>
+               <value>L</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
+               <value>t</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tonne) 10³ kg</a:documentation>
+               <value>ha</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hectare) 1 hm²</a:documentation>
+               <value>Å</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ångström) 10⁻¹⁰ m</a:documentation>
+               <value>mL</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millilitre) </a:documentation>
+               <value>cm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimètre) </a:documentation>
+               <value>dB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(décibel) Voir remarques, ci-dessous.</a:documentation>
+               <value>kbit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilobit) 10³ ou 1000 bits</a:documentation>
+               <value>Kibit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibibit) 2¹⁰ ou 1024 bits</a:documentation>
+               <value>kB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilo-octet) 10³ ou 1000 octets</a:documentation>
+               <value>KiB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kibioctet) 2¹⁰ ou 1024 octets</a:documentation>
+               <value>MB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mégaoctet) 10⁶ ou 1 000 000 octets</a:documentation>
+               <value>MiB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mébioctet) 2²⁰ ou 1 048 576 octets</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </choice>
+         </attribute>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quantité) spécifie le nombre des unités indiquées que comprend la mesure.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">précise le type de mesure exprimée dans la typologie adaptée.</a:documentation>
@@ -3148,9 +3149,10 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                     xmlns="http://www.tei-c.org/ns/1.0"
                     xmlns:s="http://purl.oclc.org/dsdl/schematron"
                     context="/tei:TEI[@type='ms' or @type = 'crit']/tei:text/tei:body//tei:note">
-                                <s:assert test="@type">Les notes
-                                    doivent être typées dans les transcriptions de ms. ou éditions à nouveaux frais.</s:assert>
-                            </s:rule>
+                                    <s:assert test="@type">Les notes doivent être typées dans les
+                                        transcriptions de ms. ou éditions à nouveaux
+                                        frais.</s:assert>
+                                </s:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.pointing.attributes"/>
@@ -3865,7 +3867,9 @@ Elements]</a:documentation>
    <define name="extent">
       <element name="extent">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(étendue) décrit la taille approximative d’un texte stocké sur son support, numérique ou non numérique, exprimé dans une unité quelconque appropriée. [2.2.3. Type and Extent of File 2.2. The File Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.7.1. Object Description]</a:documentation>
-         <ref name="macro.phraseSeq"/>
+         <oneOrMore>
+            <ref name="measure"/>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -4671,11 +4675,6 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          </attribute>
       </optional>
    </define>
-   <define name="model.rdgLike">
-      <choice>
-         <ref name="rdg"/>
-      </choice>
-   </define>
    <define name="model.rdgPart">
       <choice>
          <ref name="wit"/>
@@ -4769,12 +4768,11 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             <optional>
                <ref name="lem"/>
             </optional>
+            <oneOrMore>
+               <ref name="rdg"/>
+            </oneOrMore>
             <zeroOrMore>
-               <choice>
-                  <ref name="model.rdgLike"/>
-                  <ref name="model.noteLike"/>
-                  <ref name="wit"/>
-               </choice>
+               <ref name="witDetail"/>
             </zeroOrMore>
          </group>
          <ref name="att.global.attribute.n"/>
@@ -4965,8 +4963,9 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                          xmlns:xi="http://www.w3.org/2001/XInclude"
                          xmlns="http://www.tei-c.org/ns/1.0"
                          xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                         test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]">Les mots (w) ne doivent pas contenir de nœuds de textes 
-                                    avec des blancs (utiliser space).</s:assert>
+                         test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]">Les mots (w) ne doivent pas contenir de nœuds de textes avec
+                                    des blancs (utiliser
+                                space).</s:assert>
             </rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
@@ -5142,6 +5141,19 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
       <element name="persName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(nom de personne) contient un nom propre ou une expression nominale se référant à une personne, pouvant inclure tout ou partie de ses prénoms, noms de famille, titres honorifiques, noms ajoutés, etc. [13.2.1. Personal Names]</a:documentation>
          <ref name="macro.phraseSeq"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="otinel-persName-persNameContent-constraint-rule-8">
+            <s:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                    xmlns:xi="http://www.w3.org/2001/XInclude"
+                    xmlns="http://www.tei-c.org/ns/1.0"
+                    xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                    context="//tei:body//tei:persName">
+                            <s:assert test="tei:forename or tei:addName">un élément persName
+                                du corps du document
+                            doit contenir un nom de personne, sous la forme d'un prénom (forename)
+                            et/ou d'une périphrase, épithète, etc. (addName).</s:assert>
+                            </s:rule>
+         </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
          <ref name="att.editLike.attributes"/>
@@ -5627,7 +5639,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-subst-substContents1-constraint-assert-11">
+                  id="otinel-subst-substContents1-constraint-assert-12">
             <rule context="tei:subst">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5638,6 +5650,30 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.transcriptional.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="supplied">
+      <element name="supplied">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(texte restitué) permet d'encoder du texte restitué par l'éditeur parce que le texte du document original ne peut être lu, par suite de dommages matériels ou de lacunes. [11.3.3.1. Damage, Illegibility, and Supplied Text]</a:documentation>
+         <text/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <attribute name="reason">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne la raison pour laquelle on a dû restituer le texte.
+Suggested values include: 1] overbinding(sous la reliure) ; 2] faded-ink(encre effacée) ; 3] damage(dégat matériel) </a:documentation>
+            <choice>
+               <value>overbinding</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(sous la reliure) le texte source est caché par la reliure</a:documentation>
+               <value>faded-ink</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(encre effacée) le texte source est illisible car l'encre est effacée</a:documentation>
+               <value>damage</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dégat matériel) le texte source est illisible en raison d'un dégat matériel</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -5749,6 +5785,22 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
                <ref name="additional"/>
             </optional>
          </group>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.linking.attribute.corresp"/>
+         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="att.global.analytic.attribute.ana"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifiant) fournit un identifiant unique pour l'élément qui porte l'attribut</a:documentation>
+            <data type="ID"/>
+         </attribute>
+         <empty/>
       </element>
    </define>
    <define name="catchwords">
@@ -5756,7 +5808,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(réclames) décrit le système utilisé pour s'assurer que les cahiers formant un manuscrit ou un incunable sont dans le bon ordre, typiquement au moyen d'annotations en bas de page. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-catchwords-catchword_in_msDesc-constraint-assert-12">
+                  id="otinel-catchwords-catchword_in_msDesc-constraint-assert-13">
             <rule context="tei:catchwords">
                <sch:assert xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5910,7 +5962,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="material">
       <element name="material">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(matériau) Contient un mot ou une expression décrivant le ou les matériau(x) utilisé(s) pour fabriquer un manuscrit (ou une partie d'un manuscrit). [10.3.2. Material and Object Type]</a:documentation>
-         <ref name="macro.phraseSeq"/>
+         <choice>
+            <text/>
+            <ref name="term"/>
+            <ref name="locusGrp"/>
+            <ref name="locus"/>
+         </choice>
          <ref name="att.global.attributes"/>
          <ref name="att.canonical.attributes"/>
          <empty/>
@@ -5937,7 +5994,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-origDate-origDate-when-or-from-to-or-notBefore-notAfteer-constraint-assert-13">
+                  id="otinel-origDate-origDate-when-or-from-to-or-notBefore-notAfteer-constraint-assert-14">
             <rule context="tei:origDate">
                <s:assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                          xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6034,7 +6091,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deuxième folio) Le mot ou les mots repris d'un point précisément connu d'un codex (comme le début du second feuillet) pour identifier celui-ci de façon univoque. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-secFol-secFol_in_msDesc-constraint-assert-14">
+                  id="otinel-secFol-secFol_in_msDesc-constraint-assert-15">
             <rule context="tei:secFol">
                <sch:assert xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6054,7 +6111,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(signatures) Contient une étude des signatures trouvées sur un feuillet ou sur un cahier dans un manuscrit. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="otinel-signatures-signatures_in_msDesc-constraint-assert-15">
+                  id="otinel-signatures-signatures_in_msDesc-constraint-assert-16">
             <rule context="tei:signatures">
                <sch:assert xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6221,7 +6278,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    </define>
    <define name="msContents">
       <element name="msContents">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content]</a:documentation>
          <optional>
             <ref name="summary"/>
          </optional>
@@ -6365,30 +6422,44 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             <ref name="condition"/>
          </optional>
          <ref name="att.global.attributes"/>
-         <optional>
-            <attribute name="material">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(matériau) contient un nom abrégé propre au projet désignant le matériau qui a principalement servi pour fabriquer le support.
+         <attribute name="material">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(matériau) contient un nom abrégé propre au projet désignant le matériau qui a principalement servi pour fabriquer le support.
 Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentation>
-               <choice>
-                  <value>paper</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>parch</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(parchemin) </a:documentation>
-                  <value>mixed</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <data type="token">
-                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                  </data>
-               </choice>
-            </attribute>
-         </optional>
+            <choice>
+               <value>paper</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>parch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(parchemin) </a:documentation>
+               <value>mixed</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
    <define name="support">
       <element name="support">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(support) contient la description des matériaux, techniques, etc., qui ont servi à fabriquer le support physique du texte du manuscrit. [10.7.1. Object Description]</a:documentation>
-         <ref name="macro.specialPara"/>
+         <oneOrMore>
+            <group>
+               <optional>
+                  <ref name="locus"/>
+               </optional>
+               <ref name="material"/>
+               <oneOrMore>
+                  <ref name="dimensions"/>
+               </oneOrMore>
+               <optional>
+                  <ref name="watermark"/>
+               </optional>
+               <optional>
+                  <ref name="note"/>
+               </optional>
+            </group>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -6404,7 +6475,12 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
    <define name="foliation">
       <element name="foliation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(foliotation) décrit le ou les systèmes de numérotation des feuillets ou pages d'un codex [10.7.1.4. Foliation]</a:documentation>
-         <ref name="macro.specialPara"/>
+         <choice>
+            <text/>
+            <ref name="term"/>
+            <ref name="locus"/>
+            <ref name="locusGrp"/>
+         </choice>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -6552,26 +6628,15 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
    </define>
    <define name="decoDesc">
       <element name="decoDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description de la décoration) contient la description de la décoration du manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments thématiques decoNote [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
-         <choice>
-      
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description de la décoration) contient la description de la décoration du manuscrit sous la forme d'une série d'éléments thématiques decoNote, éventuellement précédés d'un summary. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
+         <group>
+            <optional>
+               <ref name="summary"/>
+            </optional>
             <oneOrMore>
-               <ref name="model.pLike"/>
+               <ref name="decoNote"/>
             </oneOrMore>
-      
-            <group>
-        
-               <optional>
-                  <ref name="summary"/>
-               </optional>
-        
-        
-               <oneOrMore>
-                  <ref name="decoNote"/>
-               </oneOrMore>
-        
-            </group>
-         </choice>
+         </group>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>

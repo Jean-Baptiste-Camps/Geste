@@ -91,8 +91,10 @@
             </projectDesc>
         </encodingDesc>
         <revisionDesc>
-            <change who="#JBC" when="2017-07">Ajout de l'ébauche de la description des manuscrits.</change>
-            <change who="#JBC" when="2017-02">Révision complète de la gestion des attributs.</change>
+            <change who="#JBC" when="2017-07">Ajout de l'ébauche de la description des
+                manuscrits.</change>
+            <change who="#JBC" when="2017-02">Révision complète de la gestion des
+                attributs.</change>
             <change who="#JBC" when="2016-03">Révision majeure du modèle, dans le cadre du début du
                 projet LAKME</change>
             <change who="#JBC" from="2014-08" to="2016-02">Modifications ponctuelles pour adapter
@@ -152,19 +154,18 @@
                     <p>Les documents ont pour racine l'élément <gi>TEI</gi>, et se décomposent en un
                             <gi>teiHeader</gi>, comportant des métadonnées de niveau document, et
                             <gi>text</gi>, contenant l'édition proprement dite. <specList>
-                                <specDesc key="TEI" atts="type xml:id xml:lang"/>
+                            <specDesc key="TEI" atts="type xml:id xml:lang"/>
                             <specDesc key="teiHeader"/>
                             <specDesc key="text" atts="xml:lang"/>
                         </specList>
                     </p>
-                    <p>L'élément <gi>TEI</gi> doit porter obligatoirement un <att>type</att>, définissant si le document contient 
-                        une édition numérisée (<val>ed</val>),
-                        une transcription de témoin (<val>transcr</val>), 
-                        une restitution critique (<val>crit</val>), ou la description
-                        complète d'un ms. (<val>ms</val>),
-                        ainsi qu'un identifiant <att>xml:id</att>, qui doit
-                        être unique au niveau du corpus, et adopte une forme standardisée, composée
-                        de deux ou trois éléments séparés par des soulignements : <!-- 
+                    <p>L'élément <gi>TEI</gi> doit porter obligatoirement un <att>type</att>,
+                        définissant si le document contient une édition numérisée (<val>ed</val>),
+                        une transcription de témoin (<val>transcr</val>), une restitution critique
+                            (<val>crit</val>), ou la description complète d'un ms. (<val>ms</val>),
+                        ainsi qu'un identifiant <att>xml:id</att>, qui doit être unique au niveau du
+                        corpus, et adopte une forme standardisée, composée de deux ou trois éléments
+                        séparés par des soulignements : <!-- 
                             TODO: rendre compatible CTS, et ajouter la doc. à la spécification de l'élément TEI
                         -->
                         <list>
@@ -173,21 +174,24 @@
                                 critique, <q>ms</q> pour un manuscrit;
                                 <!-- Dire plutôt: pour une édition critique à nouveaux frais, faite selon les principes de ce modèle, et contenant les variantes de tous les manuscrits, ainsi que la reconstitution de tous les archétypes -->
                             </item>
-                            <item n="2">le nom du texte, sous une forme standard, pour les trois premiers types,
-                                ou la cote du manuscrit;
-                                 ;</item>
-                            <item n="3">si applicable, le sigle du témoin (ou celui attribué au texte critique).</item>
+                            <item n="2">le nom du texte, sous une forme standard, pour les trois
+                                premiers types, ou la cote du manuscrit;  ;</item>
+                            <item n="3">si applicable, le sigle du témoin (ou celui attribué au
+                                texte critique).</item>
                             <!-- TODO: revoir cela pour indiquer que l'on utilise les noms du DEAF -->
-                        </list>
-                        Les références des textes seront prises dans une liste bibliographique permettant leur standardisation.
-                        Pour la base <title>Geste</title>, les sigles utilisés sont ceux de <bibl><author>Frankwalt Möhren</author> et <author>Elena Miller</author>, 
-                            <title>Dictionnaire Étymologique de l’Ancien Français: Bibliographie, complément bibliographique. Elektronische Fassung (DEAFBiblÉl)</title>, 
-                            <pubPlace>Heidelberg</pubPlace>, <date>2010-…</date>, 
-                            <ptr target="http://www.deaf-page.de/bibl_neu.php"/></bibl>.
-                        Pour les éditions numérisées, les sigles sont ainsi empruntés à cette bibliographie quand ils existent, et,
-                        pour les transcriptions et éditions critiques à nouveaux frais, le nom standard, sans l'extension d'édition, 
-                        est repris.
-                        <eg>Numérisation de l'édition</eg>
+                        </list> Les références des textes seront prises dans une liste
+                        bibliographique permettant leur standardisation. Pour la base
+                            <title>Geste</title>, les sigles utilisés sont ceux de
+                                <bibl><author>Frankwalt Möhren</author> et <author>Elena
+                                Miller</author>, <title>Dictionnaire Étymologique de l’Ancien
+                                Français: Bibliographie, complément bibliographique. Elektronische
+                                Fassung (DEAFBiblÉl)</title>, <pubPlace>Heidelberg</pubPlace>,
+                                <date>2010-…</date>, <ptr
+                                target="http://www.deaf-page.de/bibl_neu.php"/></bibl>. Pour les
+                        éditions numérisées, les sigles sont ainsi empruntés à cette bibliographie
+                        quand ils existent, et, pour les transcriptions et éditions critiques à
+                        nouveaux frais, le nom standard, sans l'extension d'édition, est repris.
+                            <eg>Numérisation de l'édition</eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <TEI xml:id="ed_GuiBourgG" type="ed">
                                 <!--  -->
@@ -277,66 +281,66 @@
                         </egXML> Mais, une fois le document achevé et dans un état définitif, elles
                         deviennent libres: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <availability status="free">
-                                <licence
-                                    target="http://creativecommons.org/publicdomain/mark/1.0/"
-                                    > Les textes d'auteurs médiévaux sont dans le domaine
+                                <licence target="http://creativecommons.org/publicdomain/mark/1.0/">
+                                    Les textes d'auteurs médiévaux sont dans le domaine
                                     public.</licence>
-                                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"
-                                    > Le travail d'encodage et d'annotation sont mis à disposition
-                                    selon les termes de la licence 
-                                    Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).
+                                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le
+                                    travail d'encodage et d'annotation sont mis à disposition selon
+                                    les termes de la licence Creative Commons Attribution - Partage
+                                    dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).
                                 </licence>
                             </availability>
                         </egXML>
                     </p>
                     <p>Enfin, la description de la source intervient, dans un élément
                             <gi>sourceDesc</gi>. Celle-ci peut être soit une référence
-                        <gi>biblStruct</gi>, dans le cas de la numérisation d'un document imprimé, soit
-                        une référence <gi>biblFull</gi>, dans le cas d'une édition fondée sur un
-                        document TEI préexistant, soit une notice de manuscrit <gi>msDesc</gi>, pour
-                        la transcription d'un manuscrit. <specList>
+                            <gi>biblStruct</gi>, dans le cas de la numérisation d'un document
+                        imprimé, soit une référence <gi>biblFull</gi>, dans le cas d'une édition
+                        fondée sur un document TEI préexistant, soit une notice de manuscrit
+                            <gi>msDesc</gi>, pour la transcription d'un manuscrit. <specList>
                             <specDesc key="biblStruct"/>
                             <specDesc key="biblFull"/>
                             <specDesc key="msDesc"/>
-                        </specList> </p>
-                    <p>Pour une édition fondée sur la numérisation d'une édition imprimée, ayant connu deux impressions, 
-                    la section pourra prendre la forme suivante :
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                      <sourceDesc>
-                          <biblStruct>
-                            <monogr>
-                                <editor xml:id="Guessard">
-                                    <persName>
-                                        <forename>François</forename>
-                                        <surname>Guessard</surname>
-                                    </persName>
-                                </editor>
-                                <editor xml:id="Michelant">
-                                    <persName>
-                                        <forename>Henri</forename>
-                                        <surname>Michelant</surname>
-                                    </persName>
-                                </editor>
-                                <title type="main">Gui de Bourgogne</title> 
-                                <title type="sub">Chanson de geste</title>
-                                <imprint>
-                                    <publisher>P. Jannet</publisher>
-                                    <pubPlace>Paris</pubPlace>
-                                    <date>1858</date>
-                                </imprint>
-                                <imprint>
-                                    <publisher>F. Vieweg</publisher>
-                                    <pubPlace>Paris</pubPlace>
-                                    <date>1859</date>
-                                </imprint>
-                            </monogr>
-                        </biblStruct>
-                      </sourceDesc>
-                    </egXML>
+                        </specList>
                     </p>
-                    <p>Dans le cas d'une notice de manuscrit, les informations auront
-                        vocation à être détaillées. Elles seront exposées dans une autre section de
-                        ce modèle (<ptr target="#DIV_MSDESC"/>). </p>
+                    <p>Pour une édition fondée sur la numérisation d'une édition imprimée, ayant
+                        connu deux impressions, la section pourra prendre la forme suivante : <egXML
+                            xmlns="http://www.tei-c.org/ns/Examples">
+                            <sourceDesc>
+                                <biblStruct>
+                                    <monogr>
+                                        <editor xml:id="Guessard">
+                                            <persName>
+                                                <forename>François</forename>
+                                                <surname>Guessard</surname>
+                                            </persName>
+                                        </editor>
+                                        <editor xml:id="Michelant">
+                                            <persName>
+                                                <forename>Henri</forename>
+                                                <surname>Michelant</surname>
+                                            </persName>
+                                        </editor>
+                                        <title type="main">Gui de Bourgogne</title>
+                                        <title type="sub">Chanson de geste</title>
+                                        <imprint>
+                                            <publisher>P. Jannet</publisher>
+                                            <pubPlace>Paris</pubPlace>
+                                            <date>1858</date>
+                                        </imprint>
+                                        <imprint>
+                                            <publisher>F. Vieweg</publisher>
+                                            <pubPlace>Paris</pubPlace>
+                                            <date>1859</date>
+                                        </imprint>
+                                    </monogr>
+                                </biblStruct>
+                            </sourceDesc>
+                        </egXML>
+                    </p>
+                    <p>Dans le cas d'une notice de manuscrit, les informations auront vocation à
+                        être détaillées. Elles seront exposées dans une autre section de ce modèle
+                            (<ptr target="#DIV_MSDESC"/>). </p>
                     <p>Exemple complet: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <fileDesc>
                                 <titleStmt>
@@ -492,8 +496,7 @@
                     <head>Parties liminaires et finales</head>
                     <p>Principalement dans les numérisations d'éditions anciennes, il est possible
                         de subdiviser le contenu du <gi>front</gi> et du <gi>back</gi>, en faisant
-                        emploi de subdivisions: 
-                        <specList>
+                        emploi de subdivisions: <specList>
                             <specDesc key="div" atts="type"/>
                         </specList>
                     </p>
@@ -509,8 +512,7 @@
                 <div>
                     <head>Le texte des chansons</head>
                     <p>Le texte des chansons est placé dans un élément <gi>body</gi>, au sein du
-                            <gi>text</gi>, dont il est le seul composant obligatoire. 
-                        <specList>
+                            <gi>text</gi>, dont il est le seul composant obligatoire. <specList>
                             <specDesc key="body"/>
                         </specList>
                     </p>
@@ -558,8 +560,7 @@
                 <div>
                     <head>Contenu des vers</head>
                     <p>Le contenu des vers se compose régulièrement de mots lexicaux (i.e. pouvant
-                        être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi>:
-                        <specList>
+                        être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi>: <specList>
                             <specDesc key="w" atts="xml:id rend lemma lemmaRef ana"/>
                         </specList>
                     </p>
@@ -637,7 +638,8 @@
                             <specDesc key="orgName"/>
                             <specDesc key="placeName"/>
                             <specDesc key="name"/>
-                            <!--<specDesc key="rs"/>--><!-- TODO: je retire rs, qui est redondant avec name -->
+                            <!--<specDesc key="rs"/>-->
+                            <!-- TODO: je retire rs, qui est redondant avec name -->
                             <specDesc key="num"/>
                             <specDesc key="q"/>
                             <specDesc key="note"/>
@@ -672,10 +674,8 @@
                         (c'est-à-dire à l'endroit qui correspond à l'emplacement de l'appel de note
                         d'une édition imprimée). Ainsi, pour le cas d'une numérisation d'édition, <eg>
                             <lb/>langue et par certains détails de mœurs et de <lb/>costume (1). Ce
-                            qui est assuré, c'est que l'un des <lb/>-- 
-                            <lb/>1. V. par exemple, à la page 35, le portrait
-                            du duc Naimes.
-                        </eg> sera rendu par <egXML
+                            qui est assuré, c'est que l'un des <lb/>-- <lb/>1. V. par exemple, à la
+                            page 35, le portrait du duc Naimes. </eg> sera rendu par <egXML
                             xmlns="http://www.tei-c.org/ns/Examples">
                             <lb/>langue et par certains détails de mœurs et de
                                 <lb/>costume<note><lb/>1. V. par exemple, à la page 35, le portrait
@@ -710,11 +710,10 @@
                                         <w>semble</w>
                                         <w>bien</w>
                                         <w>vassal</w></lem>
-                                    <rdg wit="#a">et bien
-                                        fait contreval.</rdg>
-                                    <note resp="#Guessard">Encore un vers
-                                        de dix syllabes dans le manuscrit a : <lb/><q>Le cors ot
-                                            gent et bien fait contreval.</q>
+                                    <rdg wit="#a">et bien fait contreval.</rdg>
+                                    <note resp="#Guessard">Encore un vers de dix syllabes dans le
+                                        manuscrit a : <lb/><q>Le cors ot gent et bien fait
+                                            contreval.</q>
                                         <lb/>b nous fournit la correction.</note></app><pc
                                     type="supplied">,</pc></l>
                         </egXML>
@@ -733,98 +732,140 @@
                             </listWit>
                         </egXML>
                     </p>
-                    <p>Dans le cas particulier où le lemme est une reconstruction <foreign xml:lang="la">ex ingenio</foreign>
-                    ou une conjecture de l'éditeur, et n'apparaît dans aucun manuscrit, on pourra pointer vers la mention de responsabilité de 
-                    l'éditeur
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <app>
-                            <lem wit="#Guessard"><w>XXVII</w></lem>
-                            <rdg wit="#b"><w>vint</w> <w>e</w> <w>sis</w></rdg>
-                            <rdg wit="#a"><w>XXXVII</w></rdg>
-                        </app>
-                    </egXML>
-                        En revanche, lorsque le lemme correspond à la correction de la leçon d'un manuscrit, on pourra utiliser à l'intérieur
-                        de l'élément <gi>lem</gi> les éléments <gi>choice</gi>, <gi>sic</gi> et <gi>corr</gi>, présentés dans la section suivante.
-                    </p>
+                    <p>Dans le cas particulier où le lemme est une reconstruction <foreign
+                            xml:lang="la">ex ingenio</foreign> ou une conjecture de l'éditeur, et
+                        n'apparaît dans aucun manuscrit, on pourra pointer vers la mention de
+                        responsabilité de l'éditeur <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <app>
+                                <lem wit="#Guessard"><w>XXVII</w></lem>
+                                <rdg wit="#b"><w>vint</w>
+                                    <w>e</w>
+                                    <w>sis</w></rdg>
+                                <rdg wit="#a"><w>XXXVII</w></rdg>
+                            </app>
+                        </egXML> En revanche, lorsque le lemme correspond à la correction de la
+                        leçon d'un manuscrit, on pourra utiliser à l'intérieur de l'élément
+                            <gi>lem</gi> les éléments <gi>choice</gi>, <gi>sic</gi> et
+                        <gi>corr</gi>, présentés dans la section suivante. </p>
                     <!--<p>La méthode d'encodage des variantes doit être </p>-->
                     <!-- TODO: ajouter variant-encoding 'parallel segmentation' -->
                 </div>
                 <div>
                     <head>Interventions éditoriales simples</head>
-                    <p>Les corrections éditoriales des édition numérisées peuvent être représentées par l'élément <gi>corr</gi>, éventuellement accompagné 
-                        de l'enregistrement de la leçon originale par l'élément <gi>sic</gi>; dans ce cas, les deux sont enregistrés en parallèle
-                        à l'intérieur de l'élément <gi>choice</gi> Pour les corrections éditoriales des éditions allographétiques, voir infra (<!--<ptr target=""/>-->).
-                        <specList>
+                    <p>Les corrections éditoriales des édition numérisées peuvent être représentées
+                        par l'élément <gi>corr</gi>, éventuellement accompagné de l'enregistrement
+                        de la leçon originale par l'élément <gi>sic</gi>; dans ce cas, les deux sont
+                        enregistrés en parallèle à l'intérieur de l'élément <gi>choice</gi> Pour les
+                        corrections éditoriales des éditions allographétiques, voir infra
+                        (<!--<ptr target=""/>-->). <specList>
                             <specDesc key="corr" atts="type"/>
                             <specDesc key="sic"/>
                             <specDesc key="choice"/>
-                        </specList>
-                        On distinguera, le cas échéant, les corrections qui correspondent à des <foreign xml:lang="lat">errata</foreign>, et pas à des interventions
-                        éditoriales proprement dites, par l'utilisation de l'attribut <att>type</att>, avec la valeur <val>erratum</val>.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        </specList> On distinguera, le cas échéant, les corrections qui
+                        correspondent à des <foreign xml:lang="lat">errata</foreign>, et pas à des
+                        interventions éditoriales proprement dites, par l'utilisation de l'attribut
+                            <att>type</att>, avec la valeur <val>erratum</val>. <egXML
+                            xmlns="http://www.tei-c.org/ns/Examples">
                             <w>
                                 <choice>
                                     <sic>vene</sic>
-                                    <corr type="erratum" resp="#Guessard #Michelant" cert="high">venez</corr>
-                            </choice>
+                                    <corr type="erratum" resp="#Guessard #Michelant" cert="high"
+                                        >venez</corr>
+                                </choice>
                             </w>
                         </egXML>
                     </p>
-                    <p>
-                        On prendra bien soin, en outre, de préciser les mentions de responsabilité et, le cas échéant, de degré de certitude (sur lesquelles, voir infra <ptr target="#DIV_CERTRESP"/>).
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <p> On prendra bien soin, en outre, de préciser les mentions de responsabilité
+                        et, le cas échéant, de degré de certitude (sur lesquelles, voir infra <ptr
+                            target="#DIV_CERTRESP"/>). <egXML
+                            xmlns="http://www.tei-c.org/ns/Examples">
                             <w>
                                 <choice>
                                     <corr resp="#Guessard #Michelant" cert="unknown">XXVII</corr>
                                     <sic>XXXVII</sic>
                                 </choice>
-                            </w> 
+                            </w>
                         </egXML>
                     </p>
-                    <p>Enfin, quand un éditeur corrige la variante du manuscrit sur lequel il s'appuie, on pourra utiliser ces éléments en combinaison 
-                    avec <gi>app</gi>, <gi>lem</gi> et <gi>rdg</gi>
+                    <p>Enfin, quand un éditeur corrige la variante du manuscrit sur lequel il
+                        s'appuie, on pourra utiliser ces éléments en combinaison avec <gi>app</gi>,
+                            <gi>lem</gi> et <gi>rdg</gi>
                         <!-- TODO: mettre un vrai exemple -->
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <app>
                                 <lem wit="#a">
                                     <choice>
-                                        <sic><w>tenir</w> <w>et</w> <w>batisier</w></sic>
-                                        <corr resp="#Untel" cert="unknown"><w>batisier</w> <w>et</w> <w>tenir</w></corr>
+                                        <sic><w>tenir</w>
+                                            <w>et</w>
+                                            <w>batisier</w></sic>
+                                        <corr resp="#Untel" cert="unknown"><w>batisier</w>
+                                            <w>et</w>
+                                            <w>tenir</w></corr>
                                     </choice>
                                 </lem>
                                 <rdg wit="#b"/>
-                                <note resp="#Untel" cert="unknown">Nous corrigeons la leçon de a, en raison de la rime. Le passage manque dans le ms. b.</note>
+                                <note resp="#Untel" cert="unknown">Nous corrigeons la leçon de a, en
+                                    raison de la rime. Le passage manque dans le ms. b.</note>
                             </app>
                         </egXML>
                     </p>
                 </div>
-                <div><head>Discours direct et citations</head>
-                    <p>Les passages au discours direct sont encodés avec <gi>q</gi>:
+                <div>
+                    <head>Texte restitué suite à un dégât matériel</head>
+                    <p>Le texte restitué par l'éditeur, suite à un dégât matériel, l'est en utilisant l'élément <gi>supplied</gi>,
+                        dans l'usage duquel on sera fort économe, et dont
+                        on se gardera d'user pour des corrections,
+                        la restitution de leçon ou l'établissement d'un texte critique:
                         <specList>
+                            <specDesc key="supplied" atts="reason"/>
+                        </specList>
+                        L'attribut <att>reason</att> est obligatoire, car il est
+                        nécessaire de justifier la nécessité de suppléer du texte.
+                        La liste de valeurs proposées sera utilisée en priorité, mais
+                        il est possible, en cas de besoin, d'en ajouter.<!-- À déveloper -->
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <placeName><w cert="high">Affrı<supplied reason="damage">ke</supplied></w></placeName>
+                        </egXML>
+                    </p>
+                    <p>On notera que l'emploi de l'élément <gi>supplied</gi>
+                    avec l'attribut <att>reason</att> de valeur <val>damage</val>
+                        se substitue au signalement normal d'un dégât avec l'élément
+                        <gi>damage</gi> dès lors que la portion restituée couvre
+                        l'intégralité de la zone endommagée.
+                    </p>
+                    <!-- TODO: implémenter les vérifications de contenu pour cela
+                    et faire aussi une politique pour les gap, damage, unclear, etc.
+                    Cf. les Guidelines, 
+                    11.3.3.2 Use of the <gap>, <del>, <damage>, <unclear>, and <supplied> Elements in Combination
+                    http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB
+                    -->
+                </div>
+                <div>
+                    <head>Discours direct et citations</head>
+                    <p>Les passages au discours direct sont encodés avec <gi>q</gi>: <specList>
                             <specDesc key="q" atts="who"/>
                         </specList>
                     </p>
-                    <p>Pour indiquer le locuteur, il est recommandé d'utiliser les attributs de la classe
-                    <code>att.ascribed</code>:
-                        <specList>
+                    <p>Pour indiquer le locuteur, il est recommandé d'utiliser les attributs de la
+                        classe <code>att.ascribed</code>: <specList>
                             <specDesc key="att.ascribed"/>
                         </specList>
                     </p>
-                    <p>⚠ Dans une version ultérieure du modèle, il est possible que <gi>q</gi>
-                    soit abandonné au profit de l'élément plus spécialisé <gi>said</gi>.
-                    </p>
-                    <p>Pour les passages qui, dans l'introduction ou les notes, se distinguent du contexte
-                    environnant, on utilisera <gi>mentioned</gi>:
-                        <specList>
+                    <p>⚠ Dans une version ultérieure du modèle, il est possible que <gi>q</gi> soit
+                        abandonné au profit de l'élément plus spécialisé <gi>said</gi>. </p>
+                    <p>Pour les passages qui, dans l'introduction ou les notes, se distinguent du
+                        contexte environnant, on utilisera <gi>mentioned</gi>: <specList>
                             <specDesc key="mentioned"/>
                         </specList>
                     </p>
                 </div>
-                <div><head>Nombres</head>
-                    <p>Les nombres peuvent être distingués par l'utilisation de l'élément <gi>num</gi>
-                    <specList>
-                        <specDesc key="num"/>
-                    </specList>
+                <div>
+                    <head>Nombres</head>
+                    <p>Les nombres peuvent être distingués par l'utilisation de l'élément
+                            <gi>num</gi>
+                        <specList>
+                            <specDesc key="num"/>
+                        </specList>
                     </p>
                 </div>
             </div>
@@ -847,11 +888,12 @@
                 <!-- Forcer l'utilisation d'éléments msItemStruct, et plus généralement d'éléments structurés -->
                 <!--<p>Dans le module de la TEI concernant la description des manuscrits ont été retirés les éléments correspondant à des informations
                 d'ordre purement bibliothéconomiques (...)</p>-->
-                <div><head>L'élément de description des manuscrits</head>
-                    <p>Les notices de manuscrits prennent place dans un élément <gi>msDesc</gi>, 
-                    qui se situe soit dans l'élément <gi>sourceDesc</gi> du <gi>teiHeader</gi>, soit à l'intérieur
-                        d'un témoin (<gi>witness</gi>) d'une liste de témoins (<gi>listWit</gi>) d'une édition critique.
-                    </p>
+                <div>
+                    <head>L'élément de description des manuscrits</head>
+                    <p>Les notices de manuscrits prennent place dans un élément <gi>msDesc</gi>, qui
+                        se situe soit dans l'élément <gi>sourceDesc</gi> du <gi>teiHeader</gi>, soit
+                        à l'intérieur d'un témoin (<gi>witness</gi>) d'une liste de témoins
+                            (<gi>listWit</gi>) d'une édition critique. </p>
                     <!-- TODO: voir si on veut vraiment avoir cette politique très stricte, qui empêche
                     d'utiliser msDesc pour baliser les mentions de manuscrit dans le corps du document
                     (ou contraint à utiliser bibl+msIdentifier) => en même temps, se défend: les références 
@@ -859,100 +901,100 @@
                     d'une manière ou d'une autre dans les bibl.
                     -->
                     <p>Les notices de manuscrits (<gi>msDesc</gi>) portent un attribut
-                        <att>xml:id</att> obligatoire, donnant le sigle du ms.<!-- Identifiant à modifier
+                            <att>xml:id</att> obligatoire, donnant le sigle du
+                        ms.<!-- Identifiant à modifier
                         pour le faire correspondre aux nouvelles règles générales que nous avons instaurées
                         -->
-                        </p>
-                    <p>Les manuscrits sont toujours décrits en fonction des entités codicologiques médiévales,
-                        connues ou supposées, et non en fonction des volumes contemporains. 
-                        Ainsi, dans le cas d'un recueil factice, chaque entité est décrite séparément dans une notice.
-                        Dans le cas d'un manuscrit démembré, le manuscrit originel est décrit par une notice unique,
-                        qui fera usage de l'élément <gi>msFrag</gi> pour identifier et décrire séparément si besoin
-                        les différents fragments conservés.</p>
-                    <p> Les notices se composent ainsi 
-                    d'une cote (<gi>msIdentifier</gi>, obligatoire), d'un titre (<gi>head</gi>),
-                    d'une description du contenu (<gi>msContents</gi>) et, si besoin, d'une série d'éléments
-                        <gi>msFrag</gi>, suivis d'une 
-                    d'une description physique
-                        (<gi>physDesc</gi>) facultative, d'une section sur l'histoire
-                        (<gi>history</gi>) obligatoire, et d'éventuelles informations additionnelles
-                        (<gi>additional</gi>) pouvant inclure un lien vers le facsimile.<specList>
-                        <specDesc key="msDesc" atts="xml:id"/>
-                        <specDesc key="msIdentifier"/>
-                        <specDesc key="head"/>
-                        <specDesc key="msContents"/>
-                        <specDesc key="msFrag"/>
-                        <specDesc key="physDesc"/>
-                        <specDesc key="history"/>
-                        <specDesc key="additional"/>
-                    </specList>
-                </p>
-                    <p> Exemple de notice minimale: 
-                        <!-- À revoir intégralement -->
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <msDesc xml:id="M">
-                            <msIdentifier>
-                                <country>France</country>
-                                <settlement>Paris</settlement>
-                                <institution>Bibliothèque Nationale de France</institution>
-                                <repository>Département des manuscrits</repository>
-                                <collection>Nouvelles acquisitions françaises</collection>
-                                <idno>5094-II</idno>
-                                <altIdentifier type="olim">
-                                    <country>France</country>
-                                    <settlement>Mende</settlement>
-                                    <institution>Archives départementales</institution>
-                                    <collection>G</collection>
-                                    <idno>236</idno>
-                                </altIdentifier>
-                                <msName type="sigle">M</msName>
-                            </msIdentifier>
-                            <head>
-                                <title>Chanson d'Otinel</title>
-                                <title>Chanson d'Aspremont</title>
-                            </head>
-                            <!-- /Description du contenu et description physique, éventuels fragments, à insérer ici/ -->
-                            <history>
-                                <origin>
-                                    <origPlace>Angleterre</origPlace>
-                                    <origDate notBefore="1180" notAfter="1220">fin du XIIe ou début
-                                        du XIIIe siècle</origDate>
-                                    <!-- Suite du paragraphe sur l'origine -->
-                                </origin>
-                                <provenance>
-                                    <!-- 1re provenance -->
-                                </provenance>
-                                <provenance>
-                                    <!-- 2e provenance -->
-                                </provenance>
-                                <acquisition>
-                                    <!-- Entrée dans les collections actuelles -->
-                                </acquisition>
-                            </history>
-                        </msDesc>
-                    </egXML>
                     </p>
-                    </div>
+                    <p>Les manuscrits sont toujours décrits en fonction des entités codicologiques
+                        médiévales, connues ou supposées, et non en fonction des volumes
+                        contemporains. Ainsi, dans le cas d'un recueil factice, chaque entité est
+                        décrite séparément dans une notice. Dans le cas d'un manuscrit démembré, le
+                        manuscrit originel est décrit par une notice unique, qui fera usage de
+                        l'élément <gi>msFrag</gi> pour identifier et décrire séparément si besoin
+                        les différents fragments conservés.</p>
+                    <p> Les notices se composent ainsi d'une cote (<gi>msIdentifier</gi>,
+                        obligatoire), d'un titre (<gi>head</gi>), d'une description du contenu
+                            (<gi>msContents</gi>) et, si besoin, d'une série d'éléments
+                            <gi>msFrag</gi>, suivis d'une d'une description physique
+                            (<gi>physDesc</gi>) facultative, d'une section sur l'histoire
+                            (<gi>history</gi>) obligatoire, et d'éventuelles informations
+                        additionnelles (<gi>additional</gi>) pouvant inclure un lien vers le facsimile.<specList>
+                            <specDesc key="msDesc" atts="xml:id"/>
+                            <specDesc key="msIdentifier"/>
+                            <specDesc key="head"/>
+                            <specDesc key="msContents"/>
+                            <specDesc key="msFrag"/>
+                            <specDesc key="physDesc"/>
+                            <specDesc key="history"/>
+                            <specDesc key="additional"/>
+                        </specList>
+                    </p>
+                    <p> Exemple de notice minimale: <!-- À revoir intégralement -->
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <msDesc xml:id="M">
+                                <msIdentifier>
+                                    <country>France</country>
+                                    <settlement>Paris</settlement>
+                                    <institution>Bibliothèque Nationale de France</institution>
+                                    <repository>Département des manuscrits</repository>
+                                    <collection>Nouvelles acquisitions françaises</collection>
+                                    <idno>5094-II</idno>
+                                    <altIdentifier type="olim">
+                                        <country>France</country>
+                                        <settlement>Mende</settlement>
+                                        <institution>Archives départementales</institution>
+                                        <collection>G</collection>
+                                        <idno>236</idno>
+                                    </altIdentifier>
+                                    <msName type="sigle">M</msName>
+                                </msIdentifier>
+                                <head>
+                                    <title>Chanson d'Otinel</title>
+                                    <title>Chanson d'Aspremont</title>
+                                </head>
+                                <!-- /Description du contenu et description physique, éventuels fragments, à insérer ici/ -->
+                                <history>
+                                    <origin>
+                                        <origPlace>Angleterre</origPlace>
+                                        <origDate notBefore="1180" notAfter="1220">fin du XIIe ou
+                                            début du XIIIe siècle</origDate>
+                                        <!-- Suite du paragraphe sur l'origine -->
+                                    </origin>
+                                    <provenance>
+                                        <!-- 1re provenance -->
+                                    </provenance>
+                                    <provenance>
+                                        <!-- 2e provenance -->
+                                    </provenance>
+                                    <acquisition>
+                                        <!-- Entrée dans les collections actuelles -->
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </egXML>
+                    </p>
+                </div>
                 <div>
                     <head>Notice d'un manuscrit fragmentaire ou démembré</head>
-                    <p>Dans le cas des manuscrits fragmentaires, l'élément <gi>msFrag</gi> sera utilisé 
-                    pour consigner les informations propres à chaque fragment, dont, au moins, la cote ou le nom d'usage,
-                    ainsi que toutes les informations qui ne pourront trouver leur place dans la notice d'ensemble du manuscrit
-                    fragmentaire.
-                    <specList>
-                        <specDesc key="msFrag"/>
-                    </specList>
+                    <p>Dans le cas des manuscrits fragmentaires, l'élément <gi>msFrag</gi> sera
+                        utilisé pour consigner les informations propres à chaque fragment, dont, au
+                        moins, la cote ou le nom d'usage, ainsi que toutes les informations qui ne
+                        pourront trouver leur place dans la notice d'ensemble du manuscrit
+                        fragmentaire. <specList>
+                            <specDesc key="msFrag"/>
+                        </specList>
                     </p>
                     <!-- TODO: implémenter ça dans le modèle -->
                     <!-- TODO: exemples -->
                 </div>
                 <div>
                     <head>L'identifiant du manuscrit</head>
-                    <p>L'identifiant du manuscrit (<gi>msIdentifier</gi>) donne la cote, lorsqu'elle existe,
-                        ou, à défaut (mss perdus, en mains privées, hypothétiques ou reconstruits), le nom du manuscrit.
-                        Il peut également enregistrer des noms d'usage ou des cotes anciennes.</p>
-                    <p>Les cotes sont structurées avec, dans cet ordre, les éléments:
-                        <!-- TODO: voir les préconisations de ENRICH, et éclaircir la distinction institution / repository, qui m'a l'air
+                    <p>L'identifiant du manuscrit (<gi>msIdentifier</gi>) donne la cote, lorsqu'elle
+                        existe, ou, à défaut (mss perdus, en mains privées, hypothétiques ou
+                        reconstruits), le nom du manuscrit. Il peut également enregistrer des noms
+                        d'usage ou des cotes anciennes.</p>
+                    <p>Les cotes sont structurées avec, dans cet ordre, les éléments: <!-- TODO: voir les préconisations de ENRICH, et éclaircir la distinction institution / repository, qui m'a l'air
                             un peu anglo-saxonne. Pragmatiquement, personne n'a l'air de faire la distinction (ni E-Codices, ni d'autres),
                             et on s'en fout un peu.
                         -->
@@ -965,81 +1007,80 @@
                             <specDesc key="idno"/>
                         </specList>
                     </p>
-                    <p>Le nom d'un manuscrit sans cote (obligatoire et en première position), 
-                        ou les divers noms d'usage, sont enregistrés par:
-                        <specList>
+                    <p>Le nom d'un manuscrit sans cote (obligatoire et en première position), ou les
+                        divers noms d'usage, sont enregistrés par: <specList>
                             <specDesc key="msName"/>
                         </specList>
                     </p>
-                    <p>Des cotes alternatives (cotes anciennes) peuvent être données grâce à l'élément
-                        <gi>altIdentifier</gi>, qui suit la même structuration que les cotes modernes:
-                    <specList>
-                        <specDesc key="altIdentifier"/>
-                    </specList>
+                    <p>Des cotes alternatives (cotes anciennes) peuvent être données grâce à
+                        l'élément <gi>altIdentifier</gi>, qui suit la même structuration que les
+                        cotes modernes: <specList>
+                            <specDesc key="altIdentifier"/>
+                        </specList>
                     </p>
-                    </div>
+                </div>
                 <div>
                     <head>Le titre</head>
-                    <p>L'élément <gi>head</gi> contient le titre du manuscrit. Celui-ci se compose, pour chacun des textes présents et dans l'ordre,
-                        d'un éventuel élément <gi>persName</gi> indiquant le nom de l'auteur, d'un élément <gi>title</gi> donnant le titre développé de l'œuvre,
-                        et d'un élément <gi>idno</gi> donnant le sigle du témoin.
-                        <specList>
+                    <p>L'élément <gi>head</gi> contient le titre du manuscrit. Celui-ci se compose,
+                        pour chacun des textes présents et dans l'ordre, d'un éventuel élément
+                            <gi>persName</gi> indiquant le nom de l'auteur, d'un élément
+                            <gi>title</gi> donnant le titre développé de l'œuvre, et d'un élément
+                            <gi>idno</gi> donnant le sigle du témoin. <specList>
                             <specDesc key="head"/>
                             <specDesc key="persName"/>
                             <specDesc key="title"/>
                             <specDesc key="idno"/>
                         </specList>
                     </p>
-                    <p><!-- TODO: implémenter cette contrainte en schematron-->
-                        Manuscrit contenant une seule œuvre:
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <head>
-                            <title>Chanson de Roland</title>
-                            <idno>O</idno>
-                        </head>
-                    </egXML></p>
+                    <p><!-- TODO: implémenter cette contrainte en schematron--> Manuscrit contenant
+                        une seule œuvre: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <head>
+                                <title>Chanson de Roland</title>
+                                <idno>O</idno>
+                            </head>
+                        </egXML></p>
                     <!-- TODO: cas d'un manuscrit à plusieurs œuvres -->
-                </div><div>
+                </div>
+                <div>
                     <head>Le contenu du manuscrit</head>
-                    <p>Le contenu du manuscrit (<gi>msContents</gi>) se constitue d'un ou plusieurs items de contenu (<gi>msItem</gi>),
-                        éventuellement précédés d'une présentation d'ensemble (<gi>summary</gi>) lorsque la situation le justifie.
-                    <specList>
-                        <specDesc key="msContents"/>
-                        <specDesc key="summary"/>
-                        <specDesc key="msItem"/>
-                    </specList>
+                    <p>Le contenu du manuscrit (<gi>msContents</gi>) se constitue d'un ou plusieurs
+                        items de contenu (<gi>msItem</gi>), éventuellement précédés d'une
+                        présentation d'ensemble (<gi>summary</gi>) lorsque la situation le justifie. <specList>
+                            <specDesc key="msContents"/>
+                            <specDesc key="summary"/>
+                            <specDesc key="msItem"/>
+                        </specList>
                     </p>
-                    <p>Les items donnent, tout d'abord, l'emplacement de l'œuvre dans le manuscrit, soit
-                    via l'élément <gi>locus</gi>, si celle-ci se trouve sur des folios contigus, soit via 
-                        un <gi>locusGrp</gi> regroupant plusieurs <gi>locus</gi>, lorsque l'œuvre occupe
-                        plusieurs séries discontinues de folios dans le manuscrit.
-                        Le contenu de l'élément <gi>locus</gi> donne l'emplacement en texte libre,
-                        tandis que les attribus <att>scheme</att>, <att>from</att> et <att>to</att>,
-                        obligatoires, donnent, sous une forme normalisée, respectivement la foliotation
-                        utilisée (via un pointeur vers un élément <gi>foliation</gi>), et les bornes de début et de 
-                        fin.
-                        <specList>
+                    <p>Les items donnent, tout d'abord, l'emplacement de l'œuvre dans le manuscrit,
+                        soit via l'élément <gi>locus</gi>, si celle-ci se trouve sur des folios
+                        contigus, soit via un <gi>locusGrp</gi> regroupant plusieurs <gi>locus</gi>,
+                        lorsque l'œuvre occupe plusieurs séries discontinues de folios dans le
+                        manuscrit. Le contenu de l'élément <gi>locus</gi> donne l'emplacement en
+                        texte libre, tandis que les attribus <att>scheme</att>, <att>from</att> et
+                            <att>to</att>, obligatoires, donnent, sous une forme normalisée,
+                        respectivement la foliotation utilisée (via un pointeur vers un élément
+                            <gi>foliation</gi>), et les bornes de début et de fin. <specList>
                             <specDesc key="locus" atts="scheme from to"/>
                             <specDesc key="locusGrp"/>
                         </specList>
                         <!-- TODO: ajouter des exemples -->
                     </p>
-                    <p>
-                        Ils se composent ensuite d'un élément <gi>author</gi> (optionnel), donnant l'auteur
-                        de l'œuvre quand il est connu, d'un <gi>respStmt</gi> (optionnel), donnant les mentions de responsabilité
-                        et noms des autres intervenants sur le témoin, quand ils sont connus (copistes, enlumineurs...),
-                        du titre (<gi>title</gi>), sigle (<gi>idno</gi>) obligatoires et éventuellement complétés 
-                        d'une <gi>note</gi> spécifiant si le témoin est lacunaire ou unique.
-                        Sont ensuite relevés la rubrique initiale (<gi>rubric</gi>), lorsqu'elle existe,
-                        l'incipit (<gi>incipit</gi>, l'explicit (<gi>explicit</gi>), et, lorsqu'elles existent,
-                        la rubrique finale (<gi>finalRubric</gi>) et le <gi>colophon</gi>.
-                        Une note sur la décoration peut préciser comment la décoration est utilisée pour structurer
+                    <p> Ils se composent ensuite d'un élément <gi>author</gi> (optionnel), donnant
+                        l'auteur de l'œuvre quand il est connu, d'un <gi>respStmt</gi> (optionnel),
+                        donnant les mentions de responsabilité et noms des autres intervenants sur
+                        le témoin, quand ils sont connus (copistes, enlumineurs...), du titre
+                            (<gi>title</gi>), sigle (<gi>idno</gi>) obligatoires et éventuellement
+                        complétés d'une <gi>note</gi> spécifiant si le témoin est lacunaire ou
+                        unique. Sont ensuite relevés la rubrique initiale (<gi>rubric</gi>),
+                        lorsqu'elle existe, l'incipit (<gi>incipit</gi>, l'explicit
+                            (<gi>explicit</gi>), et, lorsqu'elles existent, la rubrique finale
+                            (<gi>finalRubric</gi>) et le <gi>colophon</gi>. Une note sur la
+                        décoration peut préciser comment la décoration est utilisée pour structurer
                         le texte (<gi>decoNote</gi>) et une bibliographie (<gi>listBibl</gi>) peut
                         donner les références propres à ce témoin (non à l'œuvre dans son ensemble).
-                        La langue du texte est obligatoirement précisée (<gi>textLang</gi>), 
-                        et la description du contenu se termine par la description de la place
-                        de ce témoin dans la tradition de l'œuvre (<gi>filiation</gi>).
-                        <!-- TODO: détailler respStmt? Normaliser? -->
+                        La langue du texte est obligatoirement précisée (<gi>textLang</gi>), et la
+                        description du contenu se termine par la description de la place de ce
+                        témoin dans la tradition de l'œuvre (<gi>filiation</gi>). <!-- TODO: détailler respStmt? Normaliser? -->
                         <specList>
                             <specDesc key="author"/>
                             <specDesc key="respStmt"/>
@@ -1056,13 +1097,14 @@
                             <specDesc key="textLang"/>
                             <specDesc key="filiation"/>
                         </specList>
-                    </p><!-- TODO: raffiner le contenu et la description de ces éléments,
+                    </p>
+                    <!-- TODO: raffiner le contenu et la description de ces éléments,
                     normaliser dès que cela est possible. Rendre obligatoire, par exemple,
                     pour les auteurs, titres, etc. des renvois aux référentiels d'autorité.
                     -->
-                    <p>Pour les éléments <gi>author</gi> et<gi>title</gi>, les attributs <att>ref</att> et 
-                        <att>key</att>
-                        pointent vers des référentiels (ISNI, Jonas, etc.).<!-- TODO: à implémenter -->
+                    <p>Pour les éléments <gi>author</gi> et<gi>title</gi>, les attributs
+                            <att>ref</att> et <att>key</att> pointent vers des référentiels (ISNI,
+                        Jonas, etc.).<!-- TODO: à implémenter -->
                     </p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <title key="Otinel" ref="http://viaf.org/viaf/199768389">Chanson
@@ -1072,26 +1114,26 @@
                         <author key="Brézé, Jacques de, 14..-1494"
                             ref="http://viaf.org/viaf/24739331">Jacques de Brézé</author>
                     </egXML>
-                    <p>La description de la langue du témoin (<gi>textLang</gi>)
-                    donne, dans un attribut <att>mainLang</att> obligatoire, le code de la langue principale, 
-                        et peut donner, dans un attribut <att>otherLangs</att> les codes des langues secondaires
-                        du témoin. Il contient, en texte libre, <!-- TODO: raffiner, c'est ce genre de choses
-                        qui sont importantes, --> une description de la langue du témoin, de la longueur nécessaire.
-                    </p>
+                    <p>La description de la langue du témoin (<gi>textLang</gi>) donne, dans un
+                        attribut <att>mainLang</att> obligatoire, le code de la langue principale,
+                        et peut donner, dans un attribut <att>otherLangs</att> les codes des langues
+                        secondaires du témoin. Il contient, en texte libre,
+                        <!-- TODO: raffiner, c'est ce genre de choses
+                        qui sont importantes, -->
+                        une description de la langue du témoin, de la longueur nécessaire. </p>
                     <!-- TODO: peut-on réussir à structurer la filiation pour la rendre moissonable? -->
-                    </div>
+                </div>
                 <div>
                     <head>La description physique</head>
                     <!-- TODO: sur la reliure, reprendre le schéma BNF -->
-                    <p>La description phyisque du manuscrit (<gi>physDesc</gi>)
-                        se compose des descriptions obligatoires de l'objet livre (<gi>objectDesc</gi>),
-                        de la ou des mains (<gi>handDesc</gi>) et écritures (<gi>scriptDesc</gi>),
+                    <p>La description phyisque du manuscrit (<gi>physDesc</gi>) se compose des
+                        descriptions obligatoires de l'objet livre (<gi>objectDesc</gi>), de la ou
+                        des mains (<gi>handDesc</gi>) et écritures (<gi>scriptDesc</gi>),
                         optionnelle des notations musicales (<gi>musicNotation</gi>), si applicable,
-                        obligatoire de la décoration (<gi>decoDesc</gi>),
-                        des ajouts au manuscrit (<gi>additions</gi>) lorsque ceux-ci sont présents,
-                        obligatoire de la reliure (<gi>bindingDesc</gi>)
-                        et optionnelle des matériaux accompagnant le manuscrit (<gi>accMat</gi>).
-                        <specList>
+                        obligatoire de la décoration (<gi>decoDesc</gi>), des ajouts au manuscrit
+                            (<gi>additions</gi>) lorsque ceux-ci sont présents, obligatoire de la
+                        reliure (<gi>bindingDesc</gi>) et optionnelle des matériaux accompagnant le
+                        manuscrit (<gi>accMat</gi>). <specList>
                             <specDesc key="physDesc"/>
                             <specDesc key="objectDesc"/>
                             <specDesc key="handDesc"/>
@@ -1110,68 +1152,117 @@
                         modèles existants et différents principes de description
                         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                     -->
-                    <div><head>L'objet livre</head>
-                        <p>La description de l'objet livre (<gi>objectDesc</gi>) se compose de deux éléments obligatoires,
-                        la description du support (<gi>supportDesc</gi>) et celle de la mise en page 
-                            (<gi>layoutDesc</gi>).
-                            <!-- Rendre @form obligatoire sur objectDesc -->
-                        <specList>
-                            <specDesc key="objectDesc"/>
-                            <specDesc key="supportDesc" atts="material"/>
-                            <specDesc key="layoutDesc"/>
-                        </specList>
+                    <div>
+                        <head>L'objet livre</head>
+                        <p>La description de l'objet livre (<gi>objectDesc</gi>) se compose de deux
+                            éléments obligatoires, la description du support (<gi>supportDesc</gi>)
+                            et celle de la mise en page (<gi>layoutDesc</gi>). <!-- Rendre @form obligatoire sur objectDesc -->
+                            <specList>
+                                <specDesc key="objectDesc"/>
+                                <specDesc key="supportDesc" atts="material"/>
+                                <specDesc key="layoutDesc"/>
+                            </specList>
                         </p>
                         <div>
                             <head>La description du support</head>
-                            <p>
-                                L'élément <gi>supportDesc</gi> porte obligatoirement l'attribut 
-                                <att>material</att>, qui précise le matériau du manuscrit,
-                                et peut prendre les valeurs <val>parchment</val> et <val>paper</val> [...]
-                                Il se compose, dans cette ordre, de la description du support, 
-                                du nombre de feuillets, obligatoires, de la ou les foliotations (obligatoires 
-                                et répétables), de la collation (obligatoire), et d'une note optionnelle
-                                sur l'état de conservation du manuscrit.
-                                <specList>
+                            <p> L'élément <gi>supportDesc</gi> porte obligatoirement l'attribut
+                                    <att>material</att>, qui précise le matériau du manuscrit, et
+                                peut prendre les valeurs <val>parchment</val> et <val>paper</val>
+                                [...] Il se compose, dans cette ordre, de la description du support,
+                                du nombre de feuillets, obligatoires, de la ou les foliotations
+                                (obligatoires et répétables), de la collation (obligatoire), et
+                                d'une note optionnelle sur l'état de conservation du manuscrit. <specList>
                                     <specDesc key="support"/>
                                     <specDesc key="extent"/>
                                     <specDesc key="foliation"/>
                                     <specDesc key="collation"/>
                                     <specDesc key="condition"/>
                                 </specList>
-                                
                             </p>
                             <!-- À compléter -->
                             <div>
                                 <head>Le support</head>
                                 <p>Le support (<gi>support</gi>)
-                                <gi>material</gi> répétable, 
-                                <gi>dimensions</gi> obligatoire, en mm,
-                                <gi>watermark</gi> optionnel
-                                <specList>
-                                    <specDesc key="material"/>
-                                    <specDesc key="dimensions"/>
-                                    <specDesc key="watermark"/>
-                                </specList>
-                                Les réparations, remarques sur la nature des peaux, la qualité, etc.
-                            </p></div>
+                                    est décrit par une séquence d'éléments, répétables en cas de présence de plusieurs supports différents (papier
+                                    et parchemin, différents types de papier, etc.),
+                                    <gi>locus</gi>, obligatoire si plusieurs matériaux sont présents,<!-- TODO: implémenter en schematron -->
+                                    <gi>material</gi>, obligatoire, et <gi>dimensions</gi>, en milimètres, obligatoire et répétable (existence de
+                                    plusieurs mesures concurrentes), ainsi que, pour les papiers, <gi>watermark</gi>
+                                    optionnel. Une note peut y être ajoutée. <specList>
+                                        <specDesc key="locus"/>
+                                        <specDesc key="material" atts="ref"/>
+                                        <specDesc key="dimensions"/>
+                                        <specDesc key="watermark"/>
+                                        <specDesc key="note"/>
+                                    </specList> 
+                                L'attribut <att>ref</att> de <gi>material</gi> porte un pointeur vers une description du type de matériau
+                                    utilisé.
+                                </p>
+                                <p>L'élément <gi>material</gi> se compose lui-même de texte et d'éléments <gi>term</gi> pouvant
+                                préciser certains aspects techniques du matériau (qualité, présence de trous, emplois de parties 
+                                non conventionnelles de la peau, etc.) selon une typologie qui sera précisée.<!-- Et implémentée -->
+                                    <!-- TODO: structurer plus précisément... -->
+                                </p>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <support>
+                                        <material key="#parchemin_mediocre">
+                                            <term>parchemin</term>
+                                            de
+                                            <term>qualité intermédiaire</term>;
+                                            <term>trous</term>
+                                            (par ex., fol. xxx), généralement évités par l’écriture ; 
+                                            <term>réparations par couture</term> (fol. xxx) où l’écriture évite le trou; 
+                                            l’encre du verso
+                                            est parfois visible par <term>transparence</term>. 
+                                            Emploi de <term>parties non conventionnelles de la peau</term> aux
+                                            fol. x.
+                                        </material>
+                                        <dimensions>
+                                            <height quantity="250"/>
+                                            <width quantity="163"/>
+                                        </dimensions>
+                                        <note>Le ms. paraît avoir été très fortement rogné à la reliure
+                                            (notamment en tête) et atteignait peut-être le bas de la catégorie des
+                                            moyens-grands.</note>
+                                    </support>
+                                </egXML>
+                            </div>
                             <div>
                                 <head>Le nombre de feuillets</head>
-                                <p>Le nombre de feuillets (<gi>extent</gi>)
-                                <specList>
-                                    <specDesc key="measure"/>
-                                </specList>
-                            </p>
+                                <p>Le nombre de feuillets (<gi>extent</gi>) est décrit par l'emploi
+                                    d'un élément <gi>measure</gi>
+                                    <specList>
+                                        <specDesc key="measure"/>
+                                    </specList>
+                                </p>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <extent>
+                                        <measure quantity="1" unit="guard-leaf"/>
+                                        <measure quantity="222" unit="leaf"/>
+                                        <measure quantity="1" unit="guard-leaf"/>
+                                    </extent>
+                                </egXML>
                             </div>
                             <div>
                                 <head>La ou les foliotation(s)</head>
-                                <p>La foliotation</p>
+                                <p>Chaque foliotation est précisée par un élément <gi>foliation</gi>, 
+                                <specList>
+                                    <specDesc key="foliation" atts="xml:id"/>
+                                </specList>
+                                </p>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <foliation xml:id="principale">foliotation, au <term>crayon</term>, est <term>récente</term> 
+                                        et a été <term>corrigée</term> suite au saut initial d’un fol. entre les fol. X
+                                        et X; elle rétablit l’ordre original des fol. mal placés</foliation>
+                                </egXML>
                             </div>
                             <div>
                                 <head>La collation</head>
-                                <p>La collation est faite [...]
-                                    <specList>
-                                        <specDesc key="formula"/><!-- Trouver mieux? -->
-                                        <specDesc key="table"/><!-- À voir -->
+                                <p>La collation est faite [...] <specList>
+                                        <specDesc key="formula"/>
+                                        <!-- Trouver mieux? -->
+                                        <specDesc key="table"/>
+                                        <!-- À voir -->
                                         <specDesc key="signatures"/>
                                         <specDesc key="catchwords"/>
                                     </specList>
@@ -1181,25 +1272,20 @@
                         </div>
                         <div>
                             <head>La description de la mise en page</head>
-                            <p>Autant d'éléments <gi>layout</gi> que nécessaires,
-                                <att>columns</att> et <att>writtenLines</att>
-                                obligatoires.
-                                La piqure, la réglure, 
-                                Les dimensions de la justification...
-                                La première ligne écrite ou non
-                                <specList>
+                            <p>Autant d'éléments <gi>layout</gi> que nécessaires, <att>columns</att>
+                                et <att>writtenLines</att> obligatoires. La piqure, la réglure, Les
+                                dimensions de la justification... La première ligne écrite ou non <specList>
                                     <specDesc key="layout" atts="columns writtenLines"/>
                                     <specDesc key="formula"/>
                                     <specDesc key="dimensions"/>
                                 </specList>
-                                
-                                
                             </p>
-                            
+
                         </div>
-                        
+
                     </div>
-                    <div><head>Mains et écritures</head>
+                    <div>
+                        <head>Mains et écritures</head>
                         <div>
                             <head>Les mains</head>
                             <p>
@@ -1221,10 +1307,12 @@
                             </p>
                         </div>
                     </div>
-                    <div><head>Notations musicales</head>
-                        
+                    <div>
+                        <head>Notations musicales</head>
+
                     </div>
-                    <div><head>Décoration</head>
+                    <div>
+                        <head>Décoration</head>
                         <p>
                             <specList>
                                 <specDesc key="decoDesc"/>
@@ -1233,10 +1321,12 @@
                             </specList>
                         </p>
                     </div>
-                    <div><head>Ajouts</head>
-                        
+                    <div>
+                        <head>Ajouts</head>
+
                     </div>
-                    <div><head>Reliure</head>
+                    <div>
+                        <head>Reliure</head>
                         <p>
                             <specList>
                                 <specDesc key="bindingDesc"/>
@@ -1248,28 +1338,29 @@
                             </specList>
                         </p>
                     </div>
-                    <div><head>Matériaux d'accompagnement</head>
-                        
+                    <div>
+                        <head>Matériaux d'accompagnement</head>
+
                     </div>
                 </div>
                 <div>
                     <head>L'histoire du manuscrit</head>
                     <!-- TODO: sur cette section, voir l'ontologie Biblissima -->
                     <p>La section sur l'histoire du manuscrit se compose d'une section sur l'origine
-                        (<gi>origin</gi>), obligatoire, et d'autant de provenances
-                        (<gi>provenance</gi>) qu'il est pertinent d'en employer, et une éventuelle
-                        mention d'entrée dans la collection dans laquelle il se trouve actuellement
-                        (<gi>acquisition</gi>). <specList>
+                            (<gi>origin</gi>), obligatoire, et d'autant de provenances
+                            (<gi>provenance</gi>) qu'il est pertinent d'en employer, et une
+                        éventuelle mention d'entrée dans la collection dans laquelle il se trouve
+                        actuellement (<gi>acquisition</gi>). <specList>
                             <specDesc key="origin"/>
                             <specDesc key="provenance"/>
                             <specDesc key="acquisition"/>
                         </specList>
                     </p>
-                    <p>La section sur l'origine débute obligatoirement par des informations sur le lieu
-                        d'origine (<gi>origPlace</gi>) et la date d'origine (<gi>origDate</gi>) du
-                        manuscrit, qui peuvent être librement complétées par d'autres informations. Les
-                        attributs de date sont systématiquement employés pour donner la date du
-                        manuscrit de manière normalisée. <specList>
+                    <p>La section sur l'origine débute obligatoirement par des informations sur le
+                        lieu d'origine (<gi>origPlace</gi>) et la date d'origine (<gi>origDate</gi>)
+                        du manuscrit, qui peuvent être librement complétées par d'autres
+                        informations. Les attributs de date sont systématiquement employés pour
+                        donner la date du manuscrit de manière normalisée. <specList>
                             <specDesc key="origPlace"/>
                             <specDesc key="origDate" atts="att.datable.w3c "/>
                             <specDesc key="macro.specialPara"/>
@@ -1286,7 +1377,7 @@
                 <div>
                     <head>Cas particulier: les fragments</head>
                 </div>
-                
+
                 <!-- TODO: ne pas oublier de rendre @xml:id OBLIGATOIRE sur handNote et scriptNote, pour que l'on 
                 puisse satisfaire à l'obligation de pointer vers eux depuis les handShift.
                 -->
@@ -1332,11 +1423,12 @@
                         permet de faire le lien vers le facsimile numérique. Il est obligatoire pour
                         les pages ; dans la version définitive, il le sera également pour les
                         colonnes et lignes. </p>
-                    <p>L'attribut <att>facs</att> est porté par les éléments de structure physique jusqu'au niveau de la ligne.
-                    Dans les cas où l'on souhaite réaliser une correspondance plus fine encore entre texte
-                    et zones d'images, on pourra le faire porter, pour une correspondance avec les mots graphiques,
-                    par <gi>space</gi>, et, pour une correspondance au niveau du caractère, par <gi>c</gi>.
-                        <specList>
+                    <p>L'attribut <att>facs</att> est porté par les éléments de structure physique
+                        jusqu'au niveau de la ligne. Dans les cas où l'on souhaite réaliser une
+                        correspondance plus fine encore entre texte et zones d'images, on pourra le
+                        faire porter, pour une correspondance avec les mots graphiques, par
+                            <gi>space</gi>, et, pour une correspondance au niveau du caractère, par
+                            <gi>c</gi>. <specList>
                             <specDesc key="space" atts="facs"/>
                             <specDesc key="c" atts="facs"/>
                         </specList>
@@ -1357,11 +1449,10 @@
                     <head>Décoration, lettrines et mise en valeur du texte</head>
                     <p>Les lettrines, et autres types de mise en valeur ou décoration de portions de
                         texte, sont marquées par l'emploi de l'élément <gi>hi</gi>. L'attribut
-                            <att>rend</att>, obligatoire dans le cas des transcriptions de manuscrit, est utilisé pour préciser, par une série
-                        de valeurs séparées par des espaces, la nature de la décoration. 
-                        <specList>
-                            <specDesc
-                                key="hi" atts="rend"/>
+                            <att>rend</att>, obligatoire dans le cas des transcriptions de
+                        manuscrit, est utilisé pour préciser, par une série de valeurs séparées par
+                        des espaces, la nature de la décoration. <specList>
+                            <specDesc key="hi" atts="rend"/>
                         </specList>
                     </p>
                     <p>On prendra soin de noter qu'il est, la plupart du temps, pour la décoration,
@@ -1384,10 +1475,8 @@
                     <p>Les mains et écritures présentes dans le manuscrit sont décrites dans sa
                         notice <gi>msDesc</gi> (voir supra, <ptr target="#DIV_MSDESC"/>).</p>
                     <p>Les changements de main dans le manuscrit sont signalés par l'utilisation
-                        d'un élément <gi>handShift</gi>. 
-                        <specList>
-                            <specDesc key="handShift"
-                                atts="new scriptRef"/>
+                        d'un élément <gi>handShift</gi>. <specList>
+                            <specDesc key="handShift" atts="new scriptRef"/>
                         </specList>
                         <!-- TODO: concurrence entre @new et @scribeRef. Choisir entre les deux -->
                     </p>
@@ -1411,10 +1500,9 @@
                         scribe.<!--, tout en permettant--> Elles reposent en partie sur
                         l'utilisation de l'élément <gi>choice</gi>, qui permet plusieurs
                         représentations concurrentes d'un même fait. Il permet notamment de
-                        rattacher une variante de forme de lettre à une forme de référence.
-                            <specList>
-                                <specDesc key="choice"/>
-                            </specList>
+                        rattacher une variante de forme de lettre à une forme de référence. <specList>
+                            <specDesc key="choice"/>
+                        </specList>
                     </p>
                     <!-- TODO: voir s'il n'est pas plus opportun de documenter choice plus tôt -->
                     <!-- TODO: modification à faire au modèle choicePart: voir s'il est opportun de limiter à deux les occurrences de membres du model.choicePart
@@ -1614,11 +1702,10 @@
                         <p> La ponctuation est marquée par l'emploi d'éléments<!-- TODO: traiter ponctuation éditoriale ailleurs -->
                             <specList>
                                 <specDesc key="pc" atts="type subtype rend"/>
-                            </specList> 
-                            L'attribut <att>type</att>
-                            permet de distinguer la ponctuation d'origine de la ponctuation
-                            éditoriale. L'attribut <att>subtype</att> classifie les signes de
-                            ponctuation originale, selon leur usage. <!-- Il y a deux choses à traiter: d'une part le sémantisme de la ponctuation médiévale 
+                            </specList> L'attribut <att>type</att> permet de distinguer la
+                            ponctuation d'origine de la ponctuation éditoriale. L'attribut
+                                <att>subtype</att> classifie les signes de ponctuation originale,
+                            selon leur usage. <!-- Il y a deux choses à traiter: d'une part le sémantisme de la ponctuation médiévale 
                             (multiplicateur, énumération, séparateur de colonne - pas encodé systématiquement - , ...)
                             et d'autre part les formes prises (punctus elevatus, point median, etc.), ce dernier aspect devant être plutôt
                             traité par g ou par le caractère Unicode employé.
@@ -1688,10 +1775,8 @@
                     </div>
                     <div>
                         <head>Espacement</head>
-                        <p>Pour marquer explicitement des espaces, on pourra utiliser 
-                            <specList>
-                                <specDesc
-                                    key="space" atts="quantity unit"/>
+                        <p>Pour marquer explicitement des espaces, on pourra utiliser <specList>
+                                <specDesc key="space" atts="quantity unit"/>
                             </specList>
                         </p>
                         <p>Cet élément peut ainsi permettre de signaler des espaces laissés blancs
@@ -1776,24 +1861,24 @@
             </div>
             <div xml:id="DIV_VERSE">
                 <head>Versification et métrique</head>
-                <p>Les attributs de la classe <code>att.metrical</code> peuvent être employés pour décrire
-                    la métrique, ou spécifier les entorses à celle-ci:
-                    <specList>
+                <p>Les attributs de la classe <code>att.metrical</code> peuvent être employés pour
+                    décrire la métrique, ou spécifier les entorses à celle-ci: <specList>
                         <specDesc key="att.metrical"/>
                     </specList>
                 </p>
-                <p>Particulièrement, l'usage de l'attribut <att>real</att> est recommandé pour signaler
-                un écart (hypermétrie, hypométrie, etc.) entre la réalisation du vers et sa métrique supposée (décasyllabe, alexandrin, etc.):
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <l n="238" xml:id="M_l_238" real ="-3">
-                        <w>tut</w>
-                        <w>le</w>
-                        <w>trenche</w>
-                        <w>quanque</w>
-                        <w rend="elision">l</w>
-                        <w>esprant</w>
-                    </l>
-                </egXML>
+                <p>Particulièrement, l'usage de l'attribut <att>real</att> est recommandé pour
+                    signaler un écart (hypermétrie, hypométrie, etc.) entre la réalisation du vers
+                    et sa métrique supposée (décasyllabe, alexandrin, etc.): <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <l n="238" xml:id="M_l_238" real="-3">
+                            <w>tut</w>
+                            <w>le</w>
+                            <w>trenche</w>
+                            <w>quanque</w>
+                            <w rend="elision">l</w>
+                            <w>esprant</w>
+                        </l>
+                    </egXML>
                 </p>
             </div>
             <div xml:id="DIV_TEXTCRIT">
@@ -1826,7 +1911,7 @@
                 => je pencherais pour la première, mais ce serait le seul type de variation à être traité ainsi.
                 
                 -->
-                
+
                 <!-- Utiliser à la fois des rdgGrp (pour les traductions) et des app imbriqués (pour les variantes fr.)
                  ou bien utiliser @corresp - ou autre du même genre - pour signaler les correspondances entre les traductions
                  et telle ou telle leçon ou famille de leçon ?
@@ -1892,13 +1977,14 @@
             => demande de déterminer un ordre de priorité
             
                     -->
-                    
+
                     <head>Variantes d'ordre (inversions et déplacements)</head>
-                    <p>Inversions et déplacements créent des difficultés particulières de modélisation et d'implémentation en XML.
-                    En réalité, un déplacement peut contenir deux variantes en une: d'ordre et de substance.
-                    </p>
-                    <p>L'orientation est également un point problématique, dans la mesure où, comme pour une omission/un ajout,</p>
-                    
+                    <p>Inversions et déplacements créent des difficultés particulières de
+                        modélisation et d'implémentation en XML. En réalité, un déplacement peut
+                        contenir deux variantes en une: d'ordre et de substance. </p>
+                    <p>L'orientation est également un point problématique, dans la mesure où, comme
+                        pour une omission/un ajout,</p>
+
                     <!-- (<l n="3734">)
                     Exemple simplissime, sire certes vs certes sire
                     
@@ -1934,35 +2020,27 @@
                         = une omission à un endroit, un ajout à un autre, qui sont liés aux leçons des autres.
                         .
                     -->
-                    
-                    
-                    <p>
-                        Soit le vers (Chevalier au Lion)
-                        <eg>
-                            H 3979 Qu’au pie ne l’en ailliez cheoir
-                            P 3979 C’au pie ne l’en ales chaoir
-                            V 3979 Que l’en n’ailliez au pie cheoir
-                            G 3979 Einz l’en alez au pie cheoir /24v°b/
-                            A 3979 Ains l’en ales au pie cheir
-                            S 3979 Ains l’en ales au pie caioir
-                        </eg>
+
+
+                    <p> Soit le vers (Chevalier au Lion) <eg> H 3979 Qu’au pie ne l’en ailliez
+                            cheoir P 3979 C’au pie ne l’en ales chaoir V 3979 Que l’en n’ailliez au
+                            pie cheoir G 3979 Einz l’en alez au pie cheoir /24v°b/ A 3979 Ains l’en
+                            ales au pie cheir S 3979 Ains l’en ales au pie caioir </eg>
                     </p>
-                    <p>Version orientée
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <app>
-                            <rdg wit="#H #P" xml:id="inv_HP_01">au pie</rdg>
-                            <rdg wit="#V #G #A #S"/>
-                        </app>
-                        <!-- Autres variantes intermédiaires -->
-                        <app>
-                            <rdg wit="#V #G #A #S">au pie</rdg>
-                            <rdg wit="#H #P" corresp="#inv_HP_01"/>
-                        </app>
-                    </egXML>
+                    <p>Version orientée <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <app>
+                                <rdg wit="#H #P" xml:id="inv_HP_01">au pie</rdg>
+                                <rdg wit="#V #G #A #S"/>
+                            </app>
+                            <!-- Autres variantes intermédiaires -->
+                            <app>
+                                <rdg wit="#V #G #A #S">au pie</rdg>
+                                <rdg wit="#H #P" corresp="#inv_HP_01"/>
+                            </app>
+                        </egXML>
                     </p>
-                    
-                    <p>Version non orientée
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+                    <p>Version non orientée <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <app>
                                 <rdg wit="#H #P" xml:id="inv_HP_01">au pie</rdg>
                                 <rdg wit="#V #G #A #S" corresp="#inv_VGAS_01"/>
@@ -1974,18 +2052,11 @@
                             </app>
                         </egXML>
                     </p>
-                    
-                    <p>Inversions particulièrement complexes:
-                        
-                        <eg>
-                            H 3998 Que demain a midi ne soie
-                            P 3998 Que demain a midi ne soie
-                            V 3998 Que demain a miedi ne soie
-                            G 3998 Que je a midi droit ne soie
-                            A 3998 Qu’a miedi demain ne soie
-                            S 3998 Que demain a midi ne soie
-                            R 3998 Que demain a midi ne soie
-                        </eg>
+
+                    <p>Inversions particulièrement complexes: <eg> H 3998 Que demain a midi ne soie
+                            P 3998 Que demain a midi ne soie V 3998 Que demain a miedi ne soie G
+                            3998 Que je a midi droit ne soie A 3998 Qu’a miedi demain ne soie S 3998
+                            Que demain a midi ne soie R 3998 Que demain a midi ne soie </eg>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <app type="graphique">
                                 <rdg wit="#H #P #V #G #S #R">Que</rdg>
@@ -1996,8 +2067,7 @@
                                 <rdg wit="#H #P #V #A #S #R"/>
                             </app>
                             <app>
-                                <rdg wit="#A #G" xml:id="inv_AG_01">a 
-                                    <app type="graphic">
+                                <rdg wit="#A #G" xml:id="inv_AG_01">a <app type="graphic">
                                         <rdg wit="#A" xml:id="inv_A_01">miedi</rdg>
                                         <rdg wit="#G" xml:id="inv_G_01">midi</rdg>
                                     </app>
@@ -2010,107 +2080,102 @@
                             </app>
                             <app>
                                 <rdg>a <app type="graphic">
-                                    <rdg wit="#V">miedi</rdg>
-                                    <rdg wit="#H #P #S #R">midi</rdg>
-                                </app>
+                                        <rdg wit="#V">miedi</rdg>
+                                        <rdg wit="#H #P #S #R">midi</rdg>
+                                    </app>
                                 </rdg>
-                                <rdg wit="#A" corresp="inv_AG_01"/><!-- NB: on perd un peu de précision sur la variante
+                                <rdg wit="#A" corresp="inv_AG_01"
+                                /><!-- NB: on perd un peu de précision sur la variante
          graphique, mais on garde toute l'inversion. Et on pourrait aller plus loin.
       -->
                             </app>
                             <app><rdg wit="#H #P #V #G #A #S #R">ne soie</rdg></app>
                         </egXML>
-                        
                     </p>
-                    
-                    <p>Autre cas, avec substitutions de mots, et deux variants orthographiques [solution à peaufiner]:
-                    
-                    <eg>
-                    H 3906 Molt iriez et molt dolanz sui
-                    An 3906 M........riez et dolanz an sui
-                    P 3906 Mout iries et mout dolens sui
-                    V 3906 Me poise molt et dolanz sui
-                    F 3906 Molt iries et molt dolans sui
-                    G 3906 Molt dolenz et iriez en sui
-                    A 3906 Molt iries et dolans en sui
-                    S 3906 Molt iries et dolans en sui
-                    </eg>
-                    
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <app>
-                            <rdg wit="#V">
-                                <w>Me</w>
-                                <w>poise</w>
-                            </rdg>
-                            <rdg wit="#H #F #G #A #S #P #N"/>
-                        </app>
-                        <app type="graphique">
-                            <rdg wit="#H #F #G #A #S #V"><w>Molt</w></rdg>
-                            <rdg wit="#P"><w>Mout</w></rdg>
-                        </app>
-                        <app>
-                            <rdg wit="#H #F #G #A #S #P #N">
-                                <app>
-                                    <rdg wit="#H #F #G #A #S">
-                                        <app type="graphique">
-                                            <rdg wit="#H #G">
-                                                <app type="inversion">
-                                                    <rdg wit="#H"><w>iriez</w></rdg>
-                                                    <rdg wit="#G" xml:id="inv_G_01" corresp="#inv_G_02"><w>dolenz</w></rdg>
-                                                </app>
-                                            </rdg>
-                                            <rdg wit="#P #F #A #S"><w>iries</w></rdg>
-                                        </app>
-                                    </rdg>
-                                    <rdg wit="#N"><w>M</w><lacunaStart/><lacunaEnd/><w>riez</w></rdg>
-                                </app>
-                            </rdg>
-                            <rdg wit="#V"/>
-                        </app>
-                        <!-- / -->
-                        <app type="lecon"><!-- JBC: An a bien le 'et', semble-t-il, je corrige -->
-                            <rdg wit="#H #P #V #F #G #A #S #N"><w>et</w></rdg>
-                            <!--<rdg wit="#N"/>-->
-                        </app>
-                        <app type="omission">
-                            <rdg wit="#H #F #P #N">
-                                <app type="graphique">
-                                    <rdg wit="#H #F #N"><w>molt</w></rdg>
-                                    <rdg wit="#P"><w>mout</w></rdg>
-                                </app>
-                            </rdg>
-                            <rdg wit="#G #A #S #V"/>
-                        </app>
-                        <app type="inversion">
-                            <rdg wit="#H #N #V  #A #S"><!-- JBC: des témoins oubliés (en fait, tous les mss sauf G) -->
-                                <app type="graphique">
-                                    <rdg wit="#H #N #V"><w>dolanz</w></rdg>
-                                    <rdg wit="#A #S #F"><w>dolans</w></rdg>
-                                    <rdg wit="#P"><w>dolens</w></rdg>
-                                </app>
-                            </rdg>
-                            <rdg wit="#G" xml:id="inv_G_02" corresp="#inv_G_01"><w>iriez</w></rdg>
-                        </app>
-                        <app type="omission">
-                            <rdg wit="#G #A #S #N">
-                                <app type="graphique">
-                                    <rdg wit="#G #A #S"><w>en</w></rdg>
-                                    <rdg wit="#N"><w>an</w></rdg>
-                                </app>
-                            </rdg>
-                            <rdg wit="#H #P #V #F"/>
-                        </app>
-                        <app type="lecon">
-                            <rdg wit="#H #N #P #V #F #G #A #S"><w>sui</w></rdg>
-                        </app>
-                    </egXML>
-                    
+
+                    <p>Autre cas, avec substitutions de mots, et deux variants orthographiques
+                        [solution à peaufiner]: <eg> H 3906 Molt iriez et molt dolanz sui An 3906
+                            M........riez et dolanz an sui P 3906 Mout iries et mout dolens sui V
+                            3906 Me poise molt et dolanz sui F 3906 Molt iries et molt dolans sui G
+                            3906 Molt dolenz et iriez en sui A 3906 Molt iries et dolans en sui S
+                            3906 Molt iries et dolans en sui </eg>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <app>
+                                <rdg wit="#V">
+                                    <w>Me</w>
+                                    <w>poise</w>
+                                </rdg>
+                                <rdg wit="#H #F #G #A #S #P #N"/>
+                            </app>
+                            <app type="graphique">
+                                <rdg wit="#H #F #G #A #S #V"><w>Molt</w></rdg>
+                                <rdg wit="#P"><w>Mout</w></rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#H #F #G #A #S #P #N">
+                                    <app>
+                                        <rdg wit="#H #F #G #A #S">
+                                            <app type="graphique">
+                                                <rdg wit="#H #G">
+                                                  <app type="inversion">
+                                                  <rdg wit="#H"><w>iriez</w></rdg>
+                                                  <rdg wit="#G" xml:id="inv_G_01"
+                                                  corresp="#inv_G_02"><w>dolenz</w></rdg>
+                                                  </app>
+                                                </rdg>
+                                                <rdg wit="#P #F #A #S"><w>iries</w></rdg>
+                                            </app>
+                                        </rdg>
+                                        <rdg wit="#N"
+                                            ><w>M</w><lacunaStart/><lacunaEnd/><w>riez</w></rdg>
+                                    </app>
+                                </rdg>
+                                <rdg wit="#V"/>
+                            </app>
+                            <!-- / -->
+                            <app type="lecon"><!-- JBC: An a bien le 'et', semble-t-il, je corrige -->
+                                <rdg wit="#H #P #V #F #G #A #S #N"><w>et</w></rdg>
+                                <!--<rdg wit="#N"/>-->
+                            </app>
+                            <app type="omission">
+                                <rdg wit="#H #F #P #N">
+                                    <app type="graphique">
+                                        <rdg wit="#H #F #N"><w>molt</w></rdg>
+                                        <rdg wit="#P"><w>mout</w></rdg>
+                                    </app>
+                                </rdg>
+                                <rdg wit="#G #A #S #V"/>
+                            </app>
+                            <app type="inversion">
+                                <rdg wit="#H #N #V  #A #S"><!-- JBC: des témoins oubliés (en fait, tous les mss sauf G) -->
+                                    <app type="graphique">
+                                        <rdg wit="#H #N #V"><w>dolanz</w></rdg>
+                                        <rdg wit="#A #S #F"><w>dolans</w></rdg>
+                                        <rdg wit="#P"><w>dolens</w></rdg>
+                                    </app>
+                                </rdg>
+                                <rdg wit="#G" xml:id="inv_G_02" corresp="#inv_G_01"
+                                    ><w>iriez</w></rdg>
+                            </app>
+                            <app type="omission">
+                                <rdg wit="#G #A #S #N">
+                                    <app type="graphique">
+                                        <rdg wit="#G #A #S"><w>en</w></rdg>
+                                        <rdg wit="#N"><w>an</w></rdg>
+                                    </app>
+                                </rdg>
+                                <rdg wit="#H #P #V #F"/>
+                            </app>
+                            <app type="lecon">
+                                <rdg wit="#H #N #P #V #F #G #A #S"><w>sui</w></rdg>
+                            </app>
+                        </egXML>
                     </p>
-                    
-                    
-                    
+
+
+
                 </div>
-                
+
                 <!-- 
                 Comment rendre compte d'un point comme le suivant, ou des variantes outils peuvent se décomposer sur deux
                 niveaux? Ou renoncer au type outil pour une des deux?
@@ -2237,17 +2302,18 @@ CC 3778 Li casteax ne doutoit assaut
                 
                 
                 -->
-                
+
                 <div>
                     <head>Lacunes</head>
-                    <p>Les lacunes se distinguent des omissions par leur nature seconde et leur cause externe (chute d'une feuillet, dégâts matériels, cahier manquant, etc.).
-                    Leur début et leur fin sont annoncées par des notes d'apparat contenant les éléments :
-                    <specList>
-                        <specDesc key="lacunaStart"/>
-                        <specDesc key="lacunaEnd"/>
-                    </specList>
-                        Ces balises sont contenues dans des notes qui s'accrochent aux deux portions extrêmes du texte correspondant, dans les autres témoins, à la lacune.
-                    </p>
+                    <p>Les lacunes se distinguent des omissions par leur nature seconde et leur
+                        cause externe (chute d'une feuillet, dégâts matériels, cahier manquant,
+                        etc.). Leur début et leur fin sont annoncées par des notes d'apparat
+                        contenant les éléments : <specList>
+                            <specDesc key="lacunaStart"/>
+                            <specDesc key="lacunaEnd"/>
+                        </specList> Ces balises sont contenues dans des notes qui s'accrochent aux
+                        deux portions extrêmes du texte correspondant, dans les autres témoins, à la
+                        lacune. </p>
                 </div>
                 <div>
                     <head>Notes de commentaire</head>
@@ -2280,16 +2346,14 @@ CC 3778 Li casteax ne doutoit assaut
             <div xml:id="DIV_LING">
                 <head>Interprétation et analyse (linguistique)</head>
                 <p>Les mots sont étiquetés linguistiquement en utilisant l'élément <gi>w</gi> et ses
-                    attributs 
-                    <specList>
+                    attributs <specList>
                         <specDesc key="w" atts="lemma ana"/>
-                    </specList>
-                    L'attribut <att>ana</att> est
-                    utilisé pour pointer vers les éléments d'analyse morphosyntaxique et syntaxique. </p>
-                <!-- Voir 17.4 Linguistic Annotation --><!-- TODO: à développer -->
-                <p>Dans les cas où l'on souhaite annoter au niveau du caractère, on pourra également utiliser
-                l'élément <gi>c</gi>:
-                    <specList>
+                    </specList> L'attribut <att>ana</att> est utilisé pour pointer vers les éléments
+                    d'analyse morphosyntaxique et syntaxique. </p>
+                <!-- Voir 17.4 Linguistic Annotation -->
+                <!-- TODO: à développer -->
+                <p>Dans les cas où l'on souhaite annoter au niveau du caractère, on pourra également
+                    utiliser l'élément <gi>c</gi>: <specList>
                         <specDesc key="c"/>
                     </specList>
                 </p>
@@ -2300,26 +2364,28 @@ CC 3778 Li casteax ne doutoit assaut
             <div xml:id="DIV_CERTRESP">
                 <!-- TODO: voir ce que présentent en la matière les guidelines, et compléter en fonction -->
                 <head>Degré de certitude et de précision, responsabilité</head>
-                <p>Les degrés de certitude, et les mentions de responsabilité, peuvent être ajoutés aux
-                    éléments, par le biais des attributs fournis par la classe <code>att.global.responsibility</code>
+                <p>Les degrés de certitude, et les mentions de responsabilité, peuvent être ajoutés
+                    aux éléments, par le biais des attributs fournis par la classe
+                        <code>att.global.responsibility</code>
                     <specList>
                         <specDesc key="att.global.responsibility"/>
                     </specList>
                 </p>
-                <p>L'attribut <att>resp</att> contient un pointeur, correspondant à une déclaration d'identifiant <att>xml:id</att> 
-                d'une mention de responsabilité de l'entête.
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <origDate cert="medium" resp="#JBC" notBefore="1201" notAfter="1233">premier tiers du XIIIe siècle</origDate>
-                </egXML>
-                    pour une déclaration, dans l'entête
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <p>L'attribut <att>resp</att> contient un pointeur, correspondant à une déclaration
+                    d'identifiant <att>xml:id</att> d'une mention de responsabilité de l'entête.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <origDate cert="medium" resp="#JBC" notBefore="1201" notAfter="1233">premier
+                            tiers du XIIIe siècle</origDate>
+                    </egXML> pour une déclaration, dans l'entête <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
                         <respStmt>
                             <resp>sous la direction de</resp>
                             <persName xml:id="JBC">Jean-Baptiste Camps</persName>
                         </respStmt>
                     </egXML>
                 </p>
-                <p>Le degré de certitude est exprimé par une valeur de type <val>data.certainty</val>
+                <p>Le degré de certitude est exprimé par une valeur de type
+                        <val>data.certainty</val>
                     <specList>
                         <specDesc key="teidata.certainty"/>
                     </specList>
@@ -2368,12 +2434,13 @@ CC 3778 Li casteax ne doutoit assaut
                                 <!-- Voir s'il est pertinent de conserver cet élément -->
                                 <!--<specDesc key="surname"/>-->
                                 <specDesc key="placeName"/>
-                            <!--<specDesc key="roleName"/>--><!-- NB: pour le moment, je crois que seul addName est employé dans l'encodage, car parfois délicat de distinguer nom aditionnel et 
+                                <!--<specDesc key="roleName"/>-->
+                                <!-- NB: pour le moment, je crois que seul addName est employé dans l'encodage, car parfois délicat de distinguer nom aditionnel et 
                             rôle 
                             -->
                                 <!-- Pour les noms de fonctions, titres -->
                                 <specDesc key="addName"/>
-                            
+
                                 <!-- @type = "epithet" 
                   @ subtype = "familial", "geographical", "", 
                   /!\ NB: pour ne pas réinventer la poudre, voir s'il existe des typologie d'épithètes épiques employés dans les chansons de geste.  
@@ -2397,23 +2464,23 @@ CC 3778 Li casteax ne doutoit assaut
               Note, how­ever, that the role a per­son has in a given con­text (such as wit­ness, de­fen­dant, etc. in a legal doc­u­ment) should not be en­coded using the role­Name el­e­ment, since this is in­tended to mark roles which func­tion as part of a per­son's name, not the role of the per­son bear­ing the name in gen­eral. In­for­ma­tion about roles, oc­cu­pa­tions, etc. of a per­son are en­coded within the per­son el­e­ment dis­cussed below in 13.3. Bi­o­graph­i­cal and Proso­po­graph­i­cal Data.
               
               Here are some fur­ther ex­am­ples of the usage of these el­e­ments:-->
-                            Il n'est pas fait de distinction entre nom additionnel et nom de rôle (<mentioned>li dus</mentioned> ou <mentioned>li reis</mentioned> sont
-                            encodés comme nom additionnels, au même titre que <mentioned>li daneis</mentioned>). 
-                            Les noms de terre ou de lieu accolés aux prénoms sont encodés avec <gi>placeName</gi>, dans la mesure où ils gardent 
-                            généralement leur sens originel.
-                            Ces éléments peuvent entrer en conjonction.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            Il n'est pas fait de distinction entre nom additionnel et nom de rôle
+                                (<mentioned>li dus</mentioned> ou <mentioned>li reis</mentioned>
+                            sont encodés comme nom additionnels, au même titre que <mentioned>li
+                                daneis</mentioned>). Les noms de terre ou de lieu accolés aux
+                            prénoms sont encodés avec <gi>placeName</gi>, dans la mesure où ils
+                            gardent généralement leur sens originel. Ces éléments peuvent entrer en
+                            conjonction. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <!-- d'Aigremunt Baldewin l'afïez -->
                                 <persName><nameLink><w rend="elision">d</w></nameLink>
                                     <placeName><w>Aigremunt</w></placeName>
                                     <forename><w>Baldewin</w></forename>
                                     <addName><w rend="elision">l</w>
                                         <w>afïez</w></addName></persName>
-                                
                                 <!-- Balsami, li reis de Ninivant -->
                                 <persName>
                                     <forename><w>Balsami</w></forename>
-                                    <pc type="supplied">,</pc> 
+                                    <pc type="supplied">,</pc>
                                     <addName>
                                         <w>li</w>
                                         <w>reis</w>
@@ -2431,14 +2498,17 @@ CC 3778 Li casteax ne doutoit assaut
                             </specList>
                         </p>
                     </div>
-                    <div><head>Autres noms propres</head>
-                        <p>Les chansons de geste sont riches d'une variété d'autres noms propres, souvent relatives à l'équipement militaire du chevalier,
-                        et parmi lesquelles on retrouve l'épée, le cor, ou bien encore le destrier. 
-                        On y trouve également des noms de peuples, et une variété de noms propres ne désignant ni une personne ni un lieu. 
-                        Tous ceux-ci sont encodés en utilisant l'élément <gi>name</gi> et en précisant la valeur du nom par l'attribut
-                            <att>type</att>
+                    <div>
+                        <head>Autres noms propres</head>
+                        <p>Les chansons de geste sont riches d'une variété d'autres noms propres,
+                            souvent relatives à l'équipement militaire du chevalier, et parmi
+                            lesquelles on retrouve l'épée, le cor, ou bien encore le destrier. On y
+                            trouve également des noms de peuples, et une variété de noms propres ne
+                            désignant ni une personne ni un lieu. Tous ceux-ci sont encodés en
+                            utilisant l'élément <gi>name</gi> et en précisant la valeur du nom par
+                            l'attribut <att>type</att>
                             <specList>
-                                <specDesc key="name" atts="type"></specDesc>
+                                <specDesc key="name" atts="type"/>
                             </specList>
                         </p>
                     </div>
@@ -2455,15 +2525,13 @@ CC 3778 Li casteax ne doutoit assaut
                                 <specDesc key="listPlace"/>
                             </specList>
                         </p>
-                        
+
                         <p>Pour les personnes, les entrées prennent la forme</p>
                         <!-- On va avoir besoin de personGrp en plus de person pour les peuples -->
-                        
-                        
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            
-                        </egXML>
-                        
+
+
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+
                     </div>
                 </div>
             </div>
@@ -2612,10 +2680,11 @@ CC 3778 Li casteax ne doutoit assaut
                             <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
                             <constraint>
                                 <s:rule
-                                context="/tei:TEI[@type='ms' or @type = 'crit']/tei:text/tei:body//tei:note">
-                                <s:assert test="@type">Les notes
-                                    doivent être typées dans les transcriptions de ms. ou éditions à nouveaux frais.</s:assert>
-                            </s:rule>
+                                    context="/tei:TEI[@type='ms' or @type = 'crit']/tei:text/tei:body//tei:note">
+                                    <s:assert test="@type">Les notes doivent être typées dans les
+                                        transcriptions de ms. ou éditions à nouveaux
+                                        frais.</s:assert>
+                                </s:rule>
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -2641,7 +2710,8 @@ CC 3778 Li casteax ne doutoit assaut
                                     <!--  -->
                                 </valList>
                             </attDef>
-                            <attDef ident="anchored" mode="delete"/><!-- Retraits d'attributs propre à note -->
+                            <attDef ident="anchored" mode="delete"/>
+                            <!-- Retraits d'attributs propre à note -->
                             <attDef ident="targetEnd" mode="delete"/>
                         </attList>
                     </elementSpec>
@@ -2651,11 +2721,13 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="hi" mode="change">
                         <!-- @rend à définir avec vallist -->
                         <!-- TODO: cette contrainte ne marche pas -->
-                        <constraintSpec scheme="isoschematron" ident="rend-obligatoire-transcriptions">
+                        <constraintSpec scheme="isoschematron"
+                            ident="rend-obligatoire-transcriptions">
                             <constraint>
                                 <s:assert
                                     test="not(/tei:TEI[@type='ms']) or (/tei:TEI[@type='ms'] and not(//tei:hi[not(@rend)]) )"
-                                    >l'attribut @rend est obligatoire pour l'élément hi dans les transcriptions de manuscrit</s:assert>
+                                    >l'attribut @rend est obligatoire pour l'élément hi dans les
+                                    transcriptions de manuscrit</s:assert>
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -2713,25 +2785,25 @@ CC 3778 Li casteax ne doutoit assaut
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="quote" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="term" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="sic" mode="change">
-                        
-                    </elementSpec>
+                    <elementSpec ident="quote" mode="change"> </elementSpec>
+                    <elementSpec ident="term" mode="change"> </elementSpec>
+                    <elementSpec ident="sic" mode="change"> </elementSpec>
                     <elementSpec ident="corr" mode="change">
                         <attList>
                             <!--<attDef ident="cert" mode="delete"/>-->
                             <attDef ident="type" mode="change">
                                 <defaultVal>editorial</defaultVal>
                                 <valList mode="add">
-                                    <valItem ident="editorial" ><gloss>correction éditoriale</gloss>
-                                        <desc>caractérise une correction correspondant à une intervention de l'éditeur sur la leçon d'un manuscrit</desc>
+                                    <valItem ident="editorial">
+                                        <gloss>correction éditoriale</gloss>
+                                        <desc>caractérise une correction correspondant à une
+                                            intervention de l'éditeur sur la leçon d'un
+                                            manuscrit</desc>
                                     </valItem>
-                                    <valItem ident="erratum"><desc>caractérise la correction d'une coquille, ou de toute autre erreur extérieure à la tradition manuscrite</desc></valItem>
+                                    <valItem ident="erratum">
+                                        <desc>caractérise la correction d'une coquille, ou de toute
+                                            autre erreur extérieure à la tradition manuscrite</desc>
+                                    </valItem>
                                 </valList>
                             </attDef>
                         </attList>
@@ -2744,23 +2816,21 @@ CC 3778 Li casteax ne doutoit assaut
                             <!-- Voir s'il faut limiter à strictement deux -->
                         </content>
                     </elementSpec>
-                    <elementSpec ident="reg" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="orig" mode="change">
-                       
-                    </elementSpec>
+                    <elementSpec ident="reg" mode="change"> </elementSpec>
+                    <elementSpec ident="orig" mode="change"> </elementSpec>
                     <elementSpec ident="gap" mode="change">
                         <constraintSpec ident="typeNote" scheme="isoschematron">
                             <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
                             <constraint>
-                                    <s:assert test="@quantity or (@min and @max)">Une quantité (@quantity)
-                                    ou un intervalle (@min et @max) doit être précisé pour l'élément gap</s:assert>
+                                <s:assert test="@quantity or (@min and @max)">Une quantité
+                                    (@quantity) ou un intervalle (@min et @max) doit être précisé
+                                    pour l'élément gap</s:assert>
                             </constraint>
                         </constraintSpec>
                         <attList>
                             <attDef ident="hand" mode="delete"/>
-                            <attDef ident="agent" mode="delete"/><!-- À voir -->
+                            <attDef ident="agent" mode="delete"/>
+                            <!-- À voir -->
                             <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="add" type="closed">
                                     <valItem ident="fol">
@@ -2913,7 +2983,8 @@ CC 3778 Li casteax ne doutoit assaut
                                         <desc>problème dû au document de substitution</desc>
                                     </valItem>
                                     <valItem ident="lectio">
-                                        <desc>difficulté due à la substance de la leçon (incompréhensible, aberrante, …)</desc>
+                                        <desc>difficulté due à la substance de la leçon
+                                            (incompréhensible, aberrante, …)</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2922,43 +2993,39 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="name" mode="change">
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
-                                <desc>le typage des noms propres est obligatoire. Pour les cas qui le permettent,
-                                    l'usage des éléments spécialisés <gi>persName</gi> et <gi>placeName</gi> est préférable.
-                                </desc>
+                                <desc>le typage des noms propres est obligatoire. Pour les cas qui
+                                    le permettent, l'usage des éléments spécialisés
+                                        <gi>persName</gi> et <gi>placeName</gi> est préférable. </desc>
                                 <valList mode="add" type="closed">
                                     <valItem ident="épée"/>
                                     <valItem ident="cheval"/>
                                     <valItem ident="enseigne">
-                                        <desc>caractérise une enseigne (Monjoie, Naimant, Malo, etc.).</desc>
+                                        <desc>caractérise une enseigne (Monjoie, Naimant, Malo,
+                                            etc.).</desc>
                                     </valItem>
                                     <valItem ident="olifant">
-                                        <desc>caractérise le nom d'un cor ou d'un olifant (Dulce Joie, etc.).</desc>
+                                        <desc>caractérise le nom d'un cor ou d'un olifant (Dulce
+                                            Joie, etc.).</desc>
                                     </valItem>
                                     <valItem ident="plante">
-                                        <desc>caractérise un nom donné à une plante supposée porteuse de vertus</desc>
+                                        <desc>caractérise un nom donné à une plante supposée
+                                            porteuse de vertus</desc>
                                     </valItem>
                                     <valItem ident="fête">
                                         <desc>caractérise le nom d'une fête calendaire</desc>
                                     </valItem>
                                     <valItem ident="peuple">
-                                        <desc>caractérise un peuple, au sens large (Sarrasins, Franceis, Danois, Païens, etc.).</desc>
+                                        <desc>caractérise un peuple, au sens large (Sarrasins,
+                                            Franceis, Danois, Païens, etc.).</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="date" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="abbr" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="expan" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="head" mode="change">
-                        
-                    </elementSpec>
+                    <elementSpec ident="date" mode="change"> </elementSpec>
+                    <elementSpec ident="abbr" mode="change"> </elementSpec>
+                    <elementSpec ident="expan" mode="change"> </elementSpec>
+                    <elementSpec ident="head" mode="change"> </elementSpec>
                     <elementSpec ident="pb" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global.facs" mode="add"/>
@@ -3028,15 +3095,9 @@ CC 3778 Li casteax ne doutoit assaut
                                 celle-ci</ab>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="editor" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="respStmt" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="resp" mode="change">
-                       
-                    </elementSpec>
+                    <elementSpec ident="editor" mode="change"> </elementSpec>
+                    <elementSpec ident="respStmt" mode="change"> </elementSpec>
+                    <elementSpec ident="resp" mode="change"> </elementSpec>
                     <elementSpec ident="title" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
@@ -3094,9 +3155,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <!--<elementSpec ident="biblStruct"><!-\- Élément à préciser et documenter -\->
                         
                     </elementSpec>-->
-                    <elementSpec ident="listBibl" mode="change">
-                        
-                    </elementSpec>
+                    <elementSpec ident="listBibl" mode="change"> </elementSpec>
                     <elementSpec ident="l" mode="change">
                         <content>
                             <alternate minOccurs="1" maxOccurs="unbounded">
@@ -3149,7 +3208,8 @@ CC 3778 Li casteax ne doutoit assaut
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="xml:id" mode="change" usage="rec"/><!-- ou seulement obligatoire dans la version définitive? -->
+                            <attDef ident="xml:id" mode="change" usage="rec"/>
+                            <!-- ou seulement obligatoire dans la version définitive? -->
                             <!--<attDef ident="org" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="uniform"/>
@@ -3185,7 +3245,8 @@ CC 3778 Li casteax ne doutoit assaut
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="q" mode="change">
-                        <content><!-- Alignement du contenu sur le modèle des vers… À terme, il vaudra mieux définir une macro commune -->
+                        <content>
+                            <!-- Alignement du contenu sur le modèle des vers… À terme, il vaudra mieux définir une macro commune -->
                             <alternate minOccurs="1" maxOccurs="unbounded">
                                 <!--<classRef key="model.phrase"/>-->
                                 <!-- model.phrase à redéfinir pour restreindre -->
@@ -3223,12 +3284,17 @@ CC 3778 Li casteax ne doutoit assaut
                     -->
                     <classSpec type="atts" ident="att.cReferencing" module="tei" mode="delete"/>
                     <classSpec type="atts" module="tei" ident="att.datable" mode="change">
-                        <remarks xml:lang="fr"><p>Cette‘superclasse’ fournit des attributs qui peuvent être employés
-                            pour donner des valeurs normalisées à des informations relatives au temps. 
-                            Les attributs de la classe att.datable.w3c sont fournis. En général, les valeurs possibles des attributs, limitées aux types de données W3C, 
-                            forment un sous-ensemble des valeurs que l'on trouve dans la norme ISO 8601. 
-                            Cependant, il n'est peut-être pas nécessaire de recourir aux possibilités très étendues des types de données de l'ISO. 
-                            Il existe en effet une bien plus grande offre logicielle pour le traitement des types de données W3C.</p></remarks>
+                        <remarks xml:lang="fr">
+                            <p>Cette‘superclasse’ fournit des attributs qui peuvent être employés
+                                pour donner des valeurs normalisées à des informations relatives au
+                                temps. Les attributs de la classe att.datable.w3c sont fournis. En
+                                général, les valeurs possibles des attributs, limitées aux types de
+                                données W3C, forment un sous-ensemble des valeurs que l'on trouve
+                                dans la norme ISO 8601. Cependant, il n'est peut-être pas nécessaire
+                                de recourir aux possibilités très étendues des types de données de
+                                l'ISO. Il existe en effet une bien plus grande offre logicielle pour
+                                le traitement des types de données W3C.</p>
+                        </remarks>
                     </classSpec>
                     <classSpec ident="att.datcat" type="atts" module="tei" mode="delete"/>
                     <!-- On va quand même vraisemblablement avoir besoin de front et de back -->
@@ -3302,7 +3368,8 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec type="atts" ident="att.global.linking" module="tei" mode="change">
                         <attList>
                             <attDef ident="synch" mode="delete"/>
-                            <attDef ident="copyOf" mode="delete"/><!-- À voir -->
+                            <attDef ident="copyOf" mode="delete"/>
+                            <!-- À voir -->
                             <attDef ident="next" mode="delete"/>
                             <attDef ident="prev" mode="delete"/>
                             <attDef ident="exclude" mode="delete"/>
@@ -3381,7 +3448,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <dataSpec ident="teidata.pattern" module="tei" mode="delete"/>
                     <dataSpec ident="teidata.replacement" module="tei" mode="delete"/>
                     <dataSpec ident="teidata.temporal.iso" module="tei" mode="delete"/>
-                    <dataSpec ident="teidata.versionNumber" module="tei" mode="delete"></dataSpec>
+                    <dataSpec ident="teidata.versionNumber" module="tei" mode="delete"/>
 
                     <moduleRef key="textstructure" include="TEI back body front div text"/>
                     <elementSpec ident="TEI" mode="change">
@@ -3389,7 +3456,8 @@ CC 3778 Li casteax ne doutoit assaut
                             <constraint>
                                 
                             </constraint>
-                        </constraintSpec>--><!-- 
+                        </constraintSpec>-->
+                        <!-- 
                             TODO: contrainte à écrire pour vérifier 
                         que l'identifiant est bien formé.
                         -->
@@ -3401,19 +3469,24 @@ CC 3778 Li casteax ne doutoit assaut
                                 <valList mode="add" type="closed">
                                     <valItem ident="ed">
                                         <gloss>édition</gloss>
-                                        <desc>précise que le document contient une édition numérisée</desc></valItem>
+                                        <desc>précise que le document contient une édition
+                                            numérisée</desc>
+                                    </valItem>
                                     <valItem ident="transcr">
                                         <gloss>transcription</gloss>
-                                       <desc> précise que le document contient une transcription de témoin</desc>
+                                        <desc> précise que le document contient une transcription de
+                                            témoin</desc>
                                     </valItem>
                                     <valItem ident="crit">
                                         <gloss>texte critique</gloss>
-                                        <desc>précise que le document contient un apparat de variantes permettant 
-                                            la restitution d'un ou plusieurs textes critiques</desc>
+                                        <desc>précise que le document contient un apparat de
+                                            variantes permettant la restitution d'un ou plusieurs
+                                            textes critiques</desc>
                                     </valItem>
                                     <valItem ident="ms">
                                         <gloss>manuscrit</gloss>
-                                        <desc>précise que le document contient la description d'un manuscrit</desc>
+                                        <desc>précise que le document contient la description d'un
+                                            manuscrit</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -3427,25 +3500,34 @@ CC 3778 Li casteax ne doutoit assaut
                                     tiret et de la date, voir <ptr target="#DIV_INFR"/>)</desc>
                             </attDef>
                             <attDef ident="xml:lang" mode="change" usage="req">
-                                <remarks xml:lang="fr"><p>L'utilisation de <att>xml:lang</att> est obligatoire à la fois sur l'élément racine <gi>TEI</gi>
-                                    et sur les éléments <gi>text</gi>, dans la mesure où la langue principale du texte (ancien ou moyen français, ancien occitan, etc.) 
-                                    diffère de celle employée notamment dans le <gi>teiHeader</gi>. Il faut en outre préciser cet attribut à chaque fois que cela
-                                    est nécessaire.</p></remarks>
+                                <remarks xml:lang="fr">
+                                    <p>L'utilisation de <att>xml:lang</att> est obligatoire à la
+                                        fois sur l'élément racine <gi>TEI</gi> et sur les éléments
+                                            <gi>text</gi>, dans la mesure où la langue principale du
+                                        texte (ancien ou moyen français, ancien occitan, etc.)
+                                        diffère de celle employée notamment dans le
+                                            <gi>teiHeader</gi>. Il faut en outre préciser cet
+                                        attribut à chaque fois que cela est nécessaire.</p>
+                                </remarks>
                             </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="text" mode="change">
-                       <attList>
-                           <attDef ident="xml:lang" mode="change" usage="req">
-                               <remarks xml:lang="fr"><p>L'utilisation de <att>xml:lang</att> est obligatoire à la fois sur l'élément racine <gi>TEI</gi>
-                                   et sur les éléments <gi>text</gi>, dans la mesure où la langue principale du texte (ancien ou moyen français, ancien occitan, etc.) 
-                                   diffère de celle employée notamment dans le <gi>teiHeader</gi>. Il faut en outre préciser cet attribut à chaque fois que cela
-                                   est nécessaire.</p></remarks>
-                           </attDef>
-                       </attList>
+                        <attList>
+                            <attDef ident="xml:lang" mode="change" usage="req">
+                                <remarks xml:lang="fr">
+                                    <p>L'utilisation de <att>xml:lang</att> est obligatoire à la
+                                        fois sur l'élément racine <gi>TEI</gi> et sur les éléments
+                                            <gi>text</gi>, dans la mesure où la langue principale du
+                                        texte (ancien ou moyen français, ancien occitan, etc.)
+                                        diffère de celle employée notamment dans le
+                                            <gi>teiHeader</gi>. Il faut en outre préciser cet
+                                        attribut à chaque fois que cela est nécessaire.</p>
+                                </remarks>
+                            </attDef>
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="body" mode="change">
-                        
                         <!-- TODO: ajouter un exemple -->
                     </elementSpec>
                     <elementSpec ident="div" mode="change">
@@ -3462,40 +3544,40 @@ CC 3778 Li casteax ne doutoit assaut
                         </attList>
                     </elementSpec>
                     <moduleRef key="verse" include="att.metrical"/>
-                    
+
                     <moduleRef key="textcrit"
                         include="app lacunaStart lacunaEnd lem listWit rdg wit witDetail witness"/>
                     <elementSpec ident="app" mode="change">
+                        <content>
+                            <sequence preserveOrder="true">
+                                <elementRef key="lem" minOccurs="0" maxOccurs="1"/><!-- 1 seul lemme (ou aucun) -->
+                                <elementRef key="rdg" minOccurs="1" maxOccurs="unbounded"/> <!-- au moins 1 rdg -->
+                                <elementRef key="witDetail" minOccurs="0" maxOccurs="unbounded"/><!-- optionnel et répétable -->
+                            </sequence>
+                        </content>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="rec"/>
                             <attDef ident="from" mode="delete"/>
                             <attDef ident="to" mode="delete"/>
                             <attDef ident="loc" mode="delete"/>
                         </attList>
-                        <remarks xml:lang="fr"><p>Il est préférable que les lieux variants possèdent un <att>xml:id</att>.</p></remarks>
+                        <remarks xml:lang="fr">
+                            <p>Il est préférable que les lieux variants possèdent un
+                                    <att>xml:id</att>.</p>
+                        </remarks>
                     </elementSpec>
-                    <elementSpec ident="lem" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="rdg" mode="change">
-                        
-                    </elementSpec>
+                    <elementSpec ident="lem" mode="change"> </elementSpec>
+                    <elementSpec ident="rdg" mode="change"> </elementSpec>
                     <elementSpec ident="witDetail" mode="change">
                         <attList>
                             <attDef ident="place" mode="delete"/>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="wit" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="listWit" mode="change">
-                        
-                    </elementSpec>
-                    <elementSpec ident="witness" mode="change">
-                        
-                    </elementSpec>
+                    <elementSpec ident="wit" mode="change"> </elementSpec>
+                    <elementSpec ident="listWit" mode="change"> </elementSpec>
+                    <elementSpec ident="witness" mode="change"> </elementSpec>
                     <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="change">
-                    <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->    
+                        <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->
                     </classSpec>
                     <moduleRef key="analysis" include="c pc w"/>
                     <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
@@ -3534,9 +3616,11 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <constraintSpec ident="noBlanksInW" scheme="isoschematron">
                             <constraint>
-                                <s:assert test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]"
-                                    >Les mots (w) ne doivent pas contenir de nœuds de textes 
-                                    avec des blancs (utiliser space).</s:assert><!-- TODO: vérifier que fonctionne bien -->
+                                <s:assert
+                                    test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]"
+                                    >Les mots (w) ne doivent pas contenir de nœuds de textes avec
+                                    des blancs (utiliser
+                                space).</s:assert><!-- TODO: vérifier que fonctionne bien -->
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -3571,8 +3655,10 @@ CC 3778 Li casteax ne doutoit assaut
                         <attList>
                             <!-- Il faut reprendre les attributs de cet élément, en clarifiant l'usage de type
                             et celui de rend-->
-                            <attDef ident="force" mode="delete"/><!-- Voir, après la modélisation de la syntaxe, si on en a besoin -->
-                            <attDef ident="unit" mode="delete"/><!-- Voir si on en a besoin -->
+                            <attDef ident="force" mode="delete"/>
+                            <!-- Voir, après la modélisation de la syntaxe, si on en a besoin -->
+                            <attDef ident="unit" mode="delete"/>
+                            <!-- Voir si on en a besoin -->
                             <attDef ident="pre" mode="delete"/>
                             <!--<attDef ident="rend" mode="change" usage="opt">
                             </attDef>-->
@@ -3617,11 +3703,24 @@ CC 3778 Li casteax ne doutoit assaut
                         include="addName country forename listPerson listPlace nameLink orgName persName person placeName roleName settlement surname"/>
                     <!-- Modèle de person et listPerson à préciser -->
                     <classSpec type="atts" module="namesdates" ident="att.datable.iso" mode="delete"/>
-                    <classSpec type="atts" module="namesdates" ident="att.datable.custom" mode="delete"/>
+                    <classSpec type="atts" module="namesdates" ident="att.datable.custom"
+                        mode="delete"/>
+                    <elementSpec ident="persName" module="namesdates" mode="change">
+                        <constraintSpec scheme="isoschematron" ident="persNameContent">
+                        <constraint>
+                            <s:rule
+                                context="//tei:body//tei:persName">
+                            <s:assert test="tei:forename or tei:addName">un élément persName
+                                du corps du document
+                            doit contenir un nom de personne, sous la forme d'un prénom (forename)
+                            et/ou d'une périphrase, épithète, etc. (addName).</s:assert>
+                            </s:rule>
+                        </constraint>
+                        </constraintSpec>
+                    </elementSpec>
                     <elementSpec ident="person" module="namesdates" mode="change">
                         <content>
-                            <alternate minOccurs="0"
-                                maxOccurs="unbounded">
+                            <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.personPart"/>
                                 <classRef key="model.global"/>
                             </alternate>
@@ -3629,20 +3728,23 @@ CC 3778 Li casteax ne doutoit assaut
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                         </attList>
-                        <remarks xml:lang="fr"><p>L'attribut <att>xml:id</att> est obligatoire pour l'indexation des
-                            personnes, afin de rendre systématiquement possible l'indexation des occurrences.</p></remarks>
+                        <remarks xml:lang="fr">
+                            <p>L'attribut <att>xml:id</att> est obligatoire pour l'indexation des
+                                personnes, afin de rendre systématiquement possible l'indexation des
+                                occurrences.</p>
+                        </remarks>
                     </elementSpec>
-                    
-                    
+
+
                     <moduleRef key="transcr"
-                        include="am damage ex facsimile handShift space subst surface surfaceGrp zone"/>
+                        include="am damage ex facsimile handShift space subst supplied surface surfaceGrp zone"/>
                     <!-- TODO: configuration de facsimile, surface, surfaceGrp et zone à faire -->
                     <!-- J'ajoute handshift -->
                     <elementSpec ident="ex" mode="change">
                         <classes mode="change">
                             <memberOf key="model.choicePart" mode="delete"/>
                         </classes>
-                        
+
                     </elementSpec>
                     <elementSpec ident="am" mode="change">
                         <classes mode="change">
@@ -3683,7 +3785,8 @@ CC 3778 Li casteax ne doutoit assaut
                                 </valList>
                             </attDef>
                             <!--<attDef ident="dim" mode="delete">
-                            </attDef>--><!-- Je le garde pour le moment, à réfléchir -->
+                            </attDef>-->
+                            <!-- Je le garde pour le moment, à réfléchir -->
                             <!--<attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>-->
                         </attList>
@@ -3712,13 +3815,52 @@ CC 3778 Li casteax ne doutoit assaut
                                 <elementRef key="add"/>
                             </alternate>
                         </content>
-                       
+
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <w>p<subst><del rend="repassé">lu</del><add place="inplace"
                                         >ui</add></subst>s</w>
                             </egXML>
                         </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="supplied" module="transcr" mode="change">
+                        <desc>permet d'encoder du texte restitué par l'éditeur 
+                            parce que le texte du document original ne peut être lu, 
+                            par suite de dommages matériels ou de lacunes.</desc>
+                        <classes mode="change">
+                            <memberOf key="model.choicePart" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <attDef ident="reason" mode="change" usage="req">
+                                <datatype maxOccurs="1">
+                                    <dataRef key="teidata.word"/>
+                                </datatype>
+                                <valList type="semi" mode="add">
+                                    <valItem ident="overbinding">
+                                        <gloss>sous la reliure</gloss>
+                                        <desc>le texte source est caché par la reliure</desc>
+                                    </valItem>
+                                    <valItem ident="faded-ink">
+                                        <gloss>encre effacée</gloss>
+                                        <desc>le texte source est illisible car l'encre est effacée</desc>
+                                    </valItem>
+                                    <valItem ident="damage">
+                                        <gloss>dégat matériel</gloss>
+                                        <desc>le texte source est illisible en raison d'un dégat matériel</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <remarks xml:lang="fr">
+                            <p>Le contenu est limité à du texte seul, car l'emploi de 
+                                <gi>supplied</gi> est très restreint. Dans le cas d'une portion
+                                importante empruntée à un autre témoin, c'est-à-dire d'une variante,
+                                on utilisera plutot l'élément <gi>app</gi> et ses sous-éléments.
+                            </p>
+                        </remarks>
                     </elementSpec>
                     <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete"/>
                     <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete"/>
@@ -3733,7 +3875,7 @@ CC 3778 Li casteax ne doutoit assaut
                         include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc scriptNote seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
                     <!-- À voir ce qu'on fait de celui-là -->
                     <elementSpec ident="msDesc" mode="change">
-                        <classes>
+                        <classes mode="change">
                             <memberOf key="model.biblLike" mode="delete"/>
                         </classes>
                         <content>
@@ -3781,10 +3923,21 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                     </elementSpec>
                     <elementSpec ident="msContents" mode="change">
+                        <desc xml:lang="fr">décrit le contenu intellectuel d'un manuscrit ou d'une
+                            partie d'un
+                            manuscrit<!--, soit en une série de paragraphes <term>p</term>, soit-->
+                            sous la forme d'une série d'éléments structurés <term>msItem</term>
+                            concernant les items du manuscrit.</desc>
                         <content>
                             <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="msItem" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
+                        <remarks xml:lang="fr">
+                            <p>Cet élément doit contenir un ou plusieurs items de contenu
+                                    (<gi>msItem</gi>), éventuellement précédés d'une présentation
+                                d'ensemble (<gi>summary</gi>) lorsque la situation le justifie.</p>
+                        </remarks>
+
                     </elementSpec>
                     <elementSpec ident="msItem" mode="change">
                         <content>
@@ -3792,20 +3945,20 @@ CC 3778 Li casteax ne doutoit assaut
                                 <elementRef key="locus"/>
                                 <elementRef key="locusGrp"/>
                             </alternate>
-                                <elementRef key="author" minOccurs="0"/>
-                                <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="title"/>
-                                <elementRef key="idno"/>
-                                <elementRef key="note" minOccurs="0"/>
-                                <elementRef key="rubric" minOccurs="0"/>
-                                <elementRef key="incipit"/>
-                                <elementRef key="explicit"/>
-                                <elementRef key="finalRubric" minOccurs="0"/>
-                                <elementRef key="colophon" minOccurs="0"/>
-                                <elementRef key="decoNote" minOccurs="0"/>
-                                <elementRef key="listBibl" minOccurs="0"/>
-                                <elementRef key="textLang"/>
-                                <elementRef key="filiation" minOccurs="0"/>
+                            <elementRef key="author" minOccurs="0"/>
+                            <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="title"/>
+                            <elementRef key="idno"/>
+                            <elementRef key="note" minOccurs="0"/>
+                            <elementRef key="rubric" minOccurs="0"/>
+                            <elementRef key="incipit"/>
+                            <elementRef key="explicit"/>
+                            <elementRef key="finalRubric" minOccurs="0"/>
+                            <elementRef key="colophon" minOccurs="0"/>
+                            <elementRef key="decoNote" minOccurs="0"/>
+                            <elementRef key="listBibl" minOccurs="0"/>
+                            <elementRef key="textLang"/>
+                            <elementRef key="filiation" minOccurs="0"/>
                         </content>
                     </elementSpec>
                     <elementSpec ident="locusGrp" mode="change">
@@ -3814,13 +3967,13 @@ CC 3778 Li casteax ne doutoit assaut
                         </attList>
                     </elementSpec>
                     <elementSpec ident="locus" mode="change">
-                        <desc>définit une séquence continue de références de feuillets au sein d'un manuscrit ou d'une
-                            partie de manuscrit.</desc>
+                        <desc>définit une séquence continue de références de feuillets au sein d'un
+                            manuscrit ou d'une partie de manuscrit.</desc>
                         <attList>
                             <attDef ident="scheme" mode="change" usage="req">
-                                <desc>désigne le système de foliotation 
-                                utilisé pour localiser la subdivision du manuscrit qui est en cours de description,
-                                par le biais d'un pointeur vers un élément <gi>foliation</gi>.</desc>
+                                <desc>désigne le système de foliotation utilisé pour localiser la
+                                    subdivision du manuscrit qui est en cours de description, par le
+                                    biais d'un pointeur vers un élément <gi>foliation</gi>.</desc>
                             </attDef>
                             <attDef ident="from" mode="change" usage="req"/>
                             <attDef ident="to" mode="change" usage="req"/>
@@ -3832,9 +3985,10 @@ CC 3778 Li casteax ne doutoit assaut
                         </attList>
                     </elementSpec>
                     <elementSpec ident="physDesc" mode="change">
-                        <desc xml:lang="fr">contient la description physique complète d'un
-                            manuscrit ou d'un fragment d'un manuscrit, structurée en utilisant les éléments
-                            plus spécialisés appartenant à la classe <ident type="class">model.physDescPart</ident>.</desc>
+                        <desc xml:lang="fr">contient la description physique complète d'un manuscrit
+                            ou d'un fragment d'un manuscrit, structurée en utilisant les éléments
+                            plus spécialisés appartenant à la classe <ident type="class"
+                                >model.physDescPart</ident>.</desc>
                         <content>
                             <elementRef key="objectDesc"/>
                             <elementRef key="handDesc"/>
@@ -3858,11 +4012,95 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="extent"/>
                             <elementRef key="foliation" maxOccurs="unbounded"/>
                             <elementRef key="collation"/>
-                            <elementRef key="condition"
-                                minOccurs="0"/>
+                            <elementRef key="condition" minOccurs="0"/>
+                        </content>
+                        <attList>
+                            <attDef ident="material" mode="change" usage="req">
+                                <valList type="closed">
+                                    <valItem ident="paper">
+                                        <gloss>papier</gloss>
+                                    </valItem>
+                                    <valItem ident="parch">
+                                        <gloss xml:lang="fr">parchemin</gloss>
+                                    </valItem>
+                                    <valItem ident="mixed">
+                                        <gloss>papier et parchemin mêlés</gloss>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="support" mode="change">
+                        <content>
+                            <sequence minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="locus" minOccurs="0"/>
+                                <elementRef key="material"/>
+                                <elementRef key="dimensions" maxOccurs="unbounded"/>
+                                <elementRef key="watermark" minOccurs="0"/>
+                                <elementRef key="note" minOccurs="0"/>
+                            </sequence>
                         </content>
                     </elementSpec>
+                    <elementSpec ident="material" mode="change">
+                        <content>
+                            <alternate>
+                                <textNode/>
+                                <elementRef key="term"/>
+                                <elementRef key="locusGrp"/>
+                                <elementRef key="locus"/>
+                            </alternate>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="extent" mode="change">
+                        <content>
+                            <elementRef key="measure" maxOccurs="unbounded"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="measure" mode="change">
+                        <content/>
+                        <attList>
+                            <attDef ident="quantity" mode="change" usage="req"/>
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList type="semi">
+                                    <valItem ident="leaf"><gloss>feuillet(s)</gloss></valItem>
+                                    <valItem ident="guard-leaf"><gloss>feuillet(s) de garde</gloss></valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
                     
+                    <elementSpec ident="foliation" mode="change">
+                        <content>
+                            <!-- TODO: définir une classe de contenu, pour ces cas fréquents? -->
+                            <alternate>
+                                <textNode/>
+                                <elementRef key="term"/>
+                                <elementRef key="locus"/>
+                                <elementRef key="locusGrp"/>
+                            </alternate>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="decoDesc" mode="change">
+                        <desc xml:lang="fr">contient la description de la décoration du manuscrit<!--,
+                            soit en une série de paragraphes <term>p</term>, soit--> sous la forme
+                            d'une série d'éléments thématiques <gi>decoNote</gi>, éventuellement 
+                            précédés d'un <gi>summary</gi>.
+                        </desc>
+                        <content>
+                            <sequence>
+                                <elementRef key="summary" minOccurs="0"/>
+                                <elementRef key="decoNote" minOccurs="1" maxOccurs="unbounded"/>
+                            </sequence>
+                        </content>
+                        <remarks xml:lang="fr"
+                            ><p>En cas d'absence totale de décoration, on utilisera un élément
+                                <gi>decoNote</gi> pour le préciser.</p>
+                            
+                        </remarks>
+                    </elementSpec>
+
+
                     <elementSpec ident="history" mode="change">
                         <content>
                             <sequence>
