@@ -12,15 +12,13 @@
         <!-- Quelques vérifications générales -->
         <xsl:for-each-group select="descendant::tei:w" group-by="@lemma">
             <xsl:sort/>
-            <!--<xsl:if
-                test="count(distinct-values(current-group()/substring(tokenize(@type, ' ')[1], 20, 6))) > 1">-->
             <xsl:if
-                    test="count(distinct-values(current-group()/substring-after(tokenize(@type, '\|')[1], 'POS='))) > 1">
+                test="count(distinct-values(current-group()/substring(tokenize(@ana, ' ')[1], 20, 6))) > 1">
                 <xsl:text>Le lemme suivant a plusieurs catégories - </xsl:text>
                 <xsl:value-of select="current-grouping-key()"/>
                 <xsl:text>:</xsl:text>
                 <xsl:for-each-group select="current-group()"
-                    group-by="substring-after(tokenize(@type, '\|')[1], 'POS=')">
+                    group-by="substring(tokenize(@ana, ' ')[1], 20, 6)">
                     <xsl:sort/>
                     <xsl:value-of select="current-grouping-key()"/>
                     <xsl:text> </xsl:text>
@@ -34,26 +32,20 @@
     </xsl:template>
 
     <xsl:template match="tei:w">
-        <!-- Modifications pour aligner sur nouvel usage des @type. Si on réécrit la feuille pour fonctionner proprement
+        <!-- Modifications pour aligner sur nouvel usage des @ana. Si on réécrit la feuille pour fonctionner proprement
         avec les étiquettes préfixées, on pourra alléger.
         -->
-        <!-- EDIT 18 octobre 2017: on passe à type maintenant -->
-        <!--<xsl:variable name="anaBrut" select="tokenize(translate(@type, '#', ''), '\s+')"/>-->
+        <xsl:variable name="anaBrut" select="tokenize(translate(@ana, '#', ''), '\s+')"/>
         <xsl:variable name="ana" as="xs:string+">
-            <xsl:for-each select="tokenize(@type, '\|')">
-                <xsl:value-of select="substring-after(.,'=')"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <!--<xsl:variable name="ana" as="xs:string+">
             <xsl:for-each select="$anaBrut">
                 <xsl:choose>
-                    <xsl:when test="matches(., 'CATTEX2009_MS_')"><!-\- POS et flect. en MS-\->
+                    <xsl:when test="matches(., 'CATTEX2009_MS_')"><!-- POS et flect. en MS-->
                         <xsl:value-of select="substring-after(substring-after(., 'CATTEX2009_MS_'), '_')"/>
                     </xsl:when>
-                    <xsl:otherwise/><!-\- Morphologie pure exclue -\->
+                    <xsl:otherwise/><!-- Morphologie pure exclue -->
                 </xsl:choose>
             </xsl:for-each>
-        </xsl:variable>-->
+        </xsl:variable>
         <xsl:variable name="contenu">
             <xsl:apply-templates/>
         </xsl:variable>
@@ -523,7 +515,7 @@
                 </xsl:if>
                 <xsl:if
                     test="matches(
-                        following::tei:w[1]/@type,'NOMcom')
+                        following::tei:w[1]/@ana,'NOMcom')
                         ">
                     <xsl:value-of select="@xml:id"/>
                     <xsl:text>: 'il' devant un subst. (?)&#xA;</xsl:text>
@@ -536,11 +528,11 @@
                 </xsl:if>
                 <xsl:if
                     test="
-                    not(matches(following::tei:w[1]/@type, 'NOM(com|pro)'))
-                        and not(matches(following::tei:w[1]/@type, 'ADJ'))
-                        and not(matches(following::tei:w[1]/@type, 'VERppe'))
-                        and not(matches(following::tei:w[1]/@type, 'VERppa'))
-                        and not(matches(following::tei:w[1]/@type, 'PRO(ind|car|pos|ord)'))
+                    not(matches(following::tei:w[1]/@ana, 'NOM(com|pro)'))
+                        and not(matches(following::tei:w[1]/@ana, 'ADJ'))
+                        and not(matches(following::tei:w[1]/@ana, 'VERppe'))
+                        and not(matches(following::tei:w[1]/@ana, 'VERppa'))
+                        and not(matches(following::tei:w[1]/@ana, 'PRO(ind|car|pos|ord)'))
                         and not(following::tei:w[1]/@lemma = 'plus')
                         ">
                     <xsl:value-of select="@xml:id"/>
@@ -576,7 +568,7 @@
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: 'cant1' (QUANDO) ou 'cant2' (QUANTUM) ?&#xA;</xsl:text>
             </xsl:when>
-            <xsl:when test="@lemma = 'cant2' and not(matches(@type, 'ind'))">
+            <xsl:when test="@lemma = 'cant2' and not(matches(@ana, 'ind'))">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: 'cant1' (QUANDO) ou 'cant2' (QUANTUM) ?&#xA;</xsl:text>
             </xsl:when>
@@ -592,13 +584,13 @@
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: 'qui' est PROrel ou int&#xA;</xsl:text>
             </xsl:when>
-            <xsl:when test="matches(@type, 'VER') and not(matches(@lemma, 're?\d?$'))">
+            <xsl:when test="matches(@ana, 'VER') and not(matches(@lemma, 're?\d?$'))">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: lemme verbal bizarre, </xsl:text>
                 <xsl:value-of select="@lemma"/>
                 <xsl:text>&#xA;</xsl:text>
             </xsl:when>
-            <xsl:when test="matches(@type, 'VERinf') and not(matches($contenu, 're?$'))">
+            <xsl:when test="matches(@ana, 'VERinf') and not(matches($contenu, 're?$'))">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: infinitif sans terminaison d'infinitif, </xsl:text>
                 <xsl:value-of select="$contenu"/>
@@ -619,7 +611,7 @@
                 test="
                     @lemma = ('mon1', 'ton4', 'son4', 'mien', 'tuen', 'suen', 'nostre', 'vostre', 'lor2')
                     ">
-                <xsl:if test="not(matches(@type, 'pos'))">
+                <xsl:if test="not(matches(@ana, 'pos'))">
                     <xsl:value-of select="@xml:id"/>
                     <xsl:text>: lemme de possessif et étiquette contradictoire&#xA;</xsl:text>
                 </xsl:if>
@@ -648,7 +640,7 @@
             </xsl:when>
             <xsl:when
                 test="
-                    @lemma = 'qui' and (tokenize(preceding::tei:w[1]/@type, ' ')[1] = '#PRE'
+                    @lemma = 'qui' and (tokenize(preceding::tei:w[1]/@ana, ' ')[1] = '#PRE'
                     or $ana[3] = ('r', 'i')
                     )
                     ">
@@ -673,7 +665,7 @@
             </xsl:when>
             <xsl:when
                 test="
-                    @lemma = ('tot', 'trestot') and matches(following::tei:w[1]/@type, 'DET')
+                    @lemma = ('tot', 'trestot') and matches(following::tei:w[1]/@ana, 'DET')
                     and $ana[1] != 'DETind'">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: 'tot' prédéterminant qui n'est pas étiqueté comme tel (?)&#xA;</xsl:text>
@@ -685,16 +677,16 @@
             <xsl:when
                 test="
                     $ana[1] = 'PRE' and
-                    (matches(following::tei:w[1]/@type, 'VERcjg')
+                    (matches(following::tei:w[1]/@ana, 'VERcjg')
                     or
-                    matches(following::tei:w[1]/@type, 'CON')
+                    matches(following::tei:w[1]/@ana, 'CON')
                     or
-                    matches(following::tei:w[1]/@type, 'PRE')
+                    matches(following::tei:w[1]/@ana, 'PRE')
                     )
                     ">
                 <!-- Je retire
                     or 
-                matches(following::tei:w[1]/@type, 'ADV') 
+                matches(following::tei:w[1]/@ana, 'ADV') 
                 => préposition devant un adverbe ne me paraît pas un problème (souplesse des prépositions/adverbes en AF)
                 -->
                 <xsl:if
@@ -705,32 +697,32 @@
                         )">
                     <xsl:value-of select="@xml:id"/>
                     <xsl:text>: PRE devant un </xsl:text>
-                    <xsl:value-of select="tokenize(following::tei:w[1]/@type, ' ')[1]"/>
+                    <xsl:value-of select="tokenize(following::tei:w[1]/@ana, ' ')[1]"/>
                     <xsl:text>&#xA;</xsl:text>
                 </xsl:if>
             </xsl:when>
             <xsl:when
                 test="
                     $ana[1] = 'PROadv' and
-                    not(matches(following::tei:w[1]/@type, 'VER'))
+                    not(matches(following::tei:w[1]/@ana, 'VER'))
                     ">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: PROadv devant un </xsl:text>
-                <xsl:value-of select="tokenize(following::tei:w[1]/@type, ' ')[1]"/>
+                <xsl:value-of select="tokenize(following::tei:w[1]/@ana, ' ')[1]"/>
                 <xsl:text>&#xA;</xsl:text>
             </xsl:when>
             <xsl:when
                 test="
-                    matches(@type, 'DET') and (not(@lemma = ('tot', 'trestot'))) and
+                    matches(@ana, 'DET') and (not(@lemma = ('tot', 'trestot'))) and
                     $ana[1] != 'DETcar'
-                    and matches(following::tei:w[1]/@type, 'DET')
+                    and matches(following::tei:w[1]/@ana, 'DET')
                     ">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: deux déterminants qui se suivent &#xA;</xsl:text>
             </xsl:when>
             <xsl:when
                 test="
-                    matches(@type, 'PRO') and matches(following::tei:w[1]/@type, 'NOM(com|pro)') and ./ancestor::tei:l is following::tei:w[1]/ancestor::tei:l
+                    matches(@ana, 'PRO') and matches(following::tei:w[1]/@ana, 'NOM(com|pro)') and ./ancestor::tei:l is following::tei:w[1]/ancestor::tei:l
                     and not($ana[1] = 'PROrel')
                     ">
                 <xsl:value-of select="@xml:id"/>
@@ -743,7 +735,7 @@
             <xsl:when
                 test="
                     (($ana[1] = 'PROper' and not($ana[5] = 'i')) or ($ana[1] = 'PROrel' and not($ana[4] = 'i')))
-                    and matches(preceding::tei:w[1]/@type, 'PRE')
+                    and matches(preceding::tei:w[1]/@ana, 'PRE')
                     ">
                 <xsl:value-of select="@xml:id"/>
                 <xsl:text>: </xsl:text>
@@ -778,32 +770,28 @@
             <!-- ACCORD DU GROUPE NOMINAL -->
             <xsl:when
                 test="
-                    (matches($ana[1], 'DET') and matches(following::tei:w[1]/@type, '(DET|ADJ|NOM|VERppe)')
-                    or matches($ana[1], 'ADJ') and matches(following::tei:w[1]/@type, 'NOM(com|pro)')
-                    or matches($ana[1], 'DET|NOM') and matches(following::tei:w[1]/@type, 'ADJ')
-                    or matches($ana[1], 'DET|NOM') and matches(following::tei:w[1]/@type, 'VERppa') and not(matches(following::tei:w[1]/@type, '_x\s'))
+                    (matches($ana[1], 'DET') and matches(following::tei:w[1]/@ana, '(DET|ADJ|NOM|VERppe)')
+                    or matches($ana[1], 'ADJ') and matches(following::tei:w[1]/@ana, 'NOM(com|pro)')
+                    or matches($ana[1], 'DET|NOM') and matches(following::tei:w[1]/@ana, 'ADJ')
+                    or matches($ana[1], 'DET|NOM') and matches(following::tei:w[1]/@ana, 'VERppa') and not(matches(following::tei:w[1]/@ana, '_x\s'))
                     )
                     and ./ancestor::tei:l is following::tei:w[1]/ancestor::tei:l">
-                <!-- JBC: todo, maintenant qu'on étiquette ça plus proprement avec
-                le nom de chaque étiquette morphologique
-                -->
                 <xsl:variable name="followingWanaBrut"
                     select="
-                        if (matches(following::tei:w[1]/@type, '(ADJ|PRO|DET)pos'))
+                        if (matches(following::tei:w[1]/@ana, '(ADJ|PRO|DET)pos'))
                         then
-                            tokenize(following::tei:w[1]/@type, '\|')[position() != 2]
+                            tokenize(translate(following::tei:w[1]/@ana, '#', ''), '\s+')[position() != 2]
                         else
-                            tokenize(following::tei:w[1]/@type, '\|')
+                            tokenize(translate(following::tei:w[1]/@ana, '#', ''), '\s+')
                         "/>
                 <xsl:variable name="followingWana" as="xs:string+">
                     <xsl:for-each select="$followingWanaBrut">
-                        <!--<xsl:choose>
-                            <xsl:when test="matches(., 'CATTEX2009_MS_')"><!-\- POS et flect. en MS-\->
+                        <xsl:choose>
+                            <xsl:when test="matches(., 'CATTEX2009_MS_')"><!-- POS et flect. en MS-->
                                 <xsl:value-of select="substring-after(substring-after(., 'CATTEX2009_MS_'), '_')"/>
                             </xsl:when>
-                            <xsl:otherwise/><!-\- Morphologie pure exclue -\->
-                        </xsl:choose>-->
-                        <xsl:value-of select="substring-after(., '=')"/>
+                            <xsl:otherwise/><!-- Morphologie pure exclue -->
+                        </xsl:choose>
                     </xsl:for-each>
                 </xsl:variable>
                 
@@ -831,23 +819,23 @@
                 <xsl:variable name="monMot" select="."/>
                 <xsl:variable name="nombreEtPers" select="if ($ana[2] = ('imp', 'con') ) then $ana[position() > 2] else $ana[position() > 3]"/>
                 <xsl:variable name="sujets" select="
-                    preceding::tei:w[matches(@type, '(NOM|PROper).*#(f|m|n)\s+#n') 
+                    preceding::tei:w[matches(@ana, '(NOM|PROper).*#(f|m|n)\s+#n') 
                     and (ancestor::tei:q is $monContexte or ancestor::tei:l is $monContexte)  
-                    and following::tei:w[matches(@type, 'VERcjg')][1] is $monMot
+                    and following::tei:w[matches(@ana, 'VERcjg')][1] is $monMot
                     and following::tei:pc[@type='supplied'][1] is $maPonctSuiv
                     ][1]
                     | 
-                    following::tei:w[matches(@type, '(NOM|PROper).*#(f|m|n)\s+#n') 
+                    following::tei:w[matches(@ana, '(NOM|PROper).*#(f|m|n)\s+#n') 
                     and (ancestor::tei:q is $monContexte or ancestor::tei:l is $monContexte)
-                    and preceding::tei:w[matches(@type, 'VERcjg')][1] is $monMot 
+                    and preceding::tei:w[matches(@ana, 'VERcjg')][1] is $monMot 
                     and preceding::tei:pc[@type='supplied'][1] is $maPonctPréc
                     ][1]
                     "/>
                 <xsl:for-each select="$sujets"><!-\- un nom appelle la plupart du temps une troisième personne… (va créer du bruit en raison de l'apostrophe) -\->
                     <xsl:variable name="followingWana" select="
-                        if (matches(@type, 'PRO')) 
-                        then tokenize(translate(@type, '#', ''), '\s+')[position() > 1]
-                        else ('3', tokenize(translate(@type, '#', ''), '\s+')[position() > 1])
+                        if (matches(@ana, 'PRO')) 
+                        then tokenize(translate(@ana, '#', ''), '\s+')[position() > 1]
+                        else ('3', tokenize(translate(@ana, '#', ''), '\s+')[position() > 1])
                         "/>
                     <xsl:if test="not( deep-equal($nombreEtPers, $followingWana[position() &lt; 3]))">
                         <xsl:value-of select="@xml:id"/>

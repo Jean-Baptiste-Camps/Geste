@@ -38,31 +38,29 @@
     <xsl:template match="tei:w">
         <xsl:variable name="monID" select="@xml:id"/>
         <xsl:variable name="mesPOS" select="$POS//row[ID = $monID]"/>
-        <xsl:variable name="monType">
+        <xsl:variable name="monAna">
             <xsl:for-each select="$mesPOS/(PPOS|MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']">
-                <!--<xsl:text>#</xsl:text>
-                <xsl:text>CATTEX2009_MS_</xsl:text>-->
+                <xsl:text>#</xsl:text>
+                <xsl:text>CATTEX2009_MS_</xsl:text>
                 <xsl:choose>
                     <xsl:when test="local-name(.) ='PPOS'">
-                        <xsl:text>POS=</xsl:text>
+                        <xsl:text>pos_</xsl:text>
                     </xsl:when>
                     <xsl:when test="local-name(.) ='DEGRÉ'">
-                        <xsl:text>DEGRE=</xsl:text>
+                        <xsl:text>DEGRE_</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="local-name()"/>
-                        <xsl:text>=</xsl:text>
+                        <xsl:text>_</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:value-of select="."/>
                 <xsl:if test="position() != last()">
-                <xsl:text>|</xsl:text>
+                <xsl:text> </xsl:text>
                 </xsl:if>
             </xsl:for-each>
-        </xsl:variable>
-        <xsl:variable name="monAna">
             <xsl:if test="$mesPOS/PPOSM[. != '']">
-                <xsl:text>#</xsl:text>
+                <xsl:text> #</xsl:text>
                 <xsl:text>CATTEX2009_M_</xsl:text>
                 <xsl:value-of select="."/>
             </xsl:if>
@@ -103,10 +101,7 @@
         </xsl:variable>
         <xsl:copy>
             <xsl:attribute name="lemma" select="normalize-space(normalize-unicode($mesPOS/PLEMMA, 'NFC'))"/>
-            <xsl:attribute name="type" select="normalize-space(normalize-unicode($monType, 'NFC'))"/>
-            <xsl:if test="$monAna != ''">
-                <xsl:attribute name="ana" select="normalize-space(normalize-unicode($monAna, 'NFC'))"/>
-            </xsl:if>
+            <xsl:attribute name="ana" select="normalize-space(normalize-unicode($monAna, 'NFC'))"/>
             <xsl:apply-templates select=" node() |  @*"/>
         </xsl:copy>
     </xsl:template>
