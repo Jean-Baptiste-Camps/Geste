@@ -12,7 +12,9 @@
   
   
 -->
-
+<!-- TODO: problèmes de compte des mots vis-à-vis de la lemmatisation
+Certaines variantes pas dans des vers +> ne coïncide pas.
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GuiBourgG" type="ed" xml:lang="fr">
   <teiHeader>
     <fileDesc>
@@ -47,7 +49,7 @@
         <date>2016</date>
       </publicationStmt>
       <sourceDesc>
-        <biblStruct>
+        <biblStruct xml:id="edG">
           <monogr>
             <editor xml:id="Guessard">
               <persName>
@@ -20889,15 +20891,20 @@
         </l>
         <app>
           <lem wit="#a"/>
+          <!-- TODO: problème compte des mots ici => pas
+          pris en compte dans la lemmatisation.. Car en dehors d'un vers, je pense
+          -->
           <rdg wit="#b">
-            <w>Tebalt</w>
-            <w>et</w>
-            <w>Alori</w>
-            <pc type="supplied">,</pc>
-            <w>Malvaisin</w>
-            <w>et</w>
-            <w>Mauré</w>
-            <pc type="supplied">.</pc>
+            <l>
+              <w>Tebalt</w>
+              <w>et</w>
+              <w>Alori</w>
+              <pc type="supplied">,</pc>
+              <w>Malvaisin</w>
+              <w>et</w>
+              <w>Mauré</w>
+              <pc type="supplied">.</pc>
+            </l>
           </rdg>
           <note resp="#Guessard">
             <lb/><q>Atant es Ganelon et son compain Hardré.</q> 

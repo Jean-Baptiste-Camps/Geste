@@ -64,7 +64,7 @@
             <xsl:if test="$mesPOS/PPOSM[. != '']">
                 <xsl:text>#</xsl:text>
                 <xsl:text>CATTEX2009_M_</xsl:text>
-                <xsl:value-of select="."/>
+                <xsl:value-of select="$mesPOS/PPOSM"/>
             </xsl:if>
             <xsl:if test="$mesPOS/flectM[. != '']"><!-- Passons à la flexion en morphologie. On ne l'intègre que si elle diffère de celle en MS. -->
                 <xsl:variable name="mesFlectMS" select="$mesPOS/(MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']"/>
@@ -90,7 +90,7 @@
                             <xsl:text>CATTEX2009_M_</xsl:text>
                             <xsl:text>DEGRE</xsl:text>
                             <xsl:text>_</xsl:text>
-                            <xsl:value-of select="."/>
+                            <xsl:value-of select="$mesFlectM[last()]"/>
                         </xsl:when>
                     </xsl:choose>
                 </xsl:if>

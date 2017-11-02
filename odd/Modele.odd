@@ -298,16 +298,24 @@
                         imprimé, soit une référence <gi>biblFull</gi>, dans le cas d'une édition
                         fondée sur un document TEI préexistant, soit une notice de manuscrit
                             <gi>msDesc</gi>, pour la transcription d'un manuscrit. <specList>
-                            <specDesc key="biblStruct"/>
-                            <specDesc key="biblFull"/>
-                            <specDesc key="msDesc"/>
+                                <specDesc key="biblStruct" atts="xml:id"/>
+                                <specDesc key="biblFull" atts="xml:id"/>
+                                <specDesc key="msDesc" atts="xml:id"/>
                         </specList>
+                    </p>
+                    <p>Dans tous les cas, la présence d'un attribut <att>xml:id</att> est obligatoire.
+                        Dans le cas d'une source manuscrite, il correspond au sigle du témoin.
+                        Dans le cas d'une édition imprimée, il correspond au mot-clé <val>ed</val>
+                        concaténé avec la dernière lettre du sigle DEAF de l'édition
+                        (par exemple <val>edG</val> pour l'édition Guessard de <title>Floovant</title>, 
+                        connu par le DÉAF comme <q>FloovG</q>).
+                        <!-- TODO: cas d'une reprise d'édition XML -->
                     </p>
                     <p>Pour une édition fondée sur la numérisation d'une édition imprimée, ayant
                         connu deux impressions, la section pourra prendre la forme suivante : <egXML
                             xmlns="http://www.tei-c.org/ns/Examples">
                             <sourceDesc>
-                                <biblStruct>
+                                <biblStruct xml:id="edG">
                                     <monogr>
                                         <editor xml:id="Guessard">
                                             <persName>
@@ -3152,9 +3160,16 @@ CC 3778 Li casteax ne doutoit assaut
                             </attDef>
                         </attList>
                     </elementSpec>-->
-                    <!--<elementSpec ident="biblStruct"><!-\- Élément à préciser et documenter -\->
-                        
-                    </elementSpec>-->
+                    <elementSpec ident="biblStruct" mode="change"><!-- Élément à préciser et documenter -->
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="biblFull" mode="change"><!-- Élément à préciser et documenter -->
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="listBibl" mode="change"> </elementSpec>
                     <elementSpec ident="l" mode="change">
                         <content>

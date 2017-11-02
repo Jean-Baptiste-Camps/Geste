@@ -4,16 +4,8 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs"
     version="2.0">
-    <!-- Ne pas oublier de commenter le schéma -->
-    <xsl:output method="xml" indent="no"/>
     
-    <!-- Modifier pour:
-        - ajouter le sigle au début de la numérotation des vers, mots, etc.
-        du type w_A_45
-        - donner un xml:id aux vers
-        - donner un numéro aux lb.
-        - 
-    -->
+    <xsl:output method="xml" indent="no"/>
     
     <!-- Serait possible de conserver certaines entités avec xsl:character-map -->
     
@@ -22,6 +14,10 @@
             <xsl:apply-templates mode="numerotation"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:variable name="sigle">
+        <xsl:value-of select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc[1]/child::element()[1]/@xml:id"/>
+    </xsl:variable>
     
     <xsl:template match="node()|@*" mode="numerotation">
         <xsl:copy>
@@ -33,7 +29,6 @@
         <xsl:variable name="number">
             <xsl:number format="1" level="any" from="tei:text" count="tei:l[not(@n)]"/><!-- On compte ceux qui ne sont pas numérotés, car une numérotation manuelle signifie qu'il y a un vers répété -->
         </xsl:variable>
-        <xsl:variable name="sigle" select="ancestor::tei:TEI/descendant::tei:sourceDesc/tei:msDesc/@xml:id"/>
         <xsl:choose>
             <xsl:when test="@n">
                 <xsl:copy>
@@ -50,12 +45,15 @@
            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+    <!-- NB: je pense que, pour les éditions, l'option not rdg est nécessaire et not
+    sic, sauf que ça dépend pour lesquelles: pas harmonisé. 
+    À voir en détail.
+    -->
+    <!--<xsl:template match="tei:w[not(ancestor::tei:rdg or ancestor::tei:sic)]" mode="numerotation">-->
     <xsl:template match="tei:w" mode="numerotation">
         <xsl:variable name="number">
             <xsl:number format="000001" level="any" from="tei:text"/>
         </xsl:variable>
-        <xsl:variable name="sigle" select="ancestor::tei:TEI/descendant::tei:sourceDesc/tei:msDesc/@xml:id"/>
         <xsl:copy>
             <xsl:attribute name="xml:id" select="concat($sigle, '_w_',$number)"/>
             <xsl:apply-templates select="@*|node()" mode="numerotation"/>
