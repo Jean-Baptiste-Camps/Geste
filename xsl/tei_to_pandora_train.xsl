@@ -62,7 +62,7 @@ avant de le normaliser
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="$morph != ''"><xsl:value-of select="$morph"/></xsl:when>
-            <xsl:otherwise>_</xsl:otherwise>
+            <xsl:otherwise>MORPH=empty</xsl:otherwise>
         </xsl:choose>
         
         <!--<xsl:text>)</xsl:text>-->
