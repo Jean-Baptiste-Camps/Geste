@@ -38,7 +38,11 @@ avant de le normaliser
     </xsl:template>
     
     <xsl:template match="tei:l">
-        <xsl:apply-templates select="descendant::tei:w[not(@lemma = '') and not(ancestor::tei:del)]"/>
+        <xsl:apply-templates select="descendant::tei:w[
+            not(@lemma = '' and not(contains(@type,'POS=OUT'))) 
+            and not(ancestor::tei:del)
+            and not(descendant::tei:gap)
+            ]"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
     
@@ -46,11 +50,11 @@ avant de le normaliser
         <xsl:variable name="contenu">
             <xsl:apply-templates/>
         </xsl:variable>
-        <xsl:value-of select="normalize-unicode($contenu, 'NFC')"/>
+        <xsl:value-of select="normalize-unicode(translate(normalize-space($contenu),' ', '_'), 'NFC')"/>
         <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="normalize-unicode(@lemma, 'NFC')"/>
+        <xsl:value-of select="normalize-unicode(translate(normalize-space(@lemma), ' ', '_'), 'NFC')"/>
         <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="substring-after(tokenize(@type, '\|')[1], 'POS=')"/>
+        <xsl:value-of select="translate(normalize-space(substring-after(tokenize(@type, '\|')[1], 'POS=')), ' ', '')"/>
         <!--<xsl:text>(</xsl:text>-->
         <xsl:text>&#9;</xsl:text>
         <xsl:variable name="morph">
@@ -58,7 +62,7 @@ avant de le normaliser
                 <xsl:value-of select="substring-after(., '#CATTEX2009_MS_')"/>
                 <xsl:if test="position() != last()"><xsl:text>|</xsl:text></xsl:if>
             </xsl:for-each>-->
-            <xsl:value-of select="substring-after(@type, '|')"/>
+            <xsl:value-of select="translate(normalize-space(substring-after(@type, '|')), ' ', '')"/>
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="$morph != ''"><xsl:value-of select="$morph"/></xsl:when>

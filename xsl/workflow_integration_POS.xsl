@@ -80,7 +80,7 @@
                     </xsl:if>
                 </xsl:for-each>
                 <!-- TODO: insérer traitement pour les cas où étiquette M plus longue que MS
-                TODO: le code suivant ne fonctionnera pas pour les cas où l'étiquette pos M diffère trop 
+                TODO: [BUG] le code suivant ne fonctionnera pas pour les cas où l'étiquette pos M diffère trop 
                 nettement de la pos MS (adj employé comme adverbe, etc.) => il faut compléter de manière systématique
                 -->
                 <xsl:if test="count($mesFlectM) > count($mesFlectMS)">

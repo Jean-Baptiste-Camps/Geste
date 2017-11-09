@@ -27,7 +27,7 @@ avant de le normaliser
         <xsl:variable name="contenu">
             <xsl:apply-templates/>
         </xsl:variable>
-        <xsl:value-of select="normalize-unicode($contenu, 'NFC')"/>
+        <xsl:value-of select="normalize-unicode(translate(normalize-space($contenu),' ', '_'), 'NFC')"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
     
