@@ -21,7 +21,7 @@
     
     <xsl:template match="tei:l">
         <xsl:apply-templates select="descendant::tei:w"/>
-        <xsl:text>&#xA;</xsl:text>
+        <!--<xsl:text>&#xA;</xsl:text>-->
     </xsl:template>
     
     <xsl:template match="tei:w">
