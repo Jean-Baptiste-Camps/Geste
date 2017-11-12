@@ -33,13 +33,13 @@
     </xsl:template>
 
     <xsl:template match="text()[parent::tei:l]" mode="addAnchors">
-        <xsl:analyze-string select="." regex="(\s+|&apos;)">
+        <xsl:analyze-string select="." regex="(\s+|&apos;|‘)">
             <xsl:matching-substring>
                 <xsl:choose>
                     <xsl:when test="matches(., '\s+')">
                         <anchor type="wordBoundary"/>
                     </xsl:when>
-                    <xsl:when test='matches(., "&apos;")'>
+                    <xsl:when test='matches(., "(&apos;|‘)")'>
                         <anchor type="wordBoundary" subtype="elision"/>
                         <pc type="supplied">'</pc>
                     </xsl:when>
@@ -57,6 +57,7 @@
     <xsl:template match="tei:l" mode="tokenize">
         <xsl:copy>
             <xsl:apply-templates select="attribute::*"/>
+            <xsl:attribute name="n"><xsl:number count="tei:l" from="tei:text" level="any"/></xsl:attribute>
             <xsl:apply-templates select="descendant::tei:anchor" mode="tokenize"/>
             <!-- DEBUG: il n'y a aucune ancre, ou le mot ne fait qu'une ligne -->
             <xsl:if test="not(descendant::tei:anchor)">

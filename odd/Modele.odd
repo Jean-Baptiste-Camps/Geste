@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: 
+- ajouter reg/orig au modèle des éditions (régularisation graphies);
+- voir les numérisations d'éditions, et adapter modèle et documents pour qu'ils soient conformes;
+- faire deux schémas séparés (avec d'éventuelles parties communes), par exemple en utilisant des imports.
+
+Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'éditeur
+<w><choice>
+                            <reg resp="#Aebischer">anchantemant</reg>
+                            <orig>anchantemat</orig>
+                        </choice></w>
+-->
 <!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <!-- Étape du grand nettoyage du modèle:
@@ -366,7 +377,7 @@
                                         <address>
                                             <orgName>École nationale des chartes</orgName>
                                             <addrLine>65 rue de Richelieu</addrLine>
-                                            <addrLine>F-75012 Paris</addrLine>
+                                            <addrLine>F-75002 Paris</addrLine>
                                         </address>
                                         <email>jbcamps@hotmail.com</email>
                                     </authority>
