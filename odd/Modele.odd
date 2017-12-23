@@ -437,22 +437,36 @@ Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'�
                     </p>
                     <p>Dans la description de la création, les éléments <gi>origPlace</gi> et
                             <gi>origDate</gi> sont tout d'abord employés pour définir le lieu et
-                        date d'origine supposés du texte. On prendra soin de spécifier, grâce aux
+                        date d'origine supposés du texte et du manuscrit. On prendra soin de spécifier, grâce aux
                         attributs <att>cert</att> (et, le cas échéant, <att>resp</att>) la marge de
                         confiance dans la datation, qui sera formalisée grâce aux attributs de la
                         classe <code>att.datable.w3c</code>. Ces éléments pourront éventuellement
-                        être complétés par d'autres informations. <specList>
+                        être complétés par d'autres informations. 
+                        <specList>
                             <specDesc key="origPlace" atts="att.global.responsibility"/>
                             <specDesc key="origDate"
                                 atts="att.datable.w3c att.global.responsibility"/>
                         </specList>
+                        Néanmoins, la présence d'au moins quatre éléments, identifiés respectivement
+                        avec l'attribut <att>type</att>, comme 
+                        <val>dateComposition</val>,
+                        <val>dateManuscrit</val>,
+                        <val>lieuComposition</val>
+                        et <val>lieuManuscrit</val>, est obligatoire.
+                        Si plusieurs datations concurrentes sont proposées, l'une d'entre elles doit avoir un
+                        niveau de certitude supérieur aux autres et sera utilisée préférentiellement par les
+                        traitements de corpus.<!-- TODO: idéalement, il faudrait un schématron pour cette 
+                        dernière contrainte...
+                        -->
                     </p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <creation>
-                            <origPlace cert="unknown" resp="#JBC">inconnue</origPlace>
-                            <origDate cert="low" resp="#JBC" notBefore="1130" notAfter="1170">milieu
-                                du XIIe siècle</origDate>
-                            <!-- éventuelles informations complémentaires -->
+                            <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1300"
+                                type="dateComposition">XIIIe siècle</origDate>
+                            <origDate cert="unknown" resp="DEAF" notBefore="1280" notAfter="1300"
+                                type="dateManuscrit">fin du XIIIe siècle</origDate>
+                            <origPlace cert="unknown" resp="DEAF" type="lieuComposition">inconnue</origPlace>
+                            <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">Est (Lorraine ou région environnante selon Aebischer)</origPlace>
                         </creation>
                     </egXML>
                     <p>L'élément <gi>langUsage</gi> est utilisé pour décrire la langue employée,
@@ -873,8 +887,14 @@ Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'�
                     <p>⚠ Dans une version ultérieure du modèle, il est possible que <gi>q</gi> soit
                         abandonné au profit de l'élément plus spécialisé <gi>said</gi>. </p>
                     <p>Pour les passages qui, dans l'introduction ou les notes, se distinguent du
-                        contexte environnant, on utilisera <gi>mentioned</gi>: <specList>
+                        contexte environnant, et constituent des reprises du texte,
+                        ou d'une autre source, 
+                        on utilisera <gi>mentioned</gi>: <specList>
                             <specDesc key="mentioned"/>
+                        </specList>
+                        et, pour les citations longues d'un autre type, reprises dans les introductions ou dans les notes,
+                        <specList>
+                            <specDesc key="quote"/>
                         </specList>
                     </p>
                 </div>
@@ -2619,15 +2639,21 @@ CC 3778 Li casteax ne doutoit assaut
                     </elementSpec>
                     <elementSpec ident="creation" mode="change">
                         <content>
-                            <sequence>
-                                <elementRef key="origPlace"/>
-                                <elementRef key="origDate"/>
-                                <alternate minOccurs="0" maxOccurs="unbounded">
-                                    <textNode/>
-                                    <classRef key="model.limitedPhrase"/>
+                                <alternate minOccurs="4" maxOccurs="unbounded">
+                                    <elementRef key="origPlace"/>
+                                    <elementRef key="origDate"/>
                                 </alternate>
-                            </sequence>
                         </content>
+                        <constraintSpec scheme="isoschematron" ident="change-when-or-from-to">
+                            <constraint>
+                                <s:assert test="tei:origPlace[@type='lieuComposition'] 
+                                    and tei:origDate[@type='dateComposition'] 
+                                    and tei:origPlace[@type='lieuManuscrit'] 
+                                    and tei:origDate[@type='dateManuscrit']">Date et lieu de composition
+                                    du texte ainsi que du manuscrit doivent être spécifiés.
+                                </s:assert>
+                            </constraint>
+                        </constraintSpec>
                     </elementSpec>
                     <elementSpec ident="language" mode="change">
                         <attList>
@@ -2656,7 +2682,7 @@ CC 3778 Li casteax ne doutoit assaut
                         include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice 
                         citedRange corr date del edition editor email emph expan extent gap gb graphic head 
                         hi imprint item l lb lg list listBibl measure mentioned monogr name note num orig 
-                        p pb pubPlace publisher q ref reg resp respStmt series sic term textLang title unclear"/>
+                        p pb pubPlace publisher q quote ref reg resp respStmt series sic term textLang title unclear"/>
                     <!-- Retrait de rs -->
                     <!-- ajout de mentioned (mention dans les notes et l'introd.) -->
                     <!--Pour l'instant, j'inclus tout le module, à raffiner ensuite ou à garder intégralement?-->
@@ -2834,6 +2860,12 @@ CC 3778 Li casteax ne doutoit assaut
                             <classRef key="model.choicePart" minOccurs="2" maxOccurs="unbounded"/>
                             <!-- Voir s'il faut limiter à strictement deux -->
                         </content>
+                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                            <constraint>
+                                <s:assert test="ancestor::tei:w or not(/tei:TEI[@type='transcr'])">Dans les transcriptions
+                                de manuscrits, choice ne doit pas être utilisé à un niveau supérieur au mot.</s:assert>
+                            </constraint>
+                        </constraintSpec>
                     </elementSpec>
                     <elementSpec ident="reg" mode="change"> </elementSpec>
                     <elementSpec ident="orig" mode="change"> </elementSpec>
@@ -3207,6 +3239,8 @@ CC 3778 Li casteax ne doutoit assaut
                                 <!--<classRef key="rs"/>-->
                                 <elementRef key="subst"/>
                                 <!-- Pour les cas de corrections à un niveau supérieur au mot -->
+                                <elementRef key="choice"/>
+                                <!-- JBC: je le rétablis, car nécessaire pour édition numérisées -->
                             </alternate>
                         </content>
                         <attList>
@@ -3576,9 +3610,19 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="app" mode="change">
                         <content>
                             <sequence preserveOrder="true">
-                                <elementRef key="lem" minOccurs="0" maxOccurs="1"/><!-- 1 seul lemme (ou aucun) -->
-                                <elementRef key="rdg" minOccurs="1" maxOccurs="unbounded"/> <!-- au moins 1 rdg -->
+                                <!-- JBC: je modifie cela pour rendre possible la pratique 
+                                dans les cas de numérisations d'éditions, mais c'est à re-réfléchir.
+                                Par contre, dans ce genre de cas, il faudrait peut-etre plutot ne pas utiliser
+                                app du tout. À réfléchir...
+                                Je pense de plus en plus qu'il va falloir deux modèles séparés...
+                                -->
+                                <sequence minOccurs="1" maxOccurs="unbounded">
+                                    <elementRef key="lem" minOccurs="0" maxOccurs="1"/><!-- 1 seul lemme (ou aucun) -->
+                                    <elementRef key="rdg" minOccurs="0" maxOccurs="unbounded"/> <!-- au moins 1 rdg -->
+                                </sequence>
                                 <elementRef key="witDetail" minOccurs="0" maxOccurs="unbounded"/><!-- optionnel et répétable -->
+                                <!-- Je rajoute l'élément note, là encore pour les éditions numérisées -->
+                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                         <attList>
@@ -4149,6 +4193,16 @@ CC 3778 Li casteax ne doutoit assaut
                         <attList>
                             <attDef ident="cert" mode="change" usage="req"/>
                             <attDef ident="resp" mode="change" usage="req"/>
+                            <attDef ident="type" mode="change">
+                                <valList mode="add" type="semi">
+                                    <valItem ident="lieuManuscrit">
+                                        <desc>lieu d'origine du témoin</desc>
+                                    </valItem>
+                                    <valItem ident="lieuComposition">
+                                        <desc>lieu d'origine de l'œuvre</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="origDate" mode="change">
@@ -4164,6 +4218,16 @@ CC 3778 Li casteax ne doutoit assaut
                         <attList>
                             <attDef ident="cert" mode="change" usage="req"/>
                             <attDef ident="resp" mode="change" usage="req"/>
+                            <attDef ident="type" mode="change">
+                                <valList mode="add" type="semi">
+                                    <valItem ident="dateManuscrit">
+                                        <desc>date d'origine du témoin</desc>
+                                    </valItem>
+                                    <valItem ident="dateComposition">
+                                        <desc>date d'origine de l'œuvre</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                         </attList>
                     </elementSpec>
                     <moduleRef key="gaiji" include="g"/>

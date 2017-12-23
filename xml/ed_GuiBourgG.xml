@@ -8,9 +8,11 @@
   0101: 33vers => 34 vers annoncés, 33 présents
   0102: 35vers  X
   0128: 32vers 
-  
-  
-  
+-->
+<!-- N.B.: il faudrait reprendre l'apparat et les notes pour harmoniser
+  la pratique et tirer au clair ce qu'a fait Guessard dans chaque cas,
+  ce qui n'est pas toujours évident. Je pense notamment que, dans beaucoup de cas,
+  plutot que des variantes du ms. 'a', on a en fait des corrections ex ingenio.
 -->
 <!-- TODO: problèmes de compte des mots vis-à-vis de la lemmatisation
 Certaines variantes pas dans des vers +> ne coïncide pas.
@@ -85,20 +87,25 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
     </fileDesc>
     <profileDesc>
       <creation>
-        <origPlace cert="unknown" resp="#AC">inconnue</origPlace>
-        <origDate cert="medium" resp="#AC" notBefore="1211" notAfter="1235">premier tiers du XIIIe
-          siècle
-          <!-- L'édition propose commencement du XIIIe voire XXIe, Robert Bossuat affirme
+        <origPlace cert="unknown" resp="DEAF" type="lieuComposition">inconnue</origPlace>
+        <origDate cert="medium" resp="#AC" notBefore="1211" notAfter="1235" type="dateComposition">premier tiers du XIIIe
+          siècle<!-- L'édition propose commencement du XIIIe voire XXIe, Robert Bossuat affirme
             que le texte ne peut pas être antérieur à 1211-->
         </origDate>
+        <origDate cert="medium" resp="DEAF" type="dateComposition" notBefore="1220" notAfter="1240">ca. 1230</origDate>
+        <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">inconnue</origPlace>
+        <origDate cert="medium" resp="DEAF" type="dateManuscrit" notBefore="1201" notAfter="1300">13e s.</origDate>
       </creation>
       <langUsage>
-        <language cert="high" resp="#AC" ident="fro" usage="100"/>
+        <!--<language cert="high" resp="#AC" ident="fro" usage="100"/>-->
         <!-- je ne suis pas parvenue à identifier rapidement des traits particuliers,
                  et je n'ai pas trouvé de documentation à ce sujet pour l'instant. A vérifier -->
+        <language cert="medium" resp="#JBC" ident="fro" usage="100">traits de l'Est</language><!-- JBC: à préciser -->
       </langUsage>
     </profileDesc>
     <revisionDesc status="draft">
+      <change who="#JBC" when="2017-12-04">Modifications pour rendre plus conforme aux versions
+      plus récentes du modèle.</change>
       <change who="AC" when="2016-05-12" status="draft">Fin du pointage des laisses, insertion
       des pages manquantes (94 et 95), renvois des notes.</change>
       <change who="AC" when="2016-05-11" status="draft">Fin de la vérification des corrections. 
@@ -153,8 +160,6 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         </p>
         <p><lb/>Ce volume est le premier dans l'ordre de publication.</p>
       </div>
-
-
       <div type="page_de_titre">
         <pb facs="facsimile0003.bin.png" n="0003"/>
         <lb/>
@@ -194,13 +199,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           parmi ces <lb/>récits légendaires elle tient une place <lb/>à part, comme la chanson
           d'Otinel, et paroît <lb/>aussi avoir été faite après coup, en dehors de la <lb/>tradition,
           lorsque le sujet étoit épuisé. On s'en <lb/>aperçoit dès le début, qui rappelle celui de
-          la <lb/>chanson de Roland, mais dans la forme plus que <lb/>pour le fond : <q rend="block">
+          la <lb/>chanson de Roland, mais dans la forme plus que <lb/>pour le fond : <quote rend="block">
             <lb/>.XXVII. anz<note>
               <lb/>1. Lisez : vingt et sept ans.</note> tous plains acomplis et passez, <lb/>Fu li
-            rois en Espaigne, o lui son grant barné. </q>
-          <lb/>Il y a loin de ce chiffre à celui du poëme de <lb/>Roncevaux : <q rend="block">
+            rois en Espaigne, o lui son grant barné. </quote>
+          <lb/>Il y a loin de ce chiffre à celui du poëme de <lb/>Roncevaux : <quote rend="block">
             <lb/>Carles li reis, nostre emperere magne, <lb/>Set anz tuz pleins ad ested en
-            Espaigne. </q>
+            Espaigne. </quote>
           <lb/>Et ce n'est point là une de ces exagérations <lb/>que les trouvères de la seconde
           époque se per <pb facs="facsimile0010.bin.png" n="0010" break="no"/>
           <!-- <lb/><head>PRÉFACE.</head>-->
@@ -282,9 +287,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <lb/>Il ne nous paroît pas, cependant, postérieur <lb/>au commencement du XIIIe siècle, et
           pourroit <lb/>bien remonter jusqu'au XIIe, à en juger par la <lb/>langue et par certains
           détails de mœurs et de <lb/>costume <note>
-            <lb/>1. V. par exemple, à la page 35, le portrait du duc Naîmes : <q rend="block">
+            <lb/>1. V. par exemple, à la page 35, le portrait du duc Naîmes : <quote rend="block">
               <lb/>Sa barbe li baloie jusc'au neu du braier, <lb/>Par desour les oreilles ot les
-              guernons treciés, <lb/>Derier el haterel gentement atachiés. </q>
+              guernons treciés, <lb/>Derier el haterel gentement atachiés. </quote>
             <lb/> Par guernons, il faut entendre ici les cheveux des tempes, <!--<pb facs="facsimile0013.bin.png" n="0013"/>-->
             <lb/>que le duc Naimes portoit tressés et rattachés derrière le <lb/>cou. C'est une mode
             du règne de Louis VII. - Sur ce sens <lb/>du mot grenon, consultez le traité de Gautier
@@ -300,8 +305,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           étoient le plus en faveur à cette époque, et <lb/>que tout bon ménestrel étoit tenu de
           connoître. <lb/>On sait encore que les titres de ces chansons y <lb/>sont à dessein
           grossièrement altérés, pour mon<lb break="no" rend="hyphen"/>trer l'ignorance du jongleur
-          qui se pique de les <lb/>savoir. Aussi l'auteur lui fait-il dire : <q rend="block">
-            <lb/>Si sai de Guion d'Aleschans <lb/>Et de Vivien de Borgoigne. </q>
+          qui se pique de les <lb/>savoir. Aussi l'auteur lui fait-il dire : <quote rend="block">
+            <lb/>Si sai de Guion d'Aleschans <lb/>Et de Vivien de Borgoigne. </quote>
           <lb/>En rétablissant l'ordre interverti, on retrouve le <lb/>titre de Vivien d'Aleschans,
           qui est celui d'une <lb/>des branches de la grande geste de Garin de <lb/>Monglane ou de
           Guillaume au court nez, et le <lb/>titre de Guion de Borgoigne, qui est celui de notre
@@ -389,9 +394,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           à lui rendre cette justice au moment où nous <lb/>remettons en lumière son œuvre, depuis
           si long<lb break="no" rend="hyphen"/>temps enfouie et oubliée. C'est la seule manière
           <lb/>dont nous puissions répondre à l'appel pressant <lb/>qu'il adressoit jadis à ses
-          auditeurs (lui ou le <lb/>jongleur qui récitoit son poëme) : <q rend="block">
+          auditeurs (lui ou le <lb/>jongleur qui récitoit son poëme) : <quote rend="block">
             <lb/>Qui or voldra chançon oïr et escouter, <lb/>Si voist isnelement sa bourse
-            desfermer, <lb/>Qu'il est huimès bien tans qu'il me doie doner. </q>
+            desfermer, <lb/>Qu'il est huimès bien tans qu'il me doie doner. </quote>
           <lb/>Autrement pour le françois moderne : « Allons, <pb facs="facsimile0017.bin.png"
             n="0017"/>
           <!-- <lb/>PRÉFACE.
@@ -450,13 +455,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/><hi rend="initiale 4l">D</hi>epuis plus de vingt-sept ans Charlemagne <lb/>et ses
             barons étoient en Espagne, où ils <lb/>avoient conquis nombre de cités, de bourgs
             <lb/>et de châteaux. Un jour, après avoir pris <lb/>la ville de Nobles, l'empereur dit à
-            ses vassaux : « <q>Ba<lb break="no" rend="hyphen"/>rons, tout ce pays est à nous ; je ne
+            ses vassaux : « <quote>Ba<lb break="no" rend="hyphen"/>rons, tout ce pays est à nous ; je ne
               sais point de châ<lb break="no" rend="hyphen"/>teau, de bourg, de ville ou de cité où
               nous n'ayons <lb/>de force introduit la foi chrétienne, excepté pourtant la <lb/>riche
               cité de Cordes, qui obéit au roi Desramé. Là se <lb/>trouvent en abondance et l'or et
               l'argent, et les précieu<lb break="no" rend="hyphen"/>ses étoffes de soie, et les
               destriers rapides, et les faucons <lb/>mués. Allons-y, barons, au nom du ciel, car de
-              tous ces <lb/>trésors nous pourrons enrichir nos parents pauvres.</q> » </item>
+              tous ces <lb/>trésors nous pourrons enrichir nos parents pauvres.</quote> » </item>
           <item>
             <lb/>L'empereur veut partir le lendemain ; mais Ogier le Da<lb break="no" rend="hyphen"
             />nois ne l'entend point ainsi : il rappelle les peines et <lb/>les souffrances que
@@ -471,8 +476,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             tenant pareil langage ; d'ailleurs ses <pb facs="facsimile0020.bin.png" n="0020"/>
             <!-- <lb/>xvj
                            <lb/>SOMMAIRE. -->
-            <lb/>reproches sont injustes : « <q>Il y a vingt-sept ans</q>, dit <lb/>l'empereur,
-              <q>que nous sommes venus en Espagne, et, <lb/>depuis lors, je n'ai jamais couché sans
+            <lb/>reproches sont injustes : « <quote>Il y a vingt-sept ans</quote>, dit <lb/>l'empereur,
+              <quote>que nous sommes venus en Espagne, et, <lb/>depuis lors, je n'ai jamais couché sans
               ma cotte de <lb/>mailles. Mes vêtements sont en lambeaux, et, pour moi, <lb/>me voici
               plus velu que chevreuil ou biche. Quoique ce <lb/>soit une vilenie, je me vanterai,
               puisqu'il le faut : de<lb break="no" rend="hyphen"/>puis Ouessant sur Mer jusqu'à
@@ -482,18 +487,18 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               pris Le <lb/>Groing, L'Estoile <note>
                 <lb/>1. Le Groing, Logroño. - L'Estoile, Estella. </note> et Carion, je suis maître
               et sei<lb break="no" rend="hyphen"/>gneur de toutes ces contrées, et quiconque s'y
-                réclame<lb break="no" rend="hyphen"/>roit de moi y seroit reçu à grand honneur !</q>
+                réclame<lb break="no" rend="hyphen"/>roit de moi y seroit reçu à grand honneur !</quote>
             » P. 1-3. </item>
         </list>
         <list corresp="#L_003">
           <item>
-            <lb/>Ce n'est pas l'avis de Richard, duc de Normandie : <lb/>« <q>Vous dites,
-              empereur</q>, s'écrie-t-il, <q>que tout ce pays <lb/>est à vous ; mais nous ne le
+            <lb/>Ce n'est pas l'avis de Richard, duc de Normandie : <lb/>« <quote>Vous dites,
+              empereur</quote>, s'écrie-t-il, <quote>que tout ce pays <lb/>est à vous ; mais nous ne le
               disons pas, nous. Je <lb/>sais telles cités, au nombre de cinq, où l'on se feroit
-              <lb/>couper la tête si l'on s'y réclamoit de vous comme <lb/>de son seigneur.</q>
+              <lb/>couper la tête si l'on s'y réclamoit de vous comme <lb/>de son seigneur.</quote>
           </item>
           <item>
-            <lb/><q>Nommez-les donc, Richard</q> », <lb/>dit l'empereur. </item>
+            <lb/><quote>Nommez-les donc, Richard</quote> », <lb/>dit l'empereur. </item>
           <item>
             <lb/>Refus de Richard. </item>
           <item>
@@ -507,8 +512,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             Montorgueil, Montesclair, la <lb/>tour d'Augorie et la cité de Carsaude ; mais que
               l'em<lb break="no" rend="hypen"/>pereur les laisse en paix : il ne les prendroit pas. </item>
           <item>
-            <lb/>« <q>Par ma barbe</q>, dit Charles, <q>dussé-je y passer tous <lb/>les jours de ma
-              vie, je me rendrai maître de ces cinq <lb/>cités.</q> » </item>
+            <lb/>« <quote>Par ma barbe</quote>, dit Charles, <quote>dussé-je y passer tous <lb/>les jours de ma
+              vie, je me rendrai maître de ces cinq <lb/>cités.</quote> » </item>
           <item>
             <lb/>Murmures des François, qui maudissent <lb/>le duc Richard. P. 3-5. </item>
         </list>
@@ -554,35 +559,35 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Au même moment, les enfants de France se réu<lb break="no" rend="hyphen"/>nissent à
             Paris, sur la grève de Seine, au nombre de <lb/>cinquante-quatre mille. Ils ont le
             dessein d'élire un <lb/>roi pour remplacer Charlemagne, depuis si longtemps <lb/>absent
-            : « <q>Il y a vingt-sept ans,</q> dit Bertrand, le fils <lb/>du duc Naimes, <q>que
+            : « <quote>Il y a vingt-sept ans,</quote> dit Bertrand, le fils <lb/>du duc Naimes, <quote>que
               Charles est parti pour l'Espagne, <lb/>avec ses barons, avec les pères qui nous ont
               engendrés. <lb/>Depuis lors nos mères nous ont tant couchés et levés <lb/>qu'à la fin
               nous voici armés chevaliers. Faisons un roi, <lb/>si vous le trouvez bon, que nous
               établirons juge du bien <lb/>et du mal, et de qui nous tiendrons tous nos héritages ;
-              <lb/>car s'il arrivoit mêlée entre nous, ce seroit une grande <lb/>vilenie.</q> » </item>
+              <lb/>car s'il arrivoit mêlée entre nous, ce seroit une grande <lb/>vilenie.</quote> » </item>
           <item>
             <lb/>Approbation unanime. </item>
           <item>
-            <lb/>« <q>Jurons</q>, ajoute <lb/>Bertrand, <q>que celui qui sera élu roi ne pourra
-              refuser <lb/>la couronne, sous peine de la vie.</q> » </item>
+            <lb/>« <quote>Jurons</quote>, ajoute <lb/>Bertrand, <quote>que celui qui sera élu roi ne pourra
+              refuser <lb/>la couronne, sous peine de la vie.</quote> » </item>
           <item>
             <lb/>Nouvelle <lb/>approbation. </item>
           <item>
-            <lb/>« <q>Qui ferons-nous roi ?</q> » se deman<lb break="no" rend="hyphen"/>dent les
+            <lb/>« <quote>Qui ferons-nous roi ?</quote> » se deman<lb break="no" rend="hyphen"/>dent les
             bacheliers. </item>
           <item>
             <lb/>Bertrand désigne le jeune Gui, <lb/>fils de Sanson de Bourgogne et neveu de
             Charlemagne. <lb/>Si l'empereur revient en France, il ne tuera point le <lb/>fils de sa
             sœur ; s'il ne revient point, le jeune Gui hé<lb break="no" rend="hyphen"/>ritera de la
-            couronne ; « <q>car nous ne voulons point</q>, <!-- <lb/>Gui de Bourgogne. 
+            couronne ; « <quote>car nous ne voulons point</quote>, <!-- <lb/>Gui de Bourgogne. 
                         <lb/>b -->
             <pb facs="facsimile0022.bin.png" n="0022"/>
             <!--  <lb/>xviij
                 <lb/>SOMMAIRE. -->
-            <lb/>dit Bertrand, <q>deshériter Charlemagne.</q> » </item>
+            <lb/>dit Bertrand, <quote>deshériter Charlemagne.</quote> » </item>
           <item>
-            <lb/>On offre <lb/>la couronne à Gui, qui l'accepte, aimant mieux, dit-il, <lb/><q>être
-              roi que d'avoir la tête coupée.</q>
+            <lb/>On offre <lb/>la couronne à Gui, qui l'accepte, aimant mieux, dit-il, <lb/><quote>être
+              roi que d'avoir la tête coupée.</quote>
           </item>
           <item>
             <lb/>On lui rend foi <lb/>et hommage, et il ordonne à ses nouveaux vassaux <lb/>de se
@@ -600,13 +605,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             Ils font provision de vivres <lb/>pour dix ans, et sont de retour à Paris à la Saint<lb
               break="no" rend="hyphen"/>Jean, avec leurs mères et leurs sœurs. </item>
           <item>
-            <lb/>Désolation <lb/>et clameurs des dames : « <q>Sire Gui de Bourgogne</q>,
-            <lb/>disent-elles, <q>Charlemagne nous a enlevé nos maris ; <lb/>tu feras grand péché si
-              tu nous enlèves nos fils.</q> » </item>
+            <lb/>Désolation <lb/>et clameurs des dames : « <quote>Sire Gui de Bourgogne</quote>,
+            <lb/>disent-elles, <quote>Charlemagne nous a enlevé nos maris ; <lb/>tu feras grand péché si
+              tu nous enlèves nos fils.</quote> » </item>
           <item>
-            <lb/>Mais Gui leur impose silence : « <q>Si quelqu'une de <lb/>vous ose dire mot, fût-ce
+            <lb/>Mais Gui leur impose silence : « <quote>Si quelqu'une de <lb/>vous ose dire mot, fût-ce
               la sœur de Charlemagne, <lb/>fût-ce la belle Aude elle-même, fût-ce ma mère, que
-              <lb/>j'aime et que je révère tant, je lui ferai arracher les <lb/>membres.</q> » </item>
+              <lb/>j'aime et que je révère tant, je lui ferai arracher les <lb/>membres.</quote> » </item>
           <item>
             <lb/>Départ de l'armée. </item>
           <item>
@@ -622,26 +627,26 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         </list>
         <list corresp="#L_007">
           <item>
-            <lb/>Rencontre d'un pèlerin <lb/>qui revient de Saint-Jacques. « <q>D'où êtes-vous ? qui
-              <lb/>êtes-vous ?</q> demande le pèlerin à Gui de Bourgogne. </item>
+            <lb/>Rencontre d'un pèlerin <lb/>qui revient de Saint-Jacques. « <quote>D'où êtes-vous ? qui
+              <lb/>êtes-vous ?</quote> demande le pèlerin à Gui de Bourgogne. </item>
           <item>
-            <lb/><q>Je suis roi de France</q>, répond Gui. </item>
+            <lb/><quote>Je suis roi de France</quote>, répond Gui. </item>
           <item>
-            <lb/><q>Vous vous <lb/>moquez</q>, reprend le pèlerin ; <q>vous n'êtes point Char <pb
+            <lb/><quote>Vous vous <lb/>moquez</quote>, reprend le pèlerin ; <quote>vous n'êtes point Char <pb
                 facs="facsimile0023.bin.png" n="0023"/>
               <!-- <lb/>SOMMAIRE.
                         <lb/>xix -->
               <lb break="no" rend="hyphen"/>lemagne, le fort roi couronné : je l'ai vu naguère à
               <lb/>Luiserne sur Mer. Hélas ! il a les poings et les ge<lb break="no" rend="hyphen"
               />noux enflés, à peine peut-il monter à cheval, et tous <lb/>ses hommes souffrent de
-              la faim.</q> » </item>
+              la faim.</quote> » </item>
           <item>
-            <lb/>Consternation <lb/>de Gui à ces nouvelles : « <q>Ami</q>, dit-il au pèlerin,
-              <lb/><q>puisque tu as fait séjour au camp de Charlemagne, tu <lb/>dois connoître
-              quelqu'un des douze pairs.</q>
+            <lb/>Consternation <lb/>de Gui à ces nouvelles : « <quote>Ami</quote>, dit-il au pèlerin,
+              <lb/><quote>puisque tu as fait séjour au camp de Charlemagne, tu <lb/>dois connoître
+              quelqu'un des douze pairs.</quote>
           </item>
           <item>
-            <lb/><q>Oui, <lb/>certes, et je puis vous les nommer tous.</q> » </item>
+            <lb/><quote>Oui, <lb/>certes, et je puis vous les nommer tous.</quote> » </item>
           <item>
             <lb/>Noms <lb/>des douze pairs. </item>
           <item>
@@ -650,11 +655,11 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Il veut savoir la cause de <lb/>la détresse de Charlemagne et de ses pairs. </item>
           <item>
-            <lb/>« <q>Sire</q>, <lb/>répond le pèlerin, <q>c'est la cité que vous voyez là, sur
+            <lb/>« <quote>Sire</quote>, <lb/>répond le pèlerin, <quote>c'est la cité que vous voyez là, sur
               <lb/>cette hauteur. Charlemagne s'y est arrêté quatre ans <lb/>sans pouvoir la réduire
               ; il l'a laissée sur ses derrières, <lb/>et ce fut une grande faute, car aujourd'hui
               ses com<lb break="no" rend="hyphen"/>munications sont coupées, ses convois de vivres
-                in<lb break="no" rend="hyphen"/>terceptés.</q> » </item>
+                in<lb break="no" rend="hyphen"/>terceptés.</quote> » </item>
           <item>
             <lb/>A ces mots, Gui de Bourgogne donne <lb/>l'ordre de marcher sur la ville, et jure de
             ne se point <lb/>dépouiller de ses armes avant de l'avoir prise. P. 11-13. </item>
@@ -675,17 +680,17 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Son entretien avec Gui de Bourgogne, <lb/>qu'il cherche à détourner de l'attaque de
             Carsaude. </item>
           <item>
-            <lb/>Retour de Boïdant auprès des siens. On l'interroge : <lb/>« <q>Quels sont ces gens
-              avec qui tu as parlementé ?</q>
+            <lb/>Retour de Boïdant auprès des siens. On l'interroge : <lb/>« <quote>Quels sont ces gens
+              avec qui tu as parlementé ?</quote>
           </item>
           <item>
-            <lb/><q>Ce ne sont pas des gens, mais des anges</q>, réplique <lb/>Boïdant. <q>Si vous
+            <lb/><quote>Ce ne sont pas des gens, mais des anges</quote>, réplique <lb/>Boïdant. <quote>Si vous
               les voyiez ! Leur Dieu veille sur eux ; <lb/>les nôtres dorment. C'est du leur que
               nous viennent <lb/>les biens de ce monde : le pain, le vin, la chair salée, <lb/>le
-              piment, le claret.</q>
+              piment, le claret.</quote>
           </item>
           <item>
-            <lb/><q>Ami</q>, dit le roi Escorfaut, <q>tu <lb/>m'as tout l'air d'un converti.</q> »
+            <lb/><quote>Ami</quote>, dit le roi Escorfaut, <quote>tu <lb/>m'as tout l'air d'un converti.</quote> »
             Puis il appelle les Sar<lb break="no" rend="hyphen"/>rasins aux armes. P. 13-16. </item>
         </list>
         <list corresp="#L_010 #L_011 #L_012 #L_013">
@@ -712,9 +717,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Joute du païen <lb/>Cornicas et de Gui de Bourgogne ; défaite et mort de
             <lb/>Cornicas. </item>
           <item>
-            <lb/>Les Sarrasins fléchissent : « <q>Vous allez <lb/>les voir prendre la fuite, dit le
+            <lb/>Les Sarrasins fléchissent : « <quote>Vous allez <lb/>les voir prendre la fuite, dit le
               jeune Gui ; serrez-les <lb/>de près, et vous entrerez derrière eux dans la ville :
-              <lb/>c'est le seul moyen de la prendre.</q> » </item>
+              <lb/>c'est le seul moyen de la prendre.</quote> » </item>
           <item>
             <lb/>Fuite des Sar<lb break="no" rend="hyphen"/>rasins. </item>
           <item>
@@ -729,13 +734,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Noms des principaux chevaliers qui marcheront en <lb/>tête du convoi. </item>
           <item>
             <lb/>Sur le point de partir, l'un d'eux, <lb/>le fils du duc Naimes, dit à Gui de
-            Bourgogne : <lb/>« <q>Nous allons voir pour la première fois les pères qui <lb/>nous ont
-              engendrés ; nous permettez-vous de leur <lb/>parler ?</q>
+            Bourgogne : <lb/>« <quote>Nous allons voir pour la première fois les pères qui <lb/>nous ont
+              engendrés ; nous permettez-vous de leur <lb/>parler ?</quote>
           </item>
           <item>
-            <lb/><q>Par saint Denis</q>, répond Gui, <q>et par cette <lb/>couronne que vous m'avez
+            <lb/><quote>Par saint Denis</quote>, répond Gui, <quote>et par cette <lb/>couronne que vous m'avez
               imposée malgré moi, si <lb/>quelqu'un de vous se fait connoître à son père, il aura
-              <lb/>la tête coupée au retour.</q> » </item>
+              <lb/>la tête coupée au retour.</quote> » </item>
           <item>
             <lb/>Consternation des jeu<lb break="no" rend="hyphen"/>nes chevaliers. Ils maudissent
             de nouveau l'heure où <lb/>ils ont couronné Gui de Bourgogne. P. 16-21. </item>
@@ -762,10 +767,10 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             sa tente. Il regarde avec <lb/>douleur ses jambes et ses pieds noircis et enflés. Puis
             <lb/>il fait venir les pairs , à l'exception de Roland et d'O<lb break="no"
               rend="hyphen"/>livier, qui sont allés faire une reconnoissance dans les <lb/>montagnes
-            : « <q>Je le vois bien</q>, leur dit-il tristement, <lb/><q>je ne puis prendre Luiserne
+            : « <quote>Je le vois bien</quote>, leur dit-il tristement, <lb/><quote>je ne puis prendre Luiserne
               ; voilà longtemps que nous <lb/>l'assiégeons en vain, et nous n'avons plus que pour
               <lb/>deux jours de vivres. Il faut lever le siége, hélas ! dont <lb/>vous me voyez
-              courroucé et marri.</q> » </item>
+              courroucé et marri.</quote> » </item>
           <item>
             <lb/>Il leur ra<lb break="no" rend="hyphen"/>conte un songe qu'il a eu pendant la
             dernière nuit. </item>
@@ -785,14 +790,14 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             ne pourroit chaus<lb break="no" rend="hyphen"/>ser ses étriers, et qu'en trente coups il
             n'achèveroit <lb/>pas un Sarrasin. </item>
           <item>
-            <lb/><q>Barons</q>, dit l'empereur, <q>quand <lb/>vous me verrez mourir, ce sera pour
+            <lb/><quote>Barons</quote>, dit l'empereur, <quote>quand <lb/>vous me verrez mourir, ce sera pour
               vous une grande <lb/>honte ; car vous n'aurez jamais meilleur seigneur. O <lb/>Dieu
-              !</q> ajoute-t-il, <q>vous me haïssez ! Naguère j'é<lb break="no" rend="hyphen"/>tois
+              !</quote> ajoute-t-il, <quote>vous me haïssez ! Naguère j'é<lb break="no" rend="hyphen"/>tois
               accoutumé à prendre châteaux et cités ; il n'é<lb break="no" rend="hyphen"/>toit
               forteresse ni donjon qui pût m'arrêter, ni grande <lb/>salle de pierre, ni muraille,
               pour si haute qu'elle fût ; <lb/>et maintenant je ne puis plus rien faire, dont je
               suis <lb/>tout assoté. Donnez- moi la mort, ô mon Dieu ! si <lb/>c'est votre
-              plaisir.</q> »- Il ne peut se défendre de pleu<lb break="no" rend="hyphen"/>rer, et
+              plaisir.</quote> »- Il ne peut se défendre de pleu<lb break="no" rend="hyphen"/>rer, et
             cette vue navre le cœur de ses hommes. </item>
           <item>
             <lb/>Ogier, le premier, mais sans espoir, appelle ses com<lb break="no" rend="hyphen"
@@ -824,33 +829,33 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             />chands ? Veulent-ils vendre à Charlemagne les vivres <lb/>qu'ils conduisent ?
             L'empereur les paiera au poids de <lb/>l'or. </item>
           <item>
-            <lb/>« <q>Nous ne sommes point des marchands</q>, ré<lb break="no" rend="hyphen"/>pond
-            Bertrand, <q>et nous n'avons point acheté ce que <lb/>vous voyez là. Nous sommes de
+            <lb/>« <quote>Nous ne sommes point des marchands</quote>, ré<lb break="no" rend="hyphen"/>pond
+            Bertrand, <quote>et nous n'avons point acheté ce que <lb/>vous voyez là. Nous sommes de
               France, le pays des <lb/>vins clairs, et hommes du roi. Mais vous-même, qui
-              <lb/>êtes-vous, qui tirez ainsi la bride de mon cheval ?</q>
+              <lb/>êtes-vous, qui tirez ainsi la bride de mon cheval ?</quote>
           </item>
           <item>
-            <lb/><q>Sur ma tête</q>, répond le duc, <q>je vous dirai la vérité : <lb/>On m'appelle
-              Naimes, et je suis des douze pairs.</q> » </item>
+            <lb/><quote>Sur ma tête</quote>, répond le duc, <quote>je vous dirai la vérité : <lb/>On m'appelle
+              Naimes, et je suis des douze pairs.</quote> » </item>
           <item>
             <lb/>Vive émotion du jeune Bertrand, qui n'ose se faire <lb/>connoître : Gui de
             Bourgogne le lui a défendu si sé<lb break="no" rend="hyphen"/>vèrement ! </item>
           <item>
             <lb/>Mais, à son tour, il va rendre au duc <lb/>Naimes et la surprise et
-            l'attendrissement qu'il vient <lb/>d'éprouver : « <q>Votre femme et votre fils ne
-              doivent <lb/>guère vous aimer</q>, lui dit-il, <q>vous qui ne les avez ja<lb
-                break="no" rend="hyphen"/>mais vus de votre vie</q>
+            l'attendrissement qu'il vient <lb/>d'éprouver : « <quote>Votre femme et votre fils ne
+              doivent <lb/>guère vous aimer</quote>, lui dit-il, <quote>vous qui ne les avez ja<lb
+                break="no" rend="hyphen"/>mais vus de votre vie</quote>
           </item>
           <item>
-            <lb/><q>Mon fils !</q> s'écrie Naimes ; <q>ah <lb/>Dieu ! ai-je donc engendré un fils
-              ?</q>
+            <lb/><quote>Mon fils !</quote> s'écrie Naimes ; <quote>ah <lb/>Dieu ! ai-je donc engendré un fils
+              ?</quote>
           </item>
           <item>
-            <lb/><q>Oui, certes</q>, <lb/>dit Bertrand, <q>un fort beau bachelier, qui n'est pas
+            <lb/><quote>Oui, certes</quote>, <lb/>dit Bertrand, <quote>un fort beau bachelier, qui n'est pas
               <lb/>plus grand que moi, et peut bien être de mon âge. <lb/>Par le saint apôtre qu'on
               invoque aux près de Né<lb break="no" rend="hyphen"/>ron, je lui ai entendu jurer sur
               les Evangiles que s'il <lb/>vous peut rencontrer il vous séparera la tête du buste,
-              <lb/>pour avoir laissé sa mère aussi longtemps veuve !</q> » <lb/>P. 26-27. </item>
+              <lb/>pour avoir laissé sa mère aussi longtemps veuve !</quote> » <lb/>P. 26-27. </item>
         </list>
         <list corresp="#L_018 #L_019 #L_020">
           <item>
@@ -879,42 +884,42 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             qui por<lb break="no" rend="hyphen"/>tent assez de vivres pour le nourrir sept ans, lui
             et <lb/>ses compagnons. </item>
           <item>
-            <lb/>« <q>De la part du roi de France !</q> dit <lb/>Charlemagne, en se levant
-            brusquement, les yeux en<lb break="no" rend="hyphen"/>flammés de colère : <q>y a-t-il
-              donc en France un autre <lb/>roi que moi ?</q>
+            <lb/>« <quote>De la part du roi de France !</quote> dit <lb/>Charlemagne, en se levant
+            brusquement, les yeux en<lb break="no" rend="hyphen"/>flammés de colère : <quote>y a-t-il
+              donc en France un autre <lb/>roi que moi ?</quote>
           </item>
           <item>
-            <lb/><q>Nous ne vous connoissons pas</q>, ré<lb break="no" rend="hyphen"/>pond Bertrand,
-              <q>nous ne connoissons que le roi Gui. <lb/>Ah ! il feroit beau vous voir à Paris, et
+            <lb/><quote>Nous ne vous connoissons pas</quote>, ré<lb break="no" rend="hyphen"/>pond Bertrand,
+              <quote>nous ne connoissons que le roi Gui. <lb/>Ah ! il feroit beau vous voir à Paris, et
               toutes les <lb/>dames du royaume en même temps, chacune armée <lb/>d'un bâton ; elle
               vous en frotteroient tant et si bien <lb/>que, pour n'être point à pareille fête, vous
                 don<lb break="no" rend="hyphen"/>neriez volontiers le fief d'Avalon. Ne leur
-              avez-vous <lb/>pas arraché leurs maris ?</q>
+              avez-vous <lb/>pas arraché leurs maris ?</quote>
           </item>
           <item>
-            <lb/><q>Par saint Denis, ba<lb break="no" rend="hyphen"/>ron, je le confesse</q>, dit
-            Charlemagne, <q>c'est un grand <lb/>péché que j'ai sur le corps.</q> » </item>
+            <lb/><quote>Par saint Denis, ba<lb break="no" rend="hyphen"/>ron, je le confesse</quote>, dit
+            Charlemagne, <quote>c'est un grand <lb/>péché que j'ai sur le corps.</quote> » </item>
           <item>
             <lb/>Il demande où a été <lb/>pris tout ce butin qu'on lui offre. </item>
           <item>
-            <lb/>« <q>A Carsaude</q>, ré<lb break="no" rend="hyphen"/>pond Bertrand. </item>
+            <lb/>« <quote>A Carsaude</quote>, ré<lb break="no" rend="hyphen"/>pond Bertrand. </item>
           <item>
-            <lb/><q>Et quand donc y êtes-vous ve<lb break="no" rend="hyphen"/>nus ?</q>
+            <lb/><quote>Et quand donc y êtes-vous ve<lb break="no" rend="hyphen"/>nus ?</quote>
           </item>
           <item>
-            <lb/><q>Il y a quinze jours</q>, continue Bertrand ; <q>nous <lb/>avons donné l'assaut
-              le matin, et, avant le coucher <lb/>du soleil, la ville étoit prise.</q>
+            <lb/><quote>Il y a quinze jours</quote>, continue Bertrand ; <quote>nous <lb/>avons donné l'assaut
+              le matin, et, avant le coucher <lb/>du soleil, la ville étoit prise.</quote>
           </item>
           <item>
-            <lb/><q>Comment se nomme <lb/>votre seigneur ?</q> demande Charles. </item>
+            <lb/><quote>Comment se nomme <lb/>votre seigneur ?</quote> demande Charles. </item>
           <item>
-            <lb/><q>Il s'appelle Gui.</q>
+            <lb/><quote>Il s'appelle Gui.</quote>
           </item>
           <item>
-            <lb/><q>De quel comté est-il ?</q>
+            <lb/><quote>De quel comté est-il ?</quote>
           </item>
           <item>
-            <lb/><q>Je ne vous le dirois pas <lb/>pour tout ce que vous possédez.</q> » </item>
+            <lb/><quote>Je ne vous le dirois pas <lb/>pour tout ce que vous possédez.</quote> » </item>
           <item>
             <lb/>Colère de Char<lb break="no" rend="hyphen"/>lemagne, menaces. </item>
           <item>
@@ -935,23 +940,23 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Retour de Roland et d'Olivier ; leur étonnement, <lb/>leur joie, à la vue des bêtes
             de somme chargées de vi<lb break="no" rend="hyphen"/>vres. </item>
           <item>
-            <lb/>« <q>Beau neveu</q>, dit l'empereur, <q>approchez, vous <lb/>allez entendre de
+            <lb/>« <quote>Beau neveu</quote>, dit l'empereur, <quote>approchez, vous <lb/>allez entendre de
               joyeuses nouvelles. Ils ont fait un <lb/>roi en France, fort beau bachelier, bon
               justicier, à <lb/>ce qu'on me dit, et le plus riche et le meilleur cheva<lb break="no"
-                rend="hyphen"/>lier qui se puisse trouver dans toute la chrétienté.</q>
+                rend="hyphen"/>lier qui se puisse trouver dans toute la chrétienté.</quote>
           </item>
           <item>
-            <lb/><q>Sire</q>, dit Roland en riant, <q>ils ont fait là de bonne <lb/>besogne ;
+            <lb/><quote>Sire</quote>, dit Roland en riant, <quote>ils ont fait là de bonne <lb/>besogne ;
               puisque ce roi est si gentilhomme, vous lui <lb/>laisserez sans doute la France à
               garder, et vous, en <lb/>revanche, vous prendrez Luiserne pour vous y éta<lb
-                break="no" rend="hyphen"/>blir.</q> » </item>
+                break="no" rend="hyphen"/>blir.</quote> » </item>
           <item>
             <lb/>L'empereur ne goûte pas cette raillerie de <lb/>Roland, et peu s'en faut qu'il lui
             donne de son gant <lb/>par le nez. </item>
           <item>
-            <lb/>Olivier prend la défense de Roland et <lb/>menace de s'en retourner. « <q>J'en
-              ferai autant</q>, ajoute <lb/>Roland ; <q>laissons là ce vieux radoteur, et qu'il
-              aille à <lb/>tous les diables.</q> » P. 32-33. </item>
+            <lb/>Olivier prend la défense de Roland et <lb/>menace de s'en retourner. « <quote>J'en
+              ferai autant</quote>, ajoute <lb/>Roland ; <quote>laissons là ce vieux radoteur, et qu'il
+              aille à <lb/>tous les diables.</quote> » P. 32-33. </item>
         </list>
         <list corresp="#L_023 #L_024">
           <item>
@@ -997,16 +1002,16 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Ques<lb break="no" rend="hyphen"/>tions sur le roi Gui. </item>
           <item>
-            <lb/>« <q>>Et les dames, que font-elles ?</q>
+            <lb/>« <quote>>Et les dames, que font-elles ?</quote>
             <lb/>demande Charlemagne. </item>
           <item>
-            <lb/><q>Nous les avons amenées <lb/>avec nous</q>, répond Bertrand <note>
-              <lb/>1. Le texte dit <q>Berart</q> ; mais quelques lignes plus bas, <lb/>on lit que
+            <lb/><quote>Nous les avons amenées <lb/>avec nous</quote>, répond Bertrand <note>
+              <lb/>1. Le texte dit <mentioned>Berart</mentioned> ; mais quelques lignes plus bas, <lb/>on lit que
               Roland voudroit avoir un destrier, un bon faucon <lb/>mué ou un épervier ramage, pour
-              en faire don à <q>Bertrand</q>, <lb/>tant est grande sa joie de savoir que belle Aude
+              en faire don à <mentioned>Bertrand</mentioned>, <lb/>tant est grande sa joie de savoir que belle Aude
               est si près <lb/>de lui. Il faut donc lire Berart ou Bertrand dans les deux
-              <lb/>passages. </note> ; <q>votre sœur y est, et <lb/>belle Aude aussi, la sœur
-              d'Olivier.</q> » </item>
+              <lb/>passages. </note> ; <quote>votre sœur y est, et <lb/>belle Aude aussi, la sœur
+              d'Olivier.</quote> » </item>
           <item>
             <lb/>Joie de Ro<lb break="no" rend="hyphen"/>land à cette nouvelle. P. 36-39 </item>
         </list>
@@ -1026,10 +1031,10 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             puis il raconte <lb/>à Ogier le projet qu'il vient de former. Ainsi tra<lb break="no"
               rend="hyphen"/>vesti, il veut pénétrer dans Luiserne, pour savoir où <lb/>les murs
             sont le moins forts, et, en même temps, <lb/>pour montrer à tous qu'il est encore
-            capable d'un <lb/>trait d'audace : « <q>Une fois que je serai dans la ville</q>,
-            <lb/>dit-il à Ogier, <q>prenez mes armes et mon écu, montez <lb/>sur mon cheval, et
+            capable d'un <lb/>trait d'audace : « <quote>Une fois que je serai dans la ville</quote>,
+            <lb/>dit-il à Ogier, <quote>prenez mes armes et mon écu, montez <lb/>sur mon cheval, et
               donnez un assaut à la porte, vous <lb/>et Naimes le barbu, avec une troupe de trois
-              mille <lb/>hommes.</q> » </item>
+              mille <lb/>hommes.</quote> » </item>
           <item>
             <lb/>Charlemagne arrive à la porte de Lui<lb break="no" rend="hyphen"/>serne,
             entièrement défiguré, la tête branlante, la <lb/>bouche torte, et traînant la hanche ;
@@ -1037,13 +1042,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             détruit en partie l'effet de son déguisement. </item>
           <item>
             <lb/>Il est reconnu par Boïdant, un interprète sarrasin <lb/>qui a été en France : «
-              <q>Avez-vous jamais vu Charle<lb break="no" rend="hyphen"/>magne ?</q> dit Boïdant au
-            chevalier qui garde la porte ; <lb/><q>le voilà. Il vient sans doute pour épier ; il va
+              <quote>Avez-vous jamais vu Charle<lb break="no" rend="hyphen"/>magne ?</quote> dit Boïdant au
+            chevalier qui garde la porte ; <lb/><quote>le voilà. Il vient sans doute pour épier ; il va
               parler <pb facs="facsimile0030.bin.png" n="0030"/>
               <!--    <lb/>xxvj
                 <lb/>SOMMAIRE. -->
               <lb/>à notre seigneur Aquilant. Suivons-le et nous lui cou<lb break="no" rend="hyphen"
-              />perons la tête.</q> » P. 39-41. </item>
+              />perons la tête.</quote> » P. 39-41. </item>
         </list>
         <list corresp="#L_030">
           <item>
@@ -1051,25 +1056,25 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>A <lb/>peine a-t-il achevé sa prière qu'il voit les cieux s'en<lb break="no"
               rend="hyphen"/>tr'ouvrir ; l'ange Gabriel descend vers lui et lui dit à <lb/>l'oreille
-            : « <q>Empereur de France, sois sans crainte ; <lb/>celui qui t'a amené ici te
-              conduira.</q> » </item>
+            : « <quote>Empereur de France, sois sans crainte ; <lb/>celui qui t'a amené ici te
+              conduira.</quote> » </item>
           <item>
             <lb/>Charlemagne, <lb/>rassuré, se dirige vers le palais du roi sarrasin. Ap<lb
               break="no" rend="hyphen"/>puyé sur son bourdon, il salue Aquilant en grec, car <lb/>il
-            sait tous les langages : « <q>D'où viens-tu ?</q> demande <lb/>Aquilant ; <q>où vas-tu ?
-              quel est ton pays ?</q>
+            sait tous les langages : « <quote>D'où viens-tu ?</quote> demande <lb/>Aquilant ; <quote>où vas-tu ?
+              quel est ton pays ?</quote>
           </item>
           <item>
-            <lb/><q>Sire, je <lb/>suis né à Palerme, et je reviens de la Mecque, où j'ai <lb/>porté
+            <lb/><quote>Sire, je <lb/>suis né à Palerme, et je reviens de la Mecque, où j'ai <lb/>porté
               mon offrande. C'est grand merveille que je sois <lb/>revenu, car Charlemagne a coupé
               tous les chemins, <lb/>de façon qu'il n'y a plus de sûreté pour les pèlerins et
               <lb/>pour les messagers. J'ai vu naguère votre père, le <lb/>riche roi Macabré ; vous
-              recevrez de lui bientôt un <lb/>renfort de cent mille Turcs.</q> » </item>
+              recevrez de lui bientôt un <lb/>renfort de cent mille Turcs.</quote> » </item>
           <item>
             <lb/>Comme il dit ces <lb/>mots, survient l'interprète Boïdant, qui l'a suivi. Il
             <lb/>va droit au faux pèlerin, le saisit par sa barbe blanche, <lb/>et le tirant
-            violemment à lui : « <q>Vieux rusé</q>, lui dit-il, <lb/><q>on vous a reconnu, et, à
-              cette heure, il faut changer <lb/>de ton.</q> » </item>
+            violemment à lui : « <quote>Vieux rusé</quote>, lui dit-il, <lb/><quote>on vous a reconnu, et, à
+              cette heure, il faut changer <lb/>de ton.</quote> » </item>
           <item>
             <lb/>Charlemagne pense qu'il est perdu s'il <lb/>laisse dire un mot de plus à Boïdant,
             et d'un coup de <lb/>poing il l'étend mort aux pieds d'Aquilant. </item>
@@ -1081,9 +1086,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             c'est par sa faute. </item>
           <item>
             <lb/>Au même instant on vient <lb/>annoncer à Aquilant que Charlemagne est aux portes,
-            <lb/>qu'il a brisé le pont et comblé le fossé : « <q>Aux armes ! <lb/>barons</q>,
-            s'écrie Aquilant. <q>Frère, attendez-moi ici</q>, <lb/>dit-il au pèlerin ; <q>je reviens
-              à vous dès que l'assaut <lb/>sera repoussé.</q> » P. 41-44. </item>
+            <lb/>qu'il a brisé le pont et comblé le fossé : « <quote>Aux armes ! <lb/>barons</quote>,
+            s'écrie Aquilant. <quote>Frère, attendez-moi ici</quote>, <lb/>dit-il au pèlerin ; <quote>je reviens
+              à vous dès que l'assaut <lb/>sera repoussé.</quote> » P. 41-44. </item>
         </list>
         <list corresp="#L_030 #L_031">
           <item>
@@ -1104,21 +1109,21 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Dans le même temps, Gui de Bourgogne interroge <lb/>le pèlerin qui lui a donné
             naguère des nouvelles de <lb/>Charlemagne ; il lui demande s'il connoît quelque cité,
-            <lb/>quelque forteresse, que l'empereur n'ait pu réduire. <lb/>« <q>J'en sais trois,
+            <lb/>quelque forteresse, que l'empereur n'ait pu réduire. <lb/>« <quote>J'en sais trois,
               répond le pélerin ; et d'abord Mon<lb break="no" rend="hyphen"/>torgueil sur Mer, qui
-              obéit au roi Huidelon.</q> » </item>
+              obéit au roi Huidelon.</quote> » </item>
           <item>
             <lb/>Des<lb break="no" rend="hyphen"/>cription de cette ville, entourée de plusieurs
-            rivières, <lb/>dont les eaux renferment des aimants. « <q>Charlema<lb break="no"
-                rend="hyphen"/>gne</q>, dit le pèlerin, <q>l'a assiégée trois ans sans succès.
+            rivières, <lb/>dont les eaux renferment des aimants. « <quote>Charlema<lb break="no"
+                rend="hyphen"/>gne</quote>, dit le pèlerin, <quote>l'a assiégée trois ans sans succès.
               <lb/>Il alla ensuite à Montesclair, et, après huit mois de <lb/>siége, l'abandonna
               encore, pour aller à Augorie, où <lb/>règne le sarrasin Escorfaut. Enfin, il a qui
               quitté Augo<lb break="no" rend="hyphen"/>rie pour Luiserne, où il est depuis sept
-              ans.</q>
+              ans.</quote>
           </item>
           <item>
-            <lb/><q>Tu <lb/>me mèneras à Montorgueil</q>, reprend Gui ; <q>il faut que <lb/>je
-              prenne cette cite avant de voir Charlemagne.</q> » </item>
+            <lb/><quote>Tu <lb/>me mèneras à Montorgueil</quote>, reprend Gui ; <quote>il faut que <lb/>je
+              prenne cette cite avant de voir Charlemagne.</quote> » </item>
           <item>
             <lb/>Retour des messagers que Gui a envoyés à l'empe<lb break="no" rend="hyphen"/>reur. </item>
           <item>
@@ -1133,29 +1138,29 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Conseil de guerre pour aviser aux moyens de pren<lb break="no" rend="hyphen"/>dre
             Montorgueil. </item>
           <item>
-            <lb/>La force n'y peut rien ; il faut <lb/>donc employer la ruse : « <q>Faites
-            armer</q>, dit Bertrand, <lb/><q>dix jeunes damoiseaux, que vous conduirez vous<lb
+            <lb/>La force n'y peut rien ; il faut <lb/>donc employer la ruse : « <quote>Faites
+            armer</quote>, dit Bertrand, <lb/><quote>dix jeunes damoiseaux, que vous conduirez vous<lb
                 break="no" rend="hyphen"/>même à Montorgueil. Si nous pouvons entrer dans la
               <lb/>ville, nous ferons accroire à Huidelon que nous som<lb break="no" rend="hyphen"
               />mes des messagers de Charlemagne, et que nous ve<lb break="no" rend="hyphen"/>nons
               de la part de l'empereur lui demander ses fiefs et <lb/>ses terres. Une fois
               introduits dans son palais, si <lb/>vous le trouvez bon, nous parlerons un tout autre
-              <lb/>langage.</q>
+              <lb/>langage.</quote>
           </item>
           <item>
-            <lb/><q>Sur ma tête</q>, dit Gui, <q>voilà un bon con<lb break="no" rend="hyphen"/>seil
+            <lb/><quote>Sur ma tête</quote>, dit Gui, <quote>voilà un bon con<lb break="no" rend="hyphen"/>seil
               : vous viendrez avec moi ; choisissez vos compa<lb break="no" rend="hypen"/>
               <pb facs="facsimile0032.bin.png" n="0032"/>
               <!-- <lb/>SOMMAIRE.
-                        <lb/>xxviij --> gnons.</q> » </item>
+                        <lb/>xxviij --> gnons.</quote> » </item>
           <item>
             <lb/>Débat entre les chevaliers, qui se dispu<lb break="no" rend="hyphen"/>tent
             l'honneur de prendre part à cette périlleuse en<lb break="no" rend="hyphen"/>treprise. </item>
           <item>
             <lb/>Turpin veut être du nombre, car s'il est <lb/>un bon clerc et sait bien invoquer le
             seigneur Dieu, <lb/>il ne sait pas moins bien joûter et s'escrimer en ba<lb break="no"
-              rend="hyphen"/>taille. « <q>Voilà un bon prêtre</q>, dit Gui ; <q>bénie soit l'heure
-              <lb/>où il fut engendré ! </q>» </item>
+              rend="hyphen"/>taille. « <quote>Voilà un bon prêtre</quote>, dit Gui ; <quote>bénie soit l'heure
+              <lb/>où il fut engendré ! </quote>» </item>
           <item>
             <lb/>Départ de la petite troupe. </item>
           <item>
@@ -1164,17 +1169,17 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Entrevue de Maucabré et du roi Gui. </item>
           <item>
-            <lb/>« <q> Nous allons à Montorgueil</q>, dit Gui, <q>de la part <lb/>de Charlemagne,
+            <lb/>« <quote> Nous allons à Montorgueil</quote>, dit Gui, <quote>de la part <lb/>de Charlemagne,
               pour mander Huidelon auprès de <lb/>l'empereur. Charles est en courroux contre son
               neveu <lb/>Roland, et a juré de le déshériter. Si Huidelon veut se <lb/>faire
-              chrétien, c'est à Huidelon qu'il donnera l'Es<lb break="no" rend="hyphen"/>pagne.</q>
+              chrétien, c'est à Huidelon qu'il donnera l'Es<lb break="no" rend="hyphen"/>pagne.</quote>
           </item>
           <item>
-            <lb/><q>Voilà de bonnes nouvelles</q>, dit le Turc. </item>
+            <lb/><quote>Voilà de bonnes nouvelles</quote>, dit le Turc. </item>
           <item>
-            <lb/><q>Oui</q>, reprend Gui, <q>mais comment parler à Huidelon ? <lb/>Nous ne le
+            <lb/><quote>Oui</quote>, reprend Gui, <quote>mais comment parler à Huidelon ? <lb/>Nous ne le
               saurions sans passer ces rivières aimantées, <lb/>et le moyen, revêtus comme nous
-              sommes de nos <lb/>hauberts ? </q>» </item>
+              sommes de nos <lb/>hauberts ? </quote>» </item>
           <item>
             <lb/>Le Turc s'offre à les conduire par une <lb/>chaussée qui a dix pieds de large et
             douze lieues de <lb/>long. </item>
@@ -1199,7 +1204,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Portrait du géant. </item>
           <item>
-            <lb/>« <q>Huidelon est-il là ? </q>demande <lb/>Gui. <q>Pouvons-nous lui parler ?</q> » </item>
+            <lb/>« <quote>Huidelon est-il là ? </quote>demande <lb/>Gui. <quote>Pouvons-nous lui parler ?</quote> » </item>
           <item>
             <lb/>Réponse du géant, <lb/>qui lève le bâton auquel il attache ses clefs, pense en
             <lb/>frapper Bertrand, mais n'atteint que son cheval, qui <lb/>tombe mort. </item>
@@ -1225,7 +1230,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Discours de <lb/>Gui : menaces terribles si Huidelon bouge pied ou <lb/>main. </item>
           <item>
-            <lb/>« <q>Qu'est donc devenu mon portier ?</q> » s'écrie le <lb/>païen. </item>
+            <lb/>« <quote>Qu'est donc devenu mon portier ?</quote> » s'écrie le <lb/>païen. </item>
           <item>
             <lb/>Il apprend qu'un des messagers lui a tran<lb break="no" rend="hyphen"/>ché la tête. </item>
           <item>
@@ -1298,9 +1303,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             contraire, il menace Gui et ses compa<lb break="no" rend="hyphen"/>gnons de les faire
             pendre. </item>
           <item>
-            <lb/>Débat entre Gui et les <lb/>siens à qui se chargera de la bataille : « <q>Je suis
-              votre <lb/>seigneur lige</q>, dit Gui ; <q>c'est à moi qu'est confié votre <lb/>salut
-              ; c'est moi qui me battrai pour vous délivrer.</q> » <lb/>P. 62-67. </item>
+            <lb/>Débat entre Gui et les <lb/>siens à qui se chargera de la bataille : « <quote>Je suis
+              votre <lb/>seigneur lige</quote>, dit Gui ; <quote>c'est à moi qu'est confié votre <lb/>salut
+              ; c'est moi qui me battrai pour vous délivrer.</quote> » <lb/>P. 62-67. </item>
         </list>
         <list corresp="#L_049 #L_050 #L_051">
           <item>
@@ -1355,9 +1360,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <!--          <lb/>SOMMAIRE.
                         <lb/>xxxj -->
             <lb/>même son fils seroit vaincu ; mais le frère de Dane<lb break="no" rend="hyphen"
-            />mont, Dragolant, les réunit autour de lui et leur dit ; <lb/>« <q>ll est écrit qu'un
+            />mont, Dragolant, les réunit autour de lui et leur dit ; <lb/>« <quote>ll est écrit qu'un
               païen ne peut tenir contre un <lb/>François ; faites donc armer trois cents des nôtres
-              et <lb/>faites-les sortir par la fausse poterne.</q> » </item>
+              et <lb/>faites-les sortir par la fausse poterne.</quote> » </item>
           <item>
             <lb/>Embus<lb break="no" rend="hyphen"/>cade des païens dans un taillis. </item>
           <item>
@@ -1390,15 +1395,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Au <lb/>même instant accourent les François. </item>
           <item>
-            <lb/>« <q>Pourquoi <lb/>êtes-vous descendus de la tour ?</q> leur demande Hui<lb
+            <lb/>« <quote>Pourquoi <lb/>êtes-vous descendus de la tour ?</quote> leur demande Hui<lb
               break="no" rend="hyphen"/>delon. </item>
           <item>
-            <lb/><q>Pour secourir ce gentil bachelier</q>, répon<lb break="no" rend="hyphen"
-            />dent-ils, <q>quand nous avons vu sortir vos Sarrasins.</q> » </item>
+            <lb/><quote>Pour secourir ce gentil bachelier</quote>, répon<lb break="no" rend="hyphen"
+            />dent-ils, <quote>quand nous avons vu sortir vos Sarrasins.</quote> » </item>
           <item>
             <lb/>Huidelon avoue qu'ils ont eu sujet de craindre, et <lb/>que Dragolant s'est mal
-            conduit : « <q>On va partout</q>, <lb/>dit-il, <q>m'accuser de trahison, et je serai
-              montré au <lb/>doigt à la cour de Charlemagne.</q> » Il veut donc que <lb/>Gui le
+            conduit : « <quote>On va partout</quote>, <lb/>dit-il, <quote>m'accuser de trahison, et je serai
+              montré au <lb/>doigt à la cour de Charlemagne.</quote> » Il veut donc que <lb/>Gui le
             conduise au camp de l'empereur ; il veut se <lb/>soumettre au jugement des Francs, et,
             s'il est déclaré <lb/>traître, il consent à perdre sa terre et à voir couper <lb/>la
             tête de son fils. </item>
@@ -1418,11 +1423,11 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Le duc Naimes lui conseille de l'en<lb break="no" rend="hyphen"/>voyer chercher par
             douze mille chevaliers. </item>
           <item>
-            <lb/>« <q>Allez-y, <pb facs="facsimile0036.bin.png" n="0036"/>
+            <lb/>« <quote>Allez-y, <pb facs="facsimile0036.bin.png" n="0036"/>
               <!-- <lb/>xxxij
                         <lb/>SOMMAIRE. -->
-              <lb/>duc Naimes</q>, répond Charlemagne, <q>avec Thierri l'Ar<lb break="no"
-                rend="hyphen"/>denois et Sanson de Bourgogne.</q> » </item>
+              <lb/>duc Naimes</quote>, répond Charlemagne, <quote>avec Thierri l'Ar<lb break="no"
+                rend="hyphen"/>denois et Sanson de Bourgogne.</quote> » </item>
           <item>
             <lb/>Départ des barons <lb/>pour le camp de Gui de Bourgogne. </item>
           <item>
@@ -1434,48 +1439,48 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Il se dispose à <lb/>faire marcher contre eux une troupe des siens ; mais
             <lb/>Bertrand reconnoît bientôt les vieux barons de Char<lb break="no" rend="hyphen"
-            />lemagne, et s'écrie en riant : « <q>Voyez, sire, il faut <lb/>que Charles de
+            />lemagne, et s'écrie en riant : « <quote>Voyez, sire, il faut <lb/>que Charles de
               Saint-Denis vous aime bien, puisqu'il <lb/>vous envoie chercher par ses meilleurs
-              chevaliers.</q>
+              chevaliers.</quote>
           </item>
           <item>
-            <lb/><q>Dieu !</q> s'écrie Gui à son tour, <q>si mon père étoit du <lb/>nombre !</q>
+            <lb/><quote>Dieu !</quote> s'écrie Gui à son tour, <quote>si mon père étoit du <lb/>nombre !</quote>
           </item>
           <item>
-            <lb/><q>Il est là, sur ma tête !</q> répond Bertrand. </item>
+            <lb/><quote>Il est là, sur ma tête !</quote> répond Bertrand. </item>
           <item>
-            <lb/><q>Ami, dit le jeune roi, fais-le-moi donc voir.</q>
+            <lb/><quote>Ami, dit le jeune roi, fais-le-moi donc voir.</quote>
           </item>
           <item>
-            <lb/><q>Le voilà devant vous</q>, reprend Bertrand, <q>avec cette <lb/>pelisse grise et
+            <lb/><quote>Le voilà devant vous</quote>, reprend Bertrand, <quote>avec cette <lb/>pelisse grise et
               cette barbe blanche qui lui tombe sur <lb/>la poitrine. Voilà le duc Naimes à la
               moustache fleu<lb break="no" rend="hyphen"/>rie ; voilà les pères de tous les
-              damoiseaux qui vous <lb/>ont suivi dans ces contrées étrangères.</q>
+              damoiseaux qui vous <lb/>ont suivi dans ces contrées étrangères.</quote>
           </item>
           <item>
-            <lb/><q>Sire Gui <lb/>de Bourgogne</q>, s'écrient les jeunes chevaliers, <q>laisse<lb
-                break="no" rend="hyphen"/>nous aller baiser nos pères.</q>
+            <lb/><quote>Sire Gui <lb/>de Bourgogne</quote>, s'écrient les jeunes chevaliers, <quote>laisse<lb
+                break="no" rend="hyphen"/>nous aller baiser nos pères.</quote>
           </item>
           <item>
-            <lb/><q>Par saint Denis !</q> ré<lb break="no" rend="hyphen"/>pond le roi, <q>il n'est
+            <lb/><quote>Par saint Denis !</quote> ré<lb break="no" rend="hyphen"/>pond le roi, <quote>il n'est
               un seul de vous, quel qu'il soit, <lb/>s'il se fait connoître à son père, à qui je ne
-              fasse sé<lb break="no" rend="hyphen"/>parer la tête du buste.</q> » P. 85-87. </item>
+              fasse sé<lb break="no" rend="hyphen"/>parer la tête du buste.</quote> » P. 85-87. </item>
         </list>
         <list corresp="#L_066 #L_067">
           <item>
             <lb/>Huidelon <lb/>s'informe d'où sont ces chevaliers dont la venue cause <lb/>si grande
             rumeur. </item>
           <item>
-            <lb/>« <q>Ils sont de France, beau sire ; <lb/>ils sont de notre pays</q>, répondent les
-            compagnons de <lb/>Gui ; <q>s'il ne vous déplaît point, nous irons ensemble
-              <lb/>au-devant d'eux.</q> » </item>
+            <lb/>« <quote>Ils sont de France, beau sire ; <lb/>ils sont de notre pays</quote>, répondent les
+            compagnons de <lb/>Gui ; <quote>s'il ne vous déplaît point, nous irons ensemble
+              <lb/>au-devant d'eux.</quote> » </item>
           <item>
             <lb/>Rencontre des deux troupes. </item>
           <item>
-            <lb/>« <q>Où est le roi de France ?</q> demande Naimes. </item>
+            <lb/>« <quote>Où est le roi de France ?</quote> demande Naimes. </item>
           <item>
-            <lb/><q>On <lb/>va vous le faire voir</q>, répond Gui ; <q>venez avec nous <lb/>dans sa
-              tente.</q> » </item>
+            <lb/><quote>On <lb/>va vous le faire voir</quote>, répond Gui ; <quote>venez avec nous <lb/>dans sa
+              tente.</quote> » </item>
           <item>
             <lb/>Entrevue du duc Naimes et de ses <lb/>compagnons, du jeune roi et de ses
             chevaliers, dans <lb/>la tente de Gui de Bourgogne. </item>
@@ -1484,15 +1489,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Réponses courtoises de Gui. </item>
           <item>
-            <lb/>Mais <lb/>quand le vieux duc lui demande : « <q>Quel est donc vo<lb break="no"
+            <lb/>Mais <lb/>quand le vieux duc lui demande : « <quote>Quel est donc vo<lb break="no"
                 rend="hypen"/>
               <pb facs="facsimile0037.bin.png" n="0037"/>
               <!-- <lb/>SOMMAIRE.
-                <lb/>xxxiij --> tre père ?</q>
+                <lb/>xxxiij --> tre père ?</quote>
           </item>
           <item>
-            <lb/><q>Vieux radoteur !</q> lui répond Gui ; <q>par <lb/>saint Denis de France, si vous
-              dites un mot de plus <lb/>je vous ferai séparer la tête du buste.</q> » P. 87-89.
+            <lb/><quote>Vieux radoteur !</quote> lui répond Gui ; <quote>par <lb/>saint Denis de France, si vous
+              dites un mot de plus <lb/>je vous ferai séparer la tête du buste.</quote> » P. 87-89.
           </item>
         </list>
         <list corresp="#L_068 #L_069">
@@ -1532,12 +1537,12 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Baptême de dame Marguerite, femme de <lb/>Huidelon. </item>
           <item>
-            <lb/>« <q>Maintenant, je vous rends votre terre <lb/>et votre seigneurie</q>, dit à
+            <lb/>« <quote>Maintenant, je vous rends votre terre <lb/>et votre seigneurie</quote>, dit à
             Huidelon le roi Gui. </item>
           <item>
-            <lb/><q>Non, <lb/>certes</q>, répond Huidelon, <q>par la foi que je dois au fils <lb/>de
+            <lb/><quote>Non, <lb/>certes</quote>, répond Huidelon, <quote>par la foi que je dois au fils <lb/>de
               sainte Marie, je ne tiendrai pas un pied de ma <lb/>terre avant d'avoir vu Charles, le
-              roi de Saint-Denis.</q> » </item>
+              roi de Saint-Denis.</quote> » </item>
           <item>
             <lb/>On laisse donc la ville à la garde de la reine, et <lb/>Huidelon retourne au camp
             des François. </item>
@@ -1583,14 +1588,14 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             derrière. </item>
           <item>
             <lb/>Le portier laisse entrer Huidelon <lb/>sans défiance, mais la vue des François
-            l'étonne : <lb/>« <q>Tous ces chevaliers, beau sire, sont-ils de votre <lb/>compagnie
-              ?</q>
+            l'étonne : <lb/>« <quote>Tous ces chevaliers, beau sire, sont-ils de votre <lb/>compagnie
+              ?</quote>
           </item>
           <item>
-            <lb/><q>Vous le saurez</q>, lui répond Danemont, <lb/><q>avant l'heure de complies. Où
-              est le roi Escorfaut</q>, <lb/>ajoute-t-il ? </item>
+            <lb/><quote>Vous le saurez</quote>, lui répond Danemont, <lb/><quote>avant l'heure de complies. Où
+              est le roi Escorfaut</quote>, <lb/>ajoute-t-il ? </item>
           <item>
-            <lb/><q>Il est là haut, beau sire, avec cent de <lb/>ses chevaliers. »</q>
+            <lb/><quote>Il est là haut, beau sire, avec cent de <lb/>ses chevaliers. »</quote>
           </item>
           <item>
             <lb/>Entrevue de Huidelon et d'Escor<lb break="no" rend="hyphen"/>faut. </item>
@@ -1607,16 +1612,16 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Inquiétude <lb/>des chevaliers françois. </item>
           <item>- <lb/>Escorfaut considère Berard <lb/>et Bertrand, et reconnoît qu'ils sont de
-            France : « <q>Qui <lb/>sont ces chevaliers ?</q> » demande-t-il à Huidelon. </item>
+            France : « <quote>Qui <lb/>sont ces chevaliers ?</quote> » demande-t-il à Huidelon. </item>
           <item>
-            <lb/>C'est <lb/>Danemont qui lui répond : « <q>Bel oncle, il n'est plus <lb/>temps de
+            <lb/>C'est <lb/>Danemont qui lui répond : « <quote>Bel oncle, il n'est plus <lb/>temps de
               ruser : ce sont des vassaux de Gui de Bour<lb break="no" rend="hyphen"/>gogne, qui
               vous fait sommer par nous de lui rendre <lb/>hommage et d'embrasser la foi chrétienne
-              ; sinon, c'en <lb/>est fait de vous.</q> » </item>
+              ; sinon, c'en <lb/>est fait de vous.</quote> » </item>
           <item>
-            <lb/>Huidelon répète la sommation et <lb/>les menaces de son fils : « <q>Ni l'amitié ni
-              la parenté <lb/>ne m'empêcheront</q>, dit-il, <q>de te faire rogner la tête, <lb/>ni
-              de te faire arracher du corps et les mains et les <lb/>pieds.</q> » </item>
+            <lb/>Huidelon répète la sommation et <lb/>les menaces de son fils : « <quote>Ni l'amitié ni
+              la parenté <lb/>ne m'empêcheront</quote>, dit-il, <quote>de te faire rogner la tête, <lb/>ni
+              de te faire arracher du corps et les mains et les <lb/>pieds.</quote> » </item>
           <item>
             <lb/>Les chevaliers françois mettent l'épée à <lb/>la main, et la mêlée commence. P.
             97-102. </item>
@@ -1626,32 +1631,32 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Elle se termine bientôt en leur faveur. </item>
           <item>
             <lb/>Escorfaut, <lb/>dès qu'il voit la résistance impossible, se soumet aux
-            <lb/>conditions qu'on lui impose : « <q>J'aime mieux</q>, dit-il, <lb/><q>perdre ma
-              terre que ma tête ; mais je cède à la force <lb/>plus qu'à l'amitié.</q>
+            <lb/>conditions qu'on lui impose : « <quote>J'aime mieux</quote>, dit-il, <lb/><quote>perdre ma
+              terre que ma tête ; mais je cède à la force <lb/>plus qu'à l'amitié.</quote>
           </item>
           <item>
-            <lb/><q>Peu m'importe</q>, répond Huide<lb break="no" rend="hyphen"/>lon : <q>je n'en
-              suis pas moins joyeux.</q> » </item>
+            <lb/><quote>Peu m'importe</quote>, répond Huide<lb break="no" rend="hyphen"/>lon : <quote>je n'en
+              suis pas moins joyeux.</quote> » </item>
           <item>
             <lb/>Escorfaut <lb/>met la tête à l'une des fenêtres du palais, et de là voit <lb/>ses
             hommes réunis en armes au nombre de plus de <lb/>trente mille ; il leur parle en ces
-            termes : « <q>Seigneurs, <lb/>écoutez-moi : j'ai rendu aux François ma terre et mon
+            termes : « <quote>Seigneurs, <lb/>écoutez-moi : j'ai rendu aux François ma terre et mon
               <lb/>pays ; je vais me faire baptiser, et vous requiers de <lb/>rendre aussi vos
-              terres.</q>
+              terres.</quote>
           </item>
           <item>
-            <lb/><q>Par Apollon !</q> répondent <lb/>les païens, <q>nous allons assaillir ces
-              François et les met<lb break="no" rend="hyphen"/>tre en pièces.</q>
+            <lb/><quote>Par Apollon !</quote> répondent <lb/>les païens, <quote>nous allons assaillir ces
+              François et les met<lb break="no" rend="hyphen"/>tre en pièces.</quote>
           </item>
           <item>
-            <lb/><q>Faites ce dont je vous prie</q>, reprend <lb/>Escorfaut, <q>ou vous m'allez
+            <lb/><quote>Faites ce dont je vous prie</quote>, reprend <lb/>Escorfaut, <quote>ou vous m'allez
               voir, la tête rognée, et mou<lb break="no" rend="hyphen"/>rir de male mort, car
-              j'aperçois là-bas le roi Gui avec <lb/>son armée.</q> » Soumission des païens, qui
+              j'aperçois là-bas le roi Gui avec <lb/>son armée.</quote> » Soumission des païens, qui
             mettent bas <lb/>les armes. </item>
           <item>
             <lb/>Bertrand, en signe de victoire, attache <lb/>une enseigne vermeille au haut de la
             tour du palais, <lb/>et, dès qu'il la voit flotter, Gui de Bourgogne s'écrie : <lb/>«
-              <q>La ville est nôtre !</q> » </item>
+              <quote>La ville est nôtre !</quote> » </item>
           <item>
             <lb/>Occupation de la ville par <lb/>les François. </item>
           <item>
@@ -1662,15 +1667,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <pb facs="facsimile0040.bin.png" n="0040"/>
             <!--  <lb/>xxxvj
                         <lb/>SOMMAIRE. --> vant le roi Gui : «
-              <q>Tenez, sire, dit Huidelon, je vous <lb/>livre Escorfaut, lui et toute sa terre,
-              pour en dispo<lb break="no" rend="hyphen"/>ser à votre gré.</q>
+              <quote>Tenez, sire, dit Huidelon, je vous <lb/>livre Escorfaut, lui et toute sa terre,
+              pour en dispo<lb break="no" rend="hyphen"/>ser à votre gré.</quote>
           </item>
           <item>
-            <lb/><q>Ami</q>, dit Gui de Bourgogne au <lb/>Sarrasin, <q>veux-tu croire en Dieu et
-              recevoir le saint <lb/>baptême avec foi et humilité ?</q>
+            <lb/><quote>Ami</quote>, dit Gui de Bourgogne au <lb/>Sarrasin, <quote>veux-tu croire en Dieu et
+              recevoir le saint <lb/>baptême avec foi et humilité ?</quote>
           </item>
           <item>
-            <lb/><q>Oui, sire, je le veux <lb/>sincèrement</q> », répond le païen. </item>
+            <lb/><quote>Oui, sire, je le veux <lb/>sincèrement</quote> », répond le païen. </item>
           <item>
             <lb/>Baptême d'Escor<lb break="no" rend="hyphen"/>faut et des siens par l'archevêque
             Turpin. Tous ceux <lb/>qui refusent de croire en Dieu sont mis à mort. <lb/>P. 102-104.
@@ -1682,36 +1687,36 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             plus de cent mille <lb/>hommes, tout prêts à se porter au secours de l'empe<lb
               break="no" rend="hyphen"/>reur. </item>
           <item>
-            <lb/>« <q>Combien de temps nous faut-il</q>, demande <lb/>Gui à Huidelon et à Escorfaut,
-              <q>pour arriver sous les <lb/>murs de Luiserne ?</q>
+            <lb/>« <quote>Combien de temps nous faut-il</quote>, demande <lb/>Gui à Huidelon et à Escorfaut,
+              <quote>pour arriver sous les <lb/>murs de Luiserne ?</quote>
           </item>
           <item>
-            <lb/><q>Sur ma foi</q>, répond Huidelon, <lb/><q>trois jours ne se passeront pas sans
-              que nous voyions <lb/>le roi de Saint-Denis et les barons de France.</q>
+            <lb/><quote>Sur ma foi</quote>, répond Huidelon, <lb/><quote>trois jours ne se passeront pas sans
+              que nous voyions <lb/>le roi de Saint-Denis et les barons de France.</quote>
           </item>
           <item>
-            <lb/><q>Sans <lb/>doute</q>, dit en riant Escorfaut, <q>mais auparavant nous
+            <lb/><quote>Sans <lb/>doute</quote>, dit en riant Escorfaut, <quote>mais auparavant nous
               <lb/>trouverons une forte cité assise sur un rocher, et dont <lb/>les murailles sont
               de marbre vert et bis. Elle renferme <lb/>quinze tours fortifiées avec leurs murs et
               leurs ponts <lb/>tournants. Il n'est pas d'homme, si puissant soit-il, si
               <lb/>nombreux soient ses chevaliers, qui la puisse réduire <lb/>par la force d'ici au
-              jour du jugement.</q>
+              jour du jugement.</quote>
           </item>
           <item>
-            <lb/><q>Comment a <lb/>nom cette ville, beau sire ?</q> demande le roi Gui. </item>
+            <lb/><quote>Comment a <lb/>nom cette ville, beau sire ?</quote> demande le roi Gui. </item>
           <item>
-            <lb/><q>On l'appelle Maudrane</q>, répond Escorfaut. <q>Elle obéit <lb/>à Emaudras, un
+            <lb/><quote>On l'appelle Maudrane</quote>, répond Escorfaut. <quote>Elle obéit <lb/>à Emaudras, un
               traître maudit, qui est fils de ma <lb/>sœur. Si nous le laissons derrière nous, nous
               avons <lb/>tout à craindre ; mais il n'y demeurera pas, je vous <lb/>le promets. Voici
-              Huidelon qui m'a livré : je vous <lb/>livrerai de même Emaudras.</q> » </item>
+              Huidelon qui m'a livré : je vous <lb/>livrerai de même Emaudras.</quote> » </item>
           <item>
             <lb/>Marche de l'armée <lb/>sur Maudrane. </item>
           <item>
             <lb/>Aspect extérieur de cette ville. </item>
           <item>
             <lb/>Huidelon est d'avis qu'elle ne sauroit être prise que <lb/>par ruse ; la force n'y
-            peut rien. « <q>Mais soyez sans <lb/>crainte, sire</q>, dit-il à Gui de Bourgogne ;
-              <q>s'il plaît à <lb/>Dieu et à saint Pierre, avant qu'il soit demain pareille
+            peut rien. « <quote>Mais soyez sans <lb/>crainte, sire</quote>, dit-il à Gui de Bourgogne ;
+              <quote>s'il plaît à <lb/>Dieu et à saint Pierre, avant qu'il soit demain pareille
               <lb/>heure, nous la mettrons en votre pouvoir. Donnez<lb break="no" rend="hyphen"/>moi
               dix mille de vos hommes ; j'en prendrai autant de <pb facs="facsimile0041.bin.png"
                 n="0041"/>
@@ -1720,7 +1725,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               barons, mais les vôtres auront pieds et <lb/>poings liés. Nous ferons accroire aux
               gardes du pont <lb/>que ce sont autant de prisonniers, enlevés à l'armée <lb/>de Gui,
               et que nous menons à Emaudras pour en <lb/>faire justice ; nous entrerons ainsi dans
-              la ville et nous <lb/>la prendrons.</q> » </item>
+              la ville et nous <lb/>la prendrons.</quote> » </item>
           <item>
             <lb/>Gui de Bourgogne approuve l'en<lb break="no" rend="hyphen"/>treprise. P. 105-107.
           </item>
@@ -1734,66 +1739,66 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <lb/>Emaudras, qu'ils trouvent sous un olivier, dans le <lb/>jardin de son palais,
             jouant aux échecs avec un de <lb/>ses barons. </item>
           <item>
-            <lb/>Joie d'Emaudras à la vue des dix mille <lb/>prisonniers : « <q>Vous avez fait bonne
-              besogne</q>, dit-il <lb/>à Huidelon et à Escorfaut ; <q>il nous faut maintenant
+            <lb/>Joie d'Emaudras à la vue des dix mille <lb/>prisonniers : « <quote>Vous avez fait bonne
+              besogne</quote>, dit-il <lb/>à Huidelon et à Escorfaut ; <quote>il nous faut maintenant
               <lb/>aller à Luiserne au secours d'Aquilant, mon seigneur ; <lb/>nous délogerons
               l'armée de Charlemagne et lui fe<lb break="no" rend="hyphen"/>rons couper la tête.
               J'ai eu naguères de ses nouvelles <lb/>par un pèlerin, qui m'a dit qu'à peine peut il
               se tenir <lb/>sur ses pieds, que les vivres manquent à son armée, <lb/>et que les
-              destriers sont épuisés.</q>
+              destriers sont épuisés.</quote>
           </item>
           <item>
-            <lb/><q>Sur ma tête</q>, dit <lb/>Huidelon, <q>je marcherai l'un des premiers contre
+            <lb/><quote>Sur ma tête</quote>, dit <lb/>Huidelon, <quote>je marcherai l'un des premiers contre
               lui, <lb/>car je hais ce vieillard plus que personne au monde ; <lb/>mais faisons
               conduire les prisonniers là haut, et lais<lb break="no" rend="hyphen"/>sez-moi pour
               aujourd'hui dormir et me reposer, car <lb/>il y a huit jours que je ne me suis
-              dépouillé de mon <lb/>armure.</q> » </item>
+              dépouillé de mon <lb/>armure.</quote> » </item>
           <item>
             <lb/>Sous la conduite de Danemont et de <lb/>Dragolant, les faux prisonniers pénètrent
             dans le palais, <lb/>se dégagent de leurs liens et mettent l'épée à la main. </item>
           <item>
             <lb/>Les portes sont fermées, les ponts relevés. </item>
           <item>
-            <lb/>« <q>Faites ôter les épées à ces prisonniers</q>, s'écrie <lb/>Emaudras, à la vue
-            des François en armes ; <q>nous les <lb/>jeterons dans la grande chartre.</q>
+            <lb/>« <quote>Faites ôter les épées à ces prisonniers</quote>, s'écrie <lb/>Emaudras, à la vue
+            des François en armes ; <quote>nous les <lb/>jeterons dans la grande chartre.</quote>
           </item>
           <item>
-            <lb/><q>Ils vous rendront <lb/>le cœur dolent auparavant</q>, reprend Huidelon, <q>si
+            <lb/><quote>Ils vous rendront <lb/>le cœur dolent auparavant</quote>, reprend Huidelon, <quote>si
               vous <lb/>ne voulez croire en Jésus-Christ, le roi d'amour, qui <lb/>naquit de la
-              sainte Vierge à Bethléem.</q>
+              sainte Vierge à Bethléem.</quote>
           </item>
           <item>
-            <lb/><q>Ah ! vieil<lb break="no" rend="hyphen"/>lard puant, dit Emaudras, c'est donc
+            <lb/><quote>Ah ! vieil<lb break="no" rend="hyphen"/>lard puant, dit Emaudras, c'est donc
               ainsi que vous <pb facs="facsimile0042.bin.png" n="0042"/>
               <!--    <lb/>xxxviij
                         <lb/>SOMMAIRE. -->
               <lb/>m'avez trahi ! Par Mahomet, je me laisserai jeter <lb/>dans un feu ardent plutôt
               que de croire à celui qui se <lb/>laissa supplicier ; lui qui ne voulut pas s'aider
-                lui<lb break="no" rend="hyphen"/>même, comment me viendroit-il en aide ?</q> » </item>
+                lui<lb break="no" rend="hyphen"/>même, comment me viendroit-il en aide ?</quote> » </item>
           <item>
             <lb/>A <lb/>peine a-t-il dit ces mots, que Danemont le saisit par <lb/>la barbe, et d'un
             grand coup sur la nuque l'abat à ses <lb/>pieds. </item>
           <item>
-            <lb/>« <q>Laissez-moi parler à ce Turc un langage <lb/>avenant</q>, dit l'archevêque
-            Turpin. <q>Ami, crois en Dieu, <lb/>tu rentreras en possession de ta terre, et n'y
-              perdras <lb/>rien.</q>
+            <lb/>« <quote>Laissez-moi parler à ce Turc un langage <lb/>avenant</quote>, dit l'archevêque
+            Turpin. <quote>Ami, crois en Dieu, <lb/>tu rentreras en possession de ta terre, et n'y
+              perdras <lb/>rien.</quote>
           </item>
           <item>
-            <lb/><q>Je n'ai que faire de ton sermon</q>, répond <lb/>Emaudras ; <q>je ne croirai
+            <lb/><quote>Je n'ai que faire de ton sermon</quote>, répond <lb/>Emaudras ; <quote>je ne croirai
               jamais en celui qui, sur une <lb/>vieille planche, à Jérusalem, souffrit les tortures
-              et la <lb/>mort.</q> » </item>
+              et la <lb/>mort.</quote> » </item>
           <item>
             <lb/>A ces mots, Turpin le pourfend d'un coup <lb/>d'épée. </item>
           <item>
-            <lb/>« <q>Certes, voilà un bon prêtre</q>, dit Huide<lb break="no" rend="hyphen"/>lon. </item>
-          <item>- <lb/><q>Et qui confesse bien</q> », ajoute son fils Dra<lb break="no"
+            <lb/>« <quote>Certes, voilà un bon prêtre</quote>, dit Huide<lb break="no" rend="hyphen"/>lon. </item>
+          <item>- <lb/><quote>Et qui confesse bien</quote> », ajoute son fils Dra<lb break="no"
               rend="hyphen"/>golant. P. 108-111. </item>
         </list>
         <list corresp="#L_084 #L_085 #L_086">
           <item>
-            <lb/>« <q>Maintenant, seigneurs, <lb/>il s'agit de bien faire</q>, disent les chevaliers
-            françois. <lb/><q>Allons assaillir les païens avant qu'ils se doutent de <lb/>rien et
-              qu'ils aient eu le temps de s'armer.</q> » </item>
+            <lb/>« <quote>Maintenant, seigneurs, <lb/>il s'agit de bien faire</quote>, disent les chevaliers
+            françois. <lb/><quote>Allons assaillir les païens avant qu'ils se doutent de <lb/>rien et
+              qu'ils aient eu le temps de s'armer.</quote> » </item>
           <item>
             <lb/>Les <lb/>païens, surpris, sont taillés en pièces ou se précipitent <lb/>eux-mêmes
             dans la mer. </item>
@@ -1803,8 +1808,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         </list>
         <list corresp="#L_086 #L_087 #L_088 #L_089 #L_090 #L_091">
           <item>
-            <lb/>Charlemagne, cependant, attend toujours Gui de <lb/>Bourgogne : « <q>Je ne le
-              verrai jamais</q> », dit-il en soupi<lb break="no" rend="hyphen"/>rant. Mais le duc
+            <lb/>Charlemagne, cependant, attend toujours Gui de <lb/>Bourgogne : « <quote>Je ne le
+              verrai jamais</quote> », dit-il en soupi<lb break="no" rend="hyphen"/>rant. Mais le duc
             Naimes le réconforte et lui rend <lb/>l'espérance. </item>
           <item>
             <lb/>A ce moment, Roland introduit devant <lb/>l'empereur un messager qui demande à lui
@@ -1817,15 +1822,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Consternation de l'empereur, de Roland et d'Olivier. </item>
           <item>
-            <lb/>Mais Ogier le Danois relève leur courage. « <q>Quel <lb/>chevalier !</q> s'écrie
+            <lb/>Mais Ogier le Danois relève leur courage. « <quote>Quel <lb/>chevalier !</quote> s'écrie
             Charlemagne ; bénie soit l'heure où, <lb/>Gaufrey l'engendra ! » </item>
           <item>
             <lb/>Ganelon, au contraire, <lb/>conseille à l'empereur de rentrer en France :
-              <q>jamais</q>, <lb/>dit-il, <q>on ne prendra Luiserne ; jamais on ne verra Gui <pb
+              <quote>jamais</quote>, <lb/>dit-il, <quote>on ne prendra Luiserne ; jamais on ne verra Gui <pb
                 facs="facsimile0043.bin.png" n="0043"/>
               <!--    <lb/>SOMMAIRE.
                         <lb/>xxxix -->
-              <lb/>de Bourgogne.</q>
+              <lb/>de Bourgogne.</quote>
           </item>
           <item>
             <lb/>Le duc Naimes combat cet avis : il <lb/>veut qu'une troupe de quatre mille hommes
@@ -1835,11 +1840,11 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Murmures de <lb/>Ganelon, qui n'ose refuser. </item>
           <item>
-            <lb/>Dans le même temps, Gui de Bourgogne demande <lb/>à Huidelon : « <q>Quand
-              arriverons-nous à Luiserne ?</q>
+            <lb/>Dans le même temps, Gui de Bourgogne demande <lb/>à Huidelon : « <quote>Quand
+              arriverons-nous à Luiserne ?</quote>
           </item>
           <item>
-            <lb/><q>Après midi</q> », répond Huidelon. </item>
+            <lb/><quote>Après midi</quote> », répond Huidelon. </item>
           <item>
             <lb/>Grande joie du roi <lb/>Gui, de l'armée et des dames. </item>
           <item>
@@ -1854,17 +1859,17 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Lamentations <lb/>de Charlemagne. </item>
           <item>
-            <lb/>Résignation du duc Naimes. <lb/>« <q>Sire</q>, dit-il, <q>vous savez bien qu'il
+            <lb/>Résignation du duc Naimes. <lb/>« <quote>Sire</quote>, dit-il, <quote>vous savez bien qu'il
               nous faut tous <lb/>mourir. Si notre jour est venu, recommandons à Dieu <lb/>nos âmes
-              et nos corps, et vendons chèrement notre <lb/>vie.</q> » </item>
+              et nos corps, et vendons chèrement notre <lb/>vie.</quote> » </item>
           <item>
             <lb/>Le cor sonne et les chevaliers courent aux <lb/>armes. </item>
           <item>
             <lb/>Le duc Naimes conseille à l'empereur de <lb/>ne point précipiter le départ de son
             armée, de peur <lb/>que les Sarrasins de Luiserne ne viennent attaquer ses
-            <lb/>derrières : « <q>J'irai en avant</q>, dit-il, <q>avec dix mille <lb/>hommes, pour
+            <lb/>derrières : « <quote>J'irai en avant</quote>, dit-il, <quote>avec dix mille <lb/>hommes, pour
               surveiller la marche de l'armée païenne, <lb/>et je ne reviendrai point sans avoir
-              rencontré les <lb/>Turcs.</q> » P. 113-118. </item>
+              rencontré les <lb/>Turcs.</quote> » P. 113-118. </item>
         </list>
         <list corresp="#L_091 #L_092 #L_093">
           <item>
@@ -1872,26 +1877,26 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             duc Naimes reconnoît l'armée <lb/>du gentil bachelier tant attendu, et se hâte de
               rappor<lb break="no" rend="hyphen"/>ter cette grande nouvelle à l'empereur. </item>
           <item>
-            <lb/>« <q>J'ai assez <lb/>vécu</q>, s'écrie Charlemagne ; <q>je sais à cette heure que
-              <lb/>Luiserne sera prise.</q> » </item>
+            <lb/>« <quote>J'ai assez <lb/>vécu</quote>, s'écrie Charlemagne ; <quote>je sais à cette heure que
+              <lb/>Luiserne sera prise.</quote> » </item>
           <item>
-            <lb/>Puis il appelle ses barons, <lb/>et leur dit : « <q>Barons, désarmez-vous, ôtez vos
+            <lb/>Puis il appelle ses barons, <lb/>et leur dit : « <quote>Barons, désarmez-vous, ôtez vos
                 chaus<lb break="no" rend="hyphen"/>ses et vos souliers, et allez tous à terre, sur
               les mains <lb/>et sur les genoux, au devant de celui qui nous arrive : <pb
                 facs="facsimile0044.bin.png" n="0044"/>
               <!--      <lb/>xl
                         <lb/>SOMMAIRE. -->
-              <lb/>on ne sauroit trop honorer qui amène un tel renfort.</q> » </item>
+              <lb/>on ne sauroit trop honorer qui amène un tel renfort.</quote> » </item>
           <item>
             <lb/>Etonnement de Gui de Bourgogne à la vue des <lb/>barons françois dans cette
             posture. </item>
           <item>
-            <lb/>« <q>C'est humi<lb break="no" rend="hyphen"/>lité</q>, dit Bertrand :
+            <lb/>« <quote>C'est humi<lb break="no" rend="hyphen"/>lité</quote>, dit Bertrand :
             leur joie est telle qu'il ne savent <lb/>comment la
             manifester. </item>
           <item>
-            <lb/><q>C'étoit aux plus jeunes, <lb/>c'étoit à nous</q>, reprend Gui, <q>à nous
-              prosterner ainsi.</q> » <lb/>Et aussitôt il ordonne à ses barons de tourner leurs
+            <lb/><quote>C'étoit aux plus jeunes, <lb/>c'étoit à nous</quote>, reprend Gui, <quote>à nous
+              prosterner ainsi.</quote> » <lb/>Et aussitôt il ordonne à ses barons de tourner leurs
             <lb/>épées la pointe en bas et de se précipiter à terre sur <lb/>les coudes et sur les
             genoux. </item>
           <item>
@@ -1901,8 +1906,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             fait une lieue avant qu'ils pus<lb break="no" rend="hyphen"/>sent parler. </item>
           <item>
             <lb/>Après s'être baisés tendrement l'un et <lb/>l'autre, Gui de Bourgogne tombe aux
-            pieds de Char<lb break="no" rend="hyphen"/>lemagne : « <q>Grâce ! beau sire</q>, lui
-            dit-il ; <q>écoutez ma <lb/>parole : il y a vingt-sept ans accomplis que vous em<lb
+            pieds de Char<lb break="no" rend="hyphen"/>lemagne : « <quote>Grâce ! beau sire</quote>, lui
+            dit-il ; <quote>écoutez ma <lb/>parole : il y a vingt-sept ans accomplis que vous em<lb
                 break="no" rend="hyphen"/>menâtes nos pères. Un jour, dans une assemblée à
               <lb/>Paris, on me fit roi contre mon gré ; si je n'eusse ac<lb break="no"
                 rend="hyphen"/>cepté, on m'eût tué. Mais je ne voulus tenir en France <lb/>ni
@@ -1911,26 +1916,26 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <lb/>Montorgueil. J'ai fait baptiser Huidelon et avec lui <lb/>plus de trente mille
               païens. J'ai pris encore Augorie <lb/>et Maudrane. Je remets en vos mains ces cinq
               cités <lb/>et toutes leurs richesses. Voici mon épée ; prenez-là, <lb/>et coupez-moi
-              la tête, si c'est votre bon plaisir.</q>
+              la tête, si c'est votre bon plaisir.</quote>
           </item>
           <item>
-            <lb/><q>Par mon chef</q>, répond Charlemagne, <q>vous êtes preux <lb/>et sensé ; de
+            <lb/><quote>Par mon chef</quote>, répond Charlemagne, <quote>vous êtes preux <lb/>et sensé ; de
               votre vie vous ne perdrez la couronne <lb/>que vous portez. Je vous donnerai
-              l'Espagne, si vous <lb/>la pouvez prendre.</q>
+              l'Espagne, si vous <lb/>la pouvez prendre.</quote>
           </item>
           <item>
-            <lb/><q>Et maintenant, enfants, à vos <lb/>pères !</q> » s'écrie Gui de Bourgogne. </item>
+            <lb/><quote>Et maintenant, enfants, à vos <lb/>pères !</quote> » s'écrie Gui de Bourgogne. </item>
           <item>
             <lb/>Lui-même se <lb/>jette dans les bras de Sanson et lui baise plus de cent <lb/>fois
             la bouche et le nez .- Depuis que Dieu hébergea <lb/>saint Pierre aux prés de Néron, et
             qu'il ressuscita le <lb/>corps de saint Lazare, on ne vit jamais au monde <lb/>pareille
             joie ni pareille foule assemblée. </item>
           <item>
-            <lb/>« <q>Faites <lb/>venir les dames sans retard, dit le roi Gui au jeune <pb
+            <lb/>« <quote>Faites <lb/>venir les dames sans retard, dit le roi Gui au jeune <pb
                 facs="facsimile0045.bin.png" n="0045"/>
               <!-- <lb/>SOMMAIRE.
                         <lb/>xlj -->
-              <lb/>Bertrand, car c'est merveille comme chacune désire <lb/>son baron.</q> » </item>
+              <lb/>Bertrand, car c'est merveille comme chacune désire <lb/>son baron.</quote> » </item>
           <item>
             <lb/>Les dames descendent de leurs chars <lb/>et se dirigent vers les tentes, précédées
             de Gille, la soeur <lb/>de Charlemagne, qui amène avec elle la belle Aude. </item>
@@ -1949,7 +1954,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <item>
             <lb/>Ils <lb/>n'en sortirent qu'à nones ou à vêpres. </item>
           <item>
-            <lb/>Ce temps <lb/>passé, l'empereur réunit les dames et leur dit : « <q>Da<lb
+            <lb/>Ce temps <lb/>passé, l'empereur réunit les dames et leur dit : « <quote>Da<lb
                 break="no" rend="hyphen"/>mes, je ne puis vous le cacher, il convient que vous
               <lb/>retourniez en France ; vous ne pouvez ici partager <lb/>nos fatigues, jeûner
               parfois comme nous et endurer <lb/>toutes les misères. Nous allons marcher contre
@@ -1957,10 +1962,10 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               mécréants <lb/>et de leur enlever leurs fiefs, nous rentrerons aussi en <lb/>France à
               la saint Bastien. Alors Roland prendra belle <lb/>Aude pour femme, nous couronnerons
               le jeune Gui, <lb/>à qui je donnerai en fief ce riche pays, et Roland <lb/>aura la
-              France, qu'il désire tant.</q>
+              France, qu'il désire tant.</quote>
           </item>
           <item>
-            <lb/><q>A vos ordres</q> », <lb/>répondent les dames. </item>
+            <lb/><quote>A vos ordres</quote> », <lb/>répondent les dames. </item>
           <item>- <lb/>Hélas ! quel malheur les me<lb break="no" rend="hyphen"/>nace ! Que de
             milliers de chevaliers se réjouissent de <lb/>ce retour promis, qui ne reverront jamais
             ni leurs <lb/>femmes, ni leurs enfants ! Ils seront vendus à Marsile <lb/>et souffriront
@@ -2099,11 +2104,11 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                   <w>sis</w>
                 </rdg>
                 <note>
-                  <lb/>Leçon de a : <q>.XXXVII. anz</q> ; mais plus loin, (<ref corresp="#R_001">p. 2, 
+                  <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref corresp="#R_001">p. 2, 
                     v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
                   manuscrit donne .XXVII. Nous <lb/>rétablissons donc ici cette leçon, qui semble la
                   bonne, <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :
-                    <q>vint e sis</q>. C'est un espace de temps qui <lb/>suffit et au delà à la fable imaginée
+                    <mentioned>vint e sis</mentioned>. C'est un espace de temps qui <lb/>suffit et au delà à la fable imaginée
                   par le trouvère.
                 </note>
               </app>
@@ -2792,7 +2797,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>Karlemaines</w>
                 <pc type="supplied">,</pc>
                 <note resp="#Guessard">
-                  1. Nous supprimons ici <q>vos</q>, qui fausse la mesure du vers.
+                  1. Nous supprimons ici <mentioned>vos</mentioned>, qui fausse la mesure du vers.
+                  <!-- TODO: aligner la pratique ici avec celle des autres corrections, dans un sens ou
+                  dans l'autre.-->
                 </note> 
                 <w>molt</w>
                 <w>grant</w>
@@ -3178,7 +3185,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           </rdg> 
           <note resp="#Guessard">
             <lb/>Après ce vers, b ajoute :
-            <lb/><q>Et beviez le claré, le piment, le vin velz.</q>
+            <lb/><mentioned>Et beviez le claré, le piment, le vin velz.</mentioned>
           </note>
         </app>
         <l>
@@ -3535,8 +3542,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>Avignon</w> 
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>[Dès Huiscent] sor la mer de ci que à Saint Gile.</q> 
-              <lb/>Leçon de a : <q>d'Avignon sor la mer.</q> 
+              <lb/><mentioned>[Dès Huiscent] sor la mer de ci que à Saint Gile.</mentioned> 
+              <lb/>Leçon de a : <mentioned>d'Avignon sor la mer.</mentioned> 
               <lb/>Nous empruntons notre correction à un vers qui <lb/>n'est que la répétition 
               de celui-ci, et qui se lit <ref corresp="#R_004">plus <lb/>bas, même page, v. 31</ref>. 
             </note>
@@ -4071,8 +4078,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                </choice>
              </lem>
              <note resp="#Guessard">
-               <lb/>Nous corrigeons ainsi le manuscrit a, qui donne : <lb/> <q>Et car
-               le mes nomez.</q>
+               <lb/>Nous corrigeons ainsi le manuscrit a, qui donne : <lb/> <mentioned>Et car
+               le mes nomez.</mentioned>
              </note>
            </app>
             <w>nomez</w>
@@ -4408,8 +4415,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>venir</w>
               </lem>
               <note resp="#Guessard">
-                <lb/><q>Va moi, fai tost venir... </q>
-                <lb/>Il faudroit lire  peut-être : <lb/><q>Va, fai moi tost venir.... </q>
+                <lb/><mentioned>Va moi, fai tost venir... </mentioned>
+                <lb/>Il faudroit lire  peut-être : <lb/><mentioned>Va, fai moi tost venir.... </mentioned>
               </note>
             </app>
             <w>Floriant</w>
@@ -5590,11 +5597,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>sers</w>
           <app>
             <lem wit="#a">
-              <w>premerai
-                <corr resp="#Guessard">
-                  n
-                </corr>
-              </w>
+              <w>premerai<corr resp="#Guessard">n</corr></w>
             </lem>
           </app>
           <w>contrové</w>
@@ -5610,9 +5613,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>ost</w>
           <app>
             <lem wit="#a">
-              <w>s
-                <corr resp="#Guessard">e</corr>
-              </w>
+              <w>s<corr resp="#Guessard">e</corr></w>
             </lem>
           </app>
           <w>est</w>
@@ -6332,7 +6333,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           </lem>
           <rdg wit="#b">
             <lb/>
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             <l>
               <w>Premerain</w>
               <w>i</w>
@@ -6506,7 +6508,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <pc type="supplied">.</pc>
               </l>
               
-              <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -6562,7 +6565,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">»</pc>
             </l>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -6633,7 +6637,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">.</pc>
             </l>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <l>
               <pc type="supplied">«</pc>
@@ -6902,7 +6907,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </l>
             <lb/>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -6938,7 +6944,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </l>
             <lb/>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -6951,7 +6958,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <pc type="supplied">;</pc>
                 <w rend="elision">n</w>
                 <pc type="supplied">'</pc>
-                <w>en </w>
+                <w>en</w>
                 <w>déussez</w>
                 <w>parler</w>
                 <pc type="supplied">.</pc>
@@ -6960,7 +6967,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </l>
             <lb/>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/>
             
             <lb/>
             <l>
@@ -7020,7 +7027,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">»</pc>
             </l>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -7164,7 +7172,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">.</pc>
             </l>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -7222,7 +7231,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">»</pc>
             </l>
             
-            <gap/>
+            <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
             
             <lb/>
             <l>
@@ -7269,16 +7279,16 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </l>
           </rdg>
           <note resp="#Guessard">
-               <lb/><q>Et li enfant de France se furent aüné.</q>
+               <lb/><mentioned>Et li enfant de France se furent aüné.</mentioned>
               <lb/>La partie du récit comprise entre <ref corresp="#R_005">ce vers</ref> et celui-ci, 
-            <lb/><q>Sire Guis de Borgoigne, dist Bertrant, çà <choice><sic>vene</sic><corr type="erratum"
+            <lb/><mentioned>Sire Guis de Borgoigne, dist Bertrant, çà <choice><sic>vene</sic><corr type="erratum"
                 resp="#Guessard #Michelant" cert="high" corresp="#errata">venez</corr>
-            </choice></q> 
+            </choice></mentioned> 
               <lb/>(<ref corresp="#R_006">p. 8, v. 12</ref>), est beaucoup plus développée dans le <lb/>manuscrit b ; 
               au lieu de 37 vers, elle en renferme 166, <lb/>divisés en quatre tirades, dont le texte 
               est, par mal<lb break="no" rend="hyphen"/>heur, fort incorrect. Dans la première tirade, 
               les fils <lb/>des douze pairs sont nommés : 
-              <q>
+              <mentioned>
                 <lb/>Premerain i vint Gui, le fiz al duc Sampçon ; 
                 <lb/>Après i vint Bertran, le fiz al duc Neimon, 
                 <lb/>Berard de Muntider, fiz Terri le baron ; 
@@ -7291,69 +7301,75 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <lb/>E le fiz Anséis ; s'i fu le fiz Huon ;
                 <lb/>S'i fu le fiz Gerin, Gerin sun compainon. (sic) 
                 <lb/>Tut li meillur i vindrent et de plus grant renon.
-              </q>
+              </mentioned>
               <lb/>C'est Bertrand, le fils de Naimes, qui prend la parole <lb/>le premier, comme dans 
               le manuscrit a ; l'objet de son <lb/>discours est le même, seulement ses raisons sont un 
-              <lb/>peu plus développées. « <q>Faisons un roi</q>, conclut-il ; <lb/> « <q>sinon, 
-                douce France ira à sa perte ; le plus fort</q> <lb/>« <q>enlèvera au plus faible sa 
-                  maison. Faison un roi</q>
-              <lb/>« <q>Ke nus tendra en France en pes et à reson :</q>
-              <lb/>« <q>Ja ne valt un réalme san segnor un boton.</q> » 
-              <lb/>Et li enfant dient : « <q>Et nos ben l'otréum.</q> » 
+              <lb/>peu plus développées. « <mentioned>Faisons un roi</mentioned>, conclut-il ; <lb/> « <mentioned>sinon, 
+                douce France ira à sa perte ; le plus fort</mentioned> <lb/>« <mentioned>enlèvera au plus faible sa 
+                  maison. Faison un roi</mentioned>
+              <lb/>« <mentioned>Ke nus tendra en France en pes et à reson :</mentioned>
+              <lb/>« <mentioned>Ja ne valt un réalme san segnor un boton.</mentioned> » 
+              <lb/>Et li enfant dient : « <mentioned>Et nos ben l'otréum.</mentioned> » 
               <lb/>La seconde tirade est, au commencement, une répéti<lb break="no" rend="hyphen"/>tion 
               de la première, et, en quelques points, se rap<lb break="no" rend="hyphen"/>proche 
               beaucoup pour la forme du texte du manu<lb break="no" rend="hyphen"/>scrit a ; mais après
               le seizième vers se trouve un discours <lb/>du fils cadet de Ganelon, qui est une invention 
               toute <lb/>nouvelle, et semble annoncer une version remaniée : 
+            <mentioned>
               <lb/>Un des fiz Guenelon s'en est en pez levez ;
               <lb/>Maucion ot <corr resp="#Guessard">à</corr> nun, si fu 
               <corr resp="#Guessard">li fiz</corr> mainés. 
               <lb/>Grant fu e parcréu, si ot pendant le nés, 
               <lb/>Si ot la barbe rousse, et fu molt <corr resp="#Guessard">lonc</corr> et lez. 
-              <lb/>..............................
-              <lb/>« <q>Bertran, dit Maucion, certes ben dit assez :</q> 
-              <lb/>« <q>Si l'em feit rei en France, je m'en sui presentez,</q> 
-              <lb/>« <q>Si demant la corone, ke vos la me donez.</q> 
-              <lb/>« <q>Si de mei feites rei, grant honur en aurez,</q>
-              <lb/>« <q>Kar vos serrez por mei enhaucé et amez.</q>
-              <lb/>« <q>Baruns, je seie reis, si vus lecomandez ;</q> 
-              <lb/>« <q>Molt ert bien enploïe en mei la realtez,</q> 
-              <lb/>« <q>Kar je sui gentils hom e de grant parentez :</q> 
-              <lb/>« <q>Alorin est mi niep, e mun cosin Hardrez,</q> 
-              <lb/>« <q>Et Richart mun parent e Focher le barbez,</q> 
-              <lb/>« <q>Et Isoart li jesnes e Brihan li einnez,</q> 
-              <lb/>« <q>Malveisin e Malingres, et Miles et Forrés.</q> 
-              <lb/>« <q>Ne sai ke plus en die ; trop sui enparentez.</q> 
-              <lb/>« <q>E si est mun pere Gnenes, k'od Karlon est alez ;</q>
-              <lb/>« <q>Sa serur od a femme, si ke ben le savez :</q> 
-              <lb/>« <q>Pur ce dei en France estre haltement coronez.</q> » 
+              <lb/>..............................<!-- TODO: gap -->
+              <lb/>« <!--<q>-->Bertran, dit Maucion, certes ben dit assez :<!--</q>--> 
+              <lb/>« <!--<q>-->Si l'em feit rei en France, je m'en sui presentez,<!--</q>--> 
+              <lb/>« <!--<q>-->Si demant la corone, ke vos la me donez.<!--</q>--> 
+              <lb/>« <!--<q>-->Si de mei feites rei, grant honur en aurez,<!--</q>-->
+              <lb/>« <!--<q>-->Kar vos serrez por mei enhaucé et amez.<!--</q>-->
+              <lb/>« <!--<q>-->Baruns, je seie reis, si vus lecomandez ;<!--</q>--> 
+              <lb/>« <!--<q>-->Molt ert bien enploïe en mei la realtez,<!--</q>--> 
+              <lb/>« <!--<q>-->Kar je sui gentils hom e de grant parentez :<!--</q>--> 
+              <lb/>« <!--<q>-->Alorin est mi niep, e mun cosin Hardrez,<!--</q>--> 
+              <lb/>« <!--<q>-->Et Richart mun parent e Focher le barbez,<!--</q>--> 
+              <lb/>« <!--<q>-->Et Isoart li jesnes e Brihan li einnez,<!--</q>--> 
+              <lb/>« <!--<q>-->Malveisin e Malingres, et Miles et Forrés.<!--</q>--> 
+              <lb/>« <!--<q>-->Ne sai ke plus en die ; trop sui enparentez.<!--</q>--> 
+              <lb/>« <!--<q>-->E si est mun pere Gnenes, k'od Karlon est alez ;<!--</q>-->
+              <lb/>« <!--<q>-->Sa serur od a femme, si ke ben le savez :<!--</q>--> 
+              <lb/>« <!--<q>-->Pur ce dei en France estre haltement coronez.<!--</q>--> » 
               <lb/>...................................................
-              <lb/>E dit Estus de Lengres : « <q>Trop vos estes hastez ;</q> 
-              <lb/>« <q>N'atendist<corr resp="#Guessard">es</corr> pas tant ke fussez apelez.</q> 
-              <lb/>« <q>Maucion, teisez vos ; n'en déussez parler.</q> » 
+              <!-- TODO: gap -->
+              <lb/>E dit Estus de Lengres : « <!--<q>-->Trop vos estes hastez ;<!--</q>--> 
+              <lb/>« <!--<q>-->N'atendist<corr resp="#Guessard">es</corr> pas tant ke fussez apelez.<!--</q>--> 
+              <lb/>« <!--<q>-->Maucion, teisez vos ; n'en déussez parler.<!--</q>--> » 
+            </mentioned>
               <lb/>Ici se termine la seconde tirade. 
-              <lb/>Estout de Langres continue : « <q>Bertrand a bien parlé</q>, <lb/>dit-il, 
-              <q>cherchons un prudhomme parmi nous pour en <lb/>faire un roi. Je ne parle pas de moi ; 
+              <lb/>Estout de Langres continue : « <quote>Bertrand a bien parlé</quote>, <lb/>dit-il, 
+              <quote>cherchons un prudhomme parmi nous pour en <lb/>faire un roi. Je ne parle pas de moi ; 
                 si je voulois la <lb/>couronne, je l'aurois et serois roi de France, quoi <lb/>qu'on en 
                 pût dire ; mais je ne veux pas l'être, j'ai le <lb/>cœur trop felon. Il y faut un homme 
-                sage et plein de <lb/>grand amour, qui garde et conduise le pays par la <lb/>douceur.</q> 
-              - <q>Je me suis présenté le premier</q>, reprend <lb/>Maucion, 
-              <lb/>« <q>Si demand la corone, je la ruis à vos tuz ; </q>
-              <lb/>« <q>Si d'altre fetes rei, ja n'ert si gentils homs</q> 
-              <lb/>« <q>Je n'en prenge la teste par desuz le mentons.</q> » 
+                sage et plein de <lb/>grand amour, qui garde et conduise le pays par la <lb/>douceur.</quote> 
+              - <quote>Je me suis présenté le premier</quote>, reprend <lb/>Maucion, 
+            <mentioned>
+              <lb/>« <!--<q>-->Si demand la corone, je la ruis à vos tuz ; <!--</q>-->
+              <lb/>« <!--<q>-->Si d'altre fetes rei, ja n'ert si gentils homs<!--</q>--> 
+              <lb/>« <!--<q>-->Je n'en prenge la teste par desuz le mentons.<!--</q>--> » 
               <lb/>Estout de Langres, sans s'effrayer du ton menaçant <lb/>de Maucion, reprend à son tour : 
-              <lb/>« <q>Je dirrai mun pensé, ki k'en peise ne ki non :</q> 
-              <lb/>« <q>Ben <corr resp="#Guessard">vos</corr> déussez tere, en nun Deu, Maucions,</q> 
-              <lb/>« <q>Vos e vostre lignage avez esté tuz jurs,</q> 
-              <lb/>« <q>E tut vostre ancessur, retté de tréicuns.</q> 
-              <lb/>« <q>Dehait <corr resp="#Guessard">ait</corr> traitres rei el col et el mentun !</q> 
+              <lb/>« <!--<q>-->Je dirrai mun pensé, ki k'en peise ne ki non :<!--</q>--> 
+              <lb/>« <!--<q>-->Ben <corr resp="#Guessard">vos</corr> déussez tere, en nun Deu, Maucions,<!--</q>--> 
+              <lb/>« <!--<q>-->Vos e vostre lignage avez esté tuz jurs,<!--</q>--> 
+              <lb/>« <!--<q>-->E tut vostre ancessur, retté de tréicuns.<!--</q>--> 
+              <lb/>« <!--<q>-->Dehait <corr resp="#Guessard">ait</corr> traitres rei el col et el mentun !<!--</q>--> 
               <lb/>Pour mettre fin à ce débat, Berard est d'avis qu'il <lb/>faut aller au moutier 
-              implorer l'intervention de Dieu. <lb/>« <q>Choisissons parmi nous</q>, dit-il, <q>quatre cents 
+              implorer l'intervention de Dieu. <lb/>« <!--<q>-->Choisissons parmi nous<!--</q>-->, dit-il, <!--<q>-->quatre cents 
                 des plus <lb/>sages, qui prêteront le serment sur les évangiles de <lb/>faire un roi du 
-                mieux qu'ils sauront. Le roi une fois <lb/>nommé, s'il refuse, on lui coupera la tête.</q> 
-              -<q>Par <lb/>ma foi</q>, dist Estout de Langres, <q>voilà qui est 
-                raison<lb break="no" rend="hyphen"/>able.</q> »
+                mieux qu'ils sauront. Le roi une fois <lb/>nommé, s'il refuse, on lui coupera la tête.<!--</q>--> 
+              -<!--<q>-->Par <lb/>ma foi<!--</q>-->, dist Estout de Langres, <!--<q>-->voilà qui est 
+                raison<lb break="no" rend="hyphen"/>able.<!--</q>--> »
+            </mentioned>
               <lb/>Ainsi se termine la troisième tirade.
+            <mentioned>
               <lb/>Al conseil de Berart se sunt tuz acordez : 
               <lb/>Quatre cent eslisent de vaillanz bachelers, 
               <lb/>Ke sur les relikes e sur seinz unt jurés 
@@ -7362,14 +7378,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <lb/>Trestut le plus prodomme k<corr resp="#Guessard">e</corr> il porrunt trover. 
               <lb/>Mais Maucion proteste d'avance contre le résultat de <lb/>l'élection, s'il ne lui 
               est pas favorable :
-              <lb/>« <q>Ne m'ubliez vos mie, je m'en sui presentez :</q> 
-              <lb/>« <q>Si d'altri fetes rei, vos perdrez m'amistez ;</q> 
-              <lb/>« <q>Mal vos porchacerei, si serez puis grevez.</q> » 
+              <lb/>« <!--<q>-->Ne m'ubliez vos mie, je m'en sui presentez :<!--</q>--> 
+              <lb/>« <!--<q>-->Si d'altri fetes rei, vos perdrez m'amistez ;<!--</q>--> 
+              <lb/>« <!--<q>-->Mal vos porchacerei, si serez puis grevez.<!--</q>--> » 
               <lb/>Sur quoi, Estout de Langres menace Maucion d'un <lb/>bâton qu'il trouve à sa 
               portée : 
               <lb/>Il le prinst à deu mains, si l'ad en halt levez ; 
               <lb/>Ja éust à Maucion parmi le chef donez
-              <lb/>Quant son lignage l'at <corr resp="#Guessard">et</corr> sustret et ostez. 
+              <lb/>Quant son lignage l'at <corr resp="#Guessard">et</corr> sustret et ostez.
+            </mentioned>
               <lb/>Cette scène terminée, le récit continue comme dans <lb/>le manuscrit a, et à peu 
               près dans les mêmes termes.<lb/>Bertrand propose de choisir pour roi le fils de Sanson 
               <lb/>de Bourgogne, le jeune Gui, le héros de ce poëme. <lb/>
@@ -8244,8 +8261,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">.</pc>
             </rdg>          
             <note resp="#Guessard">
-              <lb/><q>Que lour enfans garisse et lor riches maris.</q> 
-              <lb/>Leçon de b : <q>de mort et de perils.</q></note>
+              <lb/><mentioned>Que lour enfans garisse et lor riches maris.</mentioned> 
+              <lb/>Leçon de b : <mentioned>de mort et de perils.</mentioned></note>
           </app>
           
         </l>
@@ -13362,7 +13379,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           </lem>
           <rdg wit="#b"/>
           <note resp="#Guessard">
-            <lb/><q>Mult fu fors la bataille à l'estour commencier.</q> <lb/>Toute cette tirade manque
+            <lb/><mentioned>Mult fu fors la bataille à l'estour commencier.</mentioned> <lb/>Toute cette tirade manque
             dans le manuscrit b.
           </note>          
         </app>
@@ -13903,8 +13920,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>Et</w>
           <app>
             <lem wit="#a">
-              <w>garde
-                <corr resp="#Guessard">nt</corr>
+              <w>garde<corr resp="#Guessard">nt</corr>
               </w>
             </lem>
           </app>
@@ -14599,8 +14615,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <pc type="supplied">.</pc>
               </rdg>            
               <note resp="#Guessard">
-                <lb/><q>Seignor, ce dit li enfes, or vous apareilliez.</q> 
-                <lb/>Leçon de b : <q>kar vos agenuillez.</q>
+                <lb/><mentioned>Seignor, ce dit li enfes, or vous apareilliez.</mentioned> 
+                <lb/>Leçon de b : <mentioned>kar vos agenuillez.</mentioned>
               </note>
             </app>
           </q>
@@ -15018,7 +15034,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>fer</w>
             <pc type="supplied">.</pc>
           </l>
-          <gap/>
+          <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
           <lb/>
           <l>
             <w>Cil</w>
@@ -15033,15 +15050,18 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>guez</w>
             <pc type="supplied">.</pc>
           </l> 
-          <gap/>
+          <gap reason="sampling" unit="lines" quantity=""/><!-- TODO: quantités
+            à préciser -->
         </rdg>
         <note resp="#Guessard">
             <lb/>Or s'en vont li enfant qui oirrent lor chemin. 
             <lb/>Entre la tirade qui commence par ce vers et celle <lb/>qui la précède se trouvent
             dans le manuscrit b deux <lb/>tirades, l'une de 78, l'autre de 63 vers. 
             <lb/>Première tirade : 
-            <lb/><q>Or s'en vunt li messages ki Deus pust honorer, 
-            <lb/>E menent la viande à Karlon à vis fer. </q>
+          <mentioned>
+            <lb/>Or s'en vunt li messages ki Deus pust honorer, 
+            <lb/>E menent la viande à Karlon à vis fer. 
+          </mentioned>
             <lb/>Après deux journées de marche, le convoi est en vue <lb/>de Montorgueil, une cité 
             qui a résisté aux efforts de <lb/>Charlemagne et à un siége d'une année. Estout de 
             <lb/>Langres veut qu'on la prenne et qu'on en déloge les <lb/>païens. Ses compagnons 
@@ -15049,7 +15069,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             honteux <lb/>de revoir Charlemagne sans avoir eu une rencontre <lb/>avec les
             Sarrasins. Son voeu est bientôt exaucé : à une <lb/>lieue de là, le convoi est arrêté par
             une bande de quatre <lb/>cents Sarrasins. 
-            <lb/><q>Cil gardent les passages, les destreis et les guez. </q>
+            <lb/><mentioned>Cil gardent les passages, les destreis et les guez. </mentioned>
             <lb/>Leur chef Danemont, fils de Huidelon de Montor<lb break="no" rend="hyphen"
             />gueil, réclame de chacun des chevaliers françois un <lb/>tribut de mille besans d'or.
             - Indignation d'Estout de <lb/>Langres. - Il passe un gué qui le sépare de Dane<lb
@@ -18544,11 +18564,11 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                  </sic>
               </lem> 
               <note resp="#Guessard">
-                <lb/><q>Cis jors est li cinquimes. </q>
+                <lb/><mentioned>Cis jors est li cinquimes. </mentioned>
                 <lb/>Le même personnage répond à la même question, <lb/>p. 31, v. 2 : 
-                <q>Sire, hui à .XV. jours</q>. Ces deux chiffres <lb/>ne sont pas d'accord ; 
-                il est donc probable qu'il faut <lb/>lire ici <q>quinzimes</q> au lieu de 
-                <q>cinquimes</q>. 
+                <mentioned>Sire, hui à .XV. jours</mentioned>. Ces deux chiffres <lb/>ne sont pas d'accord ; 
+                il est donc probable qu'il faut <lb/>lire ici <mentioned>quinzimes</mentioned> au lieu de 
+                <mentioned>cinquimes</mentioned>. 
               </note>
             </app>
             <pc type="supplied">,</pc>
@@ -18970,7 +18990,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>féis<corr resp="#Guessard">t</corr></w>
               </lem>
               <note resp="#Guessard">
-                <lb/><q>feis<corr resp="#Guessard">t</corr></q>. a donne <q>feis</q>, forme de la 
+                <lb/><mentioned>feis<corr resp="#Guessard">t</corr></mentioned>. a donne <mentioned>feis</mentioned>, forme de la 
                 se<lb break="no" rend="hyphen"/>conde personne ; mais il faut ici la troisième.
               </note>
             </app>
@@ -20911,9 +20931,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </l>
           </rdg>
           <note resp="#Guessard">
-            <lb/><q>Atant es Ganelon et son compain Hardré.</q> 
+            <lb/><mentioned>Atant es Ganelon et son compain Hardré.</mentioned> 
             <lb/>b ajoute, après ce vers : 
-            <lb/><q>Tebalt et Alori, Malvaisin et Mauré.</q>
+            <lb/><mentioned>Tebalt et Alori, Malvaisin et Mauré.</mentioned>
           </note>
         </app>
         <l>
@@ -20954,9 +20974,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">.</pc>
             </rdg>           
             <note resp="#Guessard">
-              <lb/><q>Olivier de Viane a par non apelé</q>. 
+              <lb/><mentioned>Olivier de Viane a par non apelé</mentioned>. 
               <lb/>Leçon de b : 
-              <lb/><q>Guenes veit Olivier, si l'a aresonez</q>. 
+              <lb/><mentioned>Guenes veit Olivier, si l'a aresonez</mentioned>. 
             </note>
           </app>
         </l>
@@ -23864,8 +23884,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">.</pc>
             </rdg>
             <note resp="#Guessard">
-              <q>Que vous a il mesfait ? dist Torpin au vis fier.</q>
-              <lb/> Leçon de b : <lb/> <q>Que vous a il mesfait ? Bertran li respondi.</q>
+              <mentioned>Que vous a il mesfait ? dist Torpin au vis fier.</mentioned>
+              <lb/> Leçon de b : <lb/> <mentioned>Que vous a il mesfait ? Bertran li respondi.</mentioned>
             </note>
           </app>
         </l>
@@ -24233,9 +24253,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>il</w>
             </rdg>          
             <note resp="#Guessard">
-              <lb/><q>Enfant, fait <corr resp="#Guessard">l'empereres</corr>, je vous demant 
-              congié.</q>
-              <lb/>Leçon de a : <q>Enfant, fait il, je vous.....</q>
+              <lb/><mentioned>Enfant, fait <corr resp="#Guessard">l'empereres</corr>, je vous demant 
+              congié.</mentioned>
+              <lb/>Leçon de a : <mentioned>Enfant, fait il, je vous.....</mentioned>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -24423,15 +24443,15 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>la</w>
           <app>
             <lem wit="#a">
-              <w>guige</w>
+              <w>guige</w><!-- JBC: est-ce vraiment une variante de a ? -->
             </lem>
             <rdg wit="#b">
               <w>here</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Karles vesti la <q>guige</q>, mist le chapele et le chief.</q>
-              <lb/>Leçon de b : <lb/> <q>Karles vesti la <q>here</q>.....</q> <lb/>leçon qui 
-              nous semble préférable. On se revêt d'une <lb/><q>haire</q>, et non d'une <q>guige</q>,
+              <lb/><mentioned>Karles vesti la <hi>guige</hi>, mist le chapele et le chief.</mentioned>
+              <lb/>Leçon de b : <lb/> <mentioned>Karles vesti la <hi>here</hi>.....</mentioned> <lb/>leçon qui 
+              nous semble préférable. On se revêt d'une <lb/><mentioned>haire</mentioned>, et non d'une <mentioned>guige</mentioned>,
             qui est un cordon.
             </note>
           </app>
@@ -24970,8 +24990,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>vo</w>
             <w>compaigne</w>
             <pc type="supplied">.</pc>
-            <w>III
-              <hi rend="superscript">m</hi></w>
+            <w>III<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>ferarmez</w>
             <pc type="supplied">.</pc>
@@ -25191,8 +25210,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         <l>
           <w>ES</w>
           <pc type="supplied">.</pc>
-          <w>III
-            <hi rend="superscript">c</hi></w>
+          <w>III<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>chevaliers</w>
           <w>fervestus</w>
@@ -25266,9 +25284,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>il</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Seignor, dist <q><corr resp="#Guessard">Boydans</corr></q>; entandez mon 
-                pensé.</q>
-              <lb/>On lit dans a : <q>Seignor, dist <q>il</q></q>.</note>
+              <lb/><mentioned>Seignor, dist <corr resp="#Guessard">Boydans</corr>; entandez mon 
+                pensé.</mentioned>
+              <lb/>On lit dans a : <mentioned>Seignor, dist <sic>il</sic></mentioned>.</note>
           </app>
           <pc type="supplied">,</pc>
           <q>
@@ -26053,8 +26071,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>envoiera</w>
             <w>il</w>
             <pc type="supplied">.</pc>
-            <w>C
-              <hi rend="superscript">m</hi></w>
+            <w>C<hi rend="superscript">m</hi></w>
             <pc type="supplied">.</pc>
             <w>Turs</w>
             <w>armez</w>
@@ -26201,17 +26218,20 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>dont</w>
           <w>li</w>
           <app>
-            <lem wit="#Guessard">
+            <lem wit="#Guessard"><!-- JBC: 
+            encodage peut-etre à corriger ici, pour aligner sur les autres cas,
+            en utilisant corr plutot que lem/rdg ?
+            -->
               <w>peus</w>
             </lem>
             <rdg wit="#a">
               <w>peust</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Le saisi par la barbe, dont li <q>peus</q>est mellez.</q>
-              <lb/>On lit dans a : <q>peust</q>, qui est inadmissible ; 
-              nous corri<lb break="no" rend="hyphen"/>geons et lisons : <q>peus</q> pour 
-            <q>pels</q>, poil.
+              <lb/><mentioned>Le saisi par la barbe, dont li <corr resp="#Guessard">peus</corr>est mellez.</mentioned>
+              <lb/>On lit dans a : <mentioned>peust</mentioned>, qui est inadmissible ; 
+              nous corri<lb break="no" rend="hyphen"/>geons et lisons : <mentioned>peus</mentioned> pour 
+            <mentioned>pels</mentioned>, poil.
             </note>
           </app>
           <w>est</w>
@@ -26805,9 +26825,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>maintenant</w>
               <w>armez</w>
             </rdg>
-            <note resp="#Guessard">
-              <lb/><q>Il méismes ses cors <q>est</q>maintenant <q>montez</q>.</q>
-              <lb/>Leçon de b : <q>s'est</q> maintenant <q>armez</q>.
+            <note resp="#Guessard"><!-- JBC: pas du tout sûr que correction vienne de a... -->
+              <lb/><mentioned>Il méismes ses cors <hi>est</hi>maintenant <hi>montez</hi>.</mentioned>
+              <lb/>Leçon de b : <mentioned><sic>s'est</sic> maintenant <sic>armez</sic>.</mentioned>
             </note>
           </app>
           <pc type="supplied">;</pc>
@@ -27881,13 +27901,13 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>fel</w>
             <w>et</w>
             <app>
-              <lem wit="#Guessard"/>
+              <lem wit="#Guessard"/><!-- JBC: ici aussi, harmoniser encodage -->
               <rdg wit="#a">
                 <w>mult</w>
               </rdg>
               <note resp="#Guessard">
-                <lb/>On lit dans a : <q><q>mult<q/>fel et <q>mult</q>des<lb break="no" 
-                  rend="hyphen"/>mesurez</q></q>, leçon qui fausse le vers. 
+                <lb/>On lit dans a : <mentioned><hi>mult</hi>fel et <hi>mult</hi> des<lb break="no" 
+                  rend="hyphen"/>mesurez</mentioned>, leçon qui fausse le vers. 
               </note>
             </app>
             <w>desmesurez</w>
@@ -27921,11 +27941,12 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>i</w>
             <w>acourent</w>
             <note>
-              <lb/><q><q>.III.</q> eves i acourent.....</q> 
-              <lb/>Voyez <ref corresp="#R_007">p. 86, v. 3</ref> : <q>Sivirent les <q>.IIII.</q> eves.</q> 
+              <lb/><mentioned><hi>.III.</hi> eves i acourent.....</mentioned> 
+              <lb/>Voyez <ref corresp="#R_007">p. 86, v. 3</ref> : 
+              <mentioned>Sivirent les <hi>.IIII.</hi> eves.</mentioned> 
               <lb/>Si l'on adopte cette seconde leçon, il faudra lire ici :
-              <lb/><q>L'une a non Rupane, l'autre Marne des guez ; <lb/> Si i cort 
-                <q>Anviron</q>.....</q>
+              <lb/><mentioned>L'une a non Rupane, l'autre Marne des guez ; <lb/> Si i cort 
+                <hi>Anviron</hi>.....</mentioned>
               <lb/>que nous n'avons osé considérer comme l'une des <lb/>quatre rivières aimantées 
               <choice><sic>qui se couloient</sic><corr type="erratum" resp="#Guessard #Michelant" cert="high" corresp="errata">
                 qui couloient</corr></choice>à Montor<lb break="no" rend="hyphen"/>gueil.
@@ -29810,9 +29831,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <rdg wit="#b">
                 <w>ert</w>
               </rdg>
-              <note>
-                <lb/><q>Quant lui <q>vient</q> à plaisir, panre le nous lera.</q> 
-                <lb/>Leçon de b : <lb/><q>Quant lui <q>ert</q> à plaisir...</q>
+              <note><!-- JBC: à mon avis, ici aussi est correction ex ingenio, plutot que variante -->
+                <lb/><mentioned>Quant lui <hi>vient</hi> à plaisir, panre le nous lera.</mentioned> 
+                <lb/>Leçon de b : <lb/><mentioned>Quant lui <hi>ert</hi> à plaisir...</mentioned>
               </note>
             </app>
             <w>à</w>
@@ -30780,8 +30801,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         <l>
           <w>Es</w>
           <pc type="supplied">.</pc>
-          <w>VII
-            <hi rend="superscript">c</hi></w>
+          <w>VII<hi rend="superscript">c</hi></w>
           <pc type="supplied">.</pc>
           <w>chevaliers</w>
           <w>de</w>
@@ -30995,9 +31015,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note resp="#Guessard"> 
-              <lb/><q><corr resp="#Guessard">L'enfes Guis de Borgoigne</corr> regarda Maucabré.</q>
+              <lb/><mentioned><corr resp="#Guessard">L'enfes Guis de Borgoigne</corr> regarda Maucabré.</mentioned>
               <lb/>Leçon de a :
-              <lb/><q>Li enfes Guis regarda Maucabré.</q> 
+              <lb/><mentioned>Li enfes Guis regarda Maucabré.</mentioned> 
               <lb/>Vers de dix syllabes seulement. 
               La correction est em<lb break="no" rend="hyphen"/>pruntée au premier vers de plusieurs
               des tirades pré<lb break="no" rend="hyphen"/>cédentes. 
@@ -31035,8 +31055,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>parole</w>
               <w>grejoise</w>
             </rdg>
-            <note resp="#Guessard"><lb/><q>En arcage grezois.....</q>Leçon de b : <q>En parole
-            grejoise</q>
+            <note resp="#Guessard"><lb/><mentioned>En arcage grezois.....</mentioned>Leçon de b : <mentioned>En parole
+            grejoise</mentioned>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -31820,8 +31840,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem> 
             <note resp="#Guessard" cert="unknown">
-              Vers de dix syllabes seulement. - L'addition de <q>et</q> <lb/>semble naturelle,
-              et <q>conduie</q>, qui a le même sens que<lb/> <q>maint</q>, est employé vingt fois
+              Vers de dix syllabes seulement. - L'addition de <mentioned>et</mentioned> <lb/>semble naturelle,
+              et <mentioned>conduie</mentioned>, qui a le même sens que<lb/> <mentioned>maint</mentioned>, est employé vingt fois
               dans le poëme en sem<lb break="no" rend="hyphen"/>blable cas.
             </note>
           </app>
@@ -31901,9 +31921,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note>
-              <lb/><q>Or chevauche li rois, il et sa compaignie.</q>
-              <lb/>Leçon de a : <lb/><q>Or chevauche li rois, <q>et</q> il et sa <q>grant</q> 
-                compaignie.</q> 
+              <lb/><mentioned>Or chevauche li rois, il et sa compaignie.</mentioned>
+              <lb/>Leçon de a : <lb/><mentioned>Or chevauche li rois, <hi>et</hi> il et sa <hi>grant</hi> 
+                compaignie.</mentioned> 
             </note>
           </app>
           <pc type="supplied">;</pc>
@@ -31935,8 +31955,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             </lem>
             <rdg wit="#a"/>
             <note resp="#Guessard" xml:id="R_009"> 
-              <lb/><q>Parmi la <corr resp="#Guessard">maistre</corr> porte.</q> 
-              <lb/><q>Maistre</q> manque ici dans le manuscrit a. Au <ref corresp="#R_010">dixième<lb/>vers de la tirade 
+              <lb/><mentioned>Parmi la <corr resp="#Guessard">maistre</corr> porte.</mentioned> 
+              <lb/><mentioned>Maistre</mentioned> manque ici dans le manuscrit a. Au <ref corresp="#R_010">dixième<lb/>vers de la tirade 
               suivante</ref>, c'est le mot porte qui manque, <lb/>comme l'indique le manuscrit b, qui 
               donne posterne. <lb/>Nous complétons ces deux vers l'un par l'autre.
               <lb/>
@@ -31976,8 +31996,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note>
-              <lb/><q>Chevaus <q>virent</q>.....</q> <lb/>Nous corrigeons le manuscrit, qui donne
-              <q>vinrent</q>. 
+              <lb/><mentioned>Chevaus <hi>virent</hi>.....</mentioned> <lb/>Nous corrigeons le manuscrit, qui donne
+              <mentioned>vinrent</mentioned>. 
             </note>
           </app>
           <w>et</w>
@@ -32376,8 +32396,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>nez</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Il ot les sorcils grans et s'ot <q>le poil levé</q>.</q> <lb/>Leçon
-              de b : <q>et s'ot <q>large le nez</q></q>. 
+              <lb/><mentioned>Il ot les sorcils grans et s'ot <hi>le poil levé</hi>.</mentioned> <lb/>Leçon
+              de b : <mentioned>et s'ot <hi>large le nez</hi></mentioned>. 
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -33058,10 +33078,10 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note resp="#Guessard" cert="unknown">
-              <lb/><q>Seignor, dist <q><corr resp="#Guessard">l'enfes</corr></q> Guis, envers
-              moi entandés.</q> 
-              <lb/>Leçon de a : <lb/><q>Seignor, ce dist Guis, envers moi entandés.</q> <lb/>Nous
-              corrigeons le manuscrit en retranchant <q>ce</q> et en <lb/>reproduisant ici une 
+              <lb/><mentioned>Seignor, dist <hi><corr resp="#Guessard">l'enfes</corr></hi> Guis, envers
+              moi entandés.</mentioned> 
+              <lb/>Leçon de a : <lb/><mentioned>Seignor, ce dist Guis, envers moi entandés.</mentioned> <lb/>Nous
+              corrigeons le manuscrit en retranchant <mentioned>ce</mentioned> et en <lb/>reproduisant ici une 
               forme qui se retrouve en vingt<lb/>autres passages.
             </note>
           </app>
@@ -33396,8 +33416,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>faldestol</w>
             </rdg>
             <note>
-              <lb/><q>Desus le <q>faudestuef</q> se sist li rois prisiés.</q> <lb/>Leçon de b :
-              <q>faldestol</q>. 
+              <lb/><mentioned>Desus le <hi>faudestuef</hi> se sist li rois prisiés.</mentioned> <lb/>Leçon de b :
+              <mentioned>faldestol</mentioned>. 
             </note>
           </app>
           <w>se</w>
@@ -38990,13 +39010,14 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>va</w>
             </rdg>
             <note>
-              <lb/><q><q><corr resp="#Guessard">Or s'en va l'enfes Guis</corr></q> qui Diex 
-              croisse bonté.</q>
-              <lb/>Ce vers n'a que dix syllabes dans le manuscrit a : <lb/><q>L'enfes s'en va qui 
-              Diex croisse bonté.</q> 
+              <lb/><mentioned><hi><corr resp="#Guessard">Or s'en va l'enfes Guis</corr></hi> qui Diex 
+              croisse bonté.</mentioned>
+              <lb/>Ce vers n'a que dix syllabes dans le manuscrit a : 
+              <lb/><mentioned>L'enfes s'en va qui 
+              Diex croisse bonté.</mentioned> 
               <lb/>Nous proposons de le corriger comme ci-dessus, et <lb/>nous répétons cette 
               correction <ref corresp="#R_008">deux vers plus bas</ref>, où <lb/>on lit dans le même manuscrit : 
-              <lb/><q>L'enfes s'en va sous l'Olivier ramé. </q>
+              <lb/><mentioned>L'enfes s'en va sous l'Olivier ramé. </mentioned>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -39234,11 +39255,12 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>contreval</w>
               <pc type="supplied">.</pc>
             </rdg>
-            <note resp="#Guessard"><lb/><q>Le cors ot gent, bien fait, 
-              <q><hi rend="superscript">b</hi>molt semble bien
-              vassal.</q></q> 
-              <lb/>Encore un vers de dix syllabes dans le manuscrit a : <lb/><q>Le cors ot gent et
-              bien fait contreval.</q> <lb/>b nous fournit la correction. 
+            <note resp="#Guessard"><lb/><mentioned>Le cors ot gent, bien fait, 
+              <hi><hi rend="superscript">b</hi>molt semble bien
+              vassal.</hi></mentioned> 
+              <lb/>Encore un vers de dix syllabes dans le manuscrit a : 
+              <lb/><mentioned>Le cors ot gent et
+              bien fait contreval.</mentioned> <lb/>b nous fournit la correction. 
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -39258,9 +39280,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note>
-              <lb/><q>Les <q>jambes</q> fors et longes por séoir sor cheval.</q>
+              <lb/><mentioned>Les <hi>jambes</hi> fors et longes por séoir sor cheval.</mentioned>
               <lb/>Leçon, évidemment fautive, du manuscrit a : 
-              <lb/><q>Les chevaus fors et longes..... </q>
+              <lb/><mentioned>Les chevaus fors et longes..... </mentioned>
             </note>
           </app>
           <w>fors</w>
@@ -41093,8 +41115,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>
             <note>
-              <lb/><q>.XXIIII. topaees i ot tout séélés.</q> 
-              <lb/>Le manuscrit a donne <q>scelés</q>, qui fausse le vers. 
+              <lb/><mentioned>.XXIIII. topaees i ot tout séélés.</mentioned> 
+              <lb/>Le manuscrit a donne <mentioned>scelés</mentioned>, qui fausse le vers. 
             </note>
           </app>
           <pc type="supplied">;</pc>
@@ -43093,8 +43115,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </choice>
             </lem>    
             <note resp="#Guessard">
-              <lb/><q><hi>Lores</hi> ne doutast il .IIII. rois coronés.</q> <lb/>Le manuscrit a 
-              donne <q>lors</q>, qui fausse le vers. 
+              <lb/><mentioned><hi>Lores</hi> ne doutast il .IIII. rois coronés.</mentioned> <lb/>Le manuscrit a 
+              donne <mentioned>lors</mentioned>, qui fausse le vers. 
             </note>
           </app>
           <w>ne</w>
@@ -43113,7 +43135,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>defaez</w>
             </rdg>
             <note>
-              Au lieu <lb/>de <q>rois coronés</q>, on lit dans b : <q>Turcs defaez</q>. 
+              Au lieu <lb/>de <mentioned>rois coronés</mentioned>, on lit dans b : <mentioned>Turcs defaez</mentioned>. 
             </note>
           </app>
           <pc type="supplied">.</pc>
@@ -46186,7 +46208,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>esliger</w>
             <w rend="elision">d</w>
             <pc type="supplied">'</pc>
-            <w>ua</w>
+            <w>un</w>
             <w>besant</w>
             <pc type="supplied">.</pc>
           </q>
@@ -50544,7 +50566,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>gentils</w>
             <app>
               <lem wit="#a">
-                <w>est <corr resp="#Guessard">es</corr></w>
+                <w>est<corr resp="#Guessard">es</corr></w>
               </lem>
             </app>
             <w>et</w>
@@ -50588,8 +50610,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>angres</w>
             </rdg>
             <note>
-              <lb/><q>Comment ! dist <q>l'enfes Guis</q>, dans viellars radotés.</q>
-              <lb/>Leçon du manuscrit a : <lb/><q>Comment ! dist li angres, dans.....</q> <lb/>
+              <lb/><mentioned>Comment ! dist <hi>l'enfes Guis</hi>, dans viellars radotés.</mentioned>
+              <lb/>Leçon du manuscrit a : <lb/><mentioned>Comment ! dist li angres, dans.....</mentioned> <lb/>
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -55650,9 +55672,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>Karlon</w>
             </rdg>
             <note>       
-              <lb/><q>Où qu'ele voit <q><hi rend="superscript">b</hi>Guion</q>, gentement li a 
-                dit.</q>
-              <lb/>Leçon de a : <q>Karlon</q>. C'est une faute manifeste.
+              <lb/><mentioned>Où qu'ele voit <hi><hi rend="superscript">b</hi>Guion</hi>, gentement li a 
+                dit.</mentioned>
+              <lb/>Leçon de a : <mentioned>Karlon</mentioned>. C'est une faute manifeste.
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -58728,7 +58750,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 </corr>
               </choice>
               <note>
-                <lb/>Nous supprimons devant Gui <q>l'enfes</q>, qui se lit dans <lb/>le manuscrit a, 
+                <lb/>Nous supprimons devant Gui <mentioned>l'enfes</mentioned>, qui se lit dans <lb/>le manuscrit a, 
                 et qui fausse le vers.
               </note>
             </lem>
@@ -61025,8 +61047,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>Huidelon</w>
               </rdg>
               <note>
-                <lb/><q><q>Si ne fust Huidelon</q> qui me vint aïdier.</q> 
-                <lb/>Leçon de a : <q>Et Huidelon.</q> - Le vers est faux et 
+                <lb/><mentioned><hi>Si ne fust Huidelon</hi> qui me vint aïdier.</mentioned> 
+                <lb/>Leçon de a : <mentioned>Et Huidelon.</mentioned> - Le vers est faux et 
                 inin<lb break="no" rend="hyphen"/>telligible. 
               </note>
             </app>
@@ -62172,9 +62194,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>vies</w>
               </rdg>
               <note>
-                <lb/><q>En une <corr resp="#Guessard"><hi>planche veille</hi></corr>soffri
-                mort et ahan,</q>
-                <lb/>Leçon de a : <q>place vies</q>
+                <lb/><mentioned>En une <corr resp="#Guessard"><hi>planche veille</hi></corr>soffri
+                mort et ahan,</mentioned>
+                <lb/>Leçon de a : <mentioned>place vies</mentioned>
               </note>
             </app>
             <w>soffri</w>
@@ -62200,9 +62222,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 <w>celui</w>
               </rdg>
               <note>
-                <lb/><q>Ja ne crerai <corr resp="#Guessard"><q><hi rend="superscript">b</hi>en 
-                  lui</q></corr>, ce te di vraiemant.</q>
-                <lb/>Leçon de a : <q>celui</q>
+                <lb/><mentioned>Ja ne crerai <corr resp="#Guessard"><hi><hi rend="superscript">b</hi>en 
+                  lui</hi></corr>, ce te di vraiemant.</mentioned>
+                <lb/>Leçon de a : <mentioned>celui</mentioned>
               </note>
             </app>
             <pc type="supplied">,</pc>
@@ -63261,9 +63283,9 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                 </choice>
               </lem>
               <note>
-                <lb/><q>Por ce qu'il despisoit Jhesue, le fieus Marie.</q>
-                <lb/>Le manuscrit a porte : <q>le fieus sainte Marie.</q> Nous supprimons
-                <q>sainte</q>, qui fausse le vers.
+                <lb/><mentioned>Por ce qu'il despisoit Jhesue, le fieus Marie.</mentioned>
+                <lb/>Le manuscrit a porte : <mentioned>le fieus sainte Marie.</mentioned> Nous supprimons
+                <mentioned>sainte</mentioned>, qui fausse le vers.
               </note>
             </app>
             <pc type="supplied">.</pc>
@@ -68368,7 +68390,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               </lem>
               <rdg wit="#a"/>
               <note>
-                <lb/><q>A la seint Bastien, tut en séez créant.</q> 
+                <lb/><mentioned>A la seint Bastien, tut en séez créant.</mentioned> 
                 <lb/>Ce vers manque dans a.
               </note>
             </app>
@@ -69506,16 +69528,16 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>signefiance</w>
               <w>ke</w>
               <w>se</w>
-              <w>dei <corr resp="#Guessard">vent</corr></w>
+              <w>dei<corr resp="#Guessard">vent</corr></w>
               <w>armer</w>
               <pc type="supplied">.</pc>
             </lem>
             <rdg wit="#a"/>
             <note>
-              <lb/><q><hi rend="superscript">b</hi> Ce est signefiance ke se 
-                dei<corr resp="#Guessard">vent</corr> armer.</q> 
+              <lb/><mentioned><hi rend="superscript">b</hi> Ce est signefiance ke se 
+                dei<corr resp="#Guessard">vent</corr> armer.</mentioned> 
               <lb/>Ce vers n'est pas dans a, et se lit ainsi dans b : 
-              <lb/><q>C'est signefiance ke se deit armer.</q> 
+              <lb/><mentioned>C'est signefiance ke se deit armer.</mentioned> 
               <lb/><ref corresp="#R_011 #R_012 #R_013">Les trois vers qui suivent celui-ci</ref> ne se trouvent pas <lb/>dans b. 
             </note>
           </app>
@@ -69909,8 +69931,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>bundie</w>
             </rdg>
             <note resp="#Guessard">
-              <lb/><q>Dont oïssiés par l'ost <q>itele melodie</q>.</q> 
-              <lb/>Leçon de b : <q>une tele bundie</q>. 
+              <lb/><mentioned>Dont oïssiés par l'ost <hi>itele melodie</hi>.</mentioned> 
+              <lb/>Leçon de b : <mentioned>une tele bundie</mentioned>. 
             </note>
           </app>
         </l>
@@ -70479,8 +70501,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>vertis</w>
             </rdg>
             <note>
-              <lb/><q>Tost et isnelement cele part sont <q>guencis</q>.</q> 
-              <lb/>Leçon de b : <q>vertis</q>. 
+              <lb/><mentioned>Tost et isnelement cele part sont <hi>guencis</hi>.</mentioned> 
+              <lb/>Leçon de b : <mentioned>vertis</mentioned>. 
             </note>
           </app>
           <pc type="supplied">,</pc>
@@ -71356,14 +71378,14 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>mellée</w>
             </rdg>
             <note resp="#Guessard">
-              <q>Là dedens en Luiserne fu moult grans <q>l'assemblée</q>.</q>
+              <mentioned>Là dedens en Luiserne fu moult grans <hi>l'assemblée</hi>.</mentioned>
               <lb/>Leçon de <choice>
                 <sic>
                   b
                 </sic>
                 <corr resp="#AC">
                   a
-                </corr> </choice> : <q>la mellée</q>, qui revient au second vers 
+                </corr> </choice> : <mentioned>la mellée</mentioned>, qui revient au second vers 
               <lb/>après celui-ci ; mais, cette fois, la leçon est bonne.
             </note>
           </app>
@@ -71722,10 +71744,10 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>pome</w>
             <w>parée</w>
             <note>
-              <lb/><q>Vous ne vostre ire pris une pome parée.</q>
+              <lb/><mentioned>Vous ne vostre ire pris une pome parée.</mentioned>
               <lb/>Nous corrigeons ainsi la leçon vicieuse de a, qui 
               <lb/>donne ce vers faux : 
-              <lb/><q>Vous ne vostre ire ne pris pas une pome parée.</q>
+              <lb/><mentioned>Vous ne vostre ire ne pris pas une pome parée.</mentioned>
             </note>
             <pc type="supplied">.</pc>
           </q>
@@ -72067,7 +72089,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         </p>
           <p>
             <lb/>Voici le début, tel quel et sans essai de restitution, <lb/>du manuscrit conservé au
-          Musée britannique : <q><lb/>Oiez, seignurs baruns : Deu vus creisse buntez. <lb/>Ci vus
+          Musée britannique : <quote><lb/>Oiez, seignurs baruns : Deu vus creisse buntez. <lb/>Ci vus
           comencerai chançun de grant nobilité, <lb/>De Karlon l'emperere, le fort rei coroné,
           <lb/>Le meillur ke fust en la crestienté. <lb/>Vint e sis ans tut pleins, kar Deu l'ot
           mandé, <lb/>Fu Karles en Espaigne, cel estrange rengné ; <lb/>Burcs, citez, chastels i
@@ -72081,20 +72103,20 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <!--          <lb/>134 GUI DE BOURGOGNE. -->
           <lb/>« Baruns, kar i aluns por seinte charité ; <lb/>« Kar si Deu cele aver nos ot
           destiné, <lb/>« Riche en poriuns fere nos povre parenté, <lb/>« Pus irruns en France ke
-          tant avuns desiré. » <lb/></q>
+          tant avuns desiré. » <lb/></quote>
           </p>
           <p>
           <lb/>P. 1, v. 4 : 
-            <lb/>.XXVII. anz tous plains acomplis et passez.
-          <lb/>Leçon de a : .XXXVII. anz ; mais plus loin, (<ref corresp="#R_001">p. 2, v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
-          manuscrit donne .XXVII. Nous <lb/>rétablissons donc ici cette leçon, qui semble la bonne,
-          <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :<q> vint e
-          sis</q>. C'est un espace de temps qui <lb/> suffit et au delà à la fable imaginée par le trouvère.
+            <lb/><mentioned>.XXVII. anz tous plains acomplis et passez.</mentioned>
+          <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref corresp="#R_001">p. 2, v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
+          manuscrit donne <mentioned>.XXVII.</mentioned> Nous <lb/>rétablissons donc ici cette leçon, qui semble la bonne,
+          <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :<mentioned> vint e
+          sis</mentioned>. C'est un espace de temps qui <lb/> suffit et au delà à la fable imaginée par le trouvère.
           </p>
          <p>
            <lb/>P. 2, v. 26 : 
-          <lb/><q>Et mangiez les gastiaus, les poons, les ploviers.</q> <lb/>Après ce vers, b ajoute :
-          <lb/><q>Et beviez le claré, le piment, le vin velz. </q><lb/>
+          <lb/><mentioned>Et mangiez les gastiaus, les poons, les ploviers.</mentioned> <lb/>Après ce vers, b ajoute :
+          <lb/><mentioned>Et beviez le claré, le piment, le vin velz. </mentioned><lb/>
            </p>
         <p>P. 2, v. 7 : <lb/>Riches en porroit
           estre no povre parenté. <lb/>b ajoute le vers ci-dessus (<ref corresp="#R_003">ligne 4</ref>), mais ne donne
