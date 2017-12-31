@@ -8,6 +8,8 @@
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
+
+<!-- arrêt Fl : "où" l. 25 -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
         <xsl:for-each-group select="descendant::tei:w" group-by="@lemma">
