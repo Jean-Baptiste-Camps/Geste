@@ -9,7 +9,9 @@
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
 
-<!-- arrêt Fl : "où" l. 25 -->
+<!-- arrêt Fl : "regarder" l. 31 
+    FL 19075
+    -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
         <xsl:for-each-group select="descendant::tei:w" group-by="@lemma">
@@ -375,11 +377,12 @@
             </xsl:when>
             <!-- PROimp: 0, S, N, n/r -->
             <xsl:when test="$ana[1] = 'PROimp'">
+                <!-- modification : à l'origine $ana[3]= 'S' / enlèvement cap (LI) -->
                 <xsl:if
                     test="
                         not(
                         ($ana[2] = '0') and
-                        ($ana[3] = 'S') and
+                        ($ana[3] = 's') and
                         ($ana[4] = 'n' or $ana[4] = 'r' or $ana[4] = 'i')
                         )">
                     <xsl:value-of select="@xml:id"/>
