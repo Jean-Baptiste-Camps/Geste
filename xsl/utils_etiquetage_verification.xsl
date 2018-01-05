@@ -8,9 +8,7 @@
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
-
-<!-- arrêt Fl : "regarder" l. 31 
-    FL 19075
+<!-- retransformer Fl pour voir si OK
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
