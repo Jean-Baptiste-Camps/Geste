@@ -9,6 +9,7 @@
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
 <!-- retransformer Fl pour voir si OK
+        arret GB 10129
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
