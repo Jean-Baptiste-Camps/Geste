@@ -9,7 +9,7 @@
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
 <!-- revoir Fl pour voir si OK
-        arret GB l 14 "dieu"
+        arret GB l 447 "que3"
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
