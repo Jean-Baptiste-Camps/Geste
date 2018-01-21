@@ -8,8 +8,9 @@
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
-<!-- revoir Fl pour voir si OK
+<!-- Fl 2 5513
      revoir GB pour voir si OK
+     revoir Fier pour voir si Ok
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
