@@ -8,7 +8,7 @@
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
-<!-- Fl 2 5513 + 286
+<!-- finir verif tabl et retransformer FL      
      revoir GB pour voir si OK
      revoir Fier pour voir si Ok
     -->
@@ -521,8 +521,9 @@
         (liste non exhaustive)
         -->
         <xsl:choose>
+            <!-- ajout PROimp ici (LI) -->
             <xsl:when test="@lemma = 'il'">
-                <xsl:if test="$ana[1] != 'PROper'">
+                <xsl:if test="not($ana[1] = 'PROper' or $ana[1] = 'PROimp')">
                     <xsl:value-of select="@xml:id"/>
                     <xsl:text>: 'il' est un pronom&#xA;</xsl:text>
                 </xsl:if>
