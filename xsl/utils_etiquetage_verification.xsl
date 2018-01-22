@@ -8,7 +8,7 @@
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
-<!-- Fl 2 5513
+<!-- Fl 2 5513 + 286
      revoir GB pour voir si OK
      revoir Fier pour voir si Ok
     -->
