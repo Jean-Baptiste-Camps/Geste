@@ -9,7 +9,7 @@
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
 
 <!-- finir verif tabl et retransformer FL      
-     revoir GB pour voir si OK
+     finir verif tabl et retransformer GB
      revoir Fier pour voir si Ok
     -->
     <xsl:template match="/">
