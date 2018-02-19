@@ -7,8 +7,8 @@
     <xsl:strip-space elements="*"/>
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
-<!-- NOMcom/VERinf, neutre VERinf pour les articles à enlever ; poi PROind pour Fier // les VERcjg, les VERinf précédés de au TOUT 
-    en cours FL 20334
+<!--GB 2450
+        revoir TOUT perdre le sens (sen2 / sens ??)
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
