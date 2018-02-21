@@ -7,10 +7,8 @@
     <xsl:strip-space elements="*"/>
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
-<!--GB 2450
-        revoir TOUT perdre le sens (sen2 / sens ??)
+<!--
         revoir dont pr rel
-        revoir les noms propres GB (Sanses/ Sanson // Guenes/Ganelon)
     -->
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
