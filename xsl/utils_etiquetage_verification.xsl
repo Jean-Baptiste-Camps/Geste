@@ -7,9 +7,7 @@
     <xsl:strip-space elements="*"/>
 
 <!-- TODO: ajouter un test pour l'accord du sujet et du verbe, au moins quand ils se suivent directement -->
-<!--
-        revoir dont pr rel
-    -->
+
     <xsl:template match="/">
         <!-- Quelques vérifications générales -->
         <xsl:for-each-group select="descendant::tei:w" group-by="@lemma">
