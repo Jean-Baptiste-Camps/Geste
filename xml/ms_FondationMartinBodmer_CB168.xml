@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
@@ -20,6 +23,31 @@
                   <idno>cod. Bodmer 168</idno>
                </msIdentifier>
                <head></head>
+               <msContents>
+                  <!-- À compléter -->
+                  <msItem n="3">
+                     <locus 
+                        from="211" to="222" 
+                        scheme="#principale"
+                        >fol. 211-222</locus>
+                     <title 
+                        key="Otinel" 
+                        ref="http://viaf.org/viaf/199768389">Chanson
+                        d'Otinel</title>
+                     <incipit>Ki volt oïr cha<expan>n</expan>çu<expan>n</expan> de beau
+                        se<expan>m</expan>bla<expan>n</expan>t <!--/ Dunt bien sunt fait les vers par consonant--></incipit>
+                     <explicit>Ke si aida païens a traverser</explicit>
+                     <decoNote></decoNote>
+                     <filiation>Témoin <idno>B</idno>, de 1908 vers, qui est le seul complet, 
+                     portant un texte voisin de M [...]</filiation>
+                     <decoNote>
+                        <p><term>Grandes initiales</term> de <measure unit="lines">4</measure>
+                           lignes de réglure au début du texte.</p>
+                        <p><term>Moyennes initiales</term> ... </p> 
+                     </decoNote>
+                     <textLang>scripta anglo-normande, de la <origDate notBefore="1250" notAfter="1300">deuxième moitié du XIIIe siècle</origDate></textLang>
+                  </msItem>
+               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc material="parch">
@@ -52,6 +80,14 @@
                         <foliation xml:id="principale">foliotation, au <term>crayon</term>, est <term>récente</term> 
                            et a été <term>corrigée</term> suite au saut initial d’un fol. entre les fol. X
                            et X; elle rétablit l’ordre original des fol. mal placés</foliation>
+                        <collation>
+                           <!--<formula corresp="vol.1" notation="Chroust"> I<hi rend="sup">2</hi> +
+                              (V-1)<hi rend="sup">11</hi> + 21 IV<hi rend="sup">169</hi> +
+                              (III-1)<hi rend="sup">184</hi></formula>
+                           <measure type="quire" n="1">1-1</measure>
+                           <measure type="quire" n="2">5-4</measure>
+                           <measure type="quire" n="3">4-4</measure>-->
+                        </collation>
                      </supportDesc>
                   </objectDesc>
                </physDesc>

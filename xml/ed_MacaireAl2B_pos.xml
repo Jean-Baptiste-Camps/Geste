@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_MacaireAl2B" xml:lang="fr" type="ed" version="5" corresp="jns13335">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Reine Sebile</title>
+                <title type="sub">Fragment Loveday - Texte fondé sur l'édition Baker</title>
+                <editor><persName>A.T. Baker</persName></editor>
+                <respStmt>
+                    <resp>compléments de</resp>
+                    <persName>Mario Roques</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>transcription revue par</resp>
+                    <persName>Louis Brandin</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>édition numérique sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="edB" status="draft">
+                    <analytic>
+                        <editor xml:id="Baker">
+                            <persName>
+                                <forename>A.T.</forename>
+                                <surname>Baker</surname>
+                            </persName>
+                        </editor>
+                        <editor xml:id="Roques">
+                            <forename>Mario</forename>
+                            <surname>Roques</surname>
+                        </editor>
+                        <title>Nouveaux fragments de la chanson de la Reine Sibille</title>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <date>1915</date>
+                        </imprint>
+                        <biblScope>44</biblScope>
+                        <biblScope>1-13</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1300" type="dateComposition">XIIIe siècle</origDate>
+                <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1300" type="dateManuscrit">XIIIe siècle</origDate>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">inconnue</origPlace>
+                <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">agn.</origPlace>
+            </creation>
+            <langUsage>
+                <language cert="unknown" resp="DEAF" ident="fro" usage="100">agn.</language><!-- 
+                    TODO: préciser localisation à partir de l'article d'Æbischer.
+                    -->
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change who="#JBC" when="2017-11-14" status="draft">Encodage</change>
+            <change who="#JBC" when="2016-03" status="draft">OCR, correction
+                de l'OCR et encodage</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="fro">
+        <front>
+            <head>Nouveaux fragments de la chanson de la Reine Sibille</head>
+            <div>
+                <head>I</head>
+                <p>Un de mes collègues à l'Université de Sheffield, M. Loveday, 
+                qui a hérité d'une belle bibliothèque, trouva, il y a quelque 
+                temps, dans une liasse de vieux papiers, un feuillet double de 
+                parchemin contenant des fragments d'un ancien poème français 
+                en vers alexandrins. Pensant, avec raison, que ce feuillet pouvait 
+                offrir quelque intérêt, il a bien voulu me le communiquer.</p> 
+                
+                <p>Ce feuillet a servi de feuille de garde (un tout petit morceau 
+                de fil de soie y est encore attaché) et il a dû être retiré d'un 
+                volume quelconque, lorsque le bisaïeul de mon collègue<note>John Loveday of Caversham (1711-1789) : voir 
+                    <bibl status="draft"><title>Dictionary of National 
+                    Biography</title>, XXXIV, 161</bibl>. </note>, 
+                collectionneur assez connu, fit réparer les reliures d'un certain 
+                nombre de vieux livres qu'il avait acquis vers la fin du XVIIIe s.</p> 
+                
+                <p>Chaque feuillet simple a 158 mm. de haut sur 129 mm. de 
+                large ; il n'y a qu'une colonne par page ; l'écriture est anglaise 
+                et du XIIIe siècle ; elle est assez lisible, mais en quelques endroits, 
+                surtout dans la partie supérieure, le parchemin est troué, et il a 
+                été fortement abîmé au milieu de chaque page par un pli transversal. 
+                Le haut du feuillet a été rogné de sorte que le premier 
+                vers de chaque colonne n'est pas déchiffrable, ou ne l'est qu'en 
+                partie : nous avons ainsi pour chacune des deux premières pages 
+                les traces d'un vers et 32 vers lisibles, pour la page 3 une partie 
+                d'un vers et 34 vers entiers, pour la quatrième page, 36 vers dont 
+                un ajouté en marge. Notre feuillet n'était pas le feuillet intérieur 
+                d'un cahier, car les pages 2 et 3 ne se font pas suite ; nous 
+                avons donc à faire à deux fragments de 66 et 71 vers dont nous 
+                donnons ci-dessous la transcription<note>Mon ami M. le professeur Brandin 
+                    a bien voulu vérifier cette transcription. </note>.</p> 
+                
+                <p>Nous avons résolu en italiques les abréviations, ajouté entre 
+                crochets quelques lettres que les trous du parchemin ont fait disparaître 
+                et les initiales des laisses qui sont restées en blanc dans le 
+                ms., enfin ponctué suivant les habitudes modernes. Nous n'avons 
+                apporté au texte aucune autre modification et nous avons exacte- 
+                ment reproduit les graphies anglo-normandes du scribe ; quelques 
+                corrections sont indiquées en note. </p>
+                
+                <p>Il est facile de reconnaître dans ces fragments les débris 
+                d'une version française de l'histoire de <title>Macaire</title> 
+                    ou de la <title>Reine 
+                Sibile</title>, dont nous avons, comme on sait, une forme franco-italienne, 
+                    publiée en 1866, par Guessard, dans la collection des 
+                <title>Anciens poètes de la France</title>. En appendice à son édition (pp. 307-12)
+                    Guessard avait déjà réimprimé, d'après Reiffenberg, quelques 
+                fragments d'une version française en alexandrins. Les nouveaux 
+                fragments que nous publions correspondent d'une façon générale 
+                aux vers 912-920 et 1007-1046 du <title>Macaire</title> franco-italien.</p> 
+                <ab><persName>A. T. Baker</persName>.</ab> 
+            </div>
+            <div>
+                <head>II</head>
+<p>Les indications données par M. Baker peuvent être précisées 
+grâce à une comparaison des nouveaux fragments, d'une part 
+avec la version espagnole de la <title>enperatriz Sevilla</title> 
+    publiée en 1864 
+par <bibl status="draft"><author>J. Amador de los Rios</author>, 
+    dans <title>Illustraciones</title> 
+    de son <title>Historia critica de la Literatura española</title>, 
+    <biblScope>t. V. pp. 344 et suiv.</biblScope></bibl>, d'après 
+un ms. de l'Escurial du XIVe siècle, et plus récemment par 
+<bibl status="draft"><author>A. Bonilla y San Martin</author>, <title>Libros de Caballerias</title>, 
+    <biblScope>Ia parte</biblScope></bibl><note>Je n'avais pas sous les yeux l'édition Bonilla au moment où je rédi- 
+        geais cette note ; je corrige les épreuves loin de toute bibliothèque, mais 
+        M. Antoine Thomas a bien voulu examiner pour moi l'édition Bonilla ; 
+        elle ne diffère en somme que par des détails de graphie de l'édition Rios à 
+        laquelle je me tiens. Sur l'édition Bonilla voir <bibl status="draft"><author>R. Menéndez Pidal</author>
+            dans <title>Cultura Española</title>, VIII, 1062</bibl>.</note>; 
+d'autre part avec les fragments en alexandrins français publiés 
+par Reiffenberg, puis par Guessard, et, plus exactement, plus 
+complètement et dans un meilleur ordre, par 
+    <bibl status="draft"><author>A. Scheler</author>, dans 
+les <title>Bulletins de l'Académie royale de Belgique</title>, 
+        <biblScope>44e année</biblScope> (<date>1875</date>), 
+<biblScope>pp. 404 et suiv.</biblScope> </bibl>; 
+    enfin avec la mise en prose française de la <title>Reine 
+Sibile</title> conservée dans le <bibl status="draft">ms. 3351 de l'Arsenal</bibl>.</p> 
+
+<p>Le premier fragment (2 colonnes) publié ci-dessus correspond 
+à la plus grande partie du ch. XVIIII de la version espagnole (éd. 
+Rios, p. 356-7, environ 50 lignes), le deuxième (2 colonnes) 
+correspond à la fin du ch. XXII et au ch, XXIII (<bibl status="draft">éd. cit., 
+p. 360-61</bibl>, environ 53 lignes). La portion de la version espagnole 
+correspondant à la lacune entre nos deux fragments représente 
+un peu moins de 100 lignes de l'édition : il est facile de 
+calculer que cela équivaut à 4 colonnes de notre ms. et que, 
+par conséquent, entre les deux feuilles du feuillet double qui 
+nous est parvenu il y avait, et il nous manque aujourd'hui, seu- 
+lement un autre feuillet double, soit 130-140 vers.</p> 
+
+<p>Ce calcul, il est vrai, suppose que la version espagnole et le 
+poème français concordent exactement : il en est ainsi en effet, 
+sauf des différences minimes dont les unes sont dues à de brèves 
+additions de l'espagnol, les autres à des fautes de notre ms. Pour 
+rendre évident ce rapport il nous suffira de reproduire une 
+partie du ch. XVIII de la version espagnole, correspondant aux 
+vers 1-40 de notre fragment I : 
+<quote rend="block" xml:lang="spa" defective="false">
+    Quando ellos esto oyeron fueron muy sañudos, et dixieron : — Señor, 
+    dexadnos, este can que veedes llagó á Macaire muy mal en la espalda. — 
+Amigos, dixo el Duque, non lo culpedes; bien sabe el can donde viene este 
+desamor, ó de viejo ó de nuevo<note xml:lang="fra">La brève réponse de Naimes introduite ici par l'espagnol peut avoir été 
+    indiquée dans l'original ; le roman en prose français est d'accord à la fois avec 
+    l'espagnol et avec la version en alexandrins : « 
+    <quote xml:lang="frm" defective="false">[306 v<hi rend="superscript">o</hi>] 
+    Adont s'aproucha
+    ung des nepveux Macaires pour respondre : « Grant tort avez, sire Naymon, 
+    fait il, qui ung tel mastin soustenez contre la personne d'un conte de bon 
+    lieu et de hault parage lequel mastin le het par avanture de longue main ou 
+    de nouvel ;… c'est beste enragiee qui [vous] pouroit aussi bien couroucier 
+    comme lui. — Vos parolles ay je bien entendues, sire vassal, ce respondy 
+    Naymon, et samble par icelles que le mot qui fut dit par maniere de 
+    proverbe soit veritable : <mentioned>Oui son chien veult tuer, la rage lui met sus</mentioned>. 
+    Sv voulez vous faire de cestui [307] qui mie n'est tel, comme il me samble. » Il est 
+    possible que notre ms. ait omis un vers qui permettait de mettre le v. 6 dans 
+    la bouche de Kaimes, ce qui serait d'ailleurs plus naturel. L'on notera en tout 
+    cas la présence dans les trois versions, et dans les mêmes termes, de l'idée de 
+    haine <mentioned>« de près ou de vez, de longue main ou de nouvel, de viejo 6 de 
+    nuevo »</mentioned>.</quote>.
+</note>. Et el conde don Aymes de Bayuera que era 
+    muy preciado, et mucho entendido, tomó el galgo por el cuello, et diólo 
+    á Gaufredo que era padre d'Ougel, que lo guardase, et el can estovo con él 
+    de buena mente<note xml:lang="fra">Cette dernière idée manque à la version en alexandrins ; elle se 
+        retrouve dans la version en prose : <quote xml:lang="frm" defective="false">« Il [Naymes] prent le levrier par le col 
+        lors et le festoie et aplanie et le levrier meult la queue, les oreilles et la teste 
+        et s'efforce de lui faire chiere, etc. »</quote>.
+    </note>. 
+    Quando Macaire esto vió, ovo muy grant pesar, et y 
+    estauan con él entonce sus parientes que Dios maldiga : Malingres et Erui, 
+    et Baton, et Berenguer, et Focaire, et Aloris et Beari, et Brecher, et Grifez 
+    de Altafolla, et Alait de Monpanter, que quisieran matar al can de grado. 
+    Quando el buen Duque don Aymes esto vió, començó á dar baladros et 
+    metió bozes a Rrechart de Normandia, et á Jufre, et á Ougel, et á Terri 
+    l'Ardenois, et á Beraje de Mondisder, et al viejo Simon de Pulla, et á Galfer 
+    d'Espoliça<note xml:lang="fra">
+        Il n'y a pas lieu de s'arrêter beaucoup aux variantes de ces listes de 
+        noms. Je note toutefois que « <mentioned>Milon de Puille</mentioned> » apparaît 
+        dans le roman en 
+        prose. 
+    </note>. — Barones, dixo el Duque, ruegovos por Dios que nos ayudedes 
+    á guardar este galgo ; et ellos respondieron que de todo en todo lo 
+    farian. Entonce trauaron del can et leuaronlo ante el enperador, 
+    et fincaron los inojos ante él, et el duque don Avmes lo tenia 
+    por el cuello<note xml:lang="fra">L'espagnol est ici un peu plus développé que la version en alexandrins : 
+        il peut y avoir là seulement une addition amenée par le « <mentioned>comensa a hucher</mentioned>» 
+        du modèle et par le désir d'expliquer que Nemes amène le lévrier à Charlemagne, 
+        ce que le français ne dit pas expressément avant le v. 56. Le roman 
+        en prose qui modifie la scène et supprime le discours de Naimes est obligé 
+        de faire amener le chien par Geuffroy le Dannois. 
+    </note> et fabló  
+    primero, et dixo: — Señor enperador, mucho me maravillo de las grandes 
+    bondades que en vos soliades auer: vos me soliades amar et llamar á 
+    vuestros grandes consejos et á los grandes pleitos, et en las vuestras guerras, 
+    yo solia ser el primero : agora veo que me non amades nin preciades ; yo non 
+    vos lo quiero mas encobrir ; mas guardat vos de traydores que assaz menester 
+    es. — Don Aymes, dixo el emperador, yo non me puedo ende guardar, 
+    si me Dios non guarda, que ha ende el poder. — Yo le pido por mercet, 
+    dixo don Aymes, que vos guarde de todo mal<note xml:lang="fra">
+        L'espagnol permet de comprendre le dialogue et de rectifier le v. 30.
+    </note> ; mas, Señor, agora me 
+    entendet, sy vos plaze por el amor de Dios : aqui non ha cavallero nin 
+    escudero nin clérigo nin serviente<note xml:lang="fr">
+        La lecture <mentioned>ne esquier</mentioned> au v. 34 est confirmée par l'espagnol, qui permet 
+        en même temps d'établir que la rognure du feuillet n'a pas enlevé d'autre 
+        vers entre 33 et 34. 
+    </note>, á quien este galgo mal quiera fazer, sy 
+    non á Macaire, este vuestro priuado<note xml:lang="fr">
+        L'espagnol et la version en alexandrins s'accordent parfaitement, mais 
+        l'auteur du roman en prose n'a pas vu que c'était Naimes qui parlait : peut-être 
+        son modèle avait-il au v. 30 <mentioned>Charles</mentioned> comme notre 
+        fragment ; de plus il a 
+        sans doute lu ou compris <mentioned>Qui</mentioned> au lieu de <mentioned>Que</mentioned>
+        au v. 35. ce qui l'a amené au 
+        non-sens et aux explications embrouillées que voici : « <mentioned>Charlemaine ne se 
+        pot taire lors, ains commanda et fist deffense sur toutes paines [307v] que 
+        nul qui qu'il feust ne meffesist au blanc lévrier excepté le conte Macaire seulement.
+        « Et pour quoy, sire, ce respondi le conte. — Pour tant certes, ce 
+        respondi l'empereur que j'ay le chien mis et met de ceste heure en ma 
+        seurté jusques a ce que son maistre Aulbery voye devers moy retourné. » Et 
+        qui demanderoit de quel esprit pouoit parler Charlemaine, dit l'istoire pour 
+        response que ja avoient lui et ses princes esté à conseil sur ceste matière.</mentioned>»
+    </note>, et sé que Aubery, su señor, á quien 
+    vos mandastes guiar la reyna, quando fue echada de vuestra tierra, que este 
+    can fué con él, que tanto mas ha de un año siempre andava con él, que lo 
+    non podiam dél quitar ; et Señor, por vuestra mercet facet agora una cosa : 
+    que cavalguedes en un buen cavallo... 
+</quote>
+</p>
+
+<p>Nous avons signalé et expliqué en note les menues différences 
+entre la version espagnole et le fragment en alexandrins. Pour 
+le reste du chapitre il y a correspondance constante et souvent 
+mot à mot sauf pour les v. 54-55 (réponse de Naimes) qui 
+manquent à l'espagnol.</p> 
+                
+<p>Il en est de même et d'une façon plus constante encore 
+pour le deuxième fragment, à l'exception des quatres passages 
+suivants : </p>
+
+<p>1° La fin de l'« exemple « de Merlin et le commentaire de 
+Naymes sont plus développés dans l'espagnol. Je transcris la 
+partie correspondant aux v. 8-13 du français (éd. cit., 
+p. 360).</p> <!-- TODO: relecture à poursuivre d'ici! -->
+
+« ...ca ssi lo ficro mucho, aunquc lo dexe por mucrto, tanto que lo llamt- 
+lucgo se viene para mi muy ledo, et afalàgamc et esle ende bien : tal mancra 
+es la de can. — Ora se verdadcramentc, dixo César, que sabedes mucho, et 
+por eude quiero seades quito de la presion, et que vayades ;i buena Ven- 
+tura, cà bien lo meresccdes ; et Merlin gelo gradesciô mucho et fué su \ia 
+para su tierra. — Seiîores, dixô el duqucdon Aymes, por esto podedes enten- 
+der que graut amor hà el can à su senor verdaderament, et por ende deue ser 
+Macaire rebtado de traycion, et enforcado, si le prouado fuer. Asi fablô el 
+duque don Aymes, como vos conté. — Varones, dixo él, ora oyd lo que 
+quiero dezir...» 
+
+Tout cela est évidemment beaucoup plus clair que les vers 
+11-12 du français, et nous permet en tout cas de comprendre 
+le Issi lira Merlin duv. 12 (erra M. ^^^ fué su via para su iierra^. 
+Il n'est pas impossible que l'extrême concision du poème fran- 
+çais soit due simplement à quelque bourdon du copiste. 
+
+Le roman en prose du ms. de l'Arsenal ne permet pas de 
+vérification : immédiatement après la partie de l'exemple rela- 
+tive au chien on a laissé en blanc la valeur d'une page pour 
+reprendre avec la proposition de duel entre Macaire et le 
+chien. Je me demande si le metteur en prose n'avait pas sim- 
+plement sous les yeux un ms. en vers analogue au nôtre et si, 
+jugeant les vers ii-i 2 insuffisamment clairs, il ne s'était pas 
+réservé de la place pour introduire la fin de l'exemple (qu'il 
+connaissait sans doute par ailleurs), quand il en aurait trouvé 
+une rédaction, ainsi que la conclusion de Naimes. 
+
+L'historiette que Naimes invoque à l'appui de ses dires, et 
+dont nous n'avons dans notre fragment que la dernière partie, 
+est bien connue et elle nous a été conservée dans plusieurs ver- 
+sio:is où d'ailleurs Merlin n'en est pas le héros ' ; on en trou- 
+vera, p. ex., une forme très claire dans le Djlopathjs (6555- 
+6973); toutes ces versions mettent en scène un personnage 
+
+
+
+I. Cf. A. Mussafia, Ucher due aUfraniôs. Handschrift der 1; . Universitâts- 
+hihl. :^M Pavia, p. 52-72 (n° XIX), et R. Kôhler, Kleinere Schrifteu, II, 290. 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE I I 
+
+qui, pour sauver sa vie ou sa liberté, doit présenter « son plus 
+chier ami, Et son plus félon ennemi, Et de ses serjans lo 
+meillor, Et son miax vaillant jugleor », et qui résout le pro- 
+blème en amenant son chien, sa femme, son âne et son petit 
+enfant. Il est fâcheux que la version en alexandrins ne nous 
+ait pas conservé entièrement cette histoire; j'imprime ci-dessous 
+la version en prose française; la comparaison avec la version 
+espagnole, en somme peu difterente, permet de retrouver les 
+traits principaux de l'original. 
+
+« [^11 ro] ...mais pour vous montrer que il y a cause de soupchon et que 
+ung chien est beste aucunnement raisonnable et qui a juste et bonne cause 
+het ceulx qui son signeur n'aiment mie, racompte une liistoire que j'ay leue 
+que du temps Julles César fut ungs lions que aucuns nomment Merlin et 
+autres dient que c'ellui Merlins le conseilla au bon homme ' . L'empereur 
+César tenoit cellui prisonnier pour son sens esprouver ou autrement pour ce 
+qu'il parloit de coses mervilleuses. Et lui dit ung jour : « Pour toy délivrer de 
+prison, beaux preudons, fait il, te covient devant moy amener ton amv, ton 
+ennemy, ton féal ^ et ton serf. » Sy s'en parti ly preudons et vint a sou hos- 
+tel et, au jour que promis avoit, comme tout conseillié mena son asne, son 
+petit filz dessus, sa feme et son chien. Et quant l'empereur le vist, il lui 
+demanda s'il [vo] avoit fait ce que commandé lui avoit pour soy acquiter de 
+prison. « Ouy certes, fait il, voirement ay amené ce que demandé 
+m'avez. 
+
+« Veez cy ma femme ; que on pouroit prendre pour mon amy. Non est 
+certes, ains est tout le contraire et le prens pour mon ennemy ; car, quelque 
+amistié qu'entre elle et moy doye avoir, se je l'avoie par maltalent atouchiee 
+ou lui fait quelque autre mendre desplaisir, et elle savoit que j'eusse img 
+homme ou deux occis dont je deusse mort recepvoir, elle le feroit assavoir a 
+tous les voisins haultement avant ce que justice ne me presist. 
+
+« De mon asne qui cy est, c'est mon serf; car je ne le sçay tant chargier 
+qu'il en rechigne et si ne le say tant batre ne devant ne derrière qu'il ne soit 
+aussy cointe ung jour que l'autre et si en porte mieulx son fardel par droite 
+nature ; et telle est la condicion d'un asne. 
+
+
+
+1 . Pour l'espagnol il s'agit bien de Merlin : « Ninguno no puede falsar lo 
+que ende dixo Merlin : ante es grant verdat lo que ende prophetizô. Onde 
+aueno asi que César el enperador de Rroma lo ténia en presion... » 
+
+2. L'espagnol a, correctement : « tu joglar » ; le metteur on prose a altéré 
+ce trait. 
+
+3. L'ordre est, dans l'espagnol ; <!--/<;/»///<',--> fils, âne, chien, comme dans la 
+version en alexandrins (au moins pour les deux derniers). 
+
+
+
+12 M. ROaUES 
+
+« Je vous ay, fait il, pareillement amené mon feai, c'est mou filz que cv 
+veez ; c'est ma joie, c'est toute ma plaisance, c'est mon esbatement, et devez 
+savoir que quant ung enfens est jeunes, c'est tout l'amour du père et de la 
+mère; mais, quant il est hors de la verge et il ne veult plus endurer dissiplinc, 
+lors a le pcre sa joie perdue, car le filz ne feroit pour lui nient plus que le 
+[_,'/2] singe fait pour les mauvais : il leur fait la moue. Et ainsi fait le mau- 
+vais enfant a son père, et lui hoche le chief en derrière par sa mau- 
+vaise nature. 
+
+« En après, fait il, sire, av je mon chien amené Sachiés que je n'av nul amv 
+sinon lui, et, se la raison voulez ouir, je vous dy que, quant je vois quelque 
+part et mon chien me voit partir, jamais il ne me laissera : se je m'endors, 
+il se couchera dalez mov et gardera qu'on ne me niesface; se je me cour- 
+rouce a lui par aucunne aventure, je ne le saverav batre tant que, se je le 
+vueil rapeller, il vendra a moy et me fera plus grant joie que par avant ; et 
+s'il est aucun qui s'efforce de mov mal faire de fait, je say de vray que jamais 
+mon chien ne l'aimera, ains lui courra seure en tous lieux; et la est 
+approuvée la bonté et mauvaistié d'un chien. [La fin de la page est restée en 
+Ni nie. ] 
+
+2° Au V. 36 correspond toute une phrase de l'espagnol : 
+« Desque este pleito fué deuisado, el rey fizo tirar de presion à 
+Macaire, et traerlo ante ssî et deuisole el juizio que dieran los 
+ommes buenos de su corte con don Aymes. » En effet Macaire 
+a été emprisonné après la découverte du corps d'Aubri (xxi:... 
+et el rey fizo prender à Macaire entre tanto), et il devait en 
+être de même dans le poème français (cf. v. 41). Il se peut 
+donc encore qu'il y ait ici, entre les deux vers commençant par 
+Oiiarit, une lacune dans notre manuscrit. 
+
+3° Le v. 60, qui dans notre fragment est une addition en 
+marge, n'a pas de correspondant dans l'espagnol . 
+
+4° L'espagnol insère entre les phrases correspondant aux 
+vers 68 et 69, trois lignes sur la terreur qui saisit Macaire, et 
+qui est le juste châtiment des impies et des méchants. 
+
+Ces différences ne sont pas de nature à empêcher la conclu- 
+sion qui s'impose par ailleurs: la version espagnole est une tra- 
+duction de cette version française en alexandrins dont nos frag- 
+ments représentent une copie légèrement fautive. 
+
+Comme Ton aboutit précisément à la même conclusion quand 
+l'on compare la version espagnole et les fragments publiés en 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE I 3 
+
+dernier lieu par Scheler ', il en résulte nécessairement que ces 
+fragments anciens et les fragment nouveaux appartiennent à 
+une seule et même rédaction de la chanson de la Reine Sibile, 
+encore qu'ils proviennent de deux manuscrits différents. 
+
+L'examen des rimes ne contredit pas cette conclusion {è et à 
+confondus, ie et e distingués en général, iee passé à ie, dans les 
+deux groupes de fragments). 
+
+Enfin il est probable ^ que la médiocre mise en prose du 
+ms. de l'Arsenal a été faite directement d'après cette même 
+version en alexandrins. 
+
+<ab><persName>M. Roques.</persName></ab> 
+
+
+
+1. Scheler n'a pas fiiit lui-même cette comparaison, mais elle avait été 
+esquissée par F. Wo\{(Deiikscbn'fteii de l'Acad. de Vienne, VIII, 1857) à l'aide 
+d'une édition de La Historia de la reyna 5e/'/7/i7 imprimée au xvr- s., qui n'est 
+qu'un remaniement abrégé et altéré de la version manuscrite, et elle a été 
+reprise par R. Kôhler (op. cit., 275) qui aboutit nettement à ia conclusion 
+que nous indiquons. 
+
+2. Comme le pensaient déjà Guessard (Introd. à Macaire, cxxxiii) et 
+R. Kôhler, /. /. 
+            </div>
+        </front>
+        <body>
+            <!-- 
+        TODO:
+        - rendre compte de la résolution des abréviations (ex) => encodées par \ et /
+        - voir les corrections apportées par l'éditeur de SebilleT p. 319-323.
+        -->
+            <lg type="laisse">
+                <!-- RESTE DES COQUILLES À CORRIGER !! -->
+                I 
+                
+                F. I recto I I I I I I 
+                
+                E q\u/ant cil entendirent a pou su\n/t erragez. 
+                « Par Deu, sire duc Nemes, v\ous/ n\ous/ \con/trarïez : 
+                En la cort li Roi forment nos enpirez. 
+                Cest chen navra Mac\er/, car il eust esragez :	5 
+                
+                Espor le chen le het ou de p\re/s ou de vez . » 
+                [D]uc Nemes de Beiv\er/e q\ue/ tau\n/t fist a proiser 
+                Par le col ad saili maintena\n/t le seuerer ;
+                A Gaufroi le \com/ma\n/da q\ue/ fu pare\n/t Oger ; 
+                E q\ua/nt Mac\er/ le v[i]t vif quida esracher. 	10 
+                La su\n/t si p\ar/ent, Hates de Mondider,
+                E se i fu Maling\re/s e ove lui Bereng\er/, 
+                Faukes e Aloriz, Ysotard e Bricher. 
+                Gefron de Hautefoile p\ri/st un cotel d'ascer ; 
+                La vodru\n/t mai\n/tena\n/t dem\em/brer le lev\er/er	 15 
+                Qua\n/t Neme de Beiv\er/e com\en/sa a hucher, 
+                Richard de Normandie e Gaufroi e Oger, 
+                Terri l'Ardinois, Berardz de Mondider 
+                Dreit au pié Charles s'en vont agenoiler : 
+                « Sire dreit emp\erer/e, mont n\ous/ peut m\er/vailer	20 
+                E des bontez q\ue/ en v\ous/ solaien repairer : 
+                
+                
+                
+                I, I La partie inférieure des caractères, seule visible, ne permet pas le déchif-
+                frement. — 7 L'initiale manque, mais un d est inscrit dans la marge. — 8 sic, 
+                lis. saisi et leverer. 
+                
+                
+                
+                FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 3 
+                
+                Vous me soleiz mout amer e tenir cher, 
+                Moy e T\er/ri l'Ardonois, Berard de Mondider ; 
+                Ore ne v\ous/ volez mes amer ne priser. 
+                Sertes, sire, ceo pois nos, ço ne v\ous/ q\u/er noer ; 		25 
+                Ja ne n\ous/ tarrom n'e\n/ av\er/om loer : 
+                Gardés nous de t\ra/ïtres, v\ous/ avez beni mester. 
+                — Nemes, dist Charl\es/, jeo ne m'i soi garder 
+                Si cil sire n'en pense q\ue/ tout peut j\us/tiser. 
+                — Ame\n/, ceo dist Charl\es/, jo l'em pri e requer.	 30 
+                Ore escultez un pou, Fraunçois e Beruër, 
+                Ente\n/dez ma p\ar/ole, n'oiz sai\n/g de noier. 
+                Il n'i ad ça einz haut home, serjaunt e chivaler, 
+                verso I I I I I 1 I I I [ne esquier] 
+                Que cest lev\er/er adeie ne ne voile aprocher, 	35 
+                Fors seulement Mac\er/, le noster despenser. 
+                Joe ne vei pos Aubri son seign\or/ repeirer 
+                Que en mena la Roÿne que en faites chacer. 
+                Car faites un chose dount jo v\ous/ p\ri/ e req\ue/r, 
+                Q\ue/ v\ous/ mountez, beau sire, sor vot\re/ bon dest\re/r 	40 
+                E n\ous/ v\ous/ suërom aprés desq\ue/ .x. chivaler, 
+                S'irrom ap\ré/s le chien el bois g\ra/nt a pl[e]ser. 
+                Si m'aïst icil sire q\ue/ tout ad a juger, 
+                Solo\n/c le mie\n/ pensé, ceo v\ous/ di saunz boiser, 
+                Macer ad occis Aubri de Mondider, 	45 
+                Voster gentile baro\n/ q\ue/ tant fist a preser 
+                Ne de vost\re/ service ne se peut anoier. » 
+                
+                [D] ont par fu li t\ra/ïtre dolent e corucez ; 
+                Q\ua/nt il oï duc Nemes, a pou qu'il n'est devez : 
+                « Sire, ceo dist Mac\er/, nient dirriez assez ; 	50 
+                Ne fusses si haut home e si ennorez, 
+                Ja en serait mes gages v\er/s le vost\re/ donez 
+                
+                
+                
+                25 ms. pois nios. — 27 Lis. Gardés vous et sans doute inversement ne nous 
+                au V. 24. — 30 [Lis. ceo dist Nemes ; voir infra, p. 9, n. i]. — 34 Même obser- 
+                vation que pour 1. [On peut cependant deviner la fin de vers ne esquier, cf. pour 
+                cette graphie, 41 ; pour la confirmation de cette lecture, voir infra,p. 9, n. 2] — 
+                35 Les 3e et 4e lettres de adeie sont incertaines par suite d'une légère déchirure 
+                du ms. [M. Baker avait lu d'abord adest, mais l'e final est certain et la 4e lettre 
+                ne petit guère être s; pour adeie, cf. Godefroy, I, v. adaier.] — 37 Lis. vei 
+                pas. — 44 le est ajouté au-dessus de la ligne entre mien et pensé. 
+                
+                
+                
+                A. T. BAKER 
+                
+                Que onq\ue/s en si fait mendre ne me vi\n/t en pe\n/sez. 
+                — Macer, dist duc Nemes, un petit m'entendez : 
+                Bene v\er/rom com\en/t il est ei\n/z les t\re/is jors passez. »	55 
+                Nemes sest le lev\er/er, v\er/s le Roi s'est tornez. 
+                Le lev\er/er veit le Roi, v\er/s lui s'est aclinez, 
+                Devant lui s'agenoille, si s'est mout dem\en/tez ; 
+                As denz p\ri/st son ermine q\ue/ estoit engoulez, 
+                Volu\n/tieris l'en t\ra/isist le lev\er/er affilez 	60 
+                Q\ua/nt li Roi l'ad veü, si plora de pitez ;
+                Son cheval dema\n/da, il lui fu amenez ; 
+                L'emp\er/er monta, tei\n/t l'espee a son lez, 
+                E des autres baro\n/s ta\n/t q\ue/ il fure\n/t asez. 
+                Mac\er/ li t\ra/ïtre se n'est pas alez,	 65 
+                Einz remist a Paris dolenz e aïrez. 
+                
+                
+                
+                II 
+                
+                F. 2 recto « ........ 1 1 1 1 faite de g\ra/nt bastonz q\ua/rrez 
+                Cum plus l'averai batu, plus ert adountez 
+                E meuz eu ert le fes desor son dos portez. 
+                Tel manere a li asne, ceo dist l'autoritez. 
+                Sire, veez ci mon chen, c'est meu\n/s amis p\ri/vez ;	5 
+                Si m'aït icil sire q\u'e/n croiz fu peinez
+                Cum jeo n'ai nul ami dou\n/t soi meuz amez. 
+                Qua\n/t jeo l'ai tau\n/t batu, a pou ne l'ai tuez, 
+                E jeo l'apel a moi, a lui di : « Ça venez ! », 
+                Lors me coneust mes chens, s'est vers moi aclinez.	 10 
+                Seinors, ceo dist duc Nemes, par Deu de majestez, 
+                Issi irra M\er/lin cum v\ous/ oï ore avez. » 
+                
+                « [S]eignors, ceo dist duc Nemes, entendez mon pensé :
+                Jugeme\n/t v\ous/ dorreie, si v\ous/ [v]endroit a gré. 
+                Pus que Aubri n'ad home est\ra/nge ne prevé	15 
+                Que voille vers Mac\er/ \com/batre el chau\m/p mellé, 
+                Fors soulem\en/t cest chen que voi entalenté, 
+                Jeo di q\ue/ home les doit mettre ensemble p\or/ v\er/ité 
+                
+                
+                
+                53 Lis. un si f. meudre (meurdre, cf. mordre, II, 38). — 56 Lis. Nemes lest 
+                — 60 [affilez ne paraît pas absolument sûr ; la photographie laisse voir dans l'inter- 
+                ligne un signe qui se lit mal]. 
+                
+                II, 1 faite est de lecture très incertaine. 
+                
+                
+                
+                FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 5 
+                
+                Macer soit a pé devant lui en el pré, 
+                Si ait un escu rond e un baston quarré	20 
+                E un baston d'espine bien fait e mesuré, 
+                Pié e demi de long bien fait e asscemé. 
+                Si il peut occire, mout avra bien ov\er/é : 
+                Tot quite s'en irra e tout a sauveté ; 
+                E si le chen le vente, par Deu de majesté, 	25 
+                Donc di jeo qu'il ad occis Aubri e affolé, 
+                Jeo ne soi autre chose, es te le v\ous/ prové. 
+                Face en li Roy justice au los de son barné. » 
+                E q\ua/nt cil l'ente\n/dire\n/t, si su\n/t en piez levé, 
+                Duc Nemes embracerent e si l'ou\n/t acolé : 	30 
+                « Sire, bien avez dist, Deu v\ous/ tiegne en bonté ; 
+                Tout issi serra il cum l'avez devisé . « 
+                Devant le Roy s'en vont, tout l'ou\n/t reconté 
+                Trestout le jugeme\n/t qu'il ou\n/t enorté, 
+                E le roy lour ottroie volunters e de gré, 	35 
+                verso Qua\n/t ost le jugement que ert de loiauté. 
+                Qua\n/t Mac\er/ l'oï g\ra/nt joi en ad mené, 
+                Son g\ra/nt mordre quida bien aver aquité ; 
+                Mes Deu qu'\on/ques ne menti bien sout la vérité. 
+                
+                [C]eo fu par un matin que le solail lust gent ; 	40 
+                Macer ou\n/t amené esquier e serjaunt, 
+                Devaunt le roi s'en vint. Char\les/ lui ad dist tau\n/t : 
+                « Macer, dist le Roy, entendez mon semblau\n/t. 
+                Certes jeo v\ous/ aim mout, ne seez mie mescreaunt, 
+                Por l'am\or/ du lignage que v\ous/ avez s[i] grant ; 	45 
+                Mes il m'estuit dreit faire a ma court de ma ge\n/t. 
+                Jugé ou\n/t, ceo me semble, mi amis meuz vallau\n/t. 
+                Pur que Aubri n'ad home, est\ra/nge ne parent, 
+                Que voille v\er/s v\ous/ \com/batre el chaump present, 
+                Cest chen v\er/s v\ous/ en ad mout g\ra/nt talent, 	50 
+                \Vous/ estoit c\om/batre par itele covenaunt : 
+                V\ous/ averez un escu rou\n/d e un baston pesau\n/t 
+                E un baston d'espine bien fait e avenaunt 
+                Si le chen poez ventre ne faire recréant. 
+                
+                
+                
+                19-20 La lecture est rendue difficile par le pli transversal et les dechirures ; 
+                au v. 20 soit ou, moins probablement, voit. — 22 Le second s est ajouté au-dessus de 
+                la ligne entre s et c, peut-être par erreur pour ascesmé — 53 La fin du vers est 
+                de lecture difficile à cause du pli. 
+                
+                
+                
+                6 A. T. BAKER 
+                
+                Tout quite serras de la traïson grau\n/t, 	55 
+                Ceo que vous mettent sus mi home e ma gent 
+                De Aubri que est occis dont j'ai le quer dole\n/t. 
+                E si le chen v\ous/ vai\n/t, jeo di par saint Amenau\n/t, 
+                Jeo v\ous/ ferai justice tel cum est covenau\n/t 
+                D'escorcher e d'ardoir, d'encroier au vent. 	60 
+                — Sire, ceo dist Mac\er/, Deu en trais a guarau\n/t 
+                Que Aubri ne fis mal plus que mon cher enfau\n/t. « 
+                
+                « [S]ire, ceo dist Mac\er/, por Deu le fiz Marie, 
+                Ja en serrai ceo honte e m\o/lt g\ra/nt vilanie 
+                Si me \com/b[at] e au chen en bataille formie. 		65 
+                — N[e]ni, ceo dist li Roi, car issi l'ount jugie 
+                Mi home e ma gent dou\n/t il i ad partie. 
+                Alez adober e si ne demorés mie. » 
+                Macer s'en torna, si apele sa lignie ; 
+                Si parent l'adoberent en la sale voutie : 	70 
+                Un court baston d'espine lui ou\n/t mis en baillie. 
+                
+            </lg>
+        </body>
+        <back>
+            <head>Apparat et notes</head>
+            <p>  </p>
+        </back>
+    </text>
+</TEI>
