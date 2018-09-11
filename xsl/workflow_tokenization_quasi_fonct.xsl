@@ -2,6 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs tei" version="2.0">
+    
+    <!-- L'XSL de tokénisation de Montferrand peut être plus efficace que celle-ci -->
 
     <!-- 
         XSL de tokenization à peaufiner,
