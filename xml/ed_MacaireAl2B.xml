@@ -20,8 +20,12 @@
                     <resp>transcription revue par</resp>
                     <persName>Louis Brandin</persName>
                 </respStmt>
+                <respStmt xml:id="PL">
+                    <resp>édition numérique</resp>
+                    <persName>Pauline Lévêque</persName>
+                </respStmt>
                 <respStmt xml:id="JBC">
-                    <resp>édition numérique sous la direction de</resp>
+                    <resp>sous la direction de</resp>
                     <persName>Jean-Baptiste Camps</persName>
                 </respStmt>
             </titleStmt>
@@ -68,10 +72,11 @@
                         <imprint>
                             <date>1915</date>
                         </imprint>
-                        <biblScope>44</biblScope>
-                        <biblScope>1-13</biblScope>
+                        <biblScope unit="issue">44</biblScope>
+                        <biblScope unit="page" from="1" to="13">p. 1-13</biblScope>
                     </monogr>
                 </biblStruct>
+                <!-- Add msDesc? -->
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -90,6 +95,14 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="draft">
+            <!-- TODO: 
+                - modification encodage des abréviations, ou, mieux, retour au manuscrit;
+                - abbr et expan doivent faire partie du même w;
+                - voir la fin du doc pour une version avec lettres suppléées marquées \/
+                - encodage du discours direct;
+            
+            -->
+            <change who="#PL" when="2018-07" status="draft">Poursuite de l'encodage</change>
             <change who="#JBC" when="2017-11-14" status="draft">Encodage</change>
             <change who="#JBC" when="2016-03" status="draft">OCR, correction
                 de l'OCR et encodage</change>
@@ -585,7 +598,7 @@ R. Kôhler, /. /. /</note>
                     <w>de</w> 
                     <choice>
                         <abbr><w>Beive</w> </abbr>
-                        <expan><w>Beiv\er/e</w></expan>
+                        <expan><w>Beiv<ex>er</ex>e</w></expan>
                     </choice>
                     <choice>
                         <abbr><w>q</w> </abbr>
@@ -2840,3 +2853,201 @@ R. Kôhler, /. /. /</note>
         </back>
     </text>
 </TEI>
+<!--E q\u/ant cil entendirent a pou su\n/t erragez. 
+« Par Deu, sire duc Nemes, v\ous/ n\ous/ \con/trarïez : 
+En la cort li Roi forment nos enpirez. 
+Cest chen navra Mac\er/, car il eust esragez :	5 
+
+Espor le chen le het ou de p\re/s ou de vez . » 
+[D]uc Nemes de Beiv\er/e q\ue/ tau\n/t fist a proiser 
+Par le col ad saili maintena\n/t le seuerer ;
+A Gaufroi le \com/ma\n/da q\ue/ fu pare\n/t Oger ; 
+E q\ua/nt Mac\er/ le v[i]t vif quida esracher. 	10 
+La su\n/t si p\ar/ent, Hates de Mondider,
+E se i fu Maling\re/s e ove lui Bereng\er/, 
+Faukes e Aloriz, Ysotard e Bricher. 
+Gefron de Hautefoile p\ri/st un cotel d'ascer ; 
+La vodru\n/t mai\n/tena\n/t dem\em/brer le lev\er/er	 15 
+Qua\n/t Neme de Beiv\er/e com\en/sa a hucher, 
+Richard de Normandie e Gaufroi e Oger, 
+Terri l'Ardinois, Berardz de Mondider 
+Dreit au pié Charles s'en vont agenoiler : 
+« Sire dreit emp\erer/e, mont n\ous/ peut m\er/vailer	20 
+E des bontez q\ue/ en v\ous/ solaien repairer : 
+
+
+
+I, I La partie inférieure des caractères, seule visible, ne permet pas le déchif-
+frement. — 7 L'initiale manque, mais un d est inscrit dans la marge. — 8 sic, 
+lis. saisi et leverer. 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 3 
+
+Vous me soleiz mout amer e tenir cher, 
+Moy e T\er/ri l'Ardonois, Berard de Mondider ; 
+Ore ne v\ous/ volez mes amer ne priser. 
+Sertes, sire, ceo pois nos, ço ne v\ous/ q\u/er noer ; 		25 
+Ja ne n\ous/ tarrom n'e\n/ av\er/om loer : 
+Gardés nous de t\ra/ïtres, v\ous/ avez beni mester. 
+— Nemes, dist Charl\es/, jeo ne m'i soi garder 
+Si cil sire n'en pense q\ue/ tout peut j\us/tiser. 
+— Ame\n/, ceo dist Charl\es/, jo l'em pri e requer.	 30 
+Ore escultez un pou, Fraunçois e Beruër, 
+Ente\n/dez ma p\ar/ole, n'oiz sai\n/g de noier. 
+Il n'i ad ça einz haut home, serjaunt e chivaler, 
+verso I I I I I 1 I I I [ne esquier] 
+Que cest lev\er/er adeie ne ne voile aprocher, 	35 
+Fors seulement Mac\er/, le noster despenser. 
+Joe ne vei pos Aubri son seign\or/ repeirer 
+Que en mena la Roÿne que en faites chacer. 
+Car faites un chose dount jo v\ous/ p\ri/ e req\ue/r, 
+Q\ue/ v\ous/ mountez, beau sire, sor vot\re/ bon dest\re/r 	40 
+E n\ous/ v\ous/ suërom aprés desq\ue/ .x. chivaler, 
+S'irrom ap\ré/s le chien el bois g\ra/nt a pl[e]ser. 
+Si m'aïst icil sire q\ue/ tout ad a juger, 
+Solo\n/c le mie\n/ pensé, ceo v\ous/ di saunz boiser, 
+Macer ad occis Aubri de Mondider, 	45 
+Voster gentile baro\n/ q\ue/ tant fist a preser 
+Ne de vost\re/ service ne se peut anoier. » 
+
+[D] ont par fu li t\ra/ïtre dolent e corucez ; 
+Q\ua/nt il oï duc Nemes, a pou qu'il n'est devez : 
+« Sire, ceo dist Mac\er/, nient dirriez assez ; 	50 
+Ne fusses si haut home e si ennorez, 
+Ja en serait mes gages v\er/s le vost\re/ donez 
+
+
+
+25 ms. pois nios. — 27 Lis. Gardés vous et sans doute inversement ne nous 
+au V. 24. — 30 [Lis. ceo dist Nemes ; voir infra, p. 9, n. i]. — 34 Même obser- 
+vation que pour 1. [On peut cependant deviner la fin de vers ne esquier, cf. pour 
+cette graphie, 41 ; pour la confirmation de cette lecture, voir infra,p. 9, n. 2] — 
+35 Les 3e et 4e lettres de adeie sont incertaines par suite d'une légère déchirure 
+du ms. [M. Baker avait lu d'abord adest, mais l'e final est certain et la 4e lettre 
+ne petit guère être s; pour adeie, cf. Godefroy, I, v. adaier.] — 37 Lis. vei 
+pas. — 44 le est ajouté au-dessus de la ligne entre mien et pensé. 
+
+
+
+A. T. BAKER 
+
+Que onq\ue/s en si fait mendre ne me vi\n/t en pe\n/sez. 
+— Macer, dist duc Nemes, un petit m'entendez : 
+Bene v\er/rom com\en/t il est ei\n/z les t\re/is jors passez. »	55 
+Nemes sest le lev\er/er, v\er/s le Roi s'est tornez. 
+Le lev\er/er veit le Roi, v\er/s lui s'est aclinez, 
+Devant lui s'agenoille, si s'est mout dem\en/tez ; 
+As denz p\ri/st son ermine q\ue/ estoit engoulez, 
+Volu\n/tieris l'en t\ra/isist le lev\er/er affilez 	60 
+Q\ua/nt li Roi l'ad veü, si plora de pitez ;
+Son cheval dema\n/da, il lui fu amenez ; 
+L'emp\er/er monta, tei\n/t l'espee a son lez, 
+E des autres baro\n/s ta\n/t q\ue/ il fure\n/t asez. 
+Mac\er/ li t\ra/ïtre se n'est pas alez,	 65 
+Einz remist a Paris dolenz e aïrez. 
+
+
+
+II 
+
+F. 2 recto « ........ 1 1 1 1 faite de g\ra/nt bastonz q\ua/rrez 
+Cum plus l'averai batu, plus ert adountez 
+E meuz eu ert le fes desor son dos portez. 
+Tel manere a li asne, ceo dist l'autoritez. 
+Sire, veez ci mon chen, c'est meu\n/s amis p\ri/vez ;	5 
+Si m'aït icil sire q\u'e/n croiz fu peinez
+Cum jeo n'ai nul ami dou\n/t soi meuz amez. 
+Qua\n/t jeo l'ai tau\n/t batu, a pou ne l'ai tuez, 
+E jeo l'apel a moi, a lui di : « Ça venez ! », 
+Lors me coneust mes chens, s'est vers moi aclinez.	 10 
+Seinors, ceo dist duc Nemes, par Deu de majestez, 
+Issi irra M\er/lin cum v\ous/ oï ore avez. » 
+
+« [S]eignors, ceo dist duc Nemes, entendez mon pensé :
+Jugeme\n/t v\ous/ dorreie, si v\ous/ [v]endroit a gré. 
+Pus que Aubri n'ad home est\ra/nge ne prevé	15 
+Que voille vers Mac\er/ \com/batre el chau\m/p mellé, 
+Fors soulem\en/t cest chen que voi entalenté, 
+Jeo di q\ue/ home les doit mettre ensemble p\or/ v\er/ité 
+
+
+
+53 Lis. un si f. meudre (meurdre, cf. mordre, II, 38). — 56 Lis. Nemes lest 
+— 60 [affilez ne paraît pas absolument sûr ; la photographie laisse voir dans l'inter- 
+ligne un signe qui se lit mal]. 
+
+II, 1 faite est de lecture très incertaine. 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 5 
+
+Macer soit a pé devant lui en el pré, 
+Si ait un escu rond e un baston quarré	20 
+E un baston d'espine bien fait e mesuré, 
+Pié e demi de long bien fait e asscemé. 
+Si il peut occire, mout avra bien ov\er/é : 
+Tot quite s'en irra e tout a sauveté ; 
+E si le chen le vente, par Deu de majesté, 	25 
+Donc di jeo qu'il ad occis Aubri e affolé, 
+Jeo ne soi autre chose, es te le v\ous/ prové. 
+Face en li Roy justice au los de son barné. » 
+E q\ua/nt cil l'ente\n/dire\n/t, si su\n/t en piez levé, 
+Duc Nemes embracerent e si l'ou\n/t acolé : 	30 
+« Sire, bien avez dist, Deu v\ous/ tiegne en bonté ; 
+Tout issi serra il cum l'avez devisé . « 
+Devant le Roy s'en vont, tout l'ou\n/t reconté 
+Trestout le jugeme\n/t qu'il ou\n/t enorté, 
+E le roy lour ottroie volunters e de gré, 	35 
+verso Qua\n/t ost le jugement que ert de loiauté. 
+Qua\n/t Mac\er/ l'oï g\ra/nt joi en ad mené, 
+Son g\ra/nt mordre quida bien aver aquité ; 
+Mes Deu qu'\on/ques ne menti bien sout la vérité. 
+
+[C]eo fu par un matin que le solail lust gent ; 	40 
+Macer ou\n/t amené esquier e serjaunt, 
+Devaunt le roi s'en vint. Char\les/ lui ad dist tau\n/t : 
+« Macer, dist le Roy, entendez mon semblau\n/t. 
+Certes jeo v\ous/ aim mout, ne seez mie mescreaunt, 
+Por l'am\or/ du lignage que v\ous/ avez s[i] grant ; 	45 
+Mes il m'estuit dreit faire a ma court de ma ge\n/t. 
+Jugé ou\n/t, ceo me semble, mi amis meuz vallau\n/t. 
+Pur que Aubri n'ad home, est\ra/nge ne parent, 
+Que voille v\er/s v\ous/ \com/batre el chaump present, 
+Cest chen v\er/s v\ous/ en ad mout g\ra/nt talent, 	50 
+\Vous/ estoit c\om/batre par itele covenaunt : 
+V\ous/ averez un escu rou\n/d e un baston pesau\n/t 
+E un baston d'espine bien fait e avenaunt 
+Si le chen poez ventre ne faire recréant. 
+
+
+
+19-20 La lecture est rendue difficile par le pli transversal et les dechirures ; 
+au v. 20 soit ou, moins probablement, voit. — 22 Le second s est ajouté au-dessus de 
+la ligne entre s et c, peut-être par erreur pour ascesmé — 53 La fin du vers est 
+de lecture difficile à cause du pli. 
+
+
+
+6 A. T. BAKER 
+
+Tout quite serras de la traïson grau\n/t, 	55 
+Ceo que vous mettent sus mi home e ma gent 
+De Aubri que est occis dont j'ai le quer dole\n/t. 
+E si le chen v\ous/ vai\n/t, jeo di par saint Amenau\n/t, 
+Jeo v\ous/ ferai justice tel cum est covenau\n/t 
+D'escorcher e d'ardoir, d'encroier au vent. 	60 
+— Sire, ceo dist Mac\er/, Deu en trais a guarau\n/t 
+Que Aubri ne fis mal plus que mon cher enfau\n/t. « 
+
+« [S]ire, ceo dist Mac\er/, por Deu le fiz Marie, 
+Ja en serrai ceo honte e m\o/lt g\ra/nt vilanie 
+Si me \com/b[at] e au chen en bataille formie. 		65 
+— N[e]ni, ceo dist li Roi, car issi l'ount jugie 
+Mi home e ma gent dou\n/t il i ad partie. 
+Alez adober e si ne demorés mie. » 
+Macer s'en torna, si apele sa lignie ; 
+Si parent l'adoberent en la sale voutie : 	70 
+Un court baston d'espine lui ou\n/t mis en baillie. -->

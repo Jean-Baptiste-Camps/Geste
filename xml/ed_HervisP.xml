@@ -1,0 +1,2505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JBC: j'ajoute le schéma tei_all pour vérifier la validité TEI -->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- -->
+<?xml-model href="schema.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="schema.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_HervisP" type="ed" xml:lang="fr" corresp="jns5822">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Hervis de Mes</title> 
+                <title type="sub">Numérisation de l'édition de Pamfilova de 1931</title>
+                <!-- JBC: ajouter l'éditrice (ceci dit, vous l'avez encodée dans la source) -->
+                <editor><persName>Xenia Pamfilova</persName></editor>
+                <!-- JBC: ne pas vous oublier ! -->
+                <respStmt xml:id="SR">
+                    <resp>encodage TEI</resp>
+                    <persName>Sabine Roulleau</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes d'auteurs médiévaux sont dans le domaine
+                        public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail d'encodage et d'annotation sont mis à disposition
+                        selon les termes de la licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).
+                    </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="XPam"> <!--identifiant servant à baliser les éléments de la chanson -->
+                    <!-- JBC: pour un article de revue, utiliser -->
+                    <analytic>
+                        <editor xml:id="Pamfilova">
+                            <persName>
+                                <forename>Xenia</forename>
+                                <surname>Pamfilova</surname>
+                            </persName>
+                            <!-- JBC: c'est plutôt l'identifiant du document que de l'éditeur -->
+                            <!--<idno type="DOI">DOI: 10.3406/roma.1931.4053</idno>-->
+                        </editor>
+                        <title type="main">Fragments de manuscrits de chansons de geste</title>
+                        <idno type="DOI">DOI: 10.3406/roma.1931.4053</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <!--<publisher></publisher>-->
+                            <biblScope unit="issue">57</biblScope> 
+                            <date>1931</date>
+                            <biblScope unit="page" from="504" to="547">p. 504-547</biblScope> 
+                        </imprint>      
+                      </monogr>
+                    <note>Fragment retrouvé dans une reliure [aux AD de la Moselle] et édité par Pamfilova (1934).</note>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <country>France</country>
+                        <repository xml:lang="fr">Archives départementales de la Moselle</repository>
+                        <msName>Fragm. AD Moselle</msName>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origPlace cert="low" resp="DEAF" type="lieuComposition">Lorr. ?</origPlace>
+                <origDate cert="medium" resp="DEAF" type="dateComposition" notBefore="1201" notAfter="1225">1201-1225</origDate>
+                <origPlace cert="medium" resp="DEAF" type="lieuManuscrit">Lorr. </origPlace>
+                <origDate cert="medium" resp="DEAF" type="dateManuscrit" notBefore="1250" notAfter="1300">deuxième moitié du 13e s.</origDate>
+            </creation>
+            <langUsage>
+                <language cert="medium" resp="#JBC" ident="fro" usage="100">traits de l'Est</language>
+                <!-- JBC: à préciser-->
+            </langUsage>           
+        </profileDesc>
+        <!-- Quelques champs supplémentaires à intégrer au teiHeader -->
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+                <!-- etc. -->
+            </editorialDecl>
+        </encodingDesc><!-- Description de vos choix d'encodage -->
+        <revisionDesc>
+            <change when="201808" who="#JBC">Correction du document</change>
+            <change when="2018" who="#SR">Encodage du document</change>
+        </revisionDesc><!-- Liste des révisions du doc, le cas échéant -->
+    </teiHeader>
+    <text xml:lang="fr">
+        <front>         
+            <div type="introduction"> <!-- 
+                Il s'agit d'un article de la revue Romania comprenant la transcription de quatre fragments avec une introduction et 
+                une partie par fragment -->
+                <pb n="p.504" facs="0002.pdf"/>
+                <head><lb n="1"/>Fragments de manuscrits<lb n="2"/>de<lb n="3"/>chansons de geste</head>
+                <p>Nous publions ci—dessous quatre fragments de manuscrits de chansons de geste : 
+                    <!-- JBC: indexation? -->
+                    M. <persName>Charles Samaran</persName> a eu l‘obligeance de nous communiquer les trois premiers, 
+                    et M. <persName>Antoine Thomas</persName> nous a confié la copie du quatrième : 
+                    à tous deux, nous adressons ici nos vifs remerciements.</p>
+            </div>
+            <div type="part">
+                <pb n="p.538" facs="0036.pdf"/>
+                <head>III</head> 
+                <p>Le troisième fragment est un feuillet double de parchemin. Il a été trouvé aux
+                    Archives de la Moselle et provient d‘une ancienne reliure. Il mesure 272 X
+                    230mm. Les quatre pages sont écrites sur deux colonnes à raison de 35 vers par
+                    colonne. L‘un des feuillets est mutilé sur un côté. L'écriture paraît être
+                    plutôt de la seconde moitié du XIIIe siècle que du commencement du XIVe siècle.
+                    Il ne s‘y trouve qu‘une lettrine 
+                    <!-- Différencier L -->
+                    <mentioned>L</mentioned> 
+                    légèrement effacée. </p>
+                <pb n="p.539" facs="0037.pdf"/>
+                <!--FRAGMENTS DE CHANSONS DE GESTE 539 -->
+                
+                <p>Les deux cents vers que nous présente ce fragment proviennent d‘Hervis de Mes,
+                    chanson de geste assez tardive, qui a été publiée par
+                    <!-- JBC: encodage de la référence bibliographique? -->
+                    <bibl>E. Stengel (Dresden, 1903,
+                    Gesellschaft für romanische Literatur, I</bibl>). Le premier feuillet simple correspond
+                    aux vers 8252—8390 et le second aux vers 8940—9069.</p>
+                
+                <p>E. Stengel a publié le texte d‘après trois manuscrits
+                    <!-- JBC: encodage des cotes de manuscrit? -->
+                    E (<bibl><msIdentifier><repository>Bibl. Nat.</repository><idno>Fr. 19160</idno></msIdentifier></bibl>), N
+                    (Arsenal, 3143), T (Turin, H, II, 14) et un fragment de peu d‘étendue D (Bibl.
+                    de Darmstadt). Il groupe ces mss en deux familles E et NT et prend pour base de
+                    son édition le ms. T, ms. picard. Il le préfère au manuscrit E, ms. lorrain, à
+                    cause de l‘aspect « barbare et de l‘orthographe incohérente » de celui—ci. Le
+                    ms. T présente de nombreuses additions et interpolations et Stengel en a relégué
+                    certaines en appendice de son édition ; c‘est le manuscrit H, II, 14 de Turin
+                    qui a été fortement endommagé par l‘incendie de 1904. Tel qu‘il existait,
+                    c‘était un recueil de poèmes et de chansons de geste, une « geste des ancêtres »
+                    de Garin le Loheran : nous avons eu l‘occasion d‘étudier la chanson de Huon de
+                    Bordeaux qu‘il contient et qui présente le même caractère certain de
+                    remaniement. Le texte de E exempt des additions semble offrir une base
+                    préférable à l‘éditeur.</p>
+                
+                <p>Le fragment des Archives de la Moselle est voisin du texte de E, mais avec une
+                    graphie quelquefois plus normalisée (Cil au lieu de Si de E, par exemple).</p>
+                
+                <p>Il nous a semblé utile de le publier pour donner une idée de la tradition «
+                    lorraine »
+                    <!-- JBC: indexation des titres? -->
+                    d‘<title>Hervis de Metz</title> que l‘on ne pourrait trouver que dans les notes
+                    critiques de l‘édition Stengel.</p>
+            </div>
+        </front>
+            <body xml:lang="fro">
+                    <lg type="laisse" n="001"> 
+                        <l xml:id="XPam_l_1" n="1"><lb n="1"/> <!-- 
+                            Numérotation nouvelle des vers pour cette édition mais il existe une numérotation dans l'édition 
+                            de X Pamfilova qui reprend celle de E. Stengel -->
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000001">Volentiers</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000002">sire</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000003">piuz</w>
+                        <w xml:id="XPam_w_000004">ke</w>
+                        <w xml:id="XPam_w_000005">vos</w>
+                        <w xml:id="XPam_w_000006">le</w>
+                        <w xml:id="XPam_w_000007">volez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_2" n="2"><lb n="2"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000008">Ma</w>
+                        <w xml:id="XPam_w_000009">douce</w>
+                        <w xml:id="XPam_w_000010">fille</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000011">dites</w>
+                        <w xml:id="XPam_w_000012">vo</w>
+                        <w xml:id="XPam_w_000013">volentez</w><pc type="supplied">:</pc></q></l>
+                    <l xml:id="XPam_l_3" n="3"><lb n="3"/>
+                        <w xml:id="XPam_w_000014">Si</w>
+                        <w xml:id="XPam_w_000015">m‘aïst</w>
+                        <w xml:id="XPam_w_000016">Deus</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000017">li</w>
+                        <w xml:id="XPam_w_000018">dons</w>
+                        <w xml:id="XPam_w_000019">vos</w>
+                        <w xml:id="XPam_w_000020">est</w>
+                        <w xml:id="XPam_w_000021">donez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_4" n="4"><lb n="4"/>
+                        <pc type="supplied">—</pc>
+                        <!-- JBC: j'affine les bornes du discours direct ici et ailleurs (incise) -->
+                        <q><w xml:id="XPam_w_000022">Sire</w><pc type="supplied">,</pc>
+                        </q><w xml:id="XPam_w_000023">dist</w>
+                        <w xml:id="XPam_w_000024">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000025">Deus</w>
+                        <w xml:id="XPam_w_000026">vos</w>
+                        <w xml:id="XPam_w_000027">en</w>
+                        <w xml:id="XPam_w_000028">sache</w>
+                        <w xml:id="XPam_w_000029">grei</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_5" n="5"><lb n="5"/>
+                        <!-- JBC: suite du discours direct -->
+                        <q><w xml:id="XPam_w_000030">Teis</w>
+                        <w xml:id="XPam_w_000031">est</w>
+                        <w xml:id="XPam_w_000032">li</w>
+                        <w xml:id="XPam_w_000033">dons</w>
+                        <w xml:id="XPam_w_000034">ke</w>
+                        <w xml:id="XPam_w_000035">vos</w>
+                        <w xml:id="XPam_w_000036">veul</w>
+                        <w xml:id="XPam_w_000037">demander</w><pc type="supplied">:</pc></q></l>
+                    <l xml:id="XPam_l_6" n="6"><lb n="6"/><q>
+                        <w xml:id="XPam_w_000038">Ralez</w>
+                        <w xml:id="XPam_w_000039">vos</w>
+                        <w xml:id="XPam_w_000040">an</w>
+                        <w xml:id="XPam_w_000041">et</w>
+                        <w xml:id="XPam_w_000042">vos</w>
+                        <w xml:id="XPam_w_000043">et</w>
+                        <w xml:id="XPam_w_000044">vo</w>
+                        <w xml:id="XPam_w_000045">barnez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_7" n="7"><lb n="7"/><q>
+                        <w xml:id="XPam_w_000046">Car</w>
+                        <w xml:id="XPam_w_000047">plus</w>
+                        <w xml:id="XPam_w_000048">avant</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000049">peire</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000050">nel</w>
+                        <w xml:id="XPam_w_000051">mecreez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_8" n="8"><lb n="8"/><q>
+                        <w xml:id="XPam_w_000052">Vos</w>
+                        <w xml:id="XPam_w_000053">ne</w>
+                        <w xml:id="XPam_w_000054">mes</w>
+                        <w xml:id="XPam_w_000055">freires</w>
+                        <w xml:id="XPam_w_000056">avec</w>
+                        <w xml:id="XPam_w_000057">moi</w>
+                        <w xml:id="XPam_w_000058">ne</w>
+                        <w xml:id="XPam_w_000059">vanrez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_9" n="9"><lb n="9"/>
+                        <q><w xml:id="XPam_w_000060">Mais</w>
+                        <w xml:id="XPam_w_000061">la</w>
+                        <w xml:id="XPam_w_000062">roine</w>
+                        <w xml:id="XPam_w_000063">por</w>
+                        <w xml:id="XPam_w_000064">Deu</w>
+                        <w xml:id="XPam_w_000065">me</w>
+                        <w xml:id="XPam_w_000066">saluez</w><pc type="supplied">.</pc><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_10" n="10"><lb n="10"/>
+                        <!-- JBC: indexation? -->
+                        <persName><w xml:id="XPam_w_000067">Floires</w></persName>
+                        <w xml:id="XPam_w_000068">l‘entent</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000069">le</w>
+                        <w xml:id="XPam_w_000070">sanc</w>
+                        <w xml:id="XPam_w_000071">cuide</w>
+                        <w xml:id="XPam_w_000072">derver</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_11" n="11"><lb n="11"/>
+                        <w xml:id="XPam_w_000073">Voit</w>
+                        <persName><w xml:id="XPam_w_000074">Bïatrix</w></persName><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000075">sel</w>
+                        <w xml:id="XPam_w_000076">prant</w>
+                        <w xml:id="XPam_w_000077">a</w>
+                        <w xml:id="XPam_w_000078">ranponer</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_12" n="12"><lb n="12"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000079">Folle</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000080">dist</w>
+                        <w xml:id="XPam_w_000081">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000082">con</w>
+                        <w xml:id="XPam_w_000083">de</w>
+                        <w xml:id="XPam_w_000084">honte</w>
+                        <w xml:id="XPam_w_000085">savez</w><pc type="supplied">,</pc></q></l>
+                        
+                            <pb n="540" facs="0038.pdf"/>
+                             <!--540 X. PAMFILOVA -->
+                    <l xml:id="XPam_l_13" n="13"><lb n="1"/><q>
+                        <w xml:id="XPam_w_000086">Car</w>
+                        <w xml:id="XPam_w_000087">por</w>
+                        <w xml:id="XPam_w_000088">aucun</w>
+                        <w xml:id="XPam_w_000089">malice</w>
+                        <w xml:id="XPam_w_000090">dit</w>
+                        <w xml:id="XPam_w_000091">l‘avez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_14" n="14"><lb n="2"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000092">Non</w>
+                        <w xml:id="XPam_w_000093">n‘ai</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000094">biau</w>
+                        <w xml:id="XPam_w_000095">freire</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000096">mais</w>
+                        <w xml:id="XPam_w_000097">por</w>
+                        <w xml:id="XPam_w_000098">Deu</w>
+                        <w xml:id="XPam_w_000099">retornez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_15" n="15"><lb n="3"/>
+                        <q><w xml:id="XPam_w_000100">Ke</w>
+                        <w xml:id="XPam_w_000101">plus</w>
+                        <w xml:id="XPam_w_000102">avant</w>
+                        <w xml:id="XPam_w_000103">avec</w>
+                        <w xml:id="XPam_w_000104">moi</w>
+                        <w xml:id="XPam_w_000105">ne</w>
+                        <w xml:id="XPam_w_000106">vanrez</w><pc type="supplied">.</pc></q><pc type="supplied">»</pc></l>
+                    <l xml:id="XPam_l_16" n="16"><lb n="4"/>
+                        <w xml:id="XPam_w_000107">Floires</w>
+                        <w xml:id="XPam_w_000108">l‘entent</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000109">le</w>
+                        <w xml:id="XPam_w_000110">sanc</w>
+                        <w xml:id="XPam_w_000111">cuide</w>
+                        <w xml:id="XPam_w_000112">derver</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_17" n="17"><lb n="5"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000113">Filz</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000114">dist</w>
+                        <w xml:id="XPam_w_000115">li</w>
+                        <w xml:id="XPam_w_000116">peires</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000117">tot</w>
+                        <w xml:id="XPam_w_000118">ceu</w>
+                        <w xml:id="XPam_w_000119">lasciés</w>
+                        <w xml:id="XPam_w_000120">ester</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_18" n="18"><lb n="6"/>
+                        <q><w xml:id="XPam_w_000121">Li</w>
+                        <w xml:id="XPam_w_000122">dons</w>
+                        <w xml:id="XPam_w_000123">l‘en</w>
+                        <w xml:id="XPam_w_000124">est</w>
+                        <w xml:id="XPam_w_000125">otroiez</w>
+                        <w xml:id="XPam_w_000126">et</w>
+                        <w xml:id="XPam_w_000127">donez</w><pc type="supplied">.</pc> <pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_19" n="19"><lb n="7"/>
+                        <w xml:id="XPam_w_000128">Les</w>
+                        <w xml:id="XPam_w_000129">trois</w>
+                        <w xml:id="XPam_w_000130">rois</w>
+                        <w xml:id="XPam_w_000131">ait</w>
+                        <w xml:id="XPam_w_000132">doucement</w>
+                        <w xml:id="XPam_w_000133">apellez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_20" n="20"><lb n="8"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000134">Signors</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000135">dist</w>
+                        <w xml:id="XPam_w_000136">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000137">vers</w>
+                        <w xml:id="XPam_w_000138">moi</w>
+                        <w xml:id="XPam_w_000139">en</w>
+                        <w xml:id="XPam_w_000140">entendez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_21" n="21"><lb n="9"/>
+                        <q><w xml:id="XPam_w_000141">Por</w>
+                        <w xml:id="XPam_w_000142">Deu</w>
+                        <w xml:id="XPam_w_000143">ma</w>
+                        <w xml:id="XPam_w_000144">fille</w>
+                        <w xml:id="XPam_w_000145">en</w>
+                        <w xml:id="XPam_w_000146">bone</w>
+                        <w xml:id="XPam_w_000147">leautez</w></q></l>
+                    <l xml:id="XPam_l_22" n="22"><lb n="10"/>
+                        <q><w xml:id="XPam_w_000148">Me</w>
+                        <w xml:id="XPam_w_000149">conduisiez</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000150">au</w>
+                        <w xml:id="XPam_w_000151">roi</w>
+                        <w xml:id="XPam_w_000152">la</w>
+                        <w xml:id="XPam_w_000153">presentez</w></q></l>
+                    <l xml:id="XPam_l_23" n="23"><lb n="11"/>
+                        <q><w xml:id="XPam_w_000154">Et</w>
+                        <w xml:id="XPam_w_000155">cest</w>
+                        <w xml:id="XPam_w_000156">avoir</w>
+                        <w xml:id="XPam_w_000157">dont</w>
+                        <w xml:id="XPam_w_000158">il</w>
+                        <w xml:id="XPam_w_000159">i</w>
+                        <w xml:id="XPam_w_000160">ait</w>
+                        <w xml:id="XPam_w_000161">plantez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_24" n="24"><lb n="12"/>
+                        <q><w xml:id="XPam_w_000162">.L.</w>
+                        <w xml:id="XPam_w_000163">certes</w>
+                        <w xml:id="XPam_w_000164">somiers</w>
+                        <w xml:id="XPam_w_000165">trestoz</w>
+                        <w xml:id="XPam_w_000166">trosez</w></q></l>
+                    <l xml:id="XPam_l_25" n="25"><lb n="13"/>
+                        <q><w xml:id="XPam_w_000167">D‘or</w>
+                        <w xml:id="XPam_w_000168">et</w>
+                        <w xml:id="XPam_w_000169">d‘argent</w>
+                        <w xml:id="XPam_w_000170">et</w>
+                        <w xml:id="XPam_w_000171">de</w>
+                        <w xml:id="XPam_w_000172">paille</w>
+                        <w xml:id="XPam_w_000173">roez</w></q></l>
+                    <l xml:id="XPam_l_26" n="26"><lb n="14"/>
+                        <q><w xml:id="XPam_w_000174">Et</w>
+                        <w xml:id="XPam_w_000175">ces</w>
+                        <w xml:id="XPam_w_000176">lieons</w>
+                        <w xml:id="XPam_w_000177">et</w>
+                        <w xml:id="XPam_w_000178">ces</w>
+                        <w xml:id="XPam_w_000179">ors</w>
+                        <w xml:id="XPam_w_000180">enchainez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_27" n="27"><lb n="15"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000181">Boins</w>
+                        <w xml:id="XPam_w_000182">rois</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000183">font</w>
+                        <w xml:id="XPam_w_000184">il</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000185">si</w>
+                        <w xml:id="XPam_w_000186">con</w>
+                        <w xml:id="XPam_w_000187">vos</w>
+                        <w xml:id="XPam_w_000188">comandez.</w><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_28" n="28"><lb n="16"/>
+                        <w xml:id="XPam_w_000189">Atant</w>
+                        <w xml:id="XPam_w_000190">s‘acollent</w>
+                        <w xml:id="XPam_w_000191">par</w>
+                        <w xml:id="XPam_w_000192">molt</w>
+                        <w xml:id="XPam_w_000193">grans</w>
+                        <w xml:id="XPam_w_000194">amistez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_29" n="29"><lb n="17"/>
+                        <w xml:id="XPam_w_000195">Au</w>
+                        <w xml:id="XPam_w_000196">departir</w>
+                        <w xml:id="XPam_w_000197">l‘un</w>
+                        <w xml:id="XPam_w_000198">l‘autre</w>
+                        <w xml:id="XPam_w_000199">ait</w>
+                        <w xml:id="XPam_w_000200">comandei</w></l>
+                    <l xml:id="XPam_l_30" n="30"><lb n="18"/>
+                        <w xml:id="XPam_w_000201">A</w>
+                        <w xml:id="XPam_w_000202">Deu</w>
+                        <w xml:id="XPam_w_000203">de</w>
+                        <w xml:id="XPam_w_000204">gloire</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000205">le</w>
+                        <w xml:id="XPam_w_000206">roi</w>
+                        <w xml:id="XPam_w_000207">de</w>
+                        <w xml:id="XPam_w_000208">maïsté</w><pc type="supplied">;</pc></l>
+                    <l xml:id="XPam_l_31" n="31"><lb n="19"/>
+                        <w xml:id="XPam_w_000209">Et</w>
+                        <w xml:id="XPam_w_000210">li</w>
+                        <w xml:id="XPam_w_000211">rois</w>
+                        <w xml:id="XPam_w_000212">ait</w>
+                        <w xml:id="XPam_w_000213">Bïatrix</w>
+                        <w xml:id="XPam_w_000214">apellez</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_32" n="32"><lb n="20"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000215">Fille</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000216">dist</w>
+                        <w xml:id="XPam_w_000217">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000218">je</w>
+                        <w xml:id="XPam_w_000219">vos</w>
+                        <w xml:id="XPam_w_000220">comant</w>
+                        <w xml:id="XPam_w_000221">à</w>
+                        <w xml:id="XPam_w_000222">Dei</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_33" n="33"><lb n="21"/><q>
+                        <w xml:id="XPam_w_000223">Tenez</w>
+                        <w xml:id="XPam_w_000224">lou</w>
+                        <w xml:id="XPam_w_000225">roi</w>
+                        <w xml:id="XPam_w_000226">et</w>
+                        <w xml:id="XPam_w_000227">foi</w>
+                        <w xml:id="XPam_w_000228">et</w>
+                        <w xml:id="XPam_w_000229">leauteit</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_34" n="34"><lb n="22"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000230">Sire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000231">dist</w>
+                        <w xml:id="XPam_w_000232">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000233">si</w>
+                        <w xml:id="XPam_w_000234">con</w>
+                        <w xml:id="XPam_w_000235">vos</w>
+                        <w xml:id="XPam_w_000236">comandez</w></q></l>
+                    <l xml:id="XPam_l_35" n="35"><lb n="23"/>
+                        <q><w xml:id="XPam_w_000237">En</w>
+                        <w xml:id="XPam_w_000238">tel</w>
+                        <w xml:id="XPam_w_000239">maniere</w>
+                        <w xml:id="XPam_w_000240">bien</w>
+                        <w xml:id="XPam_w_000241">en</w>
+                        <w xml:id="XPam_w_000242">orez</w>
+                        <w xml:id="XPam_w_000243">parler</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_36" n="36"><lb n="24"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000244">Fille</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000245">dist</w>
+                        <w xml:id="XPam_w_000246">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000247">Deus</w>
+                        <w xml:id="XPam_w_000248">vos</w>
+                        <w xml:id="XPam_w_000249">en</w>
+                        <w xml:id="XPam_w_000250">sache</w>
+                        <w xml:id="XPam_w_000251">grei</w><pc type="supplied">!</pc><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_37" n="37"><lb n="25"/>
+                        <w xml:id="XPam_w_000252">Atant</w>
+                        <w xml:id="XPam_w_000253">la</w>
+                        <w xml:id="XPam_w_000254">baisse</w>
+                        <w xml:id="XPam_w_000255">cant</w>
+                        <w xml:id="XPam_w_000256">vint</w>
+                        <w xml:id="XPam_w_000257">au</w>
+                        <w xml:id="XPam_w_000258">decevrer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_38" n="38"><lb n="26"/>
+                        <w xml:id="XPam_w_000259">A</w>
+                        <w xml:id="XPam_w_000260">Damedeu</w>
+                        <w xml:id="XPam_w_000261">a</w>
+                        <w xml:id="XPam_w_000262">son</w>
+                        <w xml:id="XPam_w_000263">cors</w>
+                        <w xml:id="XPam_w_000264">comandei</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_39" n="39"><lb n="27"/>
+                        <w xml:id="XPam_w_000265">Atant</w>
+                        <w xml:id="XPam_w_000266">retorne</w>
+                        <w xml:id="XPam_w_000267">li</w>
+                        <w xml:id="XPam_w_000268">rois</w>
+                        <w xml:id="XPam_w_000269">et</w>
+                        <w xml:id="XPam_w_000270">ces</w>
+                        <w xml:id="XPam_w_000271">barnez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_40" n="40"><lb n="28"/>
+                        <w xml:id="XPam_w_000272">Li</w>
+                        <w xml:id="XPam_w_000273">rois</w>
+                        <w xml:id="XPam_w_000274">Eustaice</w>
+                        <w xml:id="XPam_w_000275">devers</w>
+                        <w xml:id="XPam_w_000276">Tir</w>
+                        <w xml:id="XPam_w_000277">la</w>
+                        <w xml:id="XPam_w_000278">cité</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_41" n="41"><lb n="29"/>
+                        <w xml:id="XPam_w_000279">Li</w>
+                        <w xml:id="XPam_w_000280">messagiers</w>
+                        <w xml:id="XPam_w_000281">penserent</w>
+                        <w xml:id="XPam_w_000282">de</w>
+                        <w xml:id="XPam_w_000283">l‘errer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_42" n="42"><lb n="30"/>
+                        <w xml:id="XPam_w_000284">Droit</w>
+                        <w xml:id="XPam_w_000285">vers</w>
+                        <w xml:id="XPam_w_000286">Espaigne</w>
+                        <w xml:id="XPam_w_000287">ont</w>
+                        <w xml:id="XPam_w_000288">lor</w>
+                        <w xml:id="XPam_w_000289">chemin</w>
+                        <w xml:id="XPam_w_000290">tornei</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_43" n="43"><lb n="31"/>
+                        <w xml:id="XPam_w_000291">Tresc‘ai</w>
+                        <w xml:id="XPam_w_000292">vers</w>
+                        <w xml:id="XPam_w_000293">nonne</w>
+                        <w xml:id="XPam_w_000294">ont</w>
+                        <w xml:id="XPam_w_000295">molt</w>
+                        <w xml:id="XPam_w_000296">bien</w>
+                         <w xml:id="XPam_w_000297">cheminei</w></l>
+                    <l xml:id="XPam_l_44" n="44"><lb n="32"/>
+                        <w xml:id="XPam_w_000298">A</w>
+                        <w xml:id="XPam_w_000299">une</w>
+                        <w xml:id="XPam_w_000300">liue</w>
+                        <w xml:id="XPam_w_000301">pres</w>
+                        <w xml:id="XPam_w_000302">dou</w>
+                        <w xml:id="XPam_w_000303">brulet</w>
+                        <w xml:id="XPam_w_000304">ramei</w></l>
+                    <l xml:id="XPam_l_45" n="45"><lb n="33"/>
+                        <w xml:id="XPam_w_000305">Ou</w>
+                        <w xml:id="XPam_w_000306">Hervis</w>
+                        <w xml:id="XPam_w_000307">iert</w>
+                        <w xml:id="XPam_w_000308">et</w>
+                        <w xml:id="XPam_w_000309">ces</w>
+                        <w xml:id="XPam_w_000310">riches</w>
+                        <w xml:id="XPam_w_000311">barnez</w>;</l>
+                    <l xml:id="XPam_l_46" n="46"><lb n="34"/>
+                        <w xml:id="XPam_w_000312">Et</w>
+                        <w xml:id="XPam_w_000313">Bïatrix</w>
+                        <w xml:id="XPam_w_000314">la</w>
+                        <w xml:id="XPam_w_000315">belle</w>
+                        <w xml:id="XPam_w_000316">o</w>
+                        <w xml:id="XPam_w_000317">le</w>
+                        <w xml:id="XPam_w_000318">vis</w>
+                        <w xml:id="XPam_w_000319">cler</w></l>
+                    <l xml:id="XPam_l_47" n="47"><lb n="35"/>
+                        <w xml:id="XPam_w_000320">Le</w>
+                        <w xml:id="XPam_w_000321">brulet</w>
+                        <w xml:id="XPam_w_000322">ait</w>
+                        <w xml:id="XPam_w_000323">molt</w>
+                        <w xml:id="XPam_w_000324">bien</w>
+                        <w xml:id="XPam_w_000325">avisei</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_48" n="48"><lb n="36"/>
+                        <w xml:id="XPam_w_000326">Or</w>
+                        <w xml:id="XPam_w_000327">ecoutez</w>
+                        <w xml:id="XPam_w_000328">de</w>
+                        <w xml:id="XPam_w_000329">la</w>
+                        <w xml:id="XPam_w_000330">dame</w>
+                        <w xml:id="XPam_w_000331">a</w>
+                        <w xml:id="XPam_w_000332">vis</w>
+                        <w xml:id="XPam_w_000333">cler</w></l>
+                    <l xml:id="XPam_l_49" n="49"><lb n="37"/>
+                        <w xml:id="XPam_w_000334">Comment</w>
+                        <w xml:id="XPam_w_000335">elle</w>
+                        <w xml:id="XPam_w_000336">ait</w>
+                        <w xml:id="XPam_w_000337">aploitié</w>
+                        <w xml:id="XPam_w_000338">et</w>
+                        <w xml:id="XPam_w_000339">errei</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_50" n="50"><lb n="38"/>
+                        <w xml:id="XPam_w_000340">Les</w>
+                        <w xml:id="XPam_w_000341">trois</w>
+                        <w xml:id="XPam_w_000342">rois</w>
+                        <w xml:id="XPam_w_000343">ait</w>
+                        <w xml:id="XPam_w_000344">maintenant</w>
+                        <w xml:id="XPam_w_000345">apellei</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_51" n="51"><lb n="39"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000346">Signors</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000347">dist</w>
+                        <w xml:id="XPam_w_000348">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_000349">vers</w>
+                        <w xml:id="XPam_w_000350">moi</w>
+                        <w xml:id="XPam_w_000351">entendez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_52" n="52"><lb n="40"/>
+                        <q><w xml:id="XPam_w_000352">Un</w>
+                        <w xml:id="XPam_w_000353">petitet</w>
+                        <w xml:id="XPam_w_000354">veul</w>
+                        <w xml:id="XPam_w_000355">mon</w>
+                        <w xml:id="XPam_w_000356">cors</w>
+                        <w xml:id="XPam_w_000357">reposser</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_53" n="53"><lb n="41"/>
+                        <q><w xml:id="XPam_w_000358">Por</w>
+                        <w xml:id="XPam_w_000359">la</w>
+                        <w xml:id="XPam_w_000360">chalour</w>
+                        <w xml:id="XPam_w_000361">ki</w>
+                        <w xml:id="XPam_w_000362">ou</w>
+                        <w xml:id="XPam_w_000363">chief</w>
+                        <w xml:id="XPam_w_000364">me</w>
+                        <w xml:id="XPam_w_000365">fait</w>
+                        <w xml:id="XPam_w_000366">meil</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_54" n="54"><lb n="42"/>
+                        <q><w xml:id="XPam_w_000367">Deleis</w>
+                        <w xml:id="XPam_w_000368">cel</w>
+                        <w xml:id="XPam_w_000369">treif</w>
+                        <w xml:id="XPam_w_000370">faites</w>
+                        <w xml:id="XPam_w_000371">tandre</w>
+                        <w xml:id="XPam_w_000372">mon</w>
+                        <w xml:id="XPam_w_000373">treif</w></q></l>
+                    <l xml:id="XPam_l_55" n="55"><lb n="43"/>
+                        <q><w xml:id="XPam_w_000374">Por</w>
+                        <w xml:id="XPam_w_000375">le</w>
+                        <w xml:id="XPam_w_000376">mien</w>
+                        <w xml:id="XPam_w_000377">cors</w>
+                        <w xml:id="XPam_w_000378">un</w>
+                        <w xml:id="XPam_w_000379">petitet</w>
+                        <w xml:id="XPam_w_000380">reposser</w><pc type="supplied">.</pc></q></l>
+                    
+                            <pb n="541" facs="0039.pdf"/>
+                        <!-- FRAGMENTS DE CHANSONS DE GESTE -->
+                        
+                    <l xml:id="XPam_l_56" n="56"><lb n="1"/>
+                        <q><w xml:id="XPam_w_000381">Dame</w></q><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000382">font</w> 
+                        <w xml:id="XPam_w_000383">il</w><pc type="supplied">,</pc> 
+                        <q><w xml:id="XPam_w_000384">si</w> 
+                        <w xml:id="XPam_w_000385">con</w> 
+                        <w xml:id="XPam_w_000386">vos</w> 
+                        <w xml:id="XPam_w_000387">comandez</w><pc type="supplied">.</pc></q><pc type="supplied"> »</pc></l> 
+                     <l xml:id="XPam_l_57" n="57"><lb n="2"/> 
+                        <w xml:id="XPam_w_000388">Lors</w> 
+                        <w xml:id="XPam_w_000389">descendirent</w> 
+                        <w xml:id="XPam_w_000390">Bïatrix</w> 
+                        <w xml:id="XPam_w_000391">a</w> 
+                        <w xml:id="XPam_w_000392">vis</w> 
+                         <w xml:id="XPam_w_000393">cler</w><pc type="supplied">,</pc> </l>
+                     <l xml:id="XPam_l_58" n="58"><lb n="3"/>
+                        <w xml:id="XPam_w_000394">Delez</w> 
+                        <w xml:id="XPam_w_000395">lou</w> 
+                        <w xml:id="XPam_w_000396">preit</w> 
+                        <w xml:id="XPam_w_000397">li</w> 
+                        <w xml:id="XPam_w_000398">font</w> 
+                        <w xml:id="XPam_w_000399">tandre</w> 
+                        <w xml:id="XPam_w_000400">son</w> 
+                         <w xml:id="XPam_w_000401">treif</w><pc type="supplied">.</pc></l>
+                     <l xml:id="XPam_l_59" n="59"><lb n="4"/> 
+                        <w xml:id="XPam_w_000402">La</w> 
+                        <w xml:id="XPam_w_000403">dame</w> 
+                        <w xml:id="XPam_w_000404">i</w> 
+                        <w xml:id="XPam_w_000405">antre</w> 
+                        <w xml:id="XPam_w_000406">por</w> 
+                        <w xml:id="XPam_w_000407">son</w> 
+                        <w xml:id="XPam_w_000408">cors</w> 
+                        <w xml:id="XPam_w_000409">reposser</w></l> 
+                     <l xml:id="XPam_l_60" n="60"><lb n="5"/>
+                        <w xml:id="XPam_w_000410">Et</w> 
+                        <w xml:id="XPam_w_000411">sa</w> 
+                        <w xml:id="XPam_w_000412">maistresse</w> 
+                        <w xml:id="XPam_w_000413">Martine</w> 
+                        <w xml:id="XPam_w_000414">o</w> 
+                        <w xml:id="XPam_w_000415">le</w> 
+                        <w xml:id="XPam_w_000416">vis</w> 
+                         <w xml:id="XPam_w_000417">cler</w><pc type="supplied">.</pc></l> 
+                    <l xml:id="XPam_l_61" n="61"><lb n="6"/>
+                        <w xml:id="XPam_w_000418">Un</w> 
+                        <w xml:id="XPam_w_000419">lit</w> 
+                        <w xml:id="XPam_w_000420">li</w> 
+                        <w xml:id="XPam_w_000421">ont</w> 
+                        <w xml:id="XPam_w_000422">fait</w> 
+                        <w xml:id="XPam_w_000423">en</w> 
+                        <w xml:id="XPam_w_000424">meileu</w> 
+                        <w xml:id="XPam_w_000425">dou</w> 
+                        <w xml:id="XPam_w_000426">treif</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_62" n="62"><lb n="7"/>
+                        <w xml:id="XPam_w_000427">Bïatrix</w> 
+                        <w xml:id="XPam_w_000428">couchent</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000429">la</w> 
+                        <w xml:id="XPam_w_000430">belle</w> 
+                        <w xml:id="XPam_w_000431">o</w> 
+                        <w xml:id="XPam_w_000432">le</w> 
+                        <w xml:id="XPam_w_000433">vis</w> 
+                        <w xml:id="XPam_w_000434">cler</w><pc type="supplied">.</pc></l>
+                     <l xml:id="XPam_l_63" n="63"><lb n="8"/> 
+                        <w xml:id="XPam_w_000435">Tost</w> 
+                        <w xml:id="XPam_w_000436">s‘endormit</w> 
+                        <w xml:id="XPam_w_000437">car</w> 
+                        <w xml:id="XPam_w_000438">le</w> 
+                        <w xml:id="XPam_w_000439">cuer</w> 
+                        <w xml:id="XPam_w_000440">or</w> 
+                         <w xml:id="XPam_w_000441">irei</w></l> 
+                    <l xml:id="XPam_l_64" n="64"><lb n="9"/>
+                        <w xml:id="XPam_w_000442">Por</w> 
+                        <w xml:id="XPam_w_000443">son</w> 
+                        <w xml:id="XPam_w_000444">signor</w> 
+                        <w xml:id="XPam_w_000445">k‘elle</w> 
+                        <w xml:id="XPam_w_000446">puet</w> 
+                        <w xml:id="XPam_w_000447">tant</w> 
+                        <w xml:id="XPam_w_000448">amer</w><pc type="supplied">.</pc></l>
+                        </lg>
+                    
+                    <lg type="laisse" n="002">
+                    <l xml:id="XPam_l_65" n="65"><lb n="10"/> 
+                         <w xml:id="XPam_w_000449">Endormie</w> 
+                         <w xml:id="XPam_w_000450">est</w> 
+                         <w xml:id="XPam_w_000451">la</w> 
+                         <w xml:id="XPam_w_000452">belle</w> 
+                        <w xml:id="XPam_w_000453">Bïatrix</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_66" n="66"><lb n="11"/>
+                         <w xml:id="XPam_w_000454">Or</w> 
+                         <w xml:id="XPam_w_000455">vos</w> 
+                         <w xml:id="XPam_w_000456">dirons</w> 
+                         <w xml:id="XPam_w_000457">dou</w> 
+                         <w xml:id="XPam_w_000458">barnage</w> 
+                         <w xml:id="XPam_w_000459">de</w> 
+                         <w xml:id="XPam_w_000460">prix</w></l>
+                    <l xml:id="XPam_l_67" n="67"><lb n="12"/>
+                         <w xml:id="XPam_w_000461">Ki</w> 
+                         <w xml:id="XPam_w_000462">descendirent</w> 
+                         <w xml:id="XPam_w_000463">par</w> 
+                         <w xml:id="XPam_w_000464">mei</w> 
+                         <w xml:id="XPam_w_000465">lez</w> 
+                        <w xml:id="XPam_w_000466">floris</w><pc type="supplied">.</pc></l> 
+                    <l xml:id="XPam_l_68" n="68"><lb n="13"/> 
+                         <w xml:id="XPam_w_000467">Ce</w> 
+                         <w xml:id="XPam_w_000468">fut</w> 
+                         <w xml:id="XPam_w_000469">en</w> 
+                         <w xml:id="XPam_w_000470">mai</w> 
+                         <w xml:id="XPam_w_000471">c‘on</w> 
+                         <w xml:id="XPam_w_000472">dist</w> 
+                         <w xml:id="XPam_w_000473">aprés</w> 
+                        <w xml:id="XPam_w_000474">avril</w><pc type="supplied">,</pc> </l>
+                     <l xml:id="XPam_l_69" n="69"><lb n="14"/>
+                         <w xml:id="XPam_w_000475">Biaus</w> 
+                         <w xml:id="XPam_w_000476">est</w> 
+                         <w xml:id="XPam_w_000477">li</w> 
+                         <w xml:id="XPam_w_000478">tans</w> 
+                         <w xml:id="XPam_w_000479">et</w> 
+                         <w xml:id="XPam_w_000480">li</w> 
+                         <w xml:id="XPam_w_000481">boix</w> 
+                         <w xml:id="XPam_w_000482">sont</w> 
+                        <w xml:id="XPam_w_000483">foillis</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_70" n="70"><lb n="15"/> 
+                         <w xml:id="XPam_w_000484">Cil</w> 
+                         <w xml:id="XPam_w_000485">oixel</w> 
+                         <w xml:id="XPam_w_000486">chantent</w> 
+                         <w xml:id="XPam_w_000487">doucement</w> 
+                        <w xml:id="XPam_w_000488">aceri</w><pc type="supplied">.</pc></l>
+                        <l xml:id="XPam_l_71" n="71"><lb n="16"/> 
+                        <w xml:id="XPam_w_000489">De</w> 
+                        <w xml:id="XPam_w_000490">l‘autre</w> 
+                        <w xml:id="XPam_w_000491">part</w> 
+                        <w xml:id="XPam_w_000492">dou</w> 
+                        <w xml:id="XPam_w_000493">boix</w> 
+                        <w xml:id="XPam_w_000494">estoit</w> 
+                        <w xml:id="XPam_w_000495">Hervis</w></l>
+                    <l xml:id="XPam_l_72" n="72"><lb n="17"/>
+                         <w xml:id="XPam_w_000496">Ou</w> 
+                         <w xml:id="XPam_w_000497">il</w> 
+                         <w xml:id="XPam_w_000498">atant</w> 
+                         <w xml:id="XPam_w_000499">les</w> 
+                         <w xml:id="XPam_w_000500">messagiers</w> 
+                         <w xml:id="XPam_w_000501">de</w> 
+                        <w xml:id="XPam_w_000502">pris</w></l>
+                    <l xml:id="XPam_l_73" n="73"><lb n="18"/>
+                        <!--<gap/>--><!--...--><!-- JBC: éviter la redondance entre signes typographiques et encodage sémantique -->
+                        <gap min="1" max="3" unit="chars"/>
+                         <w xml:id="XPam_w_000503">qui</w> 
+                        <w xml:id="XPam_w_000504">menoient</w> 
+                        <w xml:id="XPam_w_000505">sa</w> 
+                        <w xml:id="XPam_w_000506">femme</w> 
+                        <w xml:id="XPam_w_000507">Bïatrix</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_74" n="74"><lb n="19"/>
+                         <w xml:id="XPam_w_000508">Au</w> 
+                         <w xml:id="XPam_w_000509">roi</w> 
+                         <w xml:id="XPam_w_000510">d‘Espaigne</w> 
+                         <w xml:id="XPam_w_000511">ki</w> 
+                         <w xml:id="XPam_w_000512">tant</w> 
+                         <w xml:id="XPam_w_000513">est</w> 
+                        <w xml:id="XPam_w_000514">posteïs</w></l>
+                    <l xml:id="XPam_l_75" n="75"><lb n="20"/>
+                         <w xml:id="XPam_w_000515">Presenter</w> 
+                         <w xml:id="XPam_w_000516">cuident</w> 
+                         <w xml:id="XPam_w_000517">la</w> 
+                         <w xml:id="XPam_w_000518">belle</w> 
+                         <w xml:id="XPam_w_000519">o</w> 
+                         <w xml:id="XPam_w_000520">le</w> 
+                         <w xml:id="XPam_w_000521">cler</w> 
+                        <w xml:id="XPam_w_000522">vis</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_76" n="76"><lb n="21"/>
+                         <w xml:id="XPam_w_000523">Mais</w> 
+                         <w xml:id="XPam_w_000524">non</w> 
+                         <w xml:id="XPam_w_000525">feront</w> 
+                         <w xml:id="XPam_w_000526">con</w> 
+                         <w xml:id="XPam_w_000527">vos</w> 
+                         <w xml:id="XPam_w_000528">porez</w> 
+                        <w xml:id="XPam_w_000529">oïr</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_77" n="77"><lb n="22"/>
+                        <w xml:id="XPam_w_000530">Ains</w> 
+                        <w xml:id="XPam_w_000531">sofferont</w> 
+                        <w xml:id="XPam_w_000532">un</w> 
+                        <w xml:id="XPam_w_000533">estor</w> 
+                           <w xml:id="XPam_w_000534">abaubi</w></l>
+                     <l xml:id="XPam_l_78" n="78"><lb n="23"/>
+                         <w xml:id="XPam_w_000535">Dont</w> 
+                         <w xml:id="XPam_w_000536">covanra</w> 
+                         <w xml:id="XPam_w_000537">mains</w> 
+                         <w xml:id="XPam_w_000538">chevaliers</w> 
+                         <w xml:id="XPam_w_000539">morir</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_79" n="79"><lb n="24"/>
+                         <w xml:id="XPam_w_000540">Cil</w> 
+                         <w xml:id="XPam_w_000541">auferrant</w> 
+                         <w xml:id="XPam_w_000542">comance</w> 
+                         <w xml:id="XPam_w_000543">a</w> 
+                         <w xml:id="XPam_w_000544">braidir</w><pc type="supplied">,</pc></l>
+                     <l xml:id="XPam_l_80" n="80"><lb n="25"/>
+                        <w xml:id="XPam_w_000545">L‘uns</w> 
+                        <w xml:id="XPam_w_000546">sant</w> 
+                        <w xml:id="XPam_w_000547">bien</w> 
+                        <w xml:id="XPam_w_000548">l‘autre</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000549">signors</w> 
+                        <w xml:id="XPam_w_000550">sachiés</w> 
+                        <w xml:id="XPam_w_000551">de</w> 
+                        <w xml:id="XPam_w_000552">fi</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_81" n="81"><lb n="26"/>
+                         <w xml:id="XPam_w_000553">Adont</w> 
+                         <w xml:id="XPam_w_000554">parla</w> 
+                         <w xml:id="XPam_w_000555">li</w> 
+                         <w xml:id="XPam_w_000556">gentis</w> 
+                         <w xml:id="XPam_w_000557">dus</w> 
+                        <w xml:id="XPam_w_000558">Hervis</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_82" n="82"><lb n="27"/>
+                         <w xml:id="XPam_w_000559">Il</w> 
+                         <w xml:id="XPam_w_000560">en</w> 
+                         <w xml:id="XPam_w_000561">apelle</w> 
+                         <w xml:id="XPam_w_000562">isnelement</w> 
+                         <w xml:id="XPam_w_000563">Thieri</w><pc type="supplied">:</pc></l>
+                     <l xml:id="XPam_l_83" n="83"><lb n="28"/>
+                         <pc type="supplied">« </pc><q><w xml:id="XPam_w_000564">Amins</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000565">biau</w> 
+                        <w xml:id="XPam_w_000566">freire</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000567">fïer</w> 
+                        <w xml:id="XPam_w_000568">me</w> 
+                        <w xml:id="XPam_w_000569">doi</w> 
+                        <w xml:id="XPam_w_000570">en</w> 
+                        <w xml:id="XPam_w_000571">ti</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_84" n="84"><lb n="29"/>
+                         <q><w xml:id="XPam_w_000572">Va</w> 
+                         <w xml:id="XPam_w_000573">tost</w><pc type="supplied">,</pc> 
+                         <w xml:id="XPam_w_000574">si</w> 
+                         <w xml:id="XPam_w_000575">monte</w> 
+                         <w xml:id="XPam_w_000576">sus</w> 
+                         <w xml:id="XPam_w_000577">ton</w> 
+                         <w xml:id="XPam_w_000578">cheval</w> 
+                         <w xml:id="XPam_w_000579">de</w> 
+                         <w xml:id="XPam_w_000580">prix</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_85" n="85"><lb n="30"/>
+                        <q><w xml:id="XPam_w_000581">Si</w> 
+                        <w xml:id="XPam_w_000582">me</w> 
+                        <w xml:id="XPam_w_000583">trespasse</w> 
+                        <w xml:id="XPam_w_000584">outre</w> 
+                        <w xml:id="XPam_w_000585">sou</w> 
+                        <w xml:id="XPam_w_000586">boix</w> 
+                        <w xml:id="XPam_w_000587">foilliz</w><pc type="supplied">,</pc></q></l> 
+                    <l xml:id="XPam_l_86" n="86"><lb n="31"/> 
+                        <q><w xml:id="XPam_w_000588">Revien</w> 
+                        <w xml:id="XPam_w_000589">errant</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000590">biaus</w> 
+                        <w xml:id="XPam_w_000591">amins</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000592">si</w> 
+                        <w xml:id="XPam_w_000593">me</w> 
+                        <w xml:id="XPam_w_000594">di</w><pc type="supplied">,</pc></q></l> 
+                    <l xml:id="XPam_l_87" n="87"><lb n="32"/> 
+                        <q><w xml:id="XPam_w_000595">Keis</w> 
+                        <w xml:id="XPam_w_000596">gens</w> 
+                        <w xml:id="XPam_w_000597">se</w> 
+                        <w xml:id="XPam_w_000598">sont</w> 
+                        <w xml:id="XPam_w_000599">delai</w> 
+                        <w xml:id="XPam_w_000600">cel</w> 
+                        <w xml:id="XPam_w_000601">boix</w> 
+                        <w xml:id="XPam_w_000602">foilli</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_88" n="88"><lb n="33"/>
+                        <w xml:id="XPam_w_000603">Car</w> 
+                        <w xml:id="XPam_w_000604">mains</w> 
+                        <w xml:id="XPam_w_000605">destrier</w>
+                        <gap/><!--...… …-->
+                         <w xml:id="XPam_w_000606">oïr</w> 
+                        <w xml:id="XPam_w_000607">braidir</w><pc type="supplied">.</pc></l>
+                     <l xml:id="XPam_l_89" n="89"><lb n="34"/>
+                         <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000608">Volentiers</w><pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000609">sire</w><pc type="supplied">»</pc></q>
+                        <pc type="supplied">,</pc> 
+                        <w xml:id="XPam_w_000610">ce</w> 
+                        <w xml:id="XPam_w_000611">li</w> 
+                        <w xml:id="XPam_w_000612">a</w> 
+                        <w xml:id="XPam_w_000613">dit</w> 
+                         <w xml:id="XPam_w_000614">Thieris</w><pc type="supplied">.</pc></l> 
+                    <l xml:id="XPam_l_90" n="90"><lb n="35"/> 
+                         <w xml:id="XPam_w_000615">Ou</w> 
+                         <w xml:id="XPam_w_000616">cheval</w> 
+                         <w xml:id="XPam_w_000617">monte</w><pc type="supplied">,</pc> 
+                         <w xml:id="XPam_w_000618">passe</w> 
+                         <w xml:id="XPam_w_000619">le</w> 
+                         <w xml:id="XPam_w_000620">bruel</w> 
+                        <w xml:id="XPam_w_000621">foilli</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_91" n="91"><lb n="36"/>
+                        <w xml:id="XPam_w_000622">Et</w> 
+                        <w xml:id="XPam_w_000623">vit</w> 
+                        <w xml:id="XPam_w_000624">le</w> 
+                        <w xml:id="XPam_w_000625">treif</w> 
+                        <w xml:id="XPam_w_000626">le</w> 
+                        <w xml:id="XPam_w_000627">belle</w> 
+                        <w xml:id="XPam_w_000628">Bïatrix</w><pc type="supplied">;</pc></l>
+                    <l xml:id="XPam_l_92" n="92"><lb n="37"/>
+                         <w xml:id="XPam_w_000629">Voit</w> 
+                         <w xml:id="XPam_w_000630">lou</w> 
+                         <w xml:id="XPam_w_000631">barnage</w> 
+                         <w xml:id="XPam_w_000632">et</w> 
+                         <w xml:id="XPam_w_000633">aler</w> 
+                         <w xml:id="XPam_w_000634">et</w> 
+                         <w xml:id="XPam_w_000635">venir</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_93" n="93"><lb n="38"/> 
+                         <w xml:id="XPam_w_000636">Deus</w> 
+                         <w xml:id="XPam_w_000637"><pc type="supplied">!</pc></w> 
+                         <w xml:id="XPam_w_000638">tans</w> 
+                         <w xml:id="XPam_w_000639">somiers</w> 
+                         <w xml:id="XPam_w_000640">ke</w> 
+                         <w xml:id="XPam_w_000641">d‘argent</w> 
+                         <w xml:id="XPam_w_000642">ke</w> 
+                         <w xml:id="XPam_w_000643">d‘or</w> 
+                        <w xml:id="XPam_w_000644">fin</w></l>
+                     <l xml:id="XPam_l_94" n="94"><lb n="39"/> 
+                         <w xml:id="XPam_w_000645">Ke</w> 
+                         <w xml:id="XPam_w_000646">presenter</w> 
+                         <w xml:id="XPam_w_000647">li</w> 
+                         <w xml:id="XPam_w_000648">riches</w> 
+                         <w xml:id="XPam_w_000649">rois</w> 
+                         <w xml:id="XPam_w_000650">de</w> 
+                         <w xml:id="XPam_w_000651">Tir</w></l>
+                    <l xml:id="XPam_l_95" n="95"><lb n="40"/>
+                         <w xml:id="XPam_w_000652">Veut</w> 
+                         <w xml:id="XPam_w_000653">li</w> 
+                         <w xml:id="XPam_w_000654">boins</w> 
+                         <w xml:id="XPam_w_000655">rois</w> 
+                         <w xml:id="XPam_w_000656">avec</w> 
+                        <w xml:id="XPam_w_000657">Bïatrix</w><pc type="supplied">.</pc></l> 
+                     <l xml:id="XPam_l_96" n="96"><lb n="41"/>
+                        <w xml:id="XPam_w_000658">Au</w> 
+                        <w xml:id="XPam_w_000659">roi</w> 
+                        <w xml:id="XPam_w_000660">d‘Espaigne</w> 
+                        <w xml:id="XPam_w_000661">ki</w> 
+                        <w xml:id="XPam_w_000662">tant</w> 
+                        <w xml:id="XPam_w_000663">est</w> 
+                         <w xml:id="XPam_w_000664">signoris</w><pc type="supplied">.</pc></l> 
+                     <l xml:id="XPam_l_97" n="97"><lb n="42"/>
+                        <w xml:id="XPam_w_000665">E</w> 
+                        <w xml:id="XPam_w_000666">vos</w> 
+                        <w xml:id="XPam_w_000667">ou</w> 
+                        <w xml:id="XPam_w_000668">tertre</w> 
+                        <w xml:id="XPam_w_000669">lou</w> 
+                        <w xml:id="XPam_w_000670">damoisel</w> 
+                        <w xml:id="XPam_w_000671">Thierit</w><pc type="supplied">,</pc></l> 
+                                    
+                         <pb n="542" facs="0040.pdf"/>
+                        <!--542 X. PAMFILOYA -->           
+                    <l xml:id="XPam_l_98" n="98"><lb n="1"/>
+                        <w xml:id="XPam_w_000672">Les</w>
+                        <w xml:id="XPam_w_000673">barons</w>
+                        <w xml:id="XPam_w_000674">ait</w>
+                        <w xml:id="XPam_w_000675">conçut</w>
+                        <w xml:id="XPam_w_000676">et</w>
+                        <w xml:id="XPam_w_000677">choisi</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_99" n="99"><lb n="2"/>
+                        <w xml:id="XPam_w_000678">Il</w>
+                        <w xml:id="XPam_w_000679">trestorna</w>
+                        <w xml:id="XPam_w_000680">et</w>
+                        <w xml:id="XPam_w_000681">vint</w>
+                        <w xml:id="XPam_w_000682">au</w>
+                        <w xml:id="XPam_w_000683">duc</w>
+                        <w xml:id="XPam_w_000684">Hervi</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_100" n="100"><lb n="3"/>
+                        <w xml:id="XPam_w_000685">A</w>
+                        <w xml:id="XPam_w_000686">haute</w>
+                        <w xml:id="XPam_w_000687">voix</w>
+                        <w xml:id="XPam_w_000688">a</w>
+                        <w xml:id="XPam_w_000689">escrier</w>
+                        <w xml:id="XPam_w_000690">ce</w>
+                        <w xml:id="XPam_w_000691">prist</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_101" n="101"><lb n="4"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000692">Hé</w><pc type="supplied">!</pc>
+                        <w xml:id="XPam_w_000693">dus</w>
+                        <w xml:id="XPam_w_000694">de</w>
+                        <w xml:id="XPam_w_000695">Mes</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000696">por</w>
+                        <w xml:id="XPam_w_000697">Deu</w>
+                        <w xml:id="XPam_w_000698">ki</w>
+                        <w xml:id="XPam_w_000699">ne</w>
+                        <w xml:id="XPam_w_000700">mentit</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_102" n="102"><lb n="5"/>
+                       <q><w xml:id="XPam_w_000701">Ve</w>
+                       <w xml:id="XPam_w_000702">ci</w>
+                       <w xml:id="XPam_w_000703">ta</w>
+                       <w xml:id="XPam_w_000704">feme</w><pc type="supplied">,</pc>
+                       <w xml:id="XPam_w_000705">la</w>
+                       <w xml:id="XPam_w_000706">belle</w>
+                        <w xml:id="XPam_w_000707">Bïatrix</w><pc type="supplied">;</pc></q></l>
+                    <l xml:id="XPam_l_103" n="103"><lb n="6"/>
+                        <q><w xml:id="XPam_w_000708">Illuc</w>
+                        <w xml:id="XPam_w_000709">logie</w>
+                        <w xml:id="XPam_w_000710">delai</w>
+                        <w xml:id="XPam_w_000711">cel</w>
+                        <w xml:id="XPam_w_000712">boix</w>
+                        <w xml:id="XPam_w_000713">foilli</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_104" n="104"><lb n="7"/>
+                        <q><w xml:id="XPam_w_000714">Bers</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000715">fai</w>
+                        <w xml:id="XPam_w_000716">armer</w>
+                        <w xml:id="XPam_w_000717">ton</w>
+                        <w xml:id="XPam_w_000718">barnage</w>
+                        <w xml:id="XPam_w_000719">de</w>
+                        <w xml:id="XPam_w_000720">pris</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_105" n="105"><lb n="8"/>
+                        <q><w xml:id="XPam_w_000721">Et</w>
+                        <w xml:id="XPam_w_000722">si</w>
+                        <w xml:id="XPam_w_000723">rekier</w>
+                        <w xml:id="XPam_w_000724">tes</w>
+                        <w xml:id="XPam_w_000725">mortelz</w>
+                        <w xml:id="XPam_w_000726">anemins</w></q></l>
+                    <l xml:id="XPam_l_106" n="106"><lb n="9"/>
+                        <q><w xml:id="XPam_w_000727">Tant</w>
+                        <w xml:id="XPam_w_000728">ke</w>
+                        <w xml:id="XPam_w_000729">raeimes</w>
+                        <w xml:id="XPam_w_000730">madame</w>
+                        <w xml:id="XPam_w_000731">Bïatrix</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_107" n="107"><lb n="10"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_000732">Buer</w>
+                        <w xml:id="XPam_w_000733">lou</w>
+                        <w xml:id="XPam_w_000734">desistes</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000735">signors</w></q>
+                        <w xml:id="XPam_w_000736"><pc type="supplied">»</pc></w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000737">ce</w>
+                        <w xml:id="XPam_w_000738">dist</w>
+                        <w xml:id="XPam_w_000739">Hervis</w><pc type="supplied">.</pc></l>
+                       </lg>
+                    <lg type="laisse" n="003">
+                    <l xml:id="XPam_l_108" n="108"><lb n="11"/>
+                        <w xml:id="XPam_w_000740">Li</w>
+                        <w xml:id="XPam_w_000741">barons</w>
+                        <w xml:id="XPam_w_000742">out</w>
+                        <w xml:id="XPam_w_000743">la</w>
+                        <w xml:id="XPam_w_000744">parolle</w>
+                        <w xml:id="XPam_w_000745">acoutei</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_109" n="109"><lb n="12"/>
+                        <w xml:id="XPam_w_000746">A</w>
+                        <w xml:id="XPam_w_000747">lor</w>
+                        <w xml:id="XPam_w_000748">vois</w>
+                        <w xml:id="XPam_w_000749">cleire</w>
+                        <w xml:id="XPam_w_000750">comance</w>
+                        <w xml:id="XPam_w_000751">à</w>
+                        <w xml:id="XPam_w_000752">crïer</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_110" n="110"><lb n="13"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000753">Hé</w><pc type="supplied">!</pc>
+                        <w xml:id="XPam_w_000754">dus</w>
+                        <w xml:id="XPam_w_000755">de</w>
+                        <w xml:id="XPam_w_000756">Mes</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000757">tu</w>
+                        <w xml:id="XPam_w_000758">puez</w>
+                        <w xml:id="XPam_w_000759">trop</w>
+                        <w xml:id="XPam_w_000760">arester</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_111" n="111"><lb n="14"/>
+                        <q><w xml:id="XPam_w_000761">Chevache</w>
+                        <w xml:id="XPam_w_000762">fort</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000763">passons</w>
+                        <w xml:id="XPam_w_000764">le</w>
+                        <w xml:id="XPam_w_000765">bruel</w>
+                        <w xml:id="XPam_w_000766">ramei</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_112" n="112"><lb n="15"/>
+                        <q><w xml:id="XPam_w_000767">Si</w>
+                        <w xml:id="XPam_w_000768">rekerons</w>
+                        <w xml:id="XPam_w_000769">nos</w>
+                        <w xml:id="XPam_w_000770">mortelz</w>
+                        <w xml:id="XPam_w_000771">anemins</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_113" n="113"><lb n="16"/>
+                        <q><w xml:id="XPam_w_000772">Ne</w>
+                        <w xml:id="XPam_w_000773">te</w>
+                        <w xml:id="XPam_w_000774">faudrons</w>
+                        <w xml:id="XPam_w_000775">tresc‘au</w>
+                        <w xml:id="XPam_w_000776">manbres</w>
+                        <w xml:id="XPam_w_000777">couper</w><pc type="supplied">.</pc><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_114" n="114"><lb n="17"/>
+                        <w xml:id="XPam_w_000778">Et</w>
+                        <w xml:id="XPam_w_000779">dist</w>
+                        <w xml:id="XPam_w_000780">Hervis</w>
+                        <w xml:id="XPam_w_000781"/><pc type="supplied">.</pc><!-- JBC: discours direct? Je l'ajoute, 
+                        ainsi qu'aux vers qui suivent.-->
+                        <!--<w xml:id="XPam_w_000782">«</w>--><!-- JBC: pc ? -->
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_000783">Deu</w>
+                        <w xml:id="XPam_w_000784">vos</w>
+                        <w xml:id="XPam_w_000785">en</w>
+                        <w xml:id="XPam_w_000786">sache</w>
+                        <w xml:id="XPam_w_000787">grei</w></q><pc type="supplied">!</pc></l>
+                    <l xml:id="XPam_l_115" n="115"><lb n="18"/>
+                        <q><w xml:id="XPam_w_000788">Or</w>
+                        <w xml:id="XPam_w_000789">vairai</w>
+                        <w xml:id="XPam_w_000790">ge</w>
+                        <w xml:id="XPam_w_000791">ki</w>
+                        <w xml:id="XPam_w_000792">de</w>
+                        <w xml:id="XPam_w_000793">cuer</w>
+                        <w xml:id="XPam_w_000794">m‘ait</w>
+                        <w xml:id="XPam_w_000795">amei</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_116" n="116"><lb n="19"/>
+                        <q><w xml:id="XPam_w_000796">Per</w>
+                        <w xml:id="XPam_w_000797">lou</w>
+                        <w xml:id="XPam_w_000798">cepucre</w>
+                        <w xml:id="XPam_w_000799">c‘on</w>
+                        <w xml:id="XPam_w_000800">rekiert</w>
+                        <w xml:id="XPam_w_000801">outre</w>
+                        <w xml:id="XPam_w_000802">mer</w></q></l>
+                    <l xml:id="XPam_l_117" n="117"><lb n="20"/>
+                        <q><w xml:id="XPam_w_000803">Se</w>
+                        <w xml:id="XPam_w_000804">ravoir</w>
+                        <w xml:id="XPam_w_000805">puis</w>
+                        <w xml:id="XPam_w_000806">Bïatrix</w>
+                        <w xml:id="XPam_w_000807">a</w>
+                        <w xml:id="XPam_w_000808">vis</w>
+                        <w xml:id="XPam_w_000809">cler</w></q></l>
+                    <l xml:id="XPam_l_118" n="118"><lb n="21"/>
+                        <q><w xml:id="XPam_w_000810">Li</w>
+                        <w xml:id="XPam_w_000811">gueredons</w>
+                        <w xml:id="XPam_w_000812">vos</w>
+                        <w xml:id="XPam_w_000813">en</w>
+                        <w xml:id="XPam_w_000814">iert</w>
+                        <w xml:id="XPam_w_000815">bons</w>
+                        <w xml:id="XPam_w_000816">donei</w><pc type="supplied">.</pc><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_119" n="119"><lb n="22"/>
+                        <w xml:id="XPam_w_000817">Adont</w>
+                        <w xml:id="XPam_w_000818">ce</w>
+                        <w xml:id="XPam_w_000819">vont</w>
+                        <w xml:id="XPam_w_000820">fervestir</w>
+                        <w xml:id="XPam_w_000821">et</w>
+                        <w xml:id="XPam_w_000822">armer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_120" n="120"><lb n="23"/>
+                        <w xml:id="XPam_w_000823">Vestent</w>
+                        <w xml:id="XPam_w_000824">haubers</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000825">s‘ont</w>
+                        <w xml:id="XPam_w_000826">les</w>
+                        <w xml:id="XPam_w_000827">helmes</w>
+                        <w xml:id="XPam_w_000828">fermei</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_121" n="121"><lb n="24"/>
+                        <w xml:id="XPam_w_000829">Caingnent</w>
+                        <w xml:id="XPam_w_000830">espeées</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000831">au</w>
+                        <w xml:id="XPam_w_000832">chevas</w>
+                        <w xml:id="XPam_w_000833">sont</w>
+                        <w xml:id="XPam_w_000834">montez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_122" n="122"><lb n="25"/>
+                        <w xml:id="XPam_w_000835">A</w>
+                        <w xml:id="XPam_w_000836">lor</w>
+                        <w xml:id="XPam_w_000837">colz</w>
+                        <w xml:id="XPam_w_000838">pendent</w>
+                        <w xml:id="XPam_w_000839">les</w>
+                        <w xml:id="XPam_w_000840">fors</w>
+                        <w xml:id="XPam_w_000841">escus</w>
+                        <w xml:id="XPam_w_000842">bendez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_123" n="123"><lb n="26"/>
+                        <w xml:id="XPam_w_000843">Prenent</w>
+                        <w xml:id="XPam_w_000844">lor</w>
+                        <w xml:id="XPam_w_000845">lances</w>
+                        <w xml:id="XPam_w_000846">au</w>
+                        <w xml:id="XPam_w_000847">confenon</w>
+                        <w xml:id="XPam_w_000848">fremei</w><pc type="supplied">;</pc></l>
+                    <l xml:id="XPam_l_124" n="124"><lb n="27"/>
+                        <w xml:id="XPam_w_000849">Isnelement</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000850">les</w>
+                        <w xml:id="XPam_w_000851">frains</w>
+                        <w xml:id="XPam_w_000852">abandonez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_125" n="125"><lb n="28"/>
+                        <w xml:id="XPam_w_000853">Ont</w>
+                        <w xml:id="XPam_w_000854">trespassez</w>
+                        <w xml:id="XPam_w_000855">outre</w>
+                        <w xml:id="XPam_w_000856">le</w>
+                        <w xml:id="XPam_w_000857">bruel</w>
+                        <w xml:id="XPam_w_000858">ramei</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_126" n="126"><lb n="29"/>
+                        <w xml:id="XPam_w_000859">De</w>
+                        <w xml:id="XPam_w_000860">l‘autre</w>
+                        <w xml:id="XPam_w_000861">part</w>
+                        <w xml:id="XPam_w_000862">Hervis</w>
+                        <w xml:id="XPam_w_000863">choisit</w>
+                        <w xml:id="XPam_w_000864">le</w>
+                        <w xml:id="XPam_w_000865">treif</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_127" n="127"><lb n="30"/>
+                        <w xml:id="XPam_w_000866">Voit</w>
+                        <w xml:id="XPam_w_000867">le</w>
+                        <w xml:id="XPam_w_000868">barnage</w>
+                        <w xml:id="XPam_w_000869">et</w>
+                        <w xml:id="XPam_w_000870">venir</w>
+                        <w xml:id="XPam_w_000871">et</w>
+                        <w xml:id="XPam_w_000872">aler</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_128" n="128"><lb n="31"/>
+                        <w xml:id="XPam_w_000873">Et</w>
+                        <w xml:id="XPam_w_000874">cil</w>
+                        <w xml:id="XPam_w_000875">de</w>
+                        <w xml:id="XPam_w_000876">l‘ost</w>
+                        <w xml:id="XPam_w_000877">les</w>
+                        <w xml:id="XPam_w_000878">ont</w>
+                        <w xml:id="XPam_w_000879">bien</w>
+                        <w xml:id="XPam_w_000880">avisei</w><pc type="supplied">;</pc></l>
+                    <l xml:id="XPam_l_129" n="129"><lb n="32"/>
+                        <w xml:id="XPam_w_000881">Quant</w>
+                        <w xml:id="XPam_w_000882">aparsurent</w>
+                        <w xml:id="XPam_w_000883">Hervi</w>
+                        <w xml:id="XPam_w_000884">et</w>
+                        <w xml:id="XPam_w_000885">son</w>
+                        <w xml:id="XPam_w_000886">barné</w></l>
+                    <l xml:id="XPam_l_130" n="130"><lb n="33"/>
+                        <w xml:id="XPam_w_000887">As</w>
+                        <w xml:id="XPam_w_000888">armes</w>
+                        <w xml:id="XPam_w_000889">corrent</w>
+                        <w xml:id="XPam_w_000890">sans</w>
+                        <w xml:id="XPam_w_000891">point</w>
+                        <w xml:id="XPam_w_000892">de</w>
+                        <w xml:id="XPam_w_000893">l‘arester</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_131" n="131"><lb n="34"/>
+                        <w xml:id="XPam_w_000894">Vestent</w>
+                        <w xml:id="XPam_w_000895">haubers</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000896">s‘ont</w>
+                        <w xml:id="XPam_w_000897">lor</w>
+                        <w xml:id="XPam_w_000898">helmes</w>
+                        <w xml:id="XPam_w_000899">fermez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_132" n="132"><lb n="35"/>
+                        <w xml:id="XPam_w_000900">As</w>
+                        <w xml:id="XPam_w_000901">chevas</w>
+                        <w xml:id="XPam_w_000902">montent</w>
+                        <w xml:id="XPam_w_000903">corrans</w>
+                        <w xml:id="XPam_w_000904">et</w>
+                        <w xml:id="XPam_w_000905">abrivez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_133" n="133"><lb n="36"/>
+                        <w xml:id="XPam_w_000906">Hanste</w>
+                        <w xml:id="XPam_w_000907">brandie</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000908">les</w>
+                        <w xml:id="XPam_w_000909">escus</w>
+                        <w xml:id="XPam_w_000910">acolez</w></l>
+                    <l xml:id="XPam_l_134" n="134"><lb n="37"/>
+                        <w xml:id="XPam_w_000911">Se</w>
+                        <w xml:id="XPam_w_000912">vont</w>
+                        <w xml:id="XPam_w_000913">ferir</w>
+                        <w xml:id="XPam_w_000914">sans</w>
+                        <w xml:id="XPam_w_000915">point</w>
+                        <w xml:id="XPam_w_000916">de</w>
+                        <w xml:id="XPam_w_000917">refuser</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_135" n="135"><lb n="38"/>
+                        <w xml:id="XPam_w_000918">Granz</w>
+                        <w xml:id="XPam_w_000919">cols</w>
+                        <w xml:id="XPam_w_000920">ce</w>
+                        <w xml:id="XPam_w_000921">donent</w>
+                        <w xml:id="XPam_w_000922">en</w>
+                        <w xml:id="XPam_w_000923">fors</w>
+                        <w xml:id="XPam_w_000924">escus</w>
+                        <w xml:id="XPam_w_000925">bandez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_136" n="136"><lb n="39"/>
+                        <w xml:id="XPam_w_000926">Desoz</w>
+                        <w xml:id="XPam_w_000927">les</w>
+                        <w xml:id="XPam_w_000928">boucles</w>
+                        <w xml:id="XPam_w_000929">les</w>
+                        <w xml:id="XPam_w_000930">ont</w>
+                        <w xml:id="XPam_w_000931">frains</w>
+                        <w xml:id="XPam_w_000932">et</w>
+                        <w xml:id="XPam_w_000933">troez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_137" n="137"><lb n="40"/>
+                        <w xml:id="XPam_w_000934">A</w>
+                        <w xml:id="XPam_w_000935">l‘asambler</w>
+                        <w xml:id="XPam_w_000936">fut</w>
+                        <w xml:id="XPam_w_000937">li</w>
+                        <w xml:id="XPam_w_000938">chaples</w>
+                        <w xml:id="XPam_w_000939">mortelz</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_138" n="138"><lb n="41"/>
+                        <w xml:id="XPam_w_000940">Tant</w>
+                        <w xml:id="XPam_w_000941">hanste</w>
+                        <w xml:id="XPam_w_000942">fendre</w>
+                        <w xml:id="XPam_w_000943">et</w>
+                        <w xml:id="XPam_w_000944">tans</w>
+                        <w xml:id="XPam_w_000945"><choice><sic>c</sic><corr resp="#XP">e</corr></choice>scus</w>
+                        <supplied cert="unknown" resp="#XPam">[<w xml:id="XPam_w_000946">sic</w>
+                        <w xml:id="XPam_w_000947">pro</w>
+                        <w xml:id="XPam_w_000948">escus</w>
+                        <pc type="supplied">?</pc>]</supplied>
+                        <w xml:id="XPam_w_000949">troer</w></l>
+                    <l xml:id="XPam_l_139" n="139"><lb n="42"/>
+                        <w xml:id="XPam_w_000950">Tans</w>
+                        <w xml:id="XPam_w_000951">piez</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_000952">tant</w>
+                        <w xml:id="XPam_w_000953">poing</w>
+                        <w xml:id="XPam_w_000954">et</w>
+                        <w xml:id="XPam_w_000955">tant</w>
+                        <w xml:id="XPam_w_000956">teste</w>
+                        <w xml:id="XPam_w_000957">couper</w><pc type="supplied">.</pc></l>
+                        
+                                  <pb n="543" facs="0041.pdf"/>
+                                <!-- FRAGMENTS DF CHANSONS DE GESTE-->     
+                    <l xml:id="XPam_l_140" n="140"><lb n="1"/>
+                        <w xml:id="XPam_w_000958">L‘un</w>
+                        <w xml:id="XPam_w_000959">mort</w>
+                        <w xml:id="XPam_w_000960">sor</w>
+                        <w xml:id="XPam_w_000961">l‘autre</w>
+                        <w xml:id="XPam_w_000962">trabuchier</w>
+                        <w xml:id="XPam_w_000963">et</w>
+                        <w xml:id="XPam_w_000964">verser</w></l>
+                    <l xml:id="XPam_l_141" n="141"><lb n="2"/>
+                        <gap quantity="1" unit="lines"/><!--..................................--></l>
+                    <l xml:id="XPam_l_142" n="142"><lb n="3"/>
+                        <pc type="supplied">«</pc>
+                        <q><gap quantity="1" unit="lines"/><!--.................................--></q></l>
+                    <l xml:id="XPam_l_143" n="143"><lb n="4"/><!-- JBC: encoder discours direct -->
+                        <q><w xml:id="XPam_w_000965">Tot</w>
+                        <w xml:id="XPam_w_000966">droit</w>
+                        <w xml:id="XPam_w_000967">a</w>
+                        <w xml:id="XPam_w_000968">Tir</w>
+                        <w xml:id="XPam_w_000969">la</w>
+                        <w xml:id="XPam_w_000970">cité</w>
+                        <w xml:id="XPam_w_000971">m‘an</w>
+                        <w xml:id="XPam_w_000972">irez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_144" n="144"><lb n="5"/>
+                        <q><w xml:id="XPam_w_000973">Au</w>
+                        <w xml:id="XPam_w_000974">roi</w>
+                        <w xml:id="XPam_w_000975">Eustaice</w>
+                        <w xml:id="XPam_w_000976">de</w>
+                        <w xml:id="XPam_w_000977">part</w>
+                        <w xml:id="XPam_w_000978">moi</w>
+                        <w xml:id="XPam_w_000979">le</w>
+                        <w xml:id="XPam_w_000980">direz</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_145" n="145"><lb n="6"/>
+                        <q><w xml:id="XPam_w_000981">Faice</w>
+                        <w xml:id="XPam_w_000982">ces</w>
+                        <w xml:id="XPam_w_000983">os</w>
+                        <w xml:id="XPam_w_000984">venir</w>
+                        <w xml:id="XPam_w_000985">et</w>
+                        <w xml:id="XPam_w_000986">ajoster</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_146" n="146"><lb n="7"/>
+                       <q><w xml:id="XPam_w_000987">Il</w>
+                       <w xml:id="XPam_w_000988">et</w>
+                       <w xml:id="XPam_w_000989">ces</w>
+                       <w xml:id="XPam_w_000990">filz</w>
+                       <w xml:id="XPam_w_000991">rois</w>
+                       <w xml:id="XPam_w_000992">Floires</w>
+                       <w xml:id="XPam_w_000993">li</w>
+                        <w xml:id="XPam_w_000994">manbrez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_147" n="147"><lb n="8"/>
+                        <q><w xml:id="XPam_w_000995">D‘eu</w>
+                        <w xml:id="XPam_w_000996">en</w>
+                        <w xml:id="XPam_w_000997">huit</w>
+                        <w xml:id="XPam_w_000998">mois</w>
+                        <w xml:id="XPam_w_000999">aurez</w>
+                        <w xml:id="XPam_w_001000">la</w>
+                        <w xml:id="XPam_w_001001">fort</w>
+                        <w xml:id="XPam_w_001002">citez</w></q></l>
+                    <l xml:id="XPam_l_148" n="148"><lb n="9"/>
+                        <q><w xml:id="XPam_w_001003">Soit</w>
+                        <w xml:id="XPam_w_001004">lai</w>
+                        <w xml:id="XPam_w_001005">li</w>
+                        <w xml:id="XPam_w_001006">rois</w>
+                        <w xml:id="XPam_w_001007">et</w>
+                        <w xml:id="XPam_w_001008">il</w>
+                        <w xml:id="XPam_w_001009">et</w>
+                        <w xml:id="XPam_w_001010">ces</w>
+                        <w xml:id="XPam_w_001011">barnez</w></q><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_149" n="149"><lb n="10"/>
+                        <q><w xml:id="XPam_w_001012">Et</w>
+                        <w xml:id="XPam_w_001013">c‘il</w>
+                        <w xml:id="XPam_w_001014">n‘i</w>
+                        <w xml:id="XPam_w_001015">vienent</w>
+                        <w xml:id="XPam_w_001016">bien</w>
+                        <w xml:id="XPam_w_001017">soit</w>
+                        <w xml:id="XPam_w_001018">asseürez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_150" n="150"><lb n="11"/>
+                        <q><w xml:id="XPam_w_001019">Je</w>
+                        <w xml:id="XPam_w_001020">lou</w>
+                        <w xml:id="XPam_w_001021">defi</w>
+                        <w xml:id="XPam_w_001022">et</w>
+                        <w xml:id="XPam_w_001023">ju</w>
+                        <w xml:id="XPam_w_001024">et</w>
+                        <w xml:id="XPam_w_001025">mes</w>
+                        <w xml:id="XPam_w_001026">barnez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_151" n="151"><lb n="12"/>
+                        <q><w xml:id="XPam_w_001027">Ne</w>
+                        <w xml:id="XPam_w_001028">li</w>
+                        <w xml:id="XPam_w_001029">lairai</w>
+                        <w xml:id="XPam_w_001030">ne</w>
+                        <w xml:id="XPam_w_001031">chastial</w>
+                        <w xml:id="XPam_w_001032">ne</w>
+                        <w xml:id="XPam_w_001033">cité</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_152" n="152"><lb n="13"/>
+                        <q><w xml:id="XPam_w_001034">Ne</w>
+                        <w xml:id="XPam_w_001035">borc</w>
+                        <w xml:id="XPam_w_001036">ne</w>
+                        <w xml:id="XPam_w_001037">ville</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001038">recet</w>
+                        <w xml:id="XPam_w_001039">ne</w>
+                        <w xml:id="XPam_w_001040">fermetez</w><pc type="supplied">;</pc></q></l>
+                    <l xml:id="XPam_l_153" n="153"><lb n="14"/>
+                        <q><w xml:id="XPam_w_001041">Si</w>
+                        <w xml:id="XPam_w_001042">je</w>
+                        <w xml:id="XPam_w_001043">le</w>
+                        <w xml:id="XPam_w_001044">puis</w>
+                        <w xml:id="XPam_w_001045">ne</w>
+                        <w xml:id="XPam_w_001046">tenir</w>
+                        <w xml:id="XPam_w_001047">ne</w>
+                        <w xml:id="XPam_w_001048">covrer</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_154" n="154"><lb n="15"/>
+                        <q><w xml:id="XPam_w_001049">Je</w>
+                        <w xml:id="XPam_w_001050">lou</w>
+                        <w xml:id="XPam_w_001051">pandrai</w>
+                        <w xml:id="XPam_w_001052">com</w>
+                        <w xml:id="XPam_w_001053">un</w>
+                        <w xml:id="XPam_w_001054">larron</w>
+                        <w xml:id="XPam_w_001055">provez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_155" n="155"><lb n="16"/>
+                        <q><w xml:id="XPam_w_001056">Se</w>
+                        <w xml:id="XPam_w_001057">il</w>
+                        <w xml:id="XPam_w_001058">ne</w>
+                        <w xml:id="XPam_w_001059">vient</w>
+                        <w xml:id="XPam_w_001060">à</w>
+                        <w xml:id="XPam_w_001061">Mes</w>
+                        <w xml:id="XPam_w_001062">la</w>
+                        <w xml:id="XPam_w_001063">fort</w>
+                        <w xml:id="XPam_w_001064">cité</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_156" n="156"><lb n="17"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001065">Sire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001066">dist</w>
+                        <w xml:id="XPam_w_001067">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001068">bien</w>
+                        <w xml:id="XPam_w_001069">le</w>
+                        <w xml:id="XPam_w_001070">saurai</w>
+                        <w xml:id="XPam_w_001071">conter.</w><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_157" n="157"><lb n="18"/>
+                        <w xml:id="XPam_w_001072">Ou</w>
+                        <w xml:id="XPam_w_001073">cheval</w>
+                        <w xml:id="XPam_w_001074">monte</w>
+                        <w xml:id="XPam_w_001075">corrant</w>
+                        <w xml:id="XPam_w_001076">et</w>
+                        <w xml:id="XPam_w_001077">abrivei</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_158" n="158"><lb n="19"/>
+                        <w xml:id="XPam_w_001078">Passe</w>
+                        <w xml:id="XPam_w_001079">les</w>
+                        <w xml:id="XPam_w_001080">terres</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001081">les</w>
+                        <w xml:id="XPam_w_001082">puis</w>
+                        <w xml:id="XPam_w_001083">et</w>
+                        <w xml:id="XPam_w_001084">les</w>
+                        <w xml:id="XPam_w_001085">agueiz</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_159" n="159"><lb n="20"/>
+                        <w xml:id="XPam_w_001086">De</w>
+                        <w xml:id="XPam_w_001087">ces</w>
+                        <w xml:id="XPam_w_001088">jornées</w>
+                        <w xml:id="XPam_w_001089">ne</w>
+                        <w xml:id="XPam_w_001090">sai</w>
+                        <w xml:id="XPam_w_001091">comte</w>
+                        <w xml:id="XPam_w_001092">nombrer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_160" n="160"><lb n="21"/>
+                        <w xml:id="XPam_w_001093">En</w>
+                        <w xml:id="XPam_w_001094">la</w>
+                        <w xml:id="XPam_w_001095">ville</w>
+                        <w xml:id="XPam_w_001096">antrent</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001097">s‘est</w>
+                        <w xml:id="XPam_w_001098">ou</w>
+                        <w xml:id="XPam_w_001099">palais</w>
+                        <w xml:id="XPam_w_001100">montez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_161" n="161"><lb n="22"/>
+                        <w xml:id="XPam_w_001101">A</w>
+                        <w xml:id="XPam_w_001102">haute</w>
+                        <w xml:id="XPam_w_001103">vois</w>
+                        <w xml:id="XPam_w_001104">comança</w>
+                        <w xml:id="XPam_w_001105">à</w>
+                        <w xml:id="XPam_w_001106">crier</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_162" n="162"><lb n="23"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001107">He</w>
+                        <w xml:id="XPam_w_001108">rois</w>
+                            <w xml:id="XPam_w_001109">Eustaice</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001110">dist</w>
+                        <w xml:id="XPam_w_001111">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001112">or</w>
+                        <w xml:id="XPam_w_001113">m‘entendez</w></q></l>
+                    <l xml:id="XPam_l_163" n="163"><lb n="24"/>
+                        <q><w xml:id="XPam_w_001114">Li</w>
+                        <w xml:id="XPam_w_001115">rois</w>
+                        <w xml:id="XPam_w_001116">d‘Espaigne</w>
+                        <w xml:id="XPam_w_001117">t‘ait</w>
+                        <w xml:id="XPam_w_001118">par</w>
+                        <w xml:id="XPam_w_001119">ces</w>
+                        <w xml:id="XPam_w_001120">briés</w>
+                        <w xml:id="XPam_w_001121">mandez</w></q></l>
+                    <l xml:id="XPam_l_164" n="164"><lb n="25"/>
+                        <q><w xml:id="XPam_w_001122">Ke</w>
+                        <w xml:id="XPam_w_001123">faices</w>
+                        <w xml:id="XPam_w_001124">os</w>
+                        <w xml:id="XPam_w_001125">et</w>
+                        <w xml:id="XPam_w_001126">cemonre</w>
+                        <w xml:id="XPam_w_001127">et</w>
+                        <w xml:id="XPam_w_001128">mander</w></q></l>
+                    <l xml:id="XPam_l_165" n="165"><lb n="26"/>
+                        <q><w xml:id="XPam_w_001129">Et</w>
+                        <w xml:id="XPam_w_001130">ton</w>
+                        <w xml:id="XPam_w_001131">barnage</w>
+                        <w xml:id="XPam_w_001132">venir</w>
+                        <w xml:id="XPam_w_001133">et</w>
+                        <w xml:id="XPam_w_001134">ajoster</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_166" n="166"><lb n="27"/>
+                        <q><w xml:id="XPam_w_001135">Toi</w>
+                        <w xml:id="XPam_w_001136">et</w>
+                        <w xml:id="XPam_w_001137">tes</w>
+                        <w xml:id="XPam_w_001138">filz</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001139">roi</w>
+                        <w xml:id="XPam_w_001140">Floires</w>
+                        <w xml:id="XPam_w_001141">li</w>
+                        <w xml:id="XPam_w_001142">menbrez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_167" n="167"><lb n="28"/>
+                        <q><w xml:id="XPam_w_001143">Et</w>
+                        <w xml:id="XPam_w_001144">ce</w>
+                        <w xml:id="XPam_w_001145">n‘i</w>
+                        <w xml:id="XPam_w_001146">viens</w>
+                        <w xml:id="XPam_w_001147">tu</w>
+                        <w xml:id="XPam_w_001148">soies</w>
+                        <w xml:id="XPam_w_001149">defez</w><pc type="supplied">!</pc></q></l>
+                    <l xml:id="XPam_l_168" n="168"><lb n="29"/>
+                        <q><w xml:id="XPam_w_001150">Sor</w>
+                        <w xml:id="XPam_w_001151">toi</w>
+                        <w xml:id="XPam_w_001152">vanra</w>
+                        <w xml:id="XPam_w_001153">et</w>
+                        <w xml:id="XPam_w_001154">il</w>
+                        <w xml:id="XPam_w_001155">et</w>
+                        <w xml:id="XPam_w_001156">ces</w>
+                        <w xml:id="XPam_w_001157">barnez</w></q></l>
+                    <l xml:id="XPam_l_169" n="169"><lb n="30"/>
+                        <q><w xml:id="XPam_w_001158">Ne</w>
+                        <w xml:id="XPam_w_001159">te</w>
+                        <w xml:id="XPam_w_001160">lairait</w>
+                        <w xml:id="XPam_w_001161">ne</w>
+                        <w xml:id="XPam_w_001162">chastial</w>
+                        <w xml:id="XPam_w_001163">ne</w>
+                        <w xml:id="XPam_w_001164">cité</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_170" n="170"><lb n="31"/>
+                        <q><w xml:id="XPam_w_001165">Se</w>
+                        <w xml:id="XPam_w_001166">il</w>
+                        <w xml:id="XPam_w_001167">te</w>
+                        <w xml:id="XPam_w_001168">puet</w>
+                        <w xml:id="XPam_w_001169">ne</w>
+                        <w xml:id="XPam_w_001170">tenir</w>
+                        <w xml:id="XPam_w_001171">ne</w>
+                        <w xml:id="XPam_w_001172">courer</w></q></l>
+                    <l xml:id="XPam_l_171" n="171"><lb n="32"/>
+                        <q><w xml:id="XPam_w_001173">Il</w>
+                        <w xml:id="XPam_w_001174">te</w>
+                        <w xml:id="XPam_w_001175">panra</w>
+                        <w xml:id="XPam_w_001176">com</w>
+                        <w xml:id="XPam_w_001177">un</w>
+                        <w xml:id="XPam_w_001178">larron</w>
+                        <w xml:id="XPam_w_001179">provei</w><pc type="supplied">.</pc></q><pc type="supplied">»</pc></l>
+                    <l xml:id="XPam_l_172" n="172"><lb n="33"/>
+                        <w xml:id="XPam_w_001180">Li</w>
+                        <w xml:id="XPam_w_001181">rois</w>
+                        <w xml:id="XPam_w_001182">l‘entent</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001183">color</w>
+                        <w xml:id="XPam_w_001184">prist</w>
+                        <w xml:id="XPam_w_001185">à</w>
+                        <w xml:id="XPam_w_001186">muer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_173" n="173"><lb n="34"/>
+                        <w xml:id="XPam_w_001187">Ou</w>
+                        <w xml:id="XPam_w_001188">voit</w>
+                        <w xml:id="XPam_w_001189">son</w>
+                        <w xml:id="XPam_w_001190">fil</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001191">si</w>
+                        <w xml:id="XPam_w_001192">l‘en</w>
+                        <w xml:id="XPam_w_001193">ait</w>
+                        <w xml:id="XPam_w_001194">apelei</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_174" n="174"><lb n="35"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001195">He</w>
+                        <w xml:id="XPam_w_001196">biaus</w>
+                        <w xml:id="XPam_w_001197">filz</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001198">por</w>
+                        <w xml:id="XPam_w_001199">Deu</w>
+                        <w xml:id="XPam_w_001200">ne</w>
+                        <w xml:id="XPam_w_001201">me</w>
+                        <w xml:id="XPam_w_001202">cellez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_175" n="175"><lb n="36"/>
+                        <q><w xml:id="XPam_w_001203">De</w>
+                        <w xml:id="XPam_w_001204">cest</w>
+                        <w xml:id="XPam_w_001205">afaire</w>
+                        <w xml:id="XPam_w_001206">keil</w>
+                        <w xml:id="XPam_w_001207">conseil</w>
+                        <w xml:id="XPam_w_001208">vos</w>
+                        <w xml:id="XPam_w_001209">donez</w><pc type="supplied">?</pc></q> <pc type="supplied">»</pc></l>
+                    <l xml:id="XPam_l_176" n="176"><lb n="37"/>
+                       <w xml:id="XPam_w_001210">Dist</w>
+                       <w xml:id="XPam_w_001211">li</w>
+                       <w xml:id="XPam_w_001212">rois</w>
+                       <w xml:id="XPam_w_001213">Floires</w><pc type="supplied">:</pc>
+                       <pc type="supplied">«</pc>
+                       <q><w xml:id="XPam_w_001214">Nos</w>
+                       <w xml:id="XPam_w_001215">n‘en</w>
+                       <w xml:id="XPam_w_001216">poons</w>
+                       <w xml:id="XPam_w_001217">faire</w>
+                       <w xml:id="XPam_w_001218">el</w></q></l>
+                    <l xml:id="XPam_l_177" n="177"><lb n="38"/>
+                        <q><w xml:id="XPam_w_001219">Tanpre</w>
+                        <w xml:id="XPam_w_001220">serai</w>
+                        <w xml:id="XPam_w_001221">garis</w>
+                        <w xml:id="XPam_w_001222">et</w>
+                        <w xml:id="XPam_w_001223">respassez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_178" n="178"><lb n="39"/>
+                        <q><w xml:id="XPam_w_001224">An</w>
+                        <w xml:id="XPam_w_001225">Hunguerie</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001226">peres</w><pc type="supplied">,</pc>
+                        <gap/><!--..-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001227">vorrai</w>  
+                        <w xml:id="XPam_w_001228">aler</w></supplied></q>
+                        <gap/><!--.….--></l>
+                    <l xml:id="XPam_l_179" n="179"><lb n="40"/>
+                      <q> <w xml:id="XPam_w_001229">Illuec</w>
+                       <w xml:id="XPam_w_001230">ferai</w>
+                       <gap/><!--..-->
+                        <supplied cert="unknown" resp="#XPam"><!--[--><w xml:id="XPam_w_001231">mes</w>  
+                       <w xml:id="XPam_w_001232">grans</w>
+                       <w xml:id="XPam_w_001233">os</w>
+                       <w xml:id="XPam_w_001234">assanbler</w></supplied></q></l>
+                    <l xml:id="XPam_l_180" n="180"><lb n="41"/>
+                        <q><w xml:id="XPam_w_001235">Peire</w>
+                        <w xml:id="XPam_w_001236">refaites</w>
+                        <gap/><!--..-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001237">vo</w>   
+                        <w xml:id="XPam_w_001238">barnage</w>
+                        <w xml:id="XPam_w_001239">autretel</w></supplied>
+                        <gap/><!--....--></q></l>
+                    <l xml:id="XPam_l_181" n="181"><lb n="42"/>
+                       <q><w xml:id="XPam_w_001240">Je</w>
+                       <w xml:id="XPam_w_001241">hai</w>
+                       <w xml:id="XPam_w_001242">Hervi</w>
+                        <gap/><!--..-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001243">de</w>  <!-- crochet ouvert pour une proposition de lecture mais non fermé : je les ferme à la fin du vers -->
+                       <w xml:id="XPam_w_001244">la</w>
+                       <w xml:id="XPam_w_001245">teste</w>
+                       <w xml:id="XPam_w_001246">coper</w></supplied>
+                       <gap/><!--….--><pc type="supplied">;</pc>
+                        <gap/><!--…--></q></l>
+                    <l xml:id="XPam_l_182" n="182"><lb n="43"/>
+                        <q><w xml:id="XPam_w_001247">S‘alons</w>
+                        <w xml:id="XPam_w_001248">à</w>
+                        <w xml:id="XPam_w_001249">Mes</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001250">la</w>
+                        <w xml:id="XPam_w_001251">mirable</w>
+                        <w xml:id="XPam_w_001252">cite</w></q></l>
+                            
+                            <pb n="544" facs="0042.pdf"/>
+                             <!--544 X. PAMFILOVA -->
+                    <l xml:id="XPam_l_183" n="183"><lb n="1"/>
+                        <q><w xml:id="XPam_w_001253">Puis</w>
+                        <w xml:id="XPam_w_001254">ke</w>
+                        <w xml:id="XPam_w_001255">li</w>
+                        <w xml:id="XPam_w_001256">rois</w>
+                        <w xml:id="XPam_w_001257">i</w>
+                        <w xml:id="XPam_w_001258">ert</w>
+                        <w xml:id="XPam_w_001259">o</w>
+                        <w xml:id="XPam_w_001260">son</w>
+                        <supplied cert="unknown" resp="#XPam"><!--[--><w xml:id="XPam_w_001261">barné</w></supplied>  <!-- crochet ouvert pour une proposition de lecture mais non fermé : je les ferme à la fin du vers -->
+                        <gap/><!--...--></q></l>
+                    <l xml:id="XPam_l_184" n="184"><lb n="2"/>
+                        <q><w xml:id="XPam_w_001262">Jai</w>
+                        <w xml:id="XPam_w_001263">li</w>
+                        <w xml:id="XPam_w_001264">lechieres</w>
+                        <w xml:id="XPam_w_001265">ne</w>
+                        <w xml:id="XPam_w_001266">lou</w>
+                        <w xml:id="XPam_w_001267">por</w>
+                        <gap/><!--........…--></q>
+                        <note resp="#XPam">note 1. Ces vers manquent dans le ms. 19160.</note></l>
+                    <l xml:id="XPam_l_185" n="185"><lb n="3"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001268">Filz</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001269">dist</w>
+                        <w xml:id="XPam_w_001270">li</w>
+                        <w xml:id="XPam_w_001271">peires</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001272">si</w>
+                        <w xml:id="XPam_w_001273">com</w>
+                        <w xml:id="XPam_w_001274">vos</w>
+                        <gap/><!--.….--></q></l>
+                    <l xml:id="XPam_l_186" n="186"><lb n="4"/>
+                        <w xml:id="XPam_w_001275">Puis</w>
+                        <w xml:id="XPam_w_001276">ke</w>
+                        <w xml:id="XPam_w_001277">li</w>
+                        <w xml:id="XPam_w_001278">rois</w>
+                        <w xml:id="XPam_w_001279">l‘ait</w>
+                        <w xml:id="XPam_w_001280">dit</w>
+                        <w xml:id="XPam_w_001281">et</w>
+                        <gap/><!--............--></l>
+                    <l xml:id="XPam_l_187" n="187"><lb n="5"/>
+                        <w xml:id="XPam_w_001282">Il</w>
+                        <w xml:id="XPam_w_001283">m‘estuet</w>
+                        <w xml:id="XPam_w_001284">faite</w>
+                        <w xml:id="XPam_w_001285">toutes</w>
+                        <gap/><!--...............--></l>
+                    <l xml:id="XPam_l_188" n="188"><lb n="6"/>
+                        <w xml:id="XPam_w_001286">Voit</w>
+                        <w xml:id="XPam_w_001287">le</w>
+                        <w xml:id="XPam_w_001288">message</w>
+                        <w xml:id="XPam_w_001289">sou</w>
+                        <w xml:id="XPam_w_001290">prent</w>
+                        <gap/><!--...-->
+                        <supplied cert="unknown" resp="#XPam"><!--[--><w xml:id="XPam_w_001291">a</w> <!-- crochet ouvert pour une proposition de lecture jusqu'à la fin du vers -->
+                        <w xml:id="XPam_w_001292">apeler</w></supplied></l> 
+                    <l xml:id="XPam_l_189" n="189"><lb n="7"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001293">Amins</w>
+                        <w xml:id="XPam_w_001294">biaus</w>
+                        <w xml:id="XPam_w_001295">freires</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001296">au</w>
+                        <w xml:id="XPam_w_001297">fort.</w>
+                        <supplied cert="unknown" resp="#XPam">[<w xml:id="XPam_w_001298">roi</w>
+                        <w xml:id="XPam_w_001299">me</w>
+                        <w xml:id="XPam_w_001300">direz</w></supplied></q></l>
+                    <l xml:id="XPam_l_190" n="190"><lb n="8"/>
+                        <q><w xml:id="XPam_w_001301">A</w>
+                        <w xml:id="XPam_w_001302">Mes</w>
+                        <w xml:id="XPam_w_001303">serai</w>
+                        <w xml:id="XPam_w_001304">au</w>
+                        <w xml:id="XPam_w_001305">jork‘il</w>
+                        <w xml:id="XPam_w_001306">m‘ait</w>
+                        <gap/><!--..-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001307">nommé</w><pc type="supplied">.</pc></supplied></q></l>
+                    <l xml:id="XPam_l_191" n="191"><lb n="9"/>
+                        <q><w xml:id="XPam_w_001308">Je</w>
+                        <w xml:id="XPam_w_001309">et</w>
+                        <w xml:id="XPam_w_001310">mes</w>
+                        <w xml:id="XPam_w_001311">filz</w>
+                        <w xml:id="XPam_w_001312">et</w>
+                        <w xml:id="XPam_w_001313">nos</w>
+                        <w xml:id="XPam_w_001314">riches</w>
+                        <gap/><!--...-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001315">barnez</w></supplied></q></l>
+                    <l xml:id="XPam_l_192" n="192"><lb n="10"/>
+                        <w xml:id="XPam_w_001316">Dist</w>
+                        <w xml:id="XPam_w_001317">li</w>
+                        <w xml:id="XPam_w_001318">mes</w><pc type="supplied">:</pc>
+                        <w xml:id="XPam_w_001319"/><pc type="supplied">.</pc>
+                        <q><pc type="supplied">« </pc><w xml:id="XPam_w_001320">Bien</w>
+                        <w xml:id="XPam_w_001321">li</w>
+                        <w xml:id="XPam_w_001322">saurai</w>
+                        <gap/><!--...-->
+                        <supplied cert="unknown" resp="#XPam">[<w xml:id="XPam_w_001323">conter</w></supplied></q></l>
+                    <l xml:id="XPam_l_193" n="193"><lb n="11"/>
+                        <w xml:id="XPam_w_001324">Li</w>
+                        <w xml:id="XPam_w_001325">rois</w>
+                        <w xml:id="XPam_w_001326">li</w>
+                        <w xml:id="XPam_w_001327">fait</w>
+                        <w xml:id="XPam_w_001328">un</w>
+                        <w xml:id="XPam_w_001329">boin</w>
+                        <w xml:id="XPam_w_001330">destrier</w>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001331">doner</w></supplied></l>
+                    <l xml:id="XPam_l_194" n="194"><lb n="12"/>
+                        <w xml:id="XPam_w_001332">Atant</w>
+                        <w xml:id="XPam_w_001333">s‘en</w>
+                        <w xml:id="XPam_w_001334">torne</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001335">congiet</w>
+                        <w xml:id="XPam_w_001336">a</w>
+                        <w xml:id="XPam_w_001337">demandei</w></l>
+                    <l xml:id="XPam_l_195" n="195"><lb n="13"/>
+                        <w xml:id="XPam_w_001338">Atant</w>
+                        <w xml:id="XPam_w_001339">c‘en</w>
+                        <w xml:id="XPam_w_001340">torne</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001341">si</w>
+                        <w xml:id="XPam_w_001342">akeut</w>
+                        <w xml:id="XPam_w_001343">son</w>
+                        <gap/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001344">erret</w><pc type="supplied">,</pc></supplied></l>
+                    <l xml:id="XPam_l_196" n="196"><lb n="14"/>
+                        <w xml:id="XPam_w_001345">Droit</w>
+                        <w xml:id="XPam_w_001346">vers</w>
+                        <w xml:id="XPam_w_001347">Espaigne</w>
+                        <w xml:id="XPam_w_001348">c‘en</w>
+                        <w xml:id="XPam_w_001349">est</w>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001350">acheminé</w></supplied></l>
+                    <l xml:id="XPam_l_197" n="197"><lb n="15"/>
+                        <w xml:id="XPam_w_001351">Or</w>
+                        <w xml:id="XPam_w_001352">vos</w>
+                        <w xml:id="XPam_w_001353">lairons</w>
+                        <w xml:id="XPam_w_001354">dou</w>
+                        <w xml:id="XPam_w_001355">message</w>
+                        <w xml:id="XPam_w_001356">ester</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_198" n="198"><lb n="16"/>
+                        <w xml:id="XPam_w_001357">Et</w>
+                        <w xml:id="XPam_w_001358">li</w>
+                        <w xml:id="XPam_w_001359">roi</w>
+                        <w xml:id="XPam_w_001360">font</w>
+                        <w xml:id="XPam_w_001361">lor</w>
+                        <w xml:id="XPam_w_001362">gran</w>
+                        <w xml:id="XPam_w_001363">os</w>
+                        <w xml:id="XPam_w_001364">ajoster</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_199" n="199"><lb n="17"/>
+                        <w xml:id="XPam_w_001365">Hui</w>
+                        <w xml:id="XPam_w_001366">mais</w>
+                        <w xml:id="XPam_w_001367">devomes</w>
+                        <w xml:id="XPam_w_001368">dou</w>
+                        <w xml:id="XPam_w_001369">duc</w>
+                        <w xml:id="XPam_w_001370">Hervi.</w>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001371">parler</w></supplied></l>
+                    <l xml:id="XPam_l_200" n="200"><lb n="18"/>
+                        <w xml:id="XPam_w_001372">Ki</w>
+                        <w xml:id="XPam_w_001373">chevaucha</w>
+                        <w xml:id="XPam_w_001374">et</w>
+                        <w xml:id="XPam_w_001375">il</w>
+                        <w xml:id="XPam_w_001376">et</w>
+                        <w xml:id="XPam_w_001377">ces</w>
+                        <w xml:id="XPam_w_001378">barnez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_201" n="201"><lb n="19"/>
+                        <w xml:id="XPam_w_001379">Passent</w>
+                        <w xml:id="XPam_w_001380">les</w>
+                        <w xml:id="XPam_w_001381">terres</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001382">le</w>
+                        <w xml:id="XPam_w_001383">puis</w>
+                        <w xml:id="XPam_w_001384">et</w>
+                        <w xml:id="XPam_w_001385">les</w>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001386">regnez</w></supplied></l>
+                    <l xml:id="XPam_l_202" n="202"><lb n="20"/>
+                        <w xml:id="XPam_w_001387">De</w>
+                        <w xml:id="XPam_w_001388">lor</w>
+                        <w xml:id="XPam_w_001389">jornées</w>
+                        <w xml:id="XPam_w_001390">ne</w>
+                        <w xml:id="XPam_w_001391">sai</w>
+                        <w xml:id="XPam_w_001392">comte</w>
+                        <w xml:id="XPam_w_001393">nonbrer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_203" n="203"><lb n="21"/>
+                        <w xml:id="XPam_w_001394">Treskait</w>
+                        <w xml:id="XPam_w_001395">à</w>
+                        <w xml:id="XPam_w_001396">Mes</w>
+                        <w xml:id="XPam_w_001397">ne</w>
+                        <w xml:id="XPam_w_001398">ce</w>
+                        <w xml:id="XPam_w_001399">sont</w>
+                        <w xml:id="XPam_w_001400">arestez</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_204" n="204"><lb n="22"/>
+                        <w xml:id="XPam_w_001401">Ainz</w>
+                        <w xml:id="XPam_w_001402">ke</w>
+                        <w xml:id="XPam_w_001403">Hervis</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001404">li</w>
+                        <w xml:id="XPam_w_001405">gentis</w>
+                        <w xml:id="XPam_w_001406">et</w>
+                        <w xml:id="XPam_w_001407">li</w>
+                        <w xml:id="XPam_w_001408">bers</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_205" n="205"><lb n="23"/>
+                        <w xml:id="XPam_w_001409">Ains</w>
+                        <w xml:id="XPam_w_001410">ke</w>
+                        <w xml:id="XPam_w_001411">il</w>
+                        <w xml:id="XPam_w_001412">antre</w>
+                        <w xml:id="XPam_w_001413">dedens</w>
+                        <w xml:id="XPam_w_001414">Mes</w>
+                        <w xml:id="XPam_w_001415">la</w>
+                        <w xml:id="XPam_w_001416">citei</w></l>
+                    <l xml:id="XPam_l_206" n="206"><lb n="24"/>
+                        <w xml:id="XPam_w_001417">Ou</w>
+                        <w xml:id="XPam_w_001418">voit</w>
+                        <w xml:id="XPam_w_001419">Thierit</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001420">si</w>
+                        <w xml:id="XPam_w_001421">l‘en</w>
+                        <w xml:id="XPam_w_001422">ait</w>
+                        <w xml:id="XPam_w_001423">apellez</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_207" n="207"><lb n="25"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001424">Amins</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001425">dist</w>
+                        <w xml:id="XPam_w_001426">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001427">dedens</w>
+                        <w xml:id="XPam_w_001428">Mes</w>
+                        <w xml:id="XPam_w_001429">an</w>
+                        <w xml:id="XPam_w_001430">alez</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_208" n="208"><lb n="26"/>
+                        <q><w xml:id="XPam_w_001431">Et</w>
+                        <w xml:id="XPam_w_001432">à</w>
+                        <w xml:id="XPam_w_001433">prevost</w>
+                        <w xml:id="XPam_w_001434">mon</w>
+                        <w xml:id="XPam_w_001435">peire</w>
+                        <w xml:id="XPam_w_001436">vos</w>
+                        <w xml:id="XPam_w_001437">direz</w></q></l>
+                    <l xml:id="XPam_l_209" n="209"><lb n="27"/>
+                        <q><w xml:id="XPam_w_001438">Ke</w>
+                        <w xml:id="XPam_w_001439">je</w>
+                        <w xml:id="XPam_w_001440">ramoing</w>
+                        <w xml:id="XPam_w_001441">Bïatrix</w>
+                        <w xml:id="XPam_w_001442">à</w>
+                        <w xml:id="XPam_w_001443">vis</w>
+                        <w xml:id="XPam_w_001444">cler</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_210" n="210"><lb n="28"/>
+                        <q><w xml:id="XPam_w_001445">Contre</w>
+                        <w xml:id="XPam_w_001446">moi</w>
+                        <w xml:id="XPam_w_001447">vigne</w>
+                        <w xml:id="XPam_w_001448">et</w>
+                        <w xml:id="XPam_w_001449">il</w>
+                        <w xml:id="XPam_w_001450">et</w>
+                        <w xml:id="XPam_w_001451">ces</w>
+                        <w xml:id="XPam_w_001452">barnez</w><pc type="supplied">»</pc></q><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_211" n="211"><lb n="29"/>
+                        <w xml:id="XPam_w_001453">Dist</w>
+                        <w xml:id="XPam_w_001454">Thieris</w>
+                        <w xml:id="XPam_w_001455"/><pc type="supplied">.</pc>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001456">Sire</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001457">si</w>
+                        <w xml:id="XPam_w_001458">com</w>
+                        <w xml:id="XPam_w_001459">vos</w>
+                        <w xml:id="XPam_w_001460">comandez</w><pc type="supplied">!</pc> <pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_212" n="212"><lb n="30"/>
+                        <w xml:id="XPam_w_001461">Lou</w>
+                        <w xml:id="XPam_w_001462">cheval</w>
+                        <w xml:id="XPam_w_001463">broche</w>
+                        <gap/><!--…-->
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001464">des</w>
+                        <w xml:id="XPam_w_001465">esperons</w>
+                        <w xml:id="XPam_w_001466">dorez</w></supplied></l>
+                    <l xml:id="XPam_l_213" n="213"><lb n="31"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001467">Tres</w>
+                        <w xml:id="XPam_w_001468">que</w>
+                        <w xml:id="XPam_w_001469">à</w>
+                        <w xml:id="XPam_w_001470">Mes</w>
+                        <w xml:id="XPam_w_001471">ne</w>
+                        <w xml:id="XPam_w_001472">se</w>
+                        <w xml:id="XPam_w_001473">volt</w></supplied><pc type="supplied">.</pc>
+                        <w xml:id="XPam_w_001474">arester</w></l>
+                    <l xml:id="XPam_l_214" n="214"><lb n="32"/>
+                        <supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001475">Vint</w>
+                        <w xml:id="XPam_w_001476">à</w>
+                        <w xml:id="XPam_w_001477">prevost</w>
+                        <w xml:id="XPam_w_001478">dit</w>
+                        <w xml:id="XPam_w_001479">li</w>
+                        <w xml:id="XPam_w_001480">ait</w>
+                        <w xml:id="XPam_w_001481">et</w></supplied>
+                        <w xml:id="XPam_w_001482"><supplied cert="unknown" resp="#XP">con</supplied>tei</w><!-- JBC: supplied à ajouter ici --></l>
+                    <l xml:id="XPam_l_215" n="215"><lb n="33"/>
+                        <supplied cert="unknown" resp="#XPam"><q><w xml:id="XPam_w_001483">Prevost</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001484">dist</w>
+                        <w xml:id="XPam_w_001485">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001486">faites</w>
+                        <w xml:id="XPam_w_001487">tost</w>
+                        <w xml:id="XPam_w_001488">si</w>
+                        <gap/></q></supplied>
+                        <q><w xml:id="XPam_w_001489">montez</w></q></l>
+                    <l xml:id="XPam_l_216" n="216"><lb n="34"/>
+                        <q><supplied><w xml:id="XPam_w_001490">Si</w>
+                        <w xml:id="XPam_w_001491">vient</w>
+                        <w xml:id="XPam_w_001492">Hervis</w>
+                        <w xml:id="XPam_w_001493">vos</w>
+                        <w xml:id="XPam_w_001494">filz</w>
+                        <w xml:id="XPam_w_001495">li</w>
+                        <w xml:id="XPam_w_001496">dus<!--<pc type="supplied">)</pc>--></w></supplied>
+                        <w xml:id="XPam_w_001497">manbrez</w></q></l>
+                    <l xml:id="XPam_l_217" n="217"><lb n="35"/>
+                        <q><supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001498">Biatrix</w>
+                        <w xml:id="XPam_w_001499">ait</w>
+                        <w xml:id="XPam_w_001500">sa</w>
+                        <w xml:id="XPam_w_001501">feme</w>
+                        <gap/><!--...].--></supplied></q>
+                        <w xml:id="XPam_w_001502">conkestei</w></l>
+                    <l xml:id="XPam_l_218" n="218"><lb n="36"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001503">Li</w>
+                        <w xml:id="XPam_w_001504">prevost</w>
+                        <w xml:id="XPam_w_001505">l‘ot</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001506">grant</w>
+                        <w xml:id="XPam_w_001507">joie</w>
+                        <w xml:id="XPam_w_001508">an</w>
+                        <w xml:id="XPam_w_001509">ait</w>
+                        <w xml:id="XPam_w_001510">menéz</w></l>
+                    <l xml:id="XPam_l_219" n="219"><lb n="37"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001511">Adonques</w>
+                        <w xml:id="XPam_w_001512">fait</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001513">tost</w>
+                        <w xml:id="XPam_w_001514">la</w>
+                        <w xml:id="XPam_w_001515">cloche</w>
+                        <w xml:id="XPam_w_001516">soner</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_220" n="220"><lb n="38"/>
+                        <supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001517">Et</w>
+                        <w xml:id="XPam_w_001518">fait</w>
+                        <w xml:id="XPam_w_001519">un</w>
+                        <w xml:id="XPam_w_001520">ban<!--]--></w></supplied>
+                        <w xml:id="XPam_w_001521">par</w>
+                        <w xml:id="XPam_w_001522">la</w>
+                        <w xml:id="XPam_w_001523">ville</w>
+                        <w xml:id="XPam_w_001524">crier</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_221" n="221"><lb n="39"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001525">Que</w>
+                        <w xml:id="XPam_w_001526">tuit</w>
+                        <w xml:id="XPam_w_001527">en</w>
+                        <w xml:id="XPam_w_001528">issent</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001529">de</w>
+                        <w xml:id="XPam_w_001530">la</w>
+                        <w xml:id="XPam_w_001531">bone</w>
+                        <w xml:id="XPam_w_001532">citei</w></l>
+                    <l xml:id="XPam_l_222" n="222"><lb n="40"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001533">Contre</w>
+                        <w xml:id="XPam_w_001534">la</w>
+                        <w xml:id="XPam_w_001535">dame</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001536">Bïatrix</w>
+                        <w xml:id="XPam_w_001537">à</w>
+                        <w xml:id="XPam_w_001538">vis</w>
+                        <w xml:id="XPam_w_001539">cler</w></l>
+                    <l xml:id="XPam_l_223" n="223"><lb n="41"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001540">Que</w>
+                        <w xml:id="XPam_w_001541">Hervis</w>
+                        <w xml:id="XPam_w_001542">ait</w>
+                        <w xml:id="XPam_w_001543">par</w>
+                        <w xml:id="XPam_w_001544">force</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001545">conkesté</w><pc type="supplied">.</pc></l>
+                                   <pb n="545" facs="0043.pdf"/>
+                        <!-- FRAGMENTS DE CHANSONS DE GESTE 545 -->    
+                    <l xml:id="XPam_l_224" n="224"><lb n="1"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001546">Grans</w>
+                        <w xml:id="XPam_w_001547">fu</w>
+                        <w xml:id="XPam_w_001548">la</w>
+                        <w xml:id="XPam_w_001549">joie</w></supplied>
+                        <w xml:id="XPam_w_001550">dedens</w>
+                        <w xml:id="XPam_w_001551">Mes</w>
+                        <w xml:id="XPam_w_001552">la</w>
+                        <w xml:id="XPam_w_001553">cité</w></l>
+                    <l xml:id="XPam_l_225" n="225"><lb n="2"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001554">Bohordant</w></supplied>
+                        <w xml:id="XPam_w_001555">vont</w>
+                        <w xml:id="XPam_w_001556">cil</w>
+                        <w xml:id="XPam_w_001557">legier</w>
+                        <w xml:id="XPam_w_001558">bacheler</w></l>
+                    <l xml:id="XPam_l_226" n="226"><lb n="3"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001559">Et</w>
+                        <w xml:id="XPam_w_001560">ces</w>
+                        <w xml:id="XPam_w_001561">puceles</w></supplied>
+                        <w xml:id="XPam_w_001562">hautement</w>
+                        <w xml:id="XPam_w_001563">ont</w>
+                        <w xml:id="XPam_w_001564">chantei</w></l>
+                    <l xml:id="XPam_l_227" n="227"><lb n="4"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001565">Tresque</w>
+                        <w xml:id="XPam_w_001566">Hervi</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001567">ne</w>
+                        <w xml:id="XPam_w_001568">ce</w>
+                        <w xml:id="XPam_w_001569">vont</w>
+                        <w xml:id="XPam_w_001570">arester</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_228" n="228"><lb n="5"/>
+                        <supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001571">Trois</w>
+                        <w xml:id="XPam_w_001572">fois</w>
+                        <w xml:id="XPam_w_001573">la</w></supplied>
+                        <w xml:id="XPam_w_001574"><supplied resp="#XP" cert="unknown">b</supplied>aisse</w>
+                        <w xml:id="XPam_w_001575">par</w>
+                        <w xml:id="XPam_w_001576">molt</w>
+                        <w xml:id="XPam_w_001577">grant</w>
+                        <w xml:id="XPam_w_001578">amistez</w></l>
+                    <l xml:id="XPam_l_229" n="229"><lb n="6"/>
+                        <w xml:id="XPam_w_001579">Puis</w>
+                        <w xml:id="XPam_w_001580">acollait</w>
+                        <gap/><!--..-->
+                        <w xml:id="XPam_w_001581">Bïatrix</w>
+                        <w xml:id="XPam_w_001582">à</w>
+                        <w xml:id="XPam_w_001583">vis</w>
+                        <w xml:id="XPam_w_001584">cler</w></l>
+                    <l xml:id="XPam_l_230" n="230"><lb n="7"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001585">La</w>
+                        <w xml:id="XPam_w_001586">jantil</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001587">dame</w>
+                        <w xml:id="XPam_w_001588">comança</w>
+                        <w xml:id="XPam_w_001589">à</w>
+                        <w xml:id="XPam_w_001590">crier</w></l>
+                    <l xml:id="XPam_l_231" n="231"><lb n="8"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001591">S‘ai</w>
+                        <w xml:id="XPam_w_001592">mes</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001593">enfans</w>
+                        <w xml:id="XPam_w_001594">et</w>
+                        <w xml:id="XPam_w_001595">car</w>
+                        <w xml:id="XPam_w_001596">les</w>
+                        <w xml:id="XPam_w_001597">me</w>
+                        <w xml:id="XPam_w_001598">randez</w></l>
+                    <l xml:id="XPam_l_232" n="232"><lb n="9"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001599">Ez</w>
+                        <w xml:id="XPam_w_001600">la</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001601">serorge</w>
+                        <w xml:id="XPam_w_001602">ki</w>
+                        <w xml:id="XPam_w_001603">tant</w>
+                        <w xml:id="XPam_w_001604">ait</w>
+                        <w xml:id="XPam_w_001605">de</w>
+                        <w xml:id="XPam_w_001606">bonté</w></l>
+                    <l xml:id="XPam_l_233" n="233"><lb n="10"/>
+                        <supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001607">Qui</w></supplied>
+                        <w xml:id="XPam_w_001608"><supplied cert="unknown" resp="#XP">amen</supplied>oit</w>
+                        <w xml:id="XPam_w_001609">Garinet</w>
+                        <w xml:id="XPam_w_001610">le</w>
+                        <w xml:id="XPam_w_001611">manbrez</w></l>
+                    <l xml:id="XPam_l_234" n="234"><lb n="11"/>
+                        <supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001612">Et</w></supplied>
+                        <w xml:id="XPam_w_001613"><supplied cert="unknown" resp="#XP">Bego</supplied>net</w>
+                        <w xml:id="XPam_w_001614">sa</w>
+                        <w xml:id="XPam_w_001615">fillette</w>
+                        <w xml:id="XPam_w_001616">autretel</w></l>
+                    <l xml:id="XPam_l_235" n="235"><lb n="12"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001617">Et</w>
+                        <w xml:id="XPam_w_001618">Bïatrix</w>
+                        <w xml:id="XPam_w_001619">la</w>]</supplied>
+                        <w xml:id="XPam_w_001620">belle</w>
+                        <w xml:id="XPam_w_001621">o</w>
+                        <w xml:id="XPam_w_001622">le</w>
+                        <w xml:id="XPam_w_001623">vis</w>
+                        <w xml:id="XPam_w_001624">cler</w></l>
+                    <l xml:id="XPam_l_236" n="236"><lb n="13"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001625">Cort</w>
+                        <gap/>..]</supplied>
+                        <w xml:id="XPam_w_001626">ses</w>
+                        <w xml:id="XPam_w_001627">enfans</w>
+                        <w xml:id="XPam_w_001628">dousement</w>
+                        <w xml:id="XPam_w_001629">acoller</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_237" n="237"><lb n="14"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001630">A</w>
+                        <w xml:id="XPam_w_001631">molt</w>
+                        <gap/>..]</supplied>
+                        <w xml:id="XPam_w_001632">grant</w>
+                        <w xml:id="XPam_w_001633">joie</w>
+                        <w xml:id="XPam_w_001634">entrent</w>
+                        <w xml:id="XPam_w_001635">en</w>
+                        <w xml:id="XPam_w_001636">la</w>
+                        <w xml:id="XPam_w_001637">cité</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_238" n="238"><lb n="15"/>
+                        <q><supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001638">Ma</w></supplied>
+                        <w xml:id="XPam_w_001639">douce</w>
+                        <w xml:id="XPam_w_001640">meire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001641">dist</w>
+                        <w xml:id="XPam_w_001642">Garines</w>
+                        <w xml:id="XPam_w_001643">li</w>
+                        <w xml:id="XPam_w_001644">bers</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_239" n="239"><lb n="16"/><q>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001645">Et</w>
+                        <w xml:id="XPam_w_001646">c‘or</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001647">me</w>
+                        <w xml:id="XPam_w_001648">dites</w>
+                        <w xml:id="XPam_w_001649">ou</w>
+                        <w xml:id="XPam_w_001650">avez</w>
+                        <w xml:id="XPam_w_001651">tant</w>
+                        <w xml:id="XPam_w_001652">esteit</w><pc type="supplied">?</pc></q></l>
+                    <l xml:id="XPam_l_240" n="240"><lb n="17"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001653">Biatrix</w>
+                        <w xml:id="XPam_w_001654">l‘ot</w></supplied>
+                        <w xml:id="XPam_w_001655">s‘ait</w>
+                        <w xml:id="XPam_w_001656">tanrement</w>
+                        <w xml:id="XPam_w_001657">ploré</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_241" n="241"><lb n="18"/>
+                        <pc type="supplied">«</pc>
+                        <q><supplied cert="unknown" resp="#XP"><w xml:id="XPam_w_001658">Biaus</w></supplied>
+                            <w xml:id="XPam_w_001659">filz</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001660">dist</w>
+                        <w xml:id="XPam_w_001661">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001662">par</w>
+                        <w xml:id="XPam_w_001663">Deu</w>
+                        <w xml:id="XPam_w_001664">de</w>
+                        <w xml:id="XPam_w_001665">maïsté</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_242" n="242"><lb n="19"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001666">A</w>
+                        <w xml:id="XPam_w_001667">poc</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001668">un</w>
+                        <w xml:id="XPam_w_001669">poc</w>
+                        <w xml:id="XPam_w_001670">perdue</w>
+                        <w xml:id="XPam_w_001671">ne</w>
+                        <w xml:id="XPam_w_001672">m‘avez.</w>
+                        <w xml:id="XPam_w_001673"><pc type="supplied">»</pc></w></l>
+                    <l xml:id="XPam_l_243" n="243"><lb n="20"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001674">Atant</w>
+                        <gap/></supplied>
+                        <w xml:id="XPam_w_001675">entrerent</w>
+                        <w xml:id="XPam_w_001676">dedens</w>
+                        <w xml:id="XPam_w_001677">Mes</w>
+                        <w xml:id="XPam_w_001678">la</w>
+                        <w xml:id="XPam_w_001679">cité</w><pc type="supplied">,</pc>
+                        <!--<w xml:id="XPam_w_001680">9040</w>--></l>
+                    <l xml:id="XPam_l_244" n="244"><lb n="21"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001681">A</w>
+                        <w xml:id="XPam_w_001682">la</w>
+                        <w xml:id="XPam_w_001683">grant</w></supplied>
+                        <w xml:id="XPam_w_001684">eglise</w>
+                        <w xml:id="XPam_w_001685">vont</w>
+                        <w xml:id="XPam_w_001686">la</w>
+                        <w xml:id="XPam_w_001687">messe</w>
+                        <w xml:id="XPam_w_001688">acouter</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_245" n="245"><lb n="22"/>
+                        <supplied cert="unknown" resp="#XPam"><w xml:id="XPam_w_001689">Et</w>
+                        <w xml:id="XPam_w_001690">li</w>
+                        <w xml:id="XPam_w_001691">evesques</w>
+                        <w xml:id="XPam_w_001692">ait</w>
+                        <w xml:id="XPam_w_001693">la</w>
+                        <w xml:id="XPam_w_001694">messe</w></supplied>
+                        <w xml:id="XPam_w_001695">chanteit</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_246" n="246"><lb n="23"/>
+                        <w xml:id="XPam_w_001696">Grans</w>
+                        <w xml:id="XPam_w_001697">fut</w>
+                        <w xml:id="XPam_w_001698">l‘ofrande</w>
+                        <w xml:id="XPam_w_001699">ke</w>
+                        <w xml:id="XPam_w_001700">missent</w>
+                        <w xml:id="XPam_w_001701">sor</w>
+                        <w xml:id="XPam_w_001702">l‘autel</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_247" n="247"><lb n="24"/>
+                        <w xml:id="XPam_w_001703">Apres</w>
+                        <w xml:id="XPam_w_001704">la</w>
+                        <w xml:id="XPam_w_001705">messe</w>
+                        <w xml:id="XPam_w_001706">errier</w>
+                        <w xml:id="XPam_w_001707">sunt</w>
+                        <w xml:id="XPam_w_001708">retornez</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_248" n="248"><lb n="25"/>
+                        <w xml:id="XPam_w_001709">Les</w>
+                        <w xml:id="XPam_w_001710">degrez</w>
+                        <w xml:id="XPam_w_001711">monte</w>
+                        <w xml:id="XPam_w_001712">dou</w>
+                        <w xml:id="XPam_w_001713">palais</w>
+                        <w xml:id="XPam_w_001714">principel</w><pc type="supplied">,</pc></l>
+                        <!--9045 numérotation en marge -->
+                                    
+                    <l xml:id="XPam_l_249" n="249"><lb n="26"/>
+                        <w xml:id="XPam_w_001715">Mis</w>
+                        <w xml:id="XPam_w_001716">ont</w>
+                        <w xml:id="XPam_w_001717">les</w>
+                        <w xml:id="XPam_w_001718">taubles</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001719">s‘asieent</w>
+                        <w xml:id="XPam_w_001720">au</w>
+                        <w xml:id="XPam_w_001721">diner</w><pc type="supplied">!</pc></l>
+                    <l xml:id="XPam_l_250" n="250"><lb n="27"/>
+                        <w xml:id="XPam_w_001722">Mais</w>
+                        <w xml:id="XPam_w_001723">de</w>
+                        <w xml:id="XPam_w_001724">Baudri</w>
+                        <w xml:id="XPam_w_001725">vos</w>
+                        <w xml:id="XPam_w_001726">vodromes</w>
+                        <w xml:id="XPam_w_001727">parler</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_251" n="251"><lb n="28"/>
+                        <w xml:id="XPam_w_001728">Ou</w>
+                        <w xml:id="XPam_w_001729">voit</w>
+                        <w xml:id="XPam_w_001730">sa</w>
+                        <w xml:id="XPam_w_001731">feme</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001732">si</w>
+                        <w xml:id="XPam_w_001733">l‘en</w>
+                        <w xml:id="XPam_w_001734">ait</w>
+                        <w xml:id="XPam_w_001735">apellei</w><pc type="supplied">:</pc></l>
+                    <l xml:id="XPam_l_252" n="252"><lb n="29"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001736">Dame</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001737">dist</w>
+                        <w xml:id="XPam_w_001738">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001739">por</w>
+                        <w xml:id="XPam_w_001740">Deu</w>
+                        <w xml:id="XPam_w_001741">de</w>
+                        <w xml:id="XPam_w_001742">maïsté</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_253" n="253"><lb n="30"/>
+                        <q><w xml:id="XPam_w_001743">Je</w>
+                        <w xml:id="XPam_w_001744">m‘an</w>
+                        <w xml:id="XPam_w_001745">fuirai</w>
+                        <w xml:id="XPam_w_001746">en</w>
+                        <w xml:id="XPam_w_001747">estrainges</w>
+                        <w xml:id="XPam_w_001748">rengnez</w></q></l>
+                    <l xml:id="XPam_l_254" n="254"><lb n="31"/>
+                        <q><w xml:id="XPam_w_001749">Ke</w>
+                        <w xml:id="XPam_w_001750">se</w>
+                        <w xml:id="XPam_w_001751">vos</w>
+                        <w xml:id="XPam_w_001752">freires</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001753">ki</w>
+                        <w xml:id="XPam_w_001754">tant</w>
+                        <w xml:id="XPam_w_001755">fait</w>
+                        <w xml:id="XPam_w_001756">a</w>
+                        <w xml:id="XPam_w_001757">douter</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_255" n="255"><lb n="32"/>
+                        <q><w xml:id="XPam_w_001758">Certes</w>
+                        <w xml:id="XPam_w_001759">me</w>
+                        <w xml:id="XPam_w_001760">tient</w>
+                        <w xml:id="XPam_w_001761">le</w>
+                        <w xml:id="XPam_w_001762">chief</w>
+                        <w xml:id="XPam_w_001763">aurai</w>
+                        <w xml:id="XPam_w_001764">coupei</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_256" n="256"><lb n="33"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001765">Sire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001766">dist</w>
+                        <w xml:id="XPam_w_001767">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001768">ne</w>
+                        <w xml:id="XPam_w_001769">vos</w>
+                        <w xml:id="XPam_w_001770">estuet</w>
+                        <w xml:id="XPam_w_001771">douter</w><pc type="supplied">,</pc></q></l>
+                    <l xml:id="XPam_l_257" n="257"><lb n="34"/>
+                        <q><w xml:id="XPam_w_001772">Vo</w>
+                        <w xml:id="XPam_w_001773">paix</w>
+                        <w xml:id="XPam_w_001774">ferai</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001775">ce</w>
+                        <w xml:id="XPam_w_001776">puix</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001777">nel</w>
+                        <w xml:id="XPam_w_001778">mecreez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_258" n="258"><lb n="35"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001779">Dame</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001780">dist</w>
+                        <w xml:id="XPam_w_001781">il</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001782">por</w>
+                        <w xml:id="XPam_w_001783">Deu</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001784">car</w>
+                        <w xml:id="XPam_w_001785">en</w>
+                        <w xml:id="XPam_w_001786">pensez</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_259" n="259"><lb n="36"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001787">Sire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001788">dist</w>
+                        <w xml:id="XPam_w_001789">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001790">volentiers</w>
+                        <w xml:id="XPam_w_001791">et</w>
+                        <w xml:id="XPam_w_001792">de</w>
+                        <w xml:id="XPam_w_001793">grei<pc type="supplied">!</pc></w><pc type="supplied">»</pc></q></l>
+                    <l xml:id="XPam_l_260" n="260"><lb n="37"/>
+                        <w xml:id="XPam_w_001794">Atant</w>
+                        <w xml:id="XPam_w_001795">en</w>
+                        <w xml:id="XPam_w_001796">monte</w>
+                        <w xml:id="XPam_w_001797">ou</w>
+                        <w xml:id="XPam_w_001798">palais</w>
+                        <w xml:id="XPam_w_001799">principel</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_261" n="261"><lb n="38"/>
+                        <w xml:id="XPam_w_001800">Hervis</w>
+                        <w xml:id="XPam_w_001801">la</w>
+                        <w xml:id="XPam_w_001802">voit</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001803">si</w>
+                        <w xml:id="XPam_w_001804">la</w>
+                        <w xml:id="XPam_w_001805">vait</w>
+                        <w xml:id="XPam_w_001806">acoller</w><pc type="supplied">;</pc></l>
+                    <l xml:id="XPam_l_262" n="262"><lb n="39"/>
+                        <pc type="supplied">«</pc>
+                        <q><w xml:id="XPam_w_001807">Suer</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001808">dist</w>
+                        <w xml:id="XPam_w_001809">li</w>
+                        <w xml:id="XPam_w_001810">dus</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001811">bien</w>
+                        <w xml:id="XPam_w_001812">soit</w>
+                        <w xml:id="XPam_w_001813">vo</w>
+                        <w xml:id="XPam_w_001814">cors</w>
+                        <w xml:id="XPam_w_001815">trovez</w><pc type="supplied">!</pc></q></l>
+                    <l xml:id="XPam_l_263" n="263"><lb n="40"/><q>
+                        <w xml:id="XPam_w_001816">Li</w>
+                        <w xml:id="XPam_w_001817">vos</w>
+                        <w xml:id="XPam_w_001818">maris</w>
+                        <w xml:id="XPam_w_001819">m‘ait</w>
+                        <w xml:id="XPam_w_001820">trop</w>
+                        <w xml:id="XPam_w_001821">fort</w>
+                        <w xml:id="XPam_w_001822">vergondé</w></q><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_264" n="264"><lb n="41"/>
+                        <q><w xml:id="XPam_w_001823">Sachiés</w>
+                        <w xml:id="XPam_w_001824">le</w>
+                        <w xml:id="XPam_w_001825">bien</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001826">perdut</w>
+                        <w xml:id="XPam_w_001827">ait</w>
+                        <w xml:id="XPam_w_001828">m‘amisté</w></q><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_265" n="265"><lb n="42"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001829">Sire</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001830">dist</w>
+                        <w xml:id="XPam_w_001831">elle</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001832">mercit</w>
+                        <w xml:id="XPam_w_001833">vos</w>
+                        <w xml:id="XPam_w_001834">veul</w>
+                        <w xml:id="XPam_w_001835">crier</w><pc type="supplied">.</pc></q></l>
+                    <l xml:id="XPam_l_266" n="266"><lb n="43"/>
+                        <pc type="supplied">—</pc>
+                        <q><w xml:id="XPam_w_001836">Suer</w></q><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001837">dist</w>
+                        <w xml:id="XPam_w_001838">Hervis</w><pc type="supplied">,</pc>
+                        <q><w xml:id="XPam_w_001839">gardez</w>
+                        <w xml:id="XPam_w_001840">plus</w>
+                        <w xml:id="XPam_w_001841">n‘en</w>
+                        <w xml:id="XPam_w_001842">parleiz</w><pc type="supplied">,</pc></q></l>
+                        <!-- Romania, LVII. 35 -->
+                    
+                             <pb n="546" facs="0044.pdf"/>
+                             <!-- 546 X. PAMFILOVA -->
+                    <l xml:id="XPam_l_267" n="267"><lb n="1"/>
+                        <q><w xml:id="XPam_w_001843">Je</w>
+                        <w xml:id="XPam_w_001844">vos</w>
+                        <w xml:id="XPam_w_001845">en</w>
+                        <w xml:id="XPam_w_001846">proi</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001847">ci</w>
+                        <w xml:id="XPam_w_001848">chier</w>
+                        <w xml:id="XPam_w_001849">com</w>
+                        <w xml:id="XPam_w_001850">vos</w>
+                        <w xml:id="XPam_w_001851">m‘avez</w><pc type="supplied">.</pc></q><pc type="supplied">»</pc></l>
+                    <l xml:id="XPam_l_268" n="268"><lb n="2"/>
+                        <w xml:id="XPam_w_001852">A</w>
+                        <w xml:id="XPam_w_001853">ces</w>
+                        <w xml:id="XPam_w_001854">parolles</w>
+                        <w xml:id="XPam_w_001855">lassent</w>
+                        <w xml:id="XPam_w_001856">le</w>
+                        <w xml:id="XPam_w_001857">plait</w>
+                        <w xml:id="XPam_w_001858">ester</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_269" n="269"><lb n="3"/>
+                        <w xml:id="XPam_w_001859">Mis</w>
+                        <w xml:id="XPam_w_001860">ont</w>
+                        <w xml:id="XPam_w_001861">les</w>
+                        <w xml:id="XPam_w_001862">taubles</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001863">s‘asieent</w>
+                        <w xml:id="XPam_w_001864">au</w>
+                        <w xml:id="XPam_w_001865">diner</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_270" n="270"><lb n="4"/>
+                        <w xml:id="XPam_w_001866">Grans</w>
+                        <w xml:id="XPam_w_001867">fut</w>
+                        <w xml:id="XPam_w_001868">la</w>
+                        <w xml:id="XPam_w_001869">joie</w>
+                        <w xml:id="XPam_w_001870">ou</w>
+                        <w xml:id="XPam_w_001871">palais</w>
+                        <w xml:id="XPam_w_001872">principel</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_271" n="271"><lb n="5"/>
+                        <w xml:id="XPam_w_001873">Et</w>
+                        <w xml:id="XPam_w_001874">li</w>
+                        <w xml:id="XPam_w_001875">borjois</w>
+                        <w xml:id="XPam_w_001876">de</w>
+                        <w xml:id="XPam_w_001877">la</w>
+                        <w xml:id="XPam_w_001878">bone</w>
+                        <w xml:id="XPam_w_001879">citei</w></l>
+                    <l xml:id="XPam_l_272" n="272"><lb n="6"/>
+                        <w xml:id="XPam_w_001880">Deus</w>
+                        <w xml:id="XPam_w_001881"><pc type="supplied">!</pc></w>
+                        <w xml:id="XPam_w_001882">keil</w>
+                        <w xml:id="XPam_w_001883">present</w>
+                        <w xml:id="XPam_w_001884">le</w>
+                        <w xml:id="XPam_w_001885">duc</w>
+                        <w xml:id="XPam_w_001886">ont</w>
+                        <w xml:id="XPam_w_001887">aportei</w><pc type="supplied">!</pc></l>
+                    <l xml:id="XPam_l_273" n="273"><lb n="7"/>
+                        <w xml:id="XPam_w_001888">Mais</w>
+                        <w xml:id="XPam_w_001889">de</w>
+                        <w xml:id="XPam_w_001890">lor</w>
+                        <w xml:id="XPam_w_001891">mes</w>
+                        <w xml:id="XPam_w_001892">ne</w>
+                        <w xml:id="XPam_w_001893">vos</w>
+                        <w xml:id="XPam_w_001894">veul</w>
+                        <w xml:id="XPam_w_001895">aconter</w><pc type="supplied">.</pc></l>
+                    <l xml:id="XPam_l_274" n="274"><lb n="8"/>
+                        <w xml:id="XPam_w_001896">Aprés</w>
+                        <w xml:id="XPam_w_001897">maingier</w>
+                        <w xml:id="XPam_w_001898">funt</w>
+                        <w xml:id="XPam_w_001899">les</w>
+                        <w xml:id="XPam_w_001900">napes</w>
+                        <w xml:id="XPam_w_001901">oster</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_275" n="275"><lb n="9"/>
+                        <w xml:id="XPam_w_001902">Chantent</w>
+                        <w xml:id="XPam_w_001903">et</w>
+                        <w xml:id="XPam_w_001904">notent</w><pc type="supplied">,</pc>
+                        <w xml:id="XPam_w_001905">viellent</w>
+                        <w xml:id="XPam_w_001906">cil</w>
+                        <w xml:id="XPam_w_001907">jugler</w></l>
+                    <l xml:id="XPam_l_276" n="276"><lb n="10"/>
+                        <w xml:id="XPam_w_001908">Et</w>
+                        <w xml:id="XPam_w_001909">li</w>
+                        <w xml:id="XPam_w_001910">provos</w>
+                        <w xml:id="XPam_w_001911">les</w>
+                        <w xml:id="XPam_w_001912">fait</w>
+                        <w xml:id="XPam_w_001913">toz</w>
+                        <w xml:id="XPam_w_001914">bien</w>
+                        <w xml:id="XPam_w_001915">luer</w><pc type="supplied">,</pc></l>
+                    <l xml:id="XPam_l_277" n="277"><lb n="11"/>
+                        <w xml:id="XPam_w_001916">Toz</w>
+                        <w xml:id="XPam_w_001917">li</w>
+                        <w xml:id="XPam_w_001918">plus</w>
+                        <w xml:id="XPam_w_001919">povres</w>
+                        <w xml:id="XPam_w_001920">ot</w>
+                        <w xml:id="XPam_w_001921">blial</w>
+                        <w xml:id="XPam_w_001922">de</w>
+                        <w xml:id="XPam_w_001923">sendei</w><pc type="supplied">!</pc></l>
+                    <l xml:id="XPam_l_278" n="278"><lb n="12"/>
+                        <w xml:id="XPam_w_001924">Mais</w>
+                        <w xml:id="XPam_w_001925">de</w>
+                        <w xml:id="XPam_w_001926">la</w>
+                        <w xml:id="XPam_w_001927">suer</w>
+                        <w xml:id="XPam_w_001928">Hervi</w>
+                        <w xml:id="XPam_w_001929">le</w>
+                        <w xml:id="XPam_w_001930">duc</w>
+                        <w xml:id="XPam_w_001931">manbrei</w></l>
+                    <l xml:id="XPam_l_279" n="279"><lb n="13"/>
+                        <w xml:id="XPam_w_001932">Un</w>
+                        <w xml:id="XPam_w_001933">petit</w>
+                        <w xml:id="XPam_w_001934">vos</w>
+                        <w xml:id="XPam_w_001935">vodromes</w>
+                        <w xml:id="XPam_w_001936">parler</w>
+                        <gap/></l>
+                    <l xml:id="XPam_l_280" n="280"><lb n="14"/>
+                          <gap quantity="1" unit="lines"/></l>
+                    </lg>             
+           </body>
+     </text>
+</TEI>

@@ -1,0 +1,2446 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><!-- Regex qui a détruit les lignes vides : "^(?:[\t ]*(?:\r?\n|\r))+", 
+            source="https://www.ultraedit.com/support/tutorials-power-tips/ultraedit/remove-blank-lines.html"--><!-- JBC: attention aux effets indésirables de certaines regex. J'ai l'impression que les tirets (-) ont disparu
+un peu partout. J'en ai rétabli certains.
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GirVianeM" type="ed" xml:lang="fr"
+    corresp="jns4157">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- JBC: je rectifie quelque peu les titres -->
+                <title type="main">Girart de Vienne</title>
+                <title type="sub">Numérisation de l'édition de Paul Meyer du fragment de
+                    Vesoul</title>
+                <!--<title>Chanson de Rolland : fragments de manuscripts de Girard de Vienne. Edition
+                    numérique</title>-->
+                <!-- JBC: l'auteur du texte est en fait Bertrand de Bar-sur-Aube -->
+                <!--<author xml:id="EB">Batova Ekaterina</author>-->
+                <author>Bertrand de Bar-sur-Aube</author>
+                <editor xml:id="PM">Paul Meyer</editor>
+                <!-- JBC: j'harmonise un peu avec les autres documents -->
+                <respStmt xml:id="EB">
+                    <resp>encodage TEI</resp>
+                    <persName instant="false" full="yes">Batova Ekaterina</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName instant="false" full="yes">Jean-Baptiste Camps</persName>
+                </respStmt>
+                <sponsor>Ecole Nationale des Chartes</sponsor>
+            </titleStmt>
+            <editionStmt>
+                <edition>Première version numerique, crée en <date instant="false"
+                    >2018</date></edition>
+            </editionStmt>
+            <extent>
+                <!-- JBC: il y a une petite discordance entre textes et attributs -->
+                <measure unit="page" quantity="13">12 pages d'édition originale</measure>
+            </extent>
+            <publicationStmt>
+                <authority>
+                    <persName instant="false" full="yes">Jean-Baptiste Camps</persName>
+                    <address>
+                        <orgName instant="false" full="yes">École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free" default="false">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date when="2018" instant="false">2018</date>
+            </publicationStmt>
+            <seriesStmt>
+                <!-- JBC: bonne idée d'inclure un seriesStmt -->
+                <title>Fragments de manuscripts français par Paul Meyer : édition numérique</title>
+                <respStmt>
+                    <resp>principal</resp>
+                    <name full="yes" instant="false">Jean-Baptiste Camps</name>
+                </respStmt>
+            </seriesStmt>
+            <!-- JBC: pas nécessaire s'il n'y a pas de note à faire. -->
+            <notesStmt>
+                <note anchored="true">
+                    <p part="N"/>
+                </note>
+            </notesStmt>
+            <sourceDesc default="false">
+                <biblStruct default="false" status="draft">
+                    <!-- JBC: bon traitement de la source bibliographique. -->
+                    <analytic>
+                        <author>
+                            <forename full="yes">Paul</forename>
+                            <surname full="yes">Meyer</surname>
+                        </author>
+                        <title level="a">Fragments de manuscripts français</title>
+                        <idno type="DOI">10.3406/roma.1905.5417</idno>
+                    </analytic>
+                    <monogr>
+                        <title level="j">Romania</title>
+                        <ref type="url"
+                            >http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417</ref>
+                        <imprint>
+                            <biblScope unit="tome">34</biblScope>
+                            <biblScope unit="issue">135</biblScope>
+                            <biblScope unit="pp" from="429" to="457">p. 429-457</biblScope>
+                            <date instant="false">1905</date>
+                            <date instant="false">Document mis en ligne de Persée généré le
+                                15/09/2016</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <!-- JBC: bonne idée également d'inclure un listWit !
+                Toutefois, comme l'édition se fonde sur un unique manuscrit, on aurait pu avoir
+                plutôt un msDesc pour le fragment en question.
+                -->
+                <listWit>
+                    <!-- à verifié les bons numéros....
+                    Evidemment qu'on n'a pas à garder la classification stricte de l'éditeur...
+                    -->
+                    <witness n="C">Londres, Musée brit., Old roy. 20. B. xix</witness>
+                    <witness n="D">Londres, Musée brit., Old roy. 20. D. xi.</witness>
+                    <witness n="E">Londres, Musée brit., Harl. 1321</witness>
+                    <witness n="A">Paris, witness. nat., fr. 1374 </witness>
+                    <witness n="B">Paris, witness. nat., fr. 1448</witness>
+                    <!-- JBC: autres témoins découverts depuis (cf. Arlima, Eugene, UL, Special collections and university archives 1 
+                    Saint Andrews, UL, PQ 1463. G 78 . Et Vesoul!
+                    -->
+                    <witness xml:id="Vesoul">VESOUL, Bibliothèque municipale, 232 </witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc default="false">
+                <p part="N">Projet d'encodage TEI des manuscripts médiévales par des auteurs
+                    diverses au cadre d'évaluation en TEI des étudiantes de l'Ecole Nationale des
+                    Chartes</p>
+            </projectDesc>
+            <samplingDecl default="false">
+                <!-- JBC: bon travail de réflexion sur la structure du fichier. -->
+                <p part="N">Selon les besoin de notre projet on pourrait faire une structure simple
+                    ou complexe. Si on voulait encoder Romania en entier ou encorporer le travail de
+                    tous les étudiantes dans un fichier, ou utiliserait solution corpora (chaque
+                    article étant un tei): - teiCorpus : (teiHeader, texte(préface?) TEI[id_1],
+                    [id_2], TEI[id_n]...) Après on pourrait ajouter des corpora dans des corpora
+                    dans des corpora.</p>
+                <p part="N">Pour encoder les quatres manuscrits publiés par Meyer, j'aurais cette
+                    structure qui pourrait être incorporée: - TEI/ (teiHeader, facsimile?, text:
+                    group : (text[id1], text[id2], text[id3], text[id4]))</p>
+                <p part="N">Pour encoder un seul texte (Girard de Vienne), j'utiliserai: - TEI/
+                    (teiHeader, facsimile?, text: (front, body, back)</p>
+                <p part="N">On pourrait mettre le frontmatter de l'article dans le _front_
+                    directement, mais comme ça les informations pratiquent ne pourront pas être
+                    accedées. En revanche, le _MsDesc_ sera plus utiles. Dans le sourceDesc du
+                    teiHeader on a mis les info sur l'ouvrage. MsDesc enlogera alors le frontmatter. </p>
+                <p part="N">Les notes sont mis sur les balises respectives, leur contenu pris en
+                    compte (pour des _supplied_, _choice_, _app_...) </p>
+                <p part="N">Pour montrer le critique fait sur le texte de manuscripte on a utilisé
+                    les variates suivantes: <list>
+                        <!-- JBC: très bons choix. -->
+                        <item>Texte endammagé, restitué par l'auteur : _supplied_</item>
+                        <item>Erreurs du scribe corrigé: _choice_/(_sic_,_corr_)</item>
+                        <item>Variations parmi les witness: _app_/(_lem_,_rdg_)</item>
+                    </list>
+                </p>
+            </samplingDecl>
+            <editorialDecl default="false">
+                <interpretation default="false">
+                    <p part="N">Meyer a utilisé les italiques pour mnotrer du text endommagé et
+                        restitué par lui: on a mis des balises correspondant à la logique de ces
+                        changements.</p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <!-- JBC: ici j'attendrai plutôt l'encodage des métadonnées du fichier csv (lieu, date du texte, du ms.) -->
+            <!--<creation>
+                <date when="2018-04-17">17 avril 2018</date>
+                <rs type="city">Paris, France</rs>
+            </creation>-->
+            <creation>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition" instant="false"
+                    >champ.mérid.</origPlace>
+                <origDate cert="unknown" resp="DEAF" type="dateComposition" notBefore="1200"
+                    notAfter="1220" instant="false">1200-1220</origDate>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit" instant="false">Est
+                    ?</origPlace>
+                <origDate cert="unknown" resp="#PM" type="dateManuscrit" instant="false"
+                    >1250-1300</origDate>
+            </creation>
+            <langUsage default="false">
+                <language ident="fro" usage="100">ancien français</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <!-- JBC (note: reste à faire sur ce document,
+            - segmentation faite et vérifié sommairement;
+            - encodage des app arrêté en cours du document; encodage des sic et des corrections figurant en note à finir;
+            - une grande relecture de détail du résultat ne serait pas du luxe.
+            -->
+            <!-- JBC: en général par ordre plutôt antéchronologique -->
+            <change when="201808" who="#JBC" status="draft">Correction du document</change>
+            <!--  -->
+            <change when="2018-04-17" who="#EB" status="draft"> Création de l'arborescence générale,
+                structurisation du texte </change>
+            <change when="2018-04-19" who="#EB" status="draft"> Révision de MsDesc</change>
+            <change when="2018-04-20" who="#EB" status="draft">Révision de l'hiérarchie finale;
+                changements de division du texte : au lieu de div par page on a mis milestones pour
+                préserver les lg tant qu'ils sont pensé par la logique du texte</change>
+            <!-- <change when="?" who="#?">Le texte du manuscript totallement raffiné</change> -->
+            <!-- <change when="?" who="#?">Le frontmatter et backmatter totallement changé et rendu lisible, liens parmi les witness établie, list d'entités créés</change> -->
+            <!-- <change when="?" who="#?">Vérification des numéros de wirness, des changements suivants...</change> -->
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <!-- imaginont que le facsimile avec du texte qui est présent dans le pdf fournie et dans le fichier de png...... -->
+        <graphic url="Meyer-Paris/pdf/page1.png"/>
+        <!-- JBC: oui, mais ce n'est que la première page. -->
+    </facsimile>
+    <text>
+        <front>
+            <head n="III">III. Fragments de Girard de Vienne</head>
+            <div part="N" org="uniform" sample="complete">
+                <!-- à changer la logique !!! -->
+                <msDesc status="draft">
+                    <msIdentifier>
+                        <repository>bibliothèque de Vesoul</repository>
+                    </msIdentifier>
+                    <msContents>
+                        <!-- JBC: c'est plutôt l'histoire que le contenu, mais je comprends
+                        que vous avez essayé de suivre l'ordre du texte -->
+                        <p part="N">Ces fragments m‘ont été obligeamment communiqués en original par
+                                <persName instant="false" full="yes"> M. J. Gauthier</persName>,
+                                <roleName full="yes">correspondant de l‘Institut</roleName> et
+                                <roleName full="yes">archiviste</roleName> de la <geogName
+                                instant="false">Côte d‘Or</geogName>. Ils ont été détachés de la
+                            reliure d‘un livre appartenant à la <orgName instant="false" full="yes"
+                                >bibliothèque de Vesoul</orgName>. Ils formeront désormais un nouvel
+                            article dans la série des manuscrits, peu nombreux, de cette
+                            bibliothèque</p>
+                    </msContents>
+                    <physDesc>
+                        <p part="N">Ce sont deux feuillets doubles de
+                            <material>parchemin</material>, formant par conséquent huit pages. Le
+                            format est petit : les pages les plus entières ont <dim>18 centimètres
+                                de hauteur sur 13 de largeur</dim>
+                            <note anchored="true">
+                                <p part="N"> L‘indication de la hauteur et de la largeur ne fournit
+                                    pas toujours un indice descriptif bien utile, parce que les
+                                    feuillets peuvent être plus ou moins rognés dans les deux sens,
+                                    ce qui est ici le cas. Aussi certains bibliographes préfèrent
+                                    ils avec raison donner les mesures de ce qu‘on appelle en
+                                    typographie la justification. Quand il s‘agit de manuscrits la
+                                    justification ne peut être donnée dans le sens de la longueur
+                                    que pour les textes en prose, toujours écrits à lignes pleines.
+                                    On peut la donner aussi pour les textes en vers où la dernière
+                                    lettre du vers est détachée et alignée, ce qui n‘est pas le cas
+                                    ici. Mais on peut toujours donner la hauteur, du premier au
+                                    dernier vers. <dim>La hauteur est ici de 162 millimètres</dim>.
+                                </p>
+                            </note>. </p>
+                        <p part="N"> Certaines marges sont rognées et le coin d‘un des feuillets a
+                            été emporté par une déchirure, mais il n‘en résulte pas beaucoup de
+                            dommage pour le texte <note anchored="true">Je restitue en italiques les
+                                lettres et mots qui ont disparu par suite de ces accidents. </note>
+                            . Les deux premières pages du premier feuillet ont perdu chacune leur
+                            dernier vers. Les pages sont à une colonne; l‘écriture, assez grosse,
+                            peut être rapportée à <origDate instant="false">la seconde moitié du
+                                XIIIe siècle</origDate>. </p>
+                        <p part="N">Je ne crois pas que ces deux feuillets doubles soient d‘un grand
+                            secours pour la constitution du texte; cependant il importe, en vue
+                            d‘une édition nouvelle, et bien désirable, qu‘ils soient signalés et que
+                            la famille à laquelle ils appartiennent soit déterminée. </p>
+                        <p part="N">On connaît cinq mss. de <persName instant="false" full="yes"
+                                >Girart de Vienne</persName> : <listBibl default="false">
+                                <bibl default="false" status="draft">Londres, Musée brit., Old roy.
+                                    20. B. xix</bibl>
+                                <bibl default="false" status="draft">Londres, Musée brit., Old roy.
+                                    20. D. xi.</bibl>
+                                <bibl default="false" status="draft">Londres, Musée brit., Harl.
+                                    1321</bibl>
+                                <bibl default="false" status="draft">Paris, Bibl. nat., fr. 1374
+                                        <note anchored="true">
+                                        <p part="N">Ce manuscrit a été cité par <bibl
+                                                default="false" status="draft">N. Chorier dans son
+                                                livre sur les antiquités de Vienne (Les Recherches
+                                                du sieur Chorier sur les antiquités de la ville de
+                                                Vienne, Lyon et Vienne, 1658, in12)</bibl>. Parlant
+                                            des fortifications de cette ville, Chorier s‘exprime
+                                            ainsi (pp. 4256) : </p>
+                                        <p part="N">
+                                            <quote> « Ce n‘est pas une merveille que Charles le
+                                                Chauve ne l‘ait emportée sur Girard de Rossillon
+                                                qu‘après un long siège et par composition seulement.
+                                                Aussi l‘autheur du Roman de ce prince, composé il y
+                                                a plus de cinq cents ans, en parle toujours comme
+                                                d‘une ville aussi forte qu‘illustre. Les curieux
+                                                auront sans doute quelque satisfaction de voir la
+                                                preuve de cette vérité en quelques uns des passages
+                                                de cet ancien poète, puisque j‘en ay eu moy-mesme à
+                                                les recueillir. » </quote>
+                                        </p>
+                                        <p part="N">Puis il cite trente-six vers que l‘on retrouvera
+                                            sans variantes (Chorier a commis des fautes de lecture
+                                            assez nombreuses) dans le ms. 1374, aux ff. 93 b, 100 b,
+                                            100 c, 101, 102 c, 110 b. Ces mêmes vers, où la ville de
+                                            Vienne est mentionnée, sont, dans le ms., soulignés ou
+                                            du moins mis en relief par des traits de plume,
+                                            probablement par Chorier lui-même. Le ms. 1374 a fait
+                                            partie de la bibliothèque de Colbert, mais il n‘y avait
+                                            pas encore pris place au temps où Chorier écrivait. Nous
+                                            savons qu‘il fut acquis par Colbert en 1674 avec vingt
+                                            manuscrits, au nombre desquels se trouvait le manuscrit
+                                            original de l‘ouvrage d‘Aymar du Rivail sur le Dauphiné
+                                            (Delisle, Le Cabinet des manuscrits, I, 451). Cette
+                                            coïncidence est intéressante ; il en résulte avec grande
+                                            probabilité que la collection de 21 mss. acquise en bloc
+                                            par Colbert avait été formée en Dauphiné. Mais par qui?
+                                            Le volume de la collection Baluze auquel renvoie M.
+                                            Delisle donne bien le détail des mss. achetés, mais ne
+                                            nomme pas le vendeur. </p>
+                                    </note>
+                                </bibl>
+                                <bibl default="false" status="draft">Paris, Bibl. nat., fr.
+                                    1448</bibl>
+                            </listBibl>
+                        </p>
+                        <p part="N"> D‘après une dissertation publiée à Halle <note anchored="true">
+                                <bibl default="false" status="draft">Das Verhältnis der
+                                    Handschrifter des Girart de Vienne. Inaugural Dis sertation
+                                    ..... von Heinrich Schuld. Halle [1889]. In8°, 103 pages.
+                                </bibl>
+                            </note> , les rapports de ces mss. entre eux seraient assez compliqués.
+                            Il y aurait lieu de diviser le texte en deux parties : une première
+                            partie comprendrait les laisses I à XXXIX, une seconde le reste du poème
+                            (laisses XL à CXXXVII). Pour la première partie les mss. se
+                            répartiraient en deux groupes : 1° Musée brit. Roy. 20. B. xix, Bibl.
+                            nat. fr. 1448 ; 2° Harl. 1321, Roy. 20. D. xi, Bibl. nat. fr. 1374. Pour
+                            la seconde partie nous aurions aussi une division en deux groupes : 1°
+                            les deux mss. de la Bibl. nat.; 2° les trois mss. du <orgName
+                                instant="false" full="yes">Musée britannique</orgName>. Ce
+                            classement, opéré d‘après une méthode fort défectueuse, est assez
+                            difficile à vérifier, les tirades n‘étant numérotées dans aucune des
+                            deux éditions, l‘une complète, l‘autre partielle, de <persName
+                                instant="false" full="yes">Girart de Vienne</persName>.</p>
+                        <p part="N"> L‘édition complète est celle de Tarbé (Reims 1850), faite
+                            d‘après le ms. B. N. fr. 1448. Elle est aussi mauvaise qu‘une édition
+                            peut l‘être. L‘édition partielle est celle d‘<persName instant="false"
+                                full="yes">Immanuel Bekker</persName>, en tête de son édition du
+                                <bibl default="false" status="draft">Ferabras provençal (Berlin
+                                1829), pp. XII-LIII</bibl>. Elle reproduit le texte du ms. fr. 1448,
+                            d‘après une copie d‘Uhland. Il y a quelques fautes, mais elle est
+                            toutefois infiniment plus exacte que celle de Tarbé. Malheureusement
+                            elle ne commence qu‘au fol. 16 du ms., omettant le contenu des 15
+                            premiers feuillets. En tout elle contient les 4060 derniers vers du
+                            poème. Les fragments ci après publiés différent plus ou moins des deux
+                            mss. de Paris, mais les différences ne sont jamais bien considérables.
+                            Quant aux mss. de Londres, je ne les ai pas à ma portée au moment où
+                            j‘écris ces lignes.</p>
+                        <p part="N"> Le feuillet double qui forme nos feuillets simples 1 et 2
+                            n‘était pas au centre d‘un cahier; il y a, d‘après l‘édition de Tarbé,
+                            entre les deux parties, une lacune de 194 vers. Ce chiffre me rend
+                            perplexe. Car, les pages étant réglées à 30 vers, un double feuillet
+                            doit contenir 120 vers, ce qui est trop peu, mais deux feuillets doubles
+                            en contiendraient 240, ce qui est trop.</p>
+                        <p part="N">Nous n‘avons pas la même difficulté avec le second feuillet
+                            double : celui-là occupait le centre d‘un cahier, et par conséquent les
+                            120 vers dont il se compose se suivent sans lacune. On jugera de
+                            l‘écriture de ces fragments par le facsimilé ci joint qui reproduit le
+                            recto du quatrième feuillet.</p>
+                        <p part="N">Je donne, pour le premier feuillet, les variantes des deux mss.
+                            de Paris, désignant le ms. 1374 par 4, le ms 1448 par B. On verra que
+                            ces deux copies ne diffèrent guère. Çà et là notre fragment a un vers ou
+                            deux de plus (vv. 18, 23, 345). Cet échantillon de la leçon des deux
+                            mss. de Paris suffit, la présente publication, n‘ayant pas d‘autre objet
+                            que de fournir un élément nouveau à un futur éditeur, à qui incombera le
+                            soin de relever les variantes de toutes les copies.</p>
+                    </physDesc>
+                </msDesc>
+            </div>
+        </front>
+        <body>
+            <!-- Nous avons 3 feuilles de textes, après certaines paragraphes sont séparés par une ligne vide. (lg)
+                 un <div> en haut, un <div> pour chaque feuillet, eventuelles <lg>, <l> comme unité-->
+            <div part="N" org="uniform" sample="complete">
+                <milestone n="1" ed="TARBE" unit="feuillet"/>
+                <!-- JBC: milestone fait l'affaire,
+                mais vous avez un élément spécialisé pour cela, qui est <pb/>. À moins que vous ne vouliez
+                le conserver pour marquer autre chose ?
+                -->
+                <!-- <note>FEUILLET I (ÉD. TARBÈ, p.67).</note> -->
+                <lg part="N" org="uniform" sample="complete">
+                    <!-- JBC: je ne vois pas d'italiques ici et dans les quelques vers suivants, je les retire-->
+                    <l part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>cel</w>
+                            <!--apost<supplied>re</supplied>--><w>apostre</w>
+                            <w>q</w><pc>‘</pc><w>en</w>
+                            <w>qiert</w>
+                            <w>en</w>
+                            <w>Noiron</w>
+                            <w>pré</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Se</w>
+                            <w>l</w><pc>‘</pc><w>avions</w>
+                            <w>ocis</w>
+                            <w>et</w>
+                            <w>afolé</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>D</w><pc>‘</pc><w>Aymeriet</w>
+                            <w>ferons</w>
+                            <w>roi</w>
+                            <w>coroné</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>—</pc>
+                            <w>Freres</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>dit</w>
+                        <w>Miles</w><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>or</w>
+                            <w>avez</w>
+                            <w>mal</w>
+                            <w>parlé</w>
+                            <pc>:</pc></q></l>
+                    <l n="5" part="N"><q><pc>«</pc>
+                            <w>Dex</w>
+                            <w>si</w>
+                            <w>conmende</w><pc>,</pc>
+                            <w>le</w>
+                            <w>roi</w>
+                            <w>de</w>
+                            <choice>
+                                <sic><w>moieté</w></sic>
+                                <!-- JBC: j'ajoute la mention de responsabilité -->
+                                <corr resp="#PM" instant="false"><w>majeté</w></corr>
+                            </choice>
+                        </q></l>
+                    <note resp="#PM" anchored="true">moieté, corr. majeté qui se trouve plus
+                        loin.</note>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>l</w><pc>‘</pc><w>en</w>
+                            <w>ne</w>
+                            <w>die</w>
+                            <w>orgeil</w>
+                            <w>ne</w>
+                            <w>foleté</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Pruedom</w>
+                            <w>est</w>
+                            <w>K</w><pc>.</pc><pc>,</pc>
+                            <w>ce</w>
+                            <w>savon</w>
+                            <w>de</w>
+                            <w>verté</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>N</w><pc>‘</pc><w>a</w>
+                            <w>meillor</w>
+                            <w>roi</w>
+                            <w>en</w>
+                            <w>la</w>
+                            <w>c<supplied resp="#PM" instant="false"
+                                >r</supplied>estienté</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>S</w><pc>‘</pc><w>il</w>
+                            <w>estoit</w>
+                            <w>mort</w><pc>,</pc>
+                            <w>par</w>
+                            <w>la</w>
+                            <w>foi</w>
+                            <w>qe</w>
+                            <w>doi</w>
+                            <w>Dé</w><pc>,</pc></q></l>
+                    <l n="10" part="N"><q><pc>«</pc>
+                            <w>Molt</w>
+                            <w>remendroit</w>
+                            <w>France</w>
+                            <w>en</w>
+                            <w>grant</w>
+                            <w>orfenté</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qi</w>
+                            <w>de</w>
+                            <w>Borgogne</w>
+                            <w>l</w><pc>‘</pc><w>avroit</w>
+                            <w>deserité</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Moi</w>
+                            <w>est</w>
+                            <w>a</w>
+                            <w>vis</w>
+                            <w>assez</w>
+                            <w>l</w><pc>‘</pc><w>avroit</w>
+                            <w>grevé</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>D</w><pc>‘</pc><w>aler</w>
+                            <w>en</w>
+                            <w>France</w>
+                            <app>
+                                <lem wit="#Vesoul"><w>senbleroit</w></lem>
+                                <rdg wit="#A"><w>seroit</w>
+                                    <w>ce</w></rdg>
+                            </app>
+                            <w>foleté</w>
+                            <note anchored="true">A <mentioned>seroit ce
+                        f.</mentioned></note></q></l>
+                    <l rend="indent" part="N"><q><pc>«</pc>
+                            <w>Car</w>
+                            <w>trop</w>
+                            <app>
+                                <lem wit="Vesoul"><w>est</w></lem>
+                                <rdg wit="#A"><w>sont</w></rdg>
+                            </app>
+                            <w>la</w>
+                            <w>gent</w>
+                            <w>fiere</w><pc>.</pc>
+                            <note anchored="true">A <mentioned>t.
+                            sont</mentioned></note><pc>»</pc></q></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l n="15" part="N"><w>Au</w>
+                        <w>matinet</w><pc>,</pc>
+                        <w>quant</w>
+                        <w>l</w><pc>‘</pc><w>aube</w>
+                        <w>est</w>
+                        <w>esclarie</w><pc>,</pc></l>
+                    <l part="N"><w>Hors</w>
+                        <w>de</w>
+                        <w>Viane</w><pc>,</pc>
+                        <w>la</w>
+                        <app>
+                            <lem wit="Vesoul"><w>fort</w></lem>
+                            <rdg wit="#B"><w>grant</w></rdg>
+                        </app>
+                        <w>cité</w>
+                        <w>garnie</w><pc>,</pc>
+                        <note anchored="true">B <mentioned>la grant</mentioned></note></l>
+                    <l part="N"><w>Issi</w>
+                        <w>armée</w>
+                        <w>la</w>
+                        <w>grant</w>
+                        <w>chevalerie</w></l>
+                    <l part="N"><w>Bien</w>
+                        <w>sont</w>
+                        <w>xx</w><pc>.</pc>
+                        <w>m</w><pc>.</pc>
+                        <w>en</w>
+                        <w>sele</w>
+                        <w>conpagnie</w><pc>.</pc>
+                        <note anchored="true">Ce vers manque dans les deux mss.</note></l>
+                    <l part="N"><w>Entre</w>
+                        <w>le</w>
+                        <w>bois</w>
+                        <w>et</w>
+                        <w>la</w>
+                        <w>roche</w>
+                        <w>naïe</w><pc>.</pc></l>
+                    <l n="20" part="N"><w>De</w>
+                        <w>Masconois</w>
+                        <w>ont</w>
+                        <w>la</w>
+                        <w>proie</w>
+                        <w>acoillie</w></l>
+                    <l part="N"><w>Et</w>
+                        <w>la</w>
+                        <w>cité</w>
+                        <w>ont</w>
+                        <w>a</w>
+                        <w>force</w>
+                        <w>sesie</w>
+                        <pc>;</pc></l>
+                    <l part="N"><w>Mout</w>
+                        <w>trevent</w>
+                        <w>ens</w>
+                        <w>avoir</w>
+                        <w>et</w>
+                        <w>menantie</w><pc>,</pc></l>
+                    <l part="N"><w>Tirez</w>
+                        <w>et</w>
+                        <w>poiles</w>
+                        <w>et</w>
+                        <w>soie</w>
+                        <w>d</w><pc>‘</pc><w>Aumarie</w>
+                        <pc>;</pc>
+                        <note anchored="true">Manque ibid.</note></l>
+                    <l part="N"><w>Or</w>
+                        <w>et</w>
+                        <w>arjent</w>
+                        <w>et</w>
+                        <w>destriers</w>
+                        <w>de</w>
+                        <w>Surie</w></l>
+                    <l n="25" part="N"><w>En</w>
+                        <w>font</w>
+                        <w>mener</w>
+                        <w>la</w>
+                        <w>riche</w>
+                        <w>baronie</w></l>
+                    <l part="N"><w>Droit</w>
+                        <w>a</w>
+                        <w>Viane</w><pc>,</pc>
+                        <w>la</w>
+                        <w>fort</w>
+                        <w>cité</w>
+                        <app>
+                            <lem wit="Vesoul"><w>garnie</w></lem>
+                            <rdg wit="#B">
+                                <w>antive</w></rdg>
+                        </app><pc>.</pc>
+                        <note anchored="true">B <mentioned>c. antive</mentioned></note></l>
+                    <l part="N"><pc>.</pc><w>I</w><pc>.</pc>
+                        <w>mès</w>
+                        <w>s</w><pc>‘</pc><w>en</w>
+                        <w>torne</w>
+                        <w>qi</w>
+                        <w>ne</w>
+                        <w>s</w><pc>‘</pc><w>atarja</w>
+                        <w>mie</w>
+                        <pc>:</pc></l>
+                    <l part="N"><w>À</w>
+                        <w>Km</w><pc>.</pc>
+                        <w>a</w>
+                        <w>la</w>
+                        <w>barbe</w>
+                        <w>florie</w></l>
+                    <l rend="indent" part="N"><w>Ve<supplied resp="#PM" instant="false"
+                            >t</supplied></w>
+                        <w>conter</w>
+                        <w>les</w>
+                        <w>noveles</w><pc>.</pc></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l n="30" part="N"><supplied resp="#PM" instant="false"><w>Part</w>
+                            <w>s</w><pc>‘</pc><w>en</w>
+                            <w>li</w>
+                            <w>mès</w>
+                            <w>corant</w>
+                            <w>toz</w>
+                            <w>abrivés</w></supplied><note anchored="true">Vers coupé que je
+                            rétablis d‘après A. Il y a dans B Vait s‘en</note></l>
+                    <l part="N"><w>Sor</w>
+                        <pc>.</pc><w>j</w><pc>.</pc>
+                        <w>cheval</w>
+                        <w>qi</w>
+                        <app>
+                            <lem wit="Vesoul"><w>mout</w>
+                                <w>estoit</w>
+                                <w>lassé</w></lem>
+                            <rdgGrp>
+                                <rdg wit="#A"><w>qui</w>
+                                    <w>estoit</w>
+                                    <w>resués</w></rdg>
+                                <rdg wit="#B"><w>ki</w>
+                                    <w>estoit</w>
+                                    <w>tressués</w></rdg>
+                            </rdgGrp>
+                        </app>
+                        <note anchored="true">(v°)</note><!-- JBC: ok, mais metamark serait peut-être plus adapté. -->
+                        <note anchored="true">A <mentioned>qui estoit resués</mentioned>, B
+                                <mentioned>ki estoit tressués</mentioned></note></l>
+                    <!-- après les app - lem -rdg ne sont pas mis... -->
+                    <!-- JBC: manque de temps ? Il faudrait au moins, dans les notes, marquer les passages
+                    cités (avec mentioned par exemple)-->
+                    <l part="N"><w>Isnelement</w>
+                        <w>est</w>
+                        <w>du</w>
+                        <w>mont</w>
+                        <w>devalé</w><pc>,</pc></l>
+                    <l part="N"><w>Jusq</w><pc>‘</pc><w>a</w>
+                        <w><abbr>K'lon</abbr></w>
+                        <w>ne</w>
+                        <w>s</w><pc>‘</pc><w>est</w>
+                        <w>pas</w>
+                        <w>aresté</w>
+                        <pc>;</pc></l>
+                    <l part="N"><w>Le</w>
+                        <w>roi</w>
+                        <w>demande</w><pc>,</pc>
+                        <w>et</w>
+                        <w>il</w>
+                        <w>li</w>
+                        <w>fu</w>
+                        <w>mostré</w><pc>;</pc>
+                        <note anchored="true">Manquent ibid</note></l>
+                    <l n="35" part="N"><w>Qant</w>
+                        <w>il</w>
+                        <w>le</w>
+                        <w>voit</w><pc>,</pc>
+                        <w>si</w>
+                        <w>s</w><pc>‘</pc><w>est</w>
+                        <w>haut</w>
+                        <w>escrié</w>
+                        <pc>:</pc>
+                        <note anchored="true">Manquent ibid</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Sire</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>fet</w>
+                        <w>il</w><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>envers</w>
+                            <w>moi</w>
+                            <w>entendez</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ore</w>
+                            <w>est</w>
+                            <w>perdue</w>
+                            <w>Mascon</w>
+                            <w>vostre</w>
+                            <w>cité</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>De</w>
+                            <w>toz</w>
+                            <!--<choice>-->
+                            <sic><w>aurois</w></sic>
+                            <!--<corr>avoirs</corr>
+                        </choice>
+                        <note>(sic)--><!--</note>-->
+                            <w>n</w><pc>‘</pc><w>i</w>
+                            <w>a</w>
+                            <w>il</w>
+                            <w>tant</w>
+                            <w>remés</w>
+                            <!-- JBC: par ex. ici --><note anchored="true">AB
+                                    <mentioned>avoirs</mentioned></note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Dont</w>
+                            <w>en</w>
+                            <w>preïst</w>
+                            <pc>.</pc><w>ij</w><pc>.</pc>
+                            <w>d</w><pc>.</pc>
+                            <w>moneez</w><pc>.</pc><pc>»</pc>
+                            <note anchored="true">A D. <mentioned>donesiez</mentioned>, B D.
+                                    <mentioned>aüsiez</mentioned></note></q></l>
+                    <l n="40" part="N"><w>Li</w>
+                        <w>rois</w>
+                        <w>l</w><pc>‘</pc><w>entent</w>
+                        <pc>:</pc>
+                        <w>a</w>
+                        <w>poi</w>
+                        <w>n</w><pc>‘</pc><w>est</w>
+                        <w>forsenez</w>
+                        <pc>:</pc>
+                        <note anchored="true">AB <mentioned>l‘oï</mentioned>
+                        </note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qui</w>
+                            <w>a</w>
+                            <w>ce</w>
+                            <w>fet</w><pc>?</pc><pc>»</pc></q>
+                        <w>dit</w>
+                        <w>K</w><pc>.</pc>
+                        <w>li</w>
+                        <w>menbrez</w><pc>,</pc></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>An</w>
+                            <w>non</w>
+                            <w>Deu</w><pc>,</pc>
+                            <w>sire</w><pc>,</pc>
+                            <w>ja</w>
+                            <w>nel</w>
+                            <w>vos</w>
+                            <w>qier</w>
+                            <w>celer</w>
+                            <pc>:</pc>
+                            <note anchored="true">A <mentioned>Per ma foi sire ja nel vos hert
+                                    celé</mentioned>, B <mentioned>Par foi fait il jai ne vos iert
+                                    celé</mentioned>.</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <w>dus</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>et</w>
+                            <w>Ren</w><pc>.</pc>
+                            <w>li</w>
+                            <w>senez</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Mile</w>
+                            <w>de</w>
+                            <w>Puille</w>
+                            <w>et</w>
+                            <w>le</w>
+                            <w>grant</w>
+                            <w>parenté</w><pc>.</pc></q></l>
+                    <l n="45" part="N"><q><pc>«</pc>
+                            <w>Entre</w>
+                            <w>le</w>
+                            <w>Rosne</w>
+                            <w>et</w>
+                            <w>le</w>
+                            <w>Rin</w>
+                            <w>qi</w>
+                            <w>est</w>
+                            <w>lez</w><pc>,</pc>
+                            <note anchored="true">Manque ibid.</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Nen</w>
+                            <w>a</w>
+                            <w>Poillois</w>
+                            <w>ne</w>
+                            <w>Lonbart</w>
+                            <w>deffaé</w>
+                            <note anchored="true">A <mentioned>Il n‘est Puillois</mentioned>, B
+                                    <mentioned>Il n‘est Lonbars ne Puillois</mentioned></note>
+                        </q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Q</w><pc>‘</pc><w>il</w>
+                            <w>n</w><pc>‘</pc><w>aient</w>
+                            <w>toz</w>
+                            <w>et</w>
+                            <w>semons</w>
+                            <w>et</w>
+                            <w>mendez</w>
+                            <note anchored="true">A <mentioned>Que il
+                        n‘ait</mentioned></note></q></l>
+                    <l rend="indent" part="N"><q><pc>«</pc>
+                            <w>Por</w>
+                            <w>estre</w>
+                            <w>en</w>
+                            <w>lor</w>
+                            <w>aïe</w><pc>.</pc>
+                            <pc>»</pc>
+                            <note anchored="true">A <mentioned>a lor</mentioned></note></q></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><w>Dist</w>
+                        <w>li</w>
+                        <w>messajes</w><pc>,</pc>
+                        <w>ja</w>
+                        <w>nel</w>
+                        <w>vos</w>
+                        <w>celeron</w>
+                        <pc>:</pc></l>
+                    <l n="50" part="N"><q><pc>«</pc>
+                            <w>Biaus</w>
+                            <w>sire</w>
+                            <w>rois</w><pc>,</pc>
+                            <w>entendez</w>
+                            <w>ma</w>
+                            <w>reson</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Entre</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>et</w>
+                            <w>son</w>
+                            <w>frere</w>
+                            <w>Milon</w>
+                            <note anchored="true">A <mentioned>et s. f. a bandon</mentioned>,
+                                omettant la fin du vers 51 et le commencement du
+                        suivant</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ont</w>
+                            <w>assenblé</w>
+                            <w>a</w>
+                            <w>force</w>
+                            <w>et</w>
+                            <w>a</w>
+                            <w>bandon</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Tote</w>
+                            <w>lor</w>
+                            <w>gent</w>
+                            <w>entor</w>
+                            <w>et</w>
+                            <w>environ</w><pc>,</pc>
+                            <note anchored="true">A <mentioned>d‘entor et
+                                d‘anviron</mentioned></note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>d</w><pc>‘</pc><w>autre</w>
+                            <w>part</w>
+                            <w>dant</w>
+                            <w>H</w><pc>.</pc>
+                            <w>le</w>
+                            <w>frans</w>
+                            <w>hon</w>
+                            <note anchored="true">B <mentioned>dan Ernalt le
+                                baron</mentioned></note></q></l>
+                    <l n="55" part="N"><q><pc>«</pc>
+                            <w>De</w>
+                            <w>Tolosenz</w>
+                            <w>ra</w>
+                            <w>assenblé</w>
+                            <w>foison</w>
+                            <note anchored="true">A <mentioned>De tost lo senble</mentioned> (les
+                                deux dernières lettres exponctuées) <mentioned>asemblé a
+                                    f.</mentioned>, B <mentioned>ait asamblé
+                            f.</mentioned></note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qi</w>
+                            <w>ont</w>
+                            <w>juré</w>
+                            <w>par</w>
+                            <w>grant</w>
+                            <w>aïroison</w>
+                            <note anchored="true"> A <mentioned>g. aatison</mentioned>, B
+                                    <mentioned>aitisson</mentioned></note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>ja</w>
+                            <w>de</w>
+                            <w>vos</w>
+                            <w>ne</w>
+                            <w>prendont</w>
+                            <w>raençon</w><pc>,</pc>
+                            <note anchored="true">A <mentioned>prandront</mentioned>, B
+                                    <mentioned>panront</mentioned>.</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Einz</w>
+                            <w>gasteront</w>
+                            <w>si</w>
+                            <w>France</w>
+                            <w>le</w>
+                            <w>roion</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>n</w><pc>‘</pc><w>i</w>
+                            <w>prendroiz</w>
+                            <w>vaillant</w>
+                            <pc>.</pc><w>j</w><pc>.</pc>
+                            <w>esperon</w><pc>.</pc></q></l>
+                    <milestone n="2" ed="TARBE" unit="feuillet"/>
+                    <note anchored="true">FEUILLET 2 (ÉD. TARBÉ, p. 74).</note>
+                    <!-- supplied irregulières -->
+                    <note anchored="true">
+                        <!--<p>Feuillet 2. - 5 Corr. s. le ramier.</p>-->
+                        <p part="N">Je donne en marge la concordance avec l‘édition partielle de
+                            Bekker.</p>
+                    </note>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>nel</w>
+                            <w>leroie</w>
+                            <w>por</w>
+                            <w>les</w>
+                            <w>menbres</w>
+                            <w>trenchier</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Isnelement</w>
+                        <w>monta</w>
+                        <w>sor</w>
+                        <pc>.</pc><w>j</w><pc>.</pc>
+                        <w>destrier</w>
+                        <pc>;</pc></l>
+                    <l part="N"><w>Parmi</w>
+                        <w>la</w>
+                        <w>porte</w>
+                        <w>s</w><pc>‘</pc><w>en</w>
+                        <w>ist</w>
+                        <w>tot</w>
+                        <w>eslessié</w><pc>,</pc>
+                        <note anchored="true">[70]</note></l>
+                    <l part="N"><w>Einz</w>
+                        <w>ne</w>
+                        <w>fina</w>
+                        <w>s</w><pc>‘</pc><w>est</w>
+                        <w>venuz</w>
+                        <w>au</w>
+                        <w>vergier</w>
+                        <pc>;</pc>
+                        <note anchored="true">Corr. <mentioned>s. le ramier</mentioned>.</note></l>
+                    <l n="5" part="N"><w>L</w><pc>‘</pc><w>oisel</w>
+                        <w>apele</w>
+                        <w>q</w><pc>‘</pc><w>il</w>
+                        <w>vit</w>
+                        <w>sor</w>
+                        <w>le</w>
+                        <w>vergier</w><pc>,</pc></l>
+                    <l part="N"><w>Et</w>
+                        <w>il</w>
+                        <w>s</w><pc>‘</pc><w>asiet</w>
+                        <w>sor</w>
+                        <w>son</w>
+                        <w>poing</w>
+                        <w>senestrier</w><pc>.</pc></l>
+                    <l part="N"><w>Voit</w>
+                        <w>le</w>
+                        <w>Rollant</w><pc>,</pc>
+                        <w>n</w><pc>‘</pc><w>ot</w>
+                        <w>en</w>
+                        <w>li</w>
+                        <w>q</w><pc>‘</pc><w>aïrier</w>
+                        <pc>:</pc></l>
+                    <l part="N"><w>A</w>
+                        <w>haute</w>
+                        <w>voiz</w>
+                        <w>li</w>
+                        <w>conmence</w>
+                        <w>a</w>
+                        <w>huchier</w>
+                        <pc>:</pc>
+                        <note anchored="true">[75]</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Es</w>
+                            <w>tu</w>
+                            <w>messaje</w>
+                            <pc>?</pc>
+                            <w>vallet</w><pc>,</pc>
+                            <w>ne</w>
+                            <w>me</w>
+                            <w>noiez</w><pc>.</pc></q></l>
+                    <l n="10" part="N"><q><pc>«</pc>
+                            <w>Car</w>
+                            <w>me</w>
+                            <w>rent</w>
+                            <w>ore</w>
+                            <w>mon</w>
+                            <w>oisel</w>
+                            <w>q</w><pc>‘</pc><w>ai</w>
+                            <w>tant</w>
+                            <w>chier</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>t</w><pc>‘</pc><w>en</w>
+                            <w>ferai</w>
+                            <pc>.</pc><w>xv</w><pc>.</pc>
+                            <w>lb</w><pc>.</pc>
+                            <w>poier</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Dist</w>
+                        <w>Olivier</w>
+                        <pc>:</pc>
+                        <q><pc>«</pc>
+                            <w>De</w>
+                            <w>folie</w>
+                            <w>plediez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>nel</w>
+                            <w>rendroie</w>
+                            <w>por</w>
+                            <pc>.</pc><w>c</w><pc>.</pc>
+                            <w>lb</w><pc>.</pc>
+                            <w>d</w><pc>‘</pc><w>ormier</w><pc>.</pc></q>
+                        <note anchored="true">[80]</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>De</w>
+                            <w>la</w>
+                            <w>parole</w>
+                            <w>me</w>
+                            <w>senblez</w>
+                            <w>userier</w></q></l>
+                    <l n="15" part="N"><q><pc>«</pc>
+                            <w>Qui</w>
+                            <w>de</w>
+                            <w>deniers</w>
+                            <w>me</w>
+                            <w>volez</w>
+                            <w>apoier</w></q></l>
+                    <!--  <l>45 Manque ibid. 46 A Il n‘est Puillois, B Il n‘est Lonbars ne Puil</l>
+        <l>lois 47 A Que il n‘ait 48 A a lor 512 A et s. f. a bandon, omettant </l>
+        <l>la fin du vers 51 et le commencement du suivant 53 A d‘entor et d‘anviron</l>
+        <l>54 B dan Ernalt le baron 55 4 De tost lo senble (les deux dernières</l>
+        <l>lettres exponctudes) asemblé a f., B ait asamblé f. 56 A g. aatison, B aitis</l>
+        <l>son 57 A prandront, B panront.</l> -->
+                    <l part="N"><q><pc>«</pc>
+                            <w>Cist</w>
+                            <w>est</w>
+                            <w>or</w>
+                            <w>miens</w>
+                            <pc>;</pc>
+                            <w>autre</w>
+                            <w>alez</w>
+                            <w>prochacier</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Rollant</w>
+                        <w>l</w><pc>‘</pc><w>entent</w><pc>,</pc>
+                        <w>le</w>
+                        <w>sanc</w>
+                        <w>cuide</w>
+                        <w>changier</w>
+                        <pc>:</pc></l>
+                    <l part="N"><w>Trés</w>
+                        <w>parmi</w>
+                        <w>l</w><pc>‘</pc><w>eve</w>
+                        <w>a</w>
+                        <w>brochié</w>
+                        <w>le</w>
+                        <w>destrier</w>
+                        <pc>;</pc></l>
+                    <l part="N"><w>De</w>
+                        <w>l</w><pc>‘</pc><w>autre</w>
+                        <w>part</w>
+                        <w>est</w>
+                        <w>venuz</w>
+                        <w>u</w>
+                        <w>vergier</w>
+                        <pc>;</pc></l>
+                    <l n="20" part="N"><w>Par</w>
+                        <w>les</w>
+                        <pc>.</pc><w>ij</w><pc>.</pc>
+                        <w>resnes</w>
+                        <w>vet</w>
+                        <w>sesir</w>
+                        <w>Olivier</w><pc>,</pc></l>
+                    <l part="N"><w>Cortoisement</w>
+                        <w>le</w>
+                        <w>prent</w>
+                        <w>a</w>
+                        <w>aresnier</w>
+                        <pc>:</pc></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Com</w>
+                            <w>as</w>
+                            <w>tu</w>
+                            <w>non</w><pc>?</pc>
+                            <w>garde</w>
+                            <w>ne</w>
+                            <w>me</w>
+                            <w>noier</w>
+                            <pc>:</pc></q></l>
+                    <l part="N">
+                        <q><pc>-</pc>
+                            <w>Vassal</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>fet</w>
+                        <w>il</w><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>l</w><pc>‘</pc><w>en</w>
+                            <w>m</w><pc>‘</pc><w>apele</w>
+                            <w>Olivier</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Nez</w>
+                            <w>sui</w>
+                            <w>de</w>
+                            <w>Jenvres</w><pc>,</pc>
+                            <w>filz</w>
+                            <w>au</w>
+                            <w>conte</w>
+                            <w>Renier</w><pc>,</pc></q></l>
+                    <l n="25" part="N"><q><pc>«</pc>
+                            <w>Si</w>
+                            <w>est</w>
+                            <w>mes</w>
+                            <w>oncles</w>
+                            <w>dant</w>
+                            <w>H</w><pc>.</pc>
+                            <w>au</w>
+                            <w>vis</w>
+                            <w>fier</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Niés</w>
+                            <w>sui</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>le</w>
+                            <w>fort</w><pc>,</pc>
+                            <w>le</w>
+                            <w>bon</w>
+                            <w>gerrier</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>li</w>
+                            <w>rois</w>
+                            <w>veut</w>
+                            <w>de</w>
+                            <w>sa</w>
+                            <w>terre</w>
+                            <w>chacier</w><pc>.</pc></q></l>
+                    <l rend="indent" part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>mout</w>
+                            <w>grant</w>
+                            <sic><w>folonie</w></sic><!--<note> (sic)</note>--><pc>.</pc>
+                            <pc>»</pc></q></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><w>Qant</w>
+                        <w>Oliv</w><pc>.</pc>
+                        <w>oï</w>
+                        <w>parler</w>
+                        <w>Rollant</w><pc>,</pc></l>
+                    <l n="30" part="N"><w>Il</w>
+                        <w>l</w><pc>‘</pc><w>aresone</w>
+                        <w>bel</w>
+                        <w>et</w>
+                        <w>cortoisement</w>
+                        <pc>:</pc></l>
+                    <!-- JBC: ce sont des manques dans le texte, qu'il faut encoder -->
+                    <l part="N"><q><pc>«</pc>
+                            <!--…. .....-->
+                            <gap instant="false"/>
+                            <w>gent</w>
+                            <!--.....--><gap instant="false"/>
+                            <w>parent</w><pc>,</pc>
+                            <note anchored="true">(v°)</note>
+                            <note anchored="true">B <mentioned>Or t‘ai je dit quel gent sont mi
+                                    parent</mentioned>.</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>tu</w><pc>,</pc>
+                            <w>qi</w>
+                            <w>es</w><pc>?</pc>
+                            <w>ne</w>
+                            <w>me</w>
+                            <w>celer</w>
+                            <w>noiant</w><pc>.</pc></q></l>
+                    <l part="N"><q><w>Amis</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>fet</w>
+                        <w>il</w><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>l</w><pc>‘</pc><w>en</w>
+                            <w>m</w><pc>‘</pc><w>apele</w>
+                            <w>Rollant</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Niés</w>
+                            <w>sui</w>
+                            <w><abbr>K‘lon</abbr></w>
+                            <w>l</w><pc>‘</pc><w>emperere</w>
+                            <w>puissant</w><pc>.</pc></q></l>
+                    <l n="35" part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>cel</w>
+                            <w>apostre</w>
+                            <w>qe</w>
+                            <w>qierent</w>
+                            <w>penaant</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Se</w>
+                            <w>Dex</w>
+                            <w>ce</w>
+                            <w>done</w>
+                            <w>par</w>
+                            <w>son</w>
+                            <w>comandement</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>je</w>
+                            <w>repasse</w>
+                            <w>cele</w>
+                            <w>rade</w>
+                            <w>eve</w>
+                            <w>grant</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Morz</w>
+                            <w>est</w>
+                            <w>Gir</w><pc>.</pc><w>et</w>
+                            <w>Her</w><pc>.</pc>
+                            <w>le</w>
+                            <w>ferrant</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Jes</w>
+                            <w>ferai</w>
+                            <w>pendre</w>
+                            <w>et</w>
+                            <w>encroer</w>
+                            <w>au</w>
+                            <w>vent</w><pc>.</pc></q></l>
+                    <l n="40" part="N"><q><pc>«</pc>
+                            <w>Rent</w>
+                            <w>mon</w>
+                            <w>oisel</w><pc>;</pc>
+                            <w>ne</w><pc>.</pc><w>le</w>
+                            <w>porte</w>
+                            <w>en</w>
+                            <w>avant</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>ne</w>
+                            <w>veil</w>
+                            <w>mie</w>
+                            <w>que</w>
+                            <w>ja</w>
+                            <w>garçon</w>
+                            <w>s</w><pc>‘</pc><w>en</w>
+                            <w>vant</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>il</w>
+                            <w>me</w>
+                            <w>toille</w>
+                            <w>la</w>
+                            <w>monte</w>
+                            <w>d</w><pc>‘</pc><w>un</w>
+                            <w>besant</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Dit</w>
+                        <w>Oliv</w><pc>.</pc>
+                        <pc>:</pc>
+                        <q><pc>«</pc>
+                            <w>Or</w>
+                            <w>oi</w>
+                            <w>plet</w>
+                            <w>de</w>
+                            <w>noiant</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Se</w>
+                            <w>tu</w>
+                            <w>me</w>
+                            <w>croiz</w>
+                            <w>tu</w>
+                            <w>seras</w>
+                            <w>mon</w>
+                            <w>serjant</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Se</w>
+                            <w>tu</w>
+                            <w>me</w>
+                            <w>sers</w>
+                            <w>de</w>
+                            <w>rien</w>
+                            <w>a</w>
+                            <w>mon</w>
+                            <w>talent</w><pc>,</pc></q></l>
+                    <l n="45" part="N"><q><pc>«</pc>
+                            <w>Einçois</w>
+                            <pc>.</pc><w>j</w><pc>.</pc>
+                            <w>an</w><pc>,</pc>
+                            <w>par</w>
+                            <w>le</w>
+                            <w>mien</w>
+                            <w>esciant</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Te</w>
+                            <w>dorrai</w>
+                            <w>je</w>
+                            <w>ou</w>
+                            <w>vile</w>
+                            <w>ou</w>
+                            <w>chasement</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ou</w>
+                            <w>riche</w>
+                            <w>borc</w>
+                            <w>ou</w>
+                            <w>chastel</w>
+                            <w>en</w>
+                            <w>estant</w><pc>,</pc></q></l>
+                    <l rend="indent" part="N"><q><pc>«</pc>
+                            <w>Por</w>
+                            <w>ce</w>
+                            <w>que</w>
+                            <w>preuz</w>
+                            <w>me</w>
+                            <w>sanbles</w><pc>.</pc><pc>»</pc></q></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><w>Qant</w>
+                        <w>Rollant</w>
+                        <w>ot</w>
+                        <w>Oliv</w><pc>.</pc>
+                        <w>si</w>
+                        <w>parler</w><pc>,</pc></l>
+                    <l part="N"><w>Hauce</w>
+                        <w>le</w>
+                        <w>poing</w><pc>,</pc>
+                        <w>q</w><pc>‘</pc><w>il</w>
+                        <w>l</w><pc>‘</pc><w>en</w>
+                        <w>voloit</w>
+                        <w>doner</w><pc>,</pc></l>
+                    <l part="N"><w>Qant</w>
+                        <w>tot</w>
+                        <w>par</w>
+                        <w>li</w>
+                        <w>se</w>
+                        <w>prist</w>
+                        <w>a</w>
+                        <w>porpensser</w></l>
+                    <l part="N"><w>Q</w><pc>'</pc><w>il</w>
+                        <w>le</w>
+                        <w>vodra</w>
+                        <w>encore</w>
+                        <w>aresoner</w><pc>.</pc></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Vassal</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>fet</w>
+                        <w>il</w><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>encor</w>
+                            <w>vos</w>
+                            <w>veil</w>
+                            <w>rover</w></q></l>
+                    <l n="55" part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>par</w>
+                            <w>amor</w>
+                            <w>mon</w>
+                            <w>oisel</w>
+                            <w>me</w>
+                            <w>rendez</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>cele</w>
+                            <w>foi</w>
+                            <w>que</w>
+                            <w>vostre</w>
+                            <w>oncle</w>
+                            <w>devez</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>tel</w>
+                            <w>covent</w>
+                            <w>com</w>
+                            <w>vos</w>
+                            <w>m</w><pc>‘</pc><w>orroiz</w>
+                            <w>conter</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <supplied resp="#PM" instant="false"><w>Qe</w></supplied>
+                            <w>s</w><pc>‘</pc><w>autre</w>
+                            <w>foi</w>
+                            <w>de</w>
+                            <w>rien</w>
+                            <w>me</w>
+                            <supplied resp="#PM" instant="false"
+                            ><w>reqerez</w></supplied><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>je</w>
+                            <w>ferai</w>
+                            <w>totes</w>
+                            <w>vos</w>
+                            <w>volentez</w><pc>.</pc><pc>»</pc></q></l>
+                    <l n="60" part="N"><w>Dist</w>
+                        <w>Oliv</w><pc>.</pc>
+                        <pc>:</pc>
+                        <q><pc>«</pc>
+                            <w>Volentiers</w>
+                            <w>et</w>
+                            <w>de</w>
+                            <w>grez</w><pc>.</pc><pc>»</pc></q></l>
+
+                    <milestone n="3" ed="TARBE" unit="feuillet"/>
+                    <!-- FEUILLETS 3 ET 4 (ÉD. TARBÉ, p. 134).</note> -->
+
+                    <l part="N"><q><pc>«</pc>
+                            <w>S</w><pc>‘</pc><w>il</w>
+                            <w>a</w>
+                            <w>mesfet</w><pc>,</pc>
+                            <w>près</w>
+                            <w>est</w>
+                            <w>de</w>
+                            <w>l</w><pc>‘</pc><w>adrecier</w><pc>.</pc></q></l>
+                    <l part="N"><q>
+                            <pc>-</pc>
+                            <w>Vassaus</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>dit</w>
+                        <w>K</w><pc>.</pc><pc>,</pc>
+                        <q><pc>«</pc>
+                            <w>mout</w>
+                            <w>m</w><pc>‘</pc><w>avez</w>
+                            <w>correcié</w><pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Dolenz</w>
+                            <w>serai</w>
+                            <w>se</w>
+                            <w>ne</w>
+                            <w>m</w><pc>‘</pc><w>en</w>
+                            <w>puis</w>
+                            <w>vengier</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Granz</w>
+                            <w>est</w>
+                            <w>li</w>
+                            <w>sieges</w><pc>,</pc>
+                            <w>merveilloz</w>
+                            <w>et</w>
+                            <w>plenier</w><pc>,</pc></q></l>
+                    <l n="5" part="N"><q><pc>«</pc>
+                            <w>Si</w>
+                            <w>a</w>
+                            <w>duré</w>
+                            <w>bien</w>
+                            <pc>.</pc><w>v</w><pc>.</pc>
+                            <w>anz</w>
+                            <w>toz</w>
+                            <w>entier</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>si</w>
+                            <w>villment</w>
+                            <w>le</w>
+                            <w>me</w>
+                            <w>rueves</w>
+                            <w>lessier</w>
+                            <pc>!</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Par</w>
+                            <w>sel</w>
+                            <w>Seignor</w>
+                            <w>a</w>
+                            <w>qui</w>
+                            <w>l</w><pc>‘</pc><w>en</w>
+                            <w>doit</w>
+                            <w>proier</w><pc>,</pc></q><note anchored="true">7
+                                <mentioned>qui</mentioned> ou <mentioned>qi</mentioned>, le mot est
+                            abrégé. Il faut comprendre <mentioned>cui</mentioned> ; cf. v.
+                        81</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ainz</w>
+                            <w>que</w>
+                            <w>m</w><pc>‘</pc><w>en</w>
+                            <w>parte</w><pc>,</pc>
+                            <w>ja</w>
+                            <w>nel</w>
+                            <w>vos</w>
+                            <w>qier</w>
+                            <w>noier</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Iert</w>
+                            <w>si</w>
+                            <w>aquis</w>
+                            <w>dant</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>le</w>
+                            <w>guerrier</w></q><note anchored="true">9 <mentioned>aquis</mentioned>
+                            (sic)</note></l>
+                    <l n="10" part="N"><q><pc>«</pc>
+                            <w>Que</w>
+                            <w>devant</w>
+                            <w>moi</w>
+                            <w>vendra</w>
+                            <w>ajenoillier</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Nuz</w>
+                            <w>piez</w><pc>,</pc>
+                            <w>en</w>
+                            <w>langes</w><pc>,</pc>
+                            <w>por</w>
+                            <w>la</w>
+                            <w>merci</w>
+                            <w>proier</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>La</w>
+                            <w>sele</w>
+                            <w>el</w>
+                            <w>col</w><pc>,</pc>
+                            <w>q</w><pc>‘</pc><w>il</w>
+                            <w>tendra</w>
+                            <w>par</w>
+                            <w>l</w><pc>‘</pc><w>estrier</w><pc>,</pc></q><note anchored="true">12
+                            C‘est la formalité de l‘<mentioned>harmiscara</mentioned> ; voir Raoul
+                            de Cambrai, p. xxxij-xxxiij</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>D</w><pc>‘</pc><w>un</w>
+                            <w>roncin</w>
+                            <w>gaste</w>
+                            <w>ou</w>
+                            <w>d</w><pc>‘</pc><w>un</w>
+                            <w>povre</w>
+                            <w>somier</w><pc>.</pc></q></l>
+                    <l part="N"><q><w>Ce</w>
+                            <w>n</w><pc>‘</pc><w>iert</w>
+                            <w>ja</w><pc>,</pc>
+                            <w>certes</w><pc>,</pc>
+                            <w>sire</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>dit</w>
+                        <w>Olivier</w><pc>,</pc></l>
+                    <l n="15" part="N"><q><pc>«</pc>
+                            <w>Car</w>
+                            <w>trop</w>
+                            <w>est</w>
+                            <w>fiers</w>
+                            <w>dant</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>le</w>
+                            <w>guerrier</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>de</w>
+                            <w>puissant</w>
+                            <w>linaje</w><pc>.</pc></q></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><q><pc>«</pc>
+                            <w>Droiz</w>
+                            <w>enperere</w><pc>,</pc>
+                            <w>envers</w>
+                            <w>moi</w>
+                            <w>entendez</w><pc>.</pc></q><note anchored="true">17 Il y a en plus,
+                            dans B, au commencement de la laisse : <mentioned>Dist Olivier li prouz
+                                et li seneiz</mentioned></note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Si</w>
+                            <w>m</w><pc>‘</pc><w>aïst</w>
+                            <w>Deu</w><pc>,</pc>
+                            <w>le</w>
+                            <w>roi</w>
+                            <w>de</w>
+                            <w>majeté</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Tot</w>
+                            <w>mon</w>
+                            <w>message</w>
+                            <w>vos</w>
+                            <w>essera</w>
+                            <w>conté</w></q></l>
+                    <l n="20" part="N"><q><pc>«</pc>
+                            <w>De</w>
+                            <w>chief</w>
+                            <w>en</w>
+                            <w>chief</w><pc>,</pc>
+                            <w>qe</w>
+                            <w>l</w><pc>‘</pc><w>orra</w>
+                            <w>li</w>
+                            <w>barné</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Bien</w>
+                            <w>veil</w>
+                            <w>qe</w>
+                            <w>sachent</w>
+                            <w>cil</w>
+                            <w>damoisel</w>
+                            <w>menbré</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Que</w>
+                            <w>Vianois</w>
+                            <w>mut</w>
+                            <w>de</w>
+                            <w>mon</w>
+                            <w>parenté</w><pc>.</pc></q><note anchored="true">22 Ce vers manque dans
+                            B.</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Viane</w>
+                            <w>fu</w>
+                            <w>mon</w>
+                            <w>avel</w><pc>,</pc>
+                            <w>c</w><pc>‘</pc><w>est</w>
+                            <w>verté</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <w>premiers</w>
+                            <w>hom</w>
+                            <w>qi</w>
+                            <w>einz</w>
+                            <w>en</w>
+                            <w>fust</w>
+                            <w>chasés</w></q></l>
+                    <l n="25" part="N"><q><pc>«</pc>
+                            <w>Mes</w>
+                            <w>aives</w>
+                            <w>fu</w><pc>,</pc>
+                            <w>dant</w>
+                            <w>Bueves</w>
+                            <w>li</w>
+                            <w part="N">bar<supplied resp="#PM" instant="false"
+                                >bés</supplied></w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Plus</w>
+                            <w>de</w>
+                            <pc>.</pc><w>c</w><pc>.</pc>
+                            <w>anz</w>
+                            <w>tint</w>
+                            <w>qite</w>
+                            <w>cest</w>
+                            <w part="N">res<supplied resp="#PM" instant="false">né</supplied></w>
+                            <pc>;</pc></q></l>
+                    <!-- JBC: il faut par contre impérativement intégrer les notes -->
+                    <!-- PAS FAITE -->
+                    <!--  </q></l>
+        <l><q></q></l> -->
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ainz</w>
+                            <w>rois</w>
+                            <w>de</w>
+                            <w>France</w>
+                            <w>ne</w>
+                            <w>l</w><pc>‘</pc><w>en</w>
+                            <w>mostra</w>
+                            <supplied instant="false"><w>fierté</w><pc>.</pc></supplied></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Or</w>
+                            <w>m</w><pc>‘</pc><w>est</w>
+                            <w>avis</w>
+                            <w>qe</w>
+                            <w>gran<supplied instant="false">t</supplied></w>
+                            <supplied><w>tort</w>
+                                <w>en</w>
+                                <w>avés</w></supplied>
+                            <note anchored="true">[1200]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qant</w>
+                            <w>vos</w>
+                            <w>mon</w>
+                            <w>on<supplied instant="false">cle</supplied></w>
+                            <supplied instant="false"><w>volés</w>
+                                <w>deseriter</w></supplied><pc>.</pc></q></l>
+                    <l n="30" part="N"><q><pc>«</pc>
+                            <w>Pechiez</w>
+                            <w>feroiz</w>
+                            <w>se</w>
+                            <w>le</w>
+                            <supplied instant="false"><w>deseritez</w></supplied><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Mès</w><pc>,</pc>
+                            <w>par</w>
+                            <w>l</w><pc>‘</pc><w>apostre</w>
+                            <w>c</w><pc>‘</pc><w>om</w>
+                            <w>qiert</w>
+                            <w>euoiron</w>
+                            <w>pré</w><pc>,</pc><note anchored="true">31 Sic, lire <mentioned>en
+                                    Noiron pré</mentioned>; B <mentioned>Per cel seignor c‘on
+                                    requiert outre mer</mentioned></note>
+                            <note anchored="true">(v°)</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>La</w>
+                            <w>dedenz</w>
+                            <w>Rome</w>
+                            <w>o</w>
+                            <w>il</w>
+                            <w>est</w>
+                            <w>aoré</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Einz</w>
+                            <w>qe</w>
+                            <w>soiez</w>
+                            <w>en</w>
+                            <w>Viane</w>
+                            <w>ostelez</w>
+                            <note anchored="true">[1205]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ne</w>
+                            <w>q</w><pc>‘</pc><w>aiez</w>
+                            <w>prise</w>
+                            <w>la</w>
+                            <w>mestre</w>
+                            <w>fermeté</w><pc>,</pc></q></l>
+                    <l n="35" part="N"><q><pc>«</pc>
+                            <w>Serai</w>
+                            <w>a</w>
+                            <w>nage</w>
+                            <w>parmi</w>
+                            <w>la</w>
+                            <w>mer</w>
+                            <w>passez</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>A</w>
+                            <pc>.</pc><w>j</w><pc>.</pc>
+                            <w>mien</w>
+                            <w>oncle</w>
+                            <w>qi</w>
+                            <w>est</w>
+                            <w>rois</w>
+                            <w>coronez</w>
+                            <pc>;</pc></q><note anchored="true">36 Il y a de plus dans B ce vers :
+                                <mentioned>C‘est Affloanz qui molt oit de
+                        fierté</mentioned></note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ne</w>
+                            <w>me</w>
+                            <w>faudra</w>
+                            <w>por</w>
+                            <w>home</w>
+                            <w>qi</w>
+                            <w>soit</w>
+                            <w>nez</w>
+                            <pc>;</pc>
+                            <note anchored="true">[1210]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Chargera</w>
+                            <w>moi</w>
+                            <pc>.</pc><w>xx</w><pc>.</pc><w>M</w><pc>.</pc>
+                            <w>homes</w>
+                            <w>armez</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ses</w>
+                            <w>amenrai</w>
+                            <w>sa</w>
+                            <w>d</w><pc>‘</pc><w>outre</w>
+                            <w>en</w>
+                            <w>cest</w>
+                            <w>resné</w>
+                            <pc>;</pc></q></l>
+                    <l n="40" part="N"><q><pc>«</pc>
+                            <w>S</w><pc>‘</pc><w>avrai</w>
+                            <w>toz</w>
+                            <pc>.</pc><w>iiij</w><pc>.</pc><pc>,</pc>
+                            <w>ce</w>
+                            <w>est</w>
+                            <w>la</w>
+                            <w>verité</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Les</w>
+                            <w>fiuz</w>
+                            <w>Guerin</w>
+                            <w>qi</w>
+                            <w>tant</w>
+                            <w>sont</w>
+                            <w>redoutez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Quant</w>
+                            <w>ensenble</w>
+                            <w>iert</w>
+                            <w>mon</w>
+                            <w>riche</w>
+                            <w>parenté</w><pc>,</pc>
+                            <note anchored="true">[1215]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>L</w><pc>.</pc>
+                            <w>M</w><pc>.</pc>
+                            <w>seromes</w>
+                            <w>adobez</w>
+                            <pc>;</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Chevaucherons</w>
+                            <w>par</w>
+                            <w>fine</w>
+                            <w>poesté</w></q></l>
+                    <l n="45" part="N"><q><pc>«</pc>
+                            <w>De</w>
+                            <w>ci</w>
+                            <w>en</w>
+                            <w>France</w>
+                            <w>sor</w>
+                            <w>les</w>
+                            <w>chevax</w>
+                            <w>armez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ne</w>
+                            <w>vos</w>
+                            <w>lerons</w>
+                            <w>ne</w>
+                            <w>chatel</w>
+                            <w>ne</w>
+                            <w>cité</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ne</w>
+                            <w>tor</w>
+                            <w>de</w>
+                            <w>pierre</w>
+                            <w>ne</w>
+                            <w>riche</w>
+                            <w>fermetez</w>
+                            <note anchored="true">[1220]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>tot</w>
+                            <w>ne</w>
+                            <w>soit</w>
+                            <w>par</w>
+                            <w>terre</w>
+                            <w>craventé</w><pc>.</pc></q></l>
+                    <l part="N"><q><w>Fos</w>
+                            <pc>!</pc><pc>»</pc></q>
+                        <w>dit</w>
+                        <w>li</w>
+                        <w>rois</w><pc>,</pc>
+                        <q><w>trop</w>
+                            <w>te</w>
+                            <!-- JBC: une série de supplied omis -->
+                            <supplied instant="false"><w>par</w></supplied>
+                            <w>es</w>
+                            <w>vantez</w>
+                            <pc>:</pc></q></l>
+                    <l n="50" part="N"><q><w>Ceste</w>
+                            <w>vantance</w>
+                            <w>me</w>
+                            <w>pris</w>
+                            <pc>.</pc><w>ij</w><pc>.</pc>
+                            <w>oes</w>
+                            <w>pelez</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><supplied instant="false"><w>A</w></supplied>
+                        <w>ces</w>
+                        <w>paroles</w>
+                        <w>qe</w>
+                        <w>vos</w>
+                        <w>dire</w>
+                        <w>m</w><pc>‘</pc><w>oez</w></l>
+                    <l part="N"><w part="N"><supplied instant="false">De</supplied>denz</w>
+                        <w>le</w>
+                        <w>tref</w>
+                        <w>en</w>
+                        <w>est</w>
+                        <w>Rollant</w>
+                        <w>entrez</w><pc>.</pc>
+                        <note anchored="true">[1225]</note></l>
+                    <l part="N"><supplied instant="false"><w>Et</w></supplied>
+                        <w>ovec</w>
+                        <w>lui</w>
+                        <w>sont</w>
+                        <w>li</w>
+                        <w>ber</w>
+                        <w>lez</w>
+                        <w>a</w>
+                        <w>lez</w><pc>.</pc></l>
+                    <l part="N"><w part="N"><supplied instant="false">De</supplied>lez</w>
+                        <w>le</w>
+                        <w>roi</w>
+                        <w>s</w><pc>‘</pc><w>est</w>
+                        <w>Rollant</w>
+                        <w>acoutez</w><pc>.</pc></l>
+                    <l n="55" part="N"><w part="N"><supplied instant="false">U</supplied>imès</w>
+                        <w>orrez</w>
+                        <w>contreres</w>
+                        <w>et</w>
+                        <w>fiertez</w><pc>,</pc></l>
+                    <l part="N"><supplied instant="false"><w>Com</w></supplied>
+                        <w>Olivier</w>
+                        <w>et</w>
+                        <w>li</w>
+                        <w>furent</w>
+                        <w>armez</w></l>
+                    <l part="N"><supplied instant="false"><w>En</w></supplied>
+                        <w rend="elision" part="N"><supplied instant="false"
+                            >l</supplied></w><pc>‘</pc><w>ille</w>
+                        <w>soz</w>
+                        <w>Viane</w><pc>.</pc>
+                        <note anchored="true">[1230]</note></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><supplied instant="false"><w>Ce</w>
+                            <w>dit</w>
+                            <w>Roll</w><pc>.</pc></supplied>
+                        <w>a</w>
+                        <w>la</w>
+                        <w>chiere</w>
+                        <w>hardie</w>
+                        <pc>:</pc></l>
+                    <l part="N"><q><pc>«</pc>
+                            <supplied instant="false"><w>Drois</w>
+                                <w>emperere</w></supplied><pc>,</pc>
+                            <w>forment</w>
+                            <w>vos</w>
+                            <w>contralie</w></q></l>
+                    <l n="60" part="N"><q><pc>«</pc>
+                            <supplied instant="false"><w>Cist</w>
+                                <w>vassaus</w>
+                                <w>ci</w></supplied><pc>,</pc>
+                            <w>ce</w>
+                            <supplied reason="lectio" instant="false"><w>est</w></supplied>
+                            <w>mout</w>
+                            <w>grant</w>
+                            <w>folie</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Olivier</w><pc>,</pc>
+                            <w>va</w><pc>!</pc>
+                            <w>tu</w>
+                            <w>pledes</w>
+                            <w>de</w>
+                            <w>folie</w>
+                            <pc>;</pc>
+                            <note>(fol. 4)</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Veus</w>
+                            <w>tu</w>
+                            <w>desdire</w>
+                            <w>par</w>
+                            <w>ta</w>
+                            <w>grant</w>
+                            <w>vanterie</w>
+                            <note>[123 5]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <w>dus</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>qi</w>
+                            <w>sa</w>
+                            <w>foi</w>
+                            <w>n</w><pc>‘</pc><w>est</w>
+                            <w>mentie</w></q><note anchored="true">63 Corr. <mentioned>q‘il n‘ait sa
+                                foi</mentioned>.</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Envers</w>
+                            <w>le</w>
+                            <w>roi</w>
+                            <w>cui</w>
+                            <w>il</w>
+                            <w rend="elision" part="N"><supplied reason="lectio" instant="false"
+                                    >l</supplied></w><pc>‘</pc><w>avoit</w>
+                            <w>plevie</w>
+                            <pc>?</pc>
+                            <pc>»</pc></q></l>
+
+                    <!--  PAS FAITE -->
+
+                    <l n="65" part="N"><w>Dist</w>
+                        <w>Olivier</w>
+                        <pc>:</pc>
+                        <q><pc>«</pc>
+                            <w>Nel</w>
+                            <w>proveriez</w>
+                            <w>mie</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Sire</w>
+                            <w>Roll</w><pc>.</pc><pc>,</pc>
+                            <w>lessiez</w>
+                            <w>vostre</w>
+                            <w>aatie</w><pc>.</pc></q><note anchored="true">66 Vers qui manque dans
+                            B</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Pleüst</w>
+                            <w>a</w>
+                            <w>Deu</w><pc>,</pc>
+                            <w>le</w>
+                            <w>fuiz</w>
+                            <w>seinte</w>
+                            <w>Marie</w><pc>,</pc></q><note anchored="true">67 C‘est bien
+                                <mentioned>fuiz</mentioned>, et non <mentioned>fiuz</mentioned>, que
+                            porte le ms.</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>La</w>
+                            <w>vostre</w>
+                            <w>foi</w>
+                            <w>me</w>
+                            <w>fust</w>
+                            <w>ore</w>
+                            <w>plevie</w>
+                            <note>[1240]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qe</w>
+                            <w>le</w>
+                            <w>matin</w><pc>,</pc>
+                            <w>par</w>
+                            <w>son</w>
+                            <w>l</w><pc>‘</pc><w>aube</w>
+                            <w>esclarcie</w></q></l>
+                    <l n="70" part="N"><q><pc>«</pc>
+                            <w>Dessoz</w>
+                            <w>Viane</w><pc>,</pc>
+                            <w>la</w>
+                            <w>fort</w>
+                            <w>cité</w>
+                            <w>garnie</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Vendrez</w>
+                            <w>en</w>
+                            <w>l</w><pc>‘</pc><w>ille</w><pc>,</pc>
+                            <w>toz</w>
+                            <w>seus</w><pc>,</pc>
+                            <w>sanz</w>
+                            <w>conpagnie</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Trestot</w>
+                            <w>armé</w>
+                            <w>el</w>
+                            <w>destrier</w>
+                            <w>de</w>
+                            <w>Sulie</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>conbatrons</w>
+                            <w>as</w>
+                            <w>espées</w>
+                            <w>forbies</w><pc>,</pc>
+                            <note>[124 5]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>por</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>a</w>
+                            <w>la</w>
+                            <w>chiere</w>
+                            <w>hardie</w><pc>,</pc></q></l>
+                    <l n="75" part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>vos</w>
+                            <w>por</w>
+                            <w>K</w><pc>.</pc>
+                            <w>a</w>
+                            <w>la</w>
+                            <w>barbe</w>
+                            <w>florie</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Rollant</w>
+                        <w>l</w><pc>‘</pc><w>entent</w><pc>,</pc>
+                        <w>tot</w>
+                        <w>le</w>
+                        <w>sens</w>
+                        <w>li</w>
+                        <w>fremie</w><pc>.</pc></l>
+                    <l part="N"><w>Honte</w>
+                        <w>ot</w>
+                        <w>por</w>
+                        <w>le</w>
+                        <w>barnaje</w><pc>.</pc></l>
+                </lg>
+                <lg part="N" org="uniform" sample="complete">
+                    <l part="N"><q><pc>«</pc>
+                            <w>Sire</w>
+                            <w>Olivier</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>dit</w>
+                        <w>Rollant</w>
+                        <w>l</w><pc>‘</pc><w>aduré</w><pc>,</pc>
+                        <note anchored="true">[1250]</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <w>dus</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>dont</w>
+                            <w>n</w><pc>‘</pc><w>est</w>
+                            <w>il</w>
+                            <w>parjuré</w></q></l>
+                    <l n="80" part="N"><q><pc>«</pc>
+                            <w>Envers</w>
+                            <w>Karlon</w><pc>,</pc>
+                            <w>le</w>
+                            <w>fort</w>
+                            <w>roi</w>
+                            <w>coroné</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Qui</w>
+                            <w>il</w>
+                            <w>plevi</w>
+                            <w>et</w>
+                            <w>foi</w>
+                            <w>et</w>
+                            <w>loiauté</w><pc>?</pc></q><note anchored="true">81
+                                <mentioned>Qui</mentioned> ou <mentioned>qi</mentioned>, le mot est
+                            abrégé; de même v. 107</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ne</w>
+                            <w>doit</w>
+                            <w>tenir</w>
+                            <w>ne</w>
+                            <w>marche</w>
+                            <w>ne</w>
+                            <w>cité</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Donjon</w>
+                            <w>ne</w>
+                            <w>vile</w><pc>;</pc><pc>,</pc>
+                            <w>chastel</w>
+                            <w>ne</w>
+                            <w>fermetez</w><pc>.</pc>
+                            <note anchored="true">[1255]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Foïr</w>
+                            <w>l</w><pc>‘</pc><w>estuet</w>
+                            <w>en</w>
+                            <w>estranje</w>
+                            <w>resné</w>
+                            <pc>»</pc><pc>,</pc></q></l>
+                    <l n="85" part="N"><q><pc>«</pc>
+                            <w>Outre</w>
+                            <w>la</w>
+                            <w>mer</w><pc>,</pc>
+                            <w part="N">au<supplied reason="lectio" instant="false">s</supplied></w>
+                            <w>paiens</w>
+                            <w>desfaez</w><pc>.</pc></q></l>
+                    <l part="N"><q><w>Sire</w>
+                            <w>Rollant</w>
+                            <pc>»</pc></q><pc>,</pc>
+                        <w>dit</w>
+                        <w>Lanbert</w>
+                        <w>l</w><pc>‘</pc><w>aduré</w><pc>,</pc></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Si</w>
+                            <w>m</w><pc>‘</pc><w>aïst</w>
+                            <w>Deu</w><pc>,</pc>
+                            <w>qe</w>
+                            <w>grant</w>
+                            <w>tort</w>
+                            <w>en</w>
+                            <w>avez</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <w>dus</w>
+                            <w>Gir</w><pc>.</pc>
+                            <w>est</w>
+                            <w>chevalier</w>
+                            <w>menbré</w>
+                            <note anchored="true">[1260]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>vassaus</w>
+                            <w>noble</w>
+                            <w>et</w>
+                            <w>de</w>
+                            <w>gerre</w>
+                            <w>adurez</w><pc>,</pc></q></l>
+                    <l n="90" part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>Olivier</w>
+                            <w>est</w>
+                            <w>chevalier</w>
+                            <w>menbrez</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>S</w><pc>‘</pc><w>estïez</w>
+                            <w>ore</w>
+                            <w>andui</w>
+                            <w>en</w>
+                            <w>mi</w>
+                            <w>ces</w>
+                            <w>prez</w><pc>,</pc><note>(v°)</note></q><note anchored="true">91 Prez
+                            est abrégé et l‘abréviation donne plutôl pré que prez.</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Ja</w>
+                            <w>de</w>
+                            <w>contrere</w>
+                            <w>n</w><pc>‘</pc><w>i</w>
+                            <w>avroit</w>
+                            <w>mot</w>
+                            <w>parlé</w><pc>.</pc><pc>»</pc></q></l>
+                    <l part="N"><w>Dit</w>
+                        <supplied reason="lectio" instant="false"><w>Olivier</w></supplied>
+                        <pc>:</pc>
+                        <q><pc>«</pc>
+                            <w>Tot</w>
+                            <w>ce</w>
+                            <w>lessiez</w>
+                            <w>ester</w>
+                            <pc>;</pc></q>
+                        <note anchored="true">[1265]</note></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Li</w>
+                            <sic><w>qens</w></sic>
+                            <w>Rollant</w>
+                            <w>si</w>
+                            <w>nos</w>
+                            <w>angoisse</w>
+                            <w>assez</w><pc>,</pc></q></l>
+                    <l n="95" part="N"><q><pc>«</pc>
+                            <w>Mès</w>
+                            <w>de</w>
+                            <w>plus</w>
+                            <w>fere</w>
+                            <w>n</w><pc>‘</pc><w>est</w>
+                            <w>pas</w>
+                            <w>entalentez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Sire</w>
+                            <w>Rollant</w><pc>,</pc>
+                            <w>envers</w>
+                            <w>moi</w>
+                            <w>entendez</w>
+                            <pc>:</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Estes</w>
+                            <w>vos</w>
+                            <w>fame</w>
+                            <w>qi</w>
+                            <w>si</w>
+                            <w>tancier</w>
+                            <w>savez</w>
+                            <pc>?</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>La</w>
+                            <w>vostre</w>
+                            <w>foi</w>
+                            <w>et</w>
+                            <w>car</w>
+                            <w>me</w>
+                            <w>craantez</w>
+                            <note anchored="true">[1270]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Dessoz</w>
+                            <w>Viane</w><pc>,</pc>
+                            <w>dedenz</w>
+                            <w>l</w><pc>‘</pc><w>ille</w>
+                            <w>vendrez</w><pc>,</pc></q></l>
+                    <l n="100" part="N"><q><pc>«</pc>
+                            <w>Le</w>
+                            <w>matinet</w><pc>,</pc>
+                            <w>qant</w>
+                            <w>solleil</w>
+                            <w>est</w>
+                            <w>levez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>N</w><pc>‘</pc><w>i</w>
+                            <w>avroiz</w>
+                            <w>home</w>
+                            <w>qi</w>
+                            <w>de</w>
+                            <w>mere</w>
+                            <w>soit</w>
+                            <w>nez</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Fors</w>
+                            <w>le</w>
+                            <w>destrier</w>
+                            <w>sor</w>
+                            <w>qoi</w>
+                            <w>serez</w>
+                            <w>montez</w></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>conbatrons</w>
+                            <w>aus</w>
+                            <w>espées</w>
+                            <w>des</w>
+                            <w>lez</w>
+                            <note anchored="true">[1275]</note></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Je</w>
+                            <w>por</w>
+                            <w>Gir</w><pc>.</pc><pc>,</pc>
+                            <w>le</w>
+                            <w>franc</w>
+                            <w>duc</w>
+                            <w>ennoré</w><pc>,</pc></q></l>
+                    <l n="105" part="N"><q><pc>«</pc>
+                            <w>Et</w>
+                            <w>por</w>
+                            <w>vostre</w>
+                            <w>oncle</w>
+                            <w>a</w>
+                            <w>moi</w>
+                            <w>vos</w>
+                            <w>conbatrez</w><pc>.</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Puis</w>
+                            <w>qe</w>
+                            <w>serons</w>
+                            <w>seul</w>
+                            <w>a</w>
+                            <w>seul</w>
+                            <w>adobez</w><pc>,</pc></q></l>
+                    <l part="N"><q><pc>«</pc>
+                            <w>Se</w>
+                            <w>n</w><pc>‘</pc><w>ait</w>
+                            <w>l</w><pc>‘</pc><w>enor</w>
+                            <w>qi</w>
+                            <w>Dex</w>
+                            <w>l</w><pc>‘</pc><w>a</w>
+                            <w>destiné</w>
+                            <pc>!</pc>
+                            <pc>»</pc></q></l>
+                    <l part="N"><w>Rollant</w>
+                        <w>l</w><pc>‘</pc><w>entent</w><pc>,</pc>
+                        <w>mout</w>
+                        <w>en</w>
+                        <w>fu</w>
+                        <w>aïré</w>
+                        <pc>;</pc>
+                        <note anchored="true">[1280]</note></l>
+                    <l part="N"><w>Ferir</w>
+                        <w>le</w>
+                        <w>vout</w><pc>,</pc>
+                        <w>mès</w>
+                        <w>il</w>
+                        <w>s</w><pc>‘</pc><w>est</w>
+                        <w>porpenssez</w></l>
+                    <l n="110" part="N"><w>Si</w>
+                        <w>le</w>
+                        <w>tochoit</w>
+                        <w>il</w>
+                        <w>en</w>
+                        <w>seroit</w>
+                        <w>blasmez</w>
+                        <pc>;</pc></l>
+                    <l part="N"><w>Bien</w>
+                        <w>doit</w>
+                        <w>message</w>
+                        <w>dire</w>
+                        <w>sa</w>
+                        <w>volenté</w><pc>.</pc></l>
+                    <l part="N"><w>De</w>
+                        <w>ce</w>
+                        <w>fu</w>
+                        <w>mout</w>
+                        <w>Rollant</w>
+                        <w>amesuré</w></l>
+                    <l part="N"><w>Qu</w><pc>‘</pc><w>il</w>
+                        <w>ne</w>
+                        <w>vot</w>
+                        <w>fere</w>
+                        <w>chose</w>
+                        <w>dont</w>
+                        <w>fust</w>
+                        <w>blasmez</w><pc>.</pc>
+                        <note anchored="true">[1285]</note></l>
+                    <l part="N"><w>Il</w>
+                        <w>tret</w>
+                        <w>son</w>
+                        <w>gant</w>
+                        <w>qui</w>
+                        <w>fu</w>
+                        <w>a</w>
+                        <w>or</w>
+                        <w>parez</w><pc>,</pc></l>
+                    <l n="115" part="N"><w>Puis</w>
+                        <w>vint</w>
+                        <w>au</w>
+                        <w>roi</w><pc>,</pc>
+                        <w>si</w>
+                        <w>li</w>
+                        <w>a</w>
+                        <w>presenté</w><pc>,</pc></l>
+                    <l part="N"><w>Son</w>
+                        <w>gaje</w>
+                        <w>done</w><pc>,</pc>
+                        <w>voiant</w>
+                        <w>tot</w>
+                        <w>le</w>
+                        <w>barné</w><pc>,</pc></l>
+                    <l part="N"><w>Vers</w>
+                        <w>Olivier</w>
+                        <w>qi</w>
+                        <w>est</w>
+                        <w>vassax</w>
+                        <w>provez</w><pc>,</pc><note anchored="true">117 Ms.
+                                <mentioned>pnez</mentioned>; B <mentioned>qui iert prous et
+                                seneiz</mentioned></note></l>
+                    <l part="N"><w>Par</w>
+                        <w>tel</w>
+                        <w>covent</w><pc>,</pc>
+                        <w>qant</w>
+                        <w>il</w>
+                        <w>seront</w>
+                        <w>montez</w>
+                        <note anchored="true">118 <mentioned>qant il</mentioned> doit être corrigé
+                            en <mentioned>q‘andui</mentioned>.</note>
+                        <note anchored="true">[1290]</note></l>
+                    <l part="N"><w>En</w>
+                        <w>la</w>
+                        <w>grant</w>
+                        <w>ille</w>
+                        <w>dessoz</w>
+                        <w>Viane</w><pc>,</pc>
+                        <w>el</w>
+                        <w>gué</w><pc>,</pc></l>
+                    <l n="120" part="N"><w>Por</w>
+                        <w>fere</w>
+                        <w>la</w>
+                        <w>bataille</w><pc>.</pc></l>
+                </lg>
+            </div>
+        </body>
+        <back>
+            <p part="N">Les pages qui précèdent étaient encore en épreuves lorsque j‘ai eu la
+                possibilité d‘examiner les trois mss. du Musée britannique (ci-dessus, p. 444) et de
+                les collationner avec les fragments de Vesoul. Il est résulté de cette comparaison
+                (ce qui coïncide avec les conclusions présentées par M. Schuld dans la dissertation
+                mentionnée plus haut) que ces trois mss. forment, pour les parties que j‘ai eu à
+                    examiner<note anchored="true">Le ms. Harl. 1321 présente une lacune de plusicurs
+                    feuillets entre les ff. 26 et 27 ; par suite la comparaison de ce ms. avec les
+                    ff. 3 et 4 de Vesoul est impossible.</note>, un premier groupe clairement
+                distinct du second groupe formé par les deux mss. de Paris. C‘est au premier groupe
+                que se rattachent les fragments de Vesoul. Ainsi les vers omis par les mss. de Paris
+                (voir pp. 4478, notes des vers 18, 23, 345, 45) se trouvent dans les mss. du Musée
+                tout comme dans nos fragments. Des trois mss. celui qui m‘a paru se rapprocher le
+                plus des fragments est le ms. 20. B. xix, bien qu‘il omette, comme le ms. fr. 1448,
+                le vers 66 (feuillet 4, p. 453). Au premier feuillet, v. 31, la leçon <mentioned>qi
+                    mout estoit lassé</mentioned>, bien peu satisfaisante, est aussi celle de 20. D.
+                xi (fol. 48 v° c) et du ms. Harleien (fol. 18 c), mais dans 20 B. xix il y a (fol.
+                14 d) <mentioned>qui toz fu tresuez</mentioned>. Il y a une remarque curieuse à
+                faire sur le v. 45 du feuillet 1. Ce vers (<mentioned>Entre le Rosne et le Rin qui
+                    est lé</mentioned>) manque dans les deux mss. de Paris. Dans ceux de Londres il
+                est remplacé par celui-ci : </p>
+            <!-- JBC: et ici, une citation de vers -->
+            <p part="N">
+                <quote>
+                    <lb/>Harl. 1321 : De Qarantin jusqu‘a mont Jenevez. <lb/>Roy. 20. B. xix : Dès
+                    Carantin juqueau monz Jenevez. <lb/>Roy. 20. D. xi : Dès Carentin jusqu‘al mont
+                    Josoé, </quote>
+            </p>
+            <p part="N">Le ms. 20. D. xi, le plus récent de tous (il ne parait guère antérieur au
+                milieu du XIVe siècle) n‘a pas grande autorité. La leçon Josoé qu‘il donne seul est
+                sûrement à rejeter. Quant au mont Jenevez, c‘est sans doute le mont Genèvre, passage
+                très fréquenté des Alpes entre Briançon et Cézane. Mais Carantin ? D‘après le
+                contexte il s‘agirait de l‘extrémité opposée de la péninsule. Il ne serait peut-être
+                pas téméraire de proposer Tarentin. Le vers omis et rétabli en note après le v. 36
+                (feuillet 3, p. 451) se présente sous cette forme : <mentioned>C‘est Afloaires qui
+                    mout a de fiertez</mentioned> (20. B. xix, fol. 23e; 20. D. xi, fol. 53 vo
+                c).</p>
+        </back>
+    </text>
+</TEI>

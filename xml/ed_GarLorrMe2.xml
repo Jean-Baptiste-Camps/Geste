@@ -1,0 +1,1794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="TEI_projet_final_documentation.odd"?>-->
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrMe2" type="ed" xml:lang="fr"
+    corresp="jns5643">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Garin le Lorrain</title>
+                <title type="sub">Numérisation de l'édition de Meyer du fragment de Gaston Paris
+                    (BnF, nouv. acq. fr. 23011?)</title>
+                <!-- JBC: j'ajoute l'éditeur -->
+                <editor xml:id="PM"><persName>Paul Meyer</persName></editor>
+                <respStmt xml:id="AZ">
+                    <resp>édition numérique</resp>
+                    <persName>Anastasiia Zadykhina</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="edGLM2">
+                    <!-- JBC: j'ajoute la structure appropriée à un article -->
+                    <analytic>
+                        <editor xml:id="Meyer">
+                            <persName>
+                                <forename>Paul</forename>
+                                <surname>Meyer</surname>
+                            </persName>
+                        </editor>
+                        <!--<title type="main">Garin le Lorrain</title>-->
+                        <title type="sub">Fragments de manuscrits français</title>
+                        <idno type="DOI">10.3406/roma.1905.5417</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <pubPlace>Paris</pubPlace>
+                            <date>1905</date>
+                        </imprint>
+                        <biblScope unit="issue" n="34">t. 34</biblScope>
+                        <biblScope unit="page" from="429" to="435">429-435</biblScope>
+                    </monogr>
+
+                    <!--<monogr>
+                        <editor xml:id="Meyer">
+                            <persName>
+                                <forename>Paul</forename>
+                                <surname>Meyer</surname>
+                            </persName>
+                        </editor>
+                        <!-\-<title type="main">Garin le Lorrain</title>-\->
+                        <title type="sub">Fragments de manuscrits français</title>
+                        <idno type="DOI">10.3406/roma.1905.5417</idno>
+                        <imprint>
+                            <publisher>Romania, <idno>34</idno></publisher>
+                            <pubPlace>Paris</pubPlace>
+                            <date>1905</date>
+                        </imprint>
+                        <biblScope unit="page" from="429" to="435">429-435</biblScope>
+                    </monogr>-->
+                </biblStruct>
+                <msDesc>
+                    <!-- JBC: bonne idée que d'ajouter le manuscrit -->
+                    <msIdentifier cert="low">
+                        <!-- JBC: attention au sens des éléments -->
+                        <!-- JBC: ajouter settlement -->
+                        <settlement>Paris</settlement>
+                        <repository><!--potentiellement le même que le -->BnF</repository>
+                        <!--<altIdentifier>-->
+                        <idno>nouv. acq. fr. 23011</idno>
+                        <!--</altIdentifier>-->
+                    </msIdentifier>
+                    <msFrag>
+                        <!-- JBC: si le msDesc correspond à un recueil factice, utiliser msPart -->
+                        <msIdentifier>
+                            <msName>Fragm. Gaston Paris</msName>
+                        </msIdentifier>
+                    </msFrag>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">traits champ. et
+                    pic</origPlace>
+                <origDate cert="unknown" resp="DEAF" notBefore="1175" notAfter="1200"
+                    type="dateComposition">1175-1200</origDate>
+                <!-- JBC: utiliser # pour les pointeurs -->
+                <origPlace cert="unknown" resp="#Meyer" type="lieuManuscrit">français
+                    central</origPlace>
+                <origDate cert="unknown" resp="#Meyer" notBefore="1280" notAfter="1300"
+                    type="dateManuscrit">1280-1300</origDate>
+            </creation>
+            <langUsage>
+                <language cert="unknown" resp="#Meyer" ident="fro">centre de la France</language>
+            </langUsage>
+        </profileDesc>
+        <!-- JBC: Description de vos choix d'encodage à ajouter -->
+        <encodingDesc>
+            <editorialDecl>
+                <p/>
+                <!-- etc. -->
+            </editorialDecl>
+        </encodingDesc>
+        <revisionDesc status="draft">
+            <!-- JBC, à faire pour l'intégration du fichier:
+                - résolution des quelques abréviations qui demeurent -> fait, mais avec une forme standard,
+                voir si peut s'améliorer.
+            -->
+            <change when="201809" who="#JBC">Correction du document</change>
+            <change who="#AZ" when="2018-04-01">Création du gabarit, transformation du fichier hocr
+                en TEI et segmentation.</change>
+            <change who="#AZ" when="2018-03-15">Création de teiHeader</change>
+        </revisionDesc>
+
+    </teiHeader>
+    <text>
+        <front>
+            <div>
+                <pb facs="00002.pdf.png" n="00002"/>
+                <!-- JBC: ajouter le titre -->
+                <head>I. Fragment de <title>Garin le Lorrain</title></head>
+                <!-- / -->
+                <!-- JBC: une éventuelle indexation des dates, lieux, personnes, serait un plus. -->
+                <p>J‘ai trouvé dans les papiers de Gaston Paris un feuillet pro<lb n="1"/>venant
+                    d‘un manuscrit dépecé des Lorrains. L‘écriture est de la <lb n="2"/>fin du XIIIe
+                    siècle. Il y a quarante vers à la colonne, soit en <lb n="3"/>tout cent soixante
+                    vers. J‘ignore absolument d‘où vient ce <lb n="4"/>feuillet : tout ce que je
+                    sais c‘est qu‘il a servi de couverture à<lb n="5"/> un registre de baptêmes,
+                    comme l‘indique une note du XVIe <lb n="6"/>siècle écrite sur la marge, mais
+                    dans quelle paroisse, je ne sau<lb n="7"/>rais dire. Cela n‘a du reste aucune
+                    importance. Je le déposerai <lb n="8"/>à la Bibliothèque nationale où on le fera
+                    entrer dans quelque <lb n="9"/>recueil de mélanges. En attendant, je crois utile
+                    de le publier, <lb n="10"/>et même d‘en donner un fac—similé partiel (le haut du
+                    recto). <lb n="11"/>Peut—être existe—t—il quelque part d‘autres morceaux du même
+                    livre : le fac—similé facilitera l‘identification.</p>
+                <p>Ces cent soixante vers correspondent aux <!-- JBC: bibl pourrait être plus adapté -->
+                    <ref>vers 3221—3373 de <lb n="12"/>La Mort de Garin d‘Edélestand Du Méril
+                        (Paris, 1846, pp. 151— <lb n="13"/>8)</ref>. Je suis à peu près sûr qu‘il ne
+                    s‘y rencontre aucune leçon <lb n="14"/>de quelque valeur qui ne se trouve déjà
+                    dans tel ou tel des <lb n="15"/>nombreux mss. qu‘on possède de Garin — ce qui ne
+                    se peut <lb n="16"/>vérifier avec l‘édition de Du Méril, où le texte est
+                    constitué <lb n="17"/>de la façon la plus arbitraire et où les variantes ne sont
+                    pas <lb n="18"/>publiées, mais ce que j‘aurais pu établir sans peine à l‘aide
+                    des <lb n="19"/>ressources de nos bibliothèques de Paris. Je n‘ai pas jugé à
+                        pro<lb n="20"/>pos, toutefois, de relever en note les variantes des
+                    manuscrits, <lb n="21"/>comme je l‘ai fait autrefois à propos d‘autres fragments
+                    sur lesquels <lb n="22"/>j‘ai eu à faire des rapports au Comité des travaux
+                    historiques. <lb n="23"/>Actuellement les études sur Garin sont beaucoup plus
+                    avancées <lb n="24"/>que jadis. M. Stengel publiera prochainement une édition de
+                    ce <lb n="25"/>vaste et intéressart poème, et il indiquera sans peine, et
+                        avec<lb n="26"/>
+                    <pb facs="0003.pdf.png" n="00003"/>
+                    <!-- 430 P. MEYER --> plus de précision que ce que je pourrais faire, la famille
+                        à<lb n="1"/> laquelle appartient le fragment dont je vais donner la tran<lb
+                        n="2"/>scription.</p>
+                <p>Ce fragment ne présente pas de caractères linguistiques bien <lb n="3"/>marqués :
+                    c‘est le français commun du centre de la France. <lb n="4"/>Quelques détails
+                    cependant peuvent être relevés ;
+                    <!-- JBC: encoder les mots ou lettres qui ne sont que mentionnés ou cités. -->
+                        l‘<mentioned>s</mentioned> tombe très <lb n="5"/>souvent avant une consonne
+                    : <mentioned>poteïs</mentioned>
+                    <!-- JBC: excellente idée que de pointer vers les occurrences. -->
+                    <ref corresp="#edGLM2_w_000006">1</ref>, <mentioned>futes</mentioned>
+                    <ref corresp="#edGLM2_w_000048 #edGLM2_w_001097"> 7, 151 </ref><note
+                        resp="#Meyer"><lb n="6"/>1. Cf. pour la date de ce phénomène
+                        <!-- JBC: encodage références bibliographiques? --> Raoul de Cambrai, p.
+                        lxxxviij ; Roma<lb n="7"/>nia, XV, 616 , XVIII, 572 , XIX, 459. Le phénomène
+                        est constant dans l 'ancien glossaire hébreu—français publié par M .
+                        Neubauer, Roman . Stud., I.</note>; l‘<mentioned>l</mentioned> finale <lb
+                        n="8"/>se vocalise, même devenue une voyelle dans
+                        <mentioned>chevau</mentioned>, 21, 46—7, <lb n="9"/>72, 160 ; le groupe
+                        <mentioned>qu</mentioned> se réduit régulièrement à <mentioned>q</mentioned>
+                    (ainsi <mentioned>qi</mentioned>
+                    <ref corresp="#edGLM2_w_000033 #edGLM2_w_000232">5, 31,</ref>
+                    <lb n="10"/><mentioned>qe</mentioned>
+                    <ref corresp="#edGLM2_w_000182 #edGLM2_w_000257 #edGLM2_w_000300">25, 35,
+                        41</ref>, <mentioned>qant</mentioned>
+                    <ref corresp="#edGLM2_w_000744">102</ref>, <mentioned>qel</mentioned>
+                    <ref corresp="#edGLM2_w_000139">19</ref>, <mentioned>adonqes</mentioned>
+                    <ref corresp="#edGLM2_w_000439">59</ref>, etc.), fait de pure gra<lb n="11"
+                    />phie dont on a d‘assez nombreux exemples dans des manuscrits <lb n="12"
+                    />exécutés dans la France centrale <note resp="#Meyer"><lb n="13"/>2. Ce fait
+                        est très fréquent dans les manuscrits français executés en Italie. J‘ai eu
+                        tort de dire qu‘il était rare en France (Raoul de Cambrai , p. lxxxiij). Il
+                        est habituel dans les fragments de Girart de Vienne publiés plus loin
+                        .</note>. Remarquons encore que <lb n="14"/><mentioned>rompi</mentioned>
+                    <ref corresp="#edGLM2_w_000327">44</ref>, <mentioned>ronpi</mentioned>
+                    <ref corresp="#edGLM2_w_000582">79</ref>, <mentioned>rompent</mentioned>
+                    <ref corresp="#edGLM2_w_000585">80</ref>, sont écrits en toutes lettres : de <lb
+                        n="15"/>même <mentioned>con</mentioned>
+                    <ref corresp="#edGLM2_w_000041 #edGLM2_w_000425">6, 57</ref>,
+                        <mentioned>com</mentioned>
+                    <ref corresp="#edGLM2_w_000622">85</ref>. Aux <ref
+                        corresp="#edGLM2_w_000643 #edGLM2_w_000994">vers 88 et 136</ref> il y a
+                        clairement<lb n="16"/>
+                    <mentioned>fuiz</mentioned><note resp="#Meyer"><lb n="17"/>3. On sait que cette
+                        notation est ordinaire dans les textes français écrits en Angleterre, mais
+                        il y en a bien des exemples dans des manuscrits propre<lb n="18"/>ment
+                        français .</note> ; ailleurs il est difficile de se décider entre
+                        <mentioned>fiuz</mentioned> et <mentioned>fuiz</mentioned>.</p>
+            </div>
+        </front>
+        <body>
+            <lg n="I" type="laisse" xml:id="L_001">
+                <lb n="19"/>
+                <l n="1" xml:id="edGLM2_l_1">
+                    <w xml:id="edGLM2_w_000001">Del</w>
+                    <w xml:id="edGLM2_w_000002">linage</w>
+                    <w xml:id="edGLM2_w_000003">est</w>
+                    <w xml:id="edGLM2_w_000004">Fromont</w>
+                    <w xml:id="edGLM2_w_000005">le</w>
+                    <w xml:id="edGLM2_w_000006">poteïs</w><pc type="supplied">;</pc></l>
+                <lb n="20"/>
+                <l n="2" xml:id="edGLM2_l_2">
+                    <w xml:id="edGLM2_w_000007">Sor</w>
+                    <w xml:id="edGLM2_w_000008">une</w>
+                    <w xml:id="edGLM2_w_000009">roche</w>
+                    <w xml:id="edGLM2_w_000010">durement</w>
+                    <w xml:id="edGLM2_w_000011" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000012">abati</w><pc type="supplied">;</pc></l>
+                <lb n="21"/>
+                <l n="3" xml:id="edGLM2_l_3">
+                    <w xml:id="edGLM2_w_000013">Le</w>
+                    <w xml:id="edGLM2_w_000014">cou</w>
+                    <w xml:id="edGLM2_w_000015">desnoe</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000016">si</w>
+                    <w xml:id="edGLM2_w_000017">est</w>
+                    <w xml:id="edGLM2_w_000018">brisiez</w>
+                    <w xml:id="edGLM2_w_000019">par</w>
+                    <w xml:id="edGLM2_w_000020">mi</w><pc type="supplied">;</pc></l>
+                <lb n="22"/>
+                <l n="4" xml:id="edGLM2_l_4">
+                    <w xml:id="edGLM2_w_000021">Li</w>
+                    <w xml:id="edGLM2_w_000022">cors</w>
+                    <w xml:id="edGLM2_w_000023" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000024">estent</w>
+                    <w xml:id="edGLM2_w_000025">et</w>
+                    <w xml:id="edGLM2_w_000026" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000027">ame</w>
+                    <w xml:id="edGLM2_w_000028" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000029">en</w>
+                    <w xml:id="edGLM2_w_000030">parti</w><pc type="supplied">.</pc></l>
+                <lb n="23"/>
+                <l n="5" xml:id="edGLM2_l_5">
+                    <w xml:id="edGLM2_w_000031">B</w><pc type="supplied">.</pc><!-- JBC: tenter de signaler ou développer l'abréviation? -->
+                    <w xml:id="edGLM2_w_000032">chevauche</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000033">qi</w>
+                    <w xml:id="edGLM2_w_000034">mort</w>
+                    <w xml:id="edGLM2_w_000035">trova</w>
+                    <w xml:id="edGLM2_w_000036">son</w>
+                    <w xml:id="edGLM2_w_000037">fil</w><pc type="supplied">;</pc></l>
+                <lb n="24"/>
+                <l n="6" xml:id="edGLM2_l_6">
+                    <w xml:id="edGLM2_w_000038">Il</w>
+                    <w xml:id="edGLM2_w_000039">le</w>
+                    <w xml:id="edGLM2_w_000040">regrete</w>
+                    <w xml:id="edGLM2_w_000041">con</w>
+                    <w xml:id="edGLM2_w_000042">ja</w>
+                    <w xml:id="edGLM2_w_000043">porrez</w>
+                    <w xml:id="edGLM2_w_000044">oïr</w><pc type="supplied">:</pc></l>
+                <lb n="25"/>
+                <l n="7" xml:id="edGLM2_l_7"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000045">Tant</w>
+                        <w xml:id="edGLM2_w_000046">mare</w>
+                        <w xml:id="edGLM2_w_000047">i</w>
+                        <w xml:id="edGLM2_w_000048">futes</w><pc type="supplied">!</pc>
+                        <w xml:id="edGLM2_w_000049">franc</w>
+                        <w xml:id="edGLM2_w_000050">chevalier</w>
+                        <w xml:id="edGLM2_w_000051">gentil</w><pc type="supplied">;</pc></q></l>
+                <lb n="26"/>
+                <l n="8" xml:id="edGLM2_l_8"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000052">Or</w>
+                        <w xml:id="edGLM2_w_000053">puis</w>
+                        <w xml:id="edGLM2_w_000054">je</w>
+                        <w xml:id="edGLM2_w_000055">dire</w>
+                        <w xml:id="edGLM2_w_000056">malement</w>
+                        <w xml:id="edGLM2_w_000057">sui</w>
+                        <w xml:id="edGLM2_w_000058">bailli</w><pc type="supplied">:</pc></q></l>
+                <lb n="27"/>
+                <l n="9" xml:id="edGLM2_l_9"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000059">Abatu</w>
+                        <w xml:id="edGLM2_w_000060">
+                            <w xml:id="edGLM2_w_000061" rend="elision">m</w><pc type="supplied">'</pc>ont</w>
+                        <w xml:id="edGLM2_w_000062">mon</w>
+                        <w xml:id="edGLM2_w_000063">chastel</w>
+                        <w xml:id="edGLM2_w_000064">de</w>
+                        <w xml:id="edGLM2_w_000065">Nesil</w><pc type="supplied">,</pc></q></l>
+                <lb n="28"/>
+                <l n="10" xml:id="edGLM2_l_10"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000066">Et</w>
+                        <w xml:id="edGLM2_w_000067">je</w>
+                        <w xml:id="edGLM2_w_000068">vos</w>
+                        <w xml:id="edGLM2_w_000069">voi</w>
+                        <w xml:id="edGLM2_w_000070">a</w>
+                        <w xml:id="edGLM2_w_000071">la</w>
+                        <w xml:id="edGLM2_w_000072">terre</w>
+                        <w xml:id="edGLM2_w_000073">gesir</w><pc type="supplied">.</pc></q></l>
+                <lb n="29"/>
+                <l n="11" xml:id="edGLM2_l_11"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000074">Certes</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000075">ma</w>
+                        <w xml:id="edGLM2_w_000076">vie</w>
+                        <w xml:id="edGLM2_w_000077">pris</w>
+                        <w xml:id="edGLM2_w_000078">je</w>
+                        <w xml:id="edGLM2_w_000079">ore</w>
+                        <w xml:id="edGLM2_w_000080">petit</w><pc type="supplied">,</pc></q></l>
+                <lb n="30"/>
+                <l n="12" xml:id="edGLM2_l_12"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000081">Ne</w>
+                        <w xml:id="edGLM2_w_000082">moi</w>
+                        <w xml:id="edGLM2_w_000083">ne</w>
+                        <w xml:id="edGLM2_w_000084">chaut</w>
+                        <w xml:id="edGLM2_w_000085">qel</w>
+                        <w xml:id="edGLM2_w_000086">part</w>
+                        <w xml:id="edGLM2_w_000087">doie</w>
+                        <w xml:id="edGLM2_w_000088">ganchir</w><pc type="supplied">.</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="31"/>
+                <l n="13" xml:id="edGLM2_l_13">
+                    <w xml:id="edGLM2_w_000089">Enz</w>
+                    <sic><w xml:id="edGLM2_w_000090">enz</w></sic><!--<note>(sic)</note>--><!-- JBC: encoder plutôt que d'utiliser la note -->
+                    <w xml:id="edGLM2_w_000091" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000092">estor</w>
+                    <w xml:id="edGLM2_w_000093">par</w>
+                    <w xml:id="edGLM2_w_000094">mautalent</w>
+                    <w xml:id="edGLM2_w_000095">se</w>
+                    <w xml:id="edGLM2_w_000096">mist</w></l>
+                <lb n="32"/>
+                <l n="14" xml:id="edGLM2_l_14">
+                    <w xml:id="edGLM2_w_000097">Et</w>
+                    <w xml:id="edGLM2_w_000098">fiert</w>
+                    <w xml:id="edGLM2_w_000099">Beraut</w>
+                    <w xml:id="edGLM2_w_000100">qi</w>
+                    <w xml:id="edGLM2_w_000101">fu</w>
+                    <w xml:id="edGLM2_w_000102">nez</w>
+                    <w xml:id="edGLM2_w_000103">de</w>
+                    <w xml:id="edGLM2_w_000104">Poissi</w><pc type="supplied">:</pc></l>
+
+                <!-- FRAGMENT DE GARIN LE LORRAIN 431 -->
+                <pb facs="0004.pdf.png" n="00004"/>
+                <l n="15" xml:id="edGLM2_l_15">
+                    <w xml:id="edGLM2_w_000105">Senglant</w>
+                    <w xml:id="edGLM2_w_000106">en</w>
+                    <w xml:id="edGLM2_w_000107">ot</w>
+                    <w xml:id="edGLM2_w_000108">la</w>
+                    <w xml:id="edGLM2_w_000109">poitrine</w>
+                    <w xml:id="edGLM2_w_000110">et</w>
+                    <w xml:id="edGLM2_w_000111">le</w>
+                    <w xml:id="edGLM2_w_000112">piz</w><pc type="supplied">;</pc></l>
+                <lb n="1"/>
+                <l n="16" xml:id="edGLM2_l_16">
+                    <w xml:id="edGLM2_w_000113">De</w>
+                    <w xml:id="edGLM2_w_000114">Godefroi</w>
+                    <w xml:id="edGLM2_w_000115">en</w>
+                    <w xml:id="edGLM2_w_000116">a</w>
+                    <w xml:id="edGLM2_w_000117">la</w>
+                    <w xml:id="edGLM2_w_000118">teste</w>
+                    <w xml:id="edGLM2_w_000119">pris</w><pc type="supplied">.</pc></l>
+                <lb n="2"/>
+                <l n="17" xml:id="edGLM2_l_17">
+                    <w xml:id="edGLM2_w_000120">Qi</w>
+                    <w xml:id="edGLM2_w_000121">donc</w>
+                    <w xml:id="edGLM2_w_000122">veïst</w>
+                    <w xml:id="edGLM2_w_000123">Bernart</w>
+                    <w xml:id="edGLM2_w_000124">au</w>
+                    <w xml:id="edGLM2_w_000125">brant</w>
+                    <w xml:id="edGLM2_w_000126">ferir</w><pc type="supplied">!</pc></l>
+                <lb n="3"/>
+                <l n="18" xml:id="edGLM2_l_18">
+                    <w xml:id="edGLM2_w_000127">A</w>
+                    <w xml:id="edGLM2_w_000128">haute</w>
+                    <w xml:id="edGLM2_w_000129">voiz</w>
+                    <w xml:id="edGLM2_w_000130">a</w>
+                    <w xml:id="edGLM2_w_000131">escrié</w><pc type="supplied">:</pc><pc
+                        type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000132">Nesil</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="4"/>
+                <l n="19" xml:id="edGLM2_l_19">
+                    <w xml:id="edGLM2_w_000133">Dist</w>
+                    <w xml:id="edGLM2_w_000134" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000135">un</w>
+                    <w xml:id="edGLM2_w_000136">a</w>
+                    <w xml:id="edGLM2_w_000137" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000138">autre</w><pc type="supplied">:</pc><pc
+                        type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000139">Qel</w>
+                        <w xml:id="edGLM2_w_000140">chevalier</w>
+                        <w xml:id="edGLM2_w_000141">a</w>
+                        <w xml:id="edGLM2_w_000142">ci</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="5"/>
+                <l n="20" xml:id="edGLM2_l_20">
+                    <w xml:id="edGLM2_w_000143">Devant</w>
+                    <w xml:id="edGLM2_w_000144">lui</w>
+                    <w xml:id="edGLM2_w_000145">garde</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000146" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000147">a</w>
+                    <w xml:id="edGLM2_w_000148"><pc type="supplied">.</pc>j</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_000149">espié</w>
+                    <w xml:id="edGLM2_w_000150">choisi</w><pc type="supplied">;</pc></l>
+                <lb n="6"/>
+                <l n="21" xml:id="edGLM2_l_21">
+                    <w xml:id="edGLM2_w_000151">De</w>
+                    <w xml:id="edGLM2_w_000152">son</w>
+                    <w xml:id="edGLM2_w_000153">chevau</w>
+                    <w xml:id="edGLM2_w_000154" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000155">abessa</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000156">si</w>
+                    <w xml:id="edGLM2_w_000157">le</w>
+                    <w xml:id="edGLM2_w_000158">prist</w></l>
+                <lb n="7"/>
+                <l n="22" xml:id="edGLM2_l_22">
+                    <w xml:id="edGLM2_w_000159">Et</w>
+                    <w xml:id="edGLM2_w_000160">vet</w>
+                    <w xml:id="edGLM2_w_000161">ferir</w>
+                    <w xml:id="edGLM2_w_000162">de</w>
+                    <w xml:id="edGLM2_w_000163">Mont</w>
+                    <w xml:id="edGLM2_w_000164" rend="elision">d</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000165">Ausois</w>
+                    <w xml:id="edGLM2_w_000166">Terri</w><pc type="supplied">;</pc></l>
+                <lb n="8"/>
+                <l n="23" xml:id="edGLM2_l_23">
+                    <w xml:id="edGLM2_w_000167">Icil</w>
+                    <w xml:id="edGLM2_w_000168">fu</w>
+                    <w xml:id="edGLM2_w_000169">oncles</w>
+                    <w xml:id="edGLM2_w_000170">au</w>
+                    <w xml:id="edGLM2_w_000171">Lohorenc</w>
+                    <w xml:id="edGLM2_w_000172">Garin</w><pc type="supplied">.</pc></l>
+                <lb n="9"/>
+                <l n="24" xml:id="edGLM2_l_24">
+                    <w xml:id="edGLM2_w_000173" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000174">auberc</w>
+                    <w xml:id="edGLM2_w_000175">li</w>
+                    <w xml:id="edGLM2_w_000176">trenche</w>
+                    <w xml:id="edGLM2_w_000177">sor</w>
+                    <w xml:id="edGLM2_w_000178">le</w>
+                    <w xml:id="edGLM2_w_000179">peliçon</w>
+                    <w xml:id="edGLM2_w_000180">gris</w></l>
+                <lb n="10"/>
+                <l n="25" xml:id="edGLM2_l_25">
+                    <w xml:id="edGLM2_w_000181">Si</w>
+                    <w xml:id="edGLM2_w_000182">qe</w>
+                    <w xml:id="edGLM2_w_000183">la</w>
+                    <w xml:id="edGLM2_w_000184">pane</w>
+                    <w xml:id="edGLM2_w_000185">del</w>
+                    <w xml:id="edGLM2_w_000186">cuer</w>
+                    <w xml:id="edGLM2_w_000187">li</w>
+                    <w xml:id="edGLM2_w_000188">ront</w>
+                    <w xml:id="edGLM2_w_000189">par</w>
+                    <w xml:id="edGLM2_w_000190">mi</w><pc type="supplied">.</pc></l>
+                <lb n="11"/>
+                <l n="26" xml:id="edGLM2_l_26">
+                    <w xml:id="edGLM2_w_000191">Il</w>
+                    <w xml:id="edGLM2_w_000192">chiet</w>
+                    <w xml:id="edGLM2_w_000193">a</w>
+                    <w xml:id="edGLM2_w_000194">terre</w>
+                    <w xml:id="edGLM2_w_000195">et</w>
+                    <w xml:id="edGLM2_w_000196">crie</w><pc type="supplied">:</pc><pc
+                        type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000197">Diex</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000198">merci</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="12"/>
+                <l n="27" xml:id="edGLM2_l_27">
+                    <w xml:id="edGLM2_w_000199">Garin</w>
+                    <w xml:id="edGLM2_w_000200">le</w>
+                    <w xml:id="edGLM2_w_000201">voit</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000202">a</w>
+                    <w xml:id="edGLM2_w_000203">poi</w>
+                    <w xml:id="edGLM2_w_000204" rend="elision">n</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000205">enrage</w>
+                    <w xml:id="edGLM2_w_000206">vis</w><pc type="supplied">:</pc></l>
+                <lb n="13"/>
+                <l n="28" xml:id="edGLM2_l_28">
+                    <w xml:id="edGLM2_w_000207">Le</w>
+                    <w xml:id="edGLM2_w_000208">destrier</w>
+                    <w xml:id="edGLM2_w_000209">broche</w>
+                    <w xml:id="edGLM2_w_000210">des</w>
+                    <w xml:id="edGLM2_w_000211">esperons</w>
+                    <w xml:id="edGLM2_w_000212" rend="elision">d</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000213">or</w>
+                    <w xml:id="edGLM2_w_000214">fin</w><pc type="supplied">,</pc></l>
+                <lb n="14"/>
+                <l n="29" xml:id="edGLM2_l_29">
+                    <w xml:id="edGLM2_w_000215">Brandist</w>
+                    <w xml:id="edGLM2_w_000216">la</w>
+                    <w xml:id="edGLM2_w_000217">hante</w>
+                    <w xml:id="edGLM2_w_000218">de</w>
+                    <w xml:id="edGLM2_w_000219" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000220">espié</w>
+                    <w xml:id="edGLM2_w_000221">poitevin</w><pc type="supplied">;</pc></l>
+                <lb n="15"/>
+                <l n="30" xml:id="edGLM2_l_30">
+                    <w xml:id="edGLM2_w_000222">Dont</w>
+                    <w xml:id="edGLM2_w_000223">li</w>
+                    <w xml:id="edGLM2_w_000224">remenbre</w>
+                    <w xml:id="edGLM2_w_000225">de</w>
+                    <w xml:id="edGLM2_w_000226">Huon</w>
+                    <w xml:id="edGLM2_w_000227">le</w>
+                    <w xml:id="edGLM2_w_000228">meschin</w><pc type="supplied">,</pc></l>
+                <lb n="16"/>
+                <l n="31" xml:id="edGLM2_l_31">
+                    <w xml:id="edGLM2_w_000229">Le</w>
+                    <w xml:id="edGLM2_w_000230">riche</w>
+                    <w xml:id="edGLM2_w_000231">conte</w>
+                    <w xml:id="edGLM2_w_000232">qi</w>
+                    <w xml:id="edGLM2_w_000233">tenoit</w>
+                    <w xml:id="edGLM2_w_000234">Cambresin</w></l>
+                <lb n="17"/>
+                <l n="32" xml:id="edGLM2_l_32">
+                    <w xml:id="edGLM2_w_000235">Qe</w>
+                    <w xml:id="edGLM2_w_000236">dant</w>
+                    <w xml:id="edGLM2_w_000237">Bernart</w>
+                    <w xml:id="edGLM2_w_000238">par</w>
+                    <w xml:id="edGLM2_w_000239">traïson</w>
+                    <w xml:id="edGLM2_w_000240">ocist</w><pc type="supplied">:</pc></l>
+                <lb n="18"/>
+                <l n="33" xml:id="edGLM2_l_33"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000241">Sainte</w>
+                        <w xml:id="edGLM2_w_000242">Marie</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc>ce <w xml:id="edGLM2_w_000243">dit</w>
+                    <w xml:id="edGLM2_w_000244">li</w>
+                    <w xml:id="edGLM2_w_000245">dus</w>
+                    <w xml:id="edGLM2_w_000246"><choice>
+                            <abbr><!-- cert="low">-->Ga<pc>.</pc></abbr><!-- JBC: je mettrais le cert plutôt sur la résolution, 
+                        avec une mention de responsabilité
+                        -->
+                            <expan cert="medium" resp="#AZ">Ga<ex>rins</ex></expan>
+                        </choice></w><pc type="supplied">,</pc></l>
+                <lb n="19"/>
+                <l n="34" xml:id="edGLM2_l_34"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000247">Ja</w>
+                        <w xml:id="edGLM2_w_000248">voi</w>
+                        <w xml:id="edGLM2_w_000249">je</w>
+                        <w xml:id="edGLM2_w_000250">ci</w>
+                        <w xml:id="edGLM2_w_000251">mon</w>
+                        <w xml:id="edGLM2_w_000252">mortel</w>
+                        <w xml:id="edGLM2_w_000253">anemi</w><pc type="supplied">,</pc></q></l>
+                <lb n="20"/>
+                <l n="35" xml:id="edGLM2_l_35"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000254">Le</w>
+                        <w xml:id="edGLM2_w_000255">plus</w>
+                        <w xml:id="edGLM2_w_000256">felon</w>
+                        <w xml:id="edGLM2_w_000257">qe</w>
+                        <w xml:id="edGLM2_w_000258">deables</w>
+                        <w xml:id="edGLM2_w_000259">feïst</w><pc type="supplied">,</pc></q></l>
+                <lb n="21"/>
+                <l n="36" xml:id="edGLM2_l_36"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000260">Qi</w>
+                        <w xml:id="edGLM2_w_000261">devant</w>
+                        <w xml:id="edGLM2_w_000262">moi</w>
+                        <w xml:id="edGLM2_w_000263">
+                            <w xml:id="edGLM2_w_000264" rend="elision">m</w><pc type="supplied">'</pc>a</w>
+                        <w xml:id="edGLM2_w_000265">ci</w>
+                        <w xml:id="edGLM2_w_000266">mon</w>
+                        <w xml:id="edGLM2_w_000267">oncle</w>
+                        <w xml:id="edGLM2_w_000268">ocis</w><pc type="supplied">;</pc></q></l>
+                <lb n="22"/>
+                <l n="37" xml:id="edGLM2_l_37"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000269">En</w>
+                        <w xml:id="edGLM2_w_000270">traïson</w>
+                        <w xml:id="edGLM2_w_000271">vers</w>
+                        <w xml:id="edGLM2_w_000272">Huon</w>
+                        <w xml:id="edGLM2_w_000273">entreprist</w><pc type="supplied">.</pc></q></l>
+                <lb n="23"/>
+                <l n="38" xml:id="edGLM2_l_38"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000274">Se</w>
+                        <w xml:id="edGLM2_w_000275">einsi</w>
+                        <w xml:id="edGLM2_w_000276">me</w>
+                        <w xml:id="edGLM2_w_000277">eschape</w>
+                        <w xml:id="edGLM2_w_000278">je</w>
+                        <w xml:id="edGLM2_w_000279">me</w>
+                        <w xml:id="edGLM2_w_000280">prise</w>
+                        <w xml:id="edGLM2_w_000281">petit</w><pc type="supplied">:</pc></q></l>
+                <lb n="24"/>
+                <l n="39" xml:id="edGLM2_l_39"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000282">Ou</w>
+                        <w xml:id="edGLM2_w_000283">je</w>
+                        <w xml:id="edGLM2_w_000284">morré</w>
+                        <w xml:id="edGLM2_w_000285">ou</w>
+                        <w xml:id="edGLM2_w_000286">li</w>
+                        <w xml:id="edGLM2_w_000287">covient</w>
+                        <w xml:id="edGLM2_w_000288">morir</w><pc type="supplied">;</pc></q></l>
+                <lb n="25"/>
+                <l n="40" xml:id="edGLM2_l_40"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000289">Or</w>
+                        <w xml:id="edGLM2_w_000290">me</w>
+                        <w xml:id="edGLM2_w_000291">comant</w>
+                        <w xml:id="edGLM2_w_000292">au</w>
+                        <w xml:id="edGLM2_w_000293">roi</w>
+                        <w xml:id="edGLM2_w_000294">de</w>
+                        <w xml:id="edGLM2_w_000295">paradis</w><pc type="supplied">.</pc></q></l>
+                <lb n="26"/>
+                <l n="41" xml:id="edGLM2_l_41"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000296">Ahi<pc type="supplied">!</pc></w>
+                        <w xml:id="edGLM2_w_000297">Rigaut</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000298">biax</w>
+                        <w xml:id="edGLM2_w_000299">niés</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000300">qe</w>
+                        <w xml:id="edGLM2_w_000301" rend="elision">n</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000302">es</w>
+                        <w xml:id="edGLM2_w_000303">or</w>
+                        <w xml:id="edGLM2_w_000304">ci</w><pc type="supplied">?</pc></q><pc
+                        type="supplied">»</pc><note>(b)</note><!-- JBC: plus qu'une note, il s'agit d'un changement de feuillet 
+                        dans le manuscrit.
+                        --></l>
+                <lb n="27"/>
+                <l n="42" xml:id="edGLM2_l_42">
+                    <w xml:id="edGLM2_w_000305">De</w>
+                    <w xml:id="edGLM2_w_000306">son</w>
+                    <w xml:id="edGLM2_w_000307">fin</w>
+                    <w xml:id="edGLM2_w_000308">cuer</w>
+                    <w xml:id="edGLM2_w_000309">ala</w>
+                    <w xml:id="edGLM2_w_000310">Bernart</w>
+                    <w xml:id="edGLM2_w_000311">ferir</w><pc type="supplied">:</pc></l>
+                <lb n="28"/>
+                <l n="43" xml:id="edGLM2_l_43">
+                    <w xml:id="edGLM2_w_000312">Toute</w>
+                    <w xml:id="edGLM2_w_000313">sa</w>
+                    <w xml:id="edGLM2_w_000314">force</w>
+                    <w xml:id="edGLM2_w_000315">par</w>
+                    <w xml:id="edGLM2_w_000316">bon</w>
+                    <w xml:id="edGLM2_w_000317">corage</w>
+                    <w xml:id="edGLM2_w_000318">i</w>
+                    <w xml:id="edGLM2_w_000319">mist</w><pc type="supplied">;</pc></l>
+                <lb n="29"/>
+                <l n="44" xml:id="edGLM2_l_44">
+                    <w xml:id="edGLM2_w_000320" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000321">escu</w>
+                    <w xml:id="edGLM2_w_000322">li</w>
+                    <w xml:id="edGLM2_w_000323">trenche</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000324">le</w>
+                    <w xml:id="edGLM2_w_000325">haubert</w>
+                    <w xml:id="edGLM2_w_000326">li</w>
+                    <w xml:id="edGLM2_w_000327">rompi</w><pc type="supplied">;</pc></l>
+                <lb n="30"/>
+                <l n="45" xml:id="edGLM2_l_45">
+                    <w xml:id="edGLM2_w_000328">Parmi</w>
+                    <w xml:id="edGLM2_w_000329">les</w>
+                    <w xml:id="edGLM2_w_000330">flans</w>
+                    <w xml:id="edGLM2_w_000331">li</w>
+                    <w xml:id="edGLM2_w_000332">a</w>
+                    <w xml:id="edGLM2_w_000333">son</w>
+                    <w xml:id="edGLM2_w_000334">espié</w>
+                    <w xml:id="edGLM2_w_000335">mis</w><pc type="supplied">,</pc></l>
+                <lb n="31"/>
+                <l n="46" xml:id="edGLM2_l_46">
+                    <w xml:id="edGLM2_w_000336">Del</w>
+                    <w xml:id="edGLM2_w_000337">bon</w>
+                    <w xml:id="edGLM2_w_000338">chevau</w>
+                    <w xml:id="edGLM2_w_000339">a</w>
+                    <w xml:id="edGLM2_w_000340">terre</w>
+                    <w xml:id="edGLM2_w_000341" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000342">abati</w><pc type="supplied">;</pc></l>
+                <lb n="32"/>
+                <l n="47" xml:id="edGLM2_l_47">
+                    <w xml:id="edGLM2_w_000343">Entre</w>
+                    <w xml:id="edGLM2_w_000344">les</w>
+                    <w xml:id="edGLM2_w_000345">piez</w>
+                    <w xml:id="edGLM2_w_000346">de</w>
+                    <w xml:id="edGLM2_w_000347">son</w>
+                    <w xml:id="edGLM2_w_000348">chevau</w>
+                    <w xml:id="edGLM2_w_000349">le</w>
+                    <w xml:id="edGLM2_w_000350">mist</w><pc type="supplied">;</pc></l>
+                <lb n="33"/>
+                <l n="48" xml:id="edGLM2_l_48">
+                    <w xml:id="edGLM2_w_000351">Par</w>
+                    <w xml:id="edGLM2_w_000352">deseur</w>
+                    <w xml:id="edGLM2_w_000353">lui</w>
+                    <w xml:id="edGLM2_w_000354">en</w>
+                    <w xml:id="edGLM2_w_000355">passerent</w>
+                    <w xml:id="edGLM2_w_000356">bien</w>
+                    <w xml:id="edGLM2_w_000357"><pc type="supplied">.</pc>M</w><pc type="supplied"
+                        >.</pc></l>
+                <lb n="34"/>
+                <l n="49" xml:id="edGLM2_l_49">
+                    <w xml:id="edGLM2_w_000358" rend="elision">S</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000359">il</w>
+                    <w xml:id="edGLM2_w_000360">ot</w>
+                    <w xml:id="edGLM2_w_000361">engoisse</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000362">li</w>
+                    <w xml:id="edGLM2_w_000363">covient</w>
+                    <w xml:id="edGLM2_w_000364">a</w>
+                    <w xml:id="edGLM2_w_000365">sofrir</w><pc type="supplied">.</pc></l>
+                <lb n="35"/>
+                <l n="50" xml:id="edGLM2_l_50">
+                    <w xml:id="edGLM2_w_000366">Moines</w>
+                    <w xml:id="edGLM2_w_000367" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000368">en</w>
+                    <w xml:id="edGLM2_w_000369">portent</w><pc type="supplied">;</pc>
+                    <w xml:id="edGLM2_w_000370">sor</w>
+                    <w xml:id="edGLM2_w_000371"><pc type="supplied">.</pc>j</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_000372">escu</w>
+                    <w xml:id="edGLM2_w_000373" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000374">ont</w>
+                    <w xml:id="edGLM2_w_000375">mis</w><pc type="supplied">,</pc></l>
+                <lb n="36"/>
+                <l n="51" xml:id="edGLM2_l_51">
+                    <w xml:id="edGLM2_w_000376">Jusqe</w>
+                    <w xml:id="edGLM2_w_000377">a</w>
+                    <w xml:id="edGLM2_w_000378">Saint</w>
+                    <w xml:id="edGLM2_w_000379">Vane</w>
+                    <w xml:id="edGLM2_w_000380">en</w>
+                    <w xml:id="edGLM2_w_000381" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000382">encloistre</w>
+                    <w xml:id="edGLM2_w_000383" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000384">ont</w>
+                    <w xml:id="edGLM2_w_000385">mis</w></l>
+                <lb n="37"/>
+                <l n="52" xml:id="edGLM2_l_52">
+                    <w xml:id="edGLM2_w_000386">Dont</w>
+                    <w xml:id="edGLM2_w_000387">il</w>
+                    <w xml:id="edGLM2_w_000388">fu</w>
+                    <w xml:id="edGLM2_w_000389">moine</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000390">mès</w>
+                    <w xml:id="edGLM2_w_000391">li</w>
+                    <w xml:id="edGLM2_w_000392">gloz</w>
+                    <w xml:id="edGLM2_w_000393" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000394">en</w>
+                    <w xml:id="edGLM2_w_000395">issi</w><pc type="supplied">.</pc></l>
+                <lb n="38"/>
+                <l n="53" xml:id="edGLM2_l_53">
+                    <w xml:id="edGLM2_w_000396">Li</w>
+                    <w xml:id="edGLM2_w_000397">moine</w>
+                    <w xml:id="edGLM2_w_000398">doute<corr resp="#PM">nt</corr><!--<add>[nt]</add>--></w><!-- JBC: je pense que c'est plutôt une correction
+                    de Paul Meyer. Éviter la redondance avec le signe typographique.
+                    -->
+                    <!-- JBC: problème segm. ici -->
+                    <!--<w xml:id="edGLM2_w_000399">q‘il</w>-->
+                    <w rend="elision" xml:id="edGLM2_w_000399">q</w><pc type="supplied">‘</pc><w xml:id="edGLM2_w_000399b">il</w>
+                    <w xml:id="edGLM2_w_000400">en</w>
+                    <w xml:id="edGLM2_w_000401">doie</w>
+                    <w xml:id="edGLM2_w_000402">morir</w><pc type="supplied">;</pc></l>
+                <lb n="39"/>
+                <l n="54" xml:id="edGLM2_l_54">
+                    <w xml:id="edGLM2_w_000403">Moine</w>
+                    <w xml:id="edGLM2_w_000404" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000405">ont</w>
+                    <w xml:id="edGLM2_w_000406">fet</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000407">les</w>
+                    <w xml:id="edGLM2_w_000408">dras</w>
+                    <w xml:id="edGLM2_w_000409">li</w>
+                    <w xml:id="edGLM2_w_000410">font</w>
+                    <w xml:id="edGLM2_w_000411">vestir</w><pc type="supplied">;</pc></l>
+                <lb n="40"/>
+                <l n="55" xml:id="edGLM2_l_55">
+                    <w xml:id="edGLM2_w_000412">Après</w>
+                    <w xml:id="edGLM2_w_000413">entendent</w>
+                    <w xml:id="edGLM2_w_000414">le</w>
+                    <w xml:id="edGLM2_w_000415">vassal</w>
+                    <w xml:id="edGLM2_w_000416">a</w>
+                    <w xml:id="edGLM2_w_000417">guerir</w><pc type="supplied">.</pc></l>
+                <lb n="41"/>
+                <l n="56" xml:id="edGLM2_l_56">
+                    <w xml:id="edGLM2_w_000418">Or</w>
+                    <w xml:id="edGLM2_w_000419">redevons</w>
+                    <w xml:id="edGLM2_w_000420">a</w>
+                    <w xml:id="edGLM2_w_000421" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000422">estor</w>
+                    <w xml:id="edGLM2_w_000423">revenir</w><pc type="supplied">:</pc></l>
+                <lb n="42"/>
+                <l n="57" xml:id="edGLM2_l_57">
+                    <w xml:id="edGLM2_w_000424">Dex</w><pc type="supplied">!</pc>
+                    <w xml:id="edGLM2_w_000425">con</w>
+                    <w xml:id="edGLM2_w_000426">le</w>
+                    <w xml:id="edGLM2_w_000427">fet</w>
+                    <w xml:id="edGLM2_w_000428">li</w>
+                    <w xml:id="edGLM2_w_000429">alemant</w>
+                    <w xml:id="edGLM2_w_000430">Orris</w><pc type="supplied">!</pc></l>
+                <!-- FRAGMENT DE GARIN LE LORRAIN 432 -->
+                <pb/>
+                <figure>
+                    <!-- JBC: ok, mais là vous pointez vers le pdf entier. -->
+                    <graphic url="roma_0035-8029_1905_num_34_135_5417.pdf"/> 
+                </figure>
+
+                <!--<p>FRAGMENT DE GARIN LE LORRAIN 433</p>-->
+                <pb facs="0006.pdf.png" n="00006"/>
+                <lb n="1"/>
+                <l n="58" xml:id="edGLM2_l_58">
+                    <w xml:id="edGLM2_w_000431">Des</w>
+                    <w xml:id="edGLM2_w_000432">genz</w>
+                    <w xml:id="edGLM2_w_000433"><choice>
+                        <abbr>Fro<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>mont</ex></expan>
+                    </choice></w>
+                    <w xml:id="edGLM2_w_000434">nos</w>
+                    <w xml:id="edGLM2_w_000435">a</w>
+                    <w xml:id="edGLM2_w_000436">a</w>
+                    <w xml:id="edGLM2_w_000437">terre</w>
+                    <w xml:id="edGLM2_w_000438">mis</w><pc type="supplied">.</pc></l>
+                <lb n="2"/>
+                <l n="59" xml:id="edGLM2_l_59">
+                    <w xml:id="edGLM2_w_000439">Adonqes</w>
+                    <w xml:id="edGLM2_w_000440">point</w>
+                    <w xml:id="edGLM2_w_000441">li</w>
+                    <w xml:id="edGLM2_w_000442">aguèz</w>
+                    <!-- JBC: c'est une abréviation -->
+                    <w xml:id="edGLM2_w_000443"><choice>
+                        <abbr>Frod<pc>'</pc></abbr>
+                    <expan resp="#JBC" cert="medium">Fro<ex>mon</ex>d<ex>ins</ex></expan>
+                    </choice></w></l>
+                <lb n="3"/>
+                <l n="60" xml:id="edGLM2_l_60">
+                    <w xml:id="edGLM2_w_000444">Tant</w>
+                    <w xml:id="edGLM2_w_000445">durement</w>
+                    <w xml:id="edGLM2_w_000446">qe</w>
+                    <w xml:id="edGLM2_w_000447">rien</w>
+                    <w xml:id="edGLM2_w_000448">ne</w>
+                    <w xml:id="edGLM2_w_000449">pot</w>
+                    <w xml:id="edGLM2_w_000450">sofrir</w><pc type="supplied">;</pc></l>
+                <lb n="4"/>
+                <l n="61" xml:id="edGLM2_l_61">
+                    <w xml:id="edGLM2_w_000451">Dejoste</w>
+                    <w xml:id="edGLM2_w_000452">lui</w>
+                    <w xml:id="edGLM2_w_000453"><choice>
+                        <abbr>Guill<pc>.</pc></abbr>
+                            <expan cert="medium" resp="#AZ">Guillaumes</expan>
+                        </choice></w>
+                    <w xml:id="edGLM2_w_000454">de</w>
+                    <w xml:id="edGLM2_w_000455">Monclin</w><pc type="supplied">.</pc></l>
+                <lb n="5"/>
+                <l n="62" xml:id="edGLM2_l_62">
+                    <w xml:id="edGLM2_w_000456">La</w>
+                    <w xml:id="edGLM2_w_000457">veïssiez</w>
+                    <w xml:id="edGLM2_w_000458">tant</w>
+                    <w xml:id="edGLM2_w_000459">roit</w>
+                    <w xml:id="edGLM2_w_000460">espié</w>
+                    <w xml:id="edGLM2_w_000461">forbi</w><pc type="supplied">,</pc></l>
+                <lb n="6"/>
+                <l n="63" xml:id="edGLM2_l_63">
+                    <w xml:id="edGLM2_w_000462">Tant</w>
+                    <w xml:id="edGLM2_w_000463">blanc</w>
+                    <w xml:id="edGLM2_w_000464">hauberc</w>
+                    <w xml:id="edGLM2_w_000465">derompre</w>
+                    <w xml:id="edGLM2_w_000466">et</w>
+                    <w xml:id="edGLM2_w_000467">departir</w><pc type="supplied">,</pc></l>
+                <lb n="7"/>
+                <l n="64" xml:id="edGLM2_l_64">
+                    <w xml:id="edGLM2_w_000468">Tante</w>
+                    <w xml:id="edGLM2_w_000469">baniere</w>
+                    <w xml:id="edGLM2_w_000470">contre</w>
+                    <w xml:id="edGLM2_w_000471">terre</w>
+                    <w xml:id="edGLM2_w_000472">flatir</w></l>
+                <lb n="8"/>
+                <l n="65" xml:id="edGLM2_l_65">
+                    <w xml:id="edGLM2_w_000473">Et</w>
+                    <w xml:id="edGLM2_w_000474">tant</w>
+                    <w xml:id="edGLM2_w_000475">vassal</w>
+                    <w xml:id="edGLM2_w_000476">a</w>
+                    <w xml:id="edGLM2_w_000477">angoisse</w>
+                    <w xml:id="edGLM2_w_000478">morir</w><pc type="supplied">!</pc></l>
+                <lb n="9"/>
+                <l n="66" xml:id="edGLM2_l_66">
+                    <w xml:id="edGLM2_w_000479">Sor</w>
+                    <w xml:id="edGLM2_w_000480">le</w>
+                    <w xml:id="edGLM2_w_000481">conroi</w>
+                    <w xml:id="edGLM2_w_000482"><choice><sic>li</sic><corr resp="#PM">le</corr></choice></w><note resp="#Meyer"
+                        ><mentioned>le</mentioned></note><!-- JBC: ok, mais je suggérerais de l'encoder -->
+                    <w xml:id="edGLM2_w_000483">Borgoinz</w>
+                    <w xml:id="edGLM2_w_000484">Auberi</w></l>
+                <lb n="10"/>
+                <l n="67" xml:id="edGLM2_l_67">
+                    <w xml:id="edGLM2_w_000485">Les</w>
+                    <w xml:id="edGLM2_w_000486">ont</w>
+                    <w xml:id="edGLM2_w_000487">arriere</w>
+                    <w xml:id="edGLM2_w_000488">contre</w>
+                    <w xml:id="edGLM2_w_000489">terre</w>
+                    <w xml:id="edGLM2_w_000490">flati</w><pc type="supplied">.</pc></l>
+                <lb n="11"/>
+                <l n="68" xml:id="edGLM2_l_68">
+                    <w xml:id="edGLM2_w_000491">Lohorenc</w>
+                    <w xml:id="edGLM2_w_000492">poignent</w>
+                    <w xml:id="edGLM2_w_000493">qi</w>
+                    <w xml:id="edGLM2_w_000494">furent</w>
+                    <w xml:id="edGLM2_w_000495">plus</w>
+                    <w xml:id="edGLM2_w_000496">de</w>
+                    <w xml:id="edGLM2_w_000497"><pc type="supplied">.</pc>M</w><pc type="supplied"
+                        >.</pc></l>
+                <lb n="12"/>
+                <l n="69" xml:id="edGLM2_l_69">
+                    <w xml:id="edGLM2_w_000498">Et</w>
+                    <w xml:id="edGLM2_w_000499">Borguegnon</w>
+                    <w xml:id="edGLM2_w_000500">qi</w>
+                    <w xml:id="edGLM2_w_000501">sont</w>
+                    <w xml:id="edGLM2_w_000502">chevalier</w>
+                    <w xml:id="edGLM2_w_000503">fin</w><pc type="supplied">;</pc></l>
+                <lb n="13"/>
+                <l n="70" xml:id="edGLM2_l_70">
+                    <w xml:id="edGLM2_w_000504">Sor</w>
+                    <w xml:id="edGLM2_w_000505">les</w>
+                    <w xml:id="edGLM2_w_000506">conroiz</w>
+                    <w xml:id="edGLM2_w_000507">les</w>
+                    <w xml:id="edGLM2_w_000508">ont</w>
+                    <w xml:id="edGLM2_w_000509">arriere</w>
+                    <w xml:id="edGLM2_w_000510">mis</w><pc type="supplied">.</pc></l>
+                <lb n="14"/>
+                <l n="71" xml:id="edGLM2_l_71">
+                    <w xml:id="edGLM2_w_000511">Adonqes</w>
+                    <w xml:id="edGLM2_w_000512">point</w>
+                    <w xml:id="edGLM2_w_000513" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000514">evesque</w>
+                    <w xml:id="edGLM2_w_000515">Lancelin</w><pc type="supplied">;</pc></l>
+                <lb n="15"/>
+                <l n="72" xml:id="edGLM2_l_72">
+                    <w xml:id="edGLM2_w_000516">Bien</w>
+                    <w xml:id="edGLM2_w_000517">fu</w>
+                    <w xml:id="edGLM2_w_000518">armez</w>
+                    <w xml:id="edGLM2_w_000519">et</w>
+                    <w xml:id="edGLM2_w_000520">sor</w>
+                    <w xml:id="edGLM2_w_000521"><pc type="supplied">.</pc>j</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_000522">chevau</w>
+                    <w xml:id="edGLM2_w_000523">sist</w><pc type="supplied">:</pc></l>
+                <lb n="16"/>
+                <l n="73" xml:id="edGLM2_l_73">
+                    <w xml:id="edGLM2_w_000524">Poinçon</w>
+                    <w xml:id="edGLM2_w_000525">de</w>
+                    <w xml:id="edGLM2_w_000526">Mez</w>
+                    <w xml:id="edGLM2_w_000527">nos</w>
+                    <w xml:id="edGLM2_w_000528">a</w>
+                    <w xml:id="edGLM2_w_000529">par</w>
+                    <w xml:id="edGLM2_w_000530">terre</w>
+                    <w xml:id="edGLM2_w_000531">mis</w></l>
+                <lb n="17"/>
+                <l n="74" xml:id="edGLM2_l_74">
+                    <w xml:id="edGLM2_w_000532">De</w>
+                    <w xml:id="edGLM2_w_000533">la</w>
+                    <w xml:id="edGLM2_w_000534">mesniée</w>
+                    <w xml:id="edGLM2_w_000535">Girbert</w>
+                    <w xml:id="edGLM2_w_000536">le</w>
+                    <w xml:id="edGLM2_w_000537">fiuz</w>
+                    <w xml:id="edGLM2_w_000538"><choice>
+                        <abbr>Ga<pc>.</pc></abbr>
+                            <expan resp="#AZ" cert="medium">Garin</expan>
+                        </choice></w></l>
+                <lb n="18"/>
+                <l n="75" xml:id="edGLM2_l_75">
+                    <w xml:id="edGLM2_w_000539">Girbert</w>
+                    <w xml:id="edGLM2_w_000540">le</w>
+                    <w xml:id="edGLM2_w_000541">voit</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000542">a</w>
+                    <w xml:id="edGLM2_w_000543">poi</w>
+                    <w xml:id="edGLM2_w_000544" rend="elision">n</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000545">enrage</w>
+                    <w xml:id="edGLM2_w_000546">vis</w><pc type="supplied">:</pc></l>
+                <lb n="19"/>
+                <l n="76" xml:id="edGLM2_l_76"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000547">Par</w>
+                        <w xml:id="edGLM2_w_000548">Dieu</w><pc type="supplied">!</pc>
+                        <w xml:id="edGLM2_w_000549">fox</w>
+                        <w xml:id="edGLM2_w_000550">clers</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000551">ne</w>
+                        <w xml:id="edGLM2_w_000552">la</w>
+                        <w xml:id="edGLM2_w_000553">porrez</w>
+                        <w xml:id="edGLM2_w_000554">guerir</w><pc type="supplied">.</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="20"/>
+                <l n="77" xml:id="edGLM2_l_77">
+                    <w xml:id="edGLM2_w_000555">Grant</w>
+                    <w xml:id="edGLM2_w_000556">cop</w>
+                    <w xml:id="edGLM2_w_000557">li</w>
+                    <w xml:id="edGLM2_w_000558">done</w>
+                    <w xml:id="edGLM2_w_000559">sor</w>
+                    <w xml:id="edGLM2_w_000560" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000561">escu</w>
+                    <w xml:id="edGLM2_w_000562">qe</w>
+                    <w xml:id="edGLM2_w_000563">il</w>
+                    <w xml:id="edGLM2_w_000564">tint</w><pc type="supplied">,</pc></l>
+                <lb n="21"/>
+                <l n="78" xml:id="edGLM2_l_78">
+                    <w xml:id="edGLM2_w_000565">Desoz</w>
+                    <w xml:id="edGLM2_w_000566">la</w>
+                    <w xml:id="edGLM2_w_000567">boucle</w>
+                    <w xml:id="edGLM2_w_000568">li</w>
+                    <w xml:id="edGLM2_w_000569">fet</w>
+                    <w xml:id="edGLM2_w_000570">fendre</w>
+                    <w xml:id="edGLM2_w_000571">et</w>
+                    <w xml:id="edGLM2_w_000572">croissir</w><pc type="supplied">.</pc></l>
+                <lb n="22"/>
+                <l n="79" xml:id="edGLM2_l_79">
+                    <w xml:id="edGLM2_w_000573">Fort</w>
+                    <w xml:id="edGLM2_w_000574">fu</w>
+                    <w xml:id="edGLM2_w_000575" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000576">auberc</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000577">qe</w>
+                    <w xml:id="edGLM2_w_000578">maille</w>
+                    <w xml:id="edGLM2_w_000579" rend="elision">n</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000580">en</w>
+                    <w xml:id="edGLM2_w_000581">ronpi</w><pc type="supplied">;</pc></l>
+                <lb n="23"/>
+                <l n="80" xml:id="edGLM2_l_80">
+                    <w xml:id="edGLM2_w_000582">Li</w>
+                    <w xml:id="edGLM2_w_000583">estrier</w>
+                    <w xml:id="edGLM2_w_000584">rompent</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000585">ne</w>
+                    <w xml:id="edGLM2_w_000586">se</w>
+                    <w xml:id="edGLM2_w_000587">porent</w>
+                    <w xml:id="edGLM2_w_000588">tenir</w><pc type="supplied">,</pc></l>
+                <lb n="24"/>
+                <l n="81" xml:id="edGLM2_l_81">
+                    <w xml:id="edGLM2_w_000589">Si</w>
+                    <w xml:id="edGLM2_w_000590">qe</w>
+                    <w xml:id="edGLM2_w_000591" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000592">escu</w>
+                    <w xml:id="edGLM2_w_000593">li</w>
+                    <w xml:id="edGLM2_w_000594">fet</w>
+                    <w xml:id="edGLM2_w_000595">el</w>
+                    <w xml:id="edGLM2_w_000596">cors</w>
+                    <w xml:id="edGLM2_w_000597">flatir</w><pc type="supplied"
+                    >;</pc><note>(c)</note><!-- JBC: idem, changement de colonne dans le ms. --></l>
+                <lb n="25"/>
+                <l n="82" xml:id="edGLM2_l_82">
+                    <w xml:id="edGLM2_w_000598">Del</w>
+                    <w xml:id="edGLM2_w_000599">bon</w>
+                    <w xml:id="edGLM2_w_000600">destrier</w>
+                    <w xml:id="edGLM2_w_000601">a</w>
+                    <w xml:id="edGLM2_w_000602">terre</w>
+                    <w xml:id="edGLM2_w_000603" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000604">abati</w><pc type="supplied">.</pc></l>
+                <lb n="26"/>
+                <l n="83" xml:id="edGLM2_l_83">
+                    <w xml:id="edGLM2_w_000605">Gerin</w>
+                    <w xml:id="edGLM2_w_000606">li</w>
+                    <w xml:id="edGLM2_w_000607">preuz</w>
+                    <w xml:id="edGLM2_w_000608">nos</w>
+                    <w xml:id="edGLM2_w_000609">abat</w>
+                    <w xml:id="edGLM2_w_000610"><choice>
+                        <abbr>Frod<pc>‘</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>mon</ex>d<ex>in</ex></expan>
+                    </choice></w><pc
+                        type="supplied">,</pc></l>
+                <lb n="27"/>
+                <l n="84" xml:id="edGLM2_l_84">
+                    <w xml:id="edGLM2_w_000611">Et</w>
+                    <w xml:id="edGLM2_w_000612">Hernaudin</w>
+                    <w xml:id="edGLM2_w_000613">vet</w>
+                    <w xml:id="edGLM2_w_000614">ferir</w>
+                    <w xml:id="edGLM2_w_000615"><choice>
+                        <abbr>Baud<pc>‘</pc></abbr>
+                        <expan cert="medium" resp="#JBC">Baud<ex>oïn</ex></expan>
+                    </choice></w><pc
+                        type="supplied">,</pc></l>
+                <lb n="28"/>
+                <l n="85" xml:id="edGLM2_l_85">
+                    <w xml:id="edGLM2_w_000616">Nez</w>
+                    <w xml:id="edGLM2_w_000617">fu</w>
+                    <w xml:id="edGLM2_w_000618" rend="elision">d</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000619">Amiens</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000620">si</w>
+                    <w xml:id="edGLM2_w_000621">com</w>
+                    <w xml:id="edGLM2_w_000622">la</w>
+                    <w xml:id="edGLM2_w_000623">chançon</w>
+                    <w xml:id="edGLM2_w_000624">dit</w><pc type="supplied">;</pc></l>
+                <lb n="29"/>
+                <l n="86" xml:id="edGLM2_l_86">
+                    <w xml:id="edGLM2_w_000625">Mort</w>
+                    <w xml:id="edGLM2_w_000626">le</w>
+                    <w xml:id="edGLM2_w_000627">trebuche</w>
+                    <w xml:id="edGLM2_w_000628">del</w>
+                    <w xml:id="edGLM2_w_000629">cheval</w>
+                    <w xml:id="edGLM2_w_000630">o</w>
+                    <w xml:id="edGLM2_w_000631">il</w>
+                    <w xml:id="edGLM2_w_000632">sist</w><pc type="supplied">.</pc></l>
+                <lb n="30"/>
+                <l n="87" xml:id="edGLM2_l_87">
+                    <w xml:id="edGLM2_w_000633">A</w>
+                    <w xml:id="edGLM2_w_000634">la</w>
+                    <w xml:id="edGLM2_w_000635">rescousse</w>
+                    <w xml:id="edGLM2_w_000636" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000637">evesqe</w>
+                    <w xml:id="edGLM2_w_000638">Lancelin</w></l>
+                <lb n="31"/>
+                <l n="88" xml:id="edGLM2_l_88">
+                    <w xml:id="edGLM2_w_000639">Et</w>
+                    <w xml:id="edGLM2_w_000640">a</w>
+                    <w xml:id="edGLM2_w_000641">son</w>
+                    <w xml:id="edGLM2_w_000642">fuiz</w>
+                    <w xml:id="edGLM2_w_000643" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000644">orgueiliox</w>
+                    <w xml:id="edGLM2_w_000645"><choice>
+                            <abbr>Frod<pc>‘</pc></abbr>
+                            <expan resp="#JBC" cert="medium">Fro<ex>mon</ex>d<ex>in</ex></expan>
+                        </choice>
+                    </w></l>
+                <lb n="32"/>
+                <l n="89" xml:id="edGLM2_l_89">
+                    <w xml:id="edGLM2_w_000646"><choice><sic>Il</sic><corr resp="#PM">I</corr></choice></w><note><mentioned>I</mentioned></note>
+                    <w xml:id="edGLM2_w_000647">est</w>
+                    <w xml:id="edGLM2_w_000648">venuz</w>
+                    <w xml:id="edGLM2_w_000649"><choice>
+                        <abbr>Fro<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>monz</ex></expan>
+                    </choice></w>
+                    <w xml:id="edGLM2_w_000650">le</w>
+                    <w xml:id="edGLM2_w_000651">viel</w>
+                    <w xml:id="edGLM2_w_000652">antis</w><pc type="supplied">.</pc></l>
+                <lb n="33"/>
+                <l n="90" xml:id="edGLM2_l_90">
+                    <w xml:id="edGLM2_w_000653">La</w>
+                    <w xml:id="edGLM2_w_000654">veïssiez</w>
+                    <w xml:id="edGLM2_w_000655">cez</w>
+                    <w xml:id="edGLM2_w_000656">chevaliers</w>
+                    <w xml:id="edGLM2_w_000657">venir</w><pc type="supplied">;</pc></l>
+                <lb n="34"/>
+                <l n="91" xml:id="edGLM2_l_91">
+                    <w xml:id="edGLM2_w_000658">Et</w>
+                    <w xml:id="edGLM2_w_000659"><choice>
+                        <abbr>Fro<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>monz</ex></expan>
+                    </choice></w>
+                    <w xml:id="edGLM2_w_000660">point</w>
+                    <w xml:id="edGLM2_w_000661">qi</w>
+                    <w xml:id="edGLM2_w_000662">malement</w>
+                    <w xml:id="edGLM2_w_000663">le</w>
+                    <w xml:id="edGLM2_w_000664">fist</w><pc type="supplied">:</pc></l>
+                <lb n="35"/>
+                <l n="92" xml:id="edGLM2_l_92">
+                    <w xml:id="edGLM2_w_000665">Girart</w>
+                    <w xml:id="edGLM2_w_000666">del</w>
+                    <w xml:id="edGLM2_w_000667">Liege</w>
+                    <w xml:id="edGLM2_w_000668">nos</w>
+                    <w xml:id="edGLM2_w_000669">a</w>
+                    <w xml:id="edGLM2_w_000670">le</w>
+                    <w xml:id="edGLM2_w_000671">jor</w>
+                    <w xml:id="edGLM2_w_000672">ocis</w><pc type="supplied">.</pc></l>
+                <lb n="36"/>
+                <l n="93" xml:id="edGLM2_l_93">
+                    <w xml:id="edGLM2_w_000673">Li</w>
+                    <w xml:id="edGLM2_w_000674">quens</w>
+                    <w xml:id="edGLM2_w_000675"><choice>
+                        <abbr>Guill<pc>.</pc></abbr>
+                            <expan resp="#AZ" cert="medium">Guill<ex>aumes</ex></expan>
+                        </choice></w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000676" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000677">orgueillox</w>
+                    <w xml:id="edGLM2_w_000678">de</w>
+                    <w xml:id="edGLM2_w_000679">Monclin</w><pc type="supplied">,</pc></l>
+                <lb n="37"/>
+                <l n="94" xml:id="edGLM2_l_94">
+                    <w xml:id="edGLM2_w_000680">Rala</w>
+                    <w xml:id="edGLM2_w_000681">joster</w>
+                    <w xml:id="edGLM2_w_000682">a</w>
+                    <w xml:id="edGLM2_w_000683" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000684">alemant</w>
+                    <w xml:id="edGLM2_w_000685">Orri<pc type="supplied">;</pc></w></l>
+                <lb n="38"/>
+                <l n="95" xml:id="edGLM2_l_95">
+                    <w xml:id="edGLM2_w_000686" rend="elision">N</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000687">ot</w>
+                    <w xml:id="edGLM2_w_000688">point</w>
+                    <w xml:id="edGLM2_w_000689" rend="elision">d</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000690">escu</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_000691">a</w>
+                    <w xml:id="edGLM2_w_000692">descovert</w>
+                    <w xml:id="edGLM2_w_000693" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000694">a</w>
+                    <w xml:id="edGLM2_w_000695">pris</w><pc type="supplied">.</pc></l>
+                <lb n="39"/>
+                <l n="96" xml:id="edGLM2_l_96">
+                    <w xml:id="edGLM2_w_000696">Chaut</w>
+                    <w xml:id="edGLM2_w_000697">fu</w>
+                    <w xml:id="edGLM2_w_000698">le</w>
+                    <w xml:id="edGLM2_w_000699">fer<pc type="supplied">;</pc></w>
+                    <w xml:id="edGLM2_w_000700">ne</w>
+                    <w xml:id="edGLM2_w_000701">pot</w>
+                    <w xml:id="edGLM2_w_000702" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000703">acier</w>
+                    <w xml:id="edGLM2_w_000704">soufrir</w><pc type="supplied">:</pc></l>
+                <lb n="40"/>
+                <l n="97" xml:id="edGLM2_l_97">
+                    <w xml:id="edGLM2_w_000705">Tout</w>
+                    <w xml:id="edGLM2_w_000706">li</w>
+                    <w xml:id="edGLM2_w_000707">detrenche</w>
+                    <w xml:id="edGLM2_w_000708">et</w>
+                    <w xml:id="edGLM2_w_000709" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000710">eschine</w>
+                    <w xml:id="edGLM2_w_000711">et</w>
+                    <w xml:id="edGLM2_w_000712">le</w>
+                    <w xml:id="edGLM2_w_000713">piz</w><pc type="supplied">.</pc></l>
+                <lb n="41"/>
+                <l n="98" xml:id="edGLM2_l_98">
+                    <w xml:id="edGLM2_w_000714">Dex</w><pc type="supplied">!</pc>
+                    <w xml:id="edGLM2_w_000715">qel</w>
+                    <w xml:id="edGLM2_w_000716">douleur</w>
+                    <w xml:id="edGLM2_w_000717">de</w>
+                    <w xml:id="edGLM2_w_000718">chevalier</w>
+                    <w xml:id="edGLM2_w_000719">de</w>
+                    <w xml:id="edGLM2_w_000720">pris</w><pc type="supplied">,</pc></l>
+                <!-- Romania, XXXIV 28 -->
+
+                <!--434 P.MEYER  -->
+                <pb facs="0007.pdf.png" n="00007"/>
+                <lb n="1"/>
+                <l n="99" xml:id="edGLM2_l_99">
+                    <w xml:id="edGLM2_w_000721">Et</w>
+                    <w xml:id="edGLM2_w_000722">qel</w>
+                    <w xml:id="edGLM2_w_000723">damage</w>
+                    <w xml:id="edGLM2_w_000724">au</w>
+                    <w xml:id="edGLM2_w_000725">Lohorenc</w>
+                    <w xml:id="edGLM2_w_000726"><choice>
+                            <abbr>Ga<pc>.</pc></abbr>
+                            <expan cert="medium" resp="#AZ">Garin</expan>
+                        </choice></w><pc type="supplied">!</pc></l>
+                <lb n="2"/>
+                <l n="100" xml:id="edGLM2_l_100">
+                    <w xml:id="edGLM2_w_000727">Ci</w>
+                    <w xml:id="edGLM2_w_000728">a</w>
+                    <w xml:id="edGLM2_w_000729">perdu</w>
+                    <w xml:id="edGLM2_w_000730"><pc type="supplied">.</pc>ij</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_000731">de</w>
+                    <w xml:id="edGLM2_w_000732">ses</w>
+                    <w xml:id="edGLM2_w_000733">bons</w>
+                    <w xml:id="edGLM2_w_000734">amis</w></l>
+                <lb n="3"/>
+                <l n="101" xml:id="edGLM2_l_101">
+                    <w xml:id="edGLM2_w_000735">Qi</w>
+                    <w xml:id="edGLM2_w_000736">li</w>
+                    <w xml:id="edGLM2_w_000737">aiderent</w>
+                    <w xml:id="edGLM2_w_000738">sa</w>
+                    <w xml:id="edGLM2_w_000739">guerre</w>
+                    <w xml:id="edGLM2_w_000740">a</w>
+                    <w xml:id="edGLM2_w_000741">meintenir</w><pc type="supplied">.</pc></l>
+                <lb n="4"/>
+                <l n="102" xml:id="edGLM2_l_102">
+                    <w xml:id="edGLM2_w_000742">Qant</w>
+                    <w xml:id="edGLM2_w_000743">la</w>
+                    <w xml:id="edGLM2_w_000744">novele</w>
+                    <w xml:id="edGLM2_w_000745">est</w>
+                    <w xml:id="edGLM2_w_000746">venue</w>
+                    <w xml:id="edGLM2_w_000747">a</w>
+                    <w xml:id="edGLM2_w_000748"><choice>
+                            <abbr>Ga<pc>.</pc></abbr>
+                            <expan resp="#AZ" cert="medium">Garin</expan>
+                        </choice></w><pc type="supplied">,</pc></l>
+                <lb n="5"/>
+                <l n="103" xml:id="edGLM2_l_103">
+                    <w xml:id="edGLM2_w_000749">Engoisse</w>
+                    <w xml:id="edGLM2_w_000750">ot</w>
+                    <w xml:id="edGLM2_w_000751">grant</w><pc type="supplied">;</pc>
+                    <w xml:id="edGLM2_w_000752">il</w>
+                    <w xml:id="edGLM2_w_000753">ne</w>
+                    <w xml:id="edGLM2_w_000754">se</w>
+                    <w xml:id="edGLM2_w_000755">pot</w>
+                    <w xml:id="edGLM2_w_000756">tenir</w><pc type="supplied">:</pc></l>
+                <lb n="6"/>
+                <l n="104" xml:id="edGLM2_l_104">
+                    <w xml:id="edGLM2_w_000757"><pc type="supplied">.</pc>iij</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_000758">foiz</w>
+                    <w xml:id="edGLM2_w_000759">se</w>
+                    <w xml:id="edGLM2_w_000760">pasme</w>
+                    <w xml:id="edGLM2_w_000761">sor</w>
+                    <w xml:id="edGLM2_w_000762">le</w>
+                    <w xml:id="edGLM2_w_000763">destrier</w>
+                    <w xml:id="edGLM2_w_000764">de</w>
+                    <w xml:id="edGLM2_w_000765">pris</w><pc type="supplied">.</pc></l>
+                <lb n="7"/>
+                <l n="105" xml:id="edGLM2_l_105">
+                    <w xml:id="edGLM2_w_000766">Qant</w>
+                    <w xml:id="edGLM2_w_000767" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000768">en</w>
+                    <w xml:id="edGLM2_w_000769">redresce</w>
+                    <w xml:id="edGLM2_w_000770"><choice>
+                        <abbr>H<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">H<ex>ernauz</ex></expan>
+                    </choice></w>
+                    <w xml:id="edGLM2_w_000771">qi</w>
+                    <w xml:id="edGLM2_w_000772">Moçon</w>
+                    <w xml:id="edGLM2_w_000773">tint</w><pc type="supplied">;</pc></l>
+                <lb n="8"/>
+                <l n="106" xml:id="edGLM2_l_106">
+                    <w xml:id="edGLM2_w_000774">Il</w>
+                    <w xml:id="edGLM2_w_000775">li</w>
+                    <w xml:id="edGLM2_w_000776">escrie</w><pc type="supplied">;</pc><pc
+                        type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000777">Franc</w>
+                        <w xml:id="edGLM2_w_000778">duc</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_000779">qe</w>
+                        <w xml:id="edGLM2_w_000780">fes</w>
+                        <w xml:id="edGLM2_w_000781">tu</w>
+                        <w xml:id="edGLM2_w_000782">ci</w><pc type="supplied">?</pc></q></l>
+                <lb n="9"/>
+                <l n="107" xml:id="edGLM2_l_107"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000783">A</w>
+                        <w xml:id="edGLM2_w_000784" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000785">estor</w>
+                        <w xml:id="edGLM2_w_000786">est</w>
+                        <w xml:id="edGLM2_w_000787" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000788">enfant</w>
+                        <w xml:id="edGLM2_w_000789">Girbert</w>
+                        <w xml:id="edGLM2_w_000790">ton</w>
+                        <w xml:id="edGLM2_w_000791">fiz</w></q></l>
+                <lb n="10"/>
+                <l n="108" xml:id="edGLM2_l_108"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_000792">Et</w>
+                        <w xml:id="edGLM2_w_000793">ti</w>
+                        <w xml:id="edGLM2_w_000794">ne<corr resp="#PM" cert="unknown">ve</corr>u</w><!-- JBC (NB; pas la première fois que je vois 'neu') -->
+                        <w xml:id="edGLM2_w_000795">Hernaudet</w>
+                        <w xml:id="edGLM2_w_000796">et</w>
+                        <w xml:id="edGLM2_w_000797">Gerin</w><pc type="supplied">.</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="11"/>
+                <l n="109" xml:id="edGLM2_l_109">
+                    <w xml:id="edGLM2_w_000798">Mout</w>
+                    <w xml:id="edGLM2_w_000799">se</w>
+                    <w xml:id="edGLM2_w_000800">desroie</w>
+                    <w xml:id="edGLM2_w_000801"><choice>
+                            <abbr>Guill.</abbr>
+                            <expan resp="#AZ">Guill<ex>aumes</ex></expan>
+                        </choice></w>
+                    <w xml:id="edGLM2_w_000802">de</w>
+                    <w xml:id="edGLM2_w_000803">Monclin</w><pc type="supplied">:</pc></l>
+                <lb n="12"/>
+                <l n="110" xml:id="edGLM2_l_110">
+                    <w xml:id="edGLM2_w_000804">Il</w>
+                    <w xml:id="edGLM2_w_000805">a</w>
+                    <w xml:id="edGLM2_w_000806">monté</w>
+                    <w xml:id="edGLM2_w_000807" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000808">evesqe</w>
+                    <w xml:id="edGLM2_w_000809">Lancelin</w></l>
+                <lb n="13"/>
+                <l n="111" xml:id="edGLM2_l_111">
+                    <w xml:id="edGLM2_w_000810">Et</w>
+                    <w xml:id="edGLM2_w_000811">son</w>
+                    <w xml:id="edGLM2_w_000812">neveu</w>
+                    <w xml:id="edGLM2_w_000813" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000814">orgueillox</w>
+                    <w xml:id="edGLM2_w_000815"><choice>
+                        <abbr>Frod<pc>‘</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>mon</ex>d<ex>in</ex></expan>
+                    </choice></w><pc
+                        type="supplied">.</pc></l>
+                <lb n="14"/>
+                <l n="112" xml:id="edGLM2_l_112">
+                    <w xml:id="edGLM2_w_000816">Auberi</w>
+                    <w xml:id="edGLM2_w_000817">broche<pc type="supplied">;</pc></w>
+                    <w xml:id="edGLM2_w_000818">vet</w>
+                    <w xml:id="edGLM2_w_000819">ferir</w>
+                    <w xml:id="edGLM2_w_000820">Rocelin</w><pc type="supplied">;</pc></l>
+                <lb n="15"/>
+                <l n="113" xml:id="edGLM2_l_113">
+                    <w xml:id="edGLM2_w_000821">Parmi</w>
+                    <w xml:id="edGLM2_w_000822">le</w>
+                    <w xml:id="edGLM2_w_000823">cors</w>
+                    <w xml:id="edGLM2_w_000824">li</w>
+                    <w xml:id="edGLM2_w_000825">met</w>
+                    <w xml:id="edGLM2_w_000826" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000827">espié</w>
+                    <w xml:id="edGLM2_w_000828">bruni</w><pc type="supplied">.</pc></l>
+                <lb n="16"/>
+                <l n="114" xml:id="edGLM2_l_114">
+                    <w xml:id="edGLM2_w_000829">De</w>
+                    <w xml:id="edGLM2_w_000830">la</w>
+                    <w xml:id="edGLM2_w_000831">seror</w>
+                    <w xml:id="edGLM2_w_000832"><choice>
+                        <abbr>Fro<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Fro<ex>mont</ex></expan>
+                    </choice></w>
+                    <w xml:id="edGLM2_w_000833">estoit</w>
+                    <w xml:id="edGLM2_w_000834">icil</w><pc type="supplied">;</pc></l>
+                <lb n="17"/>
+                <l n="115" xml:id="edGLM2_l_115">
+                    <w xml:id="edGLM2_w_000835">Mort</w>
+                    <w xml:id="edGLM2_w_000836">le</w>
+                    <w xml:id="edGLM2_w_000837">trebuche</w>
+                    <w xml:id="edGLM2_w_000838">del</w>
+                    <w xml:id="edGLM2_w_000839">bon</w>
+                    <w xml:id="edGLM2_w_000840">destrier</w>
+                    <w xml:id="edGLM2_w_000841">de</w>
+                    <w xml:id="edGLM2_w_000842">pris</w><pc type="supplied">.</pc></l>
+                <lb n="18"/>
+                <l n="116" xml:id="edGLM2_l_116">
+                    <w xml:id="edGLM2_w_000843">Thomas</w>
+                    <w xml:id="edGLM2_w_000844">de</w>
+                    <w xml:id="edGLM2_w_000845">Fere</w>
+                    <w xml:id="edGLM2_w_000846">lor</w>
+                    <w xml:id="edGLM2_w_000847">a</w>
+                    <w xml:id="edGLM2_w_000848">ocis</w>
+                    <w xml:id="edGLM2_w_000849">Garin</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lb n="19"/>
+            <lg n="II" type="laisse" xml:id="L_002">
+                <l n="117" xml:id="edGLM2_l_117">
+                    <w xml:id="edGLM2_w_000850">Granz</w>
+                    <w xml:id="edGLM2_w_000851">fu</w>
+                    <w xml:id="edGLM2_w_000852">la</w>
+                    <w xml:id="edGLM2_w_000853">noise</w>
+                    <w xml:id="edGLM2_w_000854">et</w>
+                    <w xml:id="edGLM2_w_000855">li</w>
+                    <w xml:id="edGLM2_w_000856">criz</w>
+                    <w xml:id="edGLM2_w_000857">est</w>
+                    <w xml:id="edGLM2_w_000858">levé</w><pc type="supplied">;</pc></l>
+                <lb n="20"/>
+                <l n="118" xml:id="edGLM2_l_118">
+                    <w xml:id="edGLM2_w_000859">Tomas</w>
+                    <w xml:id="edGLM2_w_000860">de</w>
+                    <w xml:id="edGLM2_w_000861">Fere</w>
+                    <w xml:id="edGLM2_w_000862">a</w>
+                    <w xml:id="edGLM2_w_000863"><choice>
+                            <abbr>Ga<pc>.</pc></abbr>
+                            <expan resp="#AZ" cert="medium">Garin</expan>
+                        </choice></w>
+                    <w xml:id="edGLM2_w_000864">mort</w>
+                    <w xml:id="edGLM2_w_000865">gité</w><pc type="supplied">.</pc></l>
+                <lb n="21"/>
+                <l n="119" xml:id="edGLM2_l_119">
+                    <w xml:id="edGLM2_w_000866">Girart</w>
+                    <w xml:id="edGLM2_w_000867">li</w>
+                    <w xml:id="edGLM2_w_000868">preuz</w>
+                    <w xml:id="edGLM2_w_000869">au</w>
+                    <w xml:id="edGLM2_w_000870">corage</w>
+                    <w xml:id="edGLM2_w_000871">aduré</w></l>
+                <lb n="22"/>
+                <l n="120" xml:id="edGLM2_l_120">
+                    <w xml:id="edGLM2_w_000872">A</w>
+                    <w xml:id="edGLM2_w_000873">Clarenbaut</w>
+                    <w xml:id="edGLM2_w_000874">de</w>
+                    <w xml:id="edGLM2_w_000875">Vanduel</w>
+                    <w xml:id="edGLM2_w_000876">encontré</w><pc type="supplied">:</pc></l>
+                <lb n="23"/>
+                <l n="121" xml:id="edGLM2_l_121">
+                    <w xml:id="edGLM2_w_000877">Grant</w>
+                    <w xml:id="edGLM2_w_000878">coup</w>
+                    <w xml:id="edGLM2_w_000879">li</w>
+                    <w xml:id="edGLM2_w_000880">done</w>
+                    <w xml:id="edGLM2_w_000881">del</w>
+                    <w xml:id="edGLM2_w_000882">brant</w>
+                    <w xml:id="edGLM2_w_000883" rend="elision">d</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000884">acier</w>
+                    <w xml:id="edGLM2_w_000885">letré</w><pc type="supplied"
+                    >,</pc><note>(d)</note></l>
+                <lb n="24"/>
+                <l n="122" xml:id="edGLM2_l_122">
+                    <w xml:id="edGLM2_w_000886">Qe</w>
+                    <w xml:id="edGLM2_w_000887">le</w>
+                    <w xml:id="edGLM2_w_000888">braz</w>
+                    <w xml:id="edGLM2_w_000889">destre</w>
+                    <w xml:id="edGLM2_w_000890">li</w>
+                    <w xml:id="edGLM2_w_000891">a</w>
+                    <w xml:id="edGLM2_w_000892">par</w>
+                    <w xml:id="edGLM2_w_000893">mi</w>
+                    <w xml:id="edGLM2_w_000894">coupé</w><pc type="supplied">.</pc></l>
+                <lb n="25"/>
+                <l n="123" xml:id="edGLM2_l_123">
+                    <w xml:id="edGLM2_w_000895">Fuiant</w>
+                    <w xml:id="edGLM2_w_000896" rend="elision">s</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000897">en</w>
+                    <w xml:id="edGLM2_w_000898">torne</w>
+                    <w xml:id="edGLM2_w_000899">qant</w>
+                    <w xml:id="edGLM2_w_000900">il</w>
+                    <w xml:id="edGLM2_w_000901">fu</w>
+                    <w xml:id="edGLM2_w_000902">eschapé</w><pc type="supplied">.</pc></l>
+                <lb n="26"/>
+                <l n="124" xml:id="edGLM2_l_124">
+                    <w xml:id="edGLM2_w_000903">Parmi</w>
+                    <w xml:id="edGLM2_w_000904">les</w>
+                    <w xml:id="edGLM2_w_000905">portes</w>
+                    <w xml:id="edGLM2_w_000906">entrerent</w>
+                    <w xml:id="edGLM2_w_000907">li</w>
+                    <w xml:id="edGLM2_w_000908">navré</w></l>
+                <lb n="27"/>
+                <l n="125" xml:id="edGLM2_l_125">
+                    <w xml:id="edGLM2_w_000909">Dont</w>
+                    <w xml:id="edGLM2_w_000910">meint</w>
+                    <w xml:id="edGLM2_w_000911">boël</w>
+                    <w xml:id="edGLM2_w_000912">ot</w>
+                    <w xml:id="edGLM2_w_000913">hors</w>
+                    <w xml:id="edGLM2_w_000914">de</w>
+                    <w xml:id="edGLM2_w_000915">cors</w>
+                    <w xml:id="edGLM2_w_000916">gité</w><pc type="supplied">.</pc></l>
+                <lb n="28"/>
+                <l n="126" xml:id="edGLM2_l_126">
+                    <w xml:id="edGLM2_w_000917">Bien</w>
+                    <w xml:id="edGLM2_w_000918">i</w>
+                    <w xml:id="edGLM2_w_000919">parut</w>
+                    <w xml:id="edGLM2_w_000920">qe</w>
+                    <w xml:id="edGLM2_w_000921">Garin</w>
+                    <w xml:id="edGLM2_w_000922">fu</w>
+                    <w xml:id="edGLM2_w_000923">iré</w><pc type="supplied">;</pc></l>
+                <lb n="29"/>
+                <l n="127" xml:id="edGLM2_l_127">
+                    <w xml:id="edGLM2_w_000924">Si</w>
+                    <w xml:id="edGLM2_w_000925">anemi</w>
+                    <w xml:id="edGLM2_w_000926">nel</w>
+                    <w xml:id="edGLM2_w_000927">truevent</w>
+                    <w xml:id="edGLM2_w_000928">pas</w>
+                    <w xml:id="edGLM2_w_000929">privé</w><pc type="supplied">,</pc></l>
+                <lb n="30"/>
+                <l n="128" xml:id="edGLM2_l_128">
+                    <w xml:id="edGLM2_w_000930">Meint</w>
+                    <w xml:id="edGLM2_w_000931">en</w>
+                    <w xml:id="edGLM2_w_000932">ocist</w>
+                    <w xml:id="edGLM2_w_000933">et</w>
+                    <w xml:id="edGLM2_w_000934">meint</w>
+                    <w xml:id="edGLM2_w_000935">en</w>
+                    <w xml:id="edGLM2_w_000936">a</w>
+                    <w xml:id="edGLM2_w_000937">navré</w><pc type="supplied">.</pc></l>
+                <lb n="31"/>
+                <l n="129" xml:id="edGLM2_l_129">
+                    <w xml:id="edGLM2_w_000938" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000939">enfant</w>
+                    <w xml:id="edGLM2_w_000940">Girbert</w>
+                    <w xml:id="edGLM2_w_000941">ne</w>
+                    <w xml:id="edGLM2_w_000942">fu</w>
+                    <w xml:id="edGLM2_w_000943">mie</w>
+                    <w xml:id="edGLM2_w_000944">emprunté</w></l>
+                <lb n="32"/>
+                <l n="130" xml:id="edGLM2_l_130">
+                    <w xml:id="edGLM2_w_000945">Il</w>
+                    <w xml:id="edGLM2_w_000946">ne</w>
+                    <w xml:id="edGLM2_w_000947">Gerin</w>
+                    <w xml:id="edGLM2_w_000948">ne</w>
+                    <w xml:id="edGLM2_w_000949">Hernaut</w>
+                    <w xml:id="edGLM2_w_000950">le</w>
+                    <w xml:id="edGLM2_w_000951">sené</w><pc type="supplied">,</pc></l>
+                <lb n="33"/>
+                <l n="131" xml:id="edGLM2_l_131">
+                    <w xml:id="edGLM2_w_000952">Meint</w>
+                    <w xml:id="edGLM2_w_000953">blanc</w>
+                    <w xml:id="edGLM2_w_000954">hauberc</w>
+                    <w xml:id="edGLM2_w_000955">i</w>
+                    <w xml:id="edGLM2_w_000956">ot</w>
+                    <w xml:id="edGLM2_w_000957">le</w>
+                    <w xml:id="edGLM2_w_000958">jor</w>
+                    <w xml:id="edGLM2_w_000959">fausé</w></l>
+                <lb n="34"/>
+                <l n="132" xml:id="edGLM2_l_132">
+                    <w xml:id="edGLM2_w_000960">Et</w>
+                    <w xml:id="edGLM2_w_000961">meint</w>
+                    <w xml:id="edGLM2_w_000962">vert</w>
+                    <w xml:id="edGLM2_w_000963">hiaume</w>
+                    <w xml:id="edGLM2_w_000964">fret</w>
+                    <w xml:id="edGLM2_w_000965">et</w>
+                    <w xml:id="edGLM2_w_000966">esqartelé</w><pc type="supplied">.</pc></l>
+                <lb n="35"/>
+                <l n="133" xml:id="edGLM2_l_133">
+                    <w xml:id="edGLM2_w_000967">Li</w>
+                    <w xml:id="edGLM2_w_000968">un</w>
+                    <w xml:id="edGLM2_w_000969">fiert</w>
+                    <w xml:id="edGLM2_w_000970" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000971">autre</w>
+                    <w xml:id="edGLM2_w_000972">par</w>
+                    <w xml:id="edGLM2_w_000973">bone</w>
+                    <w xml:id="edGLM2_w_000974">volenté</w><pc type="supplied">;</pc></l>
+                <lb n="36"/>
+                <l n="134" xml:id="edGLM2_l_134">
+                    <w xml:id="edGLM2_w_000975">De</w>
+                    <w xml:id="edGLM2_w_000976">meint</w>
+                    <w xml:id="edGLM2_w_000977">prodome</w>
+                    <w xml:id="edGLM2_w_000978">fu</w>
+                    <w xml:id="edGLM2_w_000979">le</w>
+                    <w xml:id="edGLM2_w_000980">jor</w>
+                    <w xml:id="edGLM2_w_000981">esgardé</w><pc type="supplied">.</pc></l>
+                <lb n="37"/>
+                <l n="135" xml:id="edGLM2_l_135">
+                    <w xml:id="edGLM2_w_000982">Cil</w>
+                    <w xml:id="edGLM2_w_000983">qes</w>
+                    <w xml:id="edGLM2_w_000984">conoist</w>
+                    <w xml:id="edGLM2_w_000985">les</w>
+                    <w xml:id="edGLM2_w_000986">a</w>
+                    <w xml:id="edGLM2_w_000987" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_000988">autre</w>
+                    <w xml:id="edGLM2_w_000989">mostré</w><pc type="supplied">;</pc></l>
+                <lb n="38"/>
+                <l n="136" xml:id="edGLM2_l_136">
+                    <w xml:id="edGLM2_w_000990">Cilz</w>
+                    <w xml:id="edGLM2_w_000991">furent</w>
+                    <w xml:id="edGLM2_w_000992">fuiz</w>
+                    <w xml:id="edGLM2_w_000993">au</w>
+                    <w xml:id="edGLM2_w_000994">prodome</w>
+                    <w xml:id="edGLM2_w_000995">honoré</w></l>
+                <lb n="39"/>
+                <l n="137" xml:id="edGLM2_l_137">
+                    <w xml:id="edGLM2_w_000996">Au</w>
+                    <w xml:id="edGLM2_w_000997">quens</w>
+                    <w xml:id="edGLM2_w_000998"><choice>
+                        <abbr>Be<pc>.</pc></abbr>
+                        <expan resp="#JBC" cert="medium">Be<ex>gon</ex></expan>
+                    </choice></w>
+                    <w rend="elision" xml:id="edGLM2_w_000999">q</w><pc type="supplied">‘</pc><w xml:id="edGLM2_w_000999b">el</w>
+                    <w xml:id="edGLM2_w_001000">bois</w>
+                    <w xml:id="edGLM2_w_001001">fu</w>
+                    <w xml:id="edGLM2_w_001002">mort</w>
+                    <w xml:id="edGLM2_w_001003">gité</w><pc type="supplied">,</pc></l>
+                <lb n="40"/>
+                <l n="138" xml:id="edGLM2_l_138">
+                    <w xml:id="edGLM2_w_001004">Dont</w>
+                    <w xml:id="edGLM2_w_001005">tex</w>
+                    <w xml:id="edGLM2_w_001006">damages</w>
+                    <w xml:id="edGLM2_w_001007">et</w>
+                    <w xml:id="edGLM2_w_001008">tex</w>
+                    <w xml:id="edGLM2_w_001009">criz</w>
+                    <w xml:id="edGLM2_w_001010">est</w>
+                    <w xml:id="edGLM2_w_001011">levez</w></l>
+                <lb n="41"/>
+                <l n="139" xml:id="edGLM2_l_139">
+                    <w xml:id="edGLM2_w_001012">Jamès</w>
+                    <w xml:id="edGLM2_w_001013">nul</w>
+                    <w xml:id="edGLM2_w_001014">jor</w>
+                    <w xml:id="edGLM2_w_001015">ne</w>
+                    <w xml:id="edGLM2_w_001016">sera</w>
+                    <w xml:id="edGLM2_w_001017">recouvrez</w><pc type="supplied">.</pc></l>
+                <lb n="42"/>
+                <l n="140" xml:id="edGLM2_l_140">
+                    <w xml:id="edGLM2_w_001018">Granz</w>
+                    <w xml:id="edGLM2_w_001019">fu</w>
+                    <w xml:id="edGLM2_w_001020">li</w>
+                    <w xml:id="edGLM2_w_001021">chaples</w>
+                    <w xml:id="edGLM2_w_001022">et</w>
+                    <w xml:id="edGLM2_w_001023">la</w>
+                    <w xml:id="edGLM2_w_001024">mortalitez</w><pc type="supplied">;</pc></l>
+
+                <!--FRAGMENT DE GARIN LE LORRAIN 435 -->
+                <pb facs="0008.pdf.png" n="00008"/>
+                <lb n="1"/>
+                <l n="141" xml:id="edGLM2_l_141">
+                    <w xml:id="edGLM2_w_001025">Li</w>
+                    <w xml:id="edGLM2_w_001026">Alemant</w>
+                    <w xml:id="edGLM2_w_001027">sont</w>
+                    <w xml:id="edGLM2_w_001028">dolent</w>
+                    <w xml:id="edGLM2_w_001029">et</w>
+                    <w xml:id="edGLM2_w_001030">iré</w></l>
+                <lb n="2"/>
+                <l n="142" xml:id="edGLM2_l_142">
+                    <w xml:id="edGLM2_w_001031">De</w>
+                    <w xml:id="edGLM2_w_001032">lor</w>
+                    <w xml:id="edGLM2_w_001033">seignor</w>
+                    <w xml:id="edGLM2_w_001034">qe</w>
+                    <w xml:id="edGLM2_w_001035">il</w>
+                    <w xml:id="edGLM2_w_001036">ont</w>
+                    <w xml:id="edGLM2_w_001037">mort</w>
+                    <w xml:id="edGLM2_w_001038">trové</w></l>
+                <lb n="3"/>
+                <l n="143" xml:id="edGLM2_l_143">
+                    <w xml:id="edGLM2_w_001039">Mort</w>
+                    <w xml:id="edGLM2_w_001040">et</w>
+                    <w xml:id="edGLM2_w_001041">senglant</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_001042">gisant</w>
+                    <w xml:id="edGLM2_w_001043">en</w>
+                    <w xml:id="edGLM2_w_001044">mi</w>
+                    <w xml:id="edGLM2_w_001045">le</w>
+                    <w xml:id="edGLM2_w_001046">prè</w><pc type="supplied">.</pc></l>
+                <lb n="4"/>
+                <l n="144" xml:id="edGLM2_l_144">
+                    <w xml:id="edGLM2_w_001047">Girart</w>
+                    <w xml:id="edGLM2_w_001048">del</w>
+                    <w xml:id="edGLM2_w_001049">Liege</w>
+                    <w xml:id="edGLM2_w_001050">a</w>
+                    <w xml:id="edGLM2_w_001051">le</w>
+                    <w xml:id="edGLM2_w_001052">Borgoinz</w>
+                    <w xml:id="edGLM2_w_001053">trové</w><pc type="supplied">,</pc></l>
+                <lb n="5"/>
+                <l n="145" xml:id="edGLM2_l_145">
+                    <!-- JBC: pas un mot -->
+                    <!--<w xml:id="edGLM2_w_001054">-->—<!--</w>-->
+                    <w xml:id="edGLM2_w_001055">Sor</w>
+                    <w xml:id="edGLM2_w_001056">son</w>
+                    <w xml:id="edGLM2_w_001057">cousin</w>
+                    <w xml:id="edGLM2_w_001058">est</w>
+                    <w xml:id="edGLM2_w_001059">Auberi</w>
+                    <w xml:id="edGLM2_w_001060">pasmé</w><pc type="supplied">.</pc></l>
+                <lb n="6"/>
+                <l n="146" xml:id="edGLM2_l_146"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001061">Las</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc>
+                    <w xml:id="edGLM2_w_001062">dist</w>
+                    <w xml:id="edGLM2_w_001063">li</w>
+                    <w xml:id="edGLM2_w_001064">dus</w><pc type="supplied">,</pc><pc type="supplied"
+                        >«</pc><q>
+                        <w xml:id="edGLM2_w_001065">come</w>
+                        <w xml:id="edGLM2_w_001066">avons</w>
+                        <w xml:id="edGLM2_w_001067">mal</w>
+                        <w xml:id="edGLM2_w_001068">erré</w><pc type="supplied">!</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="7"/>
+                <l n="147" xml:id="edGLM2_l_147">
+                    <w xml:id="edGLM2_w_001069">Ce</w>
+                    <w xml:id="edGLM2_w_001070">comença</w>
+                    <w xml:id="edGLM2_w_001071">par</w>
+                    <w xml:id="edGLM2_w_001072">grant</w>
+                    <w xml:id="edGLM2_w_001073">maleürté</w></l>
+                <lb n="8"/>
+                <l n="148" xml:id="edGLM2_l_148">
+                    <w xml:id="edGLM2_w_001074">Dont</w>
+                    <w xml:id="edGLM2_w_001075">meint</w>
+                    <w xml:id="edGLM2_w_001076">prodome</w>
+                    <w xml:id="edGLM2_w_001077">sont</w>
+                    <w xml:id="edGLM2_w_001078">mort</w>
+                    <w xml:id="edGLM2_w_001079">et</w>
+                    <w xml:id="edGLM2_w_001080">afolé</w></l>
+                <lb n="9"/>
+                <l n="149" xml:id="edGLM2_l_149">
+                    <w xml:id="edGLM2_w_001081">Et</w>
+                    <w xml:id="edGLM2_w_001082">meint</w>
+                    <w xml:id="edGLM2_w_001083">chastel</w>
+                    <w xml:id="edGLM2_w_001084">abatu</w>
+                    <w xml:id="edGLM2_w_001085">et</w>
+                    <w xml:id="edGLM2_w_001086">robé</w><pc type="supplied">.</pc></l>
+            </lg>
+            <lb n="10"/>
+            <lg n="III" type="laisse" xml:id="L_003">
+                <l n="150" xml:id="edGLM2_l_150">
+                    <w xml:id="edGLM2_w_001087">Dus</w>
+                    <w xml:id="edGLM2_w_001088">Auberis</w>
+                    <w xml:id="edGLM2_w_001089">regrete</w>
+                    <w xml:id="edGLM2_w_001090">son</w>
+                    <w xml:id="edGLM2_w_001091">cousin</w><pc type="supplied">:</pc></l>
+                <lb n="11"/>
+                <l n="151" xml:id="edGLM2_l_151"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001092">Tant</w>
+                        <w xml:id="edGLM2_w_001093">mar</w>
+                        <w xml:id="edGLM2_w_001094">i</w>
+                        <w xml:id="edGLM2_w_001095">futes</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_001096">franc</w>
+                        <w xml:id="edGLM2_w_001097">chevalier</w>
+                        <w xml:id="edGLM2_w_001098">gentil</w><pc type="supplied">!</pc></q></l>
+                <lb n="12"/>
+                <l n="152" xml:id="edGLM2_l_152"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001099">Qi</w>
+                        <w xml:id="edGLM2_w_001100">vos</w>
+                        <w xml:id="edGLM2_w_001101">a</w>
+                        <w xml:id="edGLM2_w_001102">mort</w>
+                        <w xml:id="edGLM2_w_001103">il</w>
+                        <w xml:id="edGLM2_w_001104" rend="elision">n</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_001105">est</w>
+                        <w xml:id="edGLM2_w_001106">pas</w>
+                        <w xml:id="edGLM2_w_001107">mes</w>
+                        <w xml:id="edGLM2_w_001108">amis</w><pc type="supplied">.</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="13"/>
+                <l n="153" xml:id="edGLM2_l_153">
+                    <w xml:id="edGLM2_w_001109">Senglant</w>
+                    <w xml:id="edGLM2_w_001110">li</w>
+                    <w xml:id="edGLM2_w_001111">bese</w>
+                    <w xml:id="edGLM2_w_001112">et</w>
+                    <w xml:id="edGLM2_w_001113">la</w>
+                    <w xml:id="edGLM2_w_001114">bouche</w>
+                    <w xml:id="edGLM2_w_001115">et</w>
+                    <w xml:id="edGLM2_w_001116">le</w>
+                    <w xml:id="edGLM2_w_001117">vis</w><pc type="supplied">.</pc></l>
+                <lb n="14"/>
+                <l n="154" xml:id="edGLM2_l_154">
+                    <w xml:id="edGLM2_w_001118">Uns</w>
+                    <sic><w xml:id="edGLM2_w_001119">escuiers</w></sic><!--<note>(sic)</note>-->
+                    <w xml:id="edGLM2_w_001120">apele</w><pc type="supplied">,</pc>
+                    <w xml:id="edGLM2_w_001121">si</w>
+                    <w xml:id="edGLM2_w_001122">li</w>
+                    <w xml:id="edGLM2_w_001123">dist</w><pc type="supplied">:</pc></l>
+                <lb n="15"/>
+                <l n="155" xml:id="edGLM2_l_155"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001124">Prenz</w>
+                        <w xml:id="edGLM2_w_001125">tost</w>
+                        <w xml:id="edGLM2_w_001126">cez</w>
+                        <w xml:id="edGLM2_w_001127">morz</w>
+                        <w xml:id="edGLM2_w_001128">que</w>
+                        <w xml:id="edGLM2_w_001129">tu</w>
+                        <w xml:id="edGLM2_w_001130">voiz</w>
+                        <w xml:id="edGLM2_w_001131">ci</w>
+                        <w xml:id="edGLM2_w_001132">gesir</w><pc type="supplied">,</pc></q></l>
+                <lb n="16"/>
+                <l n="156" xml:id="edGLM2_l_156"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001133">A</w>
+                        <w xml:id="edGLM2_w_001134">une</w>
+                        <w xml:id="edGLM2_w_001135">part</w>
+                        <w xml:id="edGLM2_w_001136">les</w>
+                        <w xml:id="edGLM2_w_001137">porte</w><pc type="supplied">,</pc>
+                        <w xml:id="edGLM2_w_001138">biax</w>
+                        <w xml:id="edGLM2_w_001139">amis</w><pc type="supplied">.</pc></q></l>
+                <lb n="17"/>
+                <l n="157" xml:id="edGLM2_l_157"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001140">Et</w>
+                        <w xml:id="edGLM2_w_001141">vet</w>
+                        <w xml:id="edGLM2_w_001142">a</w>
+                        <w xml:id="edGLM2_w_001143" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_001144">autre</w>
+                        <w xml:id="edGLM2_w_001145">qi</w>
+                        <w xml:id="edGLM2_w_001146">a</w>
+                        <w xml:id="edGLM2_w_001147">a</w>
+                        <w xml:id="edGLM2_w_001148">non</w>
+                        <w xml:id="edGLM2_w_001149">Orris</w><pc type="supplied">.</pc></q></l>
+                <lb n="18"/>
+                <l n="158" xml:id="edGLM2_l_158"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001150">Tout</w>
+                        <w xml:id="edGLM2_w_001151">coste</w>
+                        <w xml:id="edGLM2_w_001152">a</w>
+                        <w xml:id="edGLM2_w_001153">coste</w>
+                        <w xml:id="edGLM2_w_001154">les</w>
+                        <w xml:id="edGLM2_w_001155">me</w>
+                        <w xml:id="edGLM2_w_001156">metez</w>
+                        <w xml:id="edGLM2_w_001157">gesir</w></q></l>
+                <lb n="19"/>
+                <l n="159" xml:id="edGLM2_l_159"><pc type="supplied">«</pc><q>
+                        <w xml:id="edGLM2_w_001158">Tant</w>
+                        <w xml:id="edGLM2_w_001159">qe</w>
+                        <w xml:id="edGLM2_w_001160" rend="elision">l</w><pc type="supplied">'</pc><w xml:id="edGLM2_w_001161">estor</w>
+                        <w xml:id="edGLM2_w_001162">soit</w>
+                        <w xml:id="edGLM2_w_001163">senpres</w>
+                        <w xml:id="edGLM2_w_001164">departiz</w><pc type="supplied">.</pc></q><pc
+                        type="supplied">»</pc></l>
+                <lb n="20"/>
+                <l n="160" xml:id="edGLM2_l_160">
+                    <w xml:id="edGLM2_w_001165">Il</w>
+                    <w xml:id="edGLM2_w_001166">est</w>
+                    <w xml:id="edGLM2_w_001167">montez</w>
+                    <w xml:id="edGLM2_w_001168">sor</w>
+                    <w xml:id="edGLM2_w_001169"><pc type="supplied">.</pc>j</w><pc type="supplied"
+                        >.</pc>
+                    <w xml:id="edGLM2_w_001170">chevau</w>
+                    <w xml:id="edGLM2_w_001171">de</w>
+                    <w xml:id="edGLM2_w_001172">pris</w><pc type="supplied">.</pc></l>
+            </lg>
+        </body>
+    </text>
+</TEI>

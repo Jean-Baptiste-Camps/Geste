@@ -1,0 +1,4177 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrC" type="ed" xml:lang="fr" version="5"
+    corresp="jns5643">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Garin le Lorrain</title>
+                <title type="sub">Numérisation de l'édition Cretton du fragment de Genève</title>
+                <!-- JBC: j'ajoute l'editeur, et modifie légèrement les titres -->
+                <editor><persName>Antoine Cretton</persName></editor>
+                <respStmt xml:id="AM">
+                    <resp>édition numérique</resp>
+                    <persName>Armâne Magnier</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName>Jean-Baptiste</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/">Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="ed_GLC" status="draft">
+                    <!-- JBC: traiter la référence comme un article -->
+                    <analytic>
+                        <editor xml:id="Cretton">
+                            <persName>
+                                <forename>Antoine</forename>
+                                <surname>Cretton</surname>
+                            </persName>
+                        </editor>
+                        <!--<title type="main">Garin le Lorrain</title>
+                        <title type="sub">Fragm. de Genève / olim latin 130</title>-->
+                        <!-- JBC: mettre le titre de la source -->
+                        <title>Fragment d'un manuscrit de Garin le Lorrain</title>
+                        <idno type="DOI">10.3406/roma.1926.4257</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <date>1926</date>
+                        </imprint>
+                        <biblScope unit="issue" n="52">52</biblScope>
+                        <biblScope unit="page" from="296" to="306">p. 296-306</biblScope>
+                    </monogr>
+                    <!--<monogr>
+                        <editor xml:id="Cretton">
+                            <persName>
+                                <forename>Antoine</forename>
+                                <surname>Cretton</surname>
+                            </persName>
+                        </editor>
+                        <title type="main">Garin le Lorrain</title>
+                        <title type="sub">Fragm. de Genève / olim latin 130</title>
+                        <imprint>
+                            <publisher>Romania</publisher>
+                            <date>1926</date>
+                        </imprint>
+                        <biblScope>52, p. 296-306.</biblScope>
+                    </monogr>-->
+                </biblStruct>
+                <!-- JBC: bon traitement de la source manuscrite -->
+                <msDesc>
+                    <msIdentifier>
+                        <msName>Garin le Lorrain</msName>
+                    </msIdentifier>
+                    <msFrag>
+                        <msIdentifier>
+                            <settlement>Genève, Suisse</settlement>
+                            <repository>Bibliothèque de Genève</repository>
+                            <idno>manuscrit latin 130</idno>
+                        </msIdentifier>
+                        <msContents defective="false">
+                            <!-- JBC: donner le nom du texte ? -->
+                            <summary>Il y a 2 colonnes à la page, 39 vers à la colonne aux pages 1
+                                et 2, 40 aux pages 3 et 4, soit un total de 316 vers, dont un, le
+                                309, est répété par erreur.</summary>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>Parchemin</support>
+                                    <extent>
+                                        <dimensions>
+                                            <height unit="cm" quantity="43">43</height>
+                                            <width unit="cm" quantity="30">30</width>
+                                        </dimensions>
+                                    </extent>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                    </msFrag>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Si la structure globale de l'édition a été rendue dans sa totalité jusqu'aux retours
+                à la ligne (lb), il ne s'agit pas pour autant d'une édition imitative, c'est
+                pourquoi les ornements ont été laissés de côté.</p>
+            <p>Bien que la description du manuscrit soit faite dans les parties liminaires du texte,
+                il m'a semblé utile de répéter ces quelques informations de façon structurée dans un
+                <!-- JBC: possibilité d'utiliser <gi> pour indiquer les noms d'éléments, etc. -->
+                msDesc contenant un msFrag.</p>
+            <p>L'édition mentionnant les colonnes du manuscrit d'origine, j'ai restitué des colonnes
+                dans des cb numérotées telles que dans l'édition
+                <!-- JBC: par cohérence avec le choix suivant, il eût mieux valu choisir milestone -->
+                et leur ait attribué un xml:id. J'ai également choisi d'enrichir l'édition numérique
+                de la mention des pages d'origine du manuscrit avec une balise milestone, type page,
+                numérotées de 1 à 4. Ceci les différencie ainsi des pb qui correspondent aux début
+                de page de l'édition d'Antoine Cretton. Les pb sont numérotées tels que dans
+                l'édition de la page 296 à 306 et ont un xml:id propre. </p>
+            <p>Compte tenu de la répétition du vers 309, la numérotation des vers par xslt a été
+                faite sans la répétition pour que cela fonctionne puis ajoutée ensuite
+                manuellement.</p>
+            <p>Compte tenu de l'édition, le choix a été fait d'encoder les résolutions
+                d'abbréviation de la manière la plus simple en encadrant de balises ex les lettres
+                restituées tout en mentionnant qu'elles sont en italiques dans le texte. Ne
+                disposant pas des abbréviations d'origine cela semble plus juste.</p>
+            <p>Dans le body, les notes sont intégrés directement après la partie du texte qu'elles
+                concernent lorsqu'il s'agit de notes concernant un seul vers dans une balise note.
+                Elles sont placées en fin de page comme dans l'édition lorsqu'il s'agit d'une note
+                concernant un nombre trop important de vers de cette page, ne se suivant pas
+                forcément.</p>
+            <p>La signature de l'éditeur a été placée dans le back ne faisant pas partie du corps du
+                texte à proprement parler.</p>
+        </encodingDesc>
+
+        <profileDesc>
+            <creation>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">traits champ. et
+                    pic</origPlace>
+                <origDate cert="unknown" resp="DEAF" type="dateComposition" notBefore="1175"
+                    notAfter="1200">1175-1200</origDate>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit"> traits wallons et de
+                    l'Est (Lorraine?)</origPlace>
+                <origDate cert="unknown" resp="Cretton" type="dateManuscrit" notBefore="1240"
+                    notAfter="1260">1240-1260</origDate>
+            </creation>
+
+            <langUsage>
+                <language cert="medium" resp="#JBC" ident="fro" usage="100">traits wallons et de
+                    l'Est (Lorraine?)</language>
+            </langUsage>
+        </profileDesc>
+
+
+        <revisionDesc status="draft">
+            <change when="201809" who="#JBC" status="draft">Correction du document</change>
+            <!-- JBC: 
+            À faire pour l'intégration du fichier,
+            X texte déjà confronté à l'OCR, et corrigé
+            - première vérification des abréviations faite, mais il serait utile de revérifier systématiquement 
+                (étendue des abr., surtout; éventuellement présence/absence);
+            X segmentation en mots, encodage ponctuation; -> faite mais non vérifiée
+            - encodage du discours direct.
+            -->
+            <change who="#AM" when="2018-03-20" status="draft">Encodage des métadonnées</change>
+            <change who="#AM" when="2018-03-21" status="draft">Encodage du front</change>
+            <change who="#AM" when="2018-03-30" status="draft">Encodage simple du body balises l et
+                pb</change>
+            <change who="#AM" when="2018-04-07" status="draft">Ajout des notes dans le body</change>
+            <change who="#AM" when="2018-04-12" status="draft">Abbréviations et lettres
+                manquantes</change>
+            <change who="#AM" when="2018-04-18" status="draft">xslt pour numérotation des
+                vers</change>
+            <change who="#AM" when="2018-04-19" status="draft">retrait des choice et abbr et expan
+                au profit de simple ex</change>
+            <change who="#AM" when="2018-04-21" status="draft">ajout du msDesc, des milestones et
+                des cb dans le body</change>
+            <change who="#AM" when="2018-04-22" status="draft">numérotation des pb, ajout du
+                encodingDesc</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <front>
+            <div type="preface">
+                <pb n="296" xml:id="p296"/>
+                <head><lb/>FRAGMENT D‘UN MANUSCRIT <lb/>DE <lb/>GARIN LE LORRAIN </head>
+                <p>
+                    <lb/>C‘est une <bibl status="draft">feuille de parchemin de <height unit="cm"
+                            quantity="43">43 cm</height>. de hauteur sur <width unit="cm"
+                            quantity="30">30</width>
+                        <lb/>de largeur, qui formait naguère l‘extérieur de la couverture du
+                            <lb/><idno>manuscrit latin 130</idno>de la<msIdentifier>
+                            <repository> Bibliothèque de Genève</repository>
+                        </msIdentifier></bibl><!-- ici, j'aurai aimé insérer le idno dans msIdentifier, en mettant "de la" 
+                            dans le repository pour que cela fonctionne, mais  le idno doit se trouver à la suite du repository,
+                            or j'ai préféré conserver l'ordre du texte-->,
+                    contenant un <lb/><bibl status="draft">ouvrage de <author><persName><hi
+                                    rend="italic">Bonivard</hi></persName></author>, daté du
+                            <date>13 mai 1529</date> : <title><hi rend="italic">Jardin
+                                d‘antiquité</hi></title></bibl><note n="001"><lb/>1. Cf. <bibl
+                            status="draft"><author><persName>Berghof</persName>,
+                                    <persName>Bonivard</persName></author>, <citedRange unit="page"
+                                >p. 137</citedRange>.</bibl></note>... <lb/>Un lecteur ayant
+                    remarqué que les plats étaient couverts de <lb/>vers français en caractères
+                    gothiques, ce texte fut signalé à <lb/><persName>M. Ernest Muret</persName>, qui
+                    y reconnut un fragment de laisse corres<lb/>pondant aux <bibl status="draft"
+                            ><citedRange unit="page">pages 154—169</citedRange> du <citedRange
+                            unit="volume">second volume</citedRange> de l‘édition
+                            <lb/><publisher>Paulin Paris</publisher> de <title><hi rend="italic"
+                                >Garin le Lorrain</hi></title></bibl>. Sur son conseil, le parchemin
+                    <lb/>fut décollé, avec tant de soin et un si heureux succès que les <lb/>pages
+                    intérieures (1 et 4) se lisent mieux que les pages exté— <lb/>rieures (2 et 3),
+                    dont l‘encre est en quelques endroits effacée <lb/>par l‘usure. Comme ces pages
+                    offrent un texte continu, il s‘en <lb/>suit que la feuille occupait le milieu du
+                    cahier dont elle a été <lb/>enlevée. Il y a 2 colonnes à la page, 39 vers à la
+                    colonne aux <lb/>pages 1 et 2, 40 aux pages 3 et 4, soit un total de 316 vers,
+                    <lb/>dont un, le 309, est répété par erreur.</p>
+                <lb/>
+                <p><lb/>D'après <persName>M. F. De Crue</persName>, l‘écriture est du
+                    <!-- JBC: date? --> milieu du XIIIe <lb/>siècle. Les majuscules sont rares :
+                        <mentioned>O</mentioned>, <mentioned>E</mentioned> et
+                        <mentioned>G</mentioned> se trouvent assez <lb/>souvent au commencement du
+                    vers, <mentioned>G</mentioned> à l‘initiale des noms <lb/>propres Garin et
+                    Guillaume. Les noms des principaux person<!--— --><lb/>nages sont ordinairement
+                    abrégés. Nous avons résolu ces
+                    <!-- JBC: ne pas répéter typographiquement les césures dans ce contexte. -->
+                    abré<!--— --><lb/>viations d‘après <bibl status="draft">l‘édition <publisher>P.
+                            Paris</publisher></bibl>, en tenant compte des habi<!--— --><lb/>tudes
+                    de notre scribe : nous avons préféré, par exemple,
+                        <mentioned>Bernarz</mentioned>
+                    <lb/>au <mentioned>Bernars</mentioned> de P. Paris, parce que, dans notre
+                    fragment, <mentioned>s</mentioned> et <mentioned>z</mentioned>
+                    <!-- JBC : ? -->
+                    <!--<lb/>
+                    <lb/>-->
+                    <pb n="297" xml:id="p297"/>
+                    <lb/>sont presque toujours distingués. Les lettres effacées ont été
+                    <lb/>rétablies entre crochets.</p>
+                <lb/>
+                <lb/>
+                <p>La concordance entre les vers de notre texte et ceux de <bibl status="draft"
+                        >l‘édi<!--— --><lb/>tion <publisher>P. Paris</publisher></bibl> est indiquée
+                    au bas des pages : 55 vers manuscrits <lb/>n‘ont pas de correspondants dans
+                    l‘imprimé, 20 de l‘édition ne <lb/>se retrouvent pas dans le fragment. Le
+                    surplus de 35 vers carac<!--— --><lb/>térise une rédaction plus développée que
+                    celle des manuscrits <lb/>dont s‘est servi P. Paris.</p>
+                <lb/>
+                <lb/>
+                <p>Nous avons essayé, en nous aidant de l‘article de <bibl status="draft"
+                                ><author><persName>Bonnardot</persName></author>, <lb/>au
+                            <citedRange unit="tome">tome III</citedRange> de la <hi rend="italic"
+                            >Romania</hi></bibl>, et du mémoire de <bibl status="draft"
+                            ><persName>Vietor</persName>, <title>Die Hand<!--— --><lb/>schriften der
+                            Loherains</title> (Halle, <date>1875</date>)</bibl>, de classer notre
+                    fragment <lb/>dans la série, si nombreuse déjà, des manuscrits des Lorrains .
+                    <lb/>Deux, <hi rend="italic">C</hi> et <hi rend="italic">F</hi> (celui sur
+                    lequel est principalement fondée <bibl status="draft">l‘édi<!--— --><lb/>tion
+                            <publisher>P. Paris</publisher></bibl>) présentent la même justification
+                    que le 2e folio <lb/>de notre manuscrit : 2 colonnes par page, 40 vers à la
+                    colonne. <lb/>Le <bibl status="draft">ms. <hi rend="italic">C</hi>
+                    </bibl> ayant été utilisé par <persName>Godefroy</persName> dans son
+                    dictionnaire, <lb/>on y retrouve quelques vers se rapportant à notre fragment ;
+                    <lb/>mais la leçon en est différente. Comparez, par exemple, les vv.
+                    <lb/>178—180 ci—dessous à la citation de <cit>
+                        <bibl status="draft"><persName>Godefroy</persName>,
+                                <citedRange>VII</citedRange>, <citedRange unit="page">p.
+                                580</citedRange>
+                            <hi rend="italic">c</hi>.</bibl>
+                    </cit>
+                    <lb/>Notre fragment n‘est donc pas une feuille égarée d‘un des
+                    manu<!--— --><lb/>scrits connus.</p>
+                <lb/>
+                <lb/>
+                <p>D‘autre part, il présente un certain nombre de formes de <lb/>noms propres qui
+                    lui sont particulières. Par exemple, <mentioned>Do li
+                        Van<!--—
+                        --><lb/>nierres</mentioned> (v. 310) semble
+                    bien ne se trouver que dans ce texte : <lb/><persName>Vietor</persName> cite un
+                    autre passage où le même personnage est appelé <lb/><mentioned>Do li
+                        Venerres</mentioned> dans tous les manuscrits. La forme
+                        <mentioned>Tonoirre</mentioned> (v . <lb/>188) n‘apparaît dans aucun des
+                    manuscrits utilisés par <bibl status="draft"><publisher>P. Paris</publisher>
+                        <lb/>(cf. sa note, <citedRange unit="volume">II</citedRange>, <citedRange
+                            unit="page">p. 164</citedRange>).</bibl></p>
+                <lb/>
+                <lb/>
+                <p>La copie offre des formes picardes : <mentioned>veïr</mentioned> 5, <hi
+                        rend="italic">mi&lt;s&gt;</hi> 58, <mentioned>mi</mentioned>
+                    <lb/>268, toutes à l‘assonance, vo 39, et des formes wallonnes :
+                        <lb/><!-- JBC: encodage citation? 
+                    Je suggère mentioned, ici (et à changer supra)--><mentioned>iestes</mentioned>
+                    38, <mentioned>Frobierge</mentioned> 289. Le scribe confond
+                        <mentioned>en</mentioned> et <mentioned>an</mentioned>, par exemple <lb/>aux
+                    vers 10, 64, 174, 304. On remarquera au v. 24 l‘archaïque
+                        <lb/><mentioned>lo</mentioned>. La forme <mentioned>Hienri</mentioned>, 156,
+                    183, est sans exemple dans la <!-- JBC: réf. bibl. -->
+                    <hi rend="italic">Table</hi> de <lb/>Langlois.</p>
+            </div>
+        </front>
+        <body>
+            <milestone unit="page" n="1"/>
+            <cb n="[1 a]"/>
+            <l n="1" xml:id="ed_GLC_l_1">
+                <lb/>
+                <pc>«</pc>
+                <w><supplied>H</supplied>aim</w>
+                <w>de</w>
+                <w>Bordele</w>
+                <!-- JBC: je simplifie le rendu des abréviations restituées -->
+                <w><ex>et</ex></w>
+                <w>le</w>
+                <w>preu</w>
+                <w>Hardoïn</w>
+                <pc>.</pc>
+            </l>
+            <l n="2" xml:id="ed_GLC_l_2">
+                <lb/>
+                <w>Maugré</w>
+                <w>en</w>
+                <w>aie<ex>n</ex>t</w>
+                <w>tretuit</w>
+                <w>li</w>
+                <w>Poitevin</w>
+            </l>
+            <l n="3" xml:id="ed_GLC_l_3">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>le</w>
+                <w>parage</w>
+                <w>Fro<ex>mont</ex></w>
+                <w>le</w>
+                <w>posteïf</w>
+                <pc>,</pc>
+            </l>
+            <!-- JBC: pourquoi tous ces changements de lignes ? -->
+            <!--<lb/>
+            <lb/>-->
+            <note>1—2 = <bibl status="draft"><publisher>P. Paris</publisher>, <citedRange
+                        unit="page">p. 154</citedRange>, <citedRange unit="line">13—14</citedRange>
+                    .</bibl></note>
+            <!--<lb/>-->
+            <pb n="298" xml:id="p298"/>
+            <!--<lb/>
+            <lb/>-->
+            <l n="4" xml:id="ed_GLC_l_4">
+                <lb/>
+                <w>S<supplied>il</supplied></w>
+                <w><supplied>don</supplied>rai</w>
+                <w>je</w>
+                <w>le</w>
+                <w>cheva</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="5" xml:id="ed_GLC_l_5">
+                <lb/>
+                <w>S<supplied>e</supplied></w>
+                <supplied><w>je</w></supplied>
+                <w><supplied>l</supplied>e</w>
+                <w>puis</w>
+                <w>en</w>
+                <w>grant</w>
+                <w>estor</w>
+                <w>veïr</w>
+                <pc>,</pc>
+                <!-- 5-->
+            </l>
+            <!-- JBC: ne pas laisser les numéros de vers mélangés au reste -->
+            <l n="6" xml:id="ed_GLC_l_6">
+                <lb/>
+                <w>Si</w>
+                <w>le</w>
+                <w>donré</w>
+                <w>je</w>
+                <w>mo<ex>n</ex></w>
+                <w>n<supplied>ev</supplied>eu</w>
+                <w>Rigaudi<ex>n</ex></w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="7" xml:id="ed_GLC_l_7">
+                <lb/>
+                <w>Dist</w>
+                <w>li</w>
+                <w>mesages</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Je</w>
+                <w>vos</w>
+                <w>ai</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>oï</w>
+                <pc>.</pc>
+            </l>
+            <l n="8" xml:id="ed_GLC_l_8">
+                <lb/>
+                <w>Si</w>
+                <w>m</w>
+                <pc>‘</pc>
+                <w>aïst</w>
+                <w>Die<ex>us</ex></w>
+                <pc>,</pc>
+                <w>il</w>
+                <w>li</w>
+                <w>sera</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>dit</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="9" xml:id="ed_GLC_l_9">
+                <lb/>
+                <w>François</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>rient</w>
+                <pc>,</pc>
+                <w>Breton</w>
+                <w><ex>et</ex></w>
+                <w>Engevin</w>
+                <pc>:</pc>
+            </l>
+            <l n="10" xml:id="ed_GLC_l_10">
+                <lb/>
+                <w><supplied>T</supplied>i<ex>eus</ex></w>
+                <!-- JBC (vérif. si pas problème de la num) -->
+                <w>est</w>
+                <w>bleciez</w>
+                <w><ex>et</ex></w>
+                <w>en</w>
+                <w>son</w>
+                <w>lit</w>
+                <w>se</w>
+                <w>gist</w>
+            </l>
+            <l n="11" xml:id="ed_GLC_l_11">
+                <lb/>
+                <w>Qui</w>
+                <w>jure</w>
+                <w>Dieu</w>
+                <pc>,</pc>
+                <w>qui</w>
+                <!-- JBC: texte en trop ?? -->
+                <!--, il li sera-->
+                <w>onq<ex>ue</ex>s</w>
+                <w>ne</w>
+                <w>menti</w>
+                <pc>,</pc>
+            </l>
+            <l n="12" xml:id="ed_GLC_l_12">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>il</w>
+                <w>ira</w>
+                <w>au</w>
+                <w>tornoi</w>
+                <w>le</w>
+                <w>mati<ex>n</ex></w>
+                <pc>!</pc>
+            </l>
+            <l n="13" xml:id="ed_GLC_l_13">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>mesages</w>
+                <w>arrieres</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>revint</w>
+                <pc>,</pc>
+            </l>
+            <l n="14" xml:id="ed_GLC_l_14">
+                <lb/>
+                <w>P<ex>ar</ex>mi</w>
+                <w>la</w>
+                <w>porte</w>
+                <w>en</w>
+                <w>la</w>
+                <w>vile</w>
+                <w>se</w>
+                <w>mist</w>
+                <pc>,</pc>
+            </l>
+            <l n="15" xml:id="ed_GLC_l_15">
+                <lb/>
+                <w>Juqu</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>la</w>
+                <w>sale</w>
+                <!-- JBC: crochet non traité. -->
+                <!--[-->
+                <supplied><w>ne</w>
+                    <w>p<ex>ri</ex>st</w>
+                    <w>il</w>
+                    <w>onq<ex>ues</ex></w>
+                    <w>fin</w></supplied>
+                <pc>,</pc>
+            </l>
+            <l n="16" xml:id="ed_GLC_l_16"><lb/><w>Trouva</w>
+                <w>Fro<ex>mont</ex></w>
+                <w>seant</w>
+                <w>en</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>jardin</w><pc>.</pc></l>
+            <l n="17" xml:id="ed_GLC_l_17">
+                <lb/>
+                <w>C<supplied>il</supplied></w>
+                <w>ch<ex>evalie</ex>r</w>
+                <!--chevalier-->
+                <w>furent</w>
+                <w>enviro<ex>n</ex></w>
+                <w>environ</w>
+                <w>li</w>
+                <pc>.</pc>
+            </l>
+            <l n="18" xml:id="ed_GLC_l_18"><lb/><w>Ça</w>
+                <pc>.</pc><w>X</w><pc>.</pc><pc>,</pc>
+                <w>ça</w>
+                <pc>.</pc><w>XX</w><pc>.</pc><pc>,</pc>
+                <w>ça</w>
+                <pc>.</pc><w>LX</w><pc>.</pc><pc>,</pc>
+                <w>ça</w>
+                <pc>.</pc>
+                <w>VI</w><pc>.</pc><pc>,</pc></l>
+            <l n="19" xml:id="ed_GLC_l_19">
+                <lb/>
+                <w>Por</w>
+                <w>le</w>
+                <w>mesage</w>
+                <w>escouter</w>
+                <w><ex>et</ex></w>
+                <w>oir</w>
+                <pc>.</pc>
+            </l>
+            <l n="20" xml:id="ed_GLC_l_20">
+                <lb/>
+                <w>Fro<ex>monz</ex></w>
+                <w>le</w>
+                <w>voit</w>
+                <pc>,</pc>
+                <w>si</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>a</w>
+                <w>reso<ex>n</ex></w>
+                <!-- JBC: répétition -->
+                <!--reson-->
+                <w>mis</w>
+                <pc>:</pc>
+            </l>
+            <l n="21" xml:id="ed_GLC_l_21">
+                <lb/>
+                <pc>«</pc>
+                <w>Diva</w>
+                <pc>!</pc>
+                <w>fet</w>
+                <w>il</w>
+                <pc>,</pc>
+                <w>que</w>
+                <w>me</w>
+                <w>ma<ex>n</ex>de</w>
+                <w>P<ex>e</ex>p<ex>ins</ex></w>
+                <pc>?</pc>
+            </l>
+            <l n="22" xml:id="ed_GLC_l_22">
+                <lb/>
+                <w>Avro<supplied>mes</supplied></w>
+                <w>n<ex>us</ex></w>
+                <w>le</w>
+                <w>tornoi</w>
+                <w>le</w>
+                <w>matin</w>
+                <pc>?</pc>
+                <pc>»</pc>
+            </l>
+            <note><lb/>22 commencement du vers illisible.</note>
+            <l n="23" xml:id="ed_GLC_l_23">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>cil</w>
+                <w>respont</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Si</w>
+                <w>m</w>
+                <pc>‘</pc>
+                <w>aïst</w>
+                <w>Die<ex>us</ex></w>
+                <pc>,</pc>
+                <w>oïl</w>
+                <pc>;</pc>
+            </l>
+            <l n="24" xml:id="ed_GLC_l_24">
+                <lb/>
+                <w>Mes</w>
+                <w>p<ex>ar</ex></w>
+                <!--par-->
+                <w>lo</w>
+                <w>roi</w>
+                <w>eüssiez</w>
+                <w>vos</w>
+                <w>failli</w>
+                <pc>,</pc>
+            </l>
+            <l n="25" xml:id="ed_GLC_l_25">
+                <lb/>
+                <w>Se</w>
+                <w>ne</w>
+                <w>fust</w>
+                <w>Be<ex>gues</ex></w>
+                <w>qui</w>
+                <w>desus</w>
+                <w>li</w>
+                <w>le</w>
+                <w>prist</w>
+                <pc>:</pc>
+            </l>
+            <l n="26" xml:id="ed_GLC_l_26"><lb/>
+                <w>Ilecq<ex>ues</ex></w>
+                <w>vit</w>
+                <pc>—</pc><w>I</w><pc>—</pc>
+                <w>demoisel</w>
+                <w>venir</w><pc>,</pc></l>
+            <l n="27" xml:id="ed_GLC_l_27">
+                <lb/>
+                <w>Rigaut</w>
+                <w>a</w>
+                <w>nom</w>
+                <pc>,</pc>
+                <w>filz</w>
+                <w>le</w>
+                <w>vilain</w>
+                <w>H<ex>er</ex>vi</w>
+                <pc>;</pc>
+            </l>
+            <l n="28" xml:id="ed_GLC_l_28">
+                <lb/>
+                <w>Ai<ex>n</ex>z</w>
+                <!--Ainz-->
+                <!-- JBC: répétition -->
+                <w>de</w>
+                <w>mes</w>
+                <w>elz</w>
+                <w>si</w>
+                <w>fier</w>
+                <w>home</w>
+                <w>ne</w>
+                <w>vi</w>
+                <pc>,</pc>
+            </l>
+            <l n="29" xml:id="ed_GLC_l_29"><lb/><w>Entre</w>
+                <pc>—</pc><w>II</w><pc>—</pc>
+                <w>elz</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>plaine</w>
+                <w>paume</w>
+                <w>a</w>
+                <w>il</w><pc>.</pc></l>
+            <l n="30" xml:id="ed_GLC_l_30">
+                <lb/>
+                <w>Be<ex>gues</ex></w>
+                <w>li</w>
+                <w>dus</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>apela</w>
+                <w>so<ex>n</ex></w>
+                <w>cousin</w>
+                <pc>;</pc>
+            </l>
+            <l n="31" xml:id="ed_GLC_l_31">
+                <lb/>
+                <w>Ne</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>cela</w>
+                <pc>,</pc>
+                <w>oiant</w>
+                <w>tretoz</w>
+                <w>le</w>
+                <w>dist</w>
+                <pc>,</pc>
+            </l>
+            <l n="32" xml:id="ed_GLC_l_32">
+                <lb/>
+                <w>Qu</w>
+                <pc>‘</pc>
+                <w>il</w>
+                <w>li</w>
+                <w>donroit</w>
+                <w>le</w>
+                <w>cheval</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="33" xml:id="ed_GLC_l_33">
+                <lb/>
+                <pc>—</pc>
+                <w>Fil</w>
+                <w>a</w>
+                <w>putain</w>
+                <pc>!</pc>
+                <w>li</w>
+                <w>que<ex>n</ex>s</w>
+                <!-- JBC: manquait le début de Bernarz -->
+                <!--<ex>narz</ex>-->
+                <w>Ber<ex>narz</ex></w>
+                <w>a</w>
+                <w>dit</w>
+                <pc>,</pc>
+            </l>
+            <l n="34" xml:id="ed_GLC_l_34">
+                <lb/>
+                <w>Fol</w>
+                <w>mesagier</w>
+                <pc>,</pc>
+                <w>Die<ex>us</ex></w>
+                <w>te</w>
+                <w>puit</w>
+                <w>maleïr</w>
+                <pc>,</pc>
+            </l>
+            <l n="35" xml:id="ed_GLC_l_35"><lb/><w>Qui</w>
+                <w>si</w>
+                <w>fez</w>
+                <w>moz</w>
+                <w>n<ex>us</ex></w>
+                <w>a</w>
+                <w><ex>con</ex>tez</w>
+                <!--c-->
+                <w><ex>et</ex></w> <w>diz</w> <pc>!</pc>
+                <pc>»</pc></l>
+            <l n="36" xml:id="ed_GLC_l_36">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>dit</w>
+                <w>li</w>
+                <w>mes</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Encore</w>
+                <w>ai</w>
+                <w>plus</w>
+                <w>oï</w>
+                <pc>:</pc>
+            </l>
+            <l n="37" xml:id="ed_GLC_l_37">
+                <lb/>
+                <w>Maugré</w>
+                <w>Fro<ex>mont</ex></w>
+                <pc>,</pc>
+                <w>q<ex>ue</ex></w>
+                <w>je</w>
+                <w>voi</w>
+                <w>sooir</w>
+                <w>ci</w>
+                <pc>,</pc>
+            </l>
+            <l n="38" xml:id="ed_GLC_l_38">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>maugré</w>
+                <w>vos</w>
+                <w>qui</w>
+                <w>tant</w>
+                <w>iestes</w>
+                <w>hardi</w>
+                <pc>,</pc>
+            </l>
+            <l n="39" xml:id="ed_GLC_l_39">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>vo</w>
+                <w>parage</w>
+                <pc>,</pc>
+                <w>qua<ex>n</ex></w>
+                <w>qu</w>
+                <pc>‘</pc>
+                <w>il</w>
+                <w>en</w>
+                <w>a</w>
+                <w>iqui</w>
+                <pc>,</pc>
+            </l>
+            <cb n="[1 b]"/>
+            <l n="40" xml:id="ed_GLC_l_40">
+                <lb/>
+                <w>Se</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>avïez</w>
+                <w><ex>et</ex></w>
+                <w>juré</w>
+                <w><ex>et</ex></w>
+                <w>plévi</w>
+                <pc>,</pc>
+            </l>
+            <l n="41" xml:id="ed_GLC_l_41">
+                <lb/>
+                <w>Si</w>
+                <w>avra</w>
+                <w>il</w>
+                <w>le</w>
+                <w>cheval</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>,</pc>
+            </l>
+            <!--<lb/>
+            <lb/>-->
+            <note><lb/>6—8 = 154, 15-17; 13—18 = 154, 18—23; 19 = 154, 26; 20—28 = 155, <lb/>1—9 ;
+                29. cf. 153, 1 ; 30—36 = 155, 10—16 ; 38, cf. 155, 17 ; 39 = 155, 18 ; <lb/>40, cf.
+                154, 7 ; 41 = 155, 19.</note>
+            <!--<lb/>-->
+            <pb n="299" xml:id="p299"/>
+            <!--<lb/>
+            <lb/>-->
+            <l n="42" xml:id="ed_GLC_l_42">
+                <lb/>
+                <w>Si</w>
+                <w>le</w>
+                <w>donra</w>
+                <w>son</w>
+                <w>neveu</w>
+                <w>Rigaudi<ex>n</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="43" xml:id="ed_GLC_l_43">
+                <lb/>
+                <pc>—</pc>
+                <w>C<ex>er</ex>tes</w>
+                <w>il</w>
+                <w>me<ex>n</ex>t</w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>que<ex>ns</ex></w>
+                <w>Ber<ex>narz</ex></w>
+                <w>a</w>
+                <w>dit</w>
+                <pc>,</pc>
+            </l>
+            <l n="44" xml:id="ed_GLC_l_44">
+                <lb/>
+                <w>Je</w>
+                <w>cuit</w>
+                <w>le</w>
+                <w>suen</w>
+                <w>li</w>
+                <w>convenra</w>
+                <w>g<ex>uer</ex>pir</w>
+                <pc>.</pc>
+            </l>
+            <l n="45" xml:id="ed_GLC_l_45">
+                <lb/>
+                <pc>—</pc>
+                <w>Or</w>
+                <w>soiez</w>
+                <!-- JBC: ces chevrons servent à signaler un phénomène éditorial, sans qu'on soit exactement 
+                sûr qu'il s'agisse des erreurs du copistes ou de mots raturés par le copiste. Je penche pour le second.
+                -->
+                <!--&lt;-->
+                <del status="unremarkable"><w>prest</w></del>
+                <!--&gt;-->
+                <w>quoi</w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Fro<ex>monz</ex></w>
+                <w>a</w>
+                <w>dit</w>
+                <pc>,</pc>
+            </l>
+            <l n="46" xml:id="ed_GLC_l_46">
+                <lb/>
+                <w>Mau</w>
+                <w>q<ex>ue</ex>noissiez</w>
+                <w>duc</w>
+                <w>Be<ex>gon</ex></w>
+                <!--Begon-->
+                <w>de</w>
+                <w>Belin</w>
+                <pc>;</pc>
+            </l>
+            <l n="47" xml:id="ed_GLC_l_47">
+                <lb/>
+                <w>Il</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>avra</w>
+                <w>tost</w>
+                <pc>,</pc>
+                <w>certes</w>
+                <pc>,</pc>
+                <w>puis</w>
+                <w>qu</w>
+                <pc>‘</pc>
+                <w>il</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>dit</w>
+                <pc>;</pc>
+            </l>
+            <l n="48" xml:id="ed_GLC_l_48">
+                <lb/>
+                <w>Ai<ex>n<!--z--></ex>z</w>
+                <w>de</w>
+                <w>mes</w>
+                <w>elz</w>
+                <w>tel</w>
+                <w>ch<ex>evalie</ex>r</w>
+                <w>ne</w>
+                <w>vi</w>
+                <pc>,</pc>
+            </l>
+            <l n="49" xml:id="ed_GLC_l_49">
+                <lb/>
+                <w>Si</w>
+                <w>fier</w>
+                <w>as</w>
+                <w>armes</w>
+                <pc>,</pc>
+                <w>ne</w>
+                <w>si</w>
+                <w>amenevi</w>
+                <pc>.</pc>
+            </l>
+            <l n="50" xml:id="ed_GLC_l_50">
+                <lb/>
+                <w>Alez</w>
+                <w>veillier</w>
+                <pc>,</pc>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>,</pc>
+                <w>sire</w>
+                <w>filz</w>
+                <pc>,</pc>
+                <!--50-->
+            </l>
+            <l n="51" xml:id="ed_GLC_l_51">
+                <lb/>
+                <w>En</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>onor</w>
+                <w>Dieu</w>
+                <w>qui</w>
+                <w>en</w>
+                <w>la</w>
+                <w>croiz</w>
+                <w>fu</w>
+                <w>mis</w>
+                <pc>,</pc>
+            </l>
+            <l n="52" xml:id="ed_GLC_l_52">
+                <lb/>
+                <w>Qui</w>
+                <w>v<ex>us</ex></w>
+                <w>deffende</w>
+                <w>de</w>
+                <w>mort</w>
+                <w><ex>et</ex></w>
+                <w>de</w>
+                <w>peril</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="53" xml:id="ed_GLC_l_53">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>vallez</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>vet</w>
+                <w>a</w>
+                <w>Sai<ex>n</ex>t—Seurin</w>
+                <pc>,</pc>
+            </l>
+            <l n="54" xml:id="ed_GLC_l_54"><lb/><w>En</w>
+                <w>sa</w>
+                <w>compai<ex>n<!--g--></ex>gne</w>
+                <w>de</w>
+                <w>ch<ex>evalie<!--rs--></ex>rs</w>
+                <pc>.</pc><w>VII</w><pc>.</pc>
+                <w>M</w><pc>.</pc>
+                <pc>;</pc></l>
+            <l n="55" xml:id="ed_GLC_l_55">
+                <lb/>
+                <w>La</w>
+                <w>nuit</w>
+                <w>veilla</w>
+                <pc>,</pc>
+                <w>g<ex>ra</ex>nt</w>
+                <w>luminaire</w>
+                <w>fist</w>
+                <pc>.</pc>
+            </l>
+            <l n="56" xml:id="ed_GLC_l_56">
+                <lb/>
+                <w>Li</w>
+                <w>rois</w>
+                <w>de</w>
+                <w>France</w>
+                <w>enmi</w>
+                <w>les</w>
+                <w>cha<ex>m</ex>ps</w>
+                <w>en</w>
+                <w>vint</w>
+                <pc>,</pc>
+            </l>
+            <l n="57" xml:id="ed_GLC_l_57">
+                <lb/>
+                <w>En</w>
+                <w>sa</w>
+                <w><ex>com</ex>pai<ex>n</ex>gne</w>
+                <w>mai<ex>n</ex>t</w>
+                <w>ch<ex>evalie<!--r--></ex>r</w>
+                <!--chevalier-->
+                <w>gentil</w>
+                <pc>.</pc>
+            </l>
+            <l n="58" xml:id="ed_GLC_l_58">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>dist</w>
+                <w>li</w>
+                <w>rois</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Por</w>
+                <w>Dieu</w>
+                <pc>,</pc>
+                <w>entendez</w>
+                <w>mi</w>
+                <!--&lt;-->
+                <del status="unremarkable"><w>s</w></del>
+                <!--&gt;-->
+                <pc>:</pc>
+            </l>
+            <l n="59" xml:id="ed_GLC_l_59">
+                <lb/>
+                <w>Ai<ex>n<!--z--></ex>z</w>
+                <w>puis</w>
+                <w>q<ex>ue</ex></w>
+                <w>Be<ex>gues</ex></w>
+                <w>de</w>
+                <w>moi</w>
+                <w>se</w>
+                <w>dep<ex>ar</ex>ti</w>
+                <pc>,</pc>
+            </l>
+            <l n="60" xml:id="ed_GLC_l_60">
+                <lb/>
+                <w>Ne</w>
+                <w>poi</w>
+                <w>en</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ost</w>
+                <w>reposer</w>
+                <w>ne</w>
+                <w>dormir</w>
+                <pc>,</pc>
+            </l>
+            <l n="61" xml:id="ed_GLC_l_61">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>je</w>
+                <w>ne</w>
+                <w>fusse</w>
+                <w>nuit</w>
+                <w><ex>et</ex></w>
+                <w>jor</w>
+                <w>estormiz</w>
+                <pc>;</pc>
+            </l>
+            <l n="62" xml:id="ed_GLC_l_62">
+                <lb/>
+                <w>D</w>
+                <pc>‘</pc>
+                <w>eschaugueter</w>
+                <pc>,</pc>
+                <w>por</w>
+                <w>Dieu</w>
+                <pc>,</pc>
+                <w>qu</w>
+                <pc>‘</pc>
+                <w>e<ex>n</ex></w>
+                <w>sera</w>
+                <w>il</w>
+                <pc>?</pc>
+            </l>
+            <l n="63" xml:id="ed_GLC_l_63">
+                <lb/>
+                <pc>—</pc>
+                <w>Je</w>
+                <w>la</w>
+                <w>feré</w>
+                <pc>,</pc>
+                <w>dist</w>
+                <w>Be<ex>gues</ex></w>
+                <w>de</w>
+                <w>Belin</w>
+                <pc>,</pc>
+            </l>
+            <l n="64" xml:id="ed_GLC_l_64">
+                <lb/>
+                <w>P<ex>ar</ex></w>
+                <w>tel</w>
+                <w>convant</w>
+                <w><ex>com</ex></w>
+                <!--com-->
+                <w>vos</w>
+                <w>porroiz</w>
+                <w>oïr</w>
+                <pc>:</pc>
+            </l>
+            <l n="65" xml:id="ed_GLC_l_65">
+                <lb/>
+                <w>Seürem<ex>en</ex>t</w>
+                <w>porroiz</w>
+                <w>en</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ost</w>
+                <w>dormir</w>
+                <pc>,</pc>
+            </l>
+            <l n="66" xml:id="ed_GLC_l_66"><lb/><w><ex>Et</ex></w>
+                <w>s</w><pc>‘</pc><w>en</w>
+                <w>i</w>
+                <w>p<ex>er</ex>t</w>
+                <w>vaillant</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>angevin</w><pc>,</pc></l>
+            <l n="67" xml:id="ed_GLC_l_67"><lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>je</w>
+                <w>en</w>
+                <w>rende</w>
+                <pc>.</pc><w>II</w><pc>.</pc>
+                <w>auferra<ex>n</ex>z</w>
+                <!--auferranz-->
+                <w>de</w>
+                <w>pris</w><pc>.</pc>
+                <pc>»</pc></l>
+            <l n="68" xml:id="ed_GLC_l_68">
+                <lb/>
+                <w>Il</w>
+                <w>en</w>
+                <w>apele</w>
+                <w>Huon</w>
+                <w>de</w>
+                <w>Cambroisi</w>
+                <pc>,</pc>
+            </l>
+            <l n="69" xml:id="ed_GLC_l_69">
+                <lb/>
+                <w>De</w>
+                <w>Luceborc</w>
+                <w>Galeran</w>
+                <w><ex>et</ex></w>
+                <w>Gaudi<ex>n</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="70" xml:id="ed_GLC_l_70">
+                <lb/>
+                <w>Si</w>
+                <w>apela</w>
+                <w>le</w>
+                <w>Borgoi<ex>n</ex>g</w>
+                <w>A<ex>uberi</ex></w>
+                <pc>:</pc>
+            </l>
+            <l n="71" xml:id="ed_GLC_l_71">
+                <lb/>
+                <pc>«</pc>
+                <w>P<ex>re</ex>nez</w>
+                <w>vos</w>
+                <w>armes</w>
+                <pc>,</pc>
+                <w>fra<ex>n</ex>c</w>
+                <w>ch<ex>evalie</ex>r</w>
+                <pc>,</pc>
+                <w>dist</w>
+                <w>il</w>
+                <pc>;</pc>
+            </l>
+            <l n="72" xml:id="ed_GLC_l_72">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>il</w>
+                <w>responne<ex>n</ex>t</w>
+                <pc>:</pc>
+                <pc>—</pc>
+                <w>Tout</w>
+                <w>a</w>
+                <!--v<ex>ast</ex>re-->
+                <w>v<ex>ost</ex>re</w>
+                <w>plesir</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="73" xml:id="ed_GLC_l_73"><lb/><w>De</w>
+                <w>l</w><pc>‘</pc><w>ost</w>
+                <w>s</w><pc>‘</pc><w>en</w>
+                <w>issent</w>
+                <w>de</w>
+                <w>ch<ex>evalie</ex>rs</w>
+                <pc>.</pc><w>II</w><pc>.</pc>
+                <w>M</w><pc>.</pc></l>
+            <l n="74" xml:id="ed_GLC_l_74"><lb/><w>Aus</w>
+                <pc>.</pc><w>IIII</w><pc>.</pc>
+                <w>portes</w>
+                <w>a</w>
+                <w>ses</w>
+                <w>aguez</w>
+                <w>bastiz</w><pc>,</pc></l>
+            <l n="75" xml:id="ed_GLC_l_75"><lb/>
+                <w><ex>Et</ex></w>
+                <w>a</w>
+                <w>chascune</w>
+                <w>ot</w>
+                <pc>.</pc><w>V</w><pc>.</pc>
+                <w>C</w><pc>.</pc>
+                <w>fervestiz</w><pc>.</pc></l>
+            <l n="76" xml:id="ed_GLC_l_76">
+                <lb/>
+                <w>B<ex>ie</ex>n</w>
+                <w>gart</w>
+                <w>Fro<ex>mont</ex></w>
+                <w><ex>et</ex></w>
+                <w>sa</w>
+                <w>gent</w>
+                <w>de</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>issir</w>
+                <pc>.</pc>
+            </l>
+            <l n="77" xml:id="ed_GLC_l_77">
+                <lb/>
+                <w>Li</w>
+                <w>jorz</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>va</w>
+                <w><ex>et</ex></w>
+                <w>la</w>
+                <w>nuit</w>
+                <w>aseri</w>
+                <pc>.</pc>
+            </l>
+            <l n="78" xml:id="ed_GLC_l_78">
+                <lb/>
+                <w>Les</w>
+                <w>guetes</w>
+                <w>corne<ex>n</ex>t</w>
+                <w>desus</w>
+                <w>le</w>
+                <w>mur</w>
+                <unclear reason="damage"><w>entif</w></unclear>
+                <pc>.</pc>
+            </l>
+            <note><lb/>78. L‘e et l‘f d‘entif sont très distincts, le reste est effacé.</note>
+            <!-- JBC: on peut éventuellement rendre ça par une balise, comme unclear -->
+            <milestone unit="page" n="2"/>
+            <cb n="[2 a]"/>
+            <l n="79" xml:id="ed_GLC_l_79">
+                <lb/>
+                <w>Fro<ex>monz</ex></w>
+                <!--Fro<ex>monz</ex>-->
+                <w>s<supplied>e</supplied></w>
+                <w>sist</w>
+                <w>sus</w>
+                <w>le</w>
+                <w>pont</w>
+                <w>torneïz</w>
+                <pc>,</pc>
+            </l>
+            <l n="80" xml:id="ed_GLC_l_80">
+                <lb/>
+                <w>Ses</w>
+                <w>genz</w>
+                <w>devise</w>
+                <pc>,</pc>
+                <w>si</w>
+                <w>a</w>
+                <w>son</w>
+                <w>guet</w>
+                <w>asis</w>
+                <pc>.</pc>
+                <!-- 80-->
+            </l>
+            <!--<lb/>
+            <lb/>
+            <lb/>
+            <lb/>-->
+            <note><lb/>43—47 == 156, 1-5 ; 50—53 = 156, 6—9 ; 55—60 = 156, 10—157,3 ; 62—64 =
+                <lb/>157, 4—6 ; 66—71 = 157, 7—12; 72—87 = 157, 14— 158, 10.</note>
+            <!--<lb/>-->
+            <pb n="300" xml:id="p300"/>
+            <!--<lb/>
+            <lb/>-->
+            <l n="81" xml:id="ed_GLC_l_81">
+                <lb/>
+                <w>Ber<ex>nart</ex></w>
+                <w>apele</w>
+                <pc>,</pc>
+                <w>le</w>
+                <w>segneur</w>
+                <w>de</w>
+                <w>Nesil</w>
+                <pc>:</pc>
+            </l>
+            <l n="82" xml:id="ed_GLC_l_82">
+                <lb/>
+                <pc>«</pc>
+                <w>Issiez</w>
+                <w>vos</w>
+                <w>en</w>
+                <pc>,</pc>
+                <w>biaus</w>
+                <w>oncles</w>
+                <pc>,</pc>
+                <w>Fro<ex>monz</ex></w>
+                <w>dist</w>
+                <pc>,</pc>
+            </l>
+            <l n="83" xml:id="ed_GLC_l_83">
+                <lb/>
+                <w>Juqu</w>
+                <pc>‘</pc>
+                <w>aus</w>
+                <w>herberges</w>
+                <w>les</w>
+                <w>alez</w>
+                <w>envaïr</w>
+                <pc>.</pc>
+            </l>
+            <l n="84" xml:id="ed_GLC_l_84">
+                <lb/>
+                <w>Qui</w>
+                <w>en</w>
+                <w>geu</w>
+                <w>entre</w>
+                <pc>,</pc>
+                <w><ex>et</ex></w>
+                <w>geu</w>
+                <w>doit</w>
+                <w><ex>con</ex>sentir</w>
+                <pc>,</pc>
+            </l>
+            <l n="85" xml:id="ed_GLC_l_85">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>doit</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>grev<ex>er</ex></w>
+                <!-- JBC: abréviation oubliée, je l'ajoute -->
+                <w>son</w>
+                <w>anemi</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="86" xml:id="ed_GLC_l_86">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>dist</w>
+                <w>Ber<ex>narz</ex></w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Sire</w>
+                <pc>,</pc>
+                <w>v<ex>ost</ex>re</w>
+                <w>m<ex>erc</ex>i</w>
+                <!-- JBC (erreur de l'édition? Bizarre que c soit supposé abrégé) -->
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="87" xml:id="ed_GLC_l_87">
+                <lb/>
+                <w>Aus</w>
+                <w>hostie<ex>us</ex></w>
+                <w>vienne<ex>n</ex>t</w>
+                <pc>,</pc>
+                <w>si</w>
+                <w>fure<ex>n</ex>t</w>
+                <w>tost</w>
+                <w>garni</w>
+                <pc>;</pc>
+            </l>
+            <l n="88" xml:id="ed_GLC_l_88">
+                <lb/>
+                <w>Juqu</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>la</w>
+                <w>porte</w>
+                <w>ne</w>
+                <w>p<ex>ri</ex>strent</w>
+                <w>onq<ex>ue<!--s--></ex>s</w>
+                <w>fin</w>
+                <pc>;</pc>
+            </l>
+            <l n="89" xml:id="ed_GLC_l_89">
+                <lb/>
+                <w>Issir</w>
+                <w>vouloient</w>
+                <w>com<ex>me</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>espie</w>
+                <w>vint</w>
+                <pc>.</pc>
+            </l>
+            <l n="90" xml:id="ed_GLC_l_90">
+                <lb/>
+                <w>En</w>
+                <w>son</w>
+                <w>venir</w>
+                <pc>,</pc>
+                <w>lor</w>
+                <w>a</w>
+                <w>noncié</w>
+                <w>et</w>
+                <w>dit</w>
+            </l>
+            <l n="91" xml:id="ed_GLC_l_91"><lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>Be<ex>gues</ex></w>
+                <w>guete</w>
+                <w>a</w>
+                <pc>.</pc><w>II</w><pc>.</pc>
+                <w>M</w><pc>.</pc>
+                <w>fervestiz</w><pc>.</pc></l>
+            <l n="92" xml:id="ed_GLC_l_92">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>dist</w>
+                <w>Fro<ex>monz</ex></w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Je</w>
+                <w>ne</w>
+                <w>lou</w>
+                <w>pas</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>issir</w>
+                <pc>»</pc>
+                <pc>.</pc>
+            </l>
+            <l n="93" xml:id="ed_GLC_l_93">
+                <lb/>
+                <w>Arrieres</w>
+                <w>vint</w>
+                <w>dant</w>
+                <w>Ber<ex>nart</ex></w>
+                <w>de</w>
+                <w>Nesil</w>
+            </l>
+            <l n="94" xml:id="ed_GLC_l_94">
+                <lb/>
+                <w>Dist</w>
+                <w>Fro<ex>monz</ex></w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Oncles</w>
+                <pc>,</pc>
+                <w>or</w>
+                <w>vos</w>
+                <w>poëz</w>
+                <w>dormir</w>
+                <pc>,</pc>
+            </l>
+            <l n="95" xml:id="ed_GLC_l_95">
+                <lb/>
+                <w>Puis</w>
+                <w>serez</w>
+                <w>fres</w>
+                <w>por</w>
+                <w>aidier</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="96" xml:id="ed_GLC_l_96">
+                <lb/>
+                <w>La</w>
+                <w>nuit</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>va</w>
+                <w><ex>et</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ajornee</w>
+                <w>vint</w>
+                <pc>.</pc>
+            </l>
+            <l n="97" xml:id="ed_GLC_l_97">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <w>par</w>
+                <w>matin</w>
+                <w>messe</w>
+                <w>oï</w>
+                <pc>,</pc>
+            </l>
+            <l n="98" xml:id="ed_GLC_l_98">
+                <lb/>
+                <w>Si</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>retorne</w>
+                <pc>,</pc>
+                <w>a</w>
+                <w>son</w>
+                <w>hostel</w>
+                <w>en</w>
+                <w>vint</w>
+                <pc>.</pc>
+            </l>
+            <l n="99" xml:id="ed_GLC_l_99"><lb/><w>Il</w>
+                <w>a</w>
+                <w>mengié</w>
+                <w>et</w>
+                <w>beü</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>petit</w>
+                <pc>;</pc></l>
+            <l n="100" xml:id="ed_GLC_l_100"><lb/><w>Si</w>
+                <w>se</w>
+                <w>coucha</w>
+                <w><ex>et</ex></w>
+                <w>dormi</w>
+                <w>en</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>lit</w><pc>.</pc></l>
+            <l n="101" xml:id="ed_GLC_l_101">
+                <lb/>
+                <w>Li</w>
+                <w>dus</w>
+                <w>Be<ex>gons</ex></w>
+                <!--Be<ex>gons</ex>-->
+                <w>de</w>
+                <w>son</w>
+                <w>aguet</w>
+                <w>part<supplied>i</supplied></w>
+                <pc>,</pc>
+            </l>
+            <l n="102" xml:id="ed_GLC_l_102">
+                <lb/>
+                <w>P<ex>ar</ex></w>
+                <w>les</w>
+                <w>entrees</w>
+                <w>derriers</w>
+                <w>en</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ost</w>
+                <w>en</w>
+                <w>vint</w>
+                <pc>,</pc>
+            </l>
+            <l n="103" xml:id="ed_GLC_l_103">
+                <lb/>
+                <w>Vint</w>
+                <w>a</w>
+                <w>son</w>
+                <w>tref</w>
+                <w><ex>et</ex></w>
+                <w>ilec</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>endormi</w>
+                <pc>.</pc>
+            </l>
+            <l n="104" xml:id="ed_GLC_l_104">
+                <lb/>
+                <w>Son</w>
+                <w>escuier</w>
+                <w>apela</w>
+                <w>Lanceli<ex>n</ex></w>
+                <pc>:</pc>
+            </l>
+            <l n="105" xml:id="ed_GLC_l_105">
+                <lb/>
+                <pc>«</pc>
+                <w>Oste</w>
+                <w>la</w>
+                <w>sele</w>
+                <w>de</w>
+                <w>mo<ex>n</ex></w>
+                <w>destr<ex>ier</ex></w>
+                <w>de</w>
+                <w>pris</w>
+                <pc>,</pc>
+            </l>
+            <l n="106" xml:id="ed_GLC_l_106">
+                <lb/>
+                <w>Le</w>
+                <w>dos</w>
+                <w>li</w>
+                <w>frote</w>
+                <w><ex>et</ex></w>
+                <w>la</w>
+                <w>croupe</w>
+                <w>autresi</w>
+                <pc>,</pc>
+            </l>
+            <l n="107" xml:id="ed_GLC_l_107">
+                <lb/>
+                <w>P<ex>us</ex></w>
+                <w>li</w>
+                <w>remez</w>
+                <w>la</w>
+                <w>sele</w>
+                <pc>,</pc>
+                <w>bia<ex>us</ex></w>
+                <w>amis</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="108" xml:id="ed_GLC_l_108"><lb/><w>Tretoz</w>
+                <w>armez</w>
+                <w>se</w>
+                <w>coucha</w>
+                <w>en</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>lit</w><pc>,</pc></l>
+            <l n="109" xml:id="ed_GLC_l_109">
+                <lb/>
+                <w>Fors</w>
+                <w>q<ex>ue</ex></w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>espee</w>
+                <w>nule</w>
+                <w>rie<ex>n</ex>s</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>i</w>
+                <w>toli</w>
+                <pc>;</pc>
+            </l>
+            <l n="110" xml:id="ed_GLC_l_110">
+                <lb/>
+                <w>Dist</w>
+                <w>au</w>
+                <w>Borgoing</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Fetes</w>
+                <w>le</w>
+                <w>autresi</w>
+                <pc>,</pc>
+            </l>
+            <l n="111" xml:id="ed_GLC_l_111">
+                <lb/>
+                <w>Plus</w>
+                <w>serom</w>
+                <w>fres</w>
+                <w>q<ex>ua<!--n--></ex>nt</w>
+                <w>n<ex>us</ex></w>
+                <w>orro<ex>n<!--s--></ex>s</w>
+                <w>le</w>
+                <w>cri</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="112" xml:id="ed_GLC_l_112">
+                <lb/>
+                <w>Li</w>
+                <w>jorz</w>
+                <w>fu</w>
+                <w>biaus</w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>soulelz</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>esclarci</w>
+                <pc>.</pc>
+            </l>
+            <l n="113" xml:id="ed_GLC_l_113"><lb/><w>Li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Fro<ex>monz</ex></w>
+                <w>se</w>
+                <w>jesoit</w>
+                <w>en</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>lit</w><pc>,</pc></l>
+            <l n="114" xml:id="ed_GLC_l_114"><lb/><w>La</w>
+                <w>fenestrelle</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>petitet</w>
+                <w>ouvri</w><pc>,</pc></l>
+            <l n="115" xml:id="ed_GLC_l_115">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>la</w>
+                <w>clarté</w>
+                <w>le</w>
+                <w>fiert</w>
+                <w>enmi</w>
+                <w>le</w>
+                <w>vis</w>
+                <pc>.</pc>
+            </l>
+            <l n="116" xml:id="ed_GLC_l_116">
+                <lb/>
+                <w>Fro<ex>monz</ex></w>
+                <w>se</w>
+                <w>lieve</w>
+                <w><ex>et</ex></w>
+                <w>chauça</w>
+                <w><ex>et</ex></w>
+                <w>vesti</w>
+                <pc>;</pc>
+            </l>
+            <l n="117" xml:id="ed_GLC_l_117">
+                <lb/>
+                <w>Tretoz</w>
+                <w>armez</w>
+                <w>fors</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>une</w>
+                <w>cham<supplied>br</supplied>e</w>
+                <w>issi</w>
+                <pc>,</pc>
+            </l>
+            <cb n="[2 b]"/>
+            <l n="118" xml:id="ed_GLC_l_118">
+                <lb/>
+                <w>Cheval</w>
+                <w>demande</w>
+                <w><ex>et</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>a</w>
+                <w>fet</w>
+                <w>venir</w>
+                <pc>.</pc>
+            </l>
+            <l n="119" xml:id="ed_GLC_l_119">
+                <lb/>
+                <w>P<ex>ar</ex>mi</w>
+                <w>la</w>
+                <w>vile</w>
+                <w>les</w>
+                <w>corut</w>
+                <w>estormir</w>
+                <pc>.</pc>
+            </l>
+            <l n="120" xml:id="ed_GLC_l_120">
+                <lb/>
+                <w>Vint</w>
+                <w>a</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ostel</w>
+                <w>so<ex>n</ex></w>
+                <w>emfant</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>,</pc>
+                <w>120</w>
+            </l>
+            <lb/>
+            <note><lb/>89—90, cf. 158, 11 ; 91—97 = 158, 13—19 ; 99—102 = 158, 20—159, 2 ;
+                <lb/>104—121 = 159, 3—159, 20.</note>
+            <lb/>
+            <pb n="301" xml:id="p301"/>
+            <lb/>
+            <lb/>
+            <l n="121" xml:id="ed_GLC_l_121">
+                <lb/>
+                <w>Trueuve</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>enfant</w>
+                <w>qui</w>
+                <w>jesoit</w>
+                <w>en</w>
+                <w>son</w>
+                <w><supplied>l</supplied>it</w>
+            </l>
+            <l n="122" xml:id="ed_GLC_l_122">
+                <lb/>
+                <w>Ou</w>
+                <w>il</w>
+                <w>se</w>
+                <w>dort</w>
+                <w><ex>et</ex></w>
+                <w>volentiers</w>
+                <w>le</w>
+                <w>fist</w>
+                <pc>.</pc>
+            </l>
+            <l n="123" xml:id="ed_GLC_l_123">
+                <lb/>
+                <w>Ber<ex>nart</ex></w>
+                <w>apele</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Esgardez</w>
+                <w>de</w>
+                <w>mon</w>
+                <w><supplied>f</supplied>il</w>
+            </l>
+            <l n="124" xml:id="ed_GLC_l_124">
+                <lb/>
+                <w>Qui</w>
+                <w>se</w>
+                <w>deüst</w>
+                <w><ex>et</ex></w>
+                <w>acroistre</w>
+                <w><ex>et</ex></w>
+                <w>norrir</w>
+                <pc>.</pc>
+            </l>
+            <l n="125" xml:id="ed_GLC_l_125">
+                <lb/>
+                <w>Or</w>
+                <w>li</w>
+                <w>convient</w>
+                <w>so<ex>n</ex></w>
+                <w>bla<ex>n</ex>c</w>
+                <w>haub<ex>e</ex>rc</w>
+                <w>vestir</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="126" xml:id="ed_GLC_l_126">
+                <lb/>
+                <w>À</w>
+                <w>voiz</w>
+                <w>escrie</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Levez</w>
+                <w>sus</w>
+                <pc>,</pc>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>!</pc>
+            </l>
+            <l n="127" xml:id="ed_GLC_l_127">
+                <lb/>
+                <w>Tu</w>
+                <w>ne</w>
+                <w>doiz</w>
+                <w>mie</w>
+                <w>a</w>
+                <w>cete</w>
+                <w>heure</w>
+                <w>dormir</w>
+                <pc>:</pc>
+            </l>
+            <l n="128" xml:id="ed_GLC_l_128">
+                <lb/>
+                <w>Li</w>
+                <w>granz</w>
+                <w>mengiers</w>
+                <w>deüst</w>
+                <w>estre</w>
+                <w>garniz</w>
+            </l>
+            <l n="129" xml:id="ed_GLC_l_129">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>tornoiz</w>
+                <w>failliz</w>
+                <w><ex>et</ex></w>
+                <w>departiz</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="130" xml:id="ed_GLC_l_130">
+                <lb/>
+                <w>L</w>
+                <pc>‘</pc>
+                <w>emfant</w>
+                <w>saut</w>
+                <w>sus</w>
+                <w>q<ex>ua<!--n--></ex>nt</w>
+                <w>la</w>
+                <w>parole</w>
+                <w>oï</w>
+                <pc>.</pc>
+            </l>
+            <l n="131" xml:id="ed_GLC_l_131"><lb/><pc>.</pc><w>I</w><pc>.</pc>
+                <w>escuier</w>
+                <w>i</w>
+                <w>vint</w>
+                <w>por</w>
+                <w>li</w>
+                <w>servir</w>
+                <pc>;</pc></l>
+            <l n="132" xml:id="ed_GLC_l_132">
+                <lb/>
+                <w>En</w>
+                <w>pou</w>
+                <w>de</w>
+                <w>t<ex>er</ex>me</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ont</w>
+                <w>armé</w>
+                <w><ex>et</ex></w>
+                <w>garni</w>
+                <pc>.</pc>
+            </l>
+            <l n="133" xml:id="ed_GLC_l_133">
+                <lb/>
+                <w>Li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Guill<ex>aumes</ex></w>
+                <pc>,</pc>
+                <w>le</w>
+                <w>segnor</w>
+                <w>de</w>
+                <w>Monclin</w>
+            </l>
+            <l n="134" xml:id="ed_GLC_l_134">
+                <lb/>
+                <w>Li</w>
+                <w>ceint</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>espee</w>
+                <w>par</w>
+                <w>la</w>
+                <w>resne</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>or</w>
+                <w>fi<ex>n</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="135" xml:id="ed_GLC_l_135">
+                <lb/>
+                <w>Veant</w>
+                <w>tretoz</w>
+                <w>m<ex>o</ex>lt</w>
+                <w>fiereme<ex>n</ex>t</w>
+                <w>li</w>
+                <w>dit</w>
+                <pc>:</pc>
+            </l>
+            <l n="136" xml:id="ed_GLC_l_136">
+                <lb/>
+                <pc>«</pc>
+                <w>Je</w>
+                <w>te</w>
+                <w>chasti</w>
+                <pc>,</pc>
+                <w>fet</w>
+                <w>il</w>
+                <pc>,</pc>
+                <w>niès</w>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="137" xml:id="ed_GLC_l_137">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>tu</w>
+                <w>pas</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>aimes</w>
+                <w>pautonn<ex>ier</ex></w>
+                <!--pautonnier-->
+                <w>ne</w>
+                <w>frarin</w>
+                <pc>;</pc>
+            </l>
+            <l n="138" xml:id="ed_GLC_l_138">
+                <lb/>
+                <w>Halz</w>
+                <w>ho<ex>m</ex>s</w>
+                <w>seras</w>
+                <w>se</w>
+                <w>tu</w>
+                <w>longuement</w>
+                <w>viz</w>
+                <pc>.</pc>
+            </l>
+            <l n="139" xml:id="ed_GLC_l_139">
+                <lb/>
+                <w>Or</w>
+                <w>soiez</w>
+                <w>preuz</w>
+                <w><ex>et</ex></w>
+                <w><ex>con</ex>querant</w>
+                <w>t<supplied>oz</supplied></w>
+                <supplied><w>dis</w></supplied>
+                <pc>,</pc>
+            </l>
+            <l n="140" xml:id="ed_GLC_l_140">
+                <lb/>
+                <w>Fel</w>
+                <w><ex>et</ex></w>
+                <w>estous</w>
+                <w>contre</w>
+                <w>voz</w>
+                <w>anemis</w>
+                <pc>;</pc>
+            </l>
+            <l n="141" xml:id="ed_GLC_l_141">
+                <lb/>
+                <w>Ai<ex>m</ex>me</w>
+                <w>p<ex>ro</ex>dome</w>
+                <pc>,</pc>
+                <w>done</w>
+                <w>li</w>
+                <w>ver</w>
+                <w><ex>et</ex></w>
+                <w>gris</w>
+                <pc>;</pc>
+            </l>
+            <l n="142" xml:id="ed_GLC_l_142">
+                <lb/>
+                <w>Par</w>
+                <w>cest</w>
+                <w>afere</w>
+                <pc>,</pc>
+                <w>montteras</w>
+                <w>en</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>pris</w>
+                <pc>.</pc>
+            </l>
+            <l n="143" xml:id="ed_GLC_l_143">
+                <lb/>
+                <pc>—</pc>
+                <pc>—</pc>
+                <w>Tout</w>
+                <w>est</w>
+                <w>en</w>
+                <w>Dieu</w>
+                <pc>,</pc>
+                <w>sire</w>
+                <pc>,</pc>
+                <pc>»</pc>
+                <w>dit</w>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="144" xml:id="ed_GLC_l_144"><lb/><w>L</w><pc>‘</pc><w>en</w>
+                <w>li</w>
+                <w>amoine</w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>bon</w>
+                <w>destr<ex>ier</ex></w>
+                <w>de</w>
+                <w>pris</w>
+                <pc>;</pc></l>
+            <l n="145" xml:id="ed_GLC_l_145">
+                <lb/>
+                <w>Li</w>
+                <w>vasaus</w>
+                <w>monte</w>
+                <pc>,</pc>
+                <w>qui</w>
+                <w>volent<ex>ier</ex>s</w>
+                <w>le</w>
+                <w>fist</w>
+                <pc>.</pc>
+            </l>
+            <l n="146" xml:id="ed_GLC_l_146"><lb/><w>L</w><pc>‘</pc><w>escu</w>
+                <w>ot</w>
+                <w>d</w><pc>‘</pc><w>or</w>
+                <w><ex>et</ex></w>
+                <pc>.</pc><w>I</w><pc>.</pc>
+                <w>lyon</w>
+                <w>en</w>
+                <w>mi</w><pc>.</pc></l>
+            <l n="147" xml:id="ed_GLC_l_147">
+                <lb/>
+                <w>P<ex>ar</ex>mi</w>
+                <w>la</w>
+                <w>guige</w>
+                <w>a</w>
+                <w>son</w>
+                <w>col</w>
+                <w>le</w>
+                <w>pendi</w>
+                <pc>.</pc>
+            </l>
+            <l n="148" xml:id="ed_GLC_l_148">
+                <lb/>
+                <w>Les</w>
+                <w>portes</w>
+                <w>fet</w>
+                <w>li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Fro<ex>monz</ex></w>
+                <w>ouvrir</w>
+                <pc>,</pc>
+            </l>
+            <l n="149" xml:id="ed_GLC_l_149">
+                <lb/>
+                <w>Toz</w>
+                <w>les</w>
+                <w>serjanz</w>
+                <w>en</w>
+                <w>fet</w>
+                <w>ava<ex>n</ex>t</w>
+                <w>issir</w>
+                <pc>;</pc>
+            </l>
+            <l n="150" xml:id="ed_GLC_l_150">
+                <lb/>
+                <w>Lices</w>
+                <w>fet</w>
+                <w>fere</w>
+                <w>por</w>
+                <w>lor</w>
+                <w>cors</w>
+                <w>garantir</w>
+                <pc>,</pc>
+            </l>
+            <l n="151" xml:id="ed_GLC_l_151">
+                <lb/>
+                <w>S</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>lor</w>
+                <w>fet</w>
+                <w>force</w>
+                <pc>,</pc>
+                <w>ou</w>
+                <w>se</w>
+                <w>vorront</w>
+                <w>tenir</w>
+                <pc>.</pc>
+            </l>
+            <l n="152" xml:id="ed_GLC_l_152">
+                <lb/>
+                <w>P<ex>ri</ex>mes</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>li</w>
+                <w>vallez</w>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="153" xml:id="ed_GLC_l_153">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>après</w>
+                <w>li</w>
+                <w>Guill<ex>aumes</ex></w>
+                <w>de</w>
+                <w>Moncli<ex>n</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="154" xml:id="ed_GLC_l_154">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>puis</w>
+                <w>Ber<ex>nart</ex></w>
+                <w><ex>et</ex></w>
+                <w>Fau<ex>con</ex>net</w>
+                <w>son</w>
+                <w>fil</w>
+                <pc>;</pc>
+            </l>
+            <l n="155" xml:id="ed_GLC_l_155">
+                <lb/>
+                <w>Ap<ex>rè</ex>s</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>de</w>
+                <w>V<ex>er</ex>dun</w>
+                <w>Lanceli<ex>n</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="156" xml:id="ed_GLC_l_156">
+                <lb/>
+                <w>Forq<ex>ues</ex></w>
+                <w><ex>et</ex></w>
+                <w>Hues</w>
+                <w><ex>et</ex></w>
+                <w>de</w>
+                <w>Grant</w>
+                <w>Pré</w>
+                <w>Hienri</w>
+                <pc>,</pc>
+            </l>
+            <milestone unit="page" n="3"/>
+            <cb n="[3 a]"/>
+            <l n="157" xml:id="ed_GLC_l_157">
+                <lb/>
+                <w>Herbert</w>
+                <w>de</w>
+                <w>Troie</w>
+                <pc>,</pc>
+                <w>Huon</w>
+                <w>de</w>
+                <w>S</w>
+                <pc>.</pc>
+                <w>Quantin</w>
+                <pc>,</pc>
+            </l>
+            <l n="158" xml:id="ed_GLC_l_158">
+                <lb/>
+                <w><supplied>P</supplied>ierre</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>Artois</w>
+                <pc>,</pc>
+                <w>le</w>
+                <w>Flamant</w>
+                <w>Baud<ex>oïn</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="159" xml:id="ed_GLC_l_159">
+                <lb/>
+                <w><supplied>D</supplied>roon</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>Amiens</w>
+                <w><ex>et</ex></w>
+                <w>son</w>
+                <w>filz</w>
+                <w>Amaurri</w>
+                <pc>;</pc>
+            </l>
+            <l n="160" xml:id="ed_GLC_l_160">
+                <lb/>
+                <w><w><supplied>A</supplied>p<ex>rè</ex>s</w></w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>de</w>
+                <w>Biauvoisi<ex>n</ex></w>
+                <pc>,</pc>
+                <w>160</w>
+            </l>
+            <!--<lb/>
+            <lb/>
+            <lb/>-->
+            <note><lb/>123—127 = 159, 21—160, 4 ; 129—146 = 160, 5—161, 4 ; 148—157 = 161,
+                <lb/>5—161, 14 ; 158—161 = 161, 16—161, 19.</note>
+            <!--<lb/>-->
+            <pb n="302" xml:id="p302"/>
+            <!--<lb/>
+            <lb/>-->
+            <l n="161" xml:id="ed_GLC_l_161">
+                <lb/>
+                <w><supplied>D</supplied>e</w>
+                <w><supplied>M</supplied>ondidier</w>
+                <w>Gir<ex>art</ex></w>
+                <w><ex>et</ex></w>
+                <w>Coceli<ex>n</ex></w>
+                <pc>;</pc>
+            </l>
+            <note><lb/>161. Corr. Jocelin.</note>
+            <l n="162" xml:id="ed_GLC_l_162">
+                <lb/>
+                <w>Ap<ex>ré</ex>s</w>
+                <w>toz</w>
+                <w>ceus</w>
+                <w>segnor</w>
+                <w>q<ex>ue</ex></w>
+                <w>je</w>
+                <w>vos</w>
+                <w>di</w>
+                <pc>,</pc>
+            </l>
+            <l n="163" xml:id="ed_GLC_l_163">
+                <lb/>
+                <w>S</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>Guill<ex>aumes</ex></w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>sires</w>
+                <w>de</w>
+                <w>Monclin</w>
+                <pc>,</pc>
+            </l>
+            <note><lb/>163, cf. 153.</note>
+            <l n="164" xml:id="ed_GLC_l_164">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>de</w>
+                <w>Boorges</w>
+                <w>le</w>
+                <w>preu</w>
+                <w>conte</w>
+                <w>Tierri</w>
+                <pc>,</pc>
+            </l>
+            <l n="165" xml:id="ed_GLC_l_165">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>de</w>
+                <w>Lymoges</w>
+                <w>Joceaumes</w>
+                <w><ex>et</ex></w>
+                <w>Baudri</w>
+                <pc>;</pc>
+            </l>
+            <l n="166" xml:id="ed_GLC_l_166">
+                <lb/>
+                <w><supplied>A</supplied>p<ex>rè</ex>s</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>Fro<ex>monz</ex></w>
+                <w>li</w>
+                <w>posteïs</w>
+                <pc>.</pc>
+            </l>
+            <l n="167" xml:id="ed_GLC_l_167">
+                <lb/>
+                <w><supplied>L</supplied>i</w>
+                <w>ch<ex>evalie</ex>r</w>
+                <w>font</w>
+                <w>la</w>
+                <w>champai<ex>n</ex>gne</w>
+                <w>emplir</w>
+                <pc>:</pc>
+            </l>
+            <l n="168" xml:id="ed_GLC_l_168">
+                <lb/>
+                <w><supplied>L</supplied>a</w>
+                <w>veïssiez</w>
+                <w>tant</w>
+                <w>v<ex>er</ex>t</w>
+                <w>hiaume</w>
+                <w>bruni</w>
+                <pc>.</pc>
+            </l>
+            <l n="169" xml:id="ed_GLC_l_169">
+                <lb/>
+                <w>Fro<ex>monz</ex></w>
+                <w>devise</w>
+                <w>ses</w>
+                <w>ge<ex>n<!--z--></ex>z</w>
+                <w>por</w>
+                <w>establir</w>
+            </l>
+            <l n="170" xml:id="ed_GLC_l_170">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>ses</w>
+                <w>batailles</w>
+                <w>renge</w>
+                <w>por</w>
+                <w>mielz</w>
+                <w>ferir</w>
+                <pc>.</pc>
+            </l>
+            <l n="171" xml:id="ed_GLC_l_171">
+                <lb/>
+                <w><supplied>E</supplied>n</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>ost</w>
+                <w>emforce</w>
+                <w><ex>et</ex></w>
+                <w>la</w>
+                <w>noise</w>
+                <w><ex>et</ex></w>
+                <w>li</w>
+                <w>criz</w>
+                <pc>,</pc>
+            </l>
+            <l n="172" xml:id="ed_GLC_l_172">
+                <lb/>
+                <w><supplied>L</supplied>a</w>
+                <w>oïssiez</w>
+                <w>cez</w>
+                <w>buisines</w>
+                <w>tentir</w>
+                <pc>,</pc>
+            </l>
+            <l n="173" xml:id="ed_GLC_l_173">
+                <lb/>
+                <w><supplied>C</supplied>ez</w>
+                <w>ch<ex>evalie</ex>rs</w>
+                <w>a</w>
+                <w>lor</w>
+                <w>hostieus</w>
+                <w>venir</w>
+                <pc>,</pc>
+            </l>
+            <l n="174" xml:id="ed_GLC_l_174">
+                <lb/>
+                <w><supplied>L</supplied>es</w>
+                <w>bla<ex>n</ex>s</w>
+                <w>hauberz</w>
+                <w>andosser</w>
+                <w><ex>et</ex></w>
+                <w>vestir</w>
+                <pc>,</pc>
+            </l>
+            <l n="175" xml:id="ed_GLC_l_175">
+                <lb/>
+                <w><supplied>A</supplied>us</w>
+                <w>escuiers</w>
+                <w>ces</w>
+                <w>bo<ex>n<!--s--></ex>s</w>
+                <w>chevaus</w>
+                <w>tenir</w>
+                <pc>.</pc>
+            </l>
+            <l n="176" xml:id="ed_GLC_l_176"><lb/><w><supplied>L</supplied>a</w>
+                <w>sont</w>
+                <w>armé</w>
+                <w>plus</w>
+                <w>de</w>
+                <pc>.</pc><w>XL</w><pc>.</pc><w>M</w><pc>.</pc><pc>,</pc></l>
+            <l n="177" xml:id="ed_GLC_l_177">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>sont</w>
+                <w>ensemble</w>
+                <pc>,</pc>
+                <w>cui</w>
+                <w>q<ex>ue</ex></w>
+                <w>doie</w>
+                <w>enbelir</w>
+                <pc>.</pc>
+            </l>
+            <l n="178" xml:id="ed_GLC_l_178">
+                <lb/>
+                <supplied><w>N<ex>ost</ex>re</w></supplied>
+                <w><supplied>e</supplied>mp<ex>erere</ex></w>
+                <w>fet</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>estendart</w>
+                <w>ven<ex>ir</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="179" xml:id="ed_GLC_l_179">
+                <lb/>
+                <w><supplied>M</supplied><ex>o</ex>lt</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>fet</w>
+                <w>de</w>
+                <w>ch<ex>evalie</ex>rs</w>
+                <w>garnir</w>
+            </l>
+            <l n="180" xml:id="ed_GLC_l_180">
+                <lb/>
+                <!-- JBC: ne pas oublier
+            les ex dans les supplied (même si on peut contester la logique)
+            -->
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>de</w>
+                <w>serjanz</w>
+                <w>por</w>
+                <w>le</w>
+                <w>fes</w>
+                <w>soutenir</w>
+                <pc>.</pc>
+            </l>
+            <l n="181" xml:id="ed_GLC_l_181">
+                <lb/>
+                <w>P<ex>ri</ex>mes</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>de</w>
+                <w>Mo<ex>n</ex>daussois</w>
+                <w>Tierri</w>
+                <pc>,</pc>
+            </l>
+            <l n="182" xml:id="ed_GLC_l_182">
+                <lb/>
+                <w><supplied>Ger<ex>art</ex></supplied></w>
+                <w>del</w>
+                <w>Liege</w>
+                <w><ex>et</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>Alemant</w>
+                <w>Orri</w>
+                <pc>,</pc>
+            </l>
+            <l n="183" xml:id="ed_GLC_l_183">
+                <lb/>
+                <w><supplied>R</supplied>enaut</w>
+                <w>de</w>
+                <w>Chol</w>
+                <pc>,</pc>
+                <w>de</w>
+                <w>Bar</w>
+                <w>le</w>
+                <w>duc</w>
+                <w>Hienri</w>
+                <pc>,</pc>
+            </l>
+            <note><lb/>183. Faut—il lire Thol (Toul)?</note>
+            <l n="184" xml:id="ed_GLC_l_184">
+                <lb/>
+                <w><supplied>De</supplied></w>
+                <w>S</w>
+                <pc>.</pc>
+                <w>Michiel</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Hues</w>
+                <w>li</w>
+                <w>floriz</w>
+            </l>
+            <l n="185" xml:id="ed_GLC_l_185">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>Asp<ex>re</ex>mont</w>
+                <w>Tierri</w>
+                <w>li</w>
+                <w>posteïs</w>
+                <pc>;</pc>
+            </l>
+            <l n="186" xml:id="ed_GLC_l_186">
+                <lb/>
+                <!-- JBC: l'étendue du supplied n'est pas bonne, ni celui du ex -->
+                <!--<supplied>Ap</supplied><ex>rès</ex>-->
+                <w><supplied>Ap<ex>rè</ex></supplied>s</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>li</w>
+                <w>Loh<ex>er</ex>ans</w>
+                <w>Ga<ex>rins</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="187" xml:id="ed_GLC_l_187">
+                <lb/>
+                <supplied>
+                    <w><ex>Et</ex></w>
+                </supplied>
+                <w>après</w>
+                <w>li</w>
+                <w>Huon</w>
+                <w>qui</w>
+                <w>Troye</w>
+                <w>ti<ex>n</ex>t</w>
+                <pc>,</pc>
+            </l>
+            <l n="188" xml:id="ed_GLC_l_188">
+                <lb/>
+                <w><supplied>C</supplied>il</w>
+                <w>de</w>
+                <w>Tonoirre</w>
+                <w><ex>et</ex></w>
+                <w>Gaut<ex>ier</ex></w>
+                <w>de</w>
+                <w>Paris</w>
+                <pc>,</pc>
+            </l>
+            <note><lb/>188. Cf. <lb/>la note de <bibl status="draft"><publisher>P.
+                    Paris</publisher>, <citedRange>II</citedRange>,
+                    <citedRange>164</citedRange>.</bibl></note>
+            <lb/>
+            <l n="189" xml:id="ed_GLC_l_189">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>de</w>
+                <w>Nuevers</w>
+                <w>li</w>
+                <w>fra<ex>n</ex>s</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Amaurris</w>
+                <pc>,</pc>
+            </l>
+            <l n="190" xml:id="ed_GLC_l_190">
+                <lb/>
+                <w><supplied>De</supplied></w>
+                <w>Chaalons</w>
+                <w>le</w>
+                <w>franc</w>
+                <w>conte</w>
+                <w>Tierri</w>
+                <pc>,</pc>
+            </l>
+            <l n="191" xml:id="ed_GLC_l_191">
+                <lb/>
+                <w><supplied><ex>Et</ex></supplied></w>
+                <w>dant</w>
+                <w>Archarz</w>
+                <pc>,</pc>
+                <w>icil</w>
+                <w>qui</w>
+                <w>Riviers</w>
+                <w>ti<ex>n</ex>t</w>
+                <pc>,</pc>
+            </l>
+            <l n="192" xml:id="ed_GLC_l_192">
+                <lb/>
+                <w><supplied>De</supplied></w>
+                <w>Pierre</w>
+                <w>Late</w>
+                <w>Forq<ex>ue</ex>rez</w>
+                <w>li</w>
+                <w>petiz</w>
+                <pc>;</pc>
+            </l>
+            <l n="193" xml:id="ed_GLC_l_193">
+                <lb/>
+                <w><supplied>S</supplied></w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <w>Aleaumes</w>
+                <pc>,</pc>
+                <w>Guich<ex>a</ex>rt</w>
+                <w>qui</w>
+                <w>Biaugeu</w>
+                <w>tint</w>
+                <pc>,</pc>
+            </l>
+            <l n="194" xml:id="ed_GLC_l_194">
+                <lb/>
+                <!-- JBC: supplied omies -->
+                <!--[H)uon-->
+                <w><supplied>H</supplied>uon</w>
+                <w>du</w>
+                <w>Mans</w>
+                <w><ex>et</ex></w>
+                <w>Jeffroi</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>Engevin</w>
+                <pc>;</pc>
+            </l>
+            <l n="195" xml:id="ed_GLC_l_195">
+                <lb/>
+                <w><supplied>De</supplied></w>
+                <w>Mondidier</w>
+                <w>li</w>
+                <w>dus</w>
+                <w>Richarz</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>ist</w>
+                <pc>,</pc>
+            </l>
+            <l n="196" xml:id="ed_GLC_l_196">
+                <lb/>
+                <supplied>
+                    <w><ex>Et</ex></w>
+                    <w>d</w></supplied>
+                <pc>‘</pc>
+                <w>Orlenois</w>
+                <w>li</w>
+                <w>frans</w>
+                <w>dux</w>
+                <w>Herneïs</w>
+                <pc>.</pc>
+            </l>
+            <lb/>
+            <note><lb/>162—166 = 162, 3—162, 7 ; 171—172 = 162, 8—162, 9; 176 = 162, 12;
+                <lb/>178—184 = 162, 14—163, 6 ; 185—186 = 163, 8—163, 9 ; 187 = 163, 7 ; 188—
+                <lb/>191 = 163, 11—164, 1 ; 192—193 = 164, 4—164, 5 ; 194 = 164, 2; 195— <lb/>201 =
+                164, 6—164, 12.</note>
+            <lb/>
+            <pb n="303" xml:id="p303"/>
+            <lb/>
+            <lb/>
+            <cb n="[3 b]"/>
+            <l n="197" xml:id="ed_GLC_l_197">
+                <lb/>
+                <w>Encor</w>
+                <w>se</w>
+                <w>dort</w>
+                <w>li</w>
+                <w>Borgoi<ex>n</ex>z</w>
+                <w>A<ex>uberis</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="198" xml:id="ed_GLC_l_198">
+                <lb/>
+                <w>Be<ex>gues</ex></w>
+                <w>ses</w>
+                <w>oncles</w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>Ardenois</w>
+                <w>Tierris</w>
+                <pc>,</pc>
+            </l>
+            <l n="199" xml:id="ed_GLC_l_199">
+                <lb/>
+                <w>Gaut<ex>iers</ex></w>
+                <w>del</w>
+                <w>Neu</w>
+                <pc>,</pc>
+                <w>Huon</w>
+                <w>de</w>
+                <w>Que<ex>m</ex>broisi</w>
+                <pc>:</pc>
+            </l>
+            <l n="200" xml:id="ed_GLC_l_200">
+                <lb/>
+                <w>La</w>
+                <w>nuit</w>
+                <w>veillerent</w>
+                <pc>,</pc>
+                <w>por</w>
+                <w>ce</w>
+                <w>dorme<ex>n</ex>t</w>
+                <w>ei<ex>n</ex>si</w>
+                <pc>.</pc>
+            </l>
+            <l n="201" xml:id="ed_GLC_l_201">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>les</w>
+                <w>batailles</w>
+                <!--c-->
+                <w><ex>com</ex>mencent</w>
+                <w>a</w>
+                <w>venir</w>
+                <pc>.</pc>
+            </l>
+            <l n="202" xml:id="ed_GLC_l_202">
+                <lb/>
+                <w>Toutes</w>
+                <w>rengiees</w>
+                <pc>,</pc>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>une</w>
+                <w>v<ex>er</ex>s</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>autre</w>
+                <w>vint</w>
+            </l>
+            <l n="203" xml:id="ed_GLC_l_203">
+                <lb/>
+                <w>Le</w>
+                <w>petit</w>
+                <w>pas</w>
+                <pc>,</pc>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>i</w>
+                <w>ot</w>
+                <w>q<ex>ue</ex></w>
+                <w>du</w>
+                <w>ferir</w>
+                <pc>.</pc>
+            </l>
+            <l n="204" xml:id="ed_GLC_l_204">
+                <lb/>
+                <w>P<ex>ri</ex>mes</w>
+                <w>desrenge</w>
+                <w>le</w>
+                <w>vallet</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="205" xml:id="ed_GLC_l_205">
+                <lb/>
+                <w>L</w>
+                <pc>‘</pc>
+                <w>escu</w>
+                <w>du</w>
+                <w>col</w>
+                <w>tenoit</w>
+                <w>devant</w>
+                <w>son</w>
+                <w>vis</w>
+                <pc>;</pc>
+            </l>
+            <l n="206" xml:id="ed_GLC_l_206"><lb/><pc>.</pc><w>I</w><pc>.</pc>
+                <w>ch<ex>evalie</ex>r</w>
+                <w>vet</w>
+                <w>maleme<ex>n</ex>t</w>
+                <w>ferir</w><pc>,</pc></l>
+            <l n="207" xml:id="ed_GLC_l_207"><lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>les</w>
+                <w>estriers</w>
+                <w>li</w>
+                <w>fet</w>
+                <w>en</w>
+                <pc>.</pc><w>II</w><pc>.</pc>
+                <w>g<ex>uer</ex>pir</w>
+                <pc>.</pc></l>
+            <l n="208" xml:id="ed_GLC_l_208">
+                <lb/>
+                <w>Puis</w>
+                <w>abat</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>autre</w>
+                <w><supplied>si</supplied></w>
+                <w>q<ex>ue</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>le</w>
+                <w>vit</w>
+                <pc>,</pc>
+            </l>
+            <l n="209" xml:id="ed_GLC_l_209">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>deu</w>
+                <w>tronçon</w>
+                <w>vet</w>
+                <w>dureme<ex>n</ex>t</w>
+                <w>ferir</w>
+                <pc>.</pc>
+            </l>
+            <l n="210" xml:id="ed_GLC_l_210">
+                <lb/>
+                <w>Tretuit</w>
+                <w>escrient</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Ore</w>
+                <w>ap<ex>rè</ex>s</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>!</pc>
+                <pc>»</pc>
+            </l>
+            <l n="211" xml:id="ed_GLC_l_211">
+                <lb/>
+                <w>So<ex>n</ex></w>
+                <w>renc</w>
+                <w>sormonte</w>
+                <pc>,</pc>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>so<ex>n</ex></w>
+                <w>poi<ex>n</ex>dre</w>
+                <!--p-->
+                <w>forni</w>
+                <pc>.</pc>
+            </l>
+            <l n="212" xml:id="ed_GLC_l_212"><lb/><w>Entre</w>
+                <pc>.</pc><w>II</w><pc>.</pc>
+                <w>re<ex>n</ex>s</w>
+                <w>v<ex>us</ex></w>
+                <!--vus-->
+                <w>abati</w>
+                <w>Tierri</w><pc>,</pc></l>
+            <l n="213" xml:id="ed_GLC_l_213">
+                <lb/>
+                <w>Dev<ex>er</ex>s</w>
+                <w>senestre</w>
+                <w>le</w>
+                <w>Flamant</w>
+                <w>Baud<ex>oïn</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="214" xml:id="ed_GLC_l_214">
+                <lb/>
+                <w>B<ex>ie</ex>n</w>
+                <w>puet</w>
+                <w>li</w>
+                <w>enfes</w>
+                <w>so<ex>n</ex></w>
+                <w>haut</w>
+                <w>poi<ex>n</ex>dre</w>
+                <w>fornir</w>
+            </l>
+            <l n="215" xml:id="ed_GLC_l_215">
+                <lb/>
+                <w>A</w>
+                <w>tant</w>
+                <w>de</w>
+                <w>gent</w>
+                <w><ex>com</ex>me</w>
+                <w>il</w>
+                <w>vint</w>
+                <w>ap<ex>rè</ex>s</w>
+                <w>li</w>
+                <pc>,</pc>
+            </l>
+            <l n="216" xml:id="ed_GLC_l_216">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>ja</w>
+                <w>par</w>
+                <w>home</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>i</w>
+                <w>avra</w>
+                <w>contredit</w>
+            </l>
+            <l n="217" xml:id="ed_GLC_l_217">
+                <lb/>
+                <w>Juq<ex>ue</ex>s</w>
+                <w>dus</w>
+                <w>Be<ex>gues</ex></w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>i</w>
+                <w>vegne</w>
+                <w>de</w>
+                <w>Beli<ex>n</ex></w>
+                <!--Belin-->
+            </l>
+            <l n="218" xml:id="ed_GLC_l_218">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>son</w>
+                <w>neveu</w>
+                <w>le</w>
+                <w>Borgoi<ex>n</ex>g</w>
+                <w>A<ex>uberi</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="219" xml:id="ed_GLC_l_219">
+                <lb/>
+                <w>Mes</w>
+                <w>il</w>
+                <w>se</w>
+                <w>dorme<ex>n</ex>t</w>
+                <w>si</w>
+                <w><ex>com</ex></w>
+                <w>il</w>
+                <w>m</w>
+                <pc>‘</pc>
+                <w>est</w>
+                <w>avis</w>
+                <pc>.</pc>
+            </l>
+            <l n="220" xml:id="ed_GLC_l_220">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>conroi</w>
+                <w>furent</w>
+                <w>ensemble</w>
+                <w>mis</w>
+                <pc>.</pc>
+            </l>
+            <l n="221" xml:id="ed_GLC_l_221">
+                <lb/>
+                <w>La</w>
+                <w>veïssiez</w>
+                <w>grosses</w>
+                <w>lances</w>
+                <w>ten<ex>ir</ex></w>
+            </l>
+            <l n="222" xml:id="ed_GLC_l_222">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>ch<ex>evalie</ex>rs</w>
+                <w>contre</w>
+                <w>terre</w>
+                <w>flatir</w>
+                <pc>,</pc>
+            </l>
+            <l n="223" xml:id="ed_GLC_l_223">
+                <lb/>
+                <w>Dont</w>
+                <w>li</w>
+                <w>ch<ex>e</ex>val</w>
+                <w>fuient</w>
+                <w>par</w>
+                <w>le</w>
+                <w>larris</w>
+                <pc>,</pc>
+            </l>
+            <l n="224" xml:id="ed_GLC_l_224">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>navré</w>
+                <w>se</w>
+                <w>clai<ex>m</ex>ment</w>
+                <w>las</w>
+                <pc>,</pc>
+                <w>chetis</w>
+                <pc>.</pc>
+            </l>
+            <l n="225" xml:id="ed_GLC_l_225">
+                <lb/>
+                <w>Lieve</w>
+                <w>la</w>
+                <w>noise</w>
+                <w><ex>et</ex></w>
+                <w>enforce</w>
+                <w>li</w>
+                <w>criz</w>
+                <pc>.</pc>
+            </l>
+            <l n="226" xml:id="ed_GLC_l_226"><lb/><w>En</w>
+                <pc>.</pc><w>IIII</w><pc>.</pc>
+                <w>le<ex>us</ex></w>
+                <w>ou</w>
+                <w>en</w>
+                <pc>.</pc><w>V</w><pc>.</pc>
+                <w>ou</w>
+                <w>en</w>
+                <pc>.</pc><w>VI</w><pc>.</pc></l>
+            <l n="227" xml:id="ed_GLC_l_227">
+                <lb/>
+                <w>Fu</w>
+                <w>li</w>
+                <w>tornoiz</w>
+                <w><ex>et</ex></w>
+                <w>li</w>
+                <w>abateïz</w>
+                <pc>.</pc>
+            </l>
+            <l n="228" xml:id="ed_GLC_l_228">
+                <lb/>
+                <w>Qui</w>
+                <w>duc</w>
+                <w>veïst</w>
+                <w>Guill<ex>aume</ex></w>
+                <w>de</w>
+                <w>Moncli<ex>n</ex></w>
+            </l>
+            <l n="229" xml:id="ed_GLC_l_229">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>dant</w>
+                <w>Ber<ex>nart</ex></w>
+                <pc>,</pc>
+                <w>le</w>
+                <w>segnor</w>
+                <w>de</w>
+                <w>Nesil</w>
+                <pc>,</pc>
+            </l>
+            <l n="230" xml:id="ed_GLC_l_230">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>la</w>
+                <w>mesniee</w>
+                <w>Fro<ex>mont</ex></w>
+                <w>le</w>
+                <w>posteïf</w>
+                <pc>,</pc>
+            </l>
+            <l n="231" xml:id="ed_GLC_l_231">
+                <lb/>
+                <w>Aus</w>
+                <w>bra<ex>n</ex>s</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>acier</w>
+                <w>la</w>
+                <w>presse</w>
+                <w>departir</w>
+                <pc>!</pc>
+            </l>
+            <l n="232" xml:id="ed_GLC_l_232">
+                <lb/>
+                <w>Tretoz</w>
+                <w>li</w>
+                <w>fes</w>
+                <w>en</w>
+                <w>vint</w>
+                <w>desus</w>
+                <w>Ga<ex>rin</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="233" xml:id="ed_GLC_l_233"><lb/><pc>.</pc><w>IIII</w><pc>.</pc>
+                <w>chevaus</w>
+                <w>li</w>
+                <w>ont</w>
+                <w>souz</w>
+                <w>li</w>
+                <w>ocis</w>
+                <pc>;</pc></l>
+            <l n="234" xml:id="ed_GLC_l_234">
+                <lb/>
+                <w>Li</w>
+                <w>dus</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>entorne</w>
+                <w>qui</w>
+                <w>ne</w>
+                <w>pot</w>
+                <w>plus</w>
+                <w>souffrir</w>
+                <pc>.</pc>
+            </l>
+            <l n="235" xml:id="ed_GLC_l_235">
+                <lb/>
+                <w>Desconfit</w>
+                <w>fussent</w>
+                <w>F<ex>rançois</ex></w>
+                <w><ex>et</ex></w>
+                <w>Engevin</w>
+                <pc>,</pc>
+                <!-- 235-->
+            </l>
+            <lb/>
+            <note><lb/>203—208 = 164, 13—164—18; 210 = 164, 20 ; 212 = 164, 19; 213 = <lb/>164, 22 ;
+                214 = 165, 5 ; 216—223 = 165, 6—165, 13 ; 226—227 = 165, 14— <lb/>165, 15 ; 232—240
+                = 165, 16—166, 3.</note>
+            <lb/>
+            <pb n="304" xml:id="p304"/>
+            <lb/>
+            <lb/>
+            <l n="236" xml:id="ed_GLC_l_236">
+                <lb/>
+                <w>Breton</w>
+                <pc>,</pc>
+                <w>Normant</w>
+                <pc>,</pc>
+                <w>por</w>
+                <w>le</w>
+                <w>fes</w>
+                <w>soutenir</w>
+                <pc>;</pc>
+            </l>
+            <milestone unit="page" n="4"/>
+            <cb n="[4 a]"/>
+            <l n="237" xml:id="ed_GLC_l_237">
+                <lb/>
+                <w>Mais</w>
+                <w>les</w>
+                <w>granz</w>
+                <w>ge<ex>n</ex>z</w>
+                <w>Fro<ex>mont</ex></w>
+                <w>le</w>
+                <w>posteïf</w>
+            </l>
+            <l n="238" xml:id="ed_GLC_l_238">
+                <lb/>
+                <w>Sus</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>estendart</w>
+                <w>font</w>
+                <w>les</w>
+                <w>noz</w>
+                <w>resortir</w>
+                <pc>.</pc>
+            </l>
+            <l n="239" xml:id="ed_GLC_l_239">
+                <lb/>
+                <pc>«</pc>
+                <w>Die<ex>us</ex></w>
+                <pc>!</pc>
+                <w>dit</w>
+                <w>li</w>
+                <w>rois</w>
+                <pc>,</pc>
+                <w>aïde</w>
+                <pc>,</pc>
+                <w>S</w>
+                <pc>.</pc>
+                <w>Denis</w>
+                <pc>!</pc>
+            </l>
+            <l n="240" xml:id="ed_GLC_l_240">
+                <lb/>
+                <w>Deffendez</w>
+                <w>moi</w>
+                <pc>,</pc>
+                <w>ne</w>
+                <w>soie</w>
+                <w>morz</w>
+                <w>ne</w>
+                <w>pris</w>
+                <pc>.</pc>
+            </l>
+            <l n="241" xml:id="ed_GLC_l_241">
+                <lb/>
+                <w>Icete</w>
+                <w>gent</w>
+                <w>ne</w>
+                <w>porroit</w>
+                <w>nus</w>
+                <w>souffrir</w>
+                <pc>.</pc>
+            </l>
+            <l n="242" xml:id="ed_GLC_l_242">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>ou</w>
+                <w>est</w>
+                <w>ore</w>
+                <w>dus</w>
+                <w>Be<ex>gues</ex></w>
+                <w>de</w>
+                <w>Belin</w>
+                <pc>,</pc>
+            </l>
+            <l n="243" xml:id="ed_GLC_l_243">
+                <lb/>
+                <w>Qui</w>
+                <w>a</w>
+                <w>els</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>est</w>
+                <w>durem<ex>en</ex>t</w>
+                <w>aatiz</w>
+                <pc>?</pc>
+                <pc>»</pc>
+            </l>
+            <l n="244" xml:id="ed_GLC_l_244"><lb/><pc>.</pc><w>I</w><pc>.</pc>
+                <w>ch<ex>evalie</ex>r</w>
+                <pc>,</pc>
+                <w>qui</w>
+                <w>de</w>
+                <w>langue</w>
+                <w>servi</w>
+                <pc>:</pc></l>
+            <l n="245" xml:id="ed_GLC_l_245">
+                <lb/>
+                <pc>«</pc>
+                <w>En</w>
+                <w>n<ex>om</ex></w>
+                <w>Dieu</w>
+                <pc>,</pc>
+                <w>sire</w>
+                <pc>,</pc>
+                <w>ce</w>
+                <w>fu</w>
+                <w>ap<ex>ré</ex>s</w>
+                <w>le</w>
+                <w>vin</w>
+                <pc>,</pc>
+            </l>
+            <l n="246" xml:id="ed_GLC_l_246">
+                <lb/>
+                <w>Oublié</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <pc>,</pc>
+                <w>en</w>
+                <w>no<ex>n</ex>chaloir</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>mis</w>
+                <pc>;</pc>
+            </l>
+            <l n="247" xml:id="ed_GLC_l_247">
+                <lb/>
+                <w>Vus</w>
+                <w>nu</w>
+                <w>verroiz</w>
+                <w>hui</w>
+                <w>en</w>
+                <w>estor</w>
+                <w>ven<ex>ir</ex></w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="248" xml:id="ed_GLC_l_248"><lb/><pc>.</pc><w>I</w><pc>.</pc>
+                <w>escuier</w>
+                <w>q<ex>ue</ex></w>
+                <w>Be<ex>gues</ex></w>
+                <w>ot</w>
+                <w>norri</w><pc>,</pc></l>
+            <l n="249" xml:id="ed_GLC_l_249">
+                <lb/>
+                <w>M<ex>o</ex>lt</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>pesa</w>
+                <w>q<ex>ua<!--n--></ex>nt</w>
+                <w>la</w>
+                <w>parole</w>
+                <w>oï</w>
+                <pc>,</pc>
+            </l>
+            <l n="250" xml:id="ed_GLC_l_250">
+                <lb/>
+                <w>M<ex>o</ex>lt</w>
+                <w>fierem<ex>en</ex>t</w>
+                <w>parole</w>
+                <w><ex>et</ex></w>
+                <w>si</w>
+                <w>li</w>
+                <w>dit</w>
+                <pc>:</pc>
+            </l>
+            <l n="251" xml:id="ed_GLC_l_251">
+                <lb/>
+                <pc>«</pc>
+                <w>Danz</w>
+                <w>ch<ex>evalie</ex>rs</w>
+                <pc>,</pc>
+                <w>vos</w>
+                <w>i</w>
+                <w>avez</w>
+                <w>menti</w>
+                <pc>:</pc>
+            </l>
+            <l n="252" xml:id="ed_GLC_l_252">
+                <lb/>
+                <w>Li</w>
+                <w>dus</w>
+                <w>se</w>
+                <w>dort</w>
+                <w>qui</w>
+                <w>anuit</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>aguet</w>
+                <w>fist</w>
+                <pc>;</pc>
+            </l>
+            <l n="253" xml:id="ed_GLC_l_253">
+                <lb/>
+                <w>Geu</w>
+                <w>vuel</w>
+                <w>aler</w>
+                <w>orendroit</w>
+                <w>estormir</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="254" xml:id="ed_GLC_l_254">
+                <lb/>
+                <w>Le</w>
+                <w>destr<ex>ier</ex></w>
+                <w>poi<ex>n</ex>t</w>
+                <w>des</w>
+                <w>esperons</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>or</w>
+                <w>fi<ex>n</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="255" xml:id="ed_GLC_l_255">
+                <lb/>
+                <w>Dede<ex>n<!--z--></ex>z</w>
+                <w>le</w>
+                <w>tref</w>
+                <w>entra</w>
+                <pc>,</pc>
+                <w>ou</w>
+                <w>li</w>
+                <w>dus</w>
+                <w>gist</w>
+                <pc>:</pc>
+            </l>
+            <l n="256" xml:id="ed_GLC_l_256">
+                <lb/>
+                <pc>«</pc>
+                <w>Levez</w>
+                <w>sus</w>
+                <pc>,</pc>
+                <w>sire</w>
+                <pc>,</pc>
+                <w>trop</w>
+                <w>i</w>
+                <w>poëz</w>
+                <w>dormir</w>
+                <pc>,</pc>
+            </l>
+            <l n="257" xml:id="ed_GLC_l_257">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>li</w>
+                <w>tornoiz</w>
+                <w>se</w>
+                <w>velt</w>
+                <w>ja</w>
+                <w>departir</w>
+                <pc>.</pc>
+            </l>
+            <l n="258" xml:id="ed_GLC_l_258">
+                <lb/>
+                <w>A</w>
+                <w>la</w>
+                <w>promesse</w>
+                <pc>,</pc>
+                <w>ce</w>
+                <w>cuit</w>
+                <pc>,</pc>
+                <w>avez</w>
+                <w>failli</w>
+                <pc>,</pc>
+            </l>
+            <l n="259" xml:id="ed_GLC_l_259">
+                <lb/>
+                <w>Q<ex>ue</ex></w>
+                <w>vos</w>
+                <w>feistes</w>
+                <w>Rigaut</w>
+                <w>le</w>
+                <w>filz</w>
+                <w>Hervi</w>
+                <pc>.</pc>
+            </l>
+            <l n="260" xml:id="ed_GLC_l_260">
+                <lb/>
+                <pc>—</pc>
+                <w>Ça</w>
+                <w>mo<ex>n</ex></w>
+                <w>ch<ex>e</ex>val</w>
+                <pc>!</pc>
+                <w>li</w>
+                <w>Loh<ex>er</ex>ans</w>
+                <!--Loherans-->
+                <w>a</w>
+                <w>dit</w>
+                <pc>,</pc>
+            </l>
+            <l n="261" xml:id="ed_GLC_l_261">
+                <lb/>
+                <w>Envoiez</w>
+                <w>querre</w>
+                <w>mo<ex>n</ex></w>
+                <!--mon-->
+                <w>neveu</w>
+                <w>Auberi</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="262" xml:id="ed_GLC_l_262">
+                <lb/>
+                <w>Ai<ex>n</ex>z</w>
+                <w>q<ex>ue</ex></w>
+                <w>li</w>
+                <w>dus</w>
+                <w>sus</w>
+                <w>son</w>
+                <w>cheval</w>
+                <w>seïst</w>
+                <pc>,</pc>
+            </l>
+            <l n="263" xml:id="ed_GLC_l_263">
+                <lb/>
+                <w>Li</w>
+                <w>baron</w>
+                <w>viennent</w>
+                <w><ex>et</ex></w>
+                <w>li</w>
+                <w>dus</w>
+                <w>A<ex>uberis</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="264" xml:id="ed_GLC_l_264">
+                <lb/>
+                <w>M<ex>o</ex>lt</w>
+                <w>doucem<ex>en</ex>t</w>
+                <w>lor</w>
+                <w>a</w>
+                <w>proié</w>
+                <w><ex>et</ex></w>
+                <w>dit</w>
+                <pc>:</pc>
+            </l>
+            <l n="265" xml:id="ed_GLC_l_265">
+                <lb/>
+                <pc>«</pc>
+                <w>Segnor</w>
+                <w>baron</w>
+                <pc>,</pc>
+                <w>je</w>
+                <w>me</w>
+                <w>sui</w>
+                <w>aatiz</w>
+            </l>
+            <l n="266" xml:id="ed_GLC_l_266">
+                <lb/>
+                <w>Env<ex>er</ex>s</w>
+                <w>Fro<ex>mont</ex></w>
+                <w><ex>et</ex></w>
+                <w>envers</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="267" xml:id="ed_GLC_l_267">
+                <lb/>
+                <w>De</w>
+                <w>mort</w>
+                <w>me</w>
+                <w>heent</w>
+                <pc>,</pc>
+                <w>b<ex>ie</ex>n</w>
+                <w>le</w>
+                <w>savez</w>
+                <w>de</w>
+                <w>fi</w>
+                <pc>,</pc>
+            </l>
+            <l n="268" xml:id="ed_GLC_l_268">
+                <lb/>
+                <w>Encui</w>
+                <w>verroiz</w>
+                <w>bon</w>
+                <w>ch<ex>evalie</ex>r</w>
+                <w>en</w>
+                <w>mi</w>
+                <pc>,</pc>
+            </l>
+            <l n="269" xml:id="ed_GLC_l_269">
+                <lb/>
+                <w>P<ex>re</ex>nez</w>
+                <w>vos</w>
+                <w>garde</w>
+                <w>de</w>
+                <w>moi</w>
+                <pc>,</pc>
+                <w>je</w>
+                <w>v<ex>us</ex></w>
+                <w>en</w>
+                <w>pri</w>
+                <pc>.</pc>
+            </l>
+            <l n="270" xml:id="ed_GLC_l_270">
+                <lb/>
+                <pc>—</pc>
+                <w>Molt</w>
+                <w>volentieirs</w>
+                <pc>,</pc>
+                <w>sire</w>
+                <pc>,</pc>
+                <pc>»</pc>
+                <w>dist</w>
+                <w>A<ex>uberis</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="271" xml:id="ed_GLC_l_271">
+                <lb/>
+                <w>Li</w>
+                <w>dus</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>entorne</w>
+                <w><ex>et</ex></w>
+                <w>ses</w>
+                <w>ge<ex>n</ex>z</w>
+                <!--genz-->
+                <w>autresi</w>
+                <pc>.</pc>
+            </l>
+            <l n="272" xml:id="ed_GLC_l_272">
+                <lb/>
+                <w>Bruient</w>
+                <w>banieres</w>
+                <w><ex>et</ex></w>
+                <w>panoncel</w>
+                <w>petiz</w>
+                <pc>;</pc>
+            </l>
+            <l n="273" xml:id="ed_GLC_l_273">
+                <lb/>
+                <w>Cil</w>
+                <w>escu</w>
+                <w>hurte<ex>n</ex>t</w>
+                <w>aus</w>
+                <w>hiaumes</w>
+                <w>poitevins</w>
+            </l>
+            <l n="274" xml:id="ed_GLC_l_274">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>li</w>
+                <w>hauberc</w>
+                <w>aus</w>
+                <w>seles</w>
+                <w>a</w>
+                <w>or</w>
+                <w>fin</w>
+                <pc>.</pc>
+            </l>
+            <l n="275" xml:id="ed_GLC_l_275">
+                <lb/>
+                <w>Lieve</w>
+                <w>la</w>
+                <w>poudre</w>
+                <w><ex>et</ex></w>
+                <w>li</w>
+                <w>airs</w>
+                <w>obscuri</w>
+                <pc>.</pc>
+                <!-- 275-->
+            </l>
+            <lb/>
+            <lb/>
+            <lb/>
+            <note><lb/>242—243, cf. 166, 4 ; 244—248 = 166, 5—166, 9; 250—252 = 166, 10—166, <lb/>12
+                ; 254 = 166, 13 ; 255—273 = 167, I—167, 19; 275—291 = 167, 20—168, 16.</note>
+            <lb/>
+            <pb n="305" xml:id="p305"/>
+            <lb/>
+            <lb/>
+            <l n="276" xml:id="ed_GLC_l_276">
+                <lb/>
+                <w>Li</w>
+                <w>caillou</w>
+                <w>brisent</w>
+                <w><ex>et</ex></w>
+                <w>li</w>
+                <w>fe<ex>us</ex></w>
+                <w>en</w>
+                <w>sailli</w>
+                <pc>.</pc>
+            </l>
+            <cb n="[4 b]"/>
+            <l n="277" xml:id="ed_GLC_l_277"><lb/><pc>.</pc><w>I</w><pc>.</pc>
+                <w>grant</w>
+                <w>arpent</w>
+                <w>dus</w>
+                <w>Be<ex>gues</ex></w>
+                <w>de</w>
+                <w>Beli<ex>n</ex></w>
+            </l>
+            <l n="278" xml:id="ed_GLC_l_278">
+                <lb/>
+                <w>S</w>
+                <pc>‘</pc>
+                <w>en</w>
+                <w>vint</w>
+                <w>avant</w>
+                <w>plus</w>
+                <w>c</w>
+                <pc>‘</pc>
+                <w>uns</w>
+                <w>ars</w>
+                <w>ne</w>
+                <w>tressist</w>
+                <pc>;</pc>
+            </l>
+            <l n="279" xml:id="ed_GLC_l_279">
+                <lb/>
+                <w>Ber<ex>nart</ex></w>
+                <w>encontre</w>
+                <pc>,</pc>
+                <w>si</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>a</w>
+                <w>reso<ex>n</ex></w>
+                <w>mis</w>
+                <pc>:</pc>
+            </l>
+            <l n="280" xml:id="ed_GLC_l_280">
+                <lb/>
+                <pc>«</pc>
+                <w>Ou</w>
+                <w>est</w>
+                <w>alez</w>
+                <w>v<ex>ost</ex>re</w>
+                <w>niès</w>
+                <w>Fro<ex>mon</ex>d<ex>ins</ex></w>
+                <pc>?</pc>
+            </l>
+            <l n="281" xml:id="ed_GLC_l_281">
+                <lb/>
+                <w>Son</w>
+                <w>cheval</w>
+                <w>ai</w>
+                <w>donné</w>
+                <w>a</w>
+                <w>Rigaudi<ex>n</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="282" xml:id="ed_GLC_l_282">
+                <lb/>
+                <pc>—</pc>
+                <w>Ne</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>avrez</w>
+                <w>mie</w>
+                <pc>»</pc>
+                <pc>,</pc>
+                <w>li</w>
+                <w>que<ex>n</ex>s</w>
+                <w>Ber<ex>narz</ex></w>
+                <w>a</w>
+                <w>dit</w>
+                <pc>.</pc>
+            </l>
+            <l n="283" xml:id="ed_GLC_l_283">
+                <lb/>
+                <w>Be<ex>gues</ex></w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>entent</w>
+                <pc>,</pc>
+                <w>a</w>
+                <w>pou</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>e<ex>n</ex>rage</w>
+                <w>vis</w>
+                <pc>,</pc>
+            </l>
+            <note><lb/>283. Ber̃. du ms. est une erreur évidente pour Bẽ.</note>
+            <l n="284" xml:id="ed_GLC_l_284">
+                <lb/>
+                <w>G<ex>ra</ex>nt</w>
+                <w>cop</w>
+                <w>li</w>
+                <w>donne</w>
+                <w>de</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>espié</w>
+                <w>poitevin</w>
+                <pc>,</pc>
+            </l>
+            <l n="285" xml:id="ed_GLC_l_285">
+                <lb/>
+                <w>Tout</w>
+                <w>estendu</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>abat</w>
+                <w>enz</w>
+                <w>eu</w>
+                <w>chemi<ex>n</ex></w>
+                <pc>.</pc>
+            </l>
+            <l n="286" xml:id="ed_GLC_l_286">
+                <lb/>
+                <w>Ap<ex>rè</ex>s</w>
+                <w>abat</w>
+                <w>Guill<ex>aume</ex></w>
+                <w>de</w>
+                <w>Monclin</w>
+                <pc>;</pc>
+            </l>
+            <l n="287" xml:id="ed_GLC_l_287">
+                <lb/>
+                <w>Le</w>
+                <w>tierz</w>
+                <w>a</w>
+                <w>fet</w>
+                <w>de</w>
+                <w>male</w>
+                <w>mort</w>
+                <w>morir</w>
+                <pc>;</pc>
+            </l>
+            <l n="288" xml:id="ed_GLC_l_288">
+                <lb/>
+                <w>Sa</w>
+                <w>gent</w>
+                <w>sormonte</w>
+                <pc>,</pc>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>so<ex>n</ex></w>
+                <w>poindre</w>
+                <w>forni</w>
+            </l>
+            <l n="289" xml:id="ed_GLC_l_289">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>tint</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>espee</w>
+                <w>Frobierge</w>
+                <w>au</w>
+                <w>po<ex>n</ex>t</w>
+                <w>d</w>
+                <pc>‘</pc>
+                <w>or</w>
+                <w>fi<ex>n</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="290" xml:id="ed_GLC_l_290">
+                <lb/>
+                <w>Entr</w>
+                <pc>‘</pc>
+                <w>eus</w>
+                <w>se</w>
+                <w>fiert</w>
+                <w>li</w>
+                <w>dus</w>
+                <w><ex>et</ex></w>
+                <w>si</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>i</w>
+                <w>mist</w>
+                <pc>,</pc>
+            </l>
+            <l n="291" xml:id="ed_GLC_l_291">
+                <lb/>
+                <w>Coupe</w>
+                <w>visages</w>
+                <w><ex>et</ex></w>
+                <w>cos</w>
+                <w><ex>et</ex></w>
+                <w>braz</w>
+                <w><ex>et</ex></w>
+                <w>piz</w>
+                <pc>,</pc>
+            </l>
+            <l n="292" xml:id="ed_GLC_l_292">
+                <lb/>
+                <w>A</w>
+                <w>grant</w>
+                <w>dolor</w>
+                <w>en</w>
+                <w>fet</w>
+                <w>ames</w>
+                <w>p<ex>ar</ex>tir</w>
+                <pc>.</pc>
+            </l>
+            <l n="293" xml:id="ed_GLC_l_293">
+                <lb/>
+                <w>Die<ex>us</ex></w>
+                <pc>!</pc>
+                <w>a</w>
+                <w>q<ex>ue</ex>l</w>
+                <w>poine</w>
+                <w>Guill<ex>aumes</ex></w>
+                <w>de</w>
+                <w>Moncli<ex>n</ex></w>
+            </l>
+            <l n="294" xml:id="ed_GLC_l_294">
+                <lb/>
+                <w>Est</w>
+                <w>remonttez</w>
+                <w><ex>et</ex></w>
+                <w>Ber<ex>narz</ex></w>
+                <w>de</w>
+                <w>Nesil</w>
+                <pc>!</pc>
+            </l>
+            <l n="295" xml:id="ed_GLC_l_295">
+                <lb/>
+                <w>B<ex>ie</ex>n</w>
+                <w>i</w>
+                <w>parut</w>
+                <w>q</w>
+                <!--<ex>-->
+                <w>uan</w>
+                <!--</ex>-->
+                <w>t</w>
+                <w>dus</w>
+                <w>Be<ex>gues</ex></w>
+                <w>i</w>
+                <w>vint</w>
+                <pc>.</pc>
+            </l>
+            <l n="296" xml:id="ed_GLC_l_296">
+                <lb/>
+                <pc>«</pc>
+                <w>Chastel</w>
+                <pc>!</pc>
+                <pc>»</pc>
+                <w>ecrie</w>
+                <pc>,</pc>
+                <w>por</w>
+                <w>les</w>
+                <w>sue<ex>n</ex>s</w>
+                <w>resbaudir</w>
+                <pc>.</pc>
+            </l>
+            <l n="297" xml:id="ed_GLC_l_297"><lb/><w>Les</w>
+                <pc>.</pc><w>III</w><pc>.</pc>
+                <w>batailles</w>
+                <w>fet</w>
+                <w>a</w>
+                <w>une</w>
+                <w>ven<ex>ir</ex></w>
+                <pc>,</pc></l>
+            <l n="298" xml:id="ed_GLC_l_298">
+                <lb/>
+                <w>P<ex>us</ex></w>
+                <w>les</w>
+                <w>a</w>
+                <w>fetes</w>
+                <w>en</w>
+                <w>la</w>
+                <w>quarte</w>
+                <w>flatir</w>
+                <pc>;</pc>
+            </l>
+            <l n="299" xml:id="ed_GLC_l_299">
+                <lb/>
+                <w>Ferant</w>
+                <w>les</w>
+                <w>moines</w>
+                <w>pl<ex>us</ex></w>
+                <w>c</w>
+                <pc>‘</pc>
+                <w>u<ex>n</ex>s</w>
+                <w>ars</w>
+                <w>ne</w>
+                <w>tressist</w>
+                <pc>;</pc>
+            </l>
+            <l n="300" xml:id="ed_GLC_l_300">
+                <lb/>
+                <w>Au</w>
+                <w>Bordelois</w>
+                <w>a</w>
+                <w>fet</w>
+                <w>le</w>
+                <w>champ</w>
+                <w>g<ex>uer</ex>pir</w>
+            </l>
+            <l n="301" xml:id="ed_GLC_l_301">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>par</w>
+                <w>sa</w>
+                <w>force</w>
+                <w>sus</w>
+                <w>les</w>
+                <w>serja<ex>n</ex>z</w>
+                <w>flatir</w>
+                <pc>.</pc>
+            </l>
+            <l n="302" xml:id="ed_GLC_l_302">
+                <lb/>
+                <pc>«</pc>
+                <w>Die<ex>us</ex></w>
+                <pc>!</pc>
+                <w>dist</w>
+                <w>li</w>
+                <w>rois</w>
+                <pc>,</pc>
+                <w>li</w>
+                <w>dus</w>
+                <w>Be<ex>gues</ex></w>
+                <w>est</w>
+                <w>ci</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="303" xml:id="ed_GLC_l_303">
+                <lb/>
+                <w>Dit</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>un</w>
+                <w>a</w>
+                <w>l</w>
+                <pc>‘</pc>
+                <w>autre</w>
+                <pc>:</pc>
+                <pc>«</pc>
+                <w>Voirem<ex>en</ex>t</w>
+                <w>i</w>
+                <w>est</w>
+                <w>il</w>
+                <pc>;</pc>
+            </l>
+            <l n="304" xml:id="ed_GLC_l_304">
+                <lb/>
+                <w>Or</w>
+                <w>i</w>
+                <w>p<ex>er</ex>t</w>
+                <w>b<ex>ie</ex>n</w>
+                <w>qu</w>
+                <pc>‘</pc>
+                <w>il</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>est</w>
+                <w>pas</w>
+                <w>andormiz</w>
+                <pc>.</pc>
+                <pc>»</pc>
+            </l>
+            <l n="305" xml:id="ed_GLC_l_305">
+                <lb/>
+                <w>Devant</w>
+                <w>les</w>
+                <w>autres</w>
+                <w><ex>com</ex>me<ex>n</ex>ce</w>
+                <w>le</w>
+                <w>huttin</w>
+            </l>
+            <l n="306" xml:id="ed_GLC_l_306">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>la</w>
+                <w>mellee</w>
+                <w><ex>et</ex></w>
+                <w>le</w>
+                <w>dolere<ex>us</ex></w>
+                <w>cri</w>
+                <pc>.</pc>
+            </l>
+            <l n="307" xml:id="ed_GLC_l_307">
+                <lb/>
+                <w>Die<ex>us</ex></w>
+                <pc>!</pc>
+                <w><ex>com</ex></w>
+                <w>le</w>
+                <w>fet</w>
+                <w>la</w>
+                <w>mesniee</w>
+                <w>au</w>
+                <w>marchis</w>
+                <pc>,</pc>
+            </l>
+            <l n="308" xml:id="ed_GLC_l_308">
+                <lb/>
+                <w>Li</w>
+                <w>Avalois</w>
+                <pc>,</pc>
+                <w>Huon</w>
+                <w>de</w>
+                <w>Que<ex>m</ex>broisi</w>
+            </l>
+            <l n="309" xml:id="ed_GLC_l_309">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>son</w>
+                <w>neu</w>
+                <w>le</w>
+                <w>borgoi<ex>n</ex>g</w>
+                <w>A<ex>uberi</ex></w>
+            </l>
+            <note><lb/>309 répété dans le ms.</note>
+            <l n="309" xml:id="ed_GLC_l_309bis">
+                <lb/>
+                <w><ex>Et</ex></w>
+                <w>son</w>
+                <w>neveu</w>
+                <w>le</w>
+                <w>borgoi<ex>n</ex>g</w>
+                <w>A<ex>uberi</ex></w>
+                <pc>,</pc>
+            </l>
+            <l n="310" xml:id="ed_GLC_l_310">
+                <lb/>
+                <w>Do</w>
+                <w>li</w>
+                <w>Vanierres</w>
+                <w><ex>et</ex></w>
+                <w>le</w>
+                <w>vilai<ex>n</ex></w>
+                <w>H<ex>er</ex>vi</w>
+                <pc>!</pc>
+            </l>
+            <l n="311" xml:id="ed_GLC_l_311">
+                <lb/>
+                <w>Il</w>
+                <w>n</w>
+                <pc>‘</pc>
+                <w>est</w>
+                <w>pas</w>
+                <w>ge<ex>us</ex></w>
+                <w>de</w>
+                <w>tel</w>
+                <w>fes</w>
+                <w>soutenir</w>
+                <pc>!</pc>
+            </l>
+            <!--<lb/>
+            <lb/>
+            <lb/>
+            <lb/>-->
+            <note><lb/>293—296 = 168, 17—169, I ; 302—305 = 169, 2—169, 5 ; 307—309 = 169,
+                <lb/>6—169, 83 ; 311—313 = 169, 9—169, 11.</note>
+            <!--<lb/>-->
+            <note><lb/><bibl status="draft"><publisher>Romania</publisher>, <citedRange>LII.
+                        20</citedRange></bibl></note>
+            <!--<lb/>-->
+            <pb n="306" xml:id="p306"/>
+            <!--<lb/>
+            <lb/>-->
+            <l n="312" xml:id="ed_GLC_l_312">
+                <lb/>
+                <w>Be<ex>gues</ex></w>
+                <w>resgarde</w>
+                <pc>,</pc>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>a</w>
+                <w>veü</w>
+                <w>Fro<ex>mon</ex>d<ex>in</ex></w>
+                <pc>;</pc>
+            </l>
+            <l n="313" xml:id="ed_GLC_l_313">
+                <lb/>
+                <w>D</w>
+                <pc>‘</pc>
+                <w>une</w>
+                <w>bataille</w>
+                <w>venoit</w>
+                <w>toz</w>
+                <w>ademis</w>
+                <pc>,</pc>
+            </l>
+            <l n="314" xml:id="ed_GLC_l_314">
+                <lb/>
+                <w><ex>Com</ex>batuz</w>
+                <w>s</w>
+                <pc>‘</pc>
+                <w>iert</w>
+                <pc>,</pc>
+                <w>mes</w>
+                <w>assez</w>
+                <w>i</w>
+                <w>perdi</w>
+                <pc>.</pc>
+            </l>
+            <l n="315" xml:id="ed_GLC_l_315">
+                <lb/>
+                <w>Be<ex>gues</ex></w>
+                <w>li</w>
+                <w>dus</w>
+                <w>a</w>
+                <w>le</w>
+                <w>vallet</w>
+                <w>choisi</w>
+                <pc>.</pc>
+            </l>
+            <lb/>
+            <lb/>
+        </body>
+        <back>
+            <lb/>
+            <p><persName>Antoine CRETTON.</persName></p>
+        </back>
+
+    </text>
+</TEI>

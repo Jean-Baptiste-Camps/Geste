@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JBC: je valide aussi face à tei_all pour vérifier la conformité TEI -->
+<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<!--  -->
+<?xml-model href="Modele.rng" 
+    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="Modele.rng" 
+    type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GerbMetzMe1" type="ed" xml:lang="fr" version="5" corresp="jns3669">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Gerbert de Metz</title>
+                <title type="sub">Numérisation de l'édition de Paul Meyer du fragment de Troyes</title>
+                <!-- JBC: j'ajoute l'éditeur originel -->
+                <editor><persName>Paul Meyer</persName></editor>
+                <respStmt xml:id="ED">
+                    <resp>Edition numérique du fragment</resp>
+                    <persName>Ella Duréault</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>Sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="Meyer_1" status="draft">
+                    <!-- JBC: article, et pas monographie, donc -->
+                    <analytic>
+                        <editor xml:id="Meyer"><persName><surname>,
+                            Paul</surname><forename>Meyer</forename></persName></editor>
+                        <title>Fragments de manuscrits français.</title>
+                        <!-- Ajouter DOI -->
+                        <idno type="DOI">10.3406/roma.1905.5417</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <!--<biblScope>In: <title></title> tome 34 n°135</biblScope>-->
+                            <biblScope unit="issue" n="34">t. 34</biblScope>
+                            <!--<biblScope unit="chapter" n="135"/>-->
+                            <date when="1905">1905</date>
+                            <!-- JBC: éviter la redondance -->
+                            <!--<biblScope>pp. 429-457</biblScope>-->
+                            <biblScope unit="page" from="429" to="457">p. 429-457</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <!-- JBC: un petit msDesc pour la cote du manuscrit? -->
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origDate cert="unknown" resp="DEAF" type="dateComposition" notBefore="1180" notAfter="1200">1180-1200</origDate>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">champ.sept.</origPlace>
+                <!-- JBC: ne pas oublier le # devant les pointeurs -->
+                <!--<origDate cert="unknown" resp="Meyer" type="dateManuscrit" notBefore="1280" notAfter="1300">1280-1300</origDate>-->
+                <origDate cert="unknown" resp="#Meyer" type="dateManuscrit" notBefore="1280" notAfter="1300">1280-1300</origDate>
+                <origPlace cert="unknown" resp="#Meyer" type="lieuManuscrit">inconnue</origPlace>
+            </creation>
+            <langUsage>
+                <language cert="unknown" resp="#ED" ident="fro" usage="100"/>
+            </langUsage>
+        </profileDesc>
+        <!-- JBC: Description de vos choix d'encodage -->
+        <encodingDesc>
+            <editorialDecl>
+                <p/>
+                <!-- etc. (ou éléments plus spécialisés) -->
+            </editorialDecl>
+        </encodingDesc>
+        <revisionDesc status="draft">
+            <!-- JBC: en général, plutôt ordre antéchronologique -->
+            <change when="201808" who="#JBC">Correction du document</change>
+            
+            <change who="#ED" when="2018-03-05" status="draft">Encodage des métadonnées</change>
+            <change who="#ED" when="2018-03-08" status="draft">Structure générale (front/body/back
+                dans le text)</change>
+            <change who="#ED" when="2018-03-12" status="draft">Début d'encodage des
+                abréviations</change>
+            <change who="#ED" when="2018-03-20" status="draft">Fin d'encodage des abréviations, des
+                ajouts de l'éditeur</change>
+            <change who="#ED" when="2018-03-27" status="draft">Tokénisation et numérotation via
+                XSL</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="fre">
+        <front>
+            <pb n="435" facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417"/>
+            <head><title>II. — FRAGMENTS DE GIRBERT DE METZ</title>
+                <title type="sub">I. — FRAGMENT DE TROYES.</title></head>
+
+            <p>
+                <lb n="1"/>Les vers de Girbert de Metz dont on trouvera le texte ci—après semblent
+                avoir <lb n="2"/>échappé à l‘attention de tous ceux qui se sont occupés de ce poème
+                    <note n="1">
+                    <lb n="3"/>Ceci n‘est plus exact. La présente notice était imprimée lorsque <lb
+                        n="4"/><persName xml:id="Stengel">M. Stengel</persName> m‘a fait savoir
+                    qu‘il avait identifié ces vers dès 1881, dans le <lb n="5"/><bibl status="draft"
+                        >Literaturblatt f. germ. u. rom. Philologie, col. 421</bibl> ; que, de plus
+                    ils avaient <lb n="6"/>été publiés en 1886, par M. Heuser, en appendice à un
+                    mémoire de <lb n="7"/><persName xml:id="Krüger">M. K. Krüger</persName> sur un
+                    ms. des Lorrains (<bibl status="draft"><title>Ausg. u. Abhandl. aus d. Gebiete
+                            d. <lb n="8"/>Romanischen Philologie</title>, n° LXII, p. 88</bibl>).
+                        <persName xml:id="Heuser">M. Heuser</persName> s‘est assez bien tiré des <lb
+                        n="9"/>difficultés de lecture que présentaient les deux colonnes du recto
+                    (AB) ; <lb n="10"/>c‘est par un hasard quelconque qu‘il a oublié les trois
+                    premiers vers de la col. <lb n="11"/>C. Je laisse subsister ma notice, d‘abord
+                    parce qu‘elle est plus com— <lb n="12"/>plète que celle dont je dois
+                    l‘indication à M. Stengel, ensuite parce qu‘elle <lb n="13"/>me fournit un utile
+                    élément de comparaison avec le fragment de Brasenose <lb n="14"/>(Oxford) dont
+                    il va être question.</note>. Ce n‘est pourtant pas faute d‘avoir été <pb n="436"
+                    facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417"
+                    ed="P. MEYER"/>
+                <lb n="1"/>signalés à mainte reprise, mais il est vrai qu‘ils l‘ont été sous <lb
+                    n="2"/>une dénomination inexacte. Ces vers sont écrits sur un feuillet mutilé
+                    <lb n="3"/>(il n‘en reste que la partie supérieure) qui est fixé, <lb n="4"
+                />comme une garde à la fin d‘un bréviaire de Citeaux (XVe siècle), conservé à la <lb
+                    n="5"/><settlement>Bibliothèque de Troyes</settlement> sous le n° 2057. Le
+                    cata<lb n="6"/>logue imprimé en 1855 (<bibl status="draft"><title>Catal.
+                        général</title>, in—4°, p. 837</bibl>) les men<lb n="7"/>tionne comme suit
+                :</p>
+            <p><quote defective="false">Sur les gardes, qui sont en parchemin se trouvent quelques
+                    fragments d‘un <lb n="8"/>roman de Girart de Roussillon :<quote
+                        corresp="#jns_8595" defective="false"><lb/><l n="1">
+                            <w>G</w>
+                            <pc type="supplied">'</pc>
+                            <w>irai</w>
+                            <w>sor</w>
+                            <w>eus</w>
+                            <w>por</w>
+                            <w>lor</w>
+                            <w>terres</w>
+                            <w>saisir</w>
+                            <pc type="supplied">;</pc>
+                        </l>
+                        <lb/><l n="2">
+                            <!-- JBC: éviter la redondance entre encodage sémantique et
+                            artifices typographiques.
+                            -->
+                            <w><supplied resp="unknown" reason="unknown"
+                                    ><!--[-->Ne<!--]--></supplied></w>
+                            <w>les</w>
+                            <w>garra</w>
+                            <w>trestot</w>
+                            <w>ors</w>
+                            <w>que</w>
+                            <w>Dex</w>
+                            <w>fist</w>
+                        </l>
+                        <lb/><l n="3">
+                            <w>Que</w>
+                            <w>je</w>
+                            <w>nes</w>
+                            <w>face</w>
+                            <w>de</w>
+                            <w>male</w>
+                            <w>mort</w>
+                            <w>morir</w>
+                            <pc type="supplied">,</pc>
+                        </l>
+                        <lb/><l n="4">
+                            <w>Dist</w>
+                            <w>Girars</w>
+                            <pc type="supplied">,</pc>
+                            <w>Sire</w>
+                            <pc type="supplied">,</pc>
+                            <w>il</w>
+                            <w>lor</w>
+                            <w>sera</w>
+                            <w>ben</w>
+                            <w>dit</w>
+                            <pc type="supplied">:</pc>
+                        </l>
+                        <lb/><l n="5">
+                            <w>Nel</w>
+                            <w>laisseroie</w>
+                            <w>por</w>
+                            <w>tot</w>
+                            <w rend="elision">l</w>
+                            <pc type="supplied">'</pc>
+                            <w>or</w>
+                            <w>que</w>
+                            <w>Dex</w>
+                            <w>fist</w>
+                            <pc type="supplied">.</pc>
+                        </l></quote></quote></p>
+
+            <p><lb n="9"/>La transcription n‘est pas très exacte, comme on le verra <lb n="10"/>tout
+                à l‘heure. Averti par la notice du catalogue, <persName xml:id="Mignard"
+                    >Mignard</persName>, de <lb n="11"/>Dijon, qui devait publier, en 1858, le <bibl
+                    xml:id="jns_8595" status="draft">Girart de Roussillon</bibl> du <lb n="12"/>XIVe
+                siècle, envoya une notice sur ce fragment au Comité de <lb n="13"/>la langue de
+                l‘histoire et des arts de la France <lb n="14"/>(qui est devenu depuis le Comité des
+                travaux historiques). Sa communication <lb n="15"/>est mentionnée à la séance du
+                    <date>11 février 1856</date><note n="1">
+                    <lb n="16"/><bibl status="draft">Bulletin du Comité, t. III (1855—1856), Paris,
+                        Impr. impériale, 1857, <lb n="17"/>p. 162.</bibl></note>. Elle fut ren<lb
+                    n="18"/>voyée à l‘examen de <persName xml:id="Guessard">Fr.Guessard</persName>,
+                mon ancien maître. Il <lb n="19"/>n‘était pas facile, à cette époque, d‘identifier
+                un court fragment <lb n="20"/>de chanson de geste; Guessard admit sans vérification
+                qu‘il <lb n="21"/>s‘agissait en effet d‘un fragment de Girart de Roussillon, mais il
+                    <lb n="22"/>ne crut pas devoir proposer l‘insertion au Bulletin du Comité <lb
+                    n="23"/>de la note de Mignard, faisant remarquer que le fait signalé <lb n="24"
+                />était déjà consigné dans le catalogue imprimé <note n="2"><bibl status="draft"
+                        >Bulletin précité, p. 211.</bibl></note>.</p>
+
+            <p><lb n="25"/>En 1856, <persName xml:id="Michel">Fr. Michel</persName>, dans son <bibl
+                    status="draft">édition de Girart de Roussillon <lb n="26"/>(Bibliothèque
+                    elzévirienne)</bibl>, signale le même fragment, en ces <lb n="27"/>termes (p.
+                xiij, note) :</p>
+            <p><quote defective="false">
+                    <lb n="28"/>Enfin, nous venons d‘apprendre de M. Mignard <!--<sic>-->…<!--</sic>--><!-- JBC:
+                    c'est un passage omis de la citation, à rendre avec gap, par exemple
+                    -->
+                qu‘il a
+                    trouvé à la <lb n="29"/>Bibliothèque publique de la ville de Troyes des
+                    fragments d‘un poème <lb n="30"/>français relatif à ce héros (Girart de
+                    Roussillon), employés comme gardes <pb n="437"
+                        facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417"
+                        ed="FRAGMENTS DE GIRBERT DE METZ"/>
+                    <lb n="1"/>dans un bréviaire du XVe siècle. Ce dernier volume étant de format <!--<dimensions>-->
+                        <!--<height>-->in—32<!--</height>-->
+                    <!--</dimensions>--><!-- JBC: idée intéressante, mais ce format n'est pas une hauteur -->, 
+                <lb n="2"/>pour y ramener celui du roman, qui paraît avoir été <!--<dimensions>-->
+                        <!--<height>-->in—4°<!--</height>-->
+                    <!--</dimensions>-->, on a écourté le <lb n="3"/>parchemin d‘une telle manière qu‘il
+                    n‘est guère possible d‘y lire autre chose <lb n="4"/>que ces vers : <quote
+                        corresp="#jns_8595"><lb/><l n="6">
+                            <w>Par</w>
+                            <w>la</w>
+                            <w>main</w>
+                            <w>dextre</w>
+                            <w>le</w>
+                            <w>dit</w>
+                            <w>Girart</w>
+                            <w>la</w>
+                            <w>tint</w>
+                            <pc type="supplied">.</pc>
+                        </l>
+                        <lb/><l n="7">
+                            <w/><!-- JBC: pourquoi des mots vides? -->
+                            <w><gap quantity="1" unit="lines" reason="damage"/></w>
+                            <w/>
+                        </l>
+                        <lb/><l n="8">
+                            <w>Ainsi</w>
+                            <w><choice>
+                                    <sic>dois</sic>
+                                    <corr resp="#Meyer" type="editorial">doit</corr>
+                                </choice><note n="1" target="#note_1">
+                                    <lb/>Faute d‘impression pour 
+                                    <!-- JBC: pas la peine d'encode la ponctuation dans l'introduction. -->
+                                    doit<!--<pc type="supplied">-->.<!--</pc>--> Mais
+                                    je ne trouve pas ce vers dans nos <lb/>fragments<pc
+                                        type="supplied">.</pc> Ce qui est surprenant c‘est qu‘il se
+                                    trouve réellement — mais <lb/>plus loin — dans Girbert;
+                                    voir ci—après le fragment d‘Oxford, v. 44. Y <lb/>avait—il jadis un autre
+                                    fragment du même poème dans le ms. de
+                                    Troyes? Ou <lb/>est—ce le dernier vers
+                                    qui a été mal lu ?</note></w>
+                            <w>rois</w>
+                            <w>son</w>
+                            <w>royaume</w>
+                            <w>tenir</w>
+                            <pc type="supplied">.</pc>
+                        </l></quote>
+                </quote></p>
+            <p>
+                <lb n="5"/>Fr. Michel était mal renseigné. Il n‘avait pas eu l‘idée de <lb n="6"
+                />recourir au catalogue imprimé, et Mignard ne lui avait pas <lb n="7"/>communiqué
+                tout ce qu‘il avait lu du fragment. Ce dernier <lb n="8"/>réservait ce qu‘il avait
+                pu en déchiffrer pour la préface de <lb n="9"/>son édition du poème du XIVe siècle,
+                où il publia, peu correcte<lb n="10"/>ment, seize vers pris en deux endroits du
+                feuillet de garde <note n="2">
+                    <lb n="11"/><bibl status="draft"><emph rend="italic">Le roman en vers de très
+                            excellent, puissant et noble homme Girart de Ros<lb n="12"
+                            />sillon.</emph> Paris et Dijon, 1858. P. XIV, note.</bibl></note>, <lb
+                    n="13"/>disant que <quote resp="#Mignard" defective="false">« rajuster les vers
+                    était presque aussi difficile que <lb n="14"/>de réunir les feuilles éparses de
+                    la sibylle »</quote>.</p>
+
+            <p>
+                <lb n="15"/>Ce qui paraissait si difficile à Mignard est maintenant devenu <lb
+                    n="16"/>facile, depuis que M. Stengel a publié, en 1874, la partie de la <lb
+                    n="17"/>chanson de Girbert de Metz à laquelle appartiennent nos frag— <lb n="18"
+                    />ments<note n="3"><bibl status="draft">Romanische Studien, I, 441 et
+                        suiv.</bibl></note>. Deux ou trois ans après cette publication, me trouvant
+                    <lb n="19"/>pour quelques jours à Troyes, je copiai les vers du fragment <lb
+                    n="20"/>de feuillet relié à la fin du ms. 2057. Je ne me suis pas pressé, <lb
+                    n="21"/>comme on le voit, de les publier. Si je les publie aujourd‘hui, <lb
+                    n="22"/>ce n‘est pas que je leur attribue beaucoup d‘importance, c‘est <lb
+                    n="23"/>parce que j‘avais dans mes papiers quelques extraits d‘un autre <lb
+                    n="24"/>fragment de Girbert qui forme la garde d‘un livre appartenant <lb n="25"
+                />au Collège de Brasenose, à Oxford, et il se trouve que ce <lb n="26"/>nouveau
+                fragment coïncide partiellement avec <sic>de celui <lb n="27"/>Troyes</sic>. Il m‘a
+                paru utile, en vue d‘une édition que M. Stengel <lb n="28"/>nous donnera un jour, de
+                faire connaître ces deux débris de <pb n="438"
+                    facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417"
+                    ed="P. MEYER"/>
+                <lb n="1"/>manuscrits dépecés dont il existe peut—être ailleurs d‘autres <lb n="2"
+                />morceaux.</p>
+
+            <p>
+                <lb n="3"/>Le fragment de Girbert, dont je vais transcrire le texte, est la <lb
+                    n="4"/>partie supérieure d‘un feuillet à deux colonnes par pages, et <lb n="5"
+                />réglé à 38 vers par colonne. Toute la partie inférieure du feuil<lb n="6"/>let (un
+                peu plus de la moitié) manque. Il ne reste plus de <lb n="7"/>chaque colonne que
+                seize vers. De plus, la marge intérieure <lb n="8"/>a été rognée, de sorte qu‘il
+                manque quelques lettres, faciles <lb n="9"/>à restituer, au commencement de
+                plusieurs des vers de la <lb n="10"/>première colonne. Je désigne, dans la
+                transcription qui suit, <lb n="11"/>les quatre colonnes (ou plutôt fragments de
+                colonnes), par les <lb n="12"/>lettres A B C D. L‘écriture appartient à la fin du
+                XIIIe siècle. Le <lb n="13"/>texte se rapproche sensiblement de celui des manuscrits
+                Bibl. <lb n="14"/>nat.fr. 1582 et 19161, que M. Stengel désigne par les lettres <lb
+                    n="15"/><listWit>
+                    <witness xml:id="F">F</witness>
+                    <witness xml:id="G">G</witness>
+                </listWit>.
+                <!-- JBC: bonne initiative. Encoder les cotes des manuscrits avec bibl / msIdentifier? -->
+                J‘indiquerai en note, les ressemblances les plus caractéris— <lb n="16"
+                />tiques. Je restitue en italiques les lettres qui manquent par suite de la
+                mutilation du feuillet.</p>
+            <p>
+                <lb n="17"/>Je donne le fac—similé de la première colonne du verso (C). <lb n="18"
+                />Le cliché est fort mal venu, ce qui était du reste à prévoir, étant <lb n="19"
+                />donné l‘état de l‘original qui est très recroquevillé et ne pou<lb n="20"/>vait
+                être convenablement étendu parce que le recto est recou<lb n="21"/>vert d‘une
+                    <material>feuille de papier végétal</material> qui n‘a pas été appliquée <lb
+                    n="22"/>avec tout le soin désirable. Si imparfait que soit ce fac—similé, <lb
+                    n="23"/>il suffira cependant à faire un utile rapprochement si on vient <lb
+                    n="24"/>à retrouver quelque autre fragment du même manuscrit.</p>
+
+        </front>
+        <body xml:lang="fro">
+            <!-- Ceci n'est peut-être pas le début de la laisse 
+            mais la métrique est cohérente -->
+            <lg xml:id="L_001" n="1" type="laisse">
+                <cb n="A"/><!-- JBC: je me demande s'il faut utiliser cb, qui signifierait que l'on édite le manuscrit, ou
+                quelque chose comme metamark, qui indiquerait que l'on transcrit ce qui figure sur l'édition...
+                -->
+                <note type="edition"><bibl status="draft"><title>(Rom. Stud., I, 494)</title></bibl></note>
+
+                <lb n="1"/>
+                <l xml:id="Meyer_1_l_1" n="1">
+                    <pc type="supplied">«</pc><!-- JBC: l'encodage du discours direct (q) serait un plus. -->
+                    <q><w xml:id="Meyer_1_w_000001">Ne</w>
+                    <w xml:id="Meyer_1_w_000002">doutïe<supplied resp="#Meyer" reason="lectio"><!--[-->n<!--]--></supplied>s</w>
+                    <w xml:id="Meyer_1_w_000003">nul</w>
+                    <w xml:id="Meyer_1_w_000004">home</w>
+                    <w xml:id="Meyer_1_w_000005">qui</w>
+                    <w xml:id="Meyer_1_w_000006">fust</w>
+                    <w xml:id="Meyer_1_w_000007">vis</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="2"/>
+                <l xml:id="Meyer_1_l_2" n="2">
+                    <pc type="supplied">«</pc>
+                    <q><w xml:id="Meyer_1_w_000008"><supplied resp="#Meyer" reason="damage">L</supplied>as</w>
+                    <pc type="supplied">!</pc>
+                    <w xml:id="Meyer_1_w_000009">moi</w>
+                    <w xml:id="Meyer_1_w_000010">dolant</w>
+                    <pc type="supplied">!</pc>
+                    <w xml:id="Meyer_1_w_000011">or</w>
+                    <w xml:id="Meyer_1_w_000012">somes</w>
+                    <w xml:id="Meyer_1_w_000013">departi</w>
+                    <pc type="supplied">.</pc></q>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb n="3"/>
+                <l xml:id="Meyer_1_l_3" n="3">
+                    <w xml:id="Meyer_1_w_000014"><supplied resp="#Meyer" reason="damage">T</supplied>ot</w>
+                    <w xml:id="Meyer_1_w_000015">maintenant</w>
+                    <w xml:id="Meyer_1_w_000016" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000017">ont</w>
+                    <w xml:id="Meyer_1_w_000018">fet</w>
+                    <w xml:id="Meyer_1_w_000019">ensevelir</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="4"/>
+                <l xml:id="Meyer_1_l_4" n="4">
+                    <w xml:id="Meyer_1_w_000020"><supplied resp="#Meyer" reason="damage">E</supplied>n</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000021">j</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000022">biere</w>
+                    <w xml:id="Meyer_1_w_000023"><!--<choice>
+                            <abbr>-->ens<!--</abbr>
+                            <expan resp="#ED">ensemble</expan>
+                        </choice>--></w><!-- JBC: non, ce n'est pas une abréviation, c'est bien enz (< INTUS), à l'intérieur. -->
+                    <w xml:id="Meyer_1_w_000024">el</w>
+                    <w xml:id="Meyer_1_w_000025">mostier</w>
+                    <w xml:id="Meyer_1_w_000026">gesir<note type="tradition">4 C‘est à peu près la leçon d‘FG<!--<pc type="supplied">-->.<!--</pc>--> Il y a ensuite un vers de plus dans les
+                            autres mss.</note></w>
+                </l>
+                <lb n="5"/>
+                <!-- JBC: plutôt metamark que note. Ou supprimer car l'information figure dans le lb ? -->
+                <!--<note type="numerotation_edition">--><!--<metamark>5</metamark>--><!--</note>-->
+                <l xml:id="Meyer_1_l_5" n="5">
+                    <w xml:id="Meyer_1_w_000027"><supplied resp="#Meyer" reason="damage">C</supplied>lers</w>
+                    <w xml:id="Meyer_1_w_000028">et</w>
+                    <w xml:id="Meyer_1_w_000029">prevoires</w>
+                    <w xml:id="Meyer_1_w_000030">i</w>
+                    <w xml:id="Meyer_1_w_000031">ot</w>
+                    <!-- JBC: pas besoin de le mettre dans un mot, de même que la note. -->
+                    <!--<w xml:id="Meyer_1_w_000032">--><gap quantity="8" unit="char" reason="damage"/><!--</w>-->
+                    <!--<w xml:id="Meyer_1_w_000033">-->
+                    <note n="1">La fin du vers, d‘après les leçons
+                            données par M. Stengel, serait 
+                        <supplied resp="#Stengel" reason="lectio">xl</supplied> (ou <lb n="6"/><supplied resp="#Stengel" reason="lectio">lx</supplied>),
+                            <supplied resp="#Stengel" reason="lectio">enqui</supplied> (ou <supplied resp="#Stengel" reason="lectio">iqui</supplied>) ou <supplied resp="#Stengel" reason="damage">quarante sis</supplied>.</note><!--</w>-->
+                    <pc type="supplied">;</pc>
+                </l>
+                <lb n="7"/>
+                <l xml:id="Meyer_1_l_6" n="6">
+                    <!-- JBC: ce sont deux mots -->
+                    <!--<w xml:id="Meyer_1_w_000034"><supplied resp="#Meyer" reason="damage">N'</supplied>i</w>-->
+                    <w xml:id="Meyer_1_w_000034"><supplied resp="#Meyer" reason="damage">N</supplied></w><pc type="supplied">'</pc><w xml:id="Meyer_1_w_000034a">i</w>
+                    <w xml:id="Meyer_1_w_000035">ot</w>
+                    <w xml:id="Meyer_1_w_000036">celui</w>
+                    <w xml:id="Meyer_1_w_000037">son</w>
+                    <w xml:id="Meyer_1_w_000038">sautier</w>
+                    <w xml:id="Meyer_1_w_000039">ne</w>
+                    <w xml:id="Meyer_1_w_000040">tenist</w>
+                    <pc type="supplied">,</pc>
+                </l>
+
+                <lb n="8"/>
+                <l xml:id="Meyer_1_l_7" n="7">
+                    <w xml:id="Meyer_1_w_000041"><supplied resp="#Meyer" reason="damage">Et</supplied></w>
+                    <w xml:id="Meyer_1_w_000042">prient</w>
+                    <w xml:id="Meyer_1_w_000043">Deu</w>
+                    <w xml:id="Meyer_1_w_000044"><!--<choice>
+                            <abbr>-->qui<!--</abbr>
+                        --><!--<!-\- JBC: si vous mettez un corr, il faut mettre la correction à l'intérieur (et pas uniquement la note).
+                        Marquer aussi les passages cités. En outre, corr va plutôt avec sic
+                        -\-><corr type="editorial">--><note n="2">L‘abréviation donne <mentioned>qui</mentioned> 
+                                et non <mentioned>que</mentioned>.</note><!--</corr>
+                        </choice>--></w>
+                    <w xml:id="Meyer_1_w_000045">de</w>
+                    <w xml:id="Meyer_1_w_000046">lui</w>
+                    <w xml:id="Meyer_1_w_000047">ait</w>
+                    <w xml:id="Meyer_1_w_000048">merci</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="9"/>
+                <l xml:id="Meyer_1_l_8" n="8">
+                    <w xml:id="Meyer_1_w_000049"><supplied resp="#Meyer" reason="damage">A</supplied></w>
+                    <!-- JBC: ici, deux mots -->
+                    <!--<w xml:id="Meyer_1_w_000050"><supplied resp="#Meyer" reason="damage">l‘ende</supplied>main</w>-->
+                    <w rend="elision" xml:id="Meyer_1_w_000050"><supplied resp="#Meyer" reason="damage">l</supplied></w><pc type="supplied">‘</pc><w xml:id="Meyer_1_w_000050b"><supplied resp="#Meyer" reason="damage">ende</supplied>main</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000051">ains</w>
+                    <w xml:id="Meyer_1_w_000052">que</w>
+                    <w xml:id="Meyer_1_w_000053">passast</w>
+                    <w xml:id="Meyer_1_w_000054">midi</w>
+                    <pc type="supplied">,</pc>
+                </l>
+
+                <pb n="439" facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417" ed="FRAGMENTS DE GIRBERT DE METZ"/>
+
+
+                <lb n="10"/>
+                <l xml:id="Meyer_1_l_9" n="9">
+                    <!-- JBC: idem -->
+                    <!--<w xml:id="Meyer_1_w_000055"><supplied resp="#Meyer" reason="damage">L‘</supplied>ont</w>-->
+                    <w rend="elision" xml:id="Meyer_1_w_000055"><supplied resp="#Meyer" reason="damage">L</supplied></w><pc type="supplied">‘</pc><w xml:id="Meyer_1_w_000055b">ont</w>
+                    <w xml:id="Meyer_1_w_000056">enterré</w>
+                    <w xml:id="Meyer_1_w_000057">au</w>
+                    <w xml:id="Meyer_1_w_000058">mostier</w>
+                    <w xml:id="Meyer_1_w_000059"><choice>
+                            <abbr>S<pc type="supplied">.</pc></abbr>
+                            <expan resp="#ED">S<ex>aint</ex></expan>
+                        </choice></w>
+                    <!-- JBC: pourquoi rajouter is ? -->
+                    <w xml:id="Meyer_1_w_000060"><!--<choice>
+                            <abbr>-->Sevrin<pc type="supplied">.</pc><!--</abbr>
+                            <expan>Sevrin<pc type="supplied">.</pc><ex>is</ex></expan>
+                        </choice>--></w>
+                </l>
+                <lb n="11"/>
+                <!--<metamark>10 </metamark>-->
+                <l xml:id="Meyer_1_l_10" n="10">
+                    <w xml:id="Meyer_1_w_000061"><supplied resp="#Meyer" reason="damage">A</supplied>inz</w>
+                    <w xml:id="Meyer_1_w_000062" rend="elision">qu</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000063"><!--<choice>
+                            <sic>-->il<!--</sic>
+                            <corr type="editorial">ils</corr>
+                        </choice>--></w><!-- JBC: ne pas corriger les traits de langue. -->
+                    <w xml:id="Meyer_1_w_000064">venissent</w>
+                    <w xml:id="Meyer_1_w_000065">ariere</w>
+                    <w xml:id="Meyer_1_w_000066">au</w>
+                    <w xml:id="Meyer_1_w_000067">Plaiseïs</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="12"/>
+                <l xml:id="Meyer_1_l_11" n="11">
+                    <w xml:id="Meyer_1_w_000068"><supplied resp="#Meyer" reason="damage">L</supplied>or</w>
+                    <w xml:id="Meyer_1_w_000069">a</w>
+                    <w xml:id="Meyer_1_w_000070"><choice>
+                            <abbr>Ri<pc type="supplied">.</pc></abbr>
+                            <expan>Ri<ex>gau</ex></expan>
+                        </choice></w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000071">iij</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000072">chevaliers</w>
+                    <w xml:id="Meyer_1_w_000073">ocis</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="13"/>
+                <l xml:id="Meyer_1_l_12" n="12">
+                    <w xml:id="Meyer_1_w_000074">Cosins</w>
+                    <w xml:id="Meyer_1_w_000075">germai<supplied resp="#Meyer" reason="lectio">n</supplied>s</w>
+                    <w xml:id="Meyer_1_w_000076"><choice>
+                            <abbr>Fro<pc type="supplied">.</pc></abbr>
+                            <expan>Fro<ex>mond</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000077">le</w>
+                    <w xml:id="Meyer_1_w_000078">posteïs</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <lb n="14"/>
+                <l xml:id="Meyer_1_l_13" n="13">
+                    <w xml:id="Meyer_1_w_000079">L</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000080">uns</w>
+                    <w xml:id="Meyer_1_w_000081">fu</w>
+                    <w xml:id="Meyer_1_w_000082">de</w>
+                    <w xml:id="Meyer_1_w_000083">Troies</w>
+                    <w xml:id="Meyer_1_w_000084">et</w>
+                    <w xml:id="Meyer_1_w_000085" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000086">autres</w>
+                    <w xml:id="Meyer_1_w_000087">de</w>
+                    <w xml:id="Meyer_1_w_000088">Paris</w>
+                    <!--<w xml:id="Meyer_1_w_000089">-->
+                    <note type="tradition">— 12—13 Ces deux vers qui se trouvent dans FG, 
+                        manquent ailleurs.</note>
+                    <!--</w>-->
+                </l>
+                <lb n="15"/>
+                <l xml:id="Meyer_1_l_14" n="14">
+                    <w xml:id="Meyer_1_w_000090">Et</w>
+                    <w xml:id="Meyer_1_w_000091" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000092">autres</w>
+                    <w xml:id="Meyer_1_w_000093">fu</w>
+                    <w xml:id="Meyer_1_w_000094">dou</w>
+                    <w xml:id="Meyer_1_w_000095">chastel</w>
+                    <w xml:id="Meyer_1_w_000096">de</w>
+                    <w xml:id="Meyer_1_w_000097">Crespi</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="16"/>
+                <!--<metamark>15 </metamark>-->
+                <l xml:id="Meyer_1_l_15" n="15">
+                    <w xml:id="Meyer_1_w_000098">Molt</w>
+                    <w xml:id="Meyer_1_w_000099">fu</w>
+                    <w xml:id="Meyer_1_w_000100">dolans</w>
+                    <w xml:id="Meyer_1_w_000101"><choice>
+                            <abbr>Ri<pc type="supplied">.</pc></abbr>
+                            <expan>Ri<ex>gaus</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000102">et</w>
+                    <w xml:id="Meyer_1_w_000103">esmarris</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="17"/>
+                <l xml:id="Meyer_1_l_16" n="16">
+                    <w xml:id="Meyer_1_w_000104"><supplied resp="#Meyer" reason="damage">Morant</supplied></w>
+                    <w xml:id="Meyer_1_w_000105">regrete</w>
+                    <w xml:id="Meyer_1_w_000106">com</w>
+                    <w xml:id="Meyer_1_w_000107">ja</w>
+                    <w xml:id="Meyer_1_w_000108">porrez</w>
+                    <w xml:id="Meyer_1_w_000109">oïr</w>
+                    <pc type="supplied">.</pc>
+                </l>
+
+
+                <cb n="B"/>
+                <note type="edition"><bibl status="draft"><title>(Rom. Stud., I, 496)</title></bibl></note>
+                <lb n="1"/>
+                <l xml:id="Meyer_1_l_17" n="17"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000110">De</w>
+                    <w xml:id="Meyer_1_w_000111">toutez</w>
+                    <w xml:id="Meyer_1_w_000112">pars</w>
+                    <w xml:id="Meyer_1_w_000113">descroissent</w>
+                    <w xml:id="Meyer_1_w_000114">nostre</w>
+                    <w xml:id="Meyer_1_w_000115">ami<note>1 = FG<pc type="supplied">.</pc></note></w>
+                </q></l>
+                <lb n="2"/>
+                <l xml:id="Meyer_1_l_18" n="18"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000116">Las</w>
+                    <pc type="supplied">!</pc>
+                    <pc type="supplied">»</pc></q>
+                    <w xml:id="Meyer_1_w_000117">dist</w>
+                    <w xml:id="Meyer_1_w_000118"><choice>
+                            <abbr>G<pc type="supplied">.</pc></abbr>
+                            <expan>Gibers</expan>
+                        </choice></w>
+                    <pc type="supplied">,</pc>
+                    <q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000119">que</w>
+                    <w xml:id="Meyer_1_w_000120">porrai</w>
+                    <w xml:id="Meyer_1_w_000121">devenir</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="3"/>
+                <l xml:id="Meyer_1_l_19" n="19"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000122">Quant</w>
+                    <w xml:id="Meyer_1_w_000123" rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000124">ai</w>
+                    <w xml:id="Meyer_1_w_000125">chastel</w>
+                    <w xml:id="Meyer_1_w_000126">en</w>
+                    <w xml:id="Meyer_1_w_000127">icelui</w>
+                    <w xml:id="Meyer_1_w_000128">païs</w>
+                    <w xml:id="Meyer_1_w_000129"><note type="tradition">- 3 = F</note></w>
+                </q></l>
+                <lb n="4"/>
+                <l xml:id="Meyer_1_l_20" n="20"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000130">Par</w>
+                    <w xml:id="Meyer_1_w_000131">cui</w>
+                    <w xml:id="Meyer_1_w_000132">je</w>
+                    <w xml:id="Meyer_1_w_000133">puisse</w>
+                    <w xml:id="Meyer_1_w_000134">grever</w>
+                    <w xml:id="Meyer_1_w_000135">mez</w>
+                    <w xml:id="Meyer_1_w_000136">anemis</w>
+                    <pc type="supplied">?</pc>
+                </q></l>
+                <lb n="5"/>
+                <l xml:id="Meyer_1_l_21" n="21"><q>
+                    <!--<!-\-<w xml:id="Meyer_1_w_000137">-\-><note type="numerotation_edition">5 </note><!-\-</w>-\->-->
+                    <w xml:id="Meyer_1_w_000138">——</w>
+                    <w xml:id="Meyer_1_w_000139">Si</w>
+                    <w xml:id="Meyer_1_w_000140">avez</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000141">sire</w>
+                    <pc type="supplied">»</pc></q>
+                    <pc type="supplied">,</pc>
+                    <q>
+                    <w xml:id="Meyer_1_w_000142">li</w>
+                    <w xml:id="Meyer_1_w_000143">mèz</w>
+                    <w xml:id="Meyer_1_w_000144">li</w>
+                    <w xml:id="Meyer_1_w_000145">respondi</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000146"><note type="tradition">- 5 = FG</note></w>
+                </q></l>
+                <lb n="6"/>
+                <l xml:id="Meyer_1_l_22" n="22"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000147">Rigaus</w>
+                    <w xml:id="Meyer_1_w_000148">vos</w>
+                    <w xml:id="Meyer_1_w_000149">mande</w>
+                    <w xml:id="Meyer_1_w_000150">et</w>
+                    <w xml:id="Meyer_1_w_000151">ces</w>
+                    <w xml:id="Meyer_1_w_000152">peres</w>
+                    <w xml:id="Meyer_1_w_000153">Hervix</w>
+                </q></l>
+                <lb n="7"/>
+                <l xml:id="Meyer_1_l_23" n="23"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000154" rend="elision">Qu</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000155">il</w>
+                    <w xml:id="Meyer_1_w_000156">vos</w>
+                    <w xml:id="Meyer_1_w_000157">rendront</w>
+                    <w xml:id="Meyer_1_w_000158">cuite</w>
+                    <w xml:id="Meyer_1_w_000159">le</w>
+                    <w xml:id="Meyer_1_w_000160">Plaiseïs</w>
+                    <pc type="supplied">.</pc>
+                </q></l>
+                <lb n="8"/>
+                <l xml:id="Meyer_1_l_24" n="24"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000161">Bien</w>
+                    <w xml:id="Meyer_1_w_000162">est</w>
+                    <w xml:id="Meyer_1_w_000163">garnis</w>
+                    <w xml:id="Meyer_1_w_000164">et</w>
+                    <w xml:id="Meyer_1_w_000165">de</w>
+                    <w xml:id="Meyer_1_w_000166">pain</w>
+                    <w xml:id="Meyer_1_w_000167">et</w>
+                    <w xml:id="Meyer_1_w_000168">de</w>
+                    <w xml:id="Meyer_1_w_000169">vin</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="9"/>
+                <l xml:id="Meyer_1_l_25" n="25"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000170">De</w>
+                    <w xml:id="Meyer_1_w_000171">char</w>
+                    <w xml:id="Meyer_1_w_000172">salée</w>
+                    <w xml:id="Meyer_1_w_000173">por</w>
+                    <w xml:id="Meyer_1_w_000174">chevaliers</w>
+                    <w xml:id="Meyer_1_w_000175">servir</w>
+                    <pc type="supplied">.</pc>
+                </q></l>
+                <lb n="10"/>
+                <l xml:id="Meyer_1_l_26" n="26"><q>
+                    <!--<w xml:id="Meyer_1_w_000176"><note type="numerotation_edition">10 </note>—</w>-->
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000177">Des</w>
+                    <w xml:id="Meyer_1_w_000178" rend="elision">qu</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000179">a</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000180">vij</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000181">ans</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000182">ne</w>
+                    <w xml:id="Meyer_1_w_000183">vos</w>
+                    <w xml:id="Meyer_1_w_000184">en</w>
+                    <w xml:id="Meyer_1_w_000185">quier</w>
+                    <w xml:id="Meyer_1_w_000186">mentir</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="11"/>
+                <l xml:id="Meyer_1_l_27" n="27"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000187">Avrez</w>
+                    <w xml:id="Meyer_1_w_000188">viande</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000189">mal</w>
+                    <w xml:id="Meyer_1_w_000190">grez</w>
+                    <w xml:id="Meyer_1_w_000191">en</w>
+                    <w xml:id="Meyer_1_w_000192">aient</w>
+                    <w xml:id="Meyer_1_w_000193">il</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="supplied">»</pc>
+                </q></l>
+                <lb n="12"/>
+                <l xml:id="Meyer_1_l_28" n="28">
+                    <w xml:id="Meyer_1_w_000194"><supplied resp="#Meyer" reason="damage">D</supplied>ist</w>
+                    <w xml:id="Meyer_1_w_000195">la</w>
+                    <w xml:id="Meyer_1_w_000196">roïne</w>
+                    <pc type="supplied">:</pc>
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000197" rend="elision">C</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000198">est</w>
+                    <w xml:id="Meyer_1_w_000199">chastiax</w>
+                    <w xml:id="Meyer_1_w_000200">bien</w>
+                    <w xml:id="Meyer_1_w_000201">garniz</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="supplied">»</pc>
+                </q></l>
+                <lb n="13"/>
+                <l xml:id="Meyer_1_l_29" n="29"><q>
+                    <w xml:id="Meyer_1_w_000202">—</w>
+                    <w xml:id="Meyer_1_w_000203">En</w>
+                    <w xml:id="Meyer_1_w_000204">non</w>
+                    <w xml:id="Meyer_1_w_000205">Deu</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000206">dame</w>
+                    <pc type="supplied">,</pc>
+                    <pc type="supplied">»</pc></q>
+                    <w xml:id="Meyer_1_w_000207">li</w>
+                    <w xml:id="Meyer_1_w_000208">dus</w>
+                    <w xml:id="Meyer_1_w_000209"><choice>
+                            <abbr>G<pc type="supplied">.</pc></abbr>
+                            <expan>Gibers</expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000210">a</w>
+                    <w xml:id="Meyer_1_w_000211">dit</w>
+                    <pc type="supplied">,</pc>
+                    <!--<w xml:id="Meyer_1_w_000212">--><note type="tradition">- 13 = FG</note><!--</w>-->
+                </l>
+                <lb n="14"/>
+                <l xml:id="Meyer_1_l_30" n="30"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000213">Grant</w>
+                    <w xml:id="Meyer_1_w_000214">pechié</w>
+                    <w xml:id="Meyer_1_w_000215">fait</w>
+                    <w xml:id="Meyer_1_w_000216" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000217">empererez</w>
+                    <w xml:id="Meyer_1_w_000218">Pepins</w>
+                </q></l>
+                <lb n="15"/>
+                <l xml:id="Meyer_1_l_31" n="31"><q>
+                    <!--<w xml:id="Meyer_1_w_000219"><note type="numerotation_edition">15 </note>
+                        --><lb n="16"/><!--</w>-->
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000220"><supplied resp="#Meyer" reason="damage">Q</supplied>ue</w>
+                    <w xml:id="Meyer_1_w_000221">ne</w>
+                    <w xml:id="Meyer_1_w_000222">me</w>
+                    <w xml:id="Meyer_1_w_000223">rant</w>
+                    <w xml:id="Meyer_1_w_000224">Gironville</w>
+                    <w xml:id="Meyer_1_w_000225">a</w>
+                    <w xml:id="Meyer_1_w_000226">tenir</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="17"/>
+                <l xml:id="Meyer_1_l_32" n="32"><q>
+                    <pc type="supplied">«</pc>
+                    <!-- JBC: segmentation -->
+                    <!--<w xml:id="Meyer_1_w_000227"><supplied resp="#Meyer" reason="damage">Le bon</supplied></w>-->
+                    <w xml:id="Meyer_1_w_000227"><supplied resp="#Meyer" reason="damage">Le</supplied></w>
+                    <w xml:id="Meyer_1_w_000227b"><supplied resp="#Meyer" reason="damage">bon</supplied></w>
+                    <w xml:id="Meyer_1_w_000228">chastel</w>
+                    <w xml:id="Meyer_1_w_000229">que</w>
+                    <w xml:id="Meyer_1_w_000230">mez</w>
+                    <w xml:id="Meyer_1_w_000231">ancestres</w>
+                    <w xml:id="Meyer_1_w_000232">tint</w>
+                    <pc type="supplied">.</pc>
+                </q></l>
+                <lb n="18"/>
+                <l xml:id="Meyer_1_l_33" n="33">
+                    <gap resp="#Meyer" cert="unknown" quantity="2" unit="lines" reason="damage"/>
+                </l>
+
+                <cb n="C"/>
+                <note type="edition"><bibl status="draft"><title>(Rom. Stud., I, 497—8)</title></bibl></note>
+
+                <lb n="1"/>
+                <l xml:id="Meyer_1_l_34" n="34">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000233" rend="elision">N</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000234">en</w>
+                    <w xml:id="Meyer_1_w_000235">nule</w>
+                    <w xml:id="Meyer_1_w_000236">terre</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000237">si</w>
+                    <w xml:id="Meyer_1_w_000238">com</w>
+                    <w xml:id="Meyer_1_w_000239">je</w>
+                    <w xml:id="Meyer_1_w_000240" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000241">ai</w>
+                    <w xml:id="Meyer_1_w_000242">apris</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="supplied">»</pc></q>
+                </l>
+                <lb n="2"/>
+                <l xml:id="Meyer_1_l_35" n="35">
+                    <w xml:id="Meyer_1_w_000243">Par</w>
+                    <w xml:id="Meyer_1_w_000244">la</w>
+                    <w xml:id="Meyer_1_w_000245">main</w>
+                    <w xml:id="Meyer_1_w_000246">destre</w>
+                    <w xml:id="Meyer_1_w_000247">li</w>
+                    <w xml:id="Meyer_1_w_000248">dus</w>
+                    <w xml:id="Meyer_1_w_000249"><choice>
+                            <abbr>G<pc type="supplied">.</pc></abbr>
+                            <expan>G<ex>erins</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000250">la</w>
+                    <w xml:id="Meyer_1_w_000251">tint</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="3"/>
+                <l xml:id="Meyer_1_l_36" n="36">
+                    <w xml:id="Meyer_1_w_000252">Atant</w>
+                    <w xml:id="Meyer_1_w_000253">ez</w>
+                    <w xml:id="Meyer_1_w_000254">vos</w>
+                    <w xml:id="Meyer_1_w_000255" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000256">enfant</w>
+                    <w xml:id="Meyer_1_w_000257"><choice>
+                            <abbr>R<pc type="supplied">.</pc></abbr>
+                            <expan>R<ex>igau</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000258">ou</w>
+                    <w xml:id="Meyer_1_w_000259">vint</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <lb n="4"/>
+                <l xml:id="Meyer_1_l_37" n="37">
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000260">I</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000261">esprevier</w>
+                    <w xml:id="Meyer_1_w_000262">la</w>
+                    <w xml:id="Meyer_1_w_000263">roïne</w>
+                    <w xml:id="Meyer_1_w_000264">tendi</w>
+                    <pc type="supplied">;</pc>
+                </l>
+
+                <pb n="440" facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417" ed="P. MEYER"/>
+
+                <lb n="5"/>
+                <!--<note type="numerotation_edition">5 </note>-->
+                <l xml:id="Meyer_1_l_38" n="38">
+                    <w xml:id="Meyer_1_w_000265">Il</w>
+                    <w xml:id="Meyer_1_w_000266">fu</w>
+                    <w xml:id="Meyer_1_w_000267">molt</w>
+                    <w xml:id="Meyer_1_w_000268">biaus</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000269">et</w>
+                    <w xml:id="Meyer_1_w_000270">la</w>
+                    <w xml:id="Meyer_1_w_000271">dame</w>
+                    <w xml:id="Meyer_1_w_000272" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000273">a</w>
+                    <w xml:id="Meyer_1_w_000274">pris</w>
+                    <pc type="supplied">,</pc>
+                    <!--<w xml:id="Meyer_1_w_000275">--><note type="tradition">1 = FG<pc type="supplied">;</pc> ce vers manque dans
+                            les autres mss<pc type="supplied">.</pc></note><!--</w>-->
+                </l>
+                <lb n="6"/>
+                <l xml:id="Meyer_1_l_39" n="39">
+                    <w xml:id="Meyer_1_w_000276">Par</w>
+                    <w xml:id="Meyer_1_w_000277">grant</w>
+                    <w xml:id="Meyer_1_w_000278">chierté</w>
+                    <w xml:id="Meyer_1_w_000279">desor</w>
+                    <w xml:id="Meyer_1_w_000280">son</w>
+                    <w xml:id="Meyer_1_w_000281">poig</w>
+                    <w xml:id="Meyer_1_w_000282" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000283">a</w>
+                    <w xml:id="Meyer_1_w_000284">mis</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="7"/>
+                <l xml:id="Meyer_1_l_40" n="40">
+                    <w xml:id="Meyer_1_w_000285">Devant</w>
+                    <w xml:id="Meyer_1_w_000286">le</w>
+                    <w xml:id="Meyer_1_w_000287">roi</w>
+                    <w xml:id="Meyer_1_w_000288">la</w>
+                    <w xml:id="Meyer_1_w_000289">franche</w>
+                    <w xml:id="Meyer_1_w_000290">dame</w>
+                    <w xml:id="Meyer_1_w_000291">vint</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="8"/>
+                <l xml:id="Meyer_1_l_41" n="41">
+                    <w xml:id="Meyer_1_w_000292">Li</w>
+                    <w xml:id="Meyer_1_w_000293">rois</w>
+                    <w xml:id="Meyer_1_w_000294">la</w>
+                    <w xml:id="Meyer_1_w_000295">voit</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000296">a</w>
+                    <w xml:id="Meyer_1_w_000297">raisson</w>
+                    <w xml:id="Meyer_1_w_000298" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000299">en</w>
+                    <w xml:id="Meyer_1_w_000300">a</w>
+                    <w xml:id="Meyer_1_w_000301">mis</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <lb n="9"/>
+                <l xml:id="Meyer_1_l_42" n="42">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000302">Cis</w>
+                    <w xml:id="Meyer_1_w_000303">espreviers</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000304">ma</w>
+                    <w xml:id="Meyer_1_w_000305">dame</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000306">ou</w>
+                    <w xml:id="Meyer_1_w_000307">fu</w>
+                    <w xml:id="Meyer_1_w_000308">il</w>
+                    <w xml:id="Meyer_1_w_000309">pris</w>
+                    <pc type="supplied">?</pc></q>
+                </l>
+                <lb n="10"/>
+                <!--<note type="numerotation_edition">10 </note>-->
+                <l xml:id="Meyer_1_l_43" n="43">
+                    <!--<w xml:id="Meyer_1_w_000310">--><!--—--><!--</w>-->
+                    <q><w xml:id="Meyer_1_w_000311">Sire</w></q>
+                    <pc type="supplied">»</pc>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000312">fait</w>
+                    <w xml:id="Meyer_1_w_000313">ele</w>
+                    <pc type="supplied">,</pc>
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000314">ne</w>
+                    <w xml:id="Meyer_1_w_000315">vos</w>
+                    <w xml:id="Meyer_1_w_000316">en</w>
+                    <w xml:id="Meyer_1_w_000317">quier</w>
+                    <w xml:id="Meyer_1_w_000318">mentir</w>
+                    <pc type="supplied">:</pc></q>
+                </l>
+                <lb n="11"/>
+                <l xml:id="Meyer_1_l_44" n="44">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000319"><choice>
+                            <abbr>H<pc type="supplied">.</pc></abbr>
+                            <expan>H<ex resp="#ED">ernaut</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000320">mes</w>
+                    <w xml:id="Meyer_1_w_000321">niés</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000322">mes</w>
+                    <w xml:id="Meyer_1_w_000323">drus</w>
+                    <w xml:id="Meyer_1_w_000324">et</w>
+                    <w xml:id="Meyer_1_w_000325">mes</w>
+                    <w xml:id="Meyer_1_w_000326">amis</w>
+                    <pc type="supplied">,</pc></q>
+                    <!--<w xml:id="Meyer_1_w_000327">--><note type="tradition">— 7= FG</note><!--</w>-->
+                </l>
+                <lb n="12"/>
+                <l xml:id="Meyer_1_l_45" n="45">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000328">Le</w>
+                    <w xml:id="Meyer_1_w_000329" rend="elision">m</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000330">aporta</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000331">la</w>
+                    <w xml:id="Meyer_1_w_000332">soie</w>
+                    <w xml:id="Meyer_1_w_000333">grans</w>
+                    <w xml:id="Meyer_1_w_000334">mercis</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="13"/>
+                <l xml:id="Meyer_1_l_46" n="46">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000335">Or</w>
+                    <w xml:id="Meyer_1_w_000336">le</w>
+                    <w xml:id="Meyer_1_w_000337">prenés</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000338">enpererez</w>
+                    <w xml:id="Meyer_1_w_000339">gentis</w>
+                    <pc type="supplied">;</pc></q>
+                </l>
+                <lb n="14"/>
+                <l xml:id="Meyer_1_l_47" n="47">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000340">Par</w>
+                    <w xml:id="Meyer_1_w_000341">grant</w>
+                    <w xml:id="Meyer_1_w_000342">amor</w>
+                    <w xml:id="Meyer_1_w_000343">le</w>
+                    <w xml:id="Meyer_1_w_000344">faites</w>
+                    <w xml:id="Meyer_1_w_000345">recoillir</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="15"/>
+                <!--<note type="numerotation_edition">15 </note>-->
+                <l xml:id="Meyer_1_l_48" n="48">
+                    <q><w xml:id="Meyer_1_w_000346">—</w>
+                    <w xml:id="Meyer_1_w_000347">Mout</w>
+                    <w xml:id="Meyer_1_w_000348">ditez</w>
+                    <w xml:id="Meyer_1_w_000349">bien</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000350">dame</w>
+                    <pc type="supplied">»</pc></q>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000351">se</w>
+                    <w xml:id="Meyer_1_w_000352">dist</w>
+                    <w xml:id="Meyer_1_w_000353">Pepins<note type="tradition">— 11 = FG</note></w>
+                </l>
+                <lb n="16"/>
+                <l xml:id="Meyer_1_l_49" n="49">
+                    <!--<pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000354">Qui</w>
+                    <w xml:id="Meyer_1_w_000355">lle</w>
+                    <w xml:id="Meyer_1_w_000356">refuse</w>
+                    <w xml:id="Meyer_1_w_000357">ne</w>
+                    <w xml:id="Meyer_1_w_000358">doit</w>
+                    <w xml:id="Meyer_1_w_000359">terre</w>
+                    <w xml:id="Meyer_1_w_000360">tenir</w>
+                    <pc type="supplied">.</pc>-->
+                    <note type="tradition">12 = FG<pc type="supplied">,</pc></note>
+                </l>
+                <lb n="17"/>
+                <l xml:id="Meyer_1_l_50" n="50">
+
+                    <gap quantity="2" unit="lines" reason="damage"/>
+                </l>
+
+
+                <cb n="D"/>
+                <note type="edition"><bibl status="draft"><title>(Rom. Stud., I, 499—500)</title></bibl></note>
+
+                <lb n="1"/>
+                <l xml:id="Meyer_1_l_51" n="51">
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000362">Mout</w>
+                    <w xml:id="Meyer_1_w_000363">volentiers</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000364">dame</w>
+                    <pc type="supplied">»</pc></q>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000365">se</w>
+                    <w xml:id="Meyer_1_w_000366">dist</w>
+                    <w xml:id="Meyer_1_w_000367">Pepins</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="2"/>
+                <l xml:id="Meyer_1_l_52" n="52">
+                    <w xml:id="Meyer_1_w_000368">Devant</w>
+                    <w xml:id="Meyer_1_w_000369">lui</w>
+                    <w xml:id="Meyer_1_w_000370">garde</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000371">si</w>
+                    <w xml:id="Meyer_1_w_000372">vit</w>
+                    <w xml:id="Meyer_1_w_000373">Gerart</w>
+                    <w xml:id="Meyer_1_w_000374">venir</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="3"/>
+                <l xml:id="Meyer_1_l_53" n="53">
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000375">I</w>
+                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_1_w_000376">chevalier</w>
+                    <w xml:id="Meyer_1_w_000377">qui</w>
+                    <w xml:id="Meyer_1_w_000378">fu</w>
+                    <w xml:id="Meyer_1_w_000379">nez</w>
+                    <w xml:id="Meyer_1_w_000380">de</w>
+                    <w xml:id="Meyer_1_w_000381">Senlis</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <lb n="4"/>
+                <l xml:id="Meyer_1_l_54" n="54"><q>
+                    <w xml:id="Meyer_1_w_000382">Et</w>
+                    <w xml:id="Meyer_1_w_000383">dist</w>
+                    <w xml:id="Meyer_1_w_000384">li</w>
+                    <w xml:id="Meyer_1_w_000385">rois</w>
+                    <pc type="supplied">:</pc>
+                    <pc type="supplied">«</pc>
+                    <q><w xml:id="Meyer_1_w_000386">Venez</w>
+                    <w xml:id="Meyer_1_w_000387">avant</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000388">amis</w>
+                    <pc type="supplied">.</pc></q>
+                </q></l>
+                <lb n="5"/>
+                <!--<note type="numerotation_edition">5 </note>-->
+                <l xml:id="Meyer_1_l_55" n="55"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000389">Vos</w>
+                    <w xml:id="Meyer_1_w_000390">en</w>
+                    <w xml:id="Meyer_1_w_000391">irez</w>
+                    <w xml:id="Meyer_1_w_000392">a</w>
+                    <w xml:id="Meyer_1_w_000393">Bordeles</w>
+                    <w xml:id="Meyer_1_w_000394">la</w>
+                    <w xml:id="Meyer_1_w_000395">cit</w>
+                    <pc type="supplied">;</pc>
+                </q></l>
+                <lb n="6"/>
+                <l xml:id="Meyer_1_l_56" n="56"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000396">Dites</w>
+                    <w xml:id="Meyer_1_w_000397"><choice>
+                            <abbr>Fro<pc type="supplied">.</pc></abbr>
+                            <expan>Fro<ex>mont</ex></expan>
+                        </choice></w>
+                    <w xml:id="Meyer_1_w_000398">de</w>
+                    <w xml:id="Meyer_1_w_000399">Lens</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000400">le</w>
+                    <w xml:id="Meyer_1_w_000401">posteïs</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="7"/>
+                <l xml:id="Meyer_1_l_57" n="57"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000402">Que</w>
+                    <w xml:id="Meyer_1_w_000403">jel</w>
+                    <w xml:id="Meyer_1_w_000404">semon</w>
+                    <w xml:id="Meyer_1_w_000405">de</w>
+                    <w xml:id="Meyer_1_w_000406">droit</w>
+                    <w xml:id="Meyer_1_w_000407">en</w>
+                    <w xml:id="Meyer_1_w_000408">mon</w>
+                    <w xml:id="Meyer_1_w_000409">païs</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000410"><note type="tradition">7 =— FG</note></w>
+                </q></l>
+                <lb n="8"/>
+                <l xml:id="Meyer_1_l_58" n="58"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000411">Viegne</w>
+                    <w xml:id="Meyer_1_w_000412">a</w>
+                    <w xml:id="Meyer_1_w_000413">Paris</w>
+                    <w xml:id="Meyer_1_w_000414">ou</w>
+                    <w xml:id="Meyer_1_w_000415">a</w>
+                    <w xml:id="Meyer_1_w_000416">Loon</w>
+                    <w xml:id="Meyer_1_w_000417">la</w>
+                    <w xml:id="Meyer_1_w_000418">cit</w>
+                    <pc type="supplied">.</pc>
+                </q></l>
+                <lb n="9"/>
+                <l xml:id="Meyer_1_l_59" n="59"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000419" rend="elision">C</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000420">il</w>
+                    <w xml:id="Meyer_1_w_000421">le</w>
+                    <w xml:id="Meyer_1_w_000422">refuse</w>
+                    <w xml:id="Meyer_1_w_000423">et</w>
+                    <w xml:id="Meyer_1_w_000424">il</w>
+                    <w xml:id="Meyer_1_w_000425" rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000426">i</w>
+                    <w xml:id="Meyer_1_w_000427">voelt</w>
+                    <w xml:id="Meyer_1_w_000428">venir</w>
+                </q></l>
+                <lb n="10"/>
+                <!--<note type="numerotation_edition">10 </note>-->
+                <l xml:id="Meyer_1_l_60" n="60"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000429">Desfiez</w>
+                    <w xml:id="Meyer_1_w_000430">le</w>
+                    <w xml:id="Meyer_1_w_000431">maintenant</w>
+                    <w xml:id="Meyer_1_w_000432">de</w>
+                    <w xml:id="Meyer_1_w_000433">par</w>
+                    <w xml:id="Meyer_1_w_000434">mi</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="11"/>
+                <l xml:id="Meyer_1_l_61" n="61"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000435">Et</w>
+                    <w xml:id="Meyer_1_w_000436">si</w>
+                    <w xml:id="Meyer_1_w_000437">li</w>
+                    <w xml:id="Meyer_1_w_000438">ditez</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000439">tot</w>
+                    <w xml:id="Meyer_1_w_000440">voiant</w>
+                    <w xml:id="Meyer_1_w_000441">cez</w>
+                    <w xml:id="Meyer_1_w_000442">amis</w>
+                    <pc type="supplied">,</pc>
+                </q></l>
+                <lb n="12"/>
+                <l xml:id="Meyer_1_l_62" n="62"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000443" rend="elision">G</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000444">irai</w>
+                    <w xml:id="Meyer_1_w_000445">sor</w>
+                    <w xml:id="Meyer_1_w_000446">eus</w>
+                    <w xml:id="Meyer_1_w_000447">por</w>
+                    <w xml:id="Meyer_1_w_000448">lor</w>
+                    <w xml:id="Meyer_1_w_000449">terres</w>
+                    <w xml:id="Meyer_1_w_000450">saissir<note type="tradition">— 12 = FG</note></w>
+                </q></l>
+                <lb n="13"/>
+                <l xml:id="Meyer_1_l_63" n="63"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000451"><supplied resp="#Meyer" reason="damage">N</supplied>e</w>
+                    <w xml:id="Meyer_1_w_000452">lez</w>
+                    <w xml:id="Meyer_1_w_000453">garra</w>
+                    <w xml:id="Meyer_1_w_000454">trestot</w>
+                    <w xml:id="Meyer_1_w_000455" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000456">ors</w>
+                    <w xml:id="Meyer_1_w_000457">que</w>
+                    <w xml:id="Meyer_1_w_000458">Dex</w>
+                    <w xml:id="Meyer_1_w_000459">fist</w>
+                </q></l>
+                <lb n="14"/>
+                <l xml:id="Meyer_1_l_64" n="64"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000460">Que</w>
+                    <w xml:id="Meyer_1_w_000461">je</w>
+                    <w xml:id="Meyer_1_w_000462">nes</w>
+                    <w xml:id="Meyer_1_w_000463">face</w>
+                    <w xml:id="Meyer_1_w_000464">de</w>
+                    <w xml:id="Meyer_1_w_000465">male</w>
+                    <w xml:id="Meyer_1_w_000466">mort</w>
+                    <w xml:id="Meyer_1_w_000467">morir</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="supplied">»</pc>
+                    <w xml:id="Meyer_1_w_000468"><note type="tradition">— 14 = FG</note></w>
+                </q></l>
+                <lb n="15"/>
+                <!--<note type="numerotation_edition">15 </note>-->
+                <l xml:id="Meyer_1_l_65" n="65">
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000469">Dist</w>
+                    <w xml:id="Meyer_1_w_000470">Girars</w>
+                    <pc type="supplied">:</pc>
+                    <q><pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000471">Sire</w>
+                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_1_w_000472">il</w>
+                    <w xml:id="Meyer_1_w_000473">lor</w>
+                    <w xml:id="Meyer_1_w_000474">sera</w>
+                    <w xml:id="Meyer_1_w_000475">bien</w>
+                    <w xml:id="Meyer_1_w_000476">dit</w>
+                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_1_w_000477"><note type="tradition">— 15 = FG<pc type="supplied">.</pc></note></w>
+                </q></l>
+                <lb n="16"/>
+                <l xml:id="Meyer_1_l_66" n="66"><q>
+                    <pc type="supplied">«</pc>
+                    <w xml:id="Meyer_1_w_000478">Nel</w>
+                    <w xml:id="Meyer_1_w_000479">laisseroie</w>
+                    <w xml:id="Meyer_1_w_000480">por</w>
+                    <w xml:id="Meyer_1_w_000481">tot</w>
+                    <w xml:id="Meyer_1_w_000482" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w xml:id="Meyer_1_w_000483">or</w>
+                    <w xml:id="Meyer_1_w_000484">que</w>
+                    <w xml:id="Meyer_1_w_000485">Dex</w>
+                    <w xml:id="Meyer_1_w_000486">fist</w>
+                    <pc type="supplied">.</pc>
+                </q></l>
+                <lb n="17"/>
+                <l xml:id="Meyer_1_l_67" n="67">
+
+                    <gap quantity="2" unit="lines" reason="damage"/>
+                </l>
+            </lg>
+            <!--   Ceci n'est peut-être pas la fin de la laisse 
+            mais la métrique est cohérente -->
+        </body>
+    </text>
+    <!-- JBC: pourquoi le facsimile à la fin plutôt qu'entre header et body? 
+    Ah, je comprends, pour rendre son emplacement dans le document ! Autre solution (plus orientée «édition
+    de l'édition», utiliser
+            <figure>
+                <graphic url=""></graphic>
+            </figure>
+    -->
+    <!--<facsimile>
+        <surface>
+            <zone xml:id="zone_fax" ulx="160" uly="160" lrx="540" lry="608" rotate="0">
+                <graphic url="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417" n="441"
+                    xml:id="fax"/></zone>
+        </surface>
+    </facsimile>-->
+
+
+</TEI>
