@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="TEI_projet_final_documentation.odd"?><!-- JBC: je tente de valider aussi contre tei_all --><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrPa" type="ed" xml:lang="fr" corresp="jns5643">
+
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Garin le Lorrain</title>
+                <title type="sub">Numérisation de l'édition de Pamfilova de 1931 du fragment de la bibliothèque vaticane (Vat. lat. 273)</title>
+                <editor><persName>Xenia Pamfilova</persName></editor>
+                <respStmt xml:id="AZ">
+                    <resp>édition numérique</resp>
+                    <persName>Anastasiia Zadykhina</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="edGL">
+                    <analytic>
+                        <editor xml:id="Pamfilova">
+                            <persName>
+                                <forename>Xenia</forename>
+                                <surname>Pamfilova </surname>
+                            </persName>
+                        </editor>
+                        <!--<title type="main">Garin le Lorrain</title>-->
+                        <title type="sub">Fragments de manuscrits de chansons de geste</title>
+                        <idno type="DOI">10.3406/roma.1931.4053</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <pubPlace>Paris</pubPlace>
+                            <date>1931</date>
+                        </imprint>
+                        <biblScope unit="issue" n="57">t. 57</biblScope>
+                        <biblScope unit="page" from="504" to="547">504-547</biblScope>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <country>VATICANO (CITTA DEL)</country>
+                        <repository>Biblioteca apostolica Vaticana</repository>
+                        <!--<altIdentifier>-->
+                            <idno>Vat. lat. 00273</idno>
+                        <!--</altIdentifier>-->
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">traits champ. et
+                    pic</origPlace>
+                <origDate cert="unknown" resp="DEAF" notBefore="1175" notAfter="1200" type="dateComposition">1175-1200</origDate>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">traits de l’Est (mais
+                    peuvent remonter à l’original)</origPlace>
+                <origDate cert="unknown" resp="unknown" type="dateManuscrit">inconnue</origDate>
+            </creation>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change when="201809" who="#JBC">Correction du document</change>
+            <change who="AZ" when="2018-04-01">Création du gabarit, transformation du fichier hocr
+                en TEI et segmentation.</change>
+            <change who="AZ" when="2018-03-15">Création de teiHeader</change>
+        </revisionDesc>
+
+    </teiHeader>
+    <text xml:lang="fr">
+        <front>
+            <div type="préface">
+                <p>
+                    <pb facs="0002.pdf.png" n="0002"/>
+                    <lb n="1"/>Nous publions ci—dessous quatre fragments de manuscrits <lb n="2"/>de
+                    chansons de geste : M. Charles Samaran a eu l‘obligeance <lb n="3"/>de nous
+                    communiquer les trois premiers, et M. Antoine Tho<lb n="4"/>mas nous a confié la
+                    copie du quatrième : à tous deux, nous<lb n="5"/> adressons ici nos vifs
+                    remerciements. <!--[…]-->
+                <!-- JBC: bonne idée, mais il vaut mieux encoder cette information -->
+                    <gap reason="sampling"/>
+                </p>
+            </div>
+            <!--         546 X. PAMFILOVA-->
+            <div type="introduction_de_chapitre">
+                <head>IV</head>
+                <p>
+                    <pb facs="0044.pdf.png" n="00044"/> Le quatrième fragment m‘a été communiqué par
+                    M. Antoine <lb n="1"/>Thomas. Il se trouvait dans la reliure du ms. latin 273 de
+                    la <lb n="2"/>Bibliothèque Vaticane; nous en devons la copie à Mlle Vitte, <lb n="3"/>membre de l‘École Française de Rome. C‘est un fragment de <lb n="4"/>Garin le Loherain, les quelques vers que nous avons con<lb n="5"/>tiennent le
+                    récit de la rencontre de Garin avec l‘abbé apportant <lb n="6"/>le corps du duc
+                    Begue tué par Fromont. Les vers correspon<lb n="7"/>dants de l‘édition de P.
+                    Paris se trouvent aux pages <ref>259, 260 <lb n="8"/>262 et 263</ref>. </p>
+            </div>
+        </front>
+        <body>
+
+            <lg n="I" type="laisse" xml:id="L_001">
+                <gap/>
+               
+                <l xml:id="edGL_l_1" n="1">
+                    <w lemma="devant" type="POS=PRE" xml:id="edGL_w_000001">Devant</w>
+                    <w lemma="Vaunuble" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" xml:id="edGL_w_000002">Vaunuble</w>
+                    <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000003">a</w>
+                    <w lemma="Rigaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000004">Rigaus</w>
+                    <w lemma="siege" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000005">siege</w>
+                    <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000006">mis</w>
+                </l>
+                <lb n="9"/>
+                <l xml:id="edGL_l_2" n="2">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000007">Ont</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000008">il</w>
+                        <w lemma="bien1" type="POS=ADVgen" xml:id="edGL_w_000009">bien</w>
+                        <w lemma="gent1" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000010">jent</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r" xml:id="edGL_w_000011">ce</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000012">dit</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000013" rend="elision">l</w><pc type="supplied">'</pc><w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000014">empereriz</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="10"/>
+                <l xml:id="edGL_l_3" n="3">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="öil" type="POS=ADVgen" xml:id="edGL_w_000015">Oïl</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000016">ma</w>
+                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000017">dame</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="foi" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000018">foi</w>
+                        <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000019">que</w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" xml:id="edGL_w_000020">doi</w>
+                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000021">Saint</w>
+                        <w lemma="Denis" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000022">Denis</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                </l>
+                <lb n="11"/>
+                <l xml:id="edGL_l_4" n="4">
+                    <q><w lemma="bien1" type="POS=ADVgen" xml:id="edGL_w_000023">Bien</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000024">sont</w>
+                    <w lemma="trois" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000025">trois</w>
+                    <w lemma="mil1" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000026">mil</w>
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000027">de</w>
+                    <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000028">chevaliers</w>
+                    <w lemma="gentil" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000029">gentis</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="12"/>
+                <l xml:id="edGL_l_5" n="5">
+                    <w lemma="huimais" type="POS=ADVgen" xml:id="edGL_w_000030">Huimés</w>
+                    <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=p" xml:id="edGL_w_000031">devons</w>
+                    <w lemma="a3" type="POS=PRE" xml:id="edGL_w_000032">a</w>
+                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000033">Begon</w>
+                    <w lemma="revenir" type="POS=VERinf" xml:id="edGL_w_000034">revenir</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <lb n="13"/>
+                <l xml:id="edGL_l_6" n="6">
+                    <w lemma="riche" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000035">Riche</w>
+                    <w lemma="servise" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000036">servise</w>
+                    <w lemma="en2" type="POS=PROadv" xml:id="edGL_w_000037">en</w>
+                    <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edGL_w_000038">fist</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000039" rend="elision">l</w><pc type="supplied">'</pc><w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000040">empereriz</w>
+                    <pc type="supplied">'</pc>
+                </l>
+                <lb n="14"/>
+                <l xml:id="edGL_l_7" n="7">
+                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000041">Begon</w>
+                    <w lemma="emporter2" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000042">emportent</w>
+                    <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000043">au</w>
+                    <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000044">Loheran</w>
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000045">Garin</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="15"/>
+                <l xml:id="edGL_l_8" n="8">
+                    <w lemma="Ardenne" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000046">Ardane</w>
+                    <w lemma="laissier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000047">lessent</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="en1" type="POS=PRE" xml:id="edGL_w_000048">en</w>
+                    <w lemma="Ardenois" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000049">Ardenois</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000050">sont</w>
+                    <w lemma="metre2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000051">mis</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="16"/>
+                <l xml:id="edGL_l_9" n="9">
+                    <w lemma="en1" type="POS=PRE" xml:id="edGL_w_000052">En</w>
+                    <w lemma="Lohereine" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000053">Loheraine</w>
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000054" rend="elision">d</w><pc type="supplied">'</pc><w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000055">autre</w>
+                    <w lemma="part1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000056">part</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000057">sont</w>
+                    <w lemma="guenchir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000058">ganchi</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="17"/>
+                <l xml:id="edGL_l_10" n="10">
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000059">De</w>
+                    <w lemma="ci" type="POS=ADVgen" xml:id="edGL_w_000060">ci</w>
+                    <w lemma="a3" type="POS=PRE" xml:id="edGL_w_000061">a</w>
+                    <w lemma="Gorde" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" xml:id="edGL_w_000062">Gorde</w>
+                    <w lemma="ne1" type="POS=ADVneg" xml:id="edGL_w_000063">ne</w>
+                    <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" xml:id="edGL_w_000064">pristrent</w>
+                    <w lemma="onque" type="POS=ADVgen" xml:id="edGL_w_000065">onques</w>
+                    <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000066">fin</w>
+                </l>
+                <lb n="18"/>
+                <gap/>
+                <lb n="19"/>
+                <l xml:id="edGL_l_11" n="11">
+                    <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=f|CAS=r" xml:id="edGL_w_000067">Ces</w>
+                    <w lemma="damoisele" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" xml:id="edGL_w_000068">damoiseles</w>
+                    <w lemma="chanter" type="POS=VERinf" xml:id="edGL_w_000069">chanter</w>
+                    <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000070">et</w>
+                    <w lemma="esbaudir" type="POS=VERinf" xml:id="edGL_w_000071">esbaudir</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <lb n="20"/>
+                <l xml:id="edGL_l_12" n="12">
+                    <w lemma="haut" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000072">Halte</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000073">est</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000074">la</w>
+                    <w lemma="feste1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000075">feste</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="chascun" type="POS=PROind|NOMB.=s|GENRE=n|CAS=n" xml:id="edGL_w_000076">chascuns</w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000077">la</w>
+                    <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000078">vialt</w>
+                    <w lemma="öir" type="POS=VERinf" xml:id="edGL_w_000079">oïr</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="21"/>
+                <pb facs="0045.pdf.png" n="00045"/>
+                <!--          <lb/>547 FRAGMENTS DE CHANSONS DE GESTE. 13-40 -->
+                <l xml:id="edGL_l_13" n="13">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000080">Sainte</w>
+                        <w lemma="Marie" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000081">Marie</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r" xml:id="edGL_w_000082">ce</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000083">dist</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000084">li</w>
+                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000085">dus</w>
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000086">Garins</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <lb n="1"/>
+                <l xml:id="edGL_l_14" n="14">
+                    <q>
+                        <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000087">Reine</w>
+                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000088">dame</w>
+                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000089">qui</w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000090">lo</w>
+                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000091">cors</w>
+                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000092">Deu</w>
+                        <w lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edGL_w_000093">tenis</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="2"/>
+                <l xml:id="edGL_l_15" n="15">
+                    <q>
+                        <w lemma="sauver" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s" xml:id="edGL_w_000094">Sauve</w>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000095">mon</w>
+                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000096">cors</w>
+                        <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000097">et</w>
+                        <w lemma="trestot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000098">trestoz</w>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000099">mes</w>
+                        <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000100">amis</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                </l>
+                <lb n="3"/>
+                <l xml:id="edGL_l_16" n="16">
+                    <q>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000101">Li</w>
+                        <w lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000102">cuers</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000103">me</w>
+                        <w lemma="trembler1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000104">tramble</w>
+                        <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000105">et</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000106">me</w>
+                        <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000107">prent</w>
+                        <w lemma="a3" type="POS=PRE" xml:id="edGL_w_000108">a</w>
+                        <w lemma="doloir" type="POS=VERinf" xml:id="edGL_w_000109">dolir</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="4"/>
+                <l xml:id="edGL_l_17" n="17">
+                    <q>
+                        <w lemma="que4" type="POS=CONsub" xml:id="edGL_w_000110" rend="elision">Qu</w><pc type="supplied">'</pc><w lemma="il" type="POS=PROimp|NOMB.=s|GENRE=n|CAS=n" xml:id="edGL_w_000111">il</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000112" rend="elision">m</w><pc type="supplied">'</pc><w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000113">est</w>
+                        <w lemma="avis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000114">avis</w>
+                        <w lemma="que4" type="POS=CONsub" xml:id="edGL_w_000115" rend="elision">qu</w><pc type="supplied">'</pc><w lemma="il" type="POS=PROimp|NOMB.=s|GENRE=n|CAS=n" xml:id="edGL_w_000116">il</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000117">me</w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000118">doie</w>
+                        <w lemma="partir" type="POS=VERinf" xml:id="edGL_w_000119">partir</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                </l>
+                <lb n="5"/>
+                <l xml:id="edGL_l_18" n="18">
+                    <q>
+                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000120">Dex</w>
+                        <pc type="supplied">!</pc>
+                        <w lemma="se" type="POS=CONsub" xml:id="edGL_w_000121">se</w>
+                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n" xml:id="edGL_w_000122" rend="elision">c</w><pc type="supplied">'</pc><w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000123">est</w>
+                        <w lemma="bien1" type="POS=ADVgen" xml:id="edGL_w_000124">bien</w>
+                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000125">qui</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000126">me</w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000127">doie</w>
+                        <w lemma="avenir" type="POS=VERinf" xml:id="edGL_w_000128">avenir</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="6"/>
+                <l xml:id="edGL_l_19" n="19">
+                    <q>
+                        <w lemma="doner" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p" xml:id="edGL_w_000129">Donez</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000130">lo</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000131">moi</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000132">sire</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="par" type="POS=PRE" xml:id="edGL_w_000133">par</w>
+                        <w lemma="tens" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000134">tens</w>
+                        <w lemma="vëoir" type="POS=VERinf" xml:id="edGL_w_000135">veïr</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="7"/>
+                <l xml:id="edGL_l_20" n="20">
+                    <q>
+                        <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000136">Et</w>
+                        <w lemma="de" type="POS=PRE" xml:id="edGL_w_000137" rend="elision">d</w><pc type="supplied">'</pc><w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000138">autre</w>
+                        <w lemma="chose" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000139">chose</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="se" type="POS=CONsub" xml:id="edGL_w_000140">se</w>
+                        <w lemma="tu" type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000141">toi</w>
+                        <w lemma="plaire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000142">plest</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000143" rend="elision">m</w><pc type="supplied">'</pc><w lemma="escremir" type="POS=VERppe|MODE=imp|PERS.=2|NOMB.=s" xml:id="edGL_w_000144">escremis</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb n="8"/>
+                <gap/>
+               
+                <lb n="9"/>
+                <l xml:id="edGL_l_21" n="21">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="dire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p" xml:id="edGL_w_000145">Dites</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000146">lo</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000147">moi</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="de" type="POS=PRE" xml:id="edGL_w_000148" rend="elision">d</w><pc type="supplied">'</pc><w lemma="où" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r" xml:id="edGL_w_000149">o</w>
+                        <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p" xml:id="edGL_w_000150">venez</w>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000151">vous</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000152">amis</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                </l>
+                <lb n="10"/>
+                <l xml:id="edGL_l_22" n="22">
+                    <q><pc type="supplied">—</pc>
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000153">De</w>
+                    <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000154">Saint</w>
+                    <w lemma="Amant" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000155">Amant</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000156">de</w>
+                    <w lemma="ce2" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000157">ce</w>
+                    <w lemma="nostre" type="POS=ADJpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000158">nostre</w>
+                    <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000159">païs</w>
+                    <pc type="supplied">,</pc></q>
+                </l>
+                <lb n="11"/>
+                <l xml:id="edGL_l_23" n="23">
+                    <q><w lemma="movoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=1|NOMB.=p" xml:id="edGL_w_000160">Meumes</w>
+                    <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000161">no</w>
+                    <w lemma="mi1" type="POS=OUT" xml:id="edGL_w_000162">mie</w>
+                    <w lemma="quinze" type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000163">xv</w>
+                    <pc type="supplied">.</pc>
+                    <w lemma="di" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000164">dis</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="12"/>
+                <l xml:id="edGL_l_24" n="24">
+                    <q><pc type="supplied">—</pc>
+                    <w lemma="quel1" type="POS=DETint|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000165">Quex</w>
+                    <w lemma="ome" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000166">hom</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000167">est</w>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000168">ce</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000169" rend="elision">q</w><pc type="supplied">'</pc><w lemma="en1" type="POS=PRE" xml:id="edGL_w_000170">an</w>
+                    <w lemma="cel" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000171">cele</w>
+                    <w lemma="biere" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000172">biere</w>
+                    <w lemma="jesir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000173">gist</w>
+                    <pc type="supplied">?</pc></q>
+                </l>
+                <lb n="13"/>
+                <l xml:id="edGL_l_25" n="25">
+                    <q>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000174">Est</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000175">il</w>
+                        <w lemma="malade" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000176">malades</w>
+                        <w lemma="o3" type="POS=CONcoo" xml:id="edGL_w_000177">o</w>
+                        <w lemma="navrer" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000178">navrez</w>
+                        <w lemma="o3" type="POS=CONcoo" xml:id="edGL_w_000179">o</w>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000180">ocis</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb n="14"/>
+                <l xml:id="edGL_l_26" n="26">
+                    <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000181">Et</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000182">dit</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000183">li</w>
+                    <w lemma="abé1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000184">abes</w>
+                    <pc type="supplied">:</pc>
+                    <pc type="supplied">«</pc>
+                    <q>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000185">Vous</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000186">lo</w>
+                        <w lemma="savoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=2|NOMB.=p" xml:id="edGL_w_000187">sauroiz</w>
+                        <w lemma="par" type="POS=PRE" xml:id="edGL_w_000188">par</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000189">mi</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="15"/>
+                <l xml:id="edGL_l_27" n="27">
+                    <q>
+                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000190" rend="elision">C</w><pc type="supplied">'</pc><w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000191">est</w>
+                        <w lemma="vostre" type="POS=DETpos|PERS.=2|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000192">vostres</w>
+                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000193">frere</w>
+                        <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000194">dus</w>
+                        <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000195">Begue</w>
+                        <w lemma="de" type="POS=PRE" xml:id="edGL_w_000196">de</w>
+                        <w lemma="Belin" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" xml:id="edGL_w_000197">Belin</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                </l>
+                <lb n="16"/>
+                <l xml:id="edGL_l_28" n="28">
+                    <q><w lemma="en1" type="POS=PRE" xml:id="edGL_w_000198">En</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000199">la</w>
+                    <w lemma="forest" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000200">forest</w>
+                    <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000201">Fromors</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000202">lo</w>
+                    <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000203">posteïs</w></q>
+                </l>
+                <lb n="17"/>
+                <l xml:id="edGL_l_29" n="29">
+                    <q>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000204">Lo</w>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i" xml:id="edGL_w_000205">vous</w>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000206">a</w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000207" rend="elision">l</w><pc type="supplied">'</pc><w lemma="en2" type="POS=PROadv" xml:id="edGL_w_000208">en</w>
+                        <w lemma="detrenchier" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000209">detranchié</w>
+                        <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000210">et</w>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000211">ocis</w>
+                        <pc type="supplied">.</pc>
+                        <!--<w/>-->
+                    </q>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb n="18"/>
+                <l xml:id="edGL_l_30" n="30">
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000212">Li</w>
+                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000213">dus</w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000214" rend="elision">l</w><pc type="supplied">'</pc><w lemma="entendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000215">entent</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="a3" type="POS=PRE" xml:id="edGL_w_000216">a</w>
+                    <w lemma="poi" type="POS=ADVgen" xml:id="edGL_w_000217">po</w>
+                    <w lemma="ne1" type="POS=ADVneg" xml:id="edGL_w_000218" rend="elision">n</w><pc type="supplied">'</pc><w lemma="enragier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000219">enrage</w>
+                    <w lemma="vif" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000220">vis</w>
+                    <gap/>
+                </l>
+                <lb n="19"/>
+                <gap/>
+                <lb n="20"/>
+                <l xml:id="edGL_l_31" n="31">
+                    <gap/>
+                    <w lemma="grant" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000221">grant</w>
+                    <w lemma="duel" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000222">duel</w>
+                    <w lemma="et" type="POS=OUT" xml:id="edGL_w_000223">et</w>
+                    <w lemma="grant" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000224">grant</w>
+                    <w lemma="cri" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000225">cri</w>
+                </l>
+                <lb n="21"/>
+                <l xml:id="edGL_l_32" n="32">
+                    <w lemma="nëis" type="POS=ADVgen" xml:id="edGL_w_000226">Nes</w>
+                    <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000227">Deu</w>
+                    <w lemma="toner" type="POS=VERppa|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000228">tonant</w>
+                    <w lemma="tu" type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000229">tu</w>
+                    <w lemma="peser" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=s" xml:id="edGL_w_000230">poist</w>
+                    <w lemma="en2" type="POS=PROadv" xml:id="edGL_w_000231">an</w>
+                    <w lemma="öir" type="POS=VERinf" xml:id="edGL_w_000232">oïr</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="22"/>
+                <l xml:id="edGL_l_33" n="33">
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000233">Garins</w>
+                    <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000234">se</w>
+                    <w lemma="pasmer" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000235">pasme</w>
+                    <w lemma="que4" type="POS=CONcoo" xml:id="edGL_w_000236">que</w>
+                    <w lemma="ne1" type="POS=ADVneg" xml:id="edGL_w_000237">ne</w>
+                    <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000238" rend="elision">s</w><pc type="supplied">'</pc><w lemma="en2" type="POS=PROadv" xml:id="edGL_w_000239">en</w>
+                    <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000240">pot</w>
+                    <w lemma="tenir1" type="POS=VERinf" xml:id="edGL_w_000241">tenir</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <lb n="23"/>
+                <l xml:id="edGL_l_34" n="34">
+                    <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000242">Au</w>
+                    <w lemma="relever" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000243">relever</w>
+                    <w lemma="or4" type="POS=ADVgen" xml:id="edGL_w_000244">or</w>
+                    <w lemma="öir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p" xml:id="edGL_w_000245">oiez</w>
+                    <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=n|CAS=r" xml:id="edGL_w_000246">que</w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000247">il</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edGL_w_000248">dist</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <lb n="24"/>
+                <l xml:id="edGL_l_35" n="35">
+                    <pc type="supplied">«</pc>
+                    <q>
+                        <w lemma="por2" type="POS=PRE" xml:id="edGL_w_000249">Por</w>
+                        <w lemma="coi2" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r" xml:id="edGL_w_000250">coi</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000251">biau</w>
+                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000252">frere</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000253">vous</w>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGL_w_000254">a</w>
+                        <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000255">Fromons</w>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000256">ocis</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                </l>
+                <lb n="25"/>
+                <l xml:id="edGL_l_36" n="36">
+                    <w lemma="ja" type="POS=ADVgen" xml:id="edGL_w_000257">Ja</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s" xml:id="edGL_w_000258">disoit</w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000259">il</w>
+                    <w lemma="que4" type="POS=CONsub" xml:id="edGL_w_000260" rend="elision">qu</w><pc type="supplied">'</pc><w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000261">il</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s" xml:id="edGL_w_000262">estoit</w>
+                    <w lemma="nostre" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000263">nostre</w>
+                    <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000264">amis</w>
+                    <pc type="supplied">'</pc>
+                </l>
+                <lb n="26"/>
+                <l xml:id="edGL_l_37" n="37">
+                    <q><w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000265">Nos</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=1|NOMB.=p" xml:id="edGL_w_000266">estien</w>
+                    <w lemma="guerroiier2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000267">guerroié</w>
+                    <w lemma="et" type="POS=CONcoo" xml:id="edGL_w_000268">et</w>
+                    <w lemma="häir" type="POS=VERcjg|NOMB.=p|GENRE=m|CAS=n" xml:id="edGL_w_000269">haï</w>
+                    <pc type="supplied">,</pc></q>
+                </l>
+                <lb n="27"/>
+                <l xml:id="edGL_l_38" n="38">
+                    <q><w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000270">La</w>
+                    <w lemma="pais" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000271">pes</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edGL_w_000272">fu</w>
+                    <w lemma="faire" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n" xml:id="edGL_w_000273">fete</w>
+                    <w lemma="devant" type="POS=PRE" xml:id="edGL_w_000274">devant</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000275">lo</w>
+                    <w lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000276">roi</w>
+                    <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000277">Pepin</w>
+                    <pc type="supplied">.</pc></q>
+                </l>
+                <lb n="28"/>
+                <l xml:id="edGL_l_39" n="39">
+                    <q><w lemma="or4" type="POS=ADVgen" xml:id="edGL_w_000278">Or</w>
+                    <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r" xml:id="edGL_w_000279">vos</w>
+                    <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000280">ont</w>
+                    <w lemma="morir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000281">mort</w>
+                    <pc type="supplied">!</pc>
+                    <w lemma="ja" type="POS=ADVgen" xml:id="edGL_w_000282">Ja</w>
+                    <w lemma="ne1" type="POS=ADVneg" xml:id="edGL_w_000283" rend="elision">n</w><pc type="supplied">'</pc><w lemma="en2" type="POS=PROadv" xml:id="edGL_w_000284">en</w>
+                    <w lemma="pöoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edGL_w_000285">pussent</w>
+                    <w lemma="jöir" type="POS=VERinf" xml:id="edGL_w_000286">joïr</w>
+                    <pc type="supplied">!</pc></q>
+                </l>
+                <lb n="29"/>
+                <l xml:id="edGL_l_40" n="40">
+                    <q><w lemma="mais1" type="POS=CONcoo" xml:id="edGL_w_000287">Mes</w>
+                    <w lemma="par" type="POS=PRE" xml:id="edGL_w_000288">par</w>
+                    <w lemma="cel" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=i" xml:id="edGL_w_000289">celui</w>
+                    <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" xml:id="edGL_w_000290">qui</w>
+                    <w lemma="de" type="POS=PRE" xml:id="edGL_w_000291">de</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000292" rend="elision">l</w><pc type="supplied">'</pc><w lemma="aigue" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edGL_w_000293">eve</w>
+                    <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edGL_w_000294">fist</w>
+                    <w lemma="vin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGL_w_000295">vin</w></q>
+                    <!--<gap/>--><!-- ..un mot manquant?-->
+                </l>
+            </lg>
+        </body>
+        <back>
+            <byline>
+                <docAuthor>X. PAMFILOVA.</docAuthor>
+            </byline>
+        </back>
+    </text>
+</TEI>
