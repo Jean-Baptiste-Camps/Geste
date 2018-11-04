@@ -15,11 +15,13 @@
         <xsl:choose>
             <xsl:when test="$decoupage = 'aucun'">
                 <xsl:result-document href="{$filename}.txt">
-                    <xsl:apply-templates select="descendant::tei:l"/>
+                    <!-- JBC: take only body, to avoid picking verse quotations from other fragments or mss
+        inside the front and back. -->
+                    <xsl:apply-templates select="descendant::tei:body/descendant::tei:l"/>
                 </xsl:result-document>
             </xsl:when>
             <xsl:when test="$decoupage = 'par-feuillet'">
-                <xsl:for-each select="descendant::tei:pb[not(matches(@n,'v'))]">
+                <xsl:for-each select="descendant::tei:body/descendant::tei:pb[not(matches(@n,'v'))]">
                     <xsl:variable name="n" select="@n"/>
                     <xsl:result-document href="{$filename}_{$n}.txt">
                         <xsl:variable name="pbid" select="generate-id(.)"/>

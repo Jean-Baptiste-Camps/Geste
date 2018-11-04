@@ -4,7 +4,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs"
     version="2.0">
-    <xsl:import href="teiverstxt_orig.xsl"/>
+    <xsl:import href="tei_to_txt_orig.xsl"/>
     
     <!-- Modifications des règles qu'on ne veut pas de cette feuille -->
     <xsl:template match="tei:orig[. = '&#769;']">

@@ -15,7 +15,10 @@
             <head><meta charset="UTF-8"/></head>
             <body><xsl:apply-templates/></body>
         </html>-->
-        <xsl:apply-templates select="descendant::tei:l"/>
+        <!-- JBC: take only body, to avoid picking verse quotations from other fragments
+        inside the front and back. 
+        -->
+        <xsl:apply-templates select="descendant::tei:body/descendant::tei:l"/>
     </xsl:template>
     
     

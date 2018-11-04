@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- JBC: je valide aussi face à tei_all pour vérifier la conformité TEI -->
-<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
-<!--  -->
-<?xml-model href="Modele.rng" 
-    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="Modele.rng" 
-    type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GerbMetzMe1" type="ed" xml:lang="fr" version="5" corresp="jns3669">
     <teiHeader>
         <fileDesc>
@@ -88,12 +81,12 @@
             </langUsage>
         </profileDesc>
         <!-- JBC: Description de vos choix d'encodage -->
-        <encodingDesc>
+        <!--<encodingDesc>
             <editorialDecl>
                 <p/>
-                <!-- etc. (ou éléments plus spécialisés) -->
+                <!-\- etc. (ou éléments plus spécialisés) -\->
             </editorialDecl>
-        </encodingDesc>
+        </encodingDesc>-->
         <revisionDesc status="draft">
             <!-- JBC: en général, plutôt ordre antéchronologique -->
             <change when="201808" who="#JBC">Correction du document</change>
@@ -264,9 +257,7 @@
                             <pc type="supplied">.</pc>
                         </l>
                         <lb/><l n="7">
-                            <w/><!-- JBC: pourquoi des mots vides? -->
-                            <w><gap quantity="1" unit="lines" reason="damage"/></w>
-                            <w/>
+                            <gap quantity="1" unit="lines" reason="damage"/>
                         </l>
                         <lb/><l n="8">
                             <w>Ainsi</w>
@@ -369,68 +360,68 @@
                 <lb n="1"/>
                 <l xml:id="Meyer_1_l_1" n="1">
                     <pc type="supplied">«</pc><!-- JBC: l'encodage du discours direct (q) serait un plus. -->
-                    <q><w xml:id="Meyer_1_w_000001">Ne</w>
-                    <w xml:id="Meyer_1_w_000002">doutïe<supplied resp="#Meyer" reason="lectio"><!--[-->n<!--]--></supplied>s</w>
-                    <w xml:id="Meyer_1_w_000003">nul</w>
-                    <w xml:id="Meyer_1_w_000004">home</w>
-                    <w xml:id="Meyer_1_w_000005">qui</w>
-                    <w xml:id="Meyer_1_w_000006">fust</w>
-                    <w xml:id="Meyer_1_w_000007">vis</w>
+                    <q><w >Ne</w>
+                    <w >doutïe<supplied resp="#Meyer" reason="lectio"><!--[-->n<!--]--></supplied>s</w>
+                    <w >nul</w>
+                    <w >home</w>
+                    <w >qui</w>
+                    <w >fust</w>
+                    <w >vis</w>
                     <pc type="supplied">.</pc></q>
                 </l>
                 <lb n="2"/>
                 <l xml:id="Meyer_1_l_2" n="2">
                     <pc type="supplied">«</pc>
-                    <q><w xml:id="Meyer_1_w_000008"><supplied resp="#Meyer" reason="damage">L</supplied>as</w>
+                    <q><w ><supplied resp="#Meyer" reason="damage">L</supplied>as</w>
                     <pc type="supplied">!</pc>
-                    <w xml:id="Meyer_1_w_000009">moi</w>
-                    <w xml:id="Meyer_1_w_000010">dolant</w>
+                    <w >moi</w>
+                    <w >dolant</w>
                     <pc type="supplied">!</pc>
-                    <w xml:id="Meyer_1_w_000011">or</w>
-                    <w xml:id="Meyer_1_w_000012">somes</w>
-                    <w xml:id="Meyer_1_w_000013">departi</w>
+                    <w >or</w>
+                    <w >somes</w>
+                    <w >departi</w>
                     <pc type="supplied">.</pc></q>
                     <pc type="supplied">»</pc>
                 </l>
                 <lb n="3"/>
                 <l xml:id="Meyer_1_l_3" n="3">
-                    <w xml:id="Meyer_1_w_000014"><supplied resp="#Meyer" reason="damage">T</supplied>ot</w>
-                    <w xml:id="Meyer_1_w_000015">maintenant</w>
-                    <w xml:id="Meyer_1_w_000016" rend="elision">l</w>
+                    <w ><supplied resp="#Meyer" reason="damage">T</supplied>ot</w>
+                    <w >maintenant</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000017">ont</w>
-                    <w xml:id="Meyer_1_w_000018">fet</w>
-                    <w xml:id="Meyer_1_w_000019">ensevelir</w>
+                    <w >ont</w>
+                    <w >fet</w>
+                    <w >ensevelir</w>
                     <pc type="supplied">,</pc>
                 </l>
                 <lb n="4"/>
                 <l xml:id="Meyer_1_l_4" n="4">
-                    <w xml:id="Meyer_1_w_000020"><supplied resp="#Meyer" reason="damage">E</supplied>n</w>
+                    <w ><supplied resp="#Meyer" reason="damage">E</supplied>n</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000021">j</w>
+                    <w >j</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000022">biere</w>
-                    <w xml:id="Meyer_1_w_000023"><!--<choice>
+                    <w >biere</w>
+                    <w ><!--<choice>
                             <abbr>-->ens<!--</abbr>
                             <expan resp="#ED">ensemble</expan>
                         </choice>--></w><!-- JBC: non, ce n'est pas une abréviation, c'est bien enz (< INTUS), à l'intérieur. -->
-                    <w xml:id="Meyer_1_w_000024">el</w>
-                    <w xml:id="Meyer_1_w_000025">mostier</w>
-                    <w xml:id="Meyer_1_w_000026">gesir<note type="tradition">4 C‘est à peu près la leçon d‘FG<!--<pc type="supplied">-->.<!--</pc>--> Il y a ensuite un vers de plus dans les
+                    <w >el</w>
+                    <w >mostier</w>
+                    <w >gesir<note type="tradition">4 C‘est à peu près la leçon d‘FG<!--<pc type="supplied">-->.<!--</pc>--> Il y a ensuite un vers de plus dans les
                             autres mss.</note></w>
                 </l>
                 <lb n="5"/>
                 <!-- JBC: plutôt metamark que note. Ou supprimer car l'information figure dans le lb ? -->
                 <!--<note type="numerotation_edition">--><!--<metamark>5</metamark>--><!--</note>-->
                 <l xml:id="Meyer_1_l_5" n="5">
-                    <w xml:id="Meyer_1_w_000027"><supplied resp="#Meyer" reason="damage">C</supplied>lers</w>
-                    <w xml:id="Meyer_1_w_000028">et</w>
-                    <w xml:id="Meyer_1_w_000029">prevoires</w>
-                    <w xml:id="Meyer_1_w_000030">i</w>
-                    <w xml:id="Meyer_1_w_000031">ot</w>
+                    <w ><supplied resp="#Meyer" reason="damage">C</supplied>lers</w>
+                    <w >et</w>
+                    <w >prevoires</w>
+                    <w >i</w>
+                    <w >ot</w>
                     <!-- JBC: pas besoin de le mettre dans un mot, de même que la note. -->
-                    <!--<w xml:id="Meyer_1_w_000032">--><gap quantity="8" unit="char" reason="damage"/><!--</w>-->
-                    <!--<w xml:id="Meyer_1_w_000033">-->
+                    <!--<w >--><gap quantity="8" unit="char" reason="damage"/><!--</w>-->
+                    <!--<w >-->
                     <note n="1">La fin du vers, d‘après les leçons
                             données par M. Stengel, serait 
                         <supplied resp="#Stengel" reason="lectio">xl</supplied> (ou <lb n="6"/><supplied resp="#Stengel" reason="lectio">lx</supplied>),
@@ -440,46 +431,46 @@
                 <lb n="7"/>
                 <l xml:id="Meyer_1_l_6" n="6">
                     <!-- JBC: ce sont deux mots -->
-                    <!--<w xml:id="Meyer_1_w_000034"><supplied resp="#Meyer" reason="damage">N'</supplied>i</w>-->
-                    <w xml:id="Meyer_1_w_000034"><supplied resp="#Meyer" reason="damage">N</supplied></w><pc type="supplied">'</pc><w xml:id="Meyer_1_w_000034a">i</w>
-                    <w xml:id="Meyer_1_w_000035">ot</w>
-                    <w xml:id="Meyer_1_w_000036">celui</w>
-                    <w xml:id="Meyer_1_w_000037">son</w>
-                    <w xml:id="Meyer_1_w_000038">sautier</w>
-                    <w xml:id="Meyer_1_w_000039">ne</w>
-                    <w xml:id="Meyer_1_w_000040">tenist</w>
+                    <!--<w ><supplied resp="#Meyer" reason="damage">N'</supplied>i</w>-->
+                    <w ><supplied resp="#Meyer" reason="damage">N</supplied></w><pc type="supplied">'</pc><w >i</w>
+                    <w >ot</w>
+                    <w >celui</w>
+                    <w >son</w>
+                    <w >sautier</w>
+                    <w >ne</w>
+                    <w >tenist</w>
                     <pc type="supplied">,</pc>
                 </l>
 
                 <lb n="8"/>
                 <l xml:id="Meyer_1_l_7" n="7">
-                    <w xml:id="Meyer_1_w_000041"><supplied resp="#Meyer" reason="damage">Et</supplied></w>
-                    <w xml:id="Meyer_1_w_000042">prient</w>
-                    <w xml:id="Meyer_1_w_000043">Deu</w>
-                    <w xml:id="Meyer_1_w_000044"><!--<choice>
+                    <w ><supplied resp="#Meyer" reason="damage">Et</supplied></w>
+                    <w >prient</w>
+                    <w >Deu</w>
+                    <w ><!--<choice>
                             <abbr>-->qui<!--</abbr>
                         --><!--<!-\- JBC: si vous mettez un corr, il faut mettre la correction à l'intérieur (et pas uniquement la note).
                         Marquer aussi les passages cités. En outre, corr va plutôt avec sic
                         -\-><corr type="editorial">--><note n="2">L‘abréviation donne <mentioned>qui</mentioned> 
                                 et non <mentioned>que</mentioned>.</note><!--</corr>
                         </choice>--></w>
-                    <w xml:id="Meyer_1_w_000045">de</w>
-                    <w xml:id="Meyer_1_w_000046">lui</w>
-                    <w xml:id="Meyer_1_w_000047">ait</w>
-                    <w xml:id="Meyer_1_w_000048">merci</w>
+                    <w >de</w>
+                    <w >lui</w>
+                    <w >ait</w>
+                    <w >merci</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="9"/>
                 <l xml:id="Meyer_1_l_8" n="8">
-                    <w xml:id="Meyer_1_w_000049"><supplied resp="#Meyer" reason="damage">A</supplied></w>
+                    <w ><supplied resp="#Meyer" reason="damage">A</supplied></w>
                     <!-- JBC: ici, deux mots -->
-                    <!--<w xml:id="Meyer_1_w_000050"><supplied resp="#Meyer" reason="damage">l‘ende</supplied>main</w>-->
-                    <w rend="elision" xml:id="Meyer_1_w_000050"><supplied resp="#Meyer" reason="damage">l</supplied></w><pc type="supplied">‘</pc><w xml:id="Meyer_1_w_000050b"><supplied resp="#Meyer" reason="damage">ende</supplied>main</w>
+                    <!--<w ><supplied resp="#Meyer" reason="damage">l‘ende</supplied>main</w>-->
+                    <w rend="elision" ><supplied resp="#Meyer" reason="damage">l</supplied></w><pc type="supplied">‘</pc><w ><supplied resp="#Meyer" reason="damage">ende</supplied>main</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000051">ains</w>
-                    <w xml:id="Meyer_1_w_000052">que</w>
-                    <w xml:id="Meyer_1_w_000053">passast</w>
-                    <w xml:id="Meyer_1_w_000054">midi</w>
+                    <w >ains</w>
+                    <w >que</w>
+                    <w >passast</w>
+                    <w >midi</w>
                     <pc type="supplied">,</pc>
                 </l>
 
@@ -489,17 +480,17 @@
                 <lb n="10"/>
                 <l xml:id="Meyer_1_l_9" n="9">
                     <!-- JBC: idem -->
-                    <!--<w xml:id="Meyer_1_w_000055"><supplied resp="#Meyer" reason="damage">L‘</supplied>ont</w>-->
-                    <w rend="elision" xml:id="Meyer_1_w_000055"><supplied resp="#Meyer" reason="damage">L</supplied></w><pc type="supplied">‘</pc><w xml:id="Meyer_1_w_000055b">ont</w>
-                    <w xml:id="Meyer_1_w_000056">enterré</w>
-                    <w xml:id="Meyer_1_w_000057">au</w>
-                    <w xml:id="Meyer_1_w_000058">mostier</w>
-                    <w xml:id="Meyer_1_w_000059"><choice>
+                    <!--<w ><supplied resp="#Meyer" reason="damage">L‘</supplied>ont</w>-->
+                    <w rend="elision" ><supplied resp="#Meyer" reason="damage">L</supplied></w><pc type="supplied">‘</pc><w >ont</w>
+                    <w >enterré</w>
+                    <w >au</w>
+                    <w >mostier</w>
+                    <w ><choice>
                             <abbr>S<pc type="supplied">.</pc></abbr>
                             <expan resp="#ED">S<ex>aint</ex></expan>
                         </choice></w>
                     <!-- JBC: pourquoi rajouter is ? -->
-                    <w xml:id="Meyer_1_w_000060"><!--<choice>
+                    <w ><!--<choice>
                             <abbr>-->Sevrin<pc type="supplied">.</pc><!--</abbr>
                             <expan>Sevrin<pc type="supplied">.</pc><ex>is</ex></expan>
                         </choice>--></w>
@@ -507,100 +498,100 @@
                 <lb n="11"/>
                 <!--<metamark>10 </metamark>-->
                 <l xml:id="Meyer_1_l_10" n="10">
-                    <w xml:id="Meyer_1_w_000061"><supplied resp="#Meyer" reason="damage">A</supplied>inz</w>
-                    <w xml:id="Meyer_1_w_000062" rend="elision">qu</w>
+                    <w ><supplied resp="#Meyer" reason="damage">A</supplied>inz</w>
+                    <w  rend="elision">qu</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000063"><!--<choice>
+                    <w ><!--<choice>
                             <sic>-->il<!--</sic>
                             <corr type="editorial">ils</corr>
                         </choice>--></w><!-- JBC: ne pas corriger les traits de langue. -->
-                    <w xml:id="Meyer_1_w_000064">venissent</w>
-                    <w xml:id="Meyer_1_w_000065">ariere</w>
-                    <w xml:id="Meyer_1_w_000066">au</w>
-                    <w xml:id="Meyer_1_w_000067">Plaiseïs</w>
+                    <w >venissent</w>
+                    <w >ariere</w>
+                    <w >au</w>
+                    <w >Plaiseïs</w>
                     <pc type="supplied">,</pc>
                 </l>
                 <lb n="12"/>
                 <l xml:id="Meyer_1_l_11" n="11">
-                    <w xml:id="Meyer_1_w_000068"><supplied resp="#Meyer" reason="damage">L</supplied>or</w>
-                    <w xml:id="Meyer_1_w_000069">a</w>
-                    <w xml:id="Meyer_1_w_000070"><choice>
+                    <w ><supplied resp="#Meyer" reason="damage">L</supplied>or</w>
+                    <w >a</w>
+                    <w ><choice>
                             <abbr>Ri<pc type="supplied">.</pc></abbr>
                             <expan>Ri<ex>gau</ex></expan>
                         </choice></w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000071">iij</w>
+                    <w >iij</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000072">chevaliers</w>
-                    <w xml:id="Meyer_1_w_000073">ocis</w>
+                    <w >chevaliers</w>
+                    <w >ocis</w>
                     <pc type="supplied">,</pc>
                 </l>
                 <lb n="13"/>
                 <l xml:id="Meyer_1_l_12" n="12">
-                    <w xml:id="Meyer_1_w_000074">Cosins</w>
-                    <w xml:id="Meyer_1_w_000075">germai<supplied resp="#Meyer" reason="lectio">n</supplied>s</w>
-                    <w xml:id="Meyer_1_w_000076"><choice>
+                    <w >Cosins</w>
+                    <w >germai<supplied resp="#Meyer" reason="lectio">n</supplied>s</w>
+                    <w ><choice>
                             <abbr>Fro<pc type="supplied">.</pc></abbr>
                             <expan>Fro<ex>mond</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000077">le</w>
-                    <w xml:id="Meyer_1_w_000078">posteïs</w>
+                    <w >le</w>
+                    <w >posteïs</w>
                     <pc type="supplied">:</pc>
                 </l>
                 <lb n="14"/>
                 <l xml:id="Meyer_1_l_13" n="13">
-                    <w xml:id="Meyer_1_w_000079">L</w>
+                    <w >L</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000080">uns</w>
-                    <w xml:id="Meyer_1_w_000081">fu</w>
-                    <w xml:id="Meyer_1_w_000082">de</w>
-                    <w xml:id="Meyer_1_w_000083">Troies</w>
-                    <w xml:id="Meyer_1_w_000084">et</w>
-                    <w xml:id="Meyer_1_w_000085" rend="elision">l</w>
+                    <w >uns</w>
+                    <w >fu</w>
+                    <w >de</w>
+                    <w >Troies</w>
+                    <w >et</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000086">autres</w>
-                    <w xml:id="Meyer_1_w_000087">de</w>
-                    <w xml:id="Meyer_1_w_000088">Paris</w>
-                    <!--<w xml:id="Meyer_1_w_000089">-->
+                    <w >autres</w>
+                    <w >de</w>
+                    <w >Paris</w>
+                    <!--<w >-->
                     <note type="tradition">— 12—13 Ces deux vers qui se trouvent dans FG, 
                         manquent ailleurs.</note>
                     <!--</w>-->
                 </l>
                 <lb n="15"/>
                 <l xml:id="Meyer_1_l_14" n="14">
-                    <w xml:id="Meyer_1_w_000090">Et</w>
-                    <w xml:id="Meyer_1_w_000091" rend="elision">l</w>
+                    <w >Et</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000092">autres</w>
-                    <w xml:id="Meyer_1_w_000093">fu</w>
-                    <w xml:id="Meyer_1_w_000094">dou</w>
-                    <w xml:id="Meyer_1_w_000095">chastel</w>
-                    <w xml:id="Meyer_1_w_000096">de</w>
-                    <w xml:id="Meyer_1_w_000097">Crespi</w>
+                    <w >autres</w>
+                    <w >fu</w>
+                    <w >dou</w>
+                    <w >chastel</w>
+                    <w >de</w>
+                    <w >Crespi</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="16"/>
                 <!--<metamark>15 </metamark>-->
                 <l xml:id="Meyer_1_l_15" n="15">
-                    <w xml:id="Meyer_1_w_000098">Molt</w>
-                    <w xml:id="Meyer_1_w_000099">fu</w>
-                    <w xml:id="Meyer_1_w_000100">dolans</w>
-                    <w xml:id="Meyer_1_w_000101"><choice>
+                    <w >Molt</w>
+                    <w >fu</w>
+                    <w >dolans</w>
+                    <w ><choice>
                             <abbr>Ri<pc type="supplied">.</pc></abbr>
                             <expan>Ri<ex>gaus</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000102">et</w>
-                    <w xml:id="Meyer_1_w_000103">esmarris</w>
+                    <w >et</w>
+                    <w >esmarris</w>
                     <pc type="supplied">,</pc>
                 </l>
                 <lb n="17"/>
                 <l xml:id="Meyer_1_l_16" n="16">
-                    <w xml:id="Meyer_1_w_000104"><supplied resp="#Meyer" reason="damage">Morant</supplied></w>
-                    <w xml:id="Meyer_1_w_000105">regrete</w>
-                    <w xml:id="Meyer_1_w_000106">com</w>
-                    <w xml:id="Meyer_1_w_000107">ja</w>
-                    <w xml:id="Meyer_1_w_000108">porrez</w>
-                    <w xml:id="Meyer_1_w_000109">oïr</w>
+                    <w ><supplied resp="#Meyer" reason="damage">Morant</supplied></w>
+                    <w >regrete</w>
+                    <w >com</w>
+                    <w >ja</w>
+                    <w >porrez</w>
+                    <w >oïr</w>
                     <pc type="supplied">.</pc>
                 </l>
 
@@ -610,232 +601,232 @@
                 <lb n="1"/>
                 <l xml:id="Meyer_1_l_17" n="17"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000110">De</w>
-                    <w xml:id="Meyer_1_w_000111">toutez</w>
-                    <w xml:id="Meyer_1_w_000112">pars</w>
-                    <w xml:id="Meyer_1_w_000113">descroissent</w>
-                    <w xml:id="Meyer_1_w_000114">nostre</w>
-                    <w xml:id="Meyer_1_w_000115">ami<note>1 = FG<pc type="supplied">.</pc></note></w>
+                    <w >De</w>
+                    <w >toutez</w>
+                    <w >pars</w>
+                    <w >descroissent</w>
+                    <w >nostre</w>
+                    <w >ami<note>1 = FG<pc type="supplied">.</pc></note></w>
                 </q></l>
                 <lb n="2"/>
                 <l xml:id="Meyer_1_l_18" n="18"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000116">Las</w>
+                    <w >Las</w>
                     <pc type="supplied">!</pc>
                     <pc type="supplied">»</pc></q>
-                    <w xml:id="Meyer_1_w_000117">dist</w>
-                    <w xml:id="Meyer_1_w_000118"><choice>
+                    <w >dist</w>
+                    <w ><choice>
                             <abbr>G<pc type="supplied">.</pc></abbr>
                             <expan>Gibers</expan>
                         </choice></w>
                     <pc type="supplied">,</pc>
                     <q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000119">que</w>
-                    <w xml:id="Meyer_1_w_000120">porrai</w>
-                    <w xml:id="Meyer_1_w_000121">devenir</w>
+                    <w >que</w>
+                    <w >porrai</w>
+                    <w >devenir</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="3"/>
                 <l xml:id="Meyer_1_l_19" n="19"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000122">Quant</w>
-                    <w xml:id="Meyer_1_w_000123" rend="elision">n</w>
+                    <w >Quant</w>
+                    <w  rend="elision">n</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000124">ai</w>
-                    <w xml:id="Meyer_1_w_000125">chastel</w>
-                    <w xml:id="Meyer_1_w_000126">en</w>
-                    <w xml:id="Meyer_1_w_000127">icelui</w>
-                    <w xml:id="Meyer_1_w_000128">païs</w>
-                    <w xml:id="Meyer_1_w_000129"><note type="tradition">- 3 = F</note></w>
+                    <w >ai</w>
+                    <w >chastel</w>
+                    <w >en</w>
+                    <w >icelui</w>
+                    <w >païs</w>
+                    <note type="tradition">- 3 = F</note>
                 </q></l>
                 <lb n="4"/>
                 <l xml:id="Meyer_1_l_20" n="20"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000130">Par</w>
-                    <w xml:id="Meyer_1_w_000131">cui</w>
-                    <w xml:id="Meyer_1_w_000132">je</w>
-                    <w xml:id="Meyer_1_w_000133">puisse</w>
-                    <w xml:id="Meyer_1_w_000134">grever</w>
-                    <w xml:id="Meyer_1_w_000135">mez</w>
-                    <w xml:id="Meyer_1_w_000136">anemis</w>
+                    <w >Par</w>
+                    <w >cui</w>
+                    <w >je</w>
+                    <w >puisse</w>
+                    <w >grever</w>
+                    <w >mez</w>
+                    <w >anemis</w>
                     <pc type="supplied">?</pc>
                 </q></l>
                 <lb n="5"/>
                 <l xml:id="Meyer_1_l_21" n="21"><q>
-                    <!--<!-\-<w xml:id="Meyer_1_w_000137">-\-><note type="numerotation_edition">5 </note><!-\-</w>-\->-->
-                    <w xml:id="Meyer_1_w_000138">——</w>
-                    <w xml:id="Meyer_1_w_000139">Si</w>
-                    <w xml:id="Meyer_1_w_000140">avez</w>
+                    <!--<!-\-<w >-\-><note type="numerotation_edition">5 </note><!-\-</w>-\->-->
+                    <w >——</w>
+                    <w >Si</w>
+                    <w >avez</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000141">sire</w>
+                    <w >sire</w>
                     <pc type="supplied">»</pc></q>
                     <pc type="supplied">,</pc>
                     <q>
-                    <w xml:id="Meyer_1_w_000142">li</w>
-                    <w xml:id="Meyer_1_w_000143">mèz</w>
-                    <w xml:id="Meyer_1_w_000144">li</w>
-                    <w xml:id="Meyer_1_w_000145">respondi</w>
+                    <w >li</w>
+                    <w >mèz</w>
+                    <w >li</w>
+                    <w >respondi</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000146"><note type="tradition">- 5 = FG</note></w>
+                    <note type="tradition">- 5 = FG</note>
                 </q></l>
                 <lb n="6"/>
                 <l xml:id="Meyer_1_l_22" n="22"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000147">Rigaus</w>
-                    <w xml:id="Meyer_1_w_000148">vos</w>
-                    <w xml:id="Meyer_1_w_000149">mande</w>
-                    <w xml:id="Meyer_1_w_000150">et</w>
-                    <w xml:id="Meyer_1_w_000151">ces</w>
-                    <w xml:id="Meyer_1_w_000152">peres</w>
-                    <w xml:id="Meyer_1_w_000153">Hervix</w>
+                    <w >Rigaus</w>
+                    <w >vos</w>
+                    <w >mande</w>
+                    <w >et</w>
+                    <w >ces</w>
+                    <w >peres</w>
+                    <w >Hervix</w>
                 </q></l>
                 <lb n="7"/>
                 <l xml:id="Meyer_1_l_23" n="23"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000154" rend="elision">Qu</w>
+                    <w  rend="elision">Qu</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000155">il</w>
-                    <w xml:id="Meyer_1_w_000156">vos</w>
-                    <w xml:id="Meyer_1_w_000157">rendront</w>
-                    <w xml:id="Meyer_1_w_000158">cuite</w>
-                    <w xml:id="Meyer_1_w_000159">le</w>
-                    <w xml:id="Meyer_1_w_000160">Plaiseïs</w>
+                    <w >il</w>
+                    <w >vos</w>
+                    <w >rendront</w>
+                    <w >cuite</w>
+                    <w >le</w>
+                    <w >Plaiseïs</w>
                     <pc type="supplied">.</pc>
                 </q></l>
                 <lb n="8"/>
                 <l xml:id="Meyer_1_l_24" n="24"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000161">Bien</w>
-                    <w xml:id="Meyer_1_w_000162">est</w>
-                    <w xml:id="Meyer_1_w_000163">garnis</w>
-                    <w xml:id="Meyer_1_w_000164">et</w>
-                    <w xml:id="Meyer_1_w_000165">de</w>
-                    <w xml:id="Meyer_1_w_000166">pain</w>
-                    <w xml:id="Meyer_1_w_000167">et</w>
-                    <w xml:id="Meyer_1_w_000168">de</w>
-                    <w xml:id="Meyer_1_w_000169">vin</w>
+                    <w >Bien</w>
+                    <w >est</w>
+                    <w >garnis</w>
+                    <w >et</w>
+                    <w >de</w>
+                    <w >pain</w>
+                    <w >et</w>
+                    <w >de</w>
+                    <w >vin</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="9"/>
                 <l xml:id="Meyer_1_l_25" n="25"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000170">De</w>
-                    <w xml:id="Meyer_1_w_000171">char</w>
-                    <w xml:id="Meyer_1_w_000172">salée</w>
-                    <w xml:id="Meyer_1_w_000173">por</w>
-                    <w xml:id="Meyer_1_w_000174">chevaliers</w>
-                    <w xml:id="Meyer_1_w_000175">servir</w>
+                    <w >De</w>
+                    <w >char</w>
+                    <w >salée</w>
+                    <w >por</w>
+                    <w >chevaliers</w>
+                    <w >servir</w>
                     <pc type="supplied">.</pc>
                 </q></l>
                 <lb n="10"/>
                 <l xml:id="Meyer_1_l_26" n="26"><q>
-                    <!--<w xml:id="Meyer_1_w_000176"><note type="numerotation_edition">10 </note>—</w>-->
+                    <!--<w ><note type="numerotation_edition">10 </note>—</w>-->
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000177">Des</w>
-                    <w xml:id="Meyer_1_w_000178" rend="elision">qu</w>
+                    <w >Des</w>
+                    <w  rend="elision">qu</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000179">a</w>
+                    <w >a</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000180">vij</w>
+                    <w >vij</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000181">ans</w>
+                    <w >ans</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000182">ne</w>
-                    <w xml:id="Meyer_1_w_000183">vos</w>
-                    <w xml:id="Meyer_1_w_000184">en</w>
-                    <w xml:id="Meyer_1_w_000185">quier</w>
-                    <w xml:id="Meyer_1_w_000186">mentir</w>
+                    <w >ne</w>
+                    <w >vos</w>
+                    <w >en</w>
+                    <w >quier</w>
+                    <w >mentir</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="11"/>
                 <l xml:id="Meyer_1_l_27" n="27"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000187">Avrez</w>
-                    <w xml:id="Meyer_1_w_000188">viande</w>
+                    <w >Avrez</w>
+                    <w >viande</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000189">mal</w>
-                    <w xml:id="Meyer_1_w_000190">grez</w>
-                    <w xml:id="Meyer_1_w_000191">en</w>
-                    <w xml:id="Meyer_1_w_000192">aient</w>
-                    <w xml:id="Meyer_1_w_000193">il</w>
+                    <w >mal</w>
+                    <w >grez</w>
+                    <w >en</w>
+                    <w >aient</w>
+                    <w >il</w>
                     <pc type="supplied">.</pc>
                     <pc type="supplied">»</pc>
                 </q></l>
                 <lb n="12"/>
                 <l xml:id="Meyer_1_l_28" n="28">
-                    <w xml:id="Meyer_1_w_000194"><supplied resp="#Meyer" reason="damage">D</supplied>ist</w>
-                    <w xml:id="Meyer_1_w_000195">la</w>
-                    <w xml:id="Meyer_1_w_000196">roïne</w>
+                    <w ><supplied resp="#Meyer" reason="damage">D</supplied>ist</w>
+                    <w >la</w>
+                    <w >roïne</w>
                     <pc type="supplied">:</pc>
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000197" rend="elision">C</w>
+                    <w  rend="elision">C</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000198">est</w>
-                    <w xml:id="Meyer_1_w_000199">chastiax</w>
-                    <w xml:id="Meyer_1_w_000200">bien</w>
-                    <w xml:id="Meyer_1_w_000201">garniz</w>
+                    <w >est</w>
+                    <w >chastiax</w>
+                    <w >bien</w>
+                    <w >garniz</w>
                     <pc type="supplied">.</pc>
                     <pc type="supplied">»</pc>
                 </q></l>
                 <lb n="13"/>
                 <l xml:id="Meyer_1_l_29" n="29"><q>
-                    <w xml:id="Meyer_1_w_000202">—</w>
-                    <w xml:id="Meyer_1_w_000203">En</w>
-                    <w xml:id="Meyer_1_w_000204">non</w>
-                    <w xml:id="Meyer_1_w_000205">Deu</w>
+                    <w >—</w>
+                    <w >En</w>
+                    <w >non</w>
+                    <w >Deu</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000206">dame</w>
+                    <w >dame</w>
                     <pc type="supplied">,</pc>
                     <pc type="supplied">»</pc></q>
-                    <w xml:id="Meyer_1_w_000207">li</w>
-                    <w xml:id="Meyer_1_w_000208">dus</w>
-                    <w xml:id="Meyer_1_w_000209"><choice>
+                    <w >li</w>
+                    <w >dus</w>
+                    <w ><choice>
                             <abbr>G<pc type="supplied">.</pc></abbr>
                             <expan>Gibers</expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000210">a</w>
-                    <w xml:id="Meyer_1_w_000211">dit</w>
+                    <w >a</w>
+                    <w >dit</w>
                     <pc type="supplied">,</pc>
-                    <!--<w xml:id="Meyer_1_w_000212">--><note type="tradition">- 13 = FG</note><!--</w>-->
+                    <!--<w >--><note type="tradition">- 13 = FG</note><!--</w>-->
                 </l>
                 <lb n="14"/>
                 <l xml:id="Meyer_1_l_30" n="30"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000213">Grant</w>
-                    <w xml:id="Meyer_1_w_000214">pechié</w>
-                    <w xml:id="Meyer_1_w_000215">fait</w>
-                    <w xml:id="Meyer_1_w_000216" rend="elision">l</w>
+                    <w >Grant</w>
+                    <w >pechié</w>
+                    <w >fait</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000217">empererez</w>
-                    <w xml:id="Meyer_1_w_000218">Pepins</w>
+                    <w >empererez</w>
+                    <w >Pepins</w>
                 </q></l>
                 <lb n="15"/>
                 <l xml:id="Meyer_1_l_31" n="31"><q>
-                    <!--<w xml:id="Meyer_1_w_000219"><note type="numerotation_edition">15 </note>
+                    <!--<w ><note type="numerotation_edition">15 </note>
                         --><lb n="16"/><!--</w>-->
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000220"><supplied resp="#Meyer" reason="damage">Q</supplied>ue</w>
-                    <w xml:id="Meyer_1_w_000221">ne</w>
-                    <w xml:id="Meyer_1_w_000222">me</w>
-                    <w xml:id="Meyer_1_w_000223">rant</w>
-                    <w xml:id="Meyer_1_w_000224">Gironville</w>
-                    <w xml:id="Meyer_1_w_000225">a</w>
-                    <w xml:id="Meyer_1_w_000226">tenir</w>
+                    <w ><supplied resp="#Meyer" reason="damage">Q</supplied>ue</w>
+                    <w >ne</w>
+                    <w >me</w>
+                    <w >rant</w>
+                    <w >Gironville</w>
+                    <w >a</w>
+                    <w >tenir</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="17"/>
                 <l xml:id="Meyer_1_l_32" n="32"><q>
                     <pc type="supplied">«</pc>
                     <!-- JBC: segmentation -->
-                    <!--<w xml:id="Meyer_1_w_000227"><supplied resp="#Meyer" reason="damage">Le bon</supplied></w>-->
-                    <w xml:id="Meyer_1_w_000227"><supplied resp="#Meyer" reason="damage">Le</supplied></w>
-                    <w xml:id="Meyer_1_w_000227b"><supplied resp="#Meyer" reason="damage">bon</supplied></w>
-                    <w xml:id="Meyer_1_w_000228">chastel</w>
-                    <w xml:id="Meyer_1_w_000229">que</w>
-                    <w xml:id="Meyer_1_w_000230">mez</w>
-                    <w xml:id="Meyer_1_w_000231">ancestres</w>
-                    <w xml:id="Meyer_1_w_000232">tint</w>
+                    <!--<w ><supplied resp="#Meyer" reason="damage">Le bon</supplied></w>-->
+                    <w ><supplied resp="#Meyer" reason="damage">Le</supplied></w>
+                    <w ><supplied resp="#Meyer" reason="damage">bon</supplied></w>
+                    <w >chastel</w>
+                    <w >que</w>
+                    <w >mez</w>
+                    <w >ancestres</w>
+                    <w >tint</w>
                     <pc type="supplied">.</pc>
                 </q></l>
                 <lb n="18"/>
@@ -849,63 +840,63 @@
                 <lb n="1"/>
                 <l xml:id="Meyer_1_l_34" n="34">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000233" rend="elision">N</w>
+                    <w  rend="elision">N</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000234">en</w>
-                    <w xml:id="Meyer_1_w_000235">nule</w>
-                    <w xml:id="Meyer_1_w_000236">terre</w>
+                    <w >en</w>
+                    <w >nule</w>
+                    <w >terre</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000237">si</w>
-                    <w xml:id="Meyer_1_w_000238">com</w>
-                    <w xml:id="Meyer_1_w_000239">je</w>
-                    <w xml:id="Meyer_1_w_000240" rend="elision">l</w>
+                    <w >si</w>
+                    <w >com</w>
+                    <w >je</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000241">ai</w>
-                    <w xml:id="Meyer_1_w_000242">apris</w>
+                    <w >ai</w>
+                    <w >apris</w>
                     <pc type="supplied">.</pc>
                     <pc type="supplied">»</pc></q>
                 </l>
                 <lb n="2"/>
                 <l xml:id="Meyer_1_l_35" n="35">
-                    <w xml:id="Meyer_1_w_000243">Par</w>
-                    <w xml:id="Meyer_1_w_000244">la</w>
-                    <w xml:id="Meyer_1_w_000245">main</w>
-                    <w xml:id="Meyer_1_w_000246">destre</w>
-                    <w xml:id="Meyer_1_w_000247">li</w>
-                    <w xml:id="Meyer_1_w_000248">dus</w>
-                    <w xml:id="Meyer_1_w_000249"><choice>
+                    <w >Par</w>
+                    <w >la</w>
+                    <w >main</w>
+                    <w >destre</w>
+                    <w >li</w>
+                    <w >dus</w>
+                    <w ><choice>
                             <abbr>G<pc type="supplied">.</pc></abbr>
                             <expan>G<ex>erins</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000250">la</w>
-                    <w xml:id="Meyer_1_w_000251">tint</w>
+                    <w >la</w>
+                    <w >tint</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="3"/>
                 <l xml:id="Meyer_1_l_36" n="36">
-                    <w xml:id="Meyer_1_w_000252">Atant</w>
-                    <w xml:id="Meyer_1_w_000253">ez</w>
-                    <w xml:id="Meyer_1_w_000254">vos</w>
-                    <w xml:id="Meyer_1_w_000255" rend="elision">l</w>
+                    <w >Atant</w>
+                    <w >ez</w>
+                    <w >vos</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000256">enfant</w>
-                    <w xml:id="Meyer_1_w_000257"><choice>
+                    <w >enfant</w>
+                    <w ><choice>
                             <abbr>R<pc type="supplied">.</pc></abbr>
                             <expan>R<ex>igau</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000258">ou</w>
-                    <w xml:id="Meyer_1_w_000259">vint</w>
+                    <w >ou</w>
+                    <w >vint</w>
                     <pc type="supplied">;</pc>
                 </l>
                 <lb n="4"/>
                 <l xml:id="Meyer_1_l_37" n="37">
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000260">I</w>
+                    <w >I</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000261">esprevier</w>
-                    <w xml:id="Meyer_1_w_000262">la</w>
-                    <w xml:id="Meyer_1_w_000263">roïne</w>
-                    <w xml:id="Meyer_1_w_000264">tendi</w>
+                    <w >esprevier</w>
+                    <w >la</w>
+                    <w >roïne</w>
+                    <w >tendi</w>
                     <pc type="supplied">;</pc>
                 </l>
 
@@ -914,175 +905,175 @@
                 <lb n="5"/>
                 <!--<note type="numerotation_edition">5 </note>-->
                 <l xml:id="Meyer_1_l_38" n="38">
-                    <w xml:id="Meyer_1_w_000265">Il</w>
-                    <w xml:id="Meyer_1_w_000266">fu</w>
-                    <w xml:id="Meyer_1_w_000267">molt</w>
-                    <w xml:id="Meyer_1_w_000268">biaus</w>
+                    <w >Il</w>
+                    <w >fu</w>
+                    <w >molt</w>
+                    <w >biaus</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000269">et</w>
-                    <w xml:id="Meyer_1_w_000270">la</w>
-                    <w xml:id="Meyer_1_w_000271">dame</w>
-                    <w xml:id="Meyer_1_w_000272" rend="elision">l</w>
+                    <w >et</w>
+                    <w >la</w>
+                    <w >dame</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000273">a</w>
-                    <w xml:id="Meyer_1_w_000274">pris</w>
+                    <w >a</w>
+                    <w >pris</w>
                     <pc type="supplied">,</pc>
-                    <!--<w xml:id="Meyer_1_w_000275">--><note type="tradition">1 = FG<pc type="supplied">;</pc> ce vers manque dans
+                    <!--<w >--><note type="tradition">1 = FG<pc type="supplied">;</pc> ce vers manque dans
                             les autres mss<pc type="supplied">.</pc></note><!--</w>-->
                 </l>
                 <lb n="6"/>
                 <l xml:id="Meyer_1_l_39" n="39">
-                    <w xml:id="Meyer_1_w_000276">Par</w>
-                    <w xml:id="Meyer_1_w_000277">grant</w>
-                    <w xml:id="Meyer_1_w_000278">chierté</w>
-                    <w xml:id="Meyer_1_w_000279">desor</w>
-                    <w xml:id="Meyer_1_w_000280">son</w>
-                    <w xml:id="Meyer_1_w_000281">poig</w>
-                    <w xml:id="Meyer_1_w_000282" rend="elision">l</w>
+                    <w >Par</w>
+                    <w >grant</w>
+                    <w >chierté</w>
+                    <w >desor</w>
+                    <w >son</w>
+                    <w >poig</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000283">a</w>
-                    <w xml:id="Meyer_1_w_000284">mis</w>
+                    <w >a</w>
+                    <w >mis</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="7"/>
                 <l xml:id="Meyer_1_l_40" n="40">
-                    <w xml:id="Meyer_1_w_000285">Devant</w>
-                    <w xml:id="Meyer_1_w_000286">le</w>
-                    <w xml:id="Meyer_1_w_000287">roi</w>
-                    <w xml:id="Meyer_1_w_000288">la</w>
-                    <w xml:id="Meyer_1_w_000289">franche</w>
-                    <w xml:id="Meyer_1_w_000290">dame</w>
-                    <w xml:id="Meyer_1_w_000291">vint</w>
+                    <w >Devant</w>
+                    <w >le</w>
+                    <w >roi</w>
+                    <w >la</w>
+                    <w >franche</w>
+                    <w >dame</w>
+                    <w >vint</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="8"/>
                 <l xml:id="Meyer_1_l_41" n="41">
-                    <w xml:id="Meyer_1_w_000292">Li</w>
-                    <w xml:id="Meyer_1_w_000293">rois</w>
-                    <w xml:id="Meyer_1_w_000294">la</w>
-                    <w xml:id="Meyer_1_w_000295">voit</w>
+                    <w >Li</w>
+                    <w >rois</w>
+                    <w >la</w>
+                    <w >voit</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000296">a</w>
-                    <w xml:id="Meyer_1_w_000297">raisson</w>
-                    <w xml:id="Meyer_1_w_000298" rend="elision">l</w>
+                    <w >a</w>
+                    <w >raisson</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000299">en</w>
-                    <w xml:id="Meyer_1_w_000300">a</w>
-                    <w xml:id="Meyer_1_w_000301">mis</w>
+                    <w >en</w>
+                    <w >a</w>
+                    <w >mis</w>
                     <pc type="supplied">:</pc>
                 </l>
                 <lb n="9"/>
                 <l xml:id="Meyer_1_l_42" n="42">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000302">Cis</w>
-                    <w xml:id="Meyer_1_w_000303">espreviers</w>
+                    <w >Cis</w>
+                    <w >espreviers</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000304">ma</w>
-                    <w xml:id="Meyer_1_w_000305">dame</w>
+                    <w >ma</w>
+                    <w >dame</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000306">ou</w>
-                    <w xml:id="Meyer_1_w_000307">fu</w>
-                    <w xml:id="Meyer_1_w_000308">il</w>
-                    <w xml:id="Meyer_1_w_000309">pris</w>
+                    <w >ou</w>
+                    <w >fu</w>
+                    <w >il</w>
+                    <w >pris</w>
                     <pc type="supplied">?</pc></q>
                 </l>
                 <lb n="10"/>
                 <!--<note type="numerotation_edition">10 </note>-->
                 <l xml:id="Meyer_1_l_43" n="43">
-                    <!--<w xml:id="Meyer_1_w_000310">--><!--—--><!--</w>-->
-                    <q><w xml:id="Meyer_1_w_000311">Sire</w></q>
+                    <!--<w >--><!--—--><!--</w>-->
+                    <q><w >Sire</w></q>
                     <pc type="supplied">»</pc>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000312">fait</w>
-                    <w xml:id="Meyer_1_w_000313">ele</w>
+                    <w >fait</w>
+                    <w >ele</w>
                     <pc type="supplied">,</pc>
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000314">ne</w>
-                    <w xml:id="Meyer_1_w_000315">vos</w>
-                    <w xml:id="Meyer_1_w_000316">en</w>
-                    <w xml:id="Meyer_1_w_000317">quier</w>
-                    <w xml:id="Meyer_1_w_000318">mentir</w>
+                    <w >ne</w>
+                    <w >vos</w>
+                    <w >en</w>
+                    <w >quier</w>
+                    <w >mentir</w>
                     <pc type="supplied">:</pc></q>
                 </l>
                 <lb n="11"/>
                 <l xml:id="Meyer_1_l_44" n="44">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000319"><choice>
+                    <w ><choice>
                             <abbr>H<pc type="supplied">.</pc></abbr>
                             <expan>H<ex resp="#ED">ernaut</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000320">mes</w>
-                    <w xml:id="Meyer_1_w_000321">niés</w>
+                    <w >mes</w>
+                    <w >niés</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000322">mes</w>
-                    <w xml:id="Meyer_1_w_000323">drus</w>
-                    <w xml:id="Meyer_1_w_000324">et</w>
-                    <w xml:id="Meyer_1_w_000325">mes</w>
-                    <w xml:id="Meyer_1_w_000326">amis</w>
+                    <w >mes</w>
+                    <w >drus</w>
+                    <w >et</w>
+                    <w >mes</w>
+                    <w >amis</w>
                     <pc type="supplied">,</pc></q>
-                    <!--<w xml:id="Meyer_1_w_000327">--><note type="tradition">— 7= FG</note><!--</w>-->
+                    <!--<w >--><note type="tradition">— 7= FG</note><!--</w>-->
                 </l>
                 <lb n="12"/>
                 <l xml:id="Meyer_1_l_45" n="45">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000328">Le</w>
-                    <w xml:id="Meyer_1_w_000329" rend="elision">m</w>
+                    <w >Le</w>
+                    <w  rend="elision">m</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000330">aporta</w>
+                    <w >aporta</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000331">la</w>
-                    <w xml:id="Meyer_1_w_000332">soie</w>
-                    <w xml:id="Meyer_1_w_000333">grans</w>
-                    <w xml:id="Meyer_1_w_000334">mercis</w>
+                    <w >la</w>
+                    <w >soie</w>
+                    <w >grans</w>
+                    <w >mercis</w>
                     <pc type="supplied">.</pc></q>
                 </l>
                 <lb n="13"/>
                 <l xml:id="Meyer_1_l_46" n="46">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000335">Or</w>
-                    <w xml:id="Meyer_1_w_000336">le</w>
-                    <w xml:id="Meyer_1_w_000337">prenés</w>
+                    <w >Or</w>
+                    <w >le</w>
+                    <w >prenés</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000338">enpererez</w>
-                    <w xml:id="Meyer_1_w_000339">gentis</w>
+                    <w >enpererez</w>
+                    <w >gentis</w>
                     <pc type="supplied">;</pc></q>
                 </l>
                 <lb n="14"/>
                 <l xml:id="Meyer_1_l_47" n="47">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000340">Par</w>
-                    <w xml:id="Meyer_1_w_000341">grant</w>
-                    <w xml:id="Meyer_1_w_000342">amor</w>
-                    <w xml:id="Meyer_1_w_000343">le</w>
-                    <w xml:id="Meyer_1_w_000344">faites</w>
-                    <w xml:id="Meyer_1_w_000345">recoillir</w>
+                    <w >Par</w>
+                    <w >grant</w>
+                    <w >amor</w>
+                    <w >le</w>
+                    <w >faites</w>
+                    <w >recoillir</w>
                     <pc type="supplied">.</pc></q>
                 </l>
                 <lb n="15"/>
                 <!--<note type="numerotation_edition">15 </note>-->
                 <l xml:id="Meyer_1_l_48" n="48">
-                    <q><w xml:id="Meyer_1_w_000346">—</w>
-                    <w xml:id="Meyer_1_w_000347">Mout</w>
-                    <w xml:id="Meyer_1_w_000348">ditez</w>
-                    <w xml:id="Meyer_1_w_000349">bien</w>
+                    <q><w >—</w>
+                    <w >Mout</w>
+                    <w >ditez</w>
+                    <w >bien</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000350">dame</w>
+                    <w >dame</w>
                     <pc type="supplied">»</pc></q>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000351">se</w>
-                    <w xml:id="Meyer_1_w_000352">dist</w>
-                    <w xml:id="Meyer_1_w_000353">Pepins<note type="tradition">— 11 = FG</note></w>
+                    <w >se</w>
+                    <w >dist</w>
+                    <w >Pepins<note type="tradition">— 11 = FG</note></w>
                 </l>
                 <lb n="16"/>
                 <l xml:id="Meyer_1_l_49" n="49">
                     <!--<pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000354">Qui</w>
-                    <w xml:id="Meyer_1_w_000355">lle</w>
-                    <w xml:id="Meyer_1_w_000356">refuse</w>
-                    <w xml:id="Meyer_1_w_000357">ne</w>
-                    <w xml:id="Meyer_1_w_000358">doit</w>
-                    <w xml:id="Meyer_1_w_000359">terre</w>
-                    <w xml:id="Meyer_1_w_000360">tenir</w>
+                    <w >Qui</w>
+                    <w >lle</w>
+                    <w >refuse</w>
+                    <w >ne</w>
+                    <w >doit</w>
+                    <w >terre</w>
+                    <w >tenir</w>
                     <pc type="supplied">.</pc>-->
                     <note type="tradition">12 = FG<pc type="supplied">,</pc></note>
                 </l>
@@ -1099,226 +1090,226 @@
                 <lb n="1"/>
                 <l xml:id="Meyer_1_l_51" n="51">
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000362">Mout</w>
-                    <w xml:id="Meyer_1_w_000363">volentiers</w>
+                    <w >Mout</w>
+                    <w >volentiers</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000364">dame</w>
+                    <w >dame</w>
                     <pc type="supplied">»</pc></q>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000365">se</w>
-                    <w xml:id="Meyer_1_w_000366">dist</w>
-                    <w xml:id="Meyer_1_w_000367">Pepins</w>
+                    <w >se</w>
+                    <w >dist</w>
+                    <w >Pepins</w>
                     <pc type="supplied">.</pc>
                 </l>
                 <lb n="2"/>
                 <l xml:id="Meyer_1_l_52" n="52">
-                    <w xml:id="Meyer_1_w_000368">Devant</w>
-                    <w xml:id="Meyer_1_w_000369">lui</w>
-                    <w xml:id="Meyer_1_w_000370">garde</w>
+                    <w >Devant</w>
+                    <w >lui</w>
+                    <w >garde</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000371">si</w>
-                    <w xml:id="Meyer_1_w_000372">vit</w>
-                    <w xml:id="Meyer_1_w_000373">Gerart</w>
-                    <w xml:id="Meyer_1_w_000374">venir</w>
+                    <w >si</w>
+                    <w >vit</w>
+                    <w >Gerart</w>
+                    <w >venir</w>
                     <pc type="supplied">,</pc>
                 </l>
                 <lb n="3"/>
                 <l xml:id="Meyer_1_l_53" n="53">
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000375">I</w>
+                    <w >I</w>
                     <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_1_w_000376">chevalier</w>
-                    <w xml:id="Meyer_1_w_000377">qui</w>
-                    <w xml:id="Meyer_1_w_000378">fu</w>
-                    <w xml:id="Meyer_1_w_000379">nez</w>
-                    <w xml:id="Meyer_1_w_000380">de</w>
-                    <w xml:id="Meyer_1_w_000381">Senlis</w>
+                    <w >chevalier</w>
+                    <w >qui</w>
+                    <w >fu</w>
+                    <w >nez</w>
+                    <w >de</w>
+                    <w >Senlis</w>
                     <pc type="supplied">;</pc>
                 </l>
                 <lb n="4"/>
                 <l xml:id="Meyer_1_l_54" n="54"><q>
-                    <w xml:id="Meyer_1_w_000382">Et</w>
-                    <w xml:id="Meyer_1_w_000383">dist</w>
-                    <w xml:id="Meyer_1_w_000384">li</w>
-                    <w xml:id="Meyer_1_w_000385">rois</w>
+                    <w >Et</w>
+                    <w >dist</w>
+                    <w >li</w>
+                    <w >rois</w>
                     <pc type="supplied">:</pc>
                     <pc type="supplied">«</pc>
-                    <q><w xml:id="Meyer_1_w_000386">Venez</w>
-                    <w xml:id="Meyer_1_w_000387">avant</w>
+                    <q><w >Venez</w>
+                    <w >avant</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000388">amis</w>
+                    <w >amis</w>
                     <pc type="supplied">.</pc></q>
                 </q></l>
                 <lb n="5"/>
                 <!--<note type="numerotation_edition">5 </note>-->
                 <l xml:id="Meyer_1_l_55" n="55"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000389">Vos</w>
-                    <w xml:id="Meyer_1_w_000390">en</w>
-                    <w xml:id="Meyer_1_w_000391">irez</w>
-                    <w xml:id="Meyer_1_w_000392">a</w>
-                    <w xml:id="Meyer_1_w_000393">Bordeles</w>
-                    <w xml:id="Meyer_1_w_000394">la</w>
-                    <w xml:id="Meyer_1_w_000395">cit</w>
+                    <w >Vos</w>
+                    <w >en</w>
+                    <w >irez</w>
+                    <w >a</w>
+                    <w >Bordeles</w>
+                    <w >la</w>
+                    <w >cit</w>
                     <pc type="supplied">;</pc>
                 </q></l>
                 <lb n="6"/>
                 <l xml:id="Meyer_1_l_56" n="56"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000396">Dites</w>
-                    <w xml:id="Meyer_1_w_000397"><choice>
+                    <w >Dites</w>
+                    <w ><choice>
                             <abbr>Fro<pc type="supplied">.</pc></abbr>
                             <expan>Fro<ex>mont</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_1_w_000398">de</w>
-                    <w xml:id="Meyer_1_w_000399">Lens</w>
+                    <w >de</w>
+                    <w >Lens</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000400">le</w>
-                    <w xml:id="Meyer_1_w_000401">posteïs</w>
+                    <w >le</w>
+                    <w >posteïs</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="7"/>
                 <l xml:id="Meyer_1_l_57" n="57"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000402">Que</w>
-                    <w xml:id="Meyer_1_w_000403">jel</w>
-                    <w xml:id="Meyer_1_w_000404">semon</w>
-                    <w xml:id="Meyer_1_w_000405">de</w>
-                    <w xml:id="Meyer_1_w_000406">droit</w>
-                    <w xml:id="Meyer_1_w_000407">en</w>
-                    <w xml:id="Meyer_1_w_000408">mon</w>
-                    <w xml:id="Meyer_1_w_000409">païs</w>
+                    <w >Que</w>
+                    <w >jel</w>
+                    <w >semon</w>
+                    <w >de</w>
+                    <w >droit</w>
+                    <w >en</w>
+                    <w >mon</w>
+                    <w >païs</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000410"><note type="tradition">7 =— FG</note></w>
+                    <note type="tradition">7 =— FG</note>
                 </q></l>
                 <lb n="8"/>
                 <l xml:id="Meyer_1_l_58" n="58"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000411">Viegne</w>
-                    <w xml:id="Meyer_1_w_000412">a</w>
-                    <w xml:id="Meyer_1_w_000413">Paris</w>
-                    <w xml:id="Meyer_1_w_000414">ou</w>
-                    <w xml:id="Meyer_1_w_000415">a</w>
-                    <w xml:id="Meyer_1_w_000416">Loon</w>
-                    <w xml:id="Meyer_1_w_000417">la</w>
-                    <w xml:id="Meyer_1_w_000418">cit</w>
+                    <w >Viegne</w>
+                    <w >a</w>
+                    <w >Paris</w>
+                    <w >ou</w>
+                    <w >a</w>
+                    <w >Loon</w>
+                    <w >la</w>
+                    <w >cit</w>
                     <pc type="supplied">.</pc>
                 </q></l>
                 <lb n="9"/>
                 <l xml:id="Meyer_1_l_59" n="59"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000419" rend="elision">C</w>
+                    <w  rend="elision">C</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000420">il</w>
-                    <w xml:id="Meyer_1_w_000421">le</w>
-                    <w xml:id="Meyer_1_w_000422">refuse</w>
-                    <w xml:id="Meyer_1_w_000423">et</w>
-                    <w xml:id="Meyer_1_w_000424">il</w>
-                    <w xml:id="Meyer_1_w_000425" rend="elision">n</w>
+                    <w >il</w>
+                    <w >le</w>
+                    <w >refuse</w>
+                    <w >et</w>
+                    <w >il</w>
+                    <w  rend="elision">n</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000426">i</w>
-                    <w xml:id="Meyer_1_w_000427">voelt</w>
-                    <w xml:id="Meyer_1_w_000428">venir</w>
+                    <w >i</w>
+                    <w >voelt</w>
+                    <w >venir</w>
                 </q></l>
                 <lb n="10"/>
                 <!--<note type="numerotation_edition">10 </note>-->
                 <l xml:id="Meyer_1_l_60" n="60"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000429">Desfiez</w>
-                    <w xml:id="Meyer_1_w_000430">le</w>
-                    <w xml:id="Meyer_1_w_000431">maintenant</w>
-                    <w xml:id="Meyer_1_w_000432">de</w>
-                    <w xml:id="Meyer_1_w_000433">par</w>
-                    <w xml:id="Meyer_1_w_000434">mi</w>
+                    <w >Desfiez</w>
+                    <w >le</w>
+                    <w >maintenant</w>
+                    <w >de</w>
+                    <w >par</w>
+                    <w >mi</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="11"/>
                 <l xml:id="Meyer_1_l_61" n="61"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000435">Et</w>
-                    <w xml:id="Meyer_1_w_000436">si</w>
-                    <w xml:id="Meyer_1_w_000437">li</w>
-                    <w xml:id="Meyer_1_w_000438">ditez</w>
+                    <w >Et</w>
+                    <w >si</w>
+                    <w >li</w>
+                    <w >ditez</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000439">tot</w>
-                    <w xml:id="Meyer_1_w_000440">voiant</w>
-                    <w xml:id="Meyer_1_w_000441">cez</w>
-                    <w xml:id="Meyer_1_w_000442">amis</w>
+                    <w >tot</w>
+                    <w >voiant</w>
+                    <w >cez</w>
+                    <w >amis</w>
                     <pc type="supplied">,</pc>
                 </q></l>
                 <lb n="12"/>
                 <l xml:id="Meyer_1_l_62" n="62"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000443" rend="elision">G</w>
+                    <w  rend="elision">G</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000444">irai</w>
-                    <w xml:id="Meyer_1_w_000445">sor</w>
-                    <w xml:id="Meyer_1_w_000446">eus</w>
-                    <w xml:id="Meyer_1_w_000447">por</w>
-                    <w xml:id="Meyer_1_w_000448">lor</w>
-                    <w xml:id="Meyer_1_w_000449">terres</w>
-                    <w xml:id="Meyer_1_w_000450">saissir<note type="tradition">— 12 = FG</note></w>
+                    <w >irai</w>
+                    <w >sor</w>
+                    <w >eus</w>
+                    <w >por</w>
+                    <w >lor</w>
+                    <w >terres</w>
+                    <w >saissir<note type="tradition">— 12 = FG</note></w>
                 </q></l>
                 <lb n="13"/>
                 <l xml:id="Meyer_1_l_63" n="63"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000451"><supplied resp="#Meyer" reason="damage">N</supplied>e</w>
-                    <w xml:id="Meyer_1_w_000452">lez</w>
-                    <w xml:id="Meyer_1_w_000453">garra</w>
-                    <w xml:id="Meyer_1_w_000454">trestot</w>
-                    <w xml:id="Meyer_1_w_000455" rend="elision">l</w>
+                    <w ><supplied resp="#Meyer" reason="damage">N</supplied>e</w>
+                    <w >lez</w>
+                    <w >garra</w>
+                    <w >trestot</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000456">ors</w>
-                    <w xml:id="Meyer_1_w_000457">que</w>
-                    <w xml:id="Meyer_1_w_000458">Dex</w>
-                    <w xml:id="Meyer_1_w_000459">fist</w>
+                    <w >ors</w>
+                    <w >que</w>
+                    <w >Dex</w>
+                    <w >fist</w>
                 </q></l>
                 <lb n="14"/>
                 <l xml:id="Meyer_1_l_64" n="64"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000460">Que</w>
-                    <w xml:id="Meyer_1_w_000461">je</w>
-                    <w xml:id="Meyer_1_w_000462">nes</w>
-                    <w xml:id="Meyer_1_w_000463">face</w>
-                    <w xml:id="Meyer_1_w_000464">de</w>
-                    <w xml:id="Meyer_1_w_000465">male</w>
-                    <w xml:id="Meyer_1_w_000466">mort</w>
-                    <w xml:id="Meyer_1_w_000467">morir</w>
+                    <w >Que</w>
+                    <w >je</w>
+                    <w >nes</w>
+                    <w >face</w>
+                    <w >de</w>
+                    <w >male</w>
+                    <w >mort</w>
+                    <w >morir</w>
                     <pc type="supplied">.</pc>
                     <pc type="supplied">»</pc>
-                    <w xml:id="Meyer_1_w_000468"><note type="tradition">— 14 = FG</note></w>
+                    <note type="tradition">— 14 = FG</note>
                 </q></l>
                 <lb n="15"/>
                 <!--<note type="numerotation_edition">15 </note>-->
                 <l xml:id="Meyer_1_l_65" n="65">
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000469">Dist</w>
-                    <w xml:id="Meyer_1_w_000470">Girars</w>
+                    <w >Dist</w>
+                    <w >Girars</w>
                     <pc type="supplied">:</pc>
                     <q><pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000471">Sire</w>
+                    <w >Sire</w>
                     <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_1_w_000472">il</w>
-                    <w xml:id="Meyer_1_w_000473">lor</w>
-                    <w xml:id="Meyer_1_w_000474">sera</w>
-                    <w xml:id="Meyer_1_w_000475">bien</w>
-                    <w xml:id="Meyer_1_w_000476">dit</w>
+                    <w >il</w>
+                    <w >lor</w>
+                    <w >sera</w>
+                    <w >bien</w>
+                    <w >dit</w>
                     <pc type="supplied">;</pc>
-                    <w xml:id="Meyer_1_w_000477"><note type="tradition">— 15 = FG<pc type="supplied">.</pc></note></w>
+                    <note type="tradition">— 15 = FG<pc type="supplied">.</pc></note>
                 </q></l>
                 <lb n="16"/>
                 <l xml:id="Meyer_1_l_66" n="66"><q>
                     <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_1_w_000478">Nel</w>
-                    <w xml:id="Meyer_1_w_000479">laisseroie</w>
-                    <w xml:id="Meyer_1_w_000480">por</w>
-                    <w xml:id="Meyer_1_w_000481">tot</w>
-                    <w xml:id="Meyer_1_w_000482" rend="elision">l</w>
+                    <w >Nel</w>
+                    <w >laisseroie</w>
+                    <w >por</w>
+                    <w >tot</w>
+                    <w  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_1_w_000483">or</w>
-                    <w xml:id="Meyer_1_w_000484">que</w>
-                    <w xml:id="Meyer_1_w_000485">Dex</w>
-                    <w xml:id="Meyer_1_w_000486">fist</w>
+                    <w >or</w>
+                    <w >que</w>
+                    <w >Dex</w>
+                    <w >fist</w>
                     <pc type="supplied">.</pc>
                 </q></l>
                 <lb n="17"/>

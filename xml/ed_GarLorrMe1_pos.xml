@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- JBC: manque l'association RelaxNG de TEI ALL (en plus de celle pour les règles Schematron) --><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: séparer la transcription du fr. 4988 au début, de celle du fragment proprement dit,
+   en deux fichiers.
+-->
+
+
+<!-- JBC: manque l'association RelaxNG de TEI ALL (en plus de celle pour les règles Schematron) --><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?><!-- JBC: et il faut aussi associer votre propre schéma --><?xml-model href="modelegarin.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr" xml:id="ed_GarLorrMe1" type="ed"
    corresp="jns5643">
@@ -115,7 +121,9 @@
       article, et l'imbrication des différents éléments de contenu-->
       <front>
          <!-- Tout ce qui est de l'ordre de l'introduction du fragment. -->
-         <div type="introduction" part="N" org="uniform" sample="complete"> </div>
+         <div type="introduction" part="N" org="uniform" sample="complete">
+            
+         </div>
       </front>
       <body>
          <div type="article" part="N" org="uniform" sample="complete">
