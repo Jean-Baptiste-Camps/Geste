@@ -111,7 +111,7 @@
     
     <!-- gestion de la ponctuation -->
     <xsl:template match="text()[ancestor::tei:w]" mode="tagPunctuation">
-        <xsl:analyze-string select="." regex="[.,;:!?«»]">
+        <xsl:analyze-string select="." regex="[.,;:!?«»—]">
             <xsl:matching-substring><pc type="supplied"><xsl:value-of select="."/></pc></xsl:matching-substring>
             <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
         </xsl:analyze-string>
