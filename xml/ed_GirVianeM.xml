@@ -4,6 +4,12 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- TODO: reprendre avec l'édition pour les questions de noms propres.
+Selon Meyer, p. 67 de l'édition Tarbé, aussi mauvaise qu'une édition peut l'être,
+https://books.google.fr/books?id=KZEv7pCwZUkC&hl=fr&pg=PA67#v=onepage&q&f=false
+pour une édition plus récente, https://gallica.bnf.fr/ark:/12148/bpt6k6553654b/f262
+-->
+
 <!-- Regex qui a détruit les lignes vides : "^(?:[\t ]*(?:\r?\n|\r))+",
     source="https://www.ultraedit.com/support/tutorials-power-tips/ultraedit/remove-blank-lines.html"-->
 <!-- JBC: attention aux effets indésirables de certaines regex. J'ai l'impression que les tirets (-) ont disparu
@@ -160,7 +166,7 @@ un peu partout. J'en ai rétabli certains.
                 <origDate cert="unknown" resp="DEAF" type="dateComposition" notBefore="1200"
                     notAfter="1220">1200-1220</origDate>
                 <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">Est ?</origPlace>
-                <origDate cert="unknown" resp="#PM" type="dateManuscrit">1250-1300</origDate>
+                <origDate cert="unknown" resp="#PM" type="dateManuscrit" notBefore="1250" notAfter="1300">1250-1300</origDate>
             </creation>
             <langUsage>
                 <language ident="fro" usage="100" cert="medium" resp="#JBC">ancien français, traits
@@ -313,20 +319,21 @@ un peu partout. J'en ai rétabli certains.
             <!-- Nous avons 3 feuilles de textes, après certaines paragraphes sont séparés par une ligne vide. (lg)
                  un <div> en haut, un <div> pour chaque feuillet, eventuelles <lg>, <l> comme unité-->
             <div>
-                <milestone n="1" ed="TARBE" unit="feuillet"/>
+                <!--<milestone n="1" ed="TARBE" unit="feuillet"/>-->
                 <!-- JBC: milestone fait l'affaire,
                 mais vous avez un élément spécialisé pour cela, qui est <pb/>. À moins que vous ne vouliez
                 le conserver pour marquer autre chose ?
                 -->
                 <!-- <note>FEUILLET I (ÉD. TARBÈ, p.67).</note> -->
                 <lg type="laisse">
+                    <pb n="1r" facs=""/>
                     <!-- JBC: je ne vois pas d'italiques ici et dans les quelques vers suivants, je les retire-->
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
                             <w>Par</w>
                             <w>cel</w>
-                            <!--apost<supplied>re</supplied>-->
+                            <!--apost<supplied resp="#PM" reason="damage">re</supplied>-->
                             <w>apostre</w>
                             <w>q</w>
                             <pc type="supplied">‘</pc>
@@ -718,6 +725,7 @@ un peu partout. J'en ai rétabli certains.
                             abrivés</supplied>
                         <note>Vers coupé que je rétablis d‘après A. Il y a dans B Vait s‘en</note>
                     </l>
+                    <pb n="1v" facs=""/>
                     <l>
                         <w>Sor</w>
                         <pc type="supplied">.</pc>
@@ -929,10 +937,13 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Li</w>
                             <w>dus</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>et</w>
-                            <w>Ren</w>
+                            <w><choice><abbr>Ren</abbr><expan resp="#JBC" cert="low">Ren<ex>iers</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>li</w>
                             <w>senez</w>
@@ -1012,7 +1023,7 @@ un peu partout. J'en ai rétabli certains.
                         </q>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
                         <w>Dist</w>
                         <w>li</w>
@@ -1041,7 +1052,7 @@ un peu partout. J'en ai rétabli certains.
                         <q>
                             <pc type="supplied">«</pc>
                             <w>Entre</w>
-                            <w>Gir</w>
+                            <w><choice><abbr>Gir</abbr><expan resp="#JBC" cert="low">Gir<ex>art</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>et</w>
                             <w>son</w>
@@ -1085,7 +1096,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>autre</w>
                             <w>part</w>
                             <w>dant</w>
-                            <w>H</w>
+                            <w><choice><abbr>H</abbr><expan resp="#JBC" cert="low">H<ex>ernalt</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>le</w>
                             <w>frans</w>
@@ -1161,7 +1172,8 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">.</pc>
                         </q>
                     </l>
-                    <milestone n="2" ed="TARBE" unit="feuillet"/>
+                    <!--<milestone n="2" ed="TARBE" unit="feuillet"/>-->
+                    <pb n="2r" facs=""/>
                     <note>FEUILLET 2 (ÉD. TARBÉ, p. 74).</note>
                     <!-- supplied irregulières -->
                     <note>
@@ -1510,7 +1522,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>mes</w>
                             <w>oncles</w>
                             <w>dant</w>
-                            <w>H</w>
+                            <w><choice><abbr>H</abbr><expan resp="#JBC" cert="low">H<ex>ernalt</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>au</w>
                             <w>vis</w>
@@ -1523,7 +1535,7 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Niés</w>
                             <w>sui</w>
-                            <w>Gir</w>
+                            <w><choice><abbr>Gir</abbr><expan resp="#JBC" cert="low">Gir<ex>art</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>le</w>
                             <w>fort</w>
@@ -1560,10 +1572,10 @@ un peu partout. J'en ai rétabli certains.
                         </q>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
                         <w>Qant</w>
-                        <w>Oliv</w>
+                        <w><choice><abbr>Oliv</abbr><expan resp="#JBC" cert="low">Oliv<ex>ier</ex></expan></choice></w>
                         <pc type="supplied">.</pc>
                         <w>oï</w>
                         <w>parler</w>
@@ -1581,14 +1593,15 @@ un peu partout. J'en ai rétabli certains.
                         <pc type="supplied">:</pc>
                     </l>
                     <!-- JBC: ce sont des manques dans le texte, qu'il faut encoder -->
+                    <pb n="2v" facs=""/>
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
                             <!--…. .....-->
-                            <gap/>
+                            <gap reason="damage" unit="char" quantity="10"/>
                             <w>gent</w>
                             <!--.....-->
-                            <gap/>
+                            <gap reason="damage" unit="char" quantity="5"/>
                             <w>parent</w>
                             <pc type="supplied">,</pc>
                             <note>(v°)</note>
@@ -1638,7 +1651,7 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Niés</w>
                             <w>sui</w>
-                            <w><abbr>K‘lon</abbr></w>
+                            <w><choice><abbr>K‘lon</abbr><expan resp="#JBC" cert="low">K<ex>ar</ex>lon</expan></choice></w>
                             <w>l</w>
                             <pc type="supplied">‘</pc>
                             <w>emperere</w>
@@ -1688,10 +1701,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Morz</w>
                             <w>est</w>
-                            <w>Gir</w>
+                            <w><choice><abbr>Gir</abbr><expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>et</w>
-                            <w>Her</w>
+                            <w><choice><abbr>Her</abbr><expan resp="#JBC" cert="low">Her<ex>nalt</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <w>le</w>
                             <w>ferrant</w>
@@ -1762,7 +1775,7 @@ un peu partout. J'en ai rétabli certains.
                     </l>
                     <l>
                         <w>Dit</w>
-                        <w>Oliv</w>
+                        <w><choice><abbr>Oliv</abbr><expan resp="#JBC" cert="low">Oliv<ex>ier</ex></expan></choice></w>
                         <pc type="supplied">.</pc>
                         <pc type="supplied">:</pc>
                         <q>
@@ -1860,12 +1873,12 @@ un peu partout. J'en ai rétabli certains.
                         </q>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
                         <w>Qant</w>
                         <w>Rollant</w>
                         <w>ot</w>
-                        <w>Oliv</w>
+                        <w><choice><abbr>Oliv</abbr><expan resp="#JBC" cert="low">Oliv<ex>ier</ex></expan></choice></w>
                         <pc type="supplied">.</pc>
                         <w>si</w>
                         <w>parler</w>
@@ -1968,7 +1981,7 @@ un peu partout. J'en ai rétabli certains.
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
-                            <supplied resp="#PM"><w>Qe</w></supplied>
+                            <supplied resp="#PM" reason="damage">Qe</supplied>
                             <w>s</w>
                             <pc type="supplied">‘</pc>
                             <w>autre</w>
@@ -1976,7 +1989,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>de</w>
                             <w>rien</w>
                             <w>me</w>
-                            <supplied resp="#PM"><w>reqerez</w></supplied>
+                            <supplied resp="#PM" reason="damage">reqerez</supplied>
                             <pc type="supplied">,</pc>
                         </q>
                     </l>
@@ -1995,7 +2008,7 @@ un peu partout. J'en ai rétabli certains.
                     </l>
                     <l n="60">
                         <w>Dist</w>
-                        <w>Oliv</w>
+                        <w><choice><abbr>Oliv</abbr><expan resp="#JBC" cert="low">Oliv<ex>ier</ex></expan></choice></w>
                         <pc type="supplied">.</pc>
                         <pc type="supplied">:</pc>
                         <q>
@@ -2008,8 +2021,8 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">»</pc>
                         </q>
                     </l>
-
-                    <milestone n="3" ed="TARBE" unit="feuillet"/>
+                    <pb n="3r" facs=""/>
+                    <!--<milestone n="3" ed="TARBE" unit="feuillet"/>-->
                     <!-- FEUILLETS 3 ET 4 (ÉD. TARBÉ, p. 134).</note> -->
 
                     <l>
@@ -2155,7 +2168,10 @@ un peu partout. J'en ai rétabli certains.
                             <w>si</w>
                             <w>aquis</w>
                             <w>dant</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>art</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>le</w>
                             <w>guerrier</w>
@@ -2208,7 +2224,7 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">,</pc>
                         </q>
                         <note>12 C‘est la formalité de l‘<mentioned>harmiscara</mentioned> ; voir
-                            Raoul de Cambrai, p. xxxij-xxxiij</note>
+                            <bibl>Raoul de Cambrai, p. xxxij-xxxiij</bibl></note>
                     </l>
                     <l>
                         <q>
@@ -2253,7 +2269,10 @@ un peu partout. J'en ai rétabli certains.
                             <w>est</w>
                             <w>fiers</w>
                             <w>dant</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>art</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>le</w>
                             <w>guerrier</w>
@@ -2270,7 +2289,7 @@ un peu partout. J'en ai rétabli certains.
                         </q>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
@@ -2392,7 +2411,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>dant</w>
                             <w>Bueves</w>
                             <w>li</w>
-                            <w>bar<supplied resp="#PM">bés</supplied></w>
+                            <w>bar<supplied resp="#PM" reason="damage">bés</supplied></w>
                             <pc type="supplied">,</pc>
                         </q>
                     </l>
@@ -2408,7 +2427,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>tint</w>
                             <w>qite</w>
                             <w>cest</w>
-                            <w>res<supplied resp="#PM">né</supplied></w>
+                            <w>res<supplied resp="#PM" reason="damage">né</supplied></w>
                             <pc type="supplied">;</pc>
                         </q>
                     </l>
@@ -2428,7 +2447,7 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">‘</pc>
                             <w>en</w>
                             <w>mostra</w>
-                            <supplied><w>fierté</w><pc type="supplied">.</pc></supplied>
+                            <supplied resp="#PM" reason="damage">fierté</supplied><pc type="supplied">.</pc>
                         </q>
                     </l>
                     <l>
@@ -2440,10 +2459,10 @@ un peu partout. J'en ai rétabli certains.
                             <w>est</w>
                             <w>avis</w>
                             <w>qe</w>
-                            <w>gran<supplied>t</supplied></w>
-                            <supplied><w>tort</w>
-                                <w>en</w>
-                                <w>avés</w></supplied>
+                            <w>gran<supplied reason="damage" resp="#PM">t</supplied></w>
+                            <supplied resp="#PM" reason="damage">tort
+                                en
+                                avés</supplied>
                             <note>[1200]</note>
                         </q>
                     </l>
@@ -2453,9 +2472,9 @@ un peu partout. J'en ai rétabli certains.
                             <w>Qant</w>
                             <w>vos</w>
                             <w>mon</w>
-                            <w>on<supplied>cle</supplied></w>
-                            <supplied><w>volés</w>
-                                <w>deseriter</w></supplied>
+                            <w>on<supplied resp="#PM" reason="damage">cle</supplied></w>
+                            <supplied resp="#PM" reason="damage">volés
+                                deseriter</supplied>
                             <pc type="supplied">.</pc>
                         </q>
                     </l>
@@ -2466,10 +2485,11 @@ un peu partout. J'en ai rétabli certains.
                             <w>feroiz</w>
                             <w>se</w>
                             <w>le</w>
-                            <supplied><w>deseritez</w></supplied>
+                            <supplied resp="#PM" reason="damage">deseritez</supplied>
                             <pc type="supplied">.</pc>
                         </q>
                     </l>
+                    <pb n="3v" facs=""/>
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
@@ -2483,7 +2503,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">‘</pc>
                             <w>om</w>
                             <w>qiert</w>
-                            <w>euoiron</w>
+                            <choice>
+                                <sic><w>euoiron</w></sic>
+                                <corr resp="#PM"><w>en</w> <w>Noiron</w></corr>
+                            </choice>
                             <w>pré</w>
                             <pc type="supplied">,</pc>
                             <note>31 Sic, lire <mentioned>en Noiron pré</mentioned>; B
@@ -2738,7 +2761,7 @@ un peu partout. J'en ai rétabli certains.
                             <w>trop</w>
                             <w>te</w>
                             <!-- JBC: une série de supplied omis -->
-                            <supplied><w>par</w></supplied>
+                            <supplied resp="#PM" reason="damage">par</supplied>
                             <w>es</w>
                             <w>vantez</w>
                             <pc type="supplied">:</pc>
@@ -2760,7 +2783,7 @@ un peu partout. J'en ai rétabli certains.
                         </q>
                     </l>
                     <l>
-                        <supplied><w>A</w></supplied>
+                        <supplied resp="#PM" reason="damage">A</supplied>
                         <w>ces</w>
                         <w>paroles</w>
                         <w>qe</w>
@@ -2771,7 +2794,7 @@ un peu partout. J'en ai rétabli certains.
                         <w>oez</w>
                     </l>
                     <l>
-                        <w><supplied>De</supplied>denz</w>
+                        <w><supplied resp="#PM" reason="damage">De</supplied>denz</w>
                         <w>le</w>
                         <w>tref</w>
                         <w>en</w>
@@ -2782,7 +2805,7 @@ un peu partout. J'en ai rétabli certains.
                         <note>[1225]</note>
                     </l>
                     <l>
-                        <supplied><w>Et</w></supplied>
+                        <supplied resp="#PM" reason="damage">Et</supplied>
                         <w>ovec</w>
                         <w>lui</w>
                         <w>sont</w>
@@ -2794,7 +2817,7 @@ un peu partout. J'en ai rétabli certains.
                         <pc type="supplied">.</pc>
                     </l>
                     <l>
-                        <w><supplied>De</supplied>lez</w>
+                        <w><supplied resp="#PM" reason="damage">De</supplied>lez</w>
                         <w>le</w>
                         <w>roi</w>
                         <w>s</w>
@@ -2805,7 +2828,7 @@ un peu partout. J'en ai rétabli certains.
                         <pc type="supplied">.</pc>
                     </l>
                     <l n="55">
-                        <w><supplied>U</supplied>imès</w>
+                        <w><supplied resp="#PM" reason="damage">U</supplied>imès</w>
                         <w>orrez</w>
                         <w>contreres</w>
                         <w>et</w>
@@ -2813,7 +2836,7 @@ un peu partout. J'en ai rétabli certains.
                         <pc type="supplied">,</pc>
                     </l>
                     <l>
-                        <supplied><w>Com</w></supplied>
+                        <supplied resp="#PM" reason="damage">Com</supplied>
                         <w>Olivier</w>
                         <w>et</w>
                         <w>li</w>
@@ -2821,8 +2844,8 @@ un peu partout. J'en ai rétabli certains.
                         <w>armez</w>
                     </l>
                     <l>
-                        <supplied><w>En</w></supplied>
-                        <w rend="elision"><supplied>l</supplied></w>
+                        <supplied resp="#PM" reason="damage">En</supplied>
+                        <w rend="elision"><supplied resp="#PM" reason="damage">l</supplied></w>
                         <pc type="supplied">‘</pc>
                         <w>ille</w>
                         <w>soz</w>
@@ -2831,11 +2854,11 @@ un peu partout. J'en ai rétabli certains.
                         <note>[1230]</note>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
-                        <supplied><w>Ce</w>
-                            <w>dit</w>
-                            <w>Roll</w><pc type="supplied">.</pc></supplied>
+                        <supplied resp="#PM" reason="damage">Ce
+                            dit
+                            Roll.</supplied>
                         <w>a</w>
                         <w>la</w>
                         <w>chiere</w>
@@ -2845,8 +2868,8 @@ un peu partout. J'en ai rétabli certains.
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
-                            <supplied><w>Drois</w>
-                                <w>emperere</w></supplied>
+                            <supplied resp="#PM" reason="damage">Drois
+                                emperere</supplied>
                             <pc type="supplied">,</pc>
                             <w>forment</w>
                             <w>vos</w>
@@ -2856,18 +2879,19 @@ un peu partout. J'en ai rétabli certains.
                     <l n="60">
                         <q>
                             <pc type="supplied">«</pc>
-                            <supplied><w>Cist</w>
-                                <w>vassaus</w>
-                                <w>ci</w></supplied>
+                            <supplied resp="#PM" reason="damage">Cist
+                                vassaus
+                                ci</supplied>
                             <pc type="supplied">,</pc>
                             <w>ce</w>
-                            <supplied reason="lectio"><w>est</w></supplied>
+                            <supplied reason="lectio">est</supplied>
                             <w>mout</w>
                             <w>grant</w>
                             <w>folie</w>
                             <pc type="supplied">.</pc>
                         </q>
                     </l>
+                    <pb n="4r" facs=""/>
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
@@ -2901,7 +2925,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Li</w>
                             <w>dus</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>qi</w>
                             <w>sa</w>
@@ -2929,9 +2956,6 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">»</pc>
                         </q>
                     </l>
-
-                    <!--  PAS FAITE -->
-
                     <l n="65">
                         <w>Dist</w>
                         <w>Olivier</w>
@@ -2948,7 +2972,7 @@ un peu partout. J'en ai rétabli certains.
                         <q>
                             <pc type="supplied">«</pc>
                             <w>Sire</w>
-                            <w>Roll</w>
+                            <w><choice><abbr>Roll</abbr><expan cert="low" resp="#JBC">Roll<ex>ant</ex></expan></choice></w>
                             <pc type="supplied">.</pc>
                             <pc type="supplied">,</pc>
                             <w>lessiez</w>
@@ -3061,7 +3085,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Je</w>
                             <w>por</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>art</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>a</w>
                             <w>la</w>
@@ -3111,7 +3138,7 @@ un peu partout. J'en ai rétabli certains.
                         <pc type="supplied">.</pc>
                     </l>
                 </lg>
-                <lg>
+                <lg type="laisse">
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
@@ -3133,7 +3160,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Li</w>
                             <w>dus</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>dont</w>
                             <w>n</w>
@@ -3262,7 +3292,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Li</w>
                             <w>dus</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <w>est</w>
                             <w>chevalier</w>
@@ -3294,6 +3327,7 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">:</pc>
                         </q>
                     </l>
+                    <pb n="4v" facs=""/>
                     <l>
                         <q>
                             <pc type="supplied">«</pc>
@@ -3329,7 +3363,7 @@ un peu partout. J'en ai rétabli certains.
                     </l>
                     <l>
                         <w>Dit</w>
-                        <supplied reason="lectio"><w>Olivier</w></supplied>
+                        <corr resp="#PM"><w>Olivier</w></corr>
                         <pc type="supplied">:</pc>
                         <q>
                             <pc type="supplied">«</pc>
@@ -3478,7 +3512,10 @@ un peu partout. J'en ai rétabli certains.
                             <pc type="supplied">«</pc>
                             <w>Je</w>
                             <w>por</w>
-                            <w>Gir</w>
+                            <w><choice>
+                                <abbr>Gir</abbr>
+                                <expan resp="#JBC" cert="low">Gir<ex>ars</ex></expan>
+                            </choice></w>
                             <pc type="supplied">.</pc>
                             <pc type="supplied">,</pc>
                             <w>le</w>
