@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- JBC: adresse plus valide --><!--<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>--><?xml-model href="Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><!-- JBC: on ne peut pas associer un odd directement (petite coquille nom de fichier?) --><!--<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../odd/Modele.odd"?>--><?xml-model href="Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?><!-- JBC: je teste aussi contre tei_all au cas où (validité TEI) --><!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-   schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrBa" xml:lang="fr" type="ed" version="5"
    corresp="jns5643">
    <teiHeader>
@@ -893,7 +895,7 @@
             <l xml:id="edB_l_44" n="44">
                <gap unit="char" reason="damage" quantity=""/>
                <w lemma="lunete" type="POS=OUT|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000285"><gap
-                     unit="" reason="damage"/>olente</w>
+                     unit="char" quantity="" reason="damage"/>olente</w>
                <w lemma="de" type="POS=OUT" xml:id="edB_w_000286">de</w>
                <w lemma="trestot" type="POS=OUT|DEGRE=-" xml:id="edB_w_000287">trestoz</w>
                <w lemma="en2" type="POS=OUT" xml:id="edB_w_000288">en</w>
@@ -3152,9 +3154,11 @@
             <lb n="44"/>
             <l xml:id="edB_l_188" n="188">
                <w lemma="par" type="POS=PRE" xml:id="edB_w_001288">Par</w>
-               <w lemma="le" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_001289">lost</w>
-               <w lemma="sormener" type="POS=VERcjg|MODE=&lt;UNK&gt;" xml:id="edB_w_001290"
-                  >sarmerent</w>
+               <w lemma="le" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_001289" rend="elision">l</w>
+               <w lemma="SEGM" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_001289">ost</w>
+               <w lemma="SEGM" type="POS=VERcjg|MODE=&lt;UNK&gt;" xml:id="edB_w_001290"
+                  >s</w>
+               <w lemma="SEGM" type="POS=VERcjg|MODE=&lt;UNK&gt;" xml:id="edB_w_001290">armerent</w>
                <w lemma="serjant" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" xml:id="edB_w_001291"
                   >seriant</w>
                <w lemma="et" type="POS=CONcoo" xml:id="edB_w_001292">et</w>
@@ -4728,7 +4732,7 @@
                <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" xml:id="edB_w_001918">
                   <choice>
                      <abbr>ch‘r</abbr>
-                     <expan>ch<ex>evaie</ex>r</expan>
+                     <expan>ch<ex>evalie</ex>r</expan>
                   </choice>
                </w>
                <w lemma="gentil" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=n|DEGRE=p"
