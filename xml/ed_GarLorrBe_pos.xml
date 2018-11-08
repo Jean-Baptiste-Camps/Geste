@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- JBC: je rajoute l'association de TEI ALL -> conflits avec les attributs implicites de tei_all, supprimés 
-      du modèle 'maison'--><!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>--><!--  --><!--<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrBe" type="ed" xml:lang="fr" version="5"
       corresp="jns5643">
       <!-- Ma démarche pour l'encodage du texte a été d'essayer de me rapprocher de la version éditée 
@@ -170,7 +171,7 @@
                                     <forename full="init">F.</forename>
                                     <surname full="yes">Ducrest</surname></persName>, che lo trovò
                               fra le carte già appartenute a uno studioso di qualche rinomanza, il
-                                    Combaz<note n="1" type="edition" place="bottom" resp="#Bertoni"
+                                    Combaz<note n="1" place="bottom" resp="#Bertoni"
                                           ><persName xml:id="JJC" full="yes"><forename full="init"
                                                 >J.—J.</forename>
                                           <surname full="yes">Combaz</surname>(<date type="death"
@@ -205,7 +206,7 @@
                               disputa finisce in un combattimento.</p>
                         <p>Il passo corrispondente al nostro frammento leggesi nell' <bibl>ediz. di
                                     P. Paris a p. 122sgg. del vol.I (<date when="1833"
-                                    >1833</date>)</bibl><note n="3" type="edition" place="bottom"
+                                    >1833</date>)</bibl><note n="3" place="bottom"
                                     resp="#Bertoni">Vedasi anche <!-- JBC: bon traitement des liens -->
                                     <ref target="https://archive.org/details/liromansdegarinl01jean"
                                                   ><bibl><title rend="italic">l'Hist. litt. de la
@@ -213,7 +214,7 @@
                                           <author>Gautier</author>, <title rend="italic">Bibl. d.
                                                 chans. d. G.</title>, <date when="1897">1897</date>,
                                           p. 107.</bibl></note>. Notevoli sono le varianti, come il
-                              lettore avrà modo facilmente di vedere <note n="4" type="edition"
+                              lettore avrà modo facilmente di vedere <note n="4"
                                     place="bottom" resp="#Bertoni">Ho tenuto sott‘ occhio anche il
                                     cod. di Berna 113, di cui ho riportato qua e là, a piè di
                                     pagina, qualche variante.</note> se vorrà esaminare la stampa
@@ -1618,7 +1619,7 @@
                                     <w lemma="avoir"
                                           type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                                           xml:id="Bertoni_Gar_w_000589" rend="aggl">a</w><w
-                                          lemma="larriz" type="POS=OUT|NOMB.=p|GENRE=m|CAS=r"
+                                          cert="low" lemma="larriz" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r"
                                           xml:id="Bertoni_Gar_w_000590">loriz</w>
                                     <w lemma="de" type="POS=PRE" xml:id="Bertoni_Gar_w_000591"
                                           rend="aggl">de</w><w lemma="Bordeaux"
@@ -3488,10 +3489,10 @@
                                     rend="aggl">i</w><w lemma="ferir"
                                     type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p"
                                     xml:id="Bertoni_Gar_w_001432">fierent</w>
-                              <w lemma="estre1" type="POS=OUT" xml:id="Bertoni_Gar_w_001433">sui</w>
-                              <w lemma="baron" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r"
+                              <w lemma="son4" type="POS=DETpos|NOMB.=p|GENRE=m|CAS=n" xml:id="Bertoni_Gar_w_001433">sui</w>
+                              <w lemma="baron" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=n"
                                     xml:id="Bertoni_Gar_w_001434">baro<ex>n</ex></w>
-                              <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r"
+                              <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n"
                                     xml:id="Bertoni_Gar_w_001435">ch<ex>evalie</ex>rs</w></l>
                         <l xml:id="Bertoni_Gar_l_203" n="203"><w lemma="cant1" type="POS=CONsub"
                                     xml:id="Bertoni_Gar_w_001436">Q<ex>ua</ex>nt</w>
@@ -4652,7 +4653,7 @@
                                           xml:id="Bertoni_Gar_w_001938">mere</w>
                                     <w lemma="Biatrix" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"
                                           xml:id="Bertoni_Gar_w_001939">beaut<ex>ri</ex>x<note
-                                                n="18" xml:lang="it" type="edition" place="bottom"
+                                                n="18" xml:lang="it" place="bottom"
                                                 resp="#Bertoni">Nessuna lacuna nel ms.</note></w>
                                     <gap reason="omitted"/>
                               </q></l>
@@ -5713,7 +5714,7 @@
                         <p> Mi mancano i materiali per poter collocare il nostro frammento nel posto
                               che gli spetta fra gli assai numerosi mss. che ci restano della
                               canzone di Garin. A ciò fare, occorrerebbero le copie dei passi
-                              corrispondenti in tutti i codici <note n="20" type="edition"
+                              corrispondenti in tutti i codici <note n="20"
                                     place="bottom" resp="#Bertoni" xml:lang="it">Ho consultati gli
                                     studi dello Stengel, del Bonnardot, del Vietor e anche quello
                                     del <bibl>Krüger, <title rend="italic">Über die Stellung der
@@ -6078,14 +6079,14 @@
                         <p> Non è maraviglia che il ms. di Berna sia in più luoghi discorde. Il
                               frammento, a quanto mi par lecito congetturare dai pochi assaggi, che
                               ho potuto fare, proviene da un codice che si riattaccava alla famiglia
-                              I (gruppo I) del Bonnardot<note n="23" type="edition" place="bottom"
+                              I (gruppo I) del Bonnardot<note n="23" place="bottom"
                                     resp="#Bertoni"><bibl>Romania, III, 261</bibl></note>; mentre il
                               ms. di Berna appartiene alla famiglia II. È tutto ciò che posso dire,
                               co1 qualche riserva; ed è molto poco. Ma mi è parso opportuno
                               comunicare agli eruditi, sia pure nudamente, la lezione del nuovo
                               lacerto, lezione, che gioverà, senza dubbio, all‘illustre studioso,
                               dal quale abbiamo già avuta l‘ edizione di Hervis de Metz<note n="24"
-                                    place="bottom" type="edition"><bibl><title rend="italic">Hervis
+                                    place="bottom"><bibl><title rend="italic">Hervis
                                                 von Metz. Vorgedicht der Lothringer Geste … hgg. von
                                                 E. Stengel</title>, in <publisher>Gesellschaft f.
                                                 roman. Lit.</publisher> vol. I (<date when="1902"

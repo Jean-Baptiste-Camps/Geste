@@ -3,6 +3,13 @@
 incompréhensibles, etc. 
 Mériterait d'être repris en détail (avec une édition sous la main).
 -->
+
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrMo" xml:lang="fr" type="ed" version="5" corresp="jns5643">
    <teiHeader>
       <fileDesc>
@@ -124,7 +131,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
          <lg type="laisse" xml:id="L_001" n="001">
             <lb n="1"/>
             <l xml:id="edM_l_1" n="1">
-               <note type="foliotation_manuscrit">fol. I.</note>
+               <note>fol. I.</note>
                <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000001" rend="elision">l</w>
                <pc type="supplied">'</pc>
                <w lemma="avoir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000002">avoir</w>
@@ -474,7 +481,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             </l>
             <lb n="31"/>
             <l xml:id="edM_l_31" n="31">
-               <q><note type="foliotation_manuscrit">col. 2.</note>
+               <q><note>col. 2.</note>
                <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edM_w_000209">est</w>
                <w lemma="mout" type="POS=ADVgen|DEGRE=-" xml:id="edM_w_000210">mult</w>
                <w lemma="pro" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" xml:id="edM_w_000211">prod<gap unit="char" reason="facsimile" quantity="7"/></w></q>
@@ -746,10 +753,10 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <gap unit="char" reason="facsimile" quantity="4"/>
             </l>
             <gap unit="lines" quantity="3" reason="damage"/>
-            <note type="edition">(3 ganz zerstörte Werse.)</note>
+            <note>(3 ganz zerstörte Werse.)</note>
             <lb n="27"/>
             <l xml:id="edM_l_54" n="54">
-               <w lemma="SEGM" type="POS=OUT|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000367">li</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000367">li</w>
                <w lemma="" type="POS=OUT" xml:id="edM_w_000368">p<gap unit="char" reason="facsimile" quantity="6"/></w>
                <w lemma="qui" type="POS=PROrel|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000369">qui</w>
                <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edM_w_000370">sont</w>
@@ -769,7 +776,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             </l>
             <lb n="29"/>
             <l xml:id="edM_l_56" n="56">
-               <w lemma="il" type="POS=OUT|PERS.=3|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000379">il</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000379">il</w>
                <w lemma="gäaignier1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edM_w_000380">gaagnent</w>
                <w lemma="trestot" type="POS=PROind|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000381">trestot</w>
                <w lemma="a3" type="POS=PRE" xml:id="edM_w_000382">à</w>
@@ -790,13 +797,13 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             </l>
             <lb n="31"/>
             <l xml:id="edM_l_58" n="58">
-               <note type="foliotation_manuscrit">fol. II.
+               <note>fol. II.
                   </note>
                <gap unit="char" reason="facsimile" quantity="8"/>
-               <w lemma="vair1" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" xml:id="edM_w_000391">vair</w>
-               <w lemma="et" type="POS=OUT" xml:id="edM_w_000392">et</w>
-               <w lemma="le" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000393">le</w>
-               <w lemma="gris" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000394">gris</w>
+               <w lemma="vair1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" xml:id="edM_w_000391">vair</w>
+               <w lemma="et" type="POS=CONcoo" xml:id="edM_w_000392">et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000393">le</w>
+               <w lemma="gris" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000394">gris</w>
                <pc type="supplied">.</pc>
             </l>
             <lb n="32"/>
@@ -805,7 +812,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <w lemma="là" type="POS=ADVgen|DEGRE=-" xml:id="edM_w_000395">là</w>
                <w lemma="dedenz" type="POS=ADVgen|DEGRE=-" xml:id="edM_w_000396">dedenz</w>
                <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edM_w_000397">ont</w>
-               <w lemma="prendre" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000398">pris</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000398">pris</w>
             </l>
             <lb n="33"/>
             <l xml:id="edM_l_60" n="60">
@@ -1047,20 +1054,20 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             <lb n="2"/>
             <l xml:id="edM_l_79" n="79">
                <gap unit="char" reason="facsimile" quantity="4"/>
-               <w lemma="Riuns" type="POS=OUT|NOMB.=s|GENRE=x|CAS=r" xml:id="edM_w_000538">Riuns</w>
-               <w lemma="le" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000539">li</w>
-               <w lemma="baron" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000540">bers</w>
+               <w lemma="Riuns" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" xml:id="edM_w_000538">Riuns</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000539">li</w>
+               <w lemma="baron" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000540">bers</w>
                <w lemma="Achar" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000541">Achar</w>
                <w lemma="guenchir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edM_w_000542">guenchist</w>
                <pc type="supplied">.</pc>
             </l>
             <gap unit="lines" quantity="4" reason="damage"/>
-            <note type="edition"> (vier zerstörte Verse.)</note>
+            <note> (vier zerstörte Verse.)</note>
             <!-- Cette information sur l'édition fait double emploi avec l'encodage en gap. Toutefois, les encodages se voulant imitatifs de l'édition imprimée, nous le conservons en note. -->
             <lb n="3"/>
             <l xml:id="edM_l_80" n="80">
-               <w lemma="cel" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000543">cil</w>
-               <w lemma="soudoiier1" type="POS=OUT" xml:id="edM_w_000544">sol<gap unit="char" reason="facsimile" quantity="3"/><supplied resp="#JBC">do</supplied>ier</w>
+               <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000543">cil</w>
+               <w lemma="soudoiier1" type="POS=OUT|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000544">sol<gap unit="char" reason="facsimile" quantity="3"/><supplied resp="#JBC">do</supplied>ier</w>
                <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" xml:id="edM_w_000545">se</w>
                <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edM_w_000546">sont</w>
                <w lemma="bien1" type="POS=ADVgen|DEGRE=p" xml:id="edM_w_000547">bien</w>
@@ -1090,7 +1097,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <w lemma="tenir1" type="POS=VERinf" xml:id="edM_w_000562">tenir</w>
                <pc type="supplied">.</pc>
             </l>
-            <note type="foliotation_manuscrit">col. 2.</note>
+            <note>col. 2.</note>
             <lb n="6"/>
             <l xml:id="edM_l_83" n="83">
                <w lemma="fort" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" xml:id="edM_w_000563">Fors</w>
@@ -1115,8 +1122,10 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <w lemma="borjois" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" xml:id="edM_w_000576">boriois</w>
                <pc type="supplied">,</pc>
                <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n" xml:id="edM_w_000577">ce</w>
-               <w lemma="je" type="POS=OUT|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edM_w_000578">me<gap unit="char" reason="facsimile" quantity="2"/></w>
-               <w lemma="vif" type="POS=OUT|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edM_w_000579">vis</w>
+               <!-- JBC: lire, ce m'est vis -->
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edM_w_000578">m</w>
+               <w lemma="estre1" type="POS=VERcjg|PERS.=1|NOMB.=s|GENRE=m|CAS=i" xml:id="edM_w_000578">e<gap unit="char" reason="facsimile" quantity="2"/><supplied resp="#JBC" reason="damage">st</supplied></w>
+               <w lemma="vis" type="POS=NOMcom|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edM_w_000579">vis</w>
                <pc type="supplied">,</pc>
             </l>
             <lb n="8"/>
@@ -1156,7 +1165,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             <lb n="11"/>
             <l xml:id="edM_l_88" n="88">
                <w lemma="maint" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" xml:id="edM_w_000603">meint</w>
-               <w lemma="bovier" type="POS=OUT|NOMB.=x|GENRE=x|CAS=x" xml:id="edM_w_000604">belier</w>
+               <w lemma="" type="POS=OUT" xml:id="edM_w_000604">belier</w>
                <w lemma="brisier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" xml:id="edM_w_000605">brisent</w>
                <w lemma="et" type="POS=CONcoo" xml:id="edM_w_000606">et</w>
                <w lemma="maint" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" xml:id="edM_w_000607">maint</w>
@@ -1330,7 +1339,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             <l xml:id="edM_l_102" n="102">
                <w lemma="jusque" type="POS=PRE" xml:id="edM_w_000712">jusqu</w>
                <pc type="supplied">'</pc>
-               <w lemma="i2" type="POS=OUT" xml:id="edM_w_000713">i</w><!-- JBC: ?? -->
+               <w lemma="i2" type="POS=PROadv" xml:id="edM_w_000713">i</w><!-- JBC: ?? -->
                <w lemma="Dijon" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" xml:id="edM_w_000714">Dijon</w>
                <w lemma="ne1" type="POS=ADVneg" xml:id="edM_w_000715">ne</w>
                <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edM_w_000716">prist</w>
@@ -1349,7 +1358,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000725">Garins</w>
             </l>
             <gap unit="lines" quantity="3" reason="damage" cert="high"/>
-            <note type="edition">(3 zerstörte Verse.)</note>
+            <note>(3 zerstörte Verse.)</note>
             <lb n="27"/>
             <l xml:id="edM_l_104" n="104">
                <q><w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" xml:id="edM_w_000726">biax</w>
@@ -1416,7 +1425,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             </l>
             <lb n="32"/>
             <l xml:id="edM_l_109" n="109">
-               <note type="foliotation_manuscrit">fol. III.
+               <note>fol. III.
                   </note>
                <q><w lemma="ne1" type="POS=ADVneg" xml:id="edM_w_000765" rend="elision">n</w>
                <pc type="supplied">'</pc>
@@ -1456,7 +1465,8 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <w lemma="boschage" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000788">boschage</w>
                <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000789" rend="elision">s</w>
                <pc type="supplied">'</pc>
-               <w lemma="SEGM" type="POS=OUT|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edM_w_000790">enfuit</w>
+               <w lemma="en2" type="POS=PROadv" xml:id="edM_w_000790" rend="aggl">en</w>
+               <w lemma="fuir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edM_w_000790">fuit</w>
                <w lemma="come1" type="POS=CONsub" xml:id="edM_w_000791">comme</w>
                <w lemma="ome" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000792">home</w>
                <w lemma="eschif1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" xml:id="edM_w_000793">eschis</w>
@@ -1548,7 +1558,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
             </l>
             <lb n="42"/>
             <l xml:id="edM_l_119" n="119"><!-- JBC: je ne comprends pas ce vers. À revoir. On attendrait plutôt
-               'ils font tellement de bruit qu'on entendrait pas Dieu toner'.
+               'ils font tellement de bruit qu'on n'entendrait pas Dieu toner'.
             -->
                <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000838">au</w>
                <w lemma="SEGM" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edM_w_000839">destraũ</w>
@@ -1726,7 +1736,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                <gap unit="char" reason="facsimile" quantity="5"/>
                <w lemma="" type="POS=OUT" xml:id="edM_w_000936">mes</w>
                <w lemma="par" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000937">pares</w>
-               <w lemma="vif" type="POS=OUT" xml:id="edM_w_000938">vive</w>
+               <w lemma="vivre1" type="POS=OUT" xml:id="edM_w_000938">vive</w>
                <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000939">li</w>
                <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000940">dus</w>
                <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edM_w_000941">Garins</w><!--</sic>-->

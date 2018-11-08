@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><!--<?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="TEI_projet_final.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="TEI_projet_final_documentation.odd"?>--><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrMe2" type="ed" xml:lang="fr" corresp="jns5643" version="5">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrMe2" type="ed" xml:lang="fr" corresp="jns5643" version="5">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -257,7 +263,7 @@
                 <lb n="23"/>
                 <l xml:id="edGLM2_l_5" n="5">
                     <w lemma="Bernart" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000031"><choice>
-                        <abbr>B<am><pc type="supplied">.</pc></am></abbr>
+                        <abbr>B<am>.</am></abbr>
                         <expan>B<ex>ernars</ex></expan>
                     </choice></w><!-- JBC: tenter de signaler ou développer l'abréviation? -->
                     <w lemma="chevauchier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGLM2_w_000032">chevauche</w><pc type="supplied">,</pc>
@@ -518,7 +524,9 @@
                 <lb n="18"/>
                 <l xml:id="edGLM2_l_33" n="33"><pc type="supplied">«</pc><q>
                         <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n" xml:id="edGLM2_w_000241">Sainte</w>
-                        <w lemma="marie" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n" xml:id="edGLM2_w_000242">Marie</w><pc type="supplied">!</pc></q><pc type="supplied">»</pc>ce <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGLM2_w_000243">dit</w>
+                        <w lemma="marie" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n" xml:id="edGLM2_w_000242">Marie</w><pc type="supplied">!</pc></q><pc type="supplied">»</pc>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" xml:id="edGLM2_w_000243">dit</w>
                     <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000244">li</w>
                     <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000245">dus</w>
                     <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000246"><choice>
@@ -755,11 +763,11 @@
                     <w lemma="Alemant" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000430">alemant</w>
                     <w lemma="Orri" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" xml:id="edGLM2_w_000431">Orris</w><pc type="supplied">!</pc></l>
                 <!-- FRAGMENT DE GARIN LE LORRAIN 432 -->
-                <pb/>
+                <!--<pb/>
                 <figure>
-                    <!-- JBC: ok, mais là vous pointez vers le pdf entier. -->
+                    <!-\- JBC: ok, mais là vous pointez vers le pdf entier. -\->
                     <graphic url="roma_0035-8029_1905_num_34_135_5417.pdf"/> 
-                </figure>
+                </figure>-->
 
                 <!--<p>FRAGMENT DE GARIN LE LORRAIN 433</p>-->
                 <pb facs="0006.pdf.png" n="00006"/>
@@ -1609,7 +1617,7 @@
                 <lb n="5"/>
                 <l xml:id="edGLM2_l_145" n="145">
                     <!-- JBC: pas un mot -->
-                    <!--<w >-->—<!--</w>-->
+                    <!--<w >--><pc type="supplied">—</pc><!--</w>-->
                     <w lemma="sor2" type="POS=PRE" xml:id="edGLM2_w_001056">Sor</w>
                     <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edGLM2_w_001057">son</w>
                     <w lemma="cosin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edGLM2_w_001058">cousin</w>

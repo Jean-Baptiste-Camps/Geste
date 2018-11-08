@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO:
+pour ces fragments, comme pour ceux du même lot, il faut:
+- recréer la numérotation @xml:id
+- séparer en plusieurs fichiers ceux qui ont besoin de l'être
+- corriger les problèmes de validité
+
+-->
 <?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
@@ -695,7 +702,7 @@
                <!--<w >-->
                <gap unit="char" reason="damage" quantity=""/>
                <!--</w>-->
-               <w lemma="le" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edB_w_000214">li</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" xml:id="edB_w_000214">li</w>
                <w lemma="pere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" xml:id="edB_w_000215"
                   >peres</w>
                <w lemma="ne1" type="POS=ADVneg" xml:id="edB_w_000216">ne</w>
@@ -712,7 +719,8 @@
             <lb n="26"/>
             <l xml:id="edB_l_32" n="32">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="issir" type="POS=OUT|DEGRE=-" xml:id="edB_w_000220"><gap unit="char"
+               <!-- veoir? -->
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000220"><gap unit="char"
                      reason="damage" quantity="1"/>eissies</w>
                <w lemma="de" type="POS=PRE" xml:id="edB_w_000221">de</w>
                <w lemma="lance" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" xml:id="edB_w_000222"
@@ -724,7 +732,7 @@
             <l xml:id="edB_l_33" n="33">
                <gap unit="char" reason="damage" quantity=""/>
                <w lemma="fier" type="POS=OUT" xml:id="edB_w_000224">fir</w>
-               <w lemma="estre1" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=3|NOMB.=p"
+               <w lemma="estre1" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=3|NOMB.=p" cert="low"
                   xml:id="edB_w_000225">fuissent</w>
                <w lemma="SEGM" type="POS=OUT" xml:id="edB_w_000226" rend="aggl">
                   <choice>
@@ -758,7 +766,7 @@
             <lb n="29"/>
             <l xml:id="edB_l_35" n="35">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="estre1" type="POS=OUT|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s"
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s"
                   xml:id="edB_w_000231">estoit</w>
                <w lemma="de" type="POS=PRE" xml:id="edB_w_000232">de</w>
                <w lemma="tot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" xml:id="edB_w_000233">toz</w>
@@ -773,7 +781,7 @@
             <lb n="30"/>
             <l xml:id="edB_l_36" n="36">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="a3" type="POS=OUT" xml:id="edB_w_000236">a</w>
+               <w lemma="a3" type="POS=PRE" xml:id="edB_w_000236">a</w>
                <w lemma="bataille" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000237"
                   >bataille</w>
                <w lemma="en2" type="POS=PROadv" xml:id="edB_w_000238">en</w>
@@ -790,8 +798,8 @@
             <lb n="31"/>
             <l xml:id="edB_l_37" n="37">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="estre1" type="POS=OUT" xml:id="edB_w_000244">fu</w>
-               <w lemma="arme" type="POS=OUT" xml:id="edB_w_000245">armes</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" xml:id="edB_w_000244">fu</w>
+               <w lemma="armer" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" xml:id="edB_w_000245">armes</w>
                <w lemma="sor2" type="POS=PRE" xml:id="edB_w_000246">sor</w>
                <pc type="orig">.</pc>
                <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000247">I</w>
@@ -829,8 +837,8 @@
             <lb n="34"/>
             <l xml:id="edB_l_40" n="40">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="SEGM" type="POS=OUT" xml:id="edB_w_000261" rend="elision">l</w>
-               <w lemma="SEGM" type="POS=OUT" xml:id="edB_w_000261">escu</w>
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000261" rend="elision">l</w>
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000261">escu</w>
                <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s"
                   xml:id="edB_w_000262">ot</w>
                <w lemma="escrire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000263"
@@ -844,7 +852,7 @@
             <lb n="35"/>
             <l xml:id="edB_l_41" n="41">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="grant" type="POS=OUT" xml:id="edB_w_000266"><unclear reason="damage"
+               <w lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p" xml:id="edB_w_000266"><unclear reason="damage"
                            ><choice><abbr>grãt</abbr><expan>gra<ex>n</ex>t</expan></choice></unclear>t<note
                      n="3">3 Das Abkürzungszeich von grant ist noch theilweise sichtbar.</note></w>
                <w lemma="merveille" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000267"
@@ -894,7 +902,7 @@
             <lb n="38"/>
             <l xml:id="edB_l_44" n="44">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="lunete" type="POS=OUT|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000285"><gap
+               <w lemma="" type="POS=OUT|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000285"><gap
                      unit="char" quantity="" reason="damage"/>olente</w>
                <w lemma="de" type="POS=OUT" xml:id="edB_w_000286">de</w>
                <w lemma="trestot" type="POS=OUT|DEGRE=-" xml:id="edB_w_000287">trestoz</w>
@@ -934,7 +942,7 @@
             <lb n="41"/>
             <l xml:id="edB_l_47" n="47">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="suen" type="POS=OUT" xml:id="edB_w_000303"><gap unit="char" reason="damage"
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000303"><gap unit="char" reason="damage"
                      quantity=""/>st</w>
                <w lemma="aler" type="POS=OUT" xml:id="edB_w_000304">ales</w>
                <w lemma="cui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=i" xml:id="edB_w_000305">cui</w>
@@ -981,9 +989,10 @@
                <gap unit="char" reason="damage" quantity=""/>
                <w lemma="descirier" type="POS=OUT|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                   xml:id="edB_w_000319"><gap unit="char" reason="damage" quantity=""/>ant</w>
-               <w lemma="force2" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000320"
+               <w lemma="Foques" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000320" cert="low"
                   >forcon</w>
-               <w lemma="Denis" type="POS=OUT" xml:id="edB_w_000321">denantes</w>
+               <w lemma="de" type="POS=PRE" xml:id="edB_w_000321" rend="aggl">de</w>
+               <w lemma="Nantes" type="POS=NOMproNOMB.=s|GENRE=x|CAS=r" xml:id="edB_w_000321">nantes</w>
                <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000322">le</w>
                <w lemma="chief1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000323"
                   >chief</w>
@@ -996,9 +1005,9 @@
             <lb n="1"/>
             <l xml:id="edB_l_51" n="51">
                <w lemma="luite" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000325"><gap
-                     unit="char" reason="damage" quantity=""/>uant</w>
-               <w lemma="en2" type="POS=OUT" xml:id="edB_w_000326">en</w>
-               <w lemma="peser" type="POS=OUT|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
+                     unit="char" reason="damage" quantity=""/>uant</w><!-- JBC: formant? -->
+               <w lemma="en2" type="POS=PRE" xml:id="edB_w_000326">en</w>
+               <w lemma="peser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                   xml:id="edB_w_000327">poise</w>
                <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000328"
                   >au</w>
@@ -1041,8 +1050,7 @@
             </l>
             <lb n="4"/>
             <l xml:id="edB_l_54" n="54">
-               <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="ne2" type="POS=OUT" xml:id="edB_w_000344">ne</w>
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000344"><gap unit="char" reason="damage" quantity=""/>ne</w>
                <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edB_w_000345"
                   >dame</w>
                <w lemma="mere" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" xml:id="edB_w_000346"
@@ -1053,7 +1061,7 @@
             </l>
             <lb n="5"/>
             <l xml:id="edB_l_55" n="55">
-               <w lemma="priier" type="POS=OUT|MODE=imp|PERS.=2|NOMB.=p" xml:id="edB_w_000349"><gap
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000349"><gap
                      unit="char" reason="damage" quantity=""/>proies</w>
                <w lemma="or4" type="POS=ADVgen|DEGRE=-" xml:id="edB_w_000350">ore</w>
                <w lemma="ui" type="POS=ADVgen|DEGRE=-" xml:id="edB_w_000351">hui</w>
@@ -1093,7 +1101,7 @@
             <lb n="8"/>
             <l xml:id="edB_l_58" n="58">
                <gap unit="char" reason="damage" quantity=""/>
-               <w lemma="dieu" type="POS=OUT|NOMB.=s|GENRE=m|CAS=n" xml:id="edB_w_000365">deu</w>
+               <w lemma="" type="POS=OUT" xml:id="edB_w_000365">deu</w>
                <w lemma="ne1" type="POS=ADVneg" xml:id="edB_w_000366">ne</w>
                <w lemma="prisier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p"
                   xml:id="edB_w_000367">prisent</w>
@@ -1989,13 +1997,13 @@
                <w lemma="tot" type="POS=ADVgen|DEGRE=-" xml:id="edB_w_000775">Tot</w>
                <w lemma="aussiment" type="POS=ADVgen|DEGRE=-" xml:id="edB_w_000776">ausimant</w>
                <w lemma="come1" type="POS=CONsub" xml:id="edB_w_000777">com</w>
-               <w lemma="SEGM" type="POS=OUT|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000778"
+               <w lemma="se" type="POS=CONsub" xml:id="edB_w_000778"
                   rend="elision">s</w>
-               <w lemma="SEGM" type="POS=OUT|PERS.=3|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000778"
+               <w lemma="on" type="POS=PROind|NOMB.=s|GENRE=n|CAS=n" xml:id="edB_w_000778"
                   >on</w>
-               <w lemma="SEGM" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000779"
+               <w lemma="le" type="POS=PROper|NOMB.=s|GENRE=f|CAS=r" xml:id="edB_w_000779"
                   rend="elision">l</w>
-               <w lemma="SEGM" type="POS=OUT|NOMB.=s|GENRE=m|CAS=r" xml:id="edB_w_000779">an</w>
+               <w lemma="en2" type="POS=PROadv" xml:id="edB_w_000779">an</w>
                <w lemma="atraire" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=3|NOMB.=s"
                   xml:id="edB_w_000780">atraisist</w>
             </l>
