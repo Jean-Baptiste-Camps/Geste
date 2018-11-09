@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><!-- JBC: TODO, reprendre à fond l'encodage et la relecture de l'OCR de l'introd. --><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_MacaireAl2B" xml:lang="fr" type="ed" version="5" corresp="jns13335">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Reine Sebile</title>
+                <title type="sub">Fragment Loveday - Texte fondé sur l'édition Baker</title>
+                <editor><persName>A.T. Baker</persName></editor>
+                <respStmt>
+                    <resp>compléments de</resp>
+                    <persName>Mario Roques</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>transcription revue par</resp>
+                    <persName>Louis Brandin</persName>
+                </respStmt>
+                <respStmt xml:id="PL">
+                    <resp>édition numérique</resp>
+                    <persName>Pauline Lévêque</persName>
+                </respStmt>
+                <respStmt xml:id="JBC">
+                    <resp>sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="edB" status="draft">
+                    <analytic>
+                        <editor xml:id="Baker">
+                            <persName>
+                                <forename>A.T.</forename>
+                                <surname>Baker</surname>
+                            </persName>
+                        </editor>
+                        <editor xml:id="Roques">
+                            <forename>Mario</forename>
+                            <surname>Roques</surname>
+                        </editor>
+                        <title>Nouveaux fragments de la chanson de la Reine Sibille</title>
+                        <idno type="DOI">10.3406/roma.1915.4823</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <date>1915</date>
+                        </imprint>
+                        <biblScope unit="issue">44</biblScope>
+                        <biblScope unit="page" from="1" to="13">p. 1-13</biblScope>
+                    </monogr>
+                </biblStruct>
+                <!-- Add msDesc? -->
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1300" type="dateComposition">XIIIe siècle</origDate>
+                <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1300" type="dateManuscrit">XIIIe siècle</origDate>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">inconnue</origPlace>
+                <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">agn.</origPlace>
+            </creation>
+            <langUsage>
+                <language cert="unknown" resp="DEAF" ident="fro" usage="100">agn.</language>
+                <!-- 
+                    TODO: préciser localisation à partir de l'article d'Æbischer.
+                    -->
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <!-- TODO: 
+                - modification encodage des abréviations, ou, mieux, retour au manuscrit;
+                - abbr et expan doivent faire partie du même w;
+                - voir la fin du doc pour une version avec lettres suppléées marquées \/
+                - encodage du discours direct;
+            
+            -->
+            <change who="#PL" when="2018-07" status="draft">Poursuite de l'encodage</change>
+            <change who="#JBC" when="2017-11-14" status="draft">Encodage</change>
+            <change who="#JBC" when="2016-03" status="draft">OCR, correction de l'OCR et
+                encodage</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="fro">
+        <!-- JBC: introd. à reprendre et relire -->
+        <front xml:lang="fr">
+            <head>Nouveaux fragments de la chanson de la Reine Sibille</head>
+
+            <head>I</head>
+            <p>Un de mes collègues à l'Université de Sheffield, M. Loveday, qui a hérité d'une belle
+                bibliothèque, trouva, il y a quelque temps, dans une liasse de vieux papiers, un
+                feuillet double de parchemin contenant des fragments d'un ancien poème français en
+                vers alexandrins. Pensant, avec raison, que ce feuillet pouvait offrir quelque
+                intérêt, il a bien voulu me le communiquer.</p>
+
+            <p>Ce feuillet a servi de feuille de garde (un tout petit morceau de fil de soie y est
+                encore attaché) et il a dû être retiré d'un volume quelconque, lorsque le bisaïeul
+                de mon collègue<note>John Loveday of Caversham (1711-1789) : voir <bibl status="draft"><title>Dictionary of National Biography</title>, XXXIV,
+                        161</bibl>. </note>, collectionneur assez connu, fit réparer les reliures
+                d'un certain nombre de vieux livres qu'il avait acquis vers la fin du XVIIIe s.</p>
+
+            <p>Chaque feuillet simple a 158 mm. de haut sur 129 mm. de large ; il n'y a qu'une
+                colonne par page ; l'écriture est anglaise et du XIIIe siècle ; elle est assez
+                lisible, mais en quelques endroits, surtout dans la partie supérieure, le parchemin
+                est troué, et il a été fortement abîmé au milieu de chaque page par un pli
+                transversal. Le haut du feuillet a été rogné de sorte que le premier vers de chaque
+                colonne n'est pas déchiffrable, ou ne l'est qu'en partie : nous avons ainsi pour
+                chacune des deux premières pages les traces d'un vers et 32 vers lisibles, pour la
+                page 3 une partie d'un vers et 34 vers entiers, pour la quatrième page, 36 vers dont
+                un ajouté en marge. Notre feuillet n'était pas le feuillet intérieur d'un cahier,
+                car les pages 2 et 3 ne se font pas suite ; nous avons donc à faire à deux fragments
+                de 66 et 71 vers dont nous donnons ci-dessous la transcription<note>Mon ami M. le
+                    professeur Brandin a bien voulu vérifier cette transcription. </note>.</p>
+
+            <p>Nous avons résolu en italiques les abréviations, ajouté entre crochets quelques
+                lettres que les trous du parchemin ont fait disparaître et les initiales des laisses
+                qui sont restées en blanc dans le ms., enfin ponctué suivant les habitudes modernes.
+                Nous n'avons apporté au texte aucune autre modification et nous avons exacte- ment
+                reproduit les graphies anglo-normandes du scribe ; quelques corrections sont
+                indiquées en note. </p>
+
+            <p>Il est facile de reconnaître dans ces fragments les débris d'une version française de
+                l'histoire de <title>Macaire</title> ou de la <title>Reine Sibile</title>, dont nous
+                avons, comme on sait, une forme franco-italienne, publiée en 1866, par Guessard,
+                dans la collection des <title>Anciens poètes de la France</title>. En appendice à
+                son édition (pp. 307-12) Guessard avait déjà réimprimé, d'après Reiffenberg,
+                quelques fragments d'une version française en alexandrins. Les nouveaux fragments
+                que nous publions correspondent d'une façon générale aux vers 912-920 et 1007-1046
+                du <title>Macaire</title> franco-italien.</p>
+            <ab><persName>A. T. Baker</persName>.</ab>
+
+
+            <head>II</head>
+            <p>Les indications données par M. Baker peuvent être précisées grâce à une comparaison
+                des nouveaux fragments, d'une part avec la version espagnole de la <title>enperatriz
+                    Sevilla</title> publiée en 1864 par <bibl status="draft"><author>J. Amador de
+                        los Rios</author>, dans <title>Illustraciones</title> de son <title>Historia
+                        critica de la Literatura española</title>, <biblScope>t. V. pp. 344 et
+                        suiv.</biblScope></bibl>, d'après un ms. de l'Escurial du XIVe siècle, et
+                plus récemment par <bibl status="draft"><author>A. Bonilla y San Martin</author>,
+                        <title>Libros de Caballerias</title>, <biblScope>Ia
+                    parte</biblScope></bibl><note>Je n'avais pas sous les yeux l'édition Bonilla au
+                    moment où je rédi- geais cette note ; je corrige les épreuves loin de toute
+                    bibliothèque, mais M. Antoine Thomas a bien voulu examiner pour moi l'édition
+                    Bonilla ; elle ne diffère en somme que par des détails de graphie de l'édition
+                    Rios à laquelle je me tiens. Sur l'édition Bonilla voir <bibl status="draft"><author>R. Menéndez Pidal</author> dans <title>Cultura
+                        Española</title>, VIII, 1062</bibl>.</note>; d'autre part avec les fragments
+                en alexandrins français publiés par Reiffenberg, puis par Guessard, et, plus
+                exactement, plus complètement et dans un meilleur ordre, par <bibl status="draft"><author>A. Scheler</author>, dans les <title>Bulletins de l'Académie royale
+                        de Belgique</title>, <biblScope>44e année</biblScope> (<date>1875</date>),
+                        <biblScope>pp. 404 et suiv.</biblScope>
+                </bibl>; enfin avec la mise en prose française de la <title>Reine Sibile</title>
+                conservée dans le <bibl status="draft">ms. 3351 de l'Arsenal</bibl>.</p>
+
+            <p>Le premier fragment (2 colonnes) publié ci-dessus correspond à la plus grande partie
+                du ch. XVIIII de la version espagnole (éd. Rios, p. 356-7, environ 50 lignes), le
+                deuxième (2 colonnes) correspond à la fin du ch. XXII et au ch, XXIII (<bibl status="draft">éd. cit., p. 360-61</bibl>, environ 53 lignes). La portion de la
+                version espagnole correspondant à la lacune entre nos deux fragments représente un
+                peu moins de 100 lignes de l'édition : il est facile de calculer que cela équivaut à
+                4 colonnes de notre ms. et que, par conséquent, entre les deux feuilles du feuillet
+                double qui nous est parvenu il y avait, et il nous manque aujourd'hui, seu- lement
+                un autre feuillet double, soit 130-140 vers.</p>
+
+            <p>Ce calcul, il est vrai, suppose que la version espagnole et le poème français
+                concordent exactement : il en est ainsi en effet, sauf des différences minimes dont
+                les unes sont dues à de brèves additions de l'espagnol, les autres à des fautes de
+                notre ms. Pour rendre évident ce rapport il nous suffira de reproduire une partie du
+                ch. XVIII de la version espagnole, correspondant aux vers 1-40 de notre fragment I :
+                    <quote rend="block" xml:lang="spa" defective="false"> Quando ellos esto oyeron
+                    fueron muy sañudos, et dixieron : — Señor, dexadnos, este can que veedes llagó á
+                    Macaire muy mal en la espalda. — Amigos, dixo el Duque, non lo culpedes; bien
+                    sabe el can donde viene este desamor, ó de viejo ó de nuevo<note xml:lang="fra">La brève réponse de Naimes introduite ici par l'espagnol peut avoir été
+                        indiquée dans l'original ; le roman en prose français est d'accord à la fois
+                        avec l'espagnol et avec la version en alexandrins : « <quote xml:lang="frm" defective="false">[306 v<hi rend="superscript">o</hi>] Adont s'aproucha
+                            ung des nepveux Macaires pour respondre : « Grant tort avez, sire
+                            Naymon, fait il, qui ung tel mastin soustenez contre la personne d'un
+                            conte de bon lieu et de hault parage lequel mastin le het par avanture
+                            de longue main ou de nouvel ;… c'est beste enragiee qui [vous] pouroit
+                            aussi bien couroucier comme lui. — Vos parolles ay je bien entendues,
+                            sire vassal, ce respondy Naymon, et samble par icelles que le mot qui
+                            fut dit par maniere de proverbe soit veritable : <mentioned>Oui son
+                                chien veult tuer, la rage lui met sus</mentioned>. Sv voulez vous
+                            faire de cestui [307] qui mie n'est tel, comme il me samble. » Il est
+                            possible que notre ms. ait omis un vers qui permettait de mettre le v. 6
+                            dans la bouche de Kaimes, ce qui serait d'ailleurs plus naturel. L'on
+                            notera en tout cas la présence dans les trois versions, et dans les
+                            mêmes termes, de l'idée de haine <mentioned>« de près ou de vez, de
+                                longue main ou de nouvel, de viejo 6 de nuevo
+                        »</mentioned>.</quote>. </note>. Et el conde don Aymes de Bayuera que era
+                    muy preciado, et mucho entendido, tomó el galgo por el cuello, et diólo á
+                    Gaufredo que era padre d'Ougel, que lo guardase, et el can estovo con él de
+                    buena mente<note xml:lang="fra">Cette dernière idée manque à la version en
+                        alexandrins ; elle se retrouve dans la version en prose : <quote xml:lang="frm" defective="false">« Il [Naymes] prent le levrier par le
+                            col lors et le festoie et aplanie et le levrier meult la queue, les
+                            oreilles et la teste et s'efforce de lui faire chiere, etc. »</quote>.
+                    </note>. Quando Macaire esto vió, ovo muy grant pesar, et y estauan con él
+                    entonce sus parientes que Dios maldiga : Malingres et Erui, et Baton, et
+                    Berenguer, et Focaire, et Aloris et Beari, et Brecher, et Grifez de Altafolla,
+                    et Alait de Monpanter, que quisieran matar al can de grado. Quando el buen Duque
+                    don Aymes esto vió, començó á dar baladros et metió bozes a Rrechart de
+                    Normandia, et á Jufre, et á Ougel, et á Terri l'Ardenois, et á Beraje de
+                    Mondisder, et al viejo Simon de Pulla, et á Galfer d'Espoliça<note xml:lang="fra"> Il n'y a pas lieu de s'arrêter beaucoup aux variantes de ces
+                        listes de noms. Je note toutefois que « <mentioned>Milon de
+                            Puille</mentioned> » apparaît dans le roman en prose. </note>. —
+                    Barones, dixo el Duque, ruegovos por Dios que nos ayudedes á guardar este
+                    galgo ; et ellos respondieron que de todo en todo lo farian. Entonce trauaron
+                    del can et leuaronlo ante el enperador, et fincaron los inojos ante él, et el
+                    duque don Avmes lo tenia por el cuello<note xml:lang="fra">L'espagnol est ici un
+                        peu plus développé que la version en alexandrins : il peut y avoir là
+                        seulement une addition amenée par le « <mentioned>comensa a
+                            hucher</mentioned>» du modèle et par le désir d'expliquer que Nemes
+                        amène le lévrier à Charlemagne, ce que le français ne dit pas expressément
+                        avant le v. 56. Le roman en prose qui modifie la scène et supprime le
+                        discours de Naimes est obligé de faire amener le chien par Geuffroy le
+                        Dannois. </note> et fabló primero, et dixo: — Señor enperador, mucho me
+                    maravillo de las grandes bondades que en vos soliades auer: vos me soliades amar
+                    et llamar á vuestros grandes consejos et á los grandes pleitos, et en las
+                    vuestras guerras, yo solia ser el primero : agora veo que me non amades nin
+                    preciades ; yo non vos lo quiero mas encobrir ; mas guardat vos de traydores que
+                    assaz menester es. — Don Aymes, dixo el emperador, yo non me puedo ende guardar,
+                    si me Dios non guarda, que ha ende el poder. — Yo le pido por mercet, dixo don
+                    Aymes, que vos guarde de todo mal<note xml:lang="fra"> L'espagnol permet de
+                        comprendre le dialogue et de rectifier le v. 30. </note> ; mas, Señor, agora
+                    me entendet, sy vos plaze por el amor de Dios : aqui non ha cavallero nin
+                    escudero nin clérigo nin serviente<note xml:lang="fr"> La lecture <mentioned>ne
+                            esquier</mentioned> au v. 34 est confirmée par l'espagnol, qui permet en
+                        même temps d'établir que la rognure du feuillet n'a pas enlevé d'autre vers
+                        entre 33 et 34. </note>, á quien este galgo mal quiera fazer, sy non á
+                    Macaire, este vuestro priuado<note xml:lang="fr"> L'espagnol et la version en
+                        alexandrins s'accordent parfaitement, mais l'auteur du roman en prose n'a
+                        pas vu que c'était Naimes qui parlait : peut-être son modèle avait-il au v.
+                        30 <mentioned>Charles</mentioned> comme notre fragment ; de plus il a sans
+                        doute lu ou compris <mentioned>Qui</mentioned> au lieu de
+                            <mentioned>Que</mentioned> au v. 35. ce qui l'a amené au non-sens et aux
+                        explications embrouillées que voici : « <mentioned>Charlemaine ne se pot
+                            taire lors, ains commanda et fist deffense sur toutes paines [307v] que
+                            nul qui qu'il feust ne meffesist au blanc lévrier excepté le conte
+                            Macaire seulement. « Et pour quoy, sire, ce respondi le conte. — Pour
+                            tant certes, ce respondi l'empereur que j'ay le chien mis et met de
+                            ceste heure en ma seurté jusques a ce que son maistre Aulbery voye
+                            devers moy retourné. » Et qui demanderoit de quel esprit pouoit parler
+                            Charlemaine, dit l'istoire pour response que ja avoient lui et ses
+                            princes esté à conseil sur ceste matière.</mentioned>» </note>, et sé
+                    que Aubery, su señor, á quien vos mandastes guiar la reyna, quando fue echada de
+                    vuestra tierra, que este can fué con él, que tanto mas ha de un año siempre
+                    andava con él, que lo non podiam dél quitar ; et Señor, por vuestra mercet facet
+                    agora una cosa : que cavalguedes en un buen cavallo... </quote>
+            </p>
+
+            <p>Nous avons signalé et expliqué en note les menues différences entre la version
+                espagnole et le fragment en alexandrins. Pour le reste du chapitre il y a
+                correspondance constante et souvent mot à mot sauf pour les v. 54-55 (réponse de
+                Naimes) qui manquent à l'espagnol.</p>
+
+            <p>Il en est de même et d'une façon plus constante encore pour le deuxième fragment, à
+                l'exception des quatres passages suivants : </p>
+
+            <p>1° La fin de l'« exemple « de Merlin et le commentaire de Naymes sont plus développés
+                dans l'espagnol. Je transcris la partie correspondant aux v. 8-13 du français (éd.
+                cit., p. 360).</p>
+
+            <note>« ...ca ssi lo ficro mucho, aunquc lo dexe por mucrto, tanto que lo llamt- lucgo
+                se viene para mi muy ledo, et afalàgamc et esle ende bien : tal mancra es la de can.
+                — Ora se verdadcramentc, dixo César, que sabedes mucho, et por eude quiero seades
+                quito de la presion, et que vayades ;i buena Ven- tura, cà bien lo meresccdes ; et
+                Merlin gelo gradesciô mucho et fué su \ia para su tierra. — Seiîores, dixô el
+                duqucdon Aymes, por esto podedes enten- der que graut amor hà el can à su senor
+                verdaderament, et por ende deue ser Macaire rebtado de traycion, et enforcado, si le
+                prouado fuer. Asi fablô el duque don Aymes, como vos conté. — Varones, dixo él, ora
+                oyd lo que quiero dezir...» </note>
+
+            <note> Tout cela est évidemment beaucoup plus clair que les vers 11-12 du français, et
+                nous permet en tout cas de comprendre le Issi lira Merlin duv. 12 (erra M. ^^^ fué
+                su via para su iierra^. Il n'est pas impossible que l'extrême concision du poème
+                fran- çais soit due simplement à quelque bourdon du copiste.</note>
+
+            <note>Le roman en prose du ms. de l'Arsenal ne permet pas de vérification :
+                immédiatement après la partie de l'exemple rela- tive au chien on a laissé en blanc
+                la valeur d'une page pour reprendre avec la proposition de duel entre Macaire et le
+                chien. Je me demande si le metteur en prose n'avait pas sim- plement sous les yeux
+                un ms. en vers analogue au nôtre et si, jugeant les vers ii-i 2 insuffisamment
+                clairs, il ne s'était pas réservé de la place pour introduire la fin de l'exemple
+                (qu'il connaissait sans doute par ailleurs), quand il en aurait trouvé une
+                rédaction, ainsi que la conclusion de Naimes.</note>
+
+            <note>L'historiette que Naimes invoque à l'appui de ses dires, et dont nous n'avons dans
+                notre fragment que la dernière partie, est bien connue et elle nous a été conservée
+                dans plusieurs ver- sio:is où d'ailleurs Merlin n'en est pas le héros ' ; on en
+                trou- vera, p. ex., une forme très claire dans le Djlopathjs (6555- 6973); toutes
+                ces versions mettent en scène un personnage </note>
+
+
+            <note>I. Cf. A. Mussafia, Ucher due aUfraniôs. Handschrift der 1; . Universitâts- hihl.
+                :^M Pavia, p. 52-72 (n° XIX), et R. Kôhler, Kleinere Schrifteu, II, 290. </note>
+
+            <pb n="I I" facs="I I"/>
+
+            <note> qui, pour sauver sa vie ou sa liberté, doit présenter « son plus chier ami, Et
+                son plus félon ennemi, Et de ses serjans lo meillor, Et son miax vaillant jugleor »,
+                et qui résout le pro- blème en amenant son chien, sa femme, son âne et son petit
+                enfant. Il est fâcheux que la version en alexandrins ne nous ait pas conservé
+                entièrement cette histoire; j'imprime ci-dessous la version en prose française; la
+                comparaison avec la version espagnole, en somme peu difterente, permet de retrouver
+                les traits principaux de l'original.</note>
+
+            <note>« [^11 ro] ...mais pour vous montrer que il y a cause de soupchon et que ung chien
+                est beste aucunnement raisonnable et qui a juste et bonne cause het ceulx qui son
+                signeur n'aiment mie, racompte une liistoire que j'ay leue que du temps Julles César
+                fut ungs lions que aucuns nomment Merlin et autres dient que c'ellui Merlins le
+                conseilla au bon homme ' . L'empereur César tenoit cellui prisonnier pour son sens
+                esprouver ou autrement pour ce qu'il parloit de coses mervilleuses. Et lui dit ung
+                jour : « Pour toy délivrer de prison, beaux preudons, fait il, te covient devant moy
+                amener ton amv, ton ennemy, ton féal ^ et ton serf. » Sy s'en parti ly preudons et
+                vint a sou hos- tel et, au jour que promis avoit, comme tout conseillié mena son
+                asne, son petit filz dessus, sa feme et son chien. Et quant l'empereur le vist, il
+                lui demanda s'il [vo] avoit fait ce que commandé lui avoit pour soy acquiter de
+                prison. « Ouy certes, fait il, voirement ay amené ce que demandé m'avez. </note>
+
+            <note>« Veez cy ma femme ; que on pouroit prendre pour mon amy. Non est certes, ains est
+                tout le contraire et le prens pour mon ennemy ; car, quelque amistié qu'entre elle
+                et moy doye avoir, se je l'avoie par maltalent atouchiee ou lui fait quelque autre
+                mendre desplaisir, et elle savoit que j'eusse img homme ou deux occis dont je deusse
+                mort recepvoir, elle le feroit assavoir a tous les voisins haultement avant ce que
+                justice ne me presist. </note>
+
+            <note>« De mon asne qui cy est, c'est mon serf; car je ne le sçay tant chargier qu'il en
+                rechigne et si ne le say tant batre ne devant ne derrière qu'il ne soit aussy cointe
+                ung jour que l'autre et si en porte mieulx son fardel par droite nature ; et telle
+                est la condicion d'un asne. </note>
+
+
+
+            <note>1 . Pour l'espagnol il s'agit bien de Merlin : « Ninguno no puede falsar lo que
+                ende dixo Merlin : ante es grant verdat lo que ende prophetizô. Onde aueno asi que
+                César el enperador de Rroma lo ténia en presion... » </note>
+
+            <note>2. L'espagnol a, correctement : « tu joglar » ; le metteur on prose a altéré ce
+                trait. </note>
+
+            <note>3. L'ordre est, dans l'espagnol ; <!--/<;/»///<',--> fils, âne, chien, comme dans
+                la version en alexandrins (au moins pour les deux derniers).</note>
+
+
+
+            <note>12 M. ROaUES </note>
+
+            <note>« Je vous ay, fait il, pareillement amené mon feai, c'est mou filz que cv veez ;
+                c'est ma joie, c'est toute ma plaisance, c'est mon esbatement, et devez savoir que
+                quant ung enfens est jeunes, c'est tout l'amour du père et de la mère; mais, quant
+                il est hors de la verge et il ne veult plus endurer dissiplinc, lors a le pcre sa
+                joie perdue, car le filz ne feroit pour lui nient plus que le [_,'/2] singe fait
+                pour les mauvais : il leur fait la moue. Et ainsi fait le mau- vais enfant a son
+                père, et lui hoche le chief en derrière par sa mau- vaise nature. </note>
+
+            <note>« En après, fait il, sire, av je mon chien amené Sachiés que je n'av nul amv sinon
+                lui, et, se la raison voulez ouir, je vous dy que, quant je vois quelque part et mon
+                chien me voit partir, jamais il ne me laissera : se je m'endors, il se couchera
+                dalez mov et gardera qu'on ne me niesface; se je me cour- rouce a lui par aucunne
+                aventure, je ne le saverav batre tant que, se je le vueil rapeller, il vendra a moy
+                et me fera plus grant joie que par avant ; et s'il est aucun qui s'efforce de mov
+                mal faire de fait, je say de vray que jamais mon chien ne l'aimera, ains lui courra
+                seure en tous lieux; et la est approuvée la bonté et mauvaistié d'un chien. [La fin
+                de la page est restée en Ni nie. ] </note>
+
+            <note>2° Au V. 36 correspond toute une phrase de l'espagnol : « Desque este pleito fué
+                deuisado, el rey fizo tirar de presion à Macaire, et traerlo ante ssî et deuisole el
+                juizio que dieran los ommes buenos de su corte con don Aymes. » En effet Macaire a
+                été emprisonné après la découverte du corps d'Aubri (xxi:... et el rey fizo prender
+                à Macaire entre tanto), et il devait en être de même dans le poème français (cf. v.
+                41). Il se peut donc encore qu'il y ait ici, entre les deux vers commençant par
+                Oiiarit, une lacune dans notre manuscrit. </note>
+
+            <note>3° Le v. 60, qui dans notre fragment est une addition en marge, n'a pas de
+                correspondant dans l'espagnol .</note>
+
+            <note>4° L'espagnol insère entre les phrases correspondant aux vers 68 et 69, trois
+                lignes sur la terreur qui saisit Macaire, et qui est le juste châtiment des impies
+                et des méchants.</note>
+
+            <note>Ces différences ne sont pas de nature à empêcher la conclu- sion qui s'impose par
+                ailleurs: la version espagnole est une tra- duction de cette version française en
+                alexandrins dont nos frag- ments représentent une copie légèrement fautive. </note>
+
+            <note>Comme Ton aboutit précisément à la même conclusion quand l'on compare la version
+                espagnole et les fragments publiés en </note>
+
+
+
+            <pb n="I 3" facs="I 3"/>
+
+            <note>dernier lieu par Scheler ', il en résulte nécessairement que ces fragments anciens
+                et les fragment nouveaux appartiennent à une seule et même rédaction de la chanson
+                de la Reine Sibile, encore qu'ils proviennent de deux manuscrits différents.</note>
+
+            <note>L'examen des rimes ne contredit pas cette conclusion {è et à confondus, ie et e
+                distingués en général, iee passé à ie, dans les deux groupes de fragments).</note>
+
+            <note>Enfin il est probable que la médiocre mise en prose du ms. de l'Arsenal a été
+                faite directement d'après cette même version en alexandrins.</note>
+
+            <note><persName> M. Roques.</persName></note>
+
+
+
+            <note>1. Scheler n'a pas fiiit lui-même cette comparaison, mais elle avait été esquissée
+                par F. Wo\{(Deiikscbn'fteii de l'Acad. de Vienne, VIII, 1857) à l'aide d'une édition
+                de La Historia de la reyna 5e/'/7/i7 imprimée au xvr- s., qui n'est qu'un
+                remaniement abrégé et altéré de la version manuscrite, et elle a été reprise par R.
+                Kôhler (op. cit., 275) qui aboutit nettement à ia conclusion que nous indiquons. </note>
+
+            <note>2. Comme le pensaient déjà Guessard (Introd. à Macaire, cxxxiii) et R. Kôhler, /.
+                /. /</note>
+
+        </front>
+        <body>
+            <l n="1"><gap unit="lines" quantity="1" reason="damage"/></l>
+            <note resp="#Baker">La partie inférieure des caractères, seule visible, ne permet pas le déchiffrement</note>
+            <l n="2">
+                <w>E</w>
+                <w>q<ex>u</ex>ant</w>
+                <w>cil</w>
+                <w>entendirent</w>
+                <w>a</w>
+                <w>pou</w>
+                <w>su<ex>n</ex>t</w>
+                <w>erragez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="3">
+                <pc type="supplied">«</pc>
+                <w>Par</w>
+                <w>Deu</w>
+                <pc type="supplied">,</pc>
+                <w>sire</w>
+                <w>duc</w>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>v<ex>ous</ex></w>
+                <w>n<ex>ous</ex></w>
+                <w><ex>con</ex>trarïez</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="4">
+                <w>En</w>
+                <w>la</w>
+                <w>cort</w>
+                <w>li</w>
+                <w>Roi</w>
+                <w>forment</w>
+                <w>nos</w>
+                <w>enpirez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="5">
+                <w>Cest</w>
+                <w>chen</w>
+                <w>navra</w>
+                <w>Mac<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+                <w>car</w>
+                <w>il</w>
+                <w>eust</w>
+                <w>esragez</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="6">
+                <w>Espor</w>
+                <w>le</w>
+                <w>chen</w>
+                <w>le</w>
+                <w>het</w>
+                <w>ou</w>
+                <w>de</w>
+                <w>p<ex>re</ex>s</w>
+                <w>ou</w>
+                <w>de</w>
+                <w>vez</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="7">
+                <w><supplied resp="#Baker" reason="blank">D</supplied>uc</w><note resp="#Baker">L'initiale manque, mais un <mentioned>d</mentioned>
+                est inscrit dans la marge.</note>
+                <w>Nemes</w>
+                <w>de</w>
+                <w>Beiv<ex>er</ex>e</w>
+                <w>q<ex>ue</ex></w>
+                <w>tau<ex>n</ex>t</w>
+                <w>fist</w>
+                <w>a</w>
+                <w>proiser</w>
+            </l>
+            <l n="8">
+                <w>Par</w>
+                <w>le</w>
+                <w>col</w>
+                <w>ad</w>
+                <choice>
+                    <sic><w>saili</w></sic>
+                    <corr resp="#Baker">saisi</corr>
+                </choice>
+                <w>maintena<ex>n</ex>t</w>
+                <w>le</w>
+                <choice>
+                    <sic><w>seuerer</w></sic>
+                    <corr resp="#Baker">leverer</corr>
+                </choice>
+                <note resp="#Baker">sic, lis. <mentioned>saisi</mentioned> et <mentioned>leverer</mentioned></note>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="9">
+                <w>A</w>
+                <w>Gaufroi</w>
+                <w>le</w>
+                <w><ex>com</ex>ma<ex>n</ex>da</w>
+                <w>q<ex>ue</ex></w>
+                <w>fu</w>
+                <w>pare<ex>n</ex>t</w>
+                <w>Oger</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="10">
+                <w>E</w>
+                <w>q<ex>ua</ex>nt</w>
+                <w>Mac<ex>er</ex></w>
+                <w>le</w>
+                <w>v<supplied resp="#Baker" reason="damage">i</supplied>t</w>
+                <w>vif</w>
+                <w>quida</w>
+                <w>esracher</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="11">
+                <w>La</w>
+                <w>su<ex>n</ex>t</w>
+                <w>si</w>
+                <w>p<ex>ar</ex>ent</w>
+                <pc type="supplied">,</pc>
+                <w>Hates</w>
+                <w>de</w>
+                <w>Mondider</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="12">
+                <w>E</w>
+                <w>se</w>
+                <w>i</w>
+                <w>fu</w>
+                <w>Maling<ex>re</ex>s</w>
+                <w>e</w>
+                <w>ove</w>
+                <w>lui</w>
+                <w>Bereng<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="13">
+                <w>Faukes</w>
+                <w>e</w>
+                <w>Aloriz</w>
+                <pc type="supplied">,</pc>
+                <w>Ysotard</w>
+                <w>e</w>
+                <w>Bricher</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="14">
+                <w>Gefron</w>
+                <w>de</w>
+                <w>Hautefoile</w>
+                <w>p<ex>ri</ex>st</w>
+                <w>un</w>
+                <w>cotel</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>ascer</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="15">
+                <w>La</w>
+                <w>vodru<ex>n</ex>t</w>
+                <w>mai<ex>n</ex>tena<ex>n</ex>t</w>
+                <w>dem<ex>em</ex>brer</w>
+                <w>le</w>
+                <w>lev<ex>er</ex>er</w>
+            </l>
+            <l n="16">
+                <w>Qua<ex>n</ex>t</w>
+                <w>Neme</w>
+                <w>de</w>
+                <w>Beiv<ex>er</ex>e</w>
+                <w>com<ex>en</ex>sa</w>
+                <w>a</w>
+                <w>hucher</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="17">
+                <w>Richard</w>
+                <w>de</w>
+                <w>Normandie</w>
+                <w>e</w>
+                <w>Gaufroi</w>
+                <w>e</w>
+                <w>Oger</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="18">
+                <w>Terri</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>Ardinois</w>
+                <pc type="supplied">,</pc>
+                <w>Berardz</w>
+                <w>de</w>
+                <w>Mondider</w>
+            </l>
+            <l n="19">
+                <w>Dreit</w>
+                <w>au</w>
+                <w>pié</w>
+                <w>Charles</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>vont</w>
+                <w>agenoiler</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="20">
+                <pc type="supplied">«</pc>
+                <w>Sire</w>
+                <w>dreit</w>
+                <w>emp<ex>erer</ex>e</w>
+                <pc type="supplied">,</pc>
+                <w>mont</w>
+                <w>n<ex>ous</ex></w>
+                <w>peut</w>
+                <w>m<ex>er</ex>vailer</w>
+            </l>
+            <l n="21">
+                <w>E</w>
+                <w>des</w>
+                <w>bontez</w>
+                <w>q<ex>ue</ex></w>
+                <w>en</w>
+                <w>v<ex>ous</ex></w>
+                <w>solaien</w>
+                <w>repairer</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="22">
+                <w>Vous</w>
+                <w>me</w>
+                <w>soleiz</w>
+                <w>mout</w>
+                <w>amer</w>
+                <w>e</w>
+                <w>tenir</w>
+                <w>cher</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="23">
+                <w>Moy</w>
+                <w>e</w>
+                <w>T<ex>er</ex>ri</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>Ardonois</w>
+                <pc type="supplied">,</pc>
+                <w>Berard</w>
+                <w>de</w>
+                <w>Mondider</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="24">
+                <w>Ore</w>
+                <w>ne</w>
+                <choice><sic><w>v<ex>ous</ex></w></sic>
+                    <corr resp="#Baker" type="editorial"><w>nous</w></corr>
+                </choice>
+                <w>volez</w>
+                <w>mes</w>
+                <w>amer</w>
+                <w>ne</w>
+                <w>priser</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="25">
+                <w>Sertes</w>
+                <pc type="supplied">,</pc>
+                <w>sire</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>pois</w>
+                <w><choice><corr resp="#Baker" type="editorial">nos</corr><sic>nios</sic></choice></w>
+                <pc type="supplied">,</pc>
+                <w>ço</w>
+                <w>ne</w>
+                <w>v<ex>ous</ex></w>
+                <w>q<ex>u</ex>er</w>
+                <w>noer</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="26">
+                <w>Ja</w>
+                <w>ne</w>
+                <w>n<ex>ous</ex></w>
+                <w>tarrom</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>e<ex>n</ex></w>
+                <w>av<ex>er</ex>om</w>
+                <w>loer</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="27">
+                <w>Gardés</w>
+                <choice>
+                    <sic><w>nous</w></sic>
+                    <corr resp="#Baker" type="editorial"><w>vous</w></corr>
+                </choice>
+                <w>de</w>
+                <w>t<ex>ra</ex>ïtres</w>
+                <pc type="supplied">,</pc>
+                <w>v<ex>ous</ex></w>
+                <w>avez</w>
+                <w>beni</w><!-- JBC: bien ? -->
+                <w>mester</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="28">
+                <pc type="supplied">—</pc>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>dist</w>
+                <w>Charl<ex>es</ex></w>
+                <pc type="supplied">,</pc>
+                <w>jeo</w>
+                <w>ne</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>i</w>
+                <w>soi</w><!-- JBC: sol -->
+                <w>garder</w>
+            </l>
+            <l n="29">
+                <w>Si</w>
+                <w>cil</w>
+                <w>sire</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>pense</w>
+                <w>q<ex>ue</ex></w>
+                <w>tout</w>
+                <w>peut</w>
+                <w>j<ex>us</ex>tiser</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="30">
+                <pc type="supplied">—</pc>
+                <w>Ame<ex>n</ex></w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <choice>
+                    <sic><w>Charl<ex>es</ex></w></sic>
+                    <corr resp="#Baker" type="editorial"><w>Nemes</w></corr>
+                </choice>
+                <pc type="supplied">,</pc>
+                <w>jo</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>em</w>
+                <w>pri</w>
+                <w>e</w>
+                <w>requer</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="31">
+                <w>Ore</w>
+                <w>escultez</w>
+                <w>un</w>
+                <w>pou</w>
+                <pc type="supplied">,</pc>
+                <w>Fraunçois</w>
+                <w>e</w>
+                <w>Beruër</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="32">
+                <w>Ente<ex>n</ex>dez</w>
+                <w>ma</w>
+                <w>p<ex>ar</ex>ole</w>
+                <pc type="supplied">,</pc>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>oiz</w>
+                <w>sai<ex>n</ex>g</w>
+                <w>de</w>
+                <w>noier</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="33">
+                <w>Il</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>i</w>
+                <w>ad</w>
+                <w>ça</w>
+                <w>einz</w>
+                <w>haut</w>
+                <w>home</w>
+                <pc type="supplied">,</pc>
+                <w>serjaunt</w>
+                <w>e</w>
+                <w>chivaler</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="34">
+                <gap unit="lines" quantity="1"/>
+                <unclear reason="damage"><w>ne</w> <w>esquier</w></unclear>
+            </l>
+            <l n="35">
+                <w>Que</w>
+                <w>cest</w>
+                <w>lev<ex>er</ex>er</w>
+                <unclear><w>adeie</w></unclear>
+                <w>ne</w>
+                <w>ne</w>
+                <w>voile</w>
+                <w>aprocher</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="36">
+                <w>Fors</w>
+                <w>seulement</w>
+                <w>Mac<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+                <w>le</w>
+                <w>noster</w>
+                <w>despenser</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="37">
+                <w>Joe</w>
+                <w>ne</w>
+                <w>vei</w>
+                <w><choice><sic>pos</sic>
+                    <corr resp="#Baker">pas</corr>
+                </choice></w>
+                <w>Aubri</w>
+                <w>son</w>
+                <w>seign<ex>or</ex></w>
+                <w>repeirer</w>
+            </l>
+            <l n="38">
+                <w>Que</w>
+                <w>en</w>
+                <w>mena</w>
+                <w>la</w>
+                <w>Roÿne</w>
+                <w>que</w>
+                <w>en</w>
+                <w>faites</w>
+                <w>chacer</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="39">
+                <w>Car</w>
+                <w>faites</w>
+                <w>un</w>
+                <w>chose</w>
+                <w>dount</w>
+                <w>jo</w>
+                <w>v<ex>ous</ex></w>
+                <w>p<ex>ri</ex></w>
+                <w>e</w>
+                <w>req<ex>ue</ex>r</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="40">
+                <w>Q<ex>ue</ex></w>
+                <w>v<ex>ous</ex></w>
+                <w>mountez</w>
+                <pc type="supplied">,</pc>
+                <w>beau</w>
+                <w>sire</w>
+                <pc type="supplied">,</pc>
+                <w>sor</w>
+                <w>vot<ex>re</ex></w>
+                <w>bon</w>
+                <w>dest<ex>re</ex>r</w>
+            </l>
+            <l n="41">
+                <w>E</w>
+                <w>n<ex>ous</ex></w>
+                <w>v<ex>ous</ex></w>
+                <w>suërom</w>
+                <w>aprés</w>
+                <w>desq<ex>ue</ex></w>
+                <pc type="supplied">.</pc>
+                <w>x</w>
+                <pc type="supplied">.</pc>
+                <w>chivaler</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="42">
+                <w>S</w>
+                <pc type="supplied">'</pc>
+                <w>irrom</w>
+                <w>ap<ex>ré</ex>s</w>
+                <w>le</w>
+                <w>chien</w>
+                <w>el</w>
+                <w>bois</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>a</w>
+                <w>pl<supplied resp="#Baker" reason="damage">e</supplied>ser</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="43">
+                <w>Si</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>aïst</w>
+                <w>icil</w>
+                <w>sire</w>
+                <w>q<ex>ue</ex></w>
+                <w>tout</w>
+                <w>ad</w>
+                <w>a</w>
+                <w>juger</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="44">
+                <w>Solo<ex>n</ex>c</w>
+                <add place="above"><w>le</w></add>
+                <w>mie<ex>n</ex></w>
+                <w>pensé</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>v<ex>ous</ex></w>
+                <w>di</w>
+                <w>saunz</w>
+                <w>boiser</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="45">
+                <w>Macer</w>
+                <w>ad</w>
+                <w>occis</w>
+                <w>Aubri</w>
+                <w>de</w>
+                <w>Mondider</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="46">
+                <w>Voster</w>
+                <w>gentile</w>
+                <w>baro<ex>n</ex></w>
+                <w>q<ex>ue</ex></w>
+                <w>tant</w>
+                <w>fist</w>
+                <w>a</w>
+                <w>preser</w>
+            </l>
+            <l n="47">
+                <w>Ne</w>
+                <w>de</w>
+                <w>vost<ex>re</ex></w>
+                <w>service</w>
+                <w>ne</w>
+                <w>se</w>
+                <w>peut</w>
+                <w>anoier</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="48">
+                <w><supplied resp="#Baker" reason="blank">D</supplied></w>
+                <w>ont</w>
+                <w>par</w>
+                <w>fu</w>
+                <w>li</w>
+                <w>t<ex>ra</ex>ïtre</w>
+                <w>dolent</w>
+                <w>e</w>
+                <w>corucez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="49">
+                <w>Q<ex>ua</ex>nt</w>
+                <w>il</w>
+                <w>oï</w>
+                <w>duc</w>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>a</w>
+                <w>pou</w>
+                <w rend="elision">qu</w>
+                <pc type="supplied">'</pc>
+                <w>il</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>devez</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="50">
+                <pc type="supplied">«</pc>
+                <w>Sire</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>Mac<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+                <w>nient</w>
+                <w>dirriez</w>
+                <w>assez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="51">
+                <w>Ne</w>
+                <w>fusses</w>
+                <w>si</w>
+                <w>haut</w>
+                <w>home</w>
+                <w>e</w>
+                <w>si</w>
+                <w>ennorez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="52">
+                <w>Ja</w>
+                <w>en</w>
+                <w>serait</w>
+                <w>mes</w>
+                <w>gages</w>
+                <w>v<ex>er</ex>s</w>
+                <w>le</w>
+                <w>vost<ex>re</ex></w>
+                <w>donez</w>
+            </l>
+
+            <note>25 ms. <mentioned>pois nios</mentioned>. — 27 Lis. <mentioned>Gardés vous</mentioned> 
+                et sans doute inversement <mentioned>ne nous</mentioned> au v.24. 
+                — 30 [Lis. <mentioned>ceo dist Nemes</mentioned> ; voir infra, p. 9, n. i]. — 34 Même observation que
+                pour 1. [On peut cependant deviner la fin de vers <mentioned>ne esquier</mentioned>, cf. pour cette
+                graphie, 41 ; pour la confirmation de cette lecture, voir infra,p. 9, n. 2] — 35 Les
+                3e et 4e lettres de <mentioned>adeie</mentioned> sont incertaines par suite d'une légère déchirure du ms.
+                [M. Baker avait lu d'abord <mentioned>adest</mentioned>, mais l'<mentioned>e</mentioned> final est certain 
+                et la 4e lettre ne
+                peut guère être <mentioned>s</mentioned>; pour <mentioned>adeie</mentioned>, cf. Godefroy, I, v. ADAIER.] — 37 Lis. <mentioned>vei pas</mentioned>. — 44
+                <mentioned>le</mentioned> est ajouté au-dessus de la ligne entre mien et pensé.</note>
+            <!-- TODO: reprise à poursuivre d'ici -->
+            <l n="53">
+                <w>Que</w>
+                <w>onq<ex>ue</ex>s</w>
+                <w>en</w>
+                <w>si</w>
+                <w>fait</w>
+                <w>mendre</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>vi<ex>n</ex>t</w>
+                <w>en</w>
+                <w>pe<ex>n</ex>sez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="54">
+                <pc type="supplied">—</pc>
+                <w>Macer</w>
+                <pc type="supplied">,</pc>
+                <w>dist</w>
+                <w>duc</w>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>un</w>
+                <w>petit</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>entendez</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="55">
+                <w>Bene</w>
+                <w>v<ex>er</ex>rom</w>
+                <w>com<ex>en</ex>t</w>
+                <w>il</w>
+                <w>est</w>
+                <w>ei<ex>n</ex>z</w>
+                <w>les</w>
+                <w>t<ex>re</ex>is</w>
+                <w>jors</w>
+                <w>passez</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="56">
+                <w>Nemes</w>
+                <w>sest</w>
+                <w>le</w>
+                <w>lev<ex>er</ex>er</w>
+                <pc type="supplied">,</pc>
+                <w>v<ex>er</ex>s</w>
+                <w>le</w>
+                <w>Roi</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>tornez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="57">
+                <w>Le</w>
+                <w>lev<ex>er</ex>er</w>
+                <w>veit</w>
+                <w>le</w>
+                <w>Roi</w>
+                <pc type="supplied">,</pc>
+                <w>v<ex>er</ex>s</w>
+                <w>lui</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>aclinez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="58">
+                <w>Devant</w>
+                <w>lui</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>agenoille</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>mout</w>
+                <w>dem<ex>en</ex>tez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="59">
+                <w>As</w>
+                <w>denz</w>
+                <w>p<ex>ri</ex>st</w>
+                <w>son</w>
+                <w>ermine</w>
+                <w>q<ex>ue</ex></w>
+                <w>estoit</w>
+                <w>engoulez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="60">
+                <w>Volu<ex>n</ex>tieris</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>t<ex>ra</ex>isist</w>
+                <w>le</w>
+                <w>lev<ex>er</ex>er</w>
+                <w>affilez</w>
+            </l>
+            <l n="61">
+                <w>Q<ex>ua</ex>nt</w>
+                <w>li</w>
+                <w>Roi</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ad</w>
+                <w>veü</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>plora</w>
+                <w>de</w>
+                <w>pitez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="62">
+                <w>Son</w>
+                <w>cheval</w>
+                <w>dema<ex>n</ex>da</w>
+                <pc type="supplied">,</pc>
+                <w>il</w>
+                <w>lui</w>
+                <w>fu</w>
+                <w>amenez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="63">
+                <w>L</w>
+                <pc type="supplied">'</pc>
+                <w>emp<ex>er</ex>er</w>
+                <w>monta</w>
+                <pc type="supplied">,</pc>
+                <w>tei<ex>n</ex>t</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>espee</w>
+                <w>a</w>
+                <w>son</w>
+                <w>lez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="64">
+                <w>E</w>
+                <w>des</w>
+                <w>autres</w>
+                <w>baro<ex>n</ex>s</w>
+                <w>ta<ex>n</ex>t</w>
+                <w>q<ex>ue</ex></w>
+                <w>il</w>
+                <w>fure<ex>n</ex>t</w>
+                <w>asez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="65">
+                <w>Mac<ex>er</ex></w>
+                <w>li</w>
+                <w>t<ex>ra</ex>ïtre</w>
+                <w>se</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>pas</w>
+                <w>alez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="66">
+                <w>Einz</w>
+                <w>remist</w>
+                <w>a</w>
+                <w>Paris</w>
+                <w>dolenz</w>
+                <w>e</w>
+                <w>aïrez</w>
+                <pc type="supplied">.</pc>
+            </l>
+
+            <!--II-->
+            <pb n="" facs=""/>
+            <l n="67">
+                <gap unit="char" quantity="" reason="damage"/>
+                <w>faite</w>
+                <w>de</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>bastonz</w>
+                <w>q<ex>ua</ex>rrez</w>
+            </l>
+            <l n="68">
+                <w>Cum</w>
+                <w>plus</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>averai</w>
+                <w>batu</w>
+                <pc type="supplied">,</pc>
+                <w>plus</w>
+                <w>ert</w>
+                <w>adountez</w>
+            </l>
+            <l n="69">
+                <w>E</w>
+                <w>meuz</w>
+                <w>eu</w>
+                <w>ert</w>
+                <w>le</w>
+                <w>fes</w>
+                <w>desor</w>
+                <w>son</w>
+                <w>dos</w>
+                <w>portez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="70">
+                <w>Tel</w>
+                <w>manere</w>
+                <w>a</w>
+                <w>li</w>
+                <w>asne</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>autoritez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="71">
+                <w>Sire</w>
+                <pc type="supplied">,</pc>
+                <w>veez</w>
+                <w>ci</w>
+                <w>mon</w>
+                <w>chen</w>
+                <pc type="supplied">,</pc>
+                <w rend="elision">c</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>meu<ex>n</ex>s</w>
+                <w>amis</w>
+                <w>p<ex>ri</ex>vez</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="72">
+                <w>Si</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>aït</w>
+                <w>icil</w>
+                <w>sire</w>
+                <w rend="elision">q<ex>u</ex></w>
+                <pc type="supplied">'</pc>
+                <w><ex>e</ex>n</w>
+                <w>croiz</w>
+                <w>fu</w>
+                <w>peinez</w>
+            </l>
+            <l n="73">
+                <w>Cum</w>
+                <w>jeo</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>ai</w>
+                <w>nul</w>
+                <w>ami</w>
+                <w>dou<ex>n</ex>t</w>
+                <w>soi</w>
+                <w>meuz</w>
+                <w>amez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="74">
+                <w>Qua<ex>n</ex>t</w>
+                <w>jeo</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ai</w>
+                <w>tau<ex>n</ex>t</w>
+                <w>batu</w>
+                <pc type="supplied">,</pc>
+                <w>a</w>
+                <w>pou</w>
+                <w>ne</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ai</w>
+                <w>tuez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="75">
+                <w>E</w>
+                <w>jeo</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>apel</w>
+                <w>a</w>
+                <w>moi</w>
+                <pc type="supplied">,</pc>
+                <w>a</w>
+                <w>lui</w>
+                <w>di</w>
+                <pc type="supplied">:</pc>
+                <pc type="supplied">«</pc>
+                <w>Ça</w>
+                <w>venez</w>
+                <pc type="supplied">!</pc>
+                <pc type="supplied">»</pc>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="76">
+                <w>Lors</w>
+                <w>me</w>
+                <w>coneust</w>
+                <w>mes</w>
+                <w>chens</w>
+                <pc type="supplied">,</pc>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>est</w>
+                <w>vers</w>
+                <w>moi</w>
+                <w>aclinez</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="77">
+                <w>Seinors</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>duc</w>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>par</w>
+                <w>Deu</w>
+                <w>de</w>
+                <w>majestez</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="78">
+                <w>Issi</w>
+                <w>irra</w>
+                <w>M<ex>er</ex>lin</w>
+                <w>cum</w>
+                <w>v<ex>ous</ex></w>
+                <w>oï</w>
+                <w>ore</w>
+                <w>avez</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="79">
+                <pc type="supplied">«</pc>
+                <w><supplied resp="#Baker" reason="blank">S</supplied>eignors</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>duc</w>
+                <w>Nemes</w>
+                <pc type="supplied">,</pc>
+                <w>entendez</w>
+                <w>mon</w>
+                <w>pensé</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="80">
+                <w>Jugeme<ex>n</ex>t</w>
+                <w>v<ex>ous</ex></w>
+                <w>dorreie</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>v<ex>ous</ex></w>
+                <w><supplied resp="#Baker" reason="damage">v</supplied>endroit</w>
+                <w>a</w>
+                <w>gré</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="81">
+                <w>Pus</w>
+                <w>que</w>
+                <w>Aubri</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>ad</w>
+                <w>home</w>
+                <w>est<ex>ra</ex>nge</w>
+                <w>ne</w>
+                <w>prevé</w>
+            </l>
+            <l n="82">
+                <w>Que</w>
+                <w>voille</w>
+                <w>vers</w>
+                <w>Mac<ex>er</ex></w>
+                <w><ex>com</ex>batre</w>
+                <w>el</w>
+                <w>chau<ex>m</ex>p</w>
+                <w>mellé</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="83">
+                <w>Fors</w>
+                <w>soulem<ex>en</ex>t</w>
+                <w>cest</w>
+                <w>chen</w>
+                <w>que</w>
+                <w>voi</w>
+                <w>entalenté</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="84">
+                <w>Jeo</w>
+                <w>di</w>
+                <w>q<ex>ue</ex></w>
+                <w>home</w>
+                <w>les</w>
+                <w>doit</w>
+                <w>mettre</w>
+                <w>ensemble</w>
+                <w>p<ex>or</ex></w>
+                <w>v<ex>er</ex>ité</w>
+            </l>
+
+
+
+            <note>53 Lis. un si f. meudre (meurdre, cf. mordre, II, 38). — 56 Lis. Nemes lest — 60
+                [affilez ne paraît pas absolument sûr ; la photographie laisse voir dans l'inter-
+                ligne un signe qui se lit mal]. II, 1 faite est de lecture très incertaine.</note>
+
+
+
+            <l n="85">
+                <w>Macer</w>
+                <w>soit</w>
+                <w>a</w>
+                <w>pé</w>
+                <w>devant</w>
+                <w>lui</w>
+                <w>en</w>
+                <w>el</w>
+                <w>pré</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="86">
+                <w>Si</w>
+                <w>ait</w>
+                <w>un</w>
+                <w>escu</w>
+                <w>rond</w>
+                <w>e</w>
+                <w>un</w>
+                <w>baston</w>
+                <w>quarré</w>
+            </l>
+            <l n="87">
+                <w>E</w>
+                <w>un</w>
+                <w>baston</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>espine</w>
+                <w>bien</w>
+                <w>fait</w>
+                <w>e</w>
+                <w>mesuré</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="88">
+                <w>Pié</w>
+                <w>e</w>
+                <w>demi</w>
+                <w>de</w>
+                <w>long</w>
+                <w>bien</w>
+                <w>fait</w>
+                <w>e</w>
+                <w>asscemé</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="89">
+                <w>Si</w>
+                <w>il</w>
+                <w>peut</w>
+                <w>occire</w>
+                <pc type="supplied">,</pc>
+                <w>mout</w>
+                <w>avra</w>
+                <w>bien</w>
+                <w>ov<ex>er</ex>é</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="90">
+                <w>Tot</w>
+                <w>quite</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>irra</w>
+                <w>e</w>
+                <w>tout</w>
+                <w>a</w>
+                <w>sauveté</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="91">
+                <w>E</w>
+                <w>si</w>
+                <w>le</w>
+                <w>chen</w>
+                <w>le</w>
+                <w>vente</w>
+                <pc type="supplied">,</pc>
+                <w>par</w>
+                <w>Deu</w>
+                <w>de</w>
+                <w>majesté</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="92">
+                <w>Donc</w>
+                <w>di</w>
+                <w>jeo</w>
+                <w rend="elision">qu</w>
+                <pc type="supplied">'</pc>
+                <w>il</w>
+                <w>ad</w>
+                <w>occis</w>
+                <w>Aubri</w>
+                <w>e</w>
+                <w>affolé</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="93">
+                <w>Jeo</w>
+                <w>ne</w>
+                <w>soi</w>
+                <w>autre</w>
+                <w>chose</w>
+                <pc type="supplied">,</pc>
+                <w>es</w>
+                <w>te</w>
+                <w>le</w>
+                <w>v<ex>ous</ex></w>
+                <w>prové</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="94">
+                <w>Face</w>
+                <w>en</w>
+                <w>li</w>
+                <w>Roy</w>
+                <w>justice</w>
+                <w>au</w>
+                <w>los</w>
+                <w>de</w>
+                <w>son</w>
+                <w>barné</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="95">
+                <w>E</w>
+                <w>q<ex>ua</ex>nt</w>
+                <w>cil</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ente<ex>n</ex>dire<ex>n</ex>t</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>su<ex>n</ex>t</w>
+                <w>en</w>
+                <w>piez</w>
+                <w>levé</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="96">
+                <w>Duc</w>
+                <w>Nemes</w>
+                <w>embracerent</w>
+                <w>e</w>
+                <w>si</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ou<ex>n</ex>t</w>
+                <w>acolé</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="97">
+                <pc type="supplied">«</pc>
+                <w>Sire</w>
+                <pc type="supplied">,</pc>
+                <w>bien</w>
+                <w>avez</w>
+                <w>dist</w>
+                <pc type="supplied">,</pc>
+                <w>Deu</w>
+                <w>v<ex>ous</ex></w>
+                <w>tiegne</w>
+                <w>en</w>
+                <w>bonté</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="98">
+                <w>Tout</w>
+                <w>issi</w>
+                <w>serra</w>
+                <w>il</w>
+                <w>cum</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>avez</w>
+                <w>devisé</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">«</pc>
+            </l>
+            <l n="99">
+                <w>Devant</w>
+                <w>le</w>
+                <w>Roy</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>vont</w>
+                <pc type="supplied">,</pc>
+                <w>tout</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ou<ex>n</ex>t</w>
+                <w>reconté</w>
+            </l>
+            <l n="100">
+                <w>Trestout</w>
+                <w>le</w>
+                <w>jugeme<ex>n</ex>t</w>
+                <w rend="elision">qu</w>
+                <pc type="supplied">'</pc>
+                <w>il</w>
+                <w>ou<ex>n</ex>t</w>
+                <w>enorté</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="101">
+                <w>E</w>
+                <w>le</w>
+                <w>roy</w>
+                <w>lour</w>
+                <w>ottroie</w>
+                <w>volunters</w>
+                <w>e</w>
+                <w>de</w>
+                <w>gré</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="102">
+                <w>verso</w>
+                <w>Qua<ex>n</ex>t</w>
+                <w>ost</w>
+                <w>le</w>
+                <w>jugement</w>
+                <w>que</w>
+                <w>ert</w>
+                <w>de</w>
+                <w>loiauté</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="103">
+                <w>Qua<ex>n</ex>t</w>
+                <w>Mac<ex>er</ex></w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>oï</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>joi</w>
+                <w>en</w>
+                <w>ad</w>
+                <w>mené</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="104">
+                <w>Son</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>mordre</w>
+                <w>quida</w>
+                <w>bien</w>
+                <w>aver</w>
+                <w>aquité</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="105">
+                <w>Mes</w>
+                <w>Deu</w>
+                <w rend="elision">qu</w>
+                <pc type="supplied">'</pc>
+                <w><ex>on</ex>ques</w>
+                <w>ne</w>
+                <w>menti</w>
+                <w>bien</w>
+                <w>sout</w>
+                <w>la</w>
+                <w>vérité</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="106">
+                <w><supplied resp="#Baker" reason="blank">C</supplied>eo</w>
+                <w>fu</w>
+                <w>par</w>
+                <w>un</w>
+                <w>matin</w>
+                <w>que</w>
+                <w>le</w>
+                <w>solail</w>
+                <w>lust</w>
+                <w>gent</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="107">
+                <w>Macer</w>
+                <w>ou<ex>n</ex>t</w>
+                <w>amené</w>
+                <w>esquier</w>
+                <w>e</w>
+                <w>serjaunt</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="108">
+                <w>Devaunt</w>
+                <w>le</w>
+                <w>roi</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>vint</w>
+                <pc type="supplied">.</pc>
+                <w>Char<ex>les</ex></w>
+                <w>lui</w>
+                <w>ad</w>
+                <w>dist</w>
+                <w>tau<ex>n</ex>t</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="109">
+                <pc type="supplied">«</pc>
+                <w>Macer</w>
+                <pc type="supplied">,</pc>
+                <w>dist</w>
+                <w>le</w>
+                <w>Roy</w>
+                <pc type="supplied">,</pc>
+                <w>entendez</w>
+                <w>mon</w>
+                <w>semblau<ex>n</ex>t</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="110">
+                <w>Certes</w>
+                <w>jeo</w>
+                <w>v<ex>ous</ex></w>
+                <w>aim</w>
+                <w>mout</w>
+                <pc type="supplied">,</pc>
+                <w>ne</w>
+                <w>seez</w>
+                <w>mie</w>
+                <w>mescreaunt</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="111">
+                <w>Por</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>am<ex>or</ex></w>
+                <w>du</w>
+                <w>lignage</w>
+                <w>que</w>
+                <w>v<ex>ous</ex></w>
+                <w>avez</w>
+                <w>s<supplied resp="#Baker" reason="damage">i</supplied></w>
+                <w>grant</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="112">
+                <w>Mes</w>
+                <w>il</w>
+                <w rend="elision">m</w>
+                <pc type="supplied">'</pc>
+                <w>estuit</w>
+                <w>dreit</w>
+                <w>faire</w>
+                <w>a</w>
+                <w>ma</w>
+                <w>court</w>
+                <w>de</w>
+                <w>ma</w>
+                <w>ge<ex>n</ex>t</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="113">
+                <w>Jugé</w>
+                <w>ou<ex>n</ex>t</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>me</w>
+                <w>semble</w>
+                <pc type="supplied">,</pc>
+                <w>mi</w>
+                <w>amis</w>
+                <w>meuz</w>
+                <w>vallau<ex>n</ex>t</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="114">
+                <w>Pur</w>
+                <w>que</w>
+                <w>Aubri</w>
+                <w rend="elision">n</w>
+                <pc type="supplied">'</pc>
+                <w>ad</w>
+                <w>home</w>
+                <pc type="supplied">,</pc>
+                <w>est<ex>ra</ex>nge</w>
+                <w>ne</w>
+                <w>parent</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="115">
+                <w>Que</w>
+                <w>voille</w>
+                <w>v<ex>er</ex>s</w>
+                <w>v<ex>ous</ex></w>
+                <w><ex>com</ex>batre</w>
+                <w>el</w>
+                <w>chaump</w>
+                <w>present</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="116">
+                <w>Cest</w>
+                <w>chen</w>
+                <w>v<ex>er</ex>s</w>
+                <w>v<ex>ous</ex></w>
+                <w>en</w>
+                <w>ad</w>
+                <w>mout</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>talent</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="117">
+                <w><ex>Vous</ex></w>
+                <w>estoit</w>
+                <w>c<ex>om</ex>batre</w>
+                <w>par</w>
+                <w>itele</w>
+                <w>covenaunt</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="118">
+                <w>V<ex>ous</ex></w>
+                <w>averez</w>
+                <w>un</w>
+                <w>escu</w>
+                <w>rou<ex>n</ex>d</w>
+                <w>e</w>
+                <w>un</w>
+                <w>baston</w>
+                <w>pesau<ex>n</ex>t</w>
+            </l>
+            <l n="119">
+                <w>E</w>
+                <w>un</w>
+                <w>baston</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>espine</w>
+                <w>bien</w>
+                <w>fait</w>
+                <w>e</w>
+                <w>avenaunt</w>
+            </l>
+            <l n="120">
+                <w>Si</w>
+                <w>le</w>
+                <w>chen</w>
+                <w>poez</w>
+                <w>ventre</w>
+                <w>ne</w>
+                <w>faire</w>
+                <w>recréant</w>
+                <pc type="supplied">.</pc>
+            </l>
+
+
+            <note>19-20 La lecture est rendue difficile par le pli transversal et les dechirures ;
+                au v. 20 soit ou, moins probablement, voit. — 22 Le second s est ajouté au-dessus de
+                la ligne entre s et c, peut-être par erreur pour ascesmé — 53 La fin du vers est de
+                lecture difficile à cause du pli. </note>
+
+            <l n="121">
+                <w>Tout</w>
+                <w>quite</w>
+                <w>serras</w>
+                <w>de</w>
+                <w>la</w>
+                <w>traïson</w>
+                <w>grau<ex>n</ex>t</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="122">
+                <w>Ceo</w>
+                <w>que</w>
+                <w>vous</w>
+                <w>mettent</w>
+                <w>sus</w>
+                <w>mi</w>
+                <w>home</w>
+                <w>e</w>
+                <w>ma</w>
+                <w>gent</w>
+            </l>
+            <l n="123">
+                <w>De</w>
+                <w>Aubri</w>
+                <w>que</w>
+                <w>est</w>
+                <w>occis</w>
+                <w>dont</w>
+                <w rend="elision">j</w>
+                <pc type="supplied">'</pc>
+                <w>ai</w>
+                <w>le</w>
+                <w>quer</w>
+                <w>dole<ex>n</ex>t</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="124">
+                <w>E</w>
+                <w>si</w>
+                <w>le</w>
+                <w>chen</w>
+                <w>v<ex>ous</ex></w>
+                <w>vai<ex>n</ex>t</w>
+                <pc type="supplied">,</pc>
+                <w>jeo</w>
+                <w>di</w>
+                <w>par</w>
+                <w>saint</w>
+                <w>Amenau<ex>n</ex>t</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="125">
+                <w>Jeo</w>
+                <w>v<ex>ous</ex></w>
+                <w>ferai</w>
+                <w>justice</w>
+                <w>tel</w>
+                <w>cum</w>
+                <w>est</w>
+                <w>covenau<ex>n</ex>t</w>
+            </l>
+            <l n="126">
+                <w>D</w>
+                <pc type="supplied">'</pc>
+                <w>escorcher</w>
+                <w>e</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>ardoir</w>
+                <pc type="supplied">,</pc>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>encroier</w>
+                <w>au</w>
+                <w>vent</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="127">
+                <pc type="supplied">—</pc>
+                <w>Sire</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>Mac<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+                <w>Deu</w>
+                <w>en</w>
+                <w>trais</w>
+                <w>a</w>
+                <w>guarau<ex>n</ex>t</w>
+            </l>
+            <l n="128">
+                <w>Que</w>
+                <w>Aubri</w>
+                <w>ne</w>
+                <w>fis</w>
+                <w>mal</w>
+                <w>plus</w>
+                <w>que</w>
+                <w>mon</w>
+                <w>cher</w>
+                <w>enfau<ex>n</ex>t</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">«</pc>
+            </l>
+            <l n="129">
+                <pc type="supplied">«</pc>
+                <w><supplied resp="#Baker" reason="blank">S</supplied>ire</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>Mac<ex>er</ex></w>
+                <pc type="supplied">,</pc>
+                <w>por</w>
+                <w>Deu</w>
+                <w>le</w>
+                <w>fiz</w>
+                <w>Marie</w>
+                <pc type="supplied">,</pc>
+            </l>
+            <l n="130">
+                <w>Ja</w>
+                <w>en</w>
+                <w>serrai</w>
+                <w>ceo</w>
+                <w>honte</w>
+                <w>e</w>
+                <w>m<ex>o</ex>lt</w>
+                <w>g<ex>ra</ex>nt</w>
+                <w>vilanie</w>
+            </l>
+            <l n="131">
+                <w>Si</w>
+                <w>me</w>
+                <w><ex>com</ex>b<supplied resp="#Baker" reason="damage">at</supplied></w>
+                <w>e</w>
+                <w>au</w>
+                <w>chen</w>
+                <w>en</w>
+                <w>bataille</w>
+                <w>formie</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="132">
+                <pc type="supplied">—</pc>
+                <w>N<supplied resp="#Baker" reason="damage">e</supplied>ni</w>
+                <pc type="supplied">,</pc>
+                <w>ceo</w>
+                <w>dist</w>
+                <w>li</w>
+                <w>Roi</w>
+                <pc type="supplied">,</pc>
+                <w>car</w>
+                <w>issi</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>ount</w>
+                <w>jugie</w>
+            </l>
+            <l n="133">
+                <w>Mi</w>
+                <w>home</w>
+                <w>e</w>
+                <w>ma</w>
+                <w>gent</w>
+                <w>dou<ex>n</ex>t</w>
+                <w>il</w>
+                <w>i</w>
+                <w>ad</w>
+                <w>partie</w>
+                <pc type="supplied">.</pc>
+            </l>
+            <l n="134">
+                <w>Alez</w>
+                <w>adober</w>
+                <w>e</w>
+                <w>si</w>
+                <w>ne</w>
+                <w>demorés</w>
+                <w>mie</w>
+                <pc type="supplied">.</pc>
+                <pc type="supplied">»</pc>
+            </l>
+            <l n="135">
+                <w>Macer</w>
+                <w rend="elision">s</w>
+                <pc type="supplied">'</pc>
+                <w>en</w>
+                <w>torna</w>
+                <pc type="supplied">,</pc>
+                <w>si</w>
+                <w>apele</w>
+                <w>sa</w>
+                <w>lignie</w>
+                <pc type="supplied">;</pc>
+            </l>
+            <l n="136">
+                <w>Si</w>
+                <w>parent</w>
+                <w rend="elision">l</w>
+                <pc type="supplied">'</pc>
+                <w>adoberent</w>
+                <w>en</w>
+                <w>la</w>
+                <w>sale</w>
+                <w>voutie</w>
+                <pc type="supplied">:</pc>
+            </l>
+            <l n="137">
+                <w>Un</w>
+                <w>court</w>
+                <w>baston</w>
+                <w rend="elision">d</w>
+                <pc type="supplied">'</pc>
+                <w>espine</w>
+                <w>lui</w>
+                <w>ou<ex>n</ex>t</w>
+                <w>mis</w>
+                <w>en</w>
+                <w>baillie</w>
+                <pc type="supplied">.</pc>
+            </l>
+        </body>
+        <back>
+            <head>Apparat et notes</head>
+            <p> </p>
+        </back>
+    </text>
+</TEI><!--
+E q\u/ant cil entendirent a pou su\n/t erragez. 
+« Par Deu, sire duc Nemes, v\ous/ n\ous/ \con/trarïez : 
+En la cort li Roi forment nos enpirez. 
+Cest chen navra Mac\er/, car il eust esragez :	5 
+
+Espor le chen le het ou de p\re/s ou de vez . » 
+[D]uc Nemes de Beiv\er/e q\ue/ tau\n/t fist a proiser 
+Par le col ad saili maintena\n/t le seuerer ;
+A Gaufroi le \com/ma\n/da q\ue/ fu pare\n/t Oger ; 
+E q\ua/nt Mac\er/ le v[i]t vif quida esracher. 	10 
+La su\n/t si p\ar/ent, Hates de Mondider,
+E se i fu Maling\re/s e ove lui Bereng\er/, 
+Faukes e Aloriz, Ysotard e Bricher. 
+Gefron de Hautefoile p\ri/st un cotel d'ascer ; 
+La vodru\n/t mai\n/tena\n/t dem\em/brer le lev\er/er	 15 
+Qua\n/t Neme de Beiv\er/e com\en/sa a hucher, 
+Richard de Normandie e Gaufroi e Oger, 
+Terri l'Ardinois, Berardz de Mondider 
+Dreit au pié Charles s'en vont agenoiler : 
+« Sire dreit emp\erer/e, mont n\ous/ peut m\er/vailer	20 
+E des bontez q\ue/ en v\ous/ solaien repairer : 
+
+
+
+I, I La partie inférieure des caractères, seule visible, ne permet pas le déchif-
+frement. — 7 L'initiale manque, mais un d est inscrit dans la marge. — 8 sic, 
+lis. saisi et leverer. 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 3 
+
+Vous me soleiz mout amer e tenir cher, 
+Moy e T\er/ri l'Ardonois, Berard de Mondider ; 
+Ore ne v\ous/ volez mes amer ne priser. 
+Sertes, sire, ceo pois nos, ço ne v\ous/ q\u/er noer ; 		25 
+Ja ne n\ous/ tarrom n'e\n/ av\er/om loer : 
+Gardés nous de t\ra/ïtres, v\ous/ avez beni mester. 
+— Nemes, dist Charl\es/, jeo ne m'i soi garder 
+Si cil sire n'en pense q\ue/ tout peut j\us/tiser. 
+— Ame\n/, ceo dist Charl\es/, jo l'em pri e requer.	 30 
+Ore escultez un pou, Fraunçois e Beruër, 
+Ente\n/dez ma p\ar/ole, n'oiz sai\n/g de noier. 
+Il n'i ad ça einz haut home, serjaunt e chivaler, 
+verso I I I I I 1 I I I [ne esquier] 
+Que cest lev\er/er adeie ne ne voile aprocher, 	35 
+Fors seulement Mac\er/, le noster despenser. 
+Joe ne vei pos Aubri son seign\or/ repeirer 
+Que en mena la Roÿne que en faites chacer. 
+Car faites un chose dount jo v\ous/ p\ri/ e req\ue/r, 
+Q\ue/ v\ous/ mountez, beau sire, sor vot\re/ bon dest\re/r 	40 
+E n\ous/ v\ous/ suërom aprés desq\ue/ .x. chivaler, 
+S'irrom ap\ré/s le chien el bois g\ra/nt a pl[e]ser. 
+Si m'aïst icil sire q\ue/ tout ad a juger, 
+Solo\n/c le mie\n/ pensé, ceo v\ous/ di saunz boiser, 
+Macer ad occis Aubri de Mondider, 	45 
+Voster gentile baro\n/ q\ue/ tant fist a preser 
+Ne de vost\re/ service ne se peut anoier. » 
+
+[D] ont par fu li t\ra/ïtre dolent e corucez ; 
+Q\ua/nt il oï duc Nemes, a pou qu'il n'est devez : 
+« Sire, ceo dist Mac\er/, nient dirriez assez ; 	50 
+Ne fusses si haut home e si ennorez, 
+Ja en serait mes gages v\er/s le vost\re/ donez 
+
+
+
+25 ms. pois nios. — 27 Lis. Gardés vous et sans doute inversement ne nous 
+au V. 24. — 30 [Lis. ceo dist Nemes ; voir infra, p. 9, n. i]. — 34 Même obser- 
+vation que pour 1. [On peut cependant deviner la fin de vers ne esquier, cf. pour 
+cette graphie, 41 ; pour la confirmation de cette lecture, voir infra,p. 9, n. 2] — 
+35 Les 3e et 4e lettres de adeie sont incertaines par suite d'une légère déchirure 
+du ms. [M. Baker avait lu d'abord adest, mais l'e final est certain et la 4e lettre 
+ne petit guère être s; pour adeie, cf. Godefroy, I, v. adaier.] — 37 Lis. vei 
+pas. — 44 le est ajouté au-dessus de la ligne entre mien et pensé. 
+
+
+
+A. T. BAKER 
+
+Que onq\ue/s en si fait mendre ne me vi\n/t en pe\n/sez. 
+— Macer, dist duc Nemes, un petit m'entendez : 
+Bene v\er/rom com\en/t il est ei\n/z les t\re/is jors passez. »	55 
+Nemes sest le lev\er/er, v\er/s le Roi s'est tornez. 
+Le lev\er/er veit le Roi, v\er/s lui s'est aclinez, 
+Devant lui s'agenoille, si s'est mout dem\en/tez ; 
+As denz p\ri/st son ermine q\ue/ estoit engoulez, 
+Volu\n/tieris l'en t\ra/isist le lev\er/er affilez 	60 
+Q\ua/nt li Roi l'ad veü, si plora de pitez ;
+Son cheval dema\n/da, il lui fu amenez ; 
+L'emp\er/er monta, tei\n/t l'espee a son lez, 
+E des autres baro\n/s ta\n/t q\ue/ il fure\n/t asez. 
+Mac\er/ li t\ra/ïtre se n'est pas alez,	 65 
+Einz remist a Paris dolenz e aïrez. 
+
+
+
+II 
+
+F. 2 recto « ........ 1 1 1 1 faite de g\ra/nt bastonz q\ua/rrez 
+Cum plus l'averai batu, plus ert adountez 
+E meuz eu ert le fes desor son dos portez. 
+Tel manere a li asne, ceo dist l'autoritez. 
+Sire, veez ci mon chen, c'est meu\n/s amis p\ri/vez ;	5 
+Si m'aït icil sire q\u'e/n croiz fu peinez
+Cum jeo n'ai nul ami dou\n/t soi meuz amez. 
+Qua\n/t jeo l'ai tau\n/t batu, a pou ne l'ai tuez, 
+E jeo l'apel a moi, a lui di : « Ça venez ! », 
+Lors me coneust mes chens, s'est vers moi aclinez.	 10 
+Seinors, ceo dist duc Nemes, par Deu de majestez, 
+Issi irra M\er/lin cum v\ous/ oï ore avez. » 
+
+« [S]eignors, ceo dist duc Nemes, entendez mon pensé :
+Jugeme\n/t v\ous/ dorreie, si v\ous/ [v]endroit a gré. 
+Pus que Aubri n'ad home est\ra/nge ne prevé	15 
+Que voille vers Mac\er/ \com/batre el chau\m/p mellé, 
+Fors soulem\en/t cest chen que voi entalenté, 
+Jeo di q\ue/ home les doit mettre ensemble p\or/ v\er/ité 
+
+
+
+53 Lis. un si f. meudre (meurdre, cf. mordre, II, 38). — 56 Lis. Nemes lest 
+— 60 [affilez ne paraît pas absolument sûr ; la photographie laisse voir dans l'inter- 
+ligne un signe qui se lit mal]. 
+
+II, 1 faite est de lecture très incertaine. 
+
+
+
+FRAGMENTS DE LA CHANSON DE LA REINE SIBILE 5 
+
+Macer soit a pé devant lui en el pré, 
+Si ait un escu rond e un baston quarré	20 
+E un baston d'espine bien fait e mesuré, 
+Pié e demi de long bien fait e asscemé. 
+Si il peut occire, mout avra bien ov\er/é : 
+Tot quite s'en irra e tout a sauveté ; 
+E si le chen le vente, par Deu de majesté, 	25 
+Donc di jeo qu'il ad occis Aubri e affolé, 
+Jeo ne soi autre chose, es te le v\ous/ prové. 
+Face en li Roy justice au los de son barné. » 
+E q\ua/nt cil l'ente\n/dire\n/t, si su\n/t en piez levé, 
+Duc Nemes embracerent e si l'ou\n/t acolé : 	30 
+« Sire, bien avez dist, Deu v\ous/ tiegne en bonté ; 
+Tout issi serra il cum l'avez devisé . « 
+Devant le Roy s'en vont, tout l'ou\n/t reconté 
+Trestout le jugeme\n/t qu'il ou\n/t enorté, 
+E le roy lour ottroie volunters e de gré, 	35 
+verso Qua\n/t ost le jugement que ert de loiauté. 
+Qua\n/t Mac\er/ l'oï g\ra/nt joi en ad mené, 
+Son g\ra/nt mordre quida bien aver aquité ; 
+Mes Deu qu'\on/ques ne menti bien sout la vérité. 
+
+[C]eo fu par un matin que le solail lust gent ; 	40 
+Macer ou\n/t amené esquier e serjaunt, 
+Devaunt le roi s'en vint. Char\les/ lui ad dist tau\n/t : 
+« Macer, dist le Roy, entendez mon semblau\n/t. 
+Certes jeo v\ous/ aim mout, ne seez mie mescreaunt, 
+Por l'am\or/ du lignage que v\ous/ avez s[i] grant ; 	45 
+Mes il m'estuit dreit faire a ma court de ma ge\n/t. 
+Jugé ou\n/t, ceo me semble, mi amis meuz vallau\n/t. 
+Pur que Aubri n'ad home, est\ra/nge ne parent, 
+Que voille v\er/s v\ous/ \com/batre el chaump present, 
+Cest chen v\er/s v\ous/ en ad mout g\ra/nt talent, 	50 
+\Vous/ estoit c\om/batre par itele covenaunt : 
+V\ous/ averez un escu rou\n/d e un baston pesau\n/t 
+E un baston d'espine bien fait e avenaunt 
+Si le chen poez ventre ne faire recréant. 
+
+
+
+19-20 La lecture est rendue difficile par le pli transversal et les dechirures ; 
+au v. 20 soit ou, moins probablement, voit. — 22 Le second s est ajouté au-dessus de 
+la ligne entre s et c, peut-être par erreur pour ascesmé — 53 La fin du vers est 
+de lecture difficile à cause du pli. 
+
+
+
+6 A. T. BAKER 
+
+Tout quite serras de la traïson grau\n/t, 	55 
+Ceo que vous mettent sus mi home e ma gent 
+De Aubri que est occis dont j'ai le quer dole\n/t. 
+E si le chen v\ous/ vai\n/t, jeo di par saint Amenau\n/t, 
+Jeo v\ous/ ferai justice tel cum est covenau\n/t 
+D'escorcher e d'ardoir, d'encroier au vent. 	60 
+— Sire, ceo dist Mac\er/, Deu en trais a guarau\n/t 
+Que Aubri ne fis mal plus que mon cher enfau\n/t. « 
+
+« [S]ire, ceo dist Mac\er/, por Deu le fiz Marie, 
+Ja en serrai ceo honte e m\o/lt g\ra/nt vilanie 
+Si me \com/b[at] e au chen en bataille formie. 		65 
+— N[e]ni, ceo dist li Roi, car issi l'ount jugie 
+Mi home e ma gent dou\n/t il i ad partie. 
+Alez adober e si ne demorés mie. » 
+Macer s'en torna, si apele sa lignie ; 
+Si parent l'adoberent en la sale voutie : 	70 
+Un court baston d'espine lui ou\n/t mis en baillie. -->

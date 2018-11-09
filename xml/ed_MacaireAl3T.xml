@@ -4,6 +4,11 @@
 <?xml-model href="../odd/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- TODO: revoir à partir de la révision dans 
+    p. dans → SebilleT p. 323-328 sur la base d’une éd. de P. Aebischer -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_MacaireAl3T" xml:lang="fr" type="ed"
     version="5" corresp="jns13335">
     <teiHeader>
@@ -70,7 +75,8 @@
                 <origDate cert="unknown" resp="DEAF" notBefore="1280" notAfter="1300"
                     type="dateManuscrit">fin du XIIIe siècle</origDate>
                 <origPlace cert="unknown" resp="DEAF" type="lieuComposition">inconnue</origPlace>
-                <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">Est (Lorraine ou région environnante selon Aebischer)</origPlace>
+                <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">Est (Lorraine ou 
+                    région environnante selon Aebischer)</origPlace>
             </creation>
             <langUsage>
                 <language cert="unknown" resp="DEAF" ident="fro" usage="100">ancien français avec
@@ -96,29 +102,30 @@
         - rendre compte de la résolution des abréviations (ex);
         
         -->
+            <pb n="1r" facs=""/><cb n="a"/>
             <lg type="laisse">
                 <l n="1">
-                    <w><pb n="1r" facs=""/><cb n="a"/>Que</w>
+                    <w>Que</w>
                     <w>fu</w>
                     <w>Karlon</w>
                     <w><choice>
-                            <reg resp="#Aebischer">mon</reg>
-                            <orig>moi</orig>
+                            <corr resp="#Aebischer">mon</corr>
+                            <sic>moi</sic>
                         </choice></w>
                     <w>pere</w>
                     <w rend="elision">l</w>
                     <pc type="supplied">'</pc>
                     <w><choice>
-                            <reg resp="#Aebischer">anperaor</reg>
-                            <orig>aperaor</orig>
+                            <corr resp="#Aebischer">anperaor</corr>
+                            <sic>aperaor</sic>
                         </choice></w>
                     <w>puisant</w>
                     <pc type="supplied">;</pc>
                 </l>
                 <l n="2">
                     <w><choice>
-                            <reg resp="#Aebischer">Se</reg>
-                            <orig>Si</orig>
+                            <corr resp="#Aebischer">Se</corr>
+                            <sic>Si</sic>
                         </choice></w>
                     <w>je</w>
                     <w>vi</w>
@@ -203,8 +210,8 @@
                     <pc type="supplied">,</pc>
                     <w>tot</w>
                     <w><choice>
-                            <reg resp="#Aebischer">contreval</reg>
-                            <orig>conteval</orig>
+                            <corr resp="#Aebischer">contreval</corr>
+                            <sic>conteval</sic>
                         </choice></w>
                     <pc type="supplied">;</pc>
                 </l>
@@ -330,8 +337,8 @@
                     <w>a</w>
                     <w>sui</w>
                     <w><choice>
-                            <reg resp="#Aebischer">prince</reg>
-                            <orig>price</orig>
+                            <corr resp="#Aebischer">prince</corr>
+                            <sic>price</sic>
                         </choice></w>
                     <w>chesal</w>
                     <pc type="supplied">:</pc>
@@ -375,6 +382,7 @@
                 <l n="21">
                     <w>Mès</w>
                     <w>quan</w>
+                    <!-- JBC: on attendrait 'X l'oit, a' -->
                     <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
                     <w>po</w>
                     <w rend="elision">n</w>
@@ -525,8 +533,8 @@
                     <w>Par</w>
                     <w>son</w>
                     <w><choice>
-                            <reg resp="#Aebischer">anchantemant</reg>
-                            <orig>anchantemat</orig>
+                            <corr resp="#Aebischer">anchantemant</corr>
+                            <sic>anchantemat</sic>
                         </choice></w>
                     <w>vous</w>
                     <w>a</w>
@@ -645,9 +653,10 @@
                     <pc type="supplied">»</pc>
                 </l>
                 </lg>
+            <cb n="b"/>
             <lg type="laisse">
                 <l n="43">
-                    <w><cb n="b"/>Grant</w>
+                    <w>Grant</w>
                     <w>duel</w>
                     <w>oit</w>
                     <w rend="elision">l</w>
@@ -693,8 +702,8 @@
                     <w>vous</w>
                     <w>cil</w>
                     <w><choice>
-                            <reg resp="#Aebischer">echapez</reg>
-                            <orig>ehapez</orig>
+                            <corr resp="#Aebischer">echapez</corr>
+                            <sic>ehapez</sic>
                         </choice></w>
                     <pc type="supplied">,</pc>
                     <w>qui</w>
@@ -773,8 +782,8 @@
                 <l n="52">
                     <w>Foi</w>
                     <w><choice>
-                            <reg resp="#Aebischer">que</reg>
-                            <orig>qui</orig>
+                            <corr resp="#Aebischer">que</corr>
+                            <sic>qui</sic>
                         </choice></w>
                     <w>doi</w>
                     <w>sent</w>
@@ -824,8 +833,8 @@
                     <w>III</w>
                     <pc type="supplied">.</pc>
                     <w><choice>
-                            <reg resp="#Aebischer">pandre</reg>
-                            <orig>pandere</orig>
+                            <corr resp="#Aebischer">pandre</corr>
+                            <sic>pandere</sic>
                         </choice></w>
                     <pc type="supplied">,</pc>
                     <w>que</w>
@@ -944,8 +953,8 @@
                     <w rend="elision">qu</w>
                     <pc type="supplied">'</pc>
                     <w><choice>
-                            <reg resp="#Aebischer">ore</reg>
-                            <orig>or</orig>
+                            <corr resp="#Aebischer">ore</corr>
+                            <sic>or</sic>
                         </choice></w>
                     <w>an</w>
                     <w>ai</w>
@@ -1015,10 +1024,10 @@
                     <pc type="supplied">'</pc>
                     <w>i</w>
                     <w>cuit</w>
-                    <choice>
-                        <corr resp="#Aebischer"><w>ester</w></corr>
-                        <sic><w>estrier</w></sic>
-                    </choice>
+                    <w><choice>
+                        <corr resp="#Aebischer">ester</corr>
+                        <sic>estrier</sic>
+                    </choice></w>
                     <pc type="supplied">.</pc>
                 </l>
                 <l n="71">
@@ -1205,8 +1214,10 @@
                     <w>molu</w>
                     <pc type="supplied">:</pc>
                 </l>
+                <pb n="1v" facs=""/>
+                <cb n="a"/>
                 <l n="85">
-                    <w><pb n="1v" facs=""/><cb n="a"/>Tot</w>
+                    <w>Tot</w>
                     <w>sovin</w>
                     <w>a</w>
                     <w>la</w>
@@ -1307,8 +1318,8 @@
                     <gap unit="char" quantity="7" reason="damage"/>
                     <w>petit</w>
                     <w><choice>
-                            <reg resp="#Aebischer">et</reg>
-                            <orig>a</orig>
+                            <corr resp="#Aebischer">et</corr>
+                            <sic>a</sic>
                         </choice></w>
                     <w>grant</w>
                 </l>
@@ -1376,8 +1387,8 @@
                 <l n="99" met="-1">
                     <w>Et</w>
                     <w><choice>
-                            <reg resp="#Aebischer">an</reg>
-                            <orig>ai</orig>
+                            <corr resp="#Aebischer">an</corr>
+                            <sic>ai</sic>
                         </choice></w>
                     <w>vai</w>
                     <w>les</w>
@@ -1478,8 +1489,8 @@
                     <w>Juque</w>
                     <w>an</w>
                     <w><choice>
-                            <reg resp="#Aebischer">Normandie</reg>
-                            <orig>Normande</orig>
+                            <corr resp="#Aebischer">Normandie</corr>
+                            <sic>Normande</sic>
                         </choice></w>
                     <w>ne</w>
                     <w>se</w>
@@ -1584,8 +1595,8 @@
                     <w>vuet</w>
                     <w>ensi</w>
                     <w><choice>
-                            <reg resp="#Aebischer">desireter</reg>
-                            <orig>deireter</orig>
+                            <corr resp="#Aebischer">desireter</corr>
+                            <sic>deireter</sic>
                         </choice></w>
                     <pc type="supplied">!</pc>
                 </l>
@@ -1689,8 +1700,8 @@
                     <w>pour</w>
                     <w>ce</w>
                     <w><choice>
-                            <reg resp="#Aebischer">besoing</reg>
-                            <orig>besoig</orig>
+                            <corr resp="#Aebischer">besoing</corr>
+                            <sic>besoig</sic>
                         </choice></w>
                     <w>aler</w>
                     <pc type="supplied">,</pc>
@@ -1748,7 +1759,8 @@
                         </lg>
             <lg type="laisse">
                 <l n="127">
-                    <w><cb n="b"/>Ogiers</w>
+                    <cb n="b"/>
+                    <w>Ogiers</w>
                     <w>antant</w>
                     <w>le</w>
                     <w>duc</w>
@@ -1923,8 +1935,8 @@
                     <w rend="elision">s</w>
                     <pc type="supplied">'</pc>
                     <w><choice>
-                            <reg resp="#Aebischer">armerent</reg>
-                            <orig>amerent</orig>
+                            <corr resp="#Aebischer">armerent</corr>
+                            <sic>amerent</sic>
                         </choice></w>
                     <w>ansanble</w>
                     <w>pour</w>
@@ -1948,8 +1960,8 @@
                 <l n="142">
                     <w>A</w>
                     <w><choice>
-                            <reg resp="#Aebischer">une</reg>
-                            <orig>un</orig>
+                            <corr resp="#Aebischer">une</corr>
+                            <sic>un</sic>
                         </choice></w>
                     <w>lieue</w>
                     <w>près</w>
@@ -2007,7 +2019,7 @@
                     <w>est</w>
                     <w>is</w>
                     <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
-                    <gap unit="char" quantity="5" reason="damage"/>
+                    <gap unit="char" quantity="5" reason="damage"/><!-- JBC: ? -->
                 </l>
                 <l n="148">
                     <pc type="supplied">.</pc>
@@ -2090,8 +2102,8 @@
                     <pc type="supplied">'</pc>
                     <w>esanbler</w>
                     <w><choice>
-                            <reg resp="#Aebischer">des</reg>
-                            <orig>de</orig>
+                            <corr resp="#Aebischer">des</corr>
+                            <sic>de</sic>
                         </choice></w>
                     <choice>
                         <corr resp="#Aebischer"><w>oz</w></corr>
@@ -2100,8 +2112,8 @@
                     <w>fu</w>
                     <w>la</w>
                     <w><choice>
-                            <reg resp="#Aebischer">noise</reg>
-                            <orig>nois</orig>
+                            <corr resp="#Aebischer">noise</corr>
+                            <sic>nois</sic>
                         </choice></w>
                     <w>moult</w>
                     <w>grant</w>
