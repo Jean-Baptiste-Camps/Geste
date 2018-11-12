@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JBC: encore des problèmes dans ce fichier: édition très fautive, erreurs de transcription, segmentation, passages
+incompréhensibles, etc. 
+Mériterait d'être repris en détail (avec une édition sous la main).
+-->
+
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrMo" xml:lang="fr" type="ed" version="5" corresp="jns5643">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Garin le Lorrain</title>
+            <title type="sub">Numérisation de l'édition de Mone du fragment Karajan</title>
+            <editor xml:id="Mone"><persName>Mone</persName></editor>
+            <respStmt xml:id="AJ">
+               <resp>édition numérique</resp>
+               <persName>Axelle Janiak</persName>
+            </respStmt>
+            <respStmt xml:id="JBC">
+               <resp>sous la direction de</resp>
+               <persName>Jean-Baptiste Camps</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <authority>
+               <persName>
+                  <forename>Jean-Baptiste</forename>
+                  <surname>Camps</surname>
+               </persName>
+               <address>
+                  <orgName>École nationale des chartes</orgName>
+                  <addrLine>65 rue de Richelieu</addrLine>
+                  <addrLine>F-75002 Paris</addrLine>
+               </address>
+               <email>jbcamps@hotmail.com</email>
+            </authority>
+            <availability status="free">
+               <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                  d'auteurs médiévaux sont dans le domaine public.</licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                  d'encodage et d'annotation sont mis à disposition selon les termes de la licence
+                  Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International
+                  (CC BY-SA 4.0). </licence>
+            </availability>
+            <date>2018</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct xml:id="edM" status="draft">
+               <analytic>
+                  <editor xml:id="Mone">
+                     <persName>
+                        <surname>Mone</surname>
+                     </persName>
+                  </editor>
+                  <!--<title type="main" xml:lang="fr">Garin le Lorrain</title>
+                  <title type="sub">Fragment de Karajan</title>-->
+                  <!-- Pas de titre en relation avec le fragment pour cette édition qui reprend le titre de sa collection -->
+                  <title xml:lang="de">Bruchstücke des Werin von Lothringen.</title>
+                  <!-- Nous indiquons aussi en second titre, celui utilisé pour la section par l'éditeur. Ce cas de figure justifie l'usage du xml:lang en attribut. -->
+               </analytic>
+                  <monogr>
+                     <title>Anzeiger für Kunde der Deutschen Vorzeit, 7</title>
+                     <imprint>
+                        <pubPlace>Nuremberg</pubPlace>
+                        <date>1838</date>
+                        <biblScope unit="issue" n="7">7</biblScope>
+                        <biblScope unit="column" from="408" to="411">col. 408-411.</biblScope>
+                     </imprint>
+                  </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <origPlace cert="unknown" resp="DEAF" type="lieuComposition">Traits champenois et
+               picards</origPlace>
+            <origDate cert="unknown" resp="DEAF" notBefore="1175" notAfter="1200" type="dateComposition">entre 1175 et 1200 </origDate>
+            <origPlace resp="DEAF" cert="unknown" type="lieuManuscrit">Inconnu</origPlace>
+            <origDate cert="unknown" resp="#Mone" type="dateManuscrit" notBefore="1201" notAfter="1300">1201-1300</origDate>
+         </creation>
+         <langUsage>
+            <language cert="unknown" resp="DEAF" ident="fro" usage="100">Traits champenois et
+               picards</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change when="201809" who="#JBC">Correction du document</change>
+         <!-- 
+         TODO pour l'intégration du fichier,
+         - revoir la segmentation des mots (élision, agglutination, etc.)
+         - u/v et i/j (allographes à traiter)
+         - estimation de la quantité de texte perdue (gap/@quantity) + @reason des gap
+         - revoir rapidement les abréviations.
+         - erreurs très visibles de l'éditeur (q'ant, etc.) à revoir.
+         
+         -->
+         <change who="#AJ" when="2018-03-27" status="draft">Mise à jour du modèle ODD issu de la Chanson d'Ottinel de #jbcamps</change>
+         <change who="#AJ" when="2018-03-26" status="draft">Lissage des typages entre les deux
+            fragments. Ajout de raisons aux gap attribués pour les char. Mise en place de la
+            tokenisation et de la numérotation des vers et des mots</change>
+         <change who="#AJ" when="2018-03-21" status="draft">Découpage des laisses et résolution des
+            abréviations.</change>
+         <change who="#AJ" when="2018-03-10" status="draft">Correction de certains typages pour
+            gagner en préciser. Ajout du titre allemand dans les métadonnées.</change>
+         <change who="#AJ" when="2018-03-08" status="draft">Encodage des manques du
+            fragment.</change>
+         <change who="#AJ" when="2018-03-02" status="draft">Réalisation du TeiHeader et encodage de
+            la structure d'ensemble: front, body, back et l.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="ger">
+      <front>
+         <div type="titre">
+            <head><lb n="1"/>1. Bruchstücke des Werin von Lothringen. </head>
+         </div>
+         <div type="introduction">
+            <p><lb n="2"/>Sie beschreiben den Krieg zwischen Fromunt, Milo und <lb n="3"/>Walther.
+               Der Inhalt ist angegeben in meinen Untersuchun<lb n="4"/>gen zur Heldensage S.
+               243.</p>
+         </div>
+      </front>
+      <body>
+         <pb n="408" facs="./pdf/0002.pdf.png"/>
+         <cb type="foliotation_edition" n="2"/>
+         <!-- Le fragment débute sur la deuxième colonne de la version éditée.-->
+         <lg type="laisse" xml:id="L_001" n="001">
+            <lb n="1"/>
+            <l  n="1">
+               <note>fol. I.</note>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >avoir</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="faire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >fet</w>
+               <w lemma="lëaument" type="POS=ADVgen|DEGRE=-" >léaument</w>
+               <w lemma="departir" type="POS=VERinf" >departir</w>
+            </l>
+            <lb n="2"/>
+            <l  n="2">
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="bonement" type="POS=ADVgen|DEGRE=-" >bonement</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="" type="POS=OUT" ><gap reason="facsimile" unit="char" quantity="3"/>s</w>
+               <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=i" >nus</w>
+               <w lemma="ne1" type="POS=ADVneg" rend="elision" >n</w><w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="perdre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >perdi</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <!-- Les attributs quantités corresponds au nombre de points reportés par Mome.Dans certains, il semble correspondre au nombre de lettres absentes, même si force est de reconnaître qu'à d'autres l'éditeur semble plutôt préoccupé par l'effet visuel équilibré du texte. -->
+            <lb n="3"/>
+            <l  n="3">
+               <w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautlers</w>
+               <w lemma="de" type="POS=PRE"  rend="elision">d</w>
+               <w lemma="Henaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >eno</w>
+               <note n="1">(1.
+                  d'Hénaut)</note>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w>
+               <w lemma="delivrer" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >delivrés</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >pris</w>
+            </l>
+            <lb n="4"/>
+            <l  n="4">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=f|CAS=r" >une</w>
+               <w lemma="tor2" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >tor</w>
+               <w lemma="flatir" type="POS=VERinf" >flatir</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="5"/>
+            <l  n="5">
+               <w lemma="ne1" type="POS=ADVneg" >n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="issir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=p" >istront</w>
+               <w lemma="Mès" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Mes</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="savoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s" >saura</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="6"/>
+            <l  n="6">
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="talent" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >talant</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s" >jert</w><!-- JBC: iert -->
+               <w lemma="venjance" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >venjance</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=r" >pris</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="7"/>
+            <l  n="7">
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >doit</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="amer1" type="POS=VERinf" >amer</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >ses</w>
+               <w lemma="bon" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p" >bons</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >amis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="8"/>
+            <l  n="8">
+               <w lemma="qui" type="POS=PROrel|NOMB.=p|GENRE=m|CAS=n" >qui</w>
+               <w lemma="por2" type="POS=PRE" >pour</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >lui</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="tel" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r" >tel</w>
+               <w lemma="guerre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >guerre</w>
+               <w lemma="entremetre" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >entremis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="9"/>
+            <l  n="9">
+               <w lemma="car" type="POS=CONcoo" >car</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="metre2" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >mettent</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >cuer</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="piz" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >piz</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="10"/>
+            <l  n="10">
+               <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=n" >j</w>
+               <pc type="supplied">.</pc>
+               <w lemma="messagier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >messagier</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Mont-Loon" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Mon—Loon</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="11"/>
+            <l  n="11">
+               <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" >qui</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="conter" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >conté</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="emperëor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >emperéor</w>
+               <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Pepin</w>
+            </l>
+            <lb n="12"/>
+            <l  n="12">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >roïne</w>
+               <pc type="supplied">,</pc>
+               <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n" >qui</w>
+               <w lemma="tant" type="POS=ADVgen|DEGRE=-" >tant</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >ot</w>
+               <w lemma="cler" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >cler</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="vis1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >vis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="13"/>
+            <l  n="13">
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="come1" type="POS=CONsub" >come</w>
+               <w lemma="Miles" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Miles</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautiers</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="orfenin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >orfelins</w>
+            </l>
+            <lb n="14"/>
+            <l  n="14">
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="desconfire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >desconfit</w>
+               <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Fromond</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >poëstif</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="15"/>
+            <!-- JBC: encodage discours direct -->
+            <l  n="15">
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dist</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" >la</w>
+               <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >roïne</w>
+               <pc type="supplied">:</pc>
+               <q><w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >font</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >mi</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >ami</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="16"/>
+            <l  n="16">
+               <q><w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >diex</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=i" >lor</w>
+               <w lemma="doner" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" >doint</w>
+               <w lemma="force2" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >force</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que4" type="POS=CONsub"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="pöoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p" >puissent</w>
+               <w lemma="tenir1" type="POS=VERinf" >tenir</w></q>
+            </l>
+            <lb n="17"/>
+            <l  n="17">
+               <q><w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="perdre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >pert</w>
+                  <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Fromons</w><pc type="supplied">"</pc>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >rois</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="France" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" >France</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="dire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >dit</w>
+               <pc type="supplied">.</pc></q>
+            </l>
+            <lb n="18"/>
+            <l  n="18">
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dist</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" >la</w>
+               <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >roine</w>
+               <pc type="supplied">:</pc>
+               <!--<w>"</w>-->
+               <q><w lemma="foi" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >foi</w>
+               <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r" >que</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >doi</w>
+               <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" ><choice>
+                     <abbr>s<pc type="supplied">.</pc></abbr>
+                     <expan>s<ex>aint</ex></expan>
+                  </choice></w>
+               <w lemma="Denis" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Denis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="19"/>
+            <l  n="19">
+               <q><w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >doit</w>
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="perdre" type="POS=VERinf" >perdre</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >si</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >ami</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="20"/>
+            <l  n="20">
+               <q><w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="träitor" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >traïtor</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="jusque" type="POS=ADVgen|DEGRE=-"  rend="elision">iusqu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >fin</w></q>
+            </l>
+            <lb n="21"/>
+            <l  n="21">
+               <w lemma="or4" type="POS=ADVgen|DEGRE=-" >Or</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="laissier" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p" >lairons</w>
+               <w lemma="ester" type="POS=VERinf" >ester</w>
+               <w lemma="de+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >dou</w>
+               <w lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >roi</w>
+               <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Pepin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="22"/>
+            <l  n="22">
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="changier" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p" >chanterons</w>
+               <w lemma="de+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >du</w>
+               <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Loherenc</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Garin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="23"/>
+            <l  n="23">
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="nevo" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >neveu</w>
+               <gap unit="char" reason="facsimile" quantity="6"/>
+            </l>
+            <lb n="24"/>
+            <l  n="24">
+               <w lemma="a3" type="POS=PRE" >a</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=i" >els</w>
+               <w lemma="envoiier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >anvoie</w>
+               <gap unit="char" reason="facsimile" quantity="6"/>
+            </l>
+            <lb n="25"/>
+            <l  n="25">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=i" >lor</w>
+               <w lemma="mander" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >mande</w>
+               <gap unit="char" reason="facsimile" quantity="6"/>
+            </l>
+            <lb n="26"/>
+            <l  n="26">
+               <gap unit="char" reason="facsimile" quantity="4"/>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Guilaume" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Guillame</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="orgoillos" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >orgellox</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="Monclin" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Monclin</w>
+            </l>
+            <lb n="27"/>
+            <l  n="27">
+               <gap unit="char" reason="facsimile" quantity="3"/>
+               <w lemma="denz" type="POS=PRE" >denz</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=f|CAS=r" >sa</w>
+               <gap unit="char" reason="facsimile" quantity="4"/>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="trover" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >trova</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vit</w>
+            </l>
+            <lb n="28"/>
+            <l  n="28">
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="prisonier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >prisoniers</w>
+               <w lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >tient</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="conte1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >quens</w>
+               <w lemma="trente" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=r" >XXX</w>
+               <pc type="supplied">.</pc>
+               <w lemma="cinc" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=r" >V</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="29"/>
+            <l  n="29">
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >dux</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="conte1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >conte</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" >Gerbers</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gerins</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="30"/>
+            <l  n="30">
+               <q><w lemma="enfant" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >enfant</w></q>
+               <pc type="supplied">,</pc>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >fet</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <pc type="supplied">,</pc>
+               <q><w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautiers</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="orfenin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >orfelins</w></q>
+            </l>
+            <lb n="31"/>
+            <l  n="31">
+               <q><note>col. 2.</note>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="pro" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >prod<gap unit="char" reason="facsimile" quantity="7"/></w></q>
+            </l>
+            <lb n="32"/>
+            <!-- JBC: voir pour le discours direct -->
+            <l  n="32">
+               <q><w lemma="se" type="POS=OUT" >se</w>
+               <w lemma="estre1" type="POS=OUT" >fust</w>
+               <w lemma="Hue" type="POS=OUT" >Huon</w>
+               <!--<w>--><gap unit="char" reason="facsimile" quantity="6"/></q>
+            </l>
+            <lb n="33"/>
+            <l  n="33">
+               <q><w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="cel" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r" >cele</w>
+               <w lemma="part1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >part</w>
+               <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Fromons</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >poëstis</w></q>
+            </l>
+            <lb n="34"/>
+            <l  n="34">
+               <q><w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >fust</w>
+               <w lemma="tot" type="POS=ADVgen|DEGRE=-" >toz</w>
+               <w lemma="cerchier" type="POS=VERinf" >cherchier</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >luj</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >si</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >ami</w>
+               <pc type="supplied">.</pc></q>
+            </l>
+            <lb n="35"/>
+            <l  n="35">
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dist</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="message2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >messages</w>
+               <pc type="supplied">:</pc>
+               <q><w lemma="Hue" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Hues</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="Lavardin" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Lavardin</w></q>
+            </l>
+            <lb n="36"/>
+            <l  n="36">
+               <q><w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="estor2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >estor</w>
+               <w lemma="durement2" type="POS=ADVgen|DEGRE=-" >durement</w>
+               <w lemma="esbaudir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >esbaudiz</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="37"/>
+            <l  n="37">
+               <q><w lemma="ainz" type="POS=ADVgen|DEGRE=-" >ainz</w>
+               <w lemma="chevalier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >chevaliers</w>
+               <w lemma="mieus" type="POS=ADVgen|DEGRE=c" >mjelz</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >luj</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+                  <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w><pc type="supplied">"</pc></q>
+            </l>
+            <lb n="38"/>
+            <l  n="38">
+               <q><w lemma="messagier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >messagier</w>
+               <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >frère</w></q>
+               <pc type="supplied">,</pc>
+               <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r" >ce</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dit</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <pb n="409" facs="./pdf/0003.pdf.png"/>
+            <cb type="foliotation_edition" n="1"/>
+            <lb n="1"/>
+            <l  n="39">
+               <q><w lemma="dire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s" >di</w>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" >moi</w>
+               <w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautier</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >mon</w>
+               <w lemma="nevo" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >neveu</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="orfenin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >orfelin</w></q>
+            </l>
+            <lb n="2"/>
+            <l  n="40">
+               <q><w lemma="prendre" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" >prengne</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >soi</w>
+               <w lemma="garde" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >garde</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r" >cels</w>
+               <w lemma="que2" type="POS=PROrel|NOMB.=p|GENRE=m|CAS=n" >que</w>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >mis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="3"/>
+            <l  n="41">
+               <q><w lemma="se" type="POS=CONsub" >s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n" >il</w>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="nul" type="POS=PROind|NOMB.=s|GENRE=m|CAS=r" >nul</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >li</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s" >di</w>
+               <w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >biax</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >amis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="4"/>
+            <l  n="42">
+               <q><w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" >qui</w>
+               <w lemma="apartenir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" >apartiegne</w>
+               <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Fromont</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >poéëstis</w>
+               <pc type="supplied">,</pc></q>
+               <note><lb n="5"/>Die Zeugnisse für diesen Namen gehen
+                     ziemlich weit zurück. Ausser <lb n="6"/> den im Anz. VI. 488 bemerke man folgende
+                        bei<bibl status="draft"> Lebeuf mémoires concernant <lb n="7"/> l'histoire
+                        d'Auxerre (Paris 1743) tome II. preuves p<pc type="supplied">.</pc> 28. magister Fromundus
+                           <lb n="8"/>v. 1180 p.
+                        246 Frotmundus miles aus dem 9 Sec. ebenso p<pc type="supplied">.</pc> 252 u. p<pc type="supplied">.</pc> 248 Fro <lb n="9"/>mundus laicus </bibl>aus
+                     derselben Zeit. Fromunds Charakter scheint in der <lb n="10"/>ältern Heldensage weniger anstössig gewesen, woraus fich die Verbrei <lb n="11"/>tung seines Namens einigermassen
+                        erklärt. Sein Verlöngnen des Chri<lb n="12"/>stenthums und sein Uebertritt zum Islam ist wohl folge der Kreuz<lb n="13"/>züge vor dem 12. Jahrh.
+                     nicht in die Sage gekommen . und durch die<lb n="14"/>sen Schandfleck. den die Sage dem Namen anklebie, mag er im Leben <lb n="15"/>seltener geworden fenn.</note>
+            </l>
+            <lb n="16"/>
+            <l  n="43">
+               <q><w lemma="se" type="POS=CONsub" >s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="emprès" type="POS=ADVgen|DEGRE=-" >empres</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >li</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" >face</w>
+               <w lemma="tot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" >toz</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="membre" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >membres</w>
+               <w lemma="tolir" type="POS=VERinf" >tolir</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="17"/>
+            <l  n="44">
+               <q><w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="chier" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >chier</w>
+               <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >frère</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >li</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >doit</w>
+               <w lemma="asouvenir" type="POS=VERinf" >asouvenir</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="18"/>
+            <l  n="45">
+               <q><w lemma="que4" type="POS=CONsub" >qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="ocire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >ocistrent</w>
+               <pc type="supplied">,</pc>
+               <w lemma="puis" type="POS=ADVgen|DEGRE=-" >puius</w>
+               <w lemma="que1" type="POS=CONsub"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >orent</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >pris</w></q>
+            </l>
+            <lb n="19"/>
+            <l  n="46">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" >cil</w>
+               <w lemma="respondre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >respont</w>
+               <pc type="supplied">:</pc>
+               <q><w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >ie</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s" >dirai</w>
+               <w lemma="vostre" type="POS=DETpos|PERS.=2|NOMB.=s|GENRE=m|CAS=r" >vo</w>
+               <w lemma="plaisir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r"  rend="elision">plesir</w>
+               <pc type="supplied">.</pc></q>
+            </l>
+            <lb n="20"/>
+            <l  n="47">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >fet</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="chastel" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >chastel</w>
+               <w lemma="assalir" type="POS=VERinf" >asallir</w>
+            </l>
+            <lb n="21"/>
+            <l  n="48">
+               <w lemma="par" type="POS=PRE" >par</w>
+               <w lemma="catre" type="POS=DETcar|NOMB.=p|GENRE=f|CAS=r" >quatre</w>
+               <w lemma="foiz" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" >foiz</w>
+               <pc type="supplied">,</pc>
+               <w lemma="o3" type="POS=CONcoo" >o</w>
+               <w lemma="par" type="POS=PRE" >par</w>
+               <pc type="supplied">.</pc>
+               <w lemma="cinc" type="POS=PROcar|NOMB.=p|GENRE=f|CAS=r" >v</w>
+               <pc type="supplied">,</pc>
+               <w lemma="o3" type="POS=CONcoo" >o</w>
+               <w lemma="par" type="POS=PRE" >par</w>
+               <w lemma="sis2" type="POS=PROcar|NOMB.=p|GENRE=f|CAS=r" >VI</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="22"/>
+            <l  n="49">
+               <w lemma="en2" type="POS=PROadv" >an</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="entrer" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >entré</w>
+               <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >o</w>
+               <w lemma="chastel" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >chastel</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="Baugi" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Baugi</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="23"/>
+            <l  n="50">
+               <w lemma="cel" type="POS=PROdem|NOMB.=p|GENRE=m|CAS=n" >cil</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="tor2" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >tor</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="rendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >rendent</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Garin</w>
+            </l>
+            <lb n="24"/>
+            <l  n="51">
+               <w lemma="sauver" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >sauués</w>
+               <w lemma="lor2" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=f|CAS=r" >lor</w>
+               <w lemma="vie1" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" >uies</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que4" type="POS=CONsub"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p" >soient</w>
+               <w lemma="ocire" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >ocis</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="25"/>
+            <l  n="52">
+               <w lemma="ainsi" type="POS=ADVgen|DEGRE=-" >ensi</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="tot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" >toz</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Loherenz</w>
+               <gap unit="char" reason="facsimile" quantity="3"/>
+            </l>
+            <lb n="26"/>
+            <l  n="53">
+               <w lemma="" type="POS=OUT" ><gap unit="char" reason="facsimile" quantity="1"/>ouent</w>
+               <w lemma="" type="POS=OUT" >lo<gap unit="char" reason="facsimile" quantity="3"/></w>
+               <w lemma="onque" type="POS=ADVgen|DEGRE=-" >onques</w>
+               <gap unit="char" reason="facsimile" quantity="4"/>
+            </l>
+            <gap unit="lines" quantity="3" reason="damage"/>
+            <note>(3 ganz zerstörte Werse.)</note>
+            <lb n="27"/>
+            <l  n="54">
+               <w lemma="le" type="POS=OUT" >li</w>
+               <w lemma="" type="POS=OUT" >p<gap unit="char" reason="facsimile" quantity="6"/></w>
+               <w lemma="qui" type="POS=PROrel|NOMB.=p|GENRE=m|CAS=n" >qui</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="de+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >del</w>
+               <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >païs</w>
+            </l>
+            <lb n="28"/>
+            <l  n="55">
+               <w lemma="" type="POS=OUT" >c</w>
+               <gap unit="char" reason="facsimile" quantity="4"/>
+               <w lemma="" type="POS=OUT" >dun</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="" type="POS=OUT" >bia<gap unit="char" quantity="1" reason="damage"/></w>
+               <w lemma="" type="POS=OUT" ><gap unit="char" reason="facsimile" quantity="1"/>cre</w>
+               <gap unit="char" reason="facsimile" quantity="2"/>
+            </l>
+            <lb n="29"/>
+            <l  n="56">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="gäaignier1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >gaagnent</w>
+               <w lemma="trestot" type="POS=PROind|NOMB.=s|GENRE=m|CAS=r" >trestot</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="lor2" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >lor</w>
+               <w lemma="plaisir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >plesir</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="30"/>
+            <l  n="57">
+               <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r" >un</w>
+               <w lemma="marchëant" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >marchéant</w>
+               <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=r"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="Auberi" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Auberis</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w>
+               <w lemma="venir" type="POS=VERinf" >venir</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="31"/>
+            <l  n="58">
+               <note>fol. II.
+                  </note>
+               <gap unit="char" reason="facsimile" quantity="8"/>
+               <w lemma="vair1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >vair</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="gris" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >gris</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="32"/>
+            <l  n="59">
+               <gap unit="char" reason="facsimile" quantity="8"/>
+               <w lemma="là" type="POS=ADVgen|DEGRE=-" >là</w>
+               <w lemma="dedenz" type="POS=ADVgen|DEGRE=-" >dedenz</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >pris</w>
+            </l>
+            <lb n="33"/>
+            <l  n="60">
+               <gap unit="char" reason="facsimile" quantity="3"/>
+               <w lemma="en1" type="POS=OUT" >an</w>
+               <w lemma="" type="POS=OUT" >vuj</w>
+               <w lemma="" type="POS=OUT" ><gap unit="char" reason="facsimile" quantity="2"/>e</w>
+               <w lemma="il" type="POS=OUT"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=OUT" >ont</w>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="partot" type="POS=ADVgen|DEGRE=-" >partot</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="feu" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >fu</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >mis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="34"/>
+            <l  n="61">
+               <gap unit="char" reason="facsimile" quantity="4"/>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="ardre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ardent</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="feu" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >feut</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="esprendre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >espris</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="35"/>
+            <l  n="62">
+               <gap unit="char" reason="facsimile" quantity="2"/>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="Mason" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Mason</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="baron" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >bers</w>
+               <w lemma="Renaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Renaus</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vit</w>
+            </l>
+            <lb n="36"/>
+            <l  n="63">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >dist</w>
+               <pc type="supplied">:</pc>
+               <q><w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=p|GENRE=m|CAS=r"  rend="aggl">as</w>
+                  <w lemma="suen" type="POS=PROpos|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >suens</w><!-- JBC:
+               pas complètement sur de celui-là, car la segmentation de l'édition en ferait un adjectif, mais la métrique
+               pronerait plutot 'et dist as suens'
+               -->
+               <w lemma="ester" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p" >estez</w>
+               <pc type="supplied">,</pc>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >ie</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >suj</w>
+               <w lemma="träir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >traïz</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="37"/>
+            <l  n="64">
+               <q><w lemma="tot" type="POS=PROind|NOMB.=s|GENRE=n|CAS=r" >tot</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >ai</w>
+               <w lemma="perdre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >perdu</w>
+               <w lemma="cant2" type="POS=PROind|NOMB.=s|GENRE=n|CAS=r"  rend="elision">qanqu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=1|NOMB.=s" >avoie</w>
+               <w lemma="conquerre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >conquis</w></q>
+            </l>
+            <lb n="38"/>
+            <l  n="65">
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >va</w>
+               <pc type="supplied">,</pc>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=f|CAS=r" >sa</w>
+               <w lemma="chevauchiee" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >chevalchiee</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="39"/>
+            <l  n="66">
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="grant" type="POS=ADJqua|NOMB.=p|GENRE=f|CAS=r|DEGRE=p" >grant</w>
+               <w lemma="jornee" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" >iornées</w>
+               <w lemma="droit" type="POS=ADVgen|DEGRE=-" >droit</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Lions" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Lions</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="40"/>
+            <l  n="67">
+               <w lemma="ardre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ardent</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="gaster" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >gastent</w>
+               <pc type="supplied">,</pc>
+               <w lemma="destruire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >destruient</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >païs</w>
+            </l>
+            <lb n="41"/>
+            <l  n="68">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="essillier" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >escilla</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >ses</w>
+               <w lemma="mortel" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p" >mortex</w>
+               <w lemma="enemi" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >enemis</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="42"/>
+            <l  n="69">
+               <w lemma="fuir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >fuit</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >ent</w>
+               <w lemma="Garnier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garniers</w>
+               <pc type="supplied">,</pc>
+               <w lemma="droit" type="POS=ADVgen|DEGRE=-" >droit</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Valence" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Valence</w>
+               <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="43"/>
+            <l  n="70">
+               <w lemma="puis" type="POS=ADVgen|DEGRE=-" >puis</w>
+               <w lemma="passer1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >passa</w>
+               <w lemma="Issère" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Issère</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="doter2" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >dota</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garin</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="44"/>
+            <l  n="71">
+               <w lemma="mais1" type="POS=CONcoo" >mais</w>
+               <w lemma="dan2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dant</w>
+               <w lemma="Achar" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Achar</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="Riuns" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Riuns</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Gondri" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gondris</w>
+            </l>
+            <lb n="45"/>
+            <l  n="72">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautiers</w>
+               <pc type="supplied">,</pc>
+               <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" >qui</w>
+               <w lemma="Pierrelate" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Pierrelate</w>
+               <w lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >tint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="46"/>
+            <l  n="73">
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="bort1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >borc</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="fort" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >fors</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=p" >avoient</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="feu" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >feu</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >mis</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <lb n="47"/>
+            <l  n="74">
+               <w lemma="Garnier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garniers</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >voit</w>
+               <pc type="supplied">,</pc>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="poi" type="POS=ADVgen|DEGRE=-" >poi</w>
+               <w lemma="ne1" type="POS=ADVneg"  rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="enragier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >en<space/>rage</w>
+               <w lemma="vif" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >vie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="48"/>
+            <l  n="75">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >se</w>
+               <w lemma="clamer" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >clama</w>
+               <pc type="supplied">:</pc>
+               <w lemma="malëuros" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >maleürez</w><!-- JBC: pas si sur que discours direct -->
+               <pc type="supplied">,</pc>
+               <w lemma="chaitif" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >chetis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="49"/>
+            <l  n="76">
+               <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" >q</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >an</w>
+               <w lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vit</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=f|CAS=r" >sa</w>
+               <w lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >terre</w>
+               <pc type="supplied">,</pc>
+               <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n" >qui</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="destruire" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n" >destruite</w>
+               <w lemma="ici" type="POS=ADVgen|DEGRE=-" >issi</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="50"/>
+            <l  n="77">
+               <w lemma="ne1" type="POS=ADVneg" >n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="pas" type="POS=ADVneg" >pas</w>
+               <w lemma="merveille" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >mervelle</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen" >si</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="parsivre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >parsis</w><pc type="supplied">“</pc>
+            </l>
+            <cb type="foliotation_edition" n="2"/>
+            <lb n="1"/>
+            <l  n="78">
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Pierrelate" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Pierrelate</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="baron" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >bers</w>
+               <w lemma="Garnier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garniers</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="2"/>
+            <l  n="79">
+               <gap unit="char" reason="facsimile" quantity="4"/>
+               <w lemma="Riuns" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Riuns</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="baron" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >bers</w>
+               <w lemma="Achar" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Achar</w>
+               <w lemma="guenchir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >guenchist</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <gap unit="lines" quantity="4" reason="damage"/>
+            <note> (vier zerstörte Verse.)</note>
+            <!-- Cette information sur l'édition fait double emploi avec l'encodage en gap. Toutefois, les encodages se voulant imitatifs de l'édition imprimée, nous le conservons en note. -->
+            <lb n="3"/>
+            <l  n="80">
+               <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=m|CAS=n" >cil</w>
+               <w lemma="soudoiier1" type="POS=OUT" >sol<gap unit="char" reason="facsimile" quantity="3"/><supplied resp="#JBC">do</supplied>ier</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="estormir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >estormis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="4"/>
+            <l  n="81">
+               <w lemma="riche" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >riche</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" >la</w>
+               <w lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >terre</w>
+               <pc type="supplied">,</pc>
+               <w lemma="chascun" type="POS=PROind|NOMB.=s|GENRE=m|CAS=n" >chascuns</w>
+               <w lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p" >grant</w>
+               <w lemma="gäaigne" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >gaagne</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fist</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <lb n="5"/>
+            <l  n="82">
+               <w lemma="ce2" type="POS=DETdem|NOMB.=p|GENRE=m|CAS=r" >ces</w>
+               <w lemma="vilain" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >vilains</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >font</w>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="chevestre" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >chevestres</w>
+               <w lemma="tenir1" type="POS=VERinf" >tenir</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <note>col. 2.</note>
+            <lb n="6"/>
+            <l  n="83">
+               <w lemma="fort" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >Fors</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="Lions" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Lyons</w>
+               <pc type="supplied">,</pc>
+               <w lemma="ja" type="POS=ADVgen|DEGRE=-" >ia</w>
+               <w lemma="ne1" type="POS=ADVneg"  rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s" >ert</w>
+               <w lemma="par" type="POS=PRE" >par</w>
+               <w lemma="force2" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >force</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >pris</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="7"/>
+            <l  n="84">
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="defendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >deffendent</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="borjois" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >boriois</w>
+               <pc type="supplied">,</pc>
+               <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n" >ce</w>
+               <!-- JBC: lire, ce m'est vis -->
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" >m</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >e<gap unit="char" reason="facsimile" quantity="2"/><supplied resp="#JBC" reason="damage">st</supplied></w>
+               <w lemma="vis2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >vis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="8"/>
+            <l  n="85">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=p|GENRE=m|CAS=n" >cil</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="hors" type="POS=ADVgen|DEGRE=-" >hors</w>
+               <w lemma="penser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >pe<gap unit="char" reason="facsimile" quantity="3"/><supplied reason="faded-ink" resp="#JBC" cert="unknown">nsent</supplied></w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="assalir" type="POS=VERinf" >asallir</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="9"/>
+            <l  n="86">
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="soudoiier1" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >soldoier</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <w lemma="enz" type="POS=ADVgen|DEGRE=-" >enz</w>
+               <w lemma="en1+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >el</w>
+               <w lemma="borc" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >borc</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >mis</w>
+            </l>
+            <lb n="10"/>
+            <l  n="87">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=p|GENRE=m|CAS=n" >cil</w>
+               <w lemma="dedenz" type="POS=ADVgen|DEGRE=-" >dedenz</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >porent</w>
+               <w lemma="sofrir" type="POS=VERinf" >soufrir</w>
+            </l>
+            <lb n="11"/>
+            <l  n="88">
+               <w lemma="maint" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" >meint</w>
+               <w lemma="" type="POS=OUT" >belier</w>
+               <w lemma="brisier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >brisent</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="maint" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r" >maint</w>
+               <w lemma="tonel" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >tounel</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="vin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >vin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="12"/>
+            <l  n="89">
+               <w lemma="pro" type="POS=ADVgen|DEGRE=-" >preu</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="traire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >trait</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=r"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >doi</w>
+               <w lemma="avenir" type="POS=VERinf" >avenir</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="13"/>
+            <l  n="90">
+               <w lemma="cant1" type="POS=CONsub" >qant</w><!-- JBC sic pour qant -->
+               <w lemma="rober" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >robé</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >orent</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="partot" type="POS=ADVgen|DEGRE=-" >partot</w>
+               <w lemma="feu" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >feü</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >mis</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="14"/>
+            <l  n="91">
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="torner" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >torne</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >terre</w>
+               <w lemma="guerpir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >guerpi</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="15"/>
+            <l  n="92">
+               <w lemma="par" type="POS=PRE" >par</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=f|CAS=r" >ses</w>
+               <w lemma="jornee" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" >iornéez</w>
+               <w lemma="devant" type="POS=PRE" >devant</w>
+               <w lemma="Mason" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Mason</w>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >vint</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="16"/>
+            <l  n="93">
+               <w lemma="mais1" type="POS=CONcoo" >mes</w>
+               <w lemma="iluec" type="POS=ADVgen|DEGRE=-" >iloec</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >ot</w>
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="riche" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >riche</w>
+               <w lemma="poignëiz" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >poigneïz</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="17"/>
+            <l  n="94">
+               <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >chevaliers</w>
+               <w lemma="morir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >morz</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="bon" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p" >bon</w>
+               <w lemma="cheval" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >chevax</w>
+               <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >ocis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="18"/>
+            <l  n="95">
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=p|GENRE=m|CAS=r" >cels</w>
+               <w lemma="dela" type="POS=ADVgen|DEGRE=-" >delà</w>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >ot</w>
+               <w lemma="assez" type="POS=ADVgen|DEGRE=-" >assez</w>
+               <w lemma="conquerre" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >conquis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="19"/>
+            <l  n="96">
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="que4" type="POS=CONsub"  rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="vile" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >vile</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="force2" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >force</w>
+               <w lemma="metre2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >mis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="20"/>
+            <l  n="97">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="cel" type="POS=PROdem|NOMB.=p|GENRE=m|CAS=n" >cil</w>
+               <w lemma="dedenz" type="POS=ADVgen|DEGRE=-" >dedenz</w>
+               <w lemma="cant1" type="POS=CONsub"  rend="elision">qan</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >virent</w>
+               <w lemma="venir" type="POS=VERinf" >venir</w>
+            </l>
+            <lb n="21"/>
+            <l  n="98">
+               <w lemma="devant" type="POS=PRE" >devant</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="porte1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >porte</w>
+               <pc type="supplied">,</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >on</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="estandart" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >estandart</w>
+               <w lemma="esprendre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >espris</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="22"/>
+            <l  n="99">
+               <w lemma="trois" type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r" >trois</w>
+               <w lemma="jor" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >iorz</w>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >furent</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Auberi" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Auberis</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="23"/>
+            <l  n="100">
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >terre</w>
+               <w lemma="plein" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p" >pleine</w>
+               <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >firent</w>
+               <w lemma="tot" type="POS=DETind|NOMB.=s|GENRE=m|CAS=r" >tot</w>
+               <w lemma="lor2" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >lor</w>
+               <w lemma="plaisir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >plesir</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="24"/>
+            <l  n="101">
+               <w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="raler" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >reva</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="en1" type="POS=PRE" >an</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >païs</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="25"/>
+            <l  n="102">
+               <w lemma="jusque" type="POS=PRE" >jusqu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="i2" type="POS=PROadv" >i</w><!-- JBC: ?? -->
+               <w lemma="Dijon" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r" >Dijon</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >prist</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <w lemma="onque" type="POS=ADVgen|DEGRE=-" >onques</w>
+               <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >fin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="26"/>
+            <l  n="103">
+               <w lemma="dont" type="POS=PROrel|NOMB.=s|GENRE=n|CAS=i" >dont</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >se</w>
+               <w lemma="porpenser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >porpense</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Loherens</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w>
+            </l>
+            <gap unit="lines" quantity="3" reason="damage" cert="high"/>
+            <note>(3 zerstörte Verse.)</note>
+            <lb n="27"/>
+            <l  n="104">
+               <q><w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >biax</w>
+               <w lemma="nevo" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >niés</w></q>
+               <pc type="supplied">,</pc>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dist</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >il</w>
+               <pc type="supplied">,</pc>
+               <q><w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >ie</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >sui</w>
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="apovrir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >apovri</w></q>
+            </l>
+            <lb n="28"/>
+            <l  n="105">
+               <q><w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="cest" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r" >ceste</w>
+               <w lemma="guerre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >guerre</w>
+               <pc type="supplied">,</pc>
+               <w lemma="dont" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=i" >don</w>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r" >me</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >sui</w>
+               <w lemma="entremetre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >entremis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="29"/>
+            <l  n="106">
+               <q><w lemma="se" type="POS=CONsub" >se</w>
+               <pc type="supplied">'</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >l</w>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" >me</w>
+               <w lemma="löer1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p" >loéz</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n" >voz</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=n" >mi</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >ami</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="30"/>
+            <l  n="107">
+               <q><w lemma="Mès" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Mez</w>
+               <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=1|NOMB.=s" >veil</w>
+               <w lemma="baillier" type="POS=VERinf" >ballier</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="emperëor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >emperéor</w>
+               <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Pepin</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="31"/>
+            <l  n="108">
+               <q><w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" >ce</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=n" >ses</w>
+               <w lemma="fief" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >fiéz</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >se</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i" >li</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >doi</w>
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="ofrir" type="POS=VERinf" >ofrir</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="32"/>
+            <l  n="109">
+               <note>fol. III.
+                  </note>
+               <q><w lemma="ne1" type="POS=ADVneg"  rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >ai</w>
+               <w lemma="tant" type="POS=ADVgen|DEGRE=-" >tan</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >terre</w>
+               <w lemma="où" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=i" ><supplied reason="faded-ink" resp="#Mone" cert="unknown">u</supplied></w>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" ><supplied reason="faded-ink" resp="#Mone" cert="unknown">ie</supplied></w>
+               <w lemma="pöoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=1|NOMB.=s" >puisse</w>
+               <w lemma="jesir" type="POS=VERinf" >gesir</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="33"/>
+            <l  n="110">
+               <q><w lemma="ne2" type="POS=CONcoo" >ne</w>
+               <w lemma="où" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=i" >u</w>
+               <w lemma="ester" type="POS=VERinf" >ester</w>
+               <w lemma="por2" type="POS=PRE" >por</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" >mon</w>
+               <w lemma="sejor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >seior</w>
+               <w lemma="tenir1" type="POS=VERinf" >tenir</w></q>
+            </l>
+            <lb n="34"/>
+            <l  n="111">
+               <q><w lemma="autretel" type="POS=ADVgen|DEGRE=-" >autretex</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >mon</w>
+               <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >frère</w>
+               <w lemma="Lancelin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Lancelin</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="35"/>
+            <l  n="112">
+               <q><w lemma="par" type="POS=PRE" >par</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="boschage" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >boschage</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv"  rend="aggl">en</w>
+               <w lemma="fuir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >fuit</w>
+               <w lemma="come1" type="POS=CONsub" >comme</w>
+               <w lemma="ome" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >home</w>
+               <w lemma="eschif1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >eschis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="36"/>
+            <l  n="113">
+               <q><w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="borc" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >borc</w>
+               <w lemma="ne1" type="POS=ADVneg"  rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="oser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >ose</w>
+               <pc type="supplied">,</pc>
+               <w lemma="ne2" type="POS=CONcoo" >ne</w>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="venir" type="VERinf" >vile</w>
+                  <!-- JBC: encoder la correction -->
+               <!--<w>vile</w>-->
+                  <choice>
+                     <sic><w lemma="vile" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >vile</w></sic>
+                     <corr resp="#Mone"><w lemma="venir" type="POS=VERinf" >venir</w></corr></choice>
+                  <note type="glossary" n="1"> 1. venir.</note>
+               </q>
+            </l>
+            <lb n="37"/>
+            <l  n="114">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dit</w>
+               <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Fromons</w>
+               <pc type="supplied">:</pc>
+               <sic><w lemma="se" type="POS=CONsub" >se</w>
+               <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >diex</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >velt</w>
+               <w lemma="sofrir" type="POS=VERinf" >sofrir</w>
+               <pc type="supplied">,</pc></sic>
+            </l>
+            <lb n="38"/>
+            <l  n="115">
+               <sic><w lemma="encore" type="POS=ADVgen|DEGRE=-" >ancor</w>
+               <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r" >i</w>
+               <pc type="supplied">.</pc>
+               <w lemma="jor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >ior</w>
+               <w lemma="refaire2" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p" >referons</w>
+               <w lemma="nostre" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" >no</w>
+               <w lemma="plaisir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >plesir</w></sic>
+            </l>
+         </lg>
+         <lg type="laisse" xml:id="L_002" n="002">
+            <lb n="39"/>
+            <l  n="116">
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" ><hi rend="initiale">G</hi>arins</w>
+               <w lemma="chevauchier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >chevauche</w>
+               <w lemma="o4" type="POS=PRE" >o</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="ost" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >oz</w>
+               <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" >qui</w>
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p" >granz</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="40"/>
+            <l  n="117">
+               <w lemma="en1" type="POS=PRE" >an</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avantgarde" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >avangarde</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="Gautier" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gautiers</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="vaillant" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >vallanz</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <gap unit="lines" quantity="1" reason="lacuna" cert="low" resp="#AJ"/>
+            <!--*   *   *-->
+            <!-- Dans la mesure où nous ne pouvons déterminer la valeur de ce choix d'édition, je prends le parti d'en conserver les marques pour une éventuelle autre interprétation. -->
+            <lb n="41"/>
+            <l  n="118">
+               <w lemma="soner" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sonent</w>
+               <w lemma="buisine" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r" >buisines</w>
+               <pc type="supplied">,</pc>
+               <w lemma="corner" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >cornent</w>
+               <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=m|CAS=r" >cil</w>
+               <w lemma="olifant" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >olifant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="42"/>
+            <l  n="119"><!-- JBC: je ne comprends pas ce vers. À revoir. On attendrait plutôt
+               'ils font tellement de bruit qu'on n'entendrait pas Dieu toner'.
+            -->
+               <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >au</w>
+               <w lemma="SEGM" type="POS=OUT" >destraũ</w>
+               <pc type="supplied">,</pc>
+               <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=i" >no</w>
+               <w lemma="issir" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s" >issoiz</w>
+               <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >dieu</w>
+               <w lemma="toner" type="POS=VERppa|NOMB.=s|GENRE=m|CAS=n" >tonant</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="43"/>
+            <l  n="120">
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="rote4" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >route</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >sont</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >vont</w>
+               <w lemma="maintenant" type="POS=ADVgen|DEGRE=-" >meintenant</w>
+            </l>
+            <lb n="44"/>
+            <l  n="121">
+               <w lemma="jusque" type="POS=PRE" >jusqu</w>
+               <pc type="supplied">'</pc>
+               <w lemma="a3" type="POS=PRE" >à</w>
+               <w lemma="Amiens" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r" >Amiens</w>
+               <pc type="supplied">,</pc>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="fort" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p" >fort</w>
+               <w lemma="cité" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >cité</w>
+               <w lemma="valoir" type="POS=VERppa|NOMB.=s|GENRE=f|CAS=r" >vallænt</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="45"/>
+            <l  n="122">
+               <w lemma="trover" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >troevent</w>
+               <w lemma="Doon" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Doon</w>
+               <w lemma="et" type="POS=CONcoo" >e</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="fil2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >fil</w>
+               <w lemma="Guinemant" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Guinemant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="46"/>
+            <l  n="123">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >les</w>
+               <w lemma="assalir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >asallent</w>
+               <w lemma="en1" type="POS=PRE" >en</w>
+               <w lemma="droit" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >droit</w>
+               <w lemma="prim" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p" >prime</w>
+               <w lemma="soner" type="POS=VERppa|NOMB.=s|GENRE=m|CAS=r" >sonant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="47"/>
+            <l  n="124">
+               <w lemma="lever" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >lieve</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="cri" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >criz</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" >la</w>
+               <w lemma="noise" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >noise</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p" >granz</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="48"/>
+            <l  n="125">
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="Avalois" type="POS=NOMpro|NOMB.=p|GENRE=m|CAS=n" >Avalois</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >vont</w>
+               <w lemma="entremetre" type="POS=VERppa|NOMB.=x|GENRE=x|CAS=x" >entremetant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <pb n="411" facs="./pdf/0004.pdf.png"/>
+            <cb type="foliotation_edition" n="1"/>
+            <lb n="1"/>
+            <l  n="126">
+               <w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" >la</w>
+               <w lemma="cité" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n" >cité</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n" >prise</w>
+               <w lemma="maintenant" type="POS=ADVgen|DEGRE=-" >meintenant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="2"/>
+            <l  n="127">
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="Avalois" type="POS=NOMpro|NOMB.=p|GENRE=m|CAS=n" >Avalois</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >se</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >von</w>
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="esforcier1" type="POS=VERppa|NOMB.=p|GENRE=m|CAS=r" >esforçant</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="3"/>
+            <l  n="128">
+               <w lemma="mais1" type="POS=CONcoo" >mes</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >puet</w>
+               <w lemma="estre1" type="POS=VERinf" >estre</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que4" type="POS=CONsub" >que</w>
+               <w lemma="Baugi" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" ><choice>
+                     <abbr><pc type="supplied">.</pc>b'<pc type="supplied">.</pc></abbr>
+                     <expan cert="low">Baugi</expan>
+                  </choice></w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="devant" type="POS=ADVgen|DEGRE=-" >devant</w>
+               <pc type="supplied">.</pc>
+            </l>
+         </lg>
+         <lg type="laisse" xml:id="L_003" n="003">
+            <gap unit="lines" quantity="1" reason="lacuna" cert="low"/>
+            <!--*   *   *-->
+            <lb n="4"/>
+            <l  n="129">
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >son</w>
+               <w lemma="nevo" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >nevon</w>
+               <w lemma="Hernaudet" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Hernaudet</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Gerin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="5"/>
+            <l  n="130">
+               <w lemma="mout" type="POS=ADVgen|DEGRE=-" >mult</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="esbäir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >esbahissent</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="grant" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n|DEGRE=p" >grant</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=p|GENRE=m|CAS=n" >li</w>
+               <w lemma="petit" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >petit</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="6"/>
+            <l  n="131">
+               <w lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gerins</w>
+               <w lemma="chevauchier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >chevalche</w>
+               <w lemma="sor2" type="POS=PRE" >sor</w>
+               <w lemma="un" type="POS=DETcar|NOMB.=s|GENRE=m|CAS=r" >1</w>
+               <pc type="supplied">.</pc>
+               <w lemma="destrier1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >destrier</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="pris1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >pris</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="7"/>
+            <l  n="132">
+               <!--<w>"</w>-->
+               <sic><w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="doter2" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p" >dotez</w>
+               <w lemma="pas" type="POS=ADVneg" >pas</w></sic>
+               <pc type="supplied">.</pc>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gerins</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="dire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >dit</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="8"/>
+            <l  n="133">
+               <!--<sic>--><w lemma="" type="POS=OUT" >ta</w>
+               <gap unit="char" reason="facsimile" quantity="5"/>
+               <w lemma="" type="POS=OUT" >mes</w>
+               <w lemma="par" type="POS=OUT" >pares</w>
+               <w lemma="vivre1" type="POS=OUT" >vive</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >dus</w>
+               <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Garins</w><!--</sic>-->
+            </l>
+            <lb n="9"/>
+            <l  n="134">
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="ci" type="POS=ADVgen|DEGRE=-" >ci</w>
+               <w lemma="a3" type="POS=PRE" >a</w>
+               <gap unit="char" reason="facsimile" quantity="2"/>
+               <w lemma="loi3" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >lois</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="prisier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >prisent</w>
+               <w lemma="onque" type="POS=ADVgen|DEGRE=-" >onques</w>
+               <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >fin</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="10"/>
+            <l  n="135">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"  rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w lemma="assalir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >asallerent</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="borc" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >borc</w>
+               <w lemma="esprendre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >espris</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="11"/>
+            <l  n="136">
+               <w lemma="mais1" type="POS=ADVgen|DEGRE=-" >mes</w>
+               <w lemma="en1+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r" >ou</w>
+               <w lemma="chastel" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >chastel</w>
+               <w lemma="ne1" type="POS=ADVneg" >ne</w>
+               <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >porent</w>
+               <w lemma="avenir" type="POS=VERinf" >avenir</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <lb n="12"/>
+            <l  n="137">
+               <w lemma="en1" type="POS=PRE" >an</w>
+               <w lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r" >un</w>
+               <w lemma="marois2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >marais</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s" >fu</w>
+               <w lemma="fonder2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >fondez</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="asseoir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n" >asis</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="13"/>
+            <l  n="138">
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r"  rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w lemma="en2" type="POS=PROadv" >en</w>
+               <w lemma="torner" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >tornèrent</w>
+               <pc type="supplied">,</pc>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p" >ont</w>
+               <w lemma="lor2" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=m|CAS=r" >lor</w>
+               <w lemma="ostel" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >ostex</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=r" >pris</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="14"/>
+            <l  n="139">
+               <w lemma="sor2" type="POS=PRE" >sor</w>
+               <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" >la</w>
+               <w lemma="riviere" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >rivére</w>
+               <w lemma="où" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=i" >o</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n" >il</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p" >furent</w>
+               <w lemma="asseoir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n" >asis</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <gap unit="lines" quantity="1" reason="lacuna" cert="low"/>
+            <!--*   *   *-->
+            <lb n="15"/>
+            <l  n="140">
+               <q><w lemma="franc1" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=n|DEGRE=p" >franc</w>
+               <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >chevalier</w>
+               <w lemma="" type="POS=OUT" >i</w>
+               <gap unit="char" reason="facsimile" quantity="5"/>
+               <w lemma="" type="POS=OUT" >es</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=n" >mi</w>
+               <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >ami</w>
+               <pc type="supplied">.</pc></q>
+            </l>
+            <lb n="16"/>
+            <l  n="141">
+               <q><w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i" >vos</w>
+               <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >doi</w>
+               <w lemma="dire" type="POS=VERinf" >dire</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" >mon</w>
+               <w lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >cuer</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r" >mon</w>
+               <w lemma="plaisir" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >plesir</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="17"/>
+            <l  n="142">
+               <q><w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >j</w>
+               <pc type="supplied">'</pc>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >ai</w>
+               <w lemma="Vermendois" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Vermendois</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="foler2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >folé</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="laidir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >ledi</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="18"/>
+            <l  n="143">
+               <q><w lemma="ne1" type="POS=ADVneg" >n</w>
+               <pc type="supplied">'</pc>
+               <w lemma="i2" type="POS=PROadv" >i</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >a</w>
+               <w lemma="remanoir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >remez</w>
+               <w lemma="si" type="POS=ADVgen|DEGRE=-" >si</w>
+               <w lemma="come1" type="POS=CONsub" >com</w>
+               <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" >moi</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="avis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r" >avis</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="19"/>
+            <l  n="144">
+               <q><w lemma="fors1" type="POS=ADVgen|DEGRE=-" >fors</w>
+               <w lemma="solement" type="POS=ADVgen|DEGRE=-" >seulement</w>
+               <w lemma="Roye" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r" >Roie</w>
+               <pc type="supplied">,</pc>
+               <w lemma="que3" type="POS=OUT"  rend="elision">q</w>
+               <pc type="supplied">'</pc>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >est</w>
+               <w lemma="il" type="POS=OUT" >el</w>
+               <gap unit="char" reason="facsimile" quantity="5"/></q>
+            </l>
+            <lb n="20"/>
+            <l  n="145">
+               <q><w lemma="se" type="POS=CONsub" >se</w>
+               <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n" >vos</w>
+               <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p" >volez</w>
+               <pc type="supplied">,</pc>
+               <w lemma="bien1" type="POS=ADVgen|DEGRE=p" >bien</w>
+               <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s" >sera</w>
+               <w lemma="demain" type="POS=ADVgen|DEGRE=-" >demein</w>
+               <w lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >pris</w>
+               <pc type="supplied">.</pc></q>
+            </l>
+            <lb n="21"/>
+            <l  n="146">
+               <q><w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" >li</w>
+               <w lemma="un" type="POS=PROind|NOMB.=s|GENRE=m|CAS=n" >uns</w>
+               <w lemma="de" type="POS=PRE" >de</w>
+               <w lemma="vostre" type="POS=DETpos|PERS.=2|NOMB.=p|GENRE=m|CAS=r" >vos</w>
+               <w lemma="franc1" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p" >franc</w>
+               <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r" >chevalier</w>
+               <w lemma="gentil" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p" >gentis</w></q>
+            </l>
+            <lb n="22"/>
+            <l  n="147">
+               <q><w lemma="cel" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r" >cele</w>
+               <w lemma="part1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r" >part</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s" >voist</w>
+               <w lemma="et" type="POS=CONcoo" >et</w>
+               <w lemma="de+le" type="POS=PRE.DETdef|NOMB.=p|GENRE=m|CAS=n" >des</w>
+               <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n" >chevaliers</w>
+               <w lemma="mil1" type="POS=ADJcar|NOMB.=p|GENRE=m|CAS=n" >mil</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="23"/>
+            <l  n="148">
+               <q><w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=i" >vos</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s" >prendroiz</w>
+               <pc type="supplied">,</pc>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >le</w>
+               <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r" >les</w>
+               <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s" >ai</w>
+               <w lemma="tot" type="POS=PROind|NOMB.=p|GENRE=m|CAS=r" >tot</w>
+               <w lemma="desfïer" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r" >defi</w>
+               <pc type="supplied">,</pc></q>
+            </l>
+            <lb n="24"/>
+            <l  n="149">
+               <q><w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >ge</w>
+               <w lemma="remanoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s" >remandrai</w>
+               <pc type="supplied">,</pc>
+               <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n" >vos</w>
+               <w lemma="revenir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=2|NOMB.=p" >revendroiz</w>
+               <w lemma="ici" type="POS=ADVgen|DEGRE=-" >jcj</w></q>
+            </l>
+            <lb n="25"/>
+            <l  n="150">
+               <q><w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n" >"ge</w>
+               <w lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s" >irai</w>
+               <w lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n" >sire</w></q>
+               <pc type="supplied">,</pc>
+               <w lemma="" type="POS=OUT" >l</w>
+               <gap unit="char" reason="facsimile" quantity="3"/>
+               <w lemma="" type="POS=OUT" >ses</w>
+               <w lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n" >Gerins</w>
+               <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s" >dit</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <gap unit="lines" quantity="1" reason="lacuna" cert="low"/>
+         </lg>
+      </body>
+      <back>
+         <div>
+            <p>Diese Fragmente stehen auf 3 Perg. Blättern einer Hf. <lb n="26"/>des 13. Jahr., die
+               von einem Buchdeckel in einem öfter<lb n="27"/>reichischen Kloster abgelöst und durch
+               Hrrn. v. Karajan in <lb n="28"/>Wien mir zur Benuzung mitgetheilt wurden.</p>
+         </div>
+      </back>
+   </text>
+</TEI>
