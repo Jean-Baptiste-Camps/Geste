@@ -38,10 +38,19 @@ avant de le normaliser
     </xsl:template>
     
     <xsl:template match="tei:l">
+        <!-- JBC: traitement des sic et corr.
+        Si on voulait être rigoureux, il faudrait peut-être
+        virer les corrections de l'éditeur, garder les sic,
+        et ne garder que les lemmes, pas les variantes rdg.
+        
+        Pour le moment: je garde les variantes rdg, qui font des 
+        données en plus.
+        -->
         <xsl:apply-templates select="descendant::tei:w[
             not(@lemma = '' and not(contains(@type,'POS=OUT'))) 
             and not(ancestor::tei:del)
             and not(descendant::tei:gap)
+            and not(ancestor::tei:corr[@type='editorial'])
             ]"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
@@ -85,6 +94,10 @@ avant de le normaliser
     <xsl:template match="tei:orig"/>
     <xsl:template match="tei:abbr"/>
     <xsl:template match="tei:note"/>
-    <xsl:template match="tei:sic"/><!-- TODO: faire très attention avec ça -->
+    
+    <!-- JBC: ici, on va garder les sic, et virer les 
+    corr éditoriales (à reréfléchir si besoin) -->
+    <!--<xsl:template match="tei:sic"/>-->
+    <xsl:template match="tei:corr[@type='editorial']"></xsl:template>
     
 </xsl:stylesheet>
