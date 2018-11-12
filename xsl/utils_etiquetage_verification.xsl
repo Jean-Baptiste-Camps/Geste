@@ -609,7 +609,7 @@
             <!-- pronoms -->
             <xsl:when
                 test="
-                    @lemma = ('je', 'tu', 'il', 'soi1', 'nos1', 'vos1')
+                    @lemma = ('je', 'tu', 'il', 'soi1', 'nos1', 'vos')
                     and
                     $ana[1] != 'PROper'
                     ">
@@ -758,7 +758,7 @@
                         ($ana[2] = '1' and $ana[3] = 's' and not(@lemma = 'je')) or
                         ($ana[2] = '2' and $ana[3] = 's' and not(@lemma = 'tu')) or
                         ($ana[2] = '1' and $ana[3] = 'p' and not(@lemma = 'nos1')) or
-                        ($ana[2] = '2' and $ana[3] = 'p' and not(@lemma = 'vos1')) or
+                        ($ana[2] = '2' and $ana[3] = 'p' and not(@lemma = 'vos')) or
                         ($ana[2] = '3' and not(@lemma = 'soi1' or matches(@lemma, 'il')))
                         ">
                     <xsl:value-of select="@xml:id"/>

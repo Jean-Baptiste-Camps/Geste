@@ -3246,16 +3246,16 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos1' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos1' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos1' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
