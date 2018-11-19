@@ -33,6 +33,8 @@ avant de le normaliser
     version="2.0">
     <xsl:output method="text"/>
     
+    <xsl:strip-space elements="*"/>
+    
     <xsl:template match="/">
         <xsl:apply-templates select="descendant::tei:l"/><!-- Ajouter un test pour éviter de récupérer les vers vides -->
     </xsl:template>
@@ -47,10 +49,10 @@ avant de le normaliser
         données en plus.
         -->
         <xsl:apply-templates select="descendant::tei:w[
-            not(@lemma = '' and not(contains(@type,'POS=OUT'))) 
-            and not(ancestor::tei:del)
-            and not(descendant::tei:gap)
-            and not(ancestor::tei:corr[@type='editorial'])
+            not(@lemma = '' or contains(@type,'POS=OUT')
+            or ancestor::tei:del
+            or descendant::tei:gap
+            or ancestor::tei:corr[@type='editorial'])
             ]"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
@@ -98,6 +100,6 @@ avant de le normaliser
     <!-- JBC: ici, on va garder les sic, et virer les 
     corr éditoriales (à reréfléchir si besoin) -->
     <!--<xsl:template match="tei:sic"/>-->
-    <xsl:template match="tei:corr[@type='editorial']"></xsl:template>
+    <xsl:template match="tei:corr[@type='editorial']"/>
     
 </xsl:stylesheet>
