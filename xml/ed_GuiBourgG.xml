@@ -3,6 +3,10 @@
     type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../odd/out/Modele.rng" 
     type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- JBC: l'annotation linguistique a été reprise une fois, mais une seconde relecture d'ensemble
+reste à faire.
+Il faudrait a minima régler les problèmes énoncés dans les remarques.
+-->
 <!-- 
   0095: 35vers X
   0101: 33vers => 34 vers annoncés, 33 présents
@@ -14,7 +18,8 @@
   ce qui n'est pas toujours évident. Je pense notamment que, dans beaucoup de cas,
   plutot que des variantes du ms. 'a', on a en fait des corrections ex ingenio.
 -->
-<!-- TODO: problèmes de compte des mots vis-à-vis de la lemmatisation
+<!-- 
+  TODO: problèmes de compte des mots vis-à-vis de la lemmatisation
 Certaines variantes pas dans des vers +> ne coïncide pas.
 -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GuiBourgG" type="ed" xml:lang="fr" corresp="jns11091">
@@ -2104,7 +2109,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
                   <w>sis</w>
                 </rdg>
                 <note>
-                  <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref corresp="#R_001">p. 2, 
+                  <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref>p. 2, 
                     v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
                   manuscrit donne .XXVII. Nous <lb/>rétablissons donc ici cette leçon, qui semble la
                   bonne, <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :
@@ -3008,7 +3013,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>Il</w>
             <w>a</w>
             <pc type="supplied">.</pc>
-            <w xml:id="R_001">XXVII</w>
+            <w>XXVII</w>
             <pc type="supplied">.</pc>
             <w>anz</w>
             <w>acomplis</w>
@@ -3404,7 +3409,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>ici</w>
             <w>Ogier</w>
             <w>qui</w>
-            <w>à</w>
+            <w>à</w><!-- JBC: erreur de transcription du manuscrit ? -->
             <w>me</w>
             <w>contralie</w>
             <pc type="supplied">;</pc>
@@ -3449,7 +3454,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>Il</w>
             <w>a</w>
             <pc type="supplied">.</pc>
-            <w xml:id="R_002">XXVII</w>
+            <w>XXVII</w>
             <pc type="supplied">.</pc>
             <w>anz</w>
             <w rend="elision">qu</w>
@@ -6384,7 +6389,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>de</w>
               <w>Lengres</w>
               <pc type="supplied">,</pc>
-              <w><corr resp="#Guessard">le</corr></w>
+              <corr resp="#Guessard"><w>le</w></corr>
               <w>fiz</w>
               <w>al</w>
               <w>duc</w>
@@ -6587,7 +6592,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <l>
               <w>Maucion</w>
               <w>ot</w>
-              <w><corr resp="#Guessard">à</corr></w>
+              <corr resp="#Guessard"><w>à</w></corr>
               <w>nun</w>
               <pc type="supplied">,</pc>
               <w>si</w>
@@ -6631,7 +6636,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>et</w>
               <w>fu</w>
               <w>molt</w>
-              <w><corr resp="#Guessard">lonc</corr></w>
+              <corr resp="#Guessard"><w>lonc</w></corr>
               <w>et</w>
               <w>lez</w>
               <pc type="supplied">.</pc>
@@ -7056,7 +7061,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">«</pc>
               <q>
                 <w>Ben</w>
-                <w><corr resp="#Guessard">vos</corr></w>
+                <corr resp="#Guessard"><w>vos</w></corr>
                 <w>déussez</w>
                 <w>tere</w>
                 <pc type="supplied">,</pc>
@@ -7103,7 +7108,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <pc type="supplied">«</pc>
               <q>
                 <w>Dehait</w>
-                <w><corr resp="#Guessard">ait</corr></w>
+                <corr resp="#Guessard"><w>ait</w></corr>
                 <w>traitres</w>
                 <w>rei</w>
                 <w>el</w>
@@ -7153,7 +7158,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w>K<corr resp="#Guessard">e</corr></w>
               <w>il</w>
               <w>eslirrunt</w>
-              <w><corr resp="#Guessard">rei</corr></w>
+              <corr resp="#Guessard"><w>rei</w></corr>
               <pc type="supplied">,</pc>
               <w>solum</w>
               <w>lur</w>
@@ -7272,7 +7277,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
               <w rend="elision">l</w>
               <pc type="supplied">'</pc>
               <w>at</w>
-              <w><corr resp="#Guessard">et</corr></w>
+              <corr resp="#Guessard"><w>et</w></corr>
               <w>sustret</w>
               <w>et</w>
               <w>ostez</w>
@@ -16593,7 +16598,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
         <lb/>
         <l>
 <!-- #################################-->
-          <w>(Tous</w>
+          <pc type="supplied">(</pc>
+          <w>Tous</w>
           <w>porris</w>
           <w>les</w>
           <w>avoit</w>
@@ -16601,7 +16607,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <w>vens</w>
           <w>et</w>
           <w>li</w>
-          <w>orés)</w>
+          <w>orés</w>
+          <pc type="supplied">)</pc>
           <note resp="#AC">Le texte est entre parenthèse, sans que ne soit
           donnée une quelconque raison pour ce choix</note>
         </l>
@@ -28150,7 +28157,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <q>
             <w rend="elision">m</w>
             <pc type="supplied">'</pc>
-            <w>isauras</w>
+            <w>i</w>
+            <w>sauras</w>
             <w>tu</w>
             <w>mener</w>
             <pc type="supplied">?</pc>
@@ -34359,7 +34367,8 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
             <w>mande</w>
             <w>par</w>
             <w>moi</w>
-            <w>(por</w>
+            <pc type="supplied">(</pc>
+            <w>por</w>
             <w>coi</w>
             <w>le</w>
             <w>celeron</w>
@@ -64060,7 +64069,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <pc type="supplied">«</pc>
           <q>
             <w>Qui</w>
-            <w>ue</w>
+            <w>me</w>
             <w>conseillera</w>
             <pc type="supplied">?</pc>
           </q>
@@ -72103,7 +72112,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           <p>
           <lb/>P. 1, v. 4 : 
             <lb/><mentioned>.XXVII. anz tous plains acomplis et passez.</mentioned>
-          <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref corresp="#R_001">p. 2, v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
+          <lb/>Leçon de a : <mentioned>.XXXVII. anz</mentioned> ; mais plus loin, (<ref>p. 2, v. 17</ref> ; <lb/><ref corresp="#R_002">p. 3, v. 9</ref>) le même
           manuscrit donne <mentioned>.XXVII.</mentioned> Nous <lb/>rétablissons donc ici cette leçon, qui semble la bonne,
           <lb/>pour mettre le poëte d'accord avec lui-même. On lit <lb/>d'ailleurs dans b :<mentioned> vint e
           sis</mentioned>. C'est un espace de temps qui <lb/> suffit et au delà à la fable imaginée par le trouvère.
@@ -72276,8 +72285,7 @@ Certaines variantes pas dans des vers +> ne coïncide pas.
           fait il, je vous..... </p><p><lb/>P. 40, v. 4 : <lb/>Karles vesti la guige, mist le chapel el
           chief. <lb/>Leçon de b : <lb/>Karles vesti la here..... <lb/>leçon qui nous semble
           préférable. On se revêt d'une <lb/>haire, et non d'une guige, qui est un cordon. </p><p>
-            <lb/>P.
-          41, v. 25 : <lb/>Seignor, dist [Boydans], entandez mon pensé. <lb/>On lit dans a :
+            <lb/>P. 41, v. 25 : <lb/>Seignor, dist [Boydans], entandez mon pensé. <lb/>On lit dans a :
           Seignor, dist il. </p><p><lb/>P. 43, v. 19 : <lb/>Le saisi par la barbe, dont li peus est mellez.
           <lb/>On lit dans a : peust, qui est inadmissible ; nous corri<lb break="no" rend="hyphen"
           />geons et lisons : veus pour pels, poil. </p><pb facs="facsimile0187.bin.png" n="0187"/>

@@ -51,8 +51,7 @@ avant de le normaliser
         <xsl:apply-templates select="descendant::tei:w[
             not(@lemma = '' or contains(@type,'POS=OUT')
             or ancestor::tei:del
-            or descendant::tei:gap
-            or ancestor::tei:corr[@type='editorial'])
+            or descendant::tei:gap)
             ]"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
@@ -100,6 +99,6 @@ avant de le normaliser
     <!-- JBC: ici, on va garder les sic, et virer les 
     corr éditoriales (à reréfléchir si besoin) -->
     <!--<xsl:template match="tei:sic"/>-->
-    <xsl:template match="tei:corr[@type='editorial']"/>
+    <!--<xsl:template match="tei:corr[@type='editorial']"/>-->
     
 </xsl:stylesheet>
