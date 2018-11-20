@@ -3,6 +3,14 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:tei="http://www.tei-c.org/ns/1.0" version="2.0">
+    
+    <!-- TODO:
+        Feuille cassée pour le moment (12 nov. 2018) en raison des changements du modèle de données.
+    /!\ Pour que ça remarche, il faut réadapter au modèle de données.
+    
+    -->
+    
+    
     <!-- Ne pas oublier d'intégrer les neutres, les indécidables, etc. -->
     <!-- 
         NB: on pourrait éviter d'avoir à créer des nœuds groupes en utilisant for-each $variable[] plutôt que $variable/*[] 
@@ -679,7 +687,7 @@
                 <br />
                 <b>Dans les formes verbales - dépouillement des lemmes qui pourraient convenir:</b>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@ana, ' ') = '#VERcjg' and matches(@lemma, concat('^', $cons, '*e', $cons, '+', $voy, '+', $cons, '*\d?$'))]/@lemma"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@type, '|') = 'VERcjg' and matches(@lemma, concat('^', $cons, '*e', $cons, '+', $voy, '+', $cons, '*\d?$'))]/@lemma"/>
                 </xsl:call-template>
                 <p>Ici, juste ferir, lever, tenir, venir (dépouillement manuel, à automatiser si besoin (touche les P1236)<!--; chëoir peut corresp.--></p> 
                 <h4>Résultat de la diphtongaison de /ę́/</h4>
@@ -692,13 +700,13 @@
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[@lemma = ('chëoir', 'ferir', 'lever', 'sëoir', 'tenir1', 'venir') 
-                        and matches(@ana, 'VERcjg.*#(((1|2)\s+#s)|3)')]"></xsl:with-param><!-- TODO: cette liste pourrait sans doute être élargie -->
+                        and matches(@type, 'VERcjg.*#(((1|2)\s+#s)|3)')]"></xsl:with-param><!-- TODO: cette liste pourrait sans doute être élargie -->
                 </xsl:call-template>
                 <h4>Y + ARE</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param 
                         name="groupe" 
-                        select="$arborescenceRegul/descendant::tei:w[@lemma = $suffixeYARE and (matches(@ana, 'VERinf') or matches(@ana, 'NOM'))]"/>
+                        select="$arborescenceRegul/descendant::tei:w[@lemma = $suffixeYARE and (matches(@type, 'VERinf') or matches(@type, 'NOM'))]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <h4>Y + A dans les substantifs</h4>
@@ -715,13 +723,13 @@
                 <h4>-ATA- > ie / iee</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[(matches(@lemma, 'ier\d?$')
-                        and matches(@ana, 'VERppe.*#f')) or matches(@lemma, 'iee\d?$')]"/>
+                        and matches(@type, 'VERppe.*#f')) or matches(@lemma, 'iee\d?$')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <p>Comptages des formes, pour l'exemple:
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[(matches(@lemma, 'ier\d?$')
-                        and matches(@ana, 'VERppe.*#f')) or matches(@lemma, 'iee\d?$')]"/>
+                        and matches(@type, 'VERppe.*#f')) or matches(@lemma, 'iee\d?$')]"/>
                 </xsl:call-template>
                 </p>
                 <h4>Triphtongue /iei/</h4>
@@ -748,7 +756,7 @@
                 <h5>Sondage global</h5>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, '(e|i)l\d?$')
-                        and matches(@ana, '(#s\s+#m\s+#n|#p\s+#m\s+#r)')
+                        and matches(@type, '(#s\s+#m\s+#n|#p\s+#m\s+#r)')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h6>-ELLUS, -ELLOS</h6>
@@ -756,7 +764,7 @@
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $suffixeELLUS
                         and matches(., '(s|z|x)$')
-                        ]"></xsl:with-param><!-- matches(@ana, '(#s\s+#m\s+#n|#p\s+#m\s+#r)') -->
+                        ]"></xsl:with-param><!-- matches(@type, '(#s\s+#m\s+#n|#p\s+#m\s+#r)') -->
                 </xsl:call-template>
                 <p><b>Comptage des formes:</b><br />
                 <xsl:call-template name="comptageFormes">
@@ -768,7 +776,7 @@
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $ibrefPLUSl
                         and matches(., '(s|z)$')
-                        ]"></xsl:with-param><!-- matches(@ana, '(#s\s+#m\s+#n|#p\s+#m\s+#r)') -->
+                        ]"></xsl:with-param><!-- matches(@type, '(#s\s+#m\s+#n|#p\s+#m\s+#r)') -->
                 </xsl:call-template>
                 
                 <h4>Diphtongaison de ŏ́ en syllabe fermée devant /r/, /s/ > /úo/, /úa/, /úe/</h4>
@@ -786,19 +794,19 @@
                 <h4>Diphtongaison de /ẹ́[/ > /éi̯/ > /ę́/ ou  > /ói̯/ (> /ó/)</h4>
                 <h5>Sondage global (formes verbales exclues)</h5>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(@ana, 'VER(cjg|ppe|ppa)'))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(@type, 'VER(cjg|ppe|ppa)'))]"/>
                 </xsl:call-template>
                 <h5>oi non rendu par ei (formes verbales exclues)</h5>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(., 'ei')) and not(matches(@ana, 'VERcjg|ppe|ppa'))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(., 'ei')) and not(matches(@type, 'VERcjg|ppe|ppa'))]"/>
                 </xsl:call-template>
                 <h5>oi non rendu par oi (formes verbales exclues)</h5>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(., 'oi')) and not(matches(@ana, 'VERcjg|ppe|ppa'))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'oi') and not(matches(., 'oi')) and not(matches(@type, 'VERcjg|ppe|ppa'))]"/>
                 </xsl:call-template>
                 <h5>Extension de oi ? (formes verbales exclues)</h5>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(matches(@lemma, 'oi')) and matches(., 'oi') and not(matches(@ana, 'VERcjg|ppe|ppa'))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(matches(@lemma, 'oi')) and matches(., 'oi') and not(matches(@type, 'VERcjg|ppe|ppa'))]"/>
                 </xsl:call-template>
                 <h5>Emploi de la graphie &lt;oi></h5>
                 <xsl:call-template name="comptageFormes">
@@ -828,7 +836,7 @@
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
                         matches(@lemma, 'os\d?')
-                        and matches(@ana, 'ADJqua')
+                        and matches(@type, 'ADJqua')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 
@@ -878,7 +886,7 @@
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
                         @lemma = 'faire'
-                        and matches(@ana, 'VERppe')
+                        and matches(@type, 'VERppe')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Devant nasale entravée: ain / ein</h4>
@@ -928,24 +936,24 @@
                 
                 <h3> en / an: terminaison des adverbes en -ment </h3>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'ADV') and ends-with(@lemma, 'ment')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'ADV') and ends-with(@lemma, 'ment')]"/>
                 </xsl:call-template>
                 <!-- Faire aussi pour les 
-                distinct-values(//w[matches(@ana, 'NOM') and ends-with(@lemma, 'ment')]/@lemma)
+                distinct-values(//w[matches(@type, 'NOM') and ends-with(@lemma, 'ment')]/@lemma)
                 -->
                 <h3> en / an: terminaison des substantifs en -ment </h3>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'NOM') and ends-with(@lemma, 'ment')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'NOM') and ends-with(@lemma, 'ment')]"/>
                 </xsl:call-template>
                 <h3>en / an: calcul global (approximatif) de la graphie -an- pour des substantifs en -en- (entravé)</h3>
                 <xsl:call-template name="graphiesAltern">
                     <xsl:with-param name="graphies" select="('(an|ã)','(en|ẽ)')"/>
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'NOM') and matches(@lemma, concat('en', $cons))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'NOM') and matches(@lemma, concat('en', $cons))]"/>
                 </xsl:call-template>
                 <h3>an / en: calcul global (approximatif) de la graphie -en- pour des substantifs en -an- (entravé)</h3>
                 <xsl:call-template name="graphiesAltern">
                     <xsl:with-param name="graphies" select="('(an|ã)','(en|ẽ)')"/>
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'NOM') and matches(@lemma, concat('an', $cons))]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'NOM') and matches(@lemma, concat('an', $cons))]"/>
                 </xsl:call-template>
                 <h3>Vélarisation de /ã/ > /õ/?</h3>
                 <xsl:call-template name="comptageFormes">
@@ -1047,7 +1055,7 @@
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="
                         $arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '(fut|con)')
+                        matches(@type, '(fut|con)')
                         and matches(@lemma, '(re|oir)\d?$')
                         ]"/>
                 </xsl:call-template>
@@ -1115,7 +1123,7 @@
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
                         (
                             matches(@lemma, 'ee\d?$')
-                            or matches(@ana, 'VERppe.*#f')
+                            or matches(@type, 'VERppe.*#f')
                         ) 
                         and not(matches(., 'ees?\d?$'))
                         ]
@@ -1167,7 +1175,7 @@
                     <b>P6:</b>
                     <xsl:call-template name="comptageFormes">
                         <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                            matches(@ana, 'VERcjg.*#3\s+#p')
+                            matches(@type, 'VERcjg.*#3\s+#p')
                             and not(matches(., 'nt$'))
                             ]"></xsl:with-param>
                     </xsl:call-template>
@@ -1186,7 +1194,7 @@
                     <xsl:with-param name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
                         matches(@lemma, concat('r(', $cons, '|\d?$)')) and not(matches(., concat('r(', $cons, '|\d?$)')))
-                        and not(matches(@ana, 'VER(cjg|ppe|ppa)'))
+                        and not(matches(@type, 'VER(cjg|ppe|ppa)'))
                         ]"/>
                 </xsl:call-template>
                 <br/> (sur <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@lemma, concat('r', $cons))])"/> cas indistincts maximum)
@@ -1316,15 +1324,15 @@
                 </xsl:call-template>
                 <h3>-[p] + [y]- > [tš] / traitement des labiales suivies de /y/</h3>
                 <h4>Impératif et subj. prés. des verbes en -voir</h4>
-                <p><b>Lemmes:</b> <xsl:value-of select="distinct-values($arborescenceRegul/descendant::tei:w[matches(@ana, 'sub|imp')]/@lemma[matches(., 'voir\d?$')])"/></p>
+                <p><b>Lemmes:</b> <xsl:value-of select="distinct-values($arborescenceRegul/descendant::tei:w[matches(@type, 'sub|imp')]/@lemma[matches(., 'voir\d?$')])"/></p>
                <p>
                    <xsl:call-template name="comptageFormes">
-                       <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'sub|imp') and @lemma[matches(., 'voir\d?$')]]"/>
+                       <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'sub|imp') and @lemma[matches(., 'voir\d?$')]]"/>
                    </xsl:call-template>
                </p>
                 <h3>Chute des consonnes finales</h3>
                 <!-- Version très restrictive, pour éviter des tonnes de bruit -->
-                <!--<xsl:for-each select="$arborescenceRegul/descendant::tei:w[not(matches(@ana, '(VER|PROper)'))
+                <!--<xsl:for-each select="$arborescenceRegul/descendant::tei:w[not(matches(@type, '(VER|PROper)'))
                     and not(matches(., '(s|z)$')) and not(descendant::tei:abbr)
                     ]">
                     <xsl:variable name="maForme" select="."/>
@@ -1369,7 +1377,7 @@
                 <p><b>Tentative d'estimation de z pour s:</b><!-- J'élimine les verbes pour l'instant, cf. morpho -->
                     <xsl:call-template name="comptageFormes">
                         <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                            matches(., 'z$') and not(matches(@ana, 'VER'))
+                            matches(., 'z$') and not(matches(@type, 'VER'))
                             and not(matches(@lemma, '(t|z)d?$'))
                             ]"></xsl:with-param>
                     </xsl:call-template>
@@ -1388,17 +1396,17 @@
                 
                 <h2>Déclinaison des substantifs</h2>
                 <h3>Masculins</h3>
-                <!--tokenize(@ana, ' ')[3] = '#m'-->
+                <!--tokenize(@type, ' ')[3] = '#m'-->
                 <h4>Première déclinaison</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@ana, 'NOM') and matches(@ana, '#m') and not(matches(@lemma, '(s|z)\d?$'))]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@type, 'NOM') and matches(@type, '#m') and not(matches(@lemma, '(s|z)\d?$'))]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
                     <xsl:apply-templates 
                         mode="getDesinentia" 
                         select="$arborescenceRegul/descendant::tei:w[
                         not(@lemma = $substMasc2Decl) 
                         and not(@lemma = $substMasc3Decl) 
-                        and matches(@ana, 'NOM')  
-                        and matches(@ana, '#m')  
+                        and matches(@type, 'NOM')  
+                        and matches(@type, '#m')  
                         and not(matches(@lemma, '(s|z)\d?$'))
                         ]"/>
                 </xsl:variable>
@@ -1409,14 +1417,14 @@
                 <h5>Sans les noms propres</h5>
                 <xsl:variable name="monGroupe">
                     <xsl:apply-templates 
-                        mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@ana, 'NOMco')  and matches(@ana, '#m')  and not(matches(@lemma, 's\d?$'))]"/>
+                        mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@type, 'NOMco')  and matches(@type, '#m')  and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 <h5>Que les noms propres</h5>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@ana, 'NOMpro')  and matches(@ana, '#m')  and not(matches(@lemma, 's\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substMasc2Decl) and not(@lemma = $substMasc3Decl) and matches(@type, 'NOMpro')  and matches(@type, '#m')  and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -1425,15 +1433,15 @@
                 <h4>Deuxième déclinaison</h4>
                 <!-- TODO: transformer ces deux opérations en règle nommée, quand on aura le temps -->
                 <b>Vérification qu'on ait tous les lemmes:</b>
-                <xsl:value-of select="distinct-values($arborescenceRegul/descendant::tei:w[matches(@ana, 'NOM') and matches(@ana, '#m') and matches(@lemma, 're\d?$') and  not(@lemma = $substMasc2Decl)]/@lemma)"/>
-                <p>fr.a. totale: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM')])"/>
+                <xsl:value-of select="distinct-values($arborescenceRegul/descendant::tei:w[matches(@type, 'NOM') and matches(@type, '#m') and matches(@lemma, 're\d?$') and  not(@lemma = $substMasc2Decl)]/@lemma)"/>
+                <p>fr.a. totale: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM')])"/>
                     <br />
-                    CSS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM.*#s\s+#(m|f|n|x)\s+#n')])"/><br />
-                    CRS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM.*#s\s+#(m|f|n|x)\s+#r')])"/><br />
-                    CSP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM.*#p\s+#(m|f|n|x)\s+#s')])"/><br />
-                    CRP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM.*#p\s+#(m|f|n|x)\s+#r')])"/><br />
+                    CSS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM.*#s\s+#(m|f|n|x)\s+#n')])"/><br />
+                    CRS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM.*#s\s+#(m|f|n|x)\s+#r')])"/><br />
+                    CSP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM.*#p\s+#(m|f|n|x)\s+#s')])"/><br />
+                    CRP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM.*#p\s+#(m|f|n|x)\s+#r')])"/><br />
                 </p>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@ana, 'NOM')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substMasc2Decl and matches(@type, 'NOM')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1441,14 +1449,14 @@
                     </xsl:call-template>
                 </xsl:for-each-group>
                 <h4>Troisième déclinaison</h4>
-                <p>fr.a. totale: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM')])"/>
+                <p>fr.a. totale: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM')])"/>
                     <br />
-                    CSS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM.*#s\s+#(m|f|n|x)\s+#n')])"/><br />
-                    CRS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM.*#s\s+#(m|f|n|x)\s+#r')])"/><br />
-                    CSP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM.*#p\s+#(m|f|n|x)\s+#s')])"/><br />
-                    CRP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM.*#p\s+#(m|f|n|x)\s+#r')])"/><br />
+                    CSS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM.*#s\s+#(m|f|n|x)\s+#n')])"/><br />
+                    CRS: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM.*#s\s+#(m|f|n|x)\s+#r')])"/><br />
+                    CSP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM.*#p\s+#(m|f|n|x)\s+#s')])"/><br />
+                    CRP: <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM.*#p\s+#(m|f|n|x)\s+#r')])"/><br />
                 </p>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@ana, 'NOM')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substMasc3Decl and matches(@type, 'NOM')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1457,9 +1465,9 @@
                 </xsl:for-each-group>
                 <h3>Féminins</h3>
                 <h4>Première déclinaison</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@ana, 'NOM') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@type, 'NOM') and matches(@type, '#f') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@ana, 'NOM') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@type, 'NOM') and matches(@type, '#f') and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -1468,11 +1476,11 @@
                 <p><b >Cas problématiques</b><br />
                     <b>Mots qui ne terminent pas en e ou es:</b>
                     <xsl:call-template name="comptageFormes">
-                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@ana, 'NOM') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'es?$'))]"/>
+                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@type, 'NOM') and matches(@type, '#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'es?$'))]"/>
                     </xsl:call-template>
                 </p>
                 <p>
-                    <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@ana, 'NOM') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'es?$'))]" group-by="@lemma">
+                    <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[not(@lemma = $substFem2Decl) and not(@lemma = $substFem3Decl) and matches(@type, 'NOM') and matches(@type, '#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'es?$'))]" group-by="@lemma">
                         <xsl:sort/>
                         <xsl:value-of select="current-grouping-key()"/> <xsl:text> (</xsl:text><xsl:value-of select="current-group()" separator=", "/><xsl:text>), </xsl:text>
                     </xsl:for-each-group>
@@ -1481,11 +1489,11 @@
                 <h4>Deuxième déclinaison</h4>
                 <b>Vérification qu'on ait tous les lemmes:</b>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'NOM') and matches(@ana, '#f') and matches(@lemma, '[^e\d]\d?$') and  not(@lemma = $substFem2Decl)]/@lemma"></xsl:with-param>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'NOM') and matches(@type, '#f') and matches(@lemma, '[^e\d]\d?$') and  not(@lemma = $substFem2Decl)]/@lemma"></xsl:with-param>
                 </xsl:call-template>
                 <br /><b>Global</b>
                 <xsl:variable name="monGroupe"><!-- TODO: je rajoute #f car certains lemmes paraissent renvoyer des masc. -->
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@ana, 'NOM.*#f') and not(matches(@lemma, '(s|z)\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@type, 'NOM.*#f') and not(matches(@lemma, '(s|z)\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -1493,22 +1501,22 @@
                 <p><b >Cas problématiques</b><br />
                     <b>Mots qui terminent en e ou es:</b>
                     <xsl:call-template name="comptageFormes">
-                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@ana, 'NOM') and matches(@ana, '#f') and matches(., 'es?$')]"></xsl:with-param>
+                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@type, 'NOM') and matches(@type, '#f') and matches(., 'es?$')]"></xsl:with-param>
                     </xsl:call-template>
                 </p>
                 
                 <!-- DEBUG -->
-                <!--<xsl:value-of select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@ana, 'NOM.*#p') and not(matches(@lemma, '(s|z)\d?$'))]"/>-->
+                <!--<xsl:value-of select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@type, 'NOM.*#p') and not(matches(@lemma, '(s|z)\d?$'))]"/>-->
                 <h5>Sans les noms propres</h5>
                 <xsl:call-template name="makeWordTable">
-                    <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w[matches(@ana, 'NOMcom')]"/>
+                    <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w[matches(@type, 'NOMcom')]"/>
                 </xsl:call-template>
                 <h5>Que les noms propres</h5>
                 <xsl:call-template name="makeWordTable">
-                    <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w[matches(@ana, 'NOMpro')]"/>
+                    <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w[matches(@type, 'NOMpro')]"/>
                 </xsl:call-template>
                 <br /><b>Détail</b>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@ana, 'NOM')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem2Decl and matches(@type, 'NOM')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1517,9 +1525,9 @@
                 </xsl:for-each-group>
                 <h4>Troisième déclinaison</h4>
                 <xsl:call-template name="frequenceAbsolue">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem3Decl and matches(@ana, 'NOM.*#f')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem3Decl and matches(@type, 'NOM.*#f')]"/>
                 </xsl:call-template>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem3Decl and matches(@ana, 'NOM.*#f')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $substFem3Decl and matches(@type, 'NOM.*#f')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1528,24 +1536,24 @@
                 </xsl:for-each-group>
                 
                 <h2>Déclinaison des adjectifs</h2>
-                <b>Adj. neutres:</b> <xsl:value-of select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'ADJqua.*#(s|p)\s+#n')]"/>
+                <b>Adj. neutres:</b> <xsl:value-of select="$arborescenceRegul/descendant::tei:w[matches(@type, 'ADJqua.*#(s|p)\s+#n')]"/>
                 <h3>Première classe</h3>
                 <h4>Masculins</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#m') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#m') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
                 <xsl:call-template name="frequenceAbsolue">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#m') and not(matches(@lemma, 's\d?$'))]"/>    
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#m') and not(matches(@lemma, 's\d?$'))]"/>    
                 </xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#m') and not(matches(@lemma, 's\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#m') and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 
                 <h5>1re classe bis, en -vre, -tre, -dre</h5>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj1DeclBis and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#m') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj1DeclBis and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#m') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj1DeclBis and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#m') and not(matches(@lemma, 's\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj1DeclBis and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#m') and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -1555,7 +1563,7 @@
                     <b>z ou s au CRS:</b>
                     <xsl:call-template name="comptageFormes">
                         <xsl:with-param name="groupe" select="
-                            $arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#s\s+#m\s+#r') and not(matches(@lemma, 's\d?$')) and matches(., '(s|z)$')]
+                            $arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#s\s+#m\s+#r') and not(matches(@lemma, 's\d?$')) and matches(., '(s|z)$')]
                             ">
                         </xsl:with-param>
                     </xsl:call-template>
@@ -1563,14 +1571,14 @@
                     <b>pas de z ou s au CRP:</b>
                     <xsl:call-template name="comptageFormes">
                         <xsl:with-param name="groupe" select="
-                            $arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#p\s+#m\s+#r') and not(matches(@lemma, 's\d?$')) and not(matches(., '(s|z)$'))]
+                            $arborescenceRegul/descendant::tei:w[not(@lemma = $adj1DeclBis) and not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#p\s+#m\s+#r') and not(matches(@lemma, 's\d?$')) and not(matches(., '(s|z)$'))]
                             ">
                         </xsl:with-param>
                     </xsl:call-template>
                 </p>
                 <h4>Neutres</h4>
                 <!-- À aligner sur les autres à terme -->
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#(s|p)\s+#n') and not(matches(@lemma, 's\d?$'))]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#(s|p)\s+#n') and not(matches(@lemma, 's\d?$'))]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1578,9 +1586,9 @@
                     </xsl:call-template>
                 </xsl:for-each-group>
                 <h4>Féminins</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#f') and not(matches(@lemma, 's\d?$'))]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#f') and not(matches(@lemma, 's\d?$'))]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#f') and not(matches(@lemma, 's\d?$'))]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -1589,23 +1597,23 @@
                 <b>pas -e au sg.</b>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="
-                        $arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@ana, 'ADJ(qua|ind)') and matches(@ana, '#s\s+#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'e$'))]
+                        $arborescenceRegul/descendant::tei:w[not(@lemma = $adj2Decl) and not(@lemma = $adj3Decl) and matches(@type, 'ADJ(qua|ind)') and matches(@type, '#s\s+#f') and not(matches(@lemma, 's\d?$')) and not(matches(., 'e$'))]
                         "/>
                 </xsl:call-template></p>
                 <h3>Deuxième classe</h3>
                 <b>Non pris en compte:</b>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJ|DETind)') and matches(@lemma, '[ltdfv]\d?$') and not(@lemma = $adj2Decl)]/@lemma"></xsl:with-param>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJ|DETind)') and matches(@lemma, '[ltdfv]\d?$') and not(@lemma = $adj2Decl)]/@lemma"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Masc.</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#m')]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#m')]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#m')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#m')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#m')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#m')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1613,15 +1621,15 @@
                     </xsl:call-template>
                 </xsl:for-each-group>
                 <h4>Fém.</h4>
-                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#f')]/@lemma"/></xsl:call-template>
+                <b>Liste des lemmes envisagés:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#f')]/@lemma"/></xsl:call-template>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#f')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#f')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@ana, '(ADJ|DETind).*#f')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj2Decl and matches(@type, '(ADJ|DETind).*#f')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1630,7 +1638,7 @@
                 </xsl:for-each-group>
                 <h3>Troisième classe</h3>
                 <h4>Masculins</h4>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj3Decl and matches(@ana, 'ADJ.*#m')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj3Decl and matches(@type, 'ADJ.*#m')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1638,7 +1646,7 @@
                     </xsl:call-template>
                 </xsl:for-each-group>
                 <h4>Féminins</h4>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj3Decl and matches(@ana, 'ADJ.*#f')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[@lemma = $adj3Decl and matches(@type, 'ADJ.*#f')]" group-by="@lemma">
                     <xsl:sort/>
                     <h5><xsl:value-of select="current-grouping-key()"/></h5>
                     <xsl:call-template name="makeWordTable">
@@ -1648,33 +1656,33 @@
                 <h3>Altérations de la finale</h3>
                 <p><b>Finale en -z</b>
                 <xsl:variable name="finalesZ" 
-                    select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ)') and ends-with(., 'z')]/@lemma"/>
+                    select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ)') and ends-with(., 'z')]/@lemma"/>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ)') and ends-with(., 'z')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ)') and ends-with(., 'z')]"/>
                 </xsl:call-template>
                 <br/><b>Finales en -s qui devraient être en -z:</b> 
                     <xsl:call-template name="comptageFormes">
-                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ)') and ends-with(., 's') and (matches(@lemma, concat('(t|d|(', $cons, '|i)n|il)\d?$')) or @lemma = $finalesZ)]"/>
+                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ)') and ends-with(., 's') and (matches(@lemma, concat('(t|d|(', $cons, '|i)n|il)\d?$')) or @lemma = $finalesZ)]"/>
                     </xsl:call-template>
                     <br/><b>Hypercorrections? </b>
                     <xsl:call-template name="comptageFormes">
-                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ)') and ends-with(., 'z') and not(matches(@lemma, concat('(t|d|', $cons, 'n|il|z)\d?$')))]"/>
+                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ)') and ends-with(., 'z') and not(matches(@lemma, concat('(t|d|', $cons, 'n|il|z)\d?$')))]"/>
                     </xsl:call-template>
                 </p>
                 <h2>Déterminants</h2>
                 <h3>Article défini</h3>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[@lemma = 'le' and tokenize(@ana, ' ')[1] = '#DETdef' ]"></xsl:with-param>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[@lemma = 'le' and tokenize(@type, ' ')[1] = '#DETdef' ]"></xsl:with-param>
                 </xsl:call-template>
                 <p><b>Contraction ou pour en le (cf. Dees 1987, carte 91)</b>
                 <xsl:call-template name="makeWordCellValue">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = 'en1+le' and matches(@ana, '#s')]
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[@lemma = 'en1+le' and matches(@type, '#s')]
                         "></xsl:with-param>
                 </xsl:call-template>
                 </p>
                 <h3>Article non défini</h3>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[@lemma = 'un'  and tokenize(@ana, ' ')[1] = '#DETndf' ]"></xsl:with-param>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[@lemma = 'un'  and tokenize(@type, ' ')[1] = '#DETndf' ]"></xsl:with-param>
                 </xsl:call-template>
                 <h2>Indéfinis</h2>
                 <p>NB: songer à voir les cartes de Dees 1987 sur les indéfinis, cartes 44-62, et ensuite encore passim jusque carte 97</p>
@@ -1695,13 +1703,13 @@
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param
                         name="groupe" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJind|PROind|DETind)')]/@lemma"/>
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJind|PROind|DETind)')]/@lemma"/>
                 </xsl:call-template>
                 <br /><b>Emplois:</b>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJind|PROind|DETind)')]" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJind|PROind|DETind)')]" group-by="@lemma">
                     <xsl:sort order="ascending"/>
                     <xsl:value-of select="current-grouping-key()"/><xsl:text>: </xsl:text>
-                    <xsl:for-each-group select="current-group()" group-by="tokenize(@ana, ' ')[1]">
+                    <xsl:for-each-group select="current-group()" group-by="tokenize(@type, ' ')[1]">
                         <xsl:value-of select="current-grouping-key()"/> <xsl:text> (</xsl:text>
                         <xsl:value-of select="count(current-group())"/>
                         <xsl:text>) </xsl:text>
@@ -1711,25 +1719,25 @@
                 <xsl:call-template name="tableDeclinaison">
                     <xsl:with-param name="withCRI" select="true()"/>
                     <xsl:with-param name="withNeutral" select="true()"/>
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJind|PROind|DETind)')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJind|PROind|DETind)')]"/>
                 </xsl:call-template>
                 
                 <h2>Numéraux</h2>
                 <h3>Cardinaux</h3>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJ|DET|PRO)car')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJ|DET|PRO)car')]"/>
                     <!--<xsl:with-param name="invariable_en_genre" select="true()"/>-->
                 </xsl:call-template>
                 <h4>Ordinaux</h4>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJ|PRO)ord')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJ|PRO)ord')]"/>
                 </xsl:call-template>
                 <h2>Possessifs</h2>
-                <b>Emplois comme déterminants:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'DETpos')]/@lemma"></xsl:with-param></xsl:call-template>
-                <br/><b>Emplois comme adjectifs:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'ADJpos')]/@lemma"></xsl:with-param></xsl:call-template>
-                <br/><b>Emplois comme pronoms:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'PROpos')]/@lemma"></xsl:with-param></xsl:call-template>
+                <b>Emplois comme déterminants:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DETpos')]/@lemma"></xsl:with-param></xsl:call-template>
+                <br/><b>Emplois comme adjectifs:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'ADJpos')]/@lemma"></xsl:with-param></xsl:call-template>
+                <br/><b>Emplois comme pronoms:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'PROpos')]/@lemma"></xsl:with-param></xsl:call-template>
                 <h3>Déterminants</h3>
-                <!--<xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'DETpos')]" group-by="tokenize(@ana, ' ')[2]">
+                <!--<xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DETpos')]" group-by="tokenize(@type, ' ')[2]">
                     <xsl:sort/>
                     <h4>
                     <xsl:value-of select="current-grouping-key()"/>
@@ -1739,7 +1747,7 @@
                         <h5>
                             <xsl:value-of select="current-grouping-key()"/>
                         </h5>
-                        <xsl:for-each-group select="current-group()" group-by="tokenize(@ana, ' ')[4]">
+                        <xsl:for-each-group select="current-group()" group-by="tokenize(@type, ' ')[4]">
                             <h6>
                                 <xsl:value-of select="current-grouping-key()"/>
                             </h6>
@@ -1755,14 +1763,14 @@
                                         <td>
                                             <xsl:call-template name="makeWordCellValue">
                                                 <xsl:with-param name="groupe"
-                                                    select="$currentGroup[tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[5] = '#n']"
+                                                    select="$currentGroup[tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[5] = '#n']"
                                                 />
                                             </xsl:call-template>
                                         </td>
                                         <td>
                                             <xsl:call-template name="makeWordCellValue">
                                                 <xsl:with-param name="groupe"
-                                                    select="$currentGroup[tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[5] = '#n']"
+                                                    select="$currentGroup[tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[5] = '#n']"
                                                 />
                                             </xsl:call-template>
                                         </td>
@@ -1772,14 +1780,14 @@
                                         <td>
                                             <xsl:call-template name="makeWordCellValue">
                                                 <xsl:with-param name="groupe"
-                                                    select="$currentGroup[tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[5] = '#r']"
+                                                    select="$currentGroup[tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[5] = '#r']"
                                                 />
                                             </xsl:call-template>
                                         </td>
                                         <td>
                                             <xsl:call-template name="makeWordCellValue">
                                                 <xsl:with-param name="groupe"
-                                                    select="$currentGroup[tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[5] = '#r']"
+                                                    select="$currentGroup[tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[5] = '#r']"
                                                 />
                                             </xsl:call-template>
                                         </td>
@@ -1790,40 +1798,40 @@
                 </xsl:for-each-group>-->
                 <h4>Déterminant</h4>
                 <xsl:call-template name="makePossessiveTable">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'DETpos')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DETpos')]"/>
                 </xsl:call-template>
                 <h3>Adjectifs ou pronoms</h3>
                 <xsl:call-template name="makePossessiveTable">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJpos|PROpos)')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJpos|PROpos)')]"/>
                 </xsl:call-template>
                 <!--<h3>Adjectifs ou pronoms</h3>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(ADJpos|PROpos)')]"></xsl:with-param>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(ADJpos|PROpos)')]"></xsl:with-param>
                 </xsl:call-template>-->
                 <h2>Démonstratifs</h2>
-                <b>Emplois comme déterminants:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'DETdem')]/@lemma"></xsl:with-param></xsl:call-template>
-                <br/><b>Emplois comme adjectifs:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'PROdem')]/@lemma"></xsl:with-param></xsl:call-template>
+                <b>Emplois comme déterminants:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DETdem')]/@lemma"></xsl:with-param></xsl:call-template>
+                <br/><b>Emplois comme adjectifs:</b> <xsl:call-template name="comptageFormes"><xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'PROdem')]/@lemma"></xsl:with-param></xsl:call-template>
                 <h3>Sans distinction</h3>
                 <xsl:call-template name="tableDeclinaison">
                     <xsl:with-param name="withCRI" select="true()"/>
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(DETdem|PROdem)')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, '(DETdem|PROdem)')]"/>
                 </xsl:call-template>
                 <h3>Déterm.</h3>
                 <xsl:call-template name="tableDeclinaison">
                     <xsl:with-param name="withCRI" select="true()"/>
                     <xsl:with-param name="withNeutral" select="true()"/>
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'DETdem')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DETdem')]"/>
                 </xsl:call-template>
                 <h3>Pron.</h3>
                 <xsl:call-template name="tableDeclinaison">
                     <xsl:with-param name="withCRI" select="true()"/>
                     <xsl:with-param name="withNeutral" select="true()"/>
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'PROdem')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'PROdem')]"/>
                 </xsl:call-template>
                 
                 <h2>Pronoms personnels</h2>
                 <xsl:call-template name="makePronounTable">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@ana, ' ')[1] = '#PROper']"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@type, ' ')[1] = '#PROper']"/>
                 </xsl:call-template>
                 <h3>Pron. indéf. 'on'</h3>>
                 <xsl:call-template name="makeWordTable" >
@@ -1831,32 +1839,32 @@
                 </xsl:call-template>
                 <h3>Pronoms adverbiaux</h3>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@ana, ' ')[1] = '#PROadv']"></xsl:with-param>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@type, ' ')[1] = '#PROadv']"></xsl:with-param>
                 </xsl:call-template>
                 <h2>Pronoms relatifs</h2>
                 <xsl:call-template name="makeRelativeTable">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@ana, ' ')[1] = '#PROrel']"></xsl:with-param>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[tokenize(@type, ' ')[1] = '#PROrel']"></xsl:with-param>
                 </xsl:call-template>
                 <br />
                 <b>Emploi par formes</b>
-                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[tokenize(@ana, ' ')[1] = '#PROrel']" group-by="@lemma">
+                <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[tokenize(@type, ' ')[1] = '#PROrel']" group-by="@lemma">
                     <xsl:sort/>
                     <br/><b>
                     <xsl:value-of select="current-grouping-key()"/>
                     </b>
                     <xsl:call-template name="comptageFormes">
-                        <xsl:with-param name="groupe" select="current-group()/@ana"/>
+                        <xsl:with-param name="groupe" select="current-group()/@type"/>
                     </xsl:call-template>
                 </xsl:for-each-group>
                 <h2>Entorses au système bicasuel selon les catégories</h2>
                 <h3>Global</h3>
                 <p>
                     <b>TOTAUX:</b><br />
-                    <b>Nombre d'entorses:</b> <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa)') and matches(@ana, '#M:')])"/>
+                    <b>Nombre d'entorses:</b> <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa)') and matches(@type, '#M:')])"/>
                     <b>Ratio</b> <xsl:value-of select="
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa)') and matches(@ana, '#M:')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa)') and matches(@type, '#M:')])
                         div
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa)')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa)')])
                         * 100
                         "/>
                 </p>
@@ -1867,14 +1875,14 @@
                         <th>Usages fautifs</th>
                         <th>Usages corr.</th>
                     </tr>
-                    <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa)')]" group-by="tokenize(@ana, ' ')[1]">
+                    <xsl:for-each-group select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa)')]" group-by="tokenize(@type, ' ')[1]">
                         <tr>
                             <td><xsl:value-of select="current-grouping-key()"/></td>
                             <td>
-                                <xsl:value-of select="count(current-group()[matches(@ana, '#M:')])"/>
+                                <xsl:value-of select="count(current-group()[matches(@type, '#M:')])"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(current-group()[not(matches(@ana, '#M:'))])"/>
+                                <xsl:value-of select="count(current-group()[not(matches(@type, '#M:'))])"/>
                             </td>
                         </tr>
                     </xsl:for-each-group>
@@ -1887,15 +1895,15 @@
                         <th>Usages corr.</th>
                     </tr>
                     <xsl:for-each-group 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa).*#s\s+#m\s+#n')]"
-                        group-by="tokenize(@ana, ' ')[1]">
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa).*#s\s+#m\s+#n')]"
+                        group-by="tokenize(@type, ' ')[1]">
                         <tr>
                             <td><xsl:value-of select="current-grouping-key()"/></td>
                             <td>
-                                <xsl:value-of select="count(current-group()[matches(@ana, '#M:')])"/>
+                                <xsl:value-of select="count(current-group()[matches(@type, '#M:')])"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(current-group()[not(matches(@ana, '#M:'))])"/>
+                                <xsl:value-of select="count(current-group()[not(matches(@type, '#M:'))])"/>
                             </td>
                         </tr>
                     </xsl:for-each-group>
@@ -1908,15 +1916,15 @@
                         <th>Usages corr.</th>
                     </tr>
                     <xsl:for-each-group 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '(NOM|ADJ|PRO|DET|VERppe|VERppa).*#p\s+#m\s+#n')]"
-                        group-by="tokenize(@ana, ' ')[1]">
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '(NOM|ADJ|PRO|DET|VERppe|VERppa).*#p\s+#m\s+#n')]"
+                        group-by="tokenize(@type, ' ')[1]">
                         <tr>
                             <td><xsl:value-of select="current-grouping-key()"/></td>
                             <td>
-                                <xsl:value-of select="count(current-group()[matches(@ana, '#M:')])"/>
+                                <xsl:value-of select="count(current-group()[matches(@type, '#M:')])"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(current-group()[not(matches(@ana, '#M:'))])"/>
+                                <xsl:value-of select="count(current-group()[not(matches(@type, '#M:'))])"/>
                             </td>
                         </tr>
                     </xsl:for-each-group>
@@ -1925,59 +1933,59 @@
                 <h4>Sujet antéposé</h4>
                 <xsl:value-of select="
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n.*#M:')) and following-sibling::tei:w[matches(@ana, '#VERcjg')]])
+                    [matches(@type, ('#(m|f|n)\s+#n.*#M:')) and following-sibling::tei:w[matches(@type, '#VERcjg')]])
                     div
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n')) and following-sibling::tei:w[matches(@ana, '#VERcjg')]])
+                    [matches(@type, ('#(m|f|n)\s+#n')) and following-sibling::tei:w[matches(@type, '#VERcjg')]])
                     "/>
                 <h4>Sujet postposé</h4>
                 <xsl:value-of select="
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n.*#M:')) and preceding-sibling::tei:w[matches(@ana, '#VERcjg')]])
+                    [matches(@type, ('#(m|f|n)\s+#n.*#M:')) and preceding-sibling::tei:w[matches(@type, '#VERcjg')]])
                     div
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n')) and preceding-sibling::tei:w[matches(@ana, '#VERcjg')]])
+                    [matches(@type, ('#(m|f|n)\s+#n')) and preceding-sibling::tei:w[matches(@type, '#VERcjg')]])
                     "/>
                 <h5>Sujet coordonné</h5>
                 <p>Sujet qui fait immédiatement suite à et</p>
                 <xsl:value-of select="
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n.*#M:')) and preceding::tei:w[1]/@lemma = 'et'])
+                    [matches(@type, ('#(m|f|n)\s+#n.*#M:')) and preceding::tei:w[1]/@lemma = 'et'])
                     div
                     count($arborescenceRegul/descendant::tei:w
-                    [matches(@ana, ('#(m|f|n)\s+#n.*')) and preceding::tei:w[1]/@lemma = 'et'])
+                    [matches(@type, ('#(m|f|n)\s+#n.*')) and preceding::tei:w[1]/@lemma = 'et'])
                     "/>
                 
                 <h2>Morphologie verbale</h2>
                 <p>N.B.: les trois premières sont surtout là pour des vérifications; les 4-6 pour l'analyse (on pourra retirer le filtre sur les temps si on veut tout tester)</p>
                 <h4>Terminaisons de la 1re personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*1\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*1\s+#s')]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Terminaisons de la 2e personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*2\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*2\s+#s')]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Terminaisons de la 3e personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*3\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*3\s+#s')]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Terminaisons de la 4e personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*1\s+#p')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*1\s+#p')]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Terminaisons de la 5e personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*2\s+#p')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*2\s+#p')]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Terminaisons de la 6e personne</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*(pst|imp|fut).*3\s+#p')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*(pst|imp|fut).*3\s+#p')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <h3>Présents</h3>
@@ -1985,7 +1993,7 @@
                 <p>Désinence de la P3 des verbes en -er, cf. Dees 1987, carte 438 + Dees 1980, carte 217</p>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#pst.*#3\s+#s')
+                        matches(@type, '#VERcjg.*#ind\s+#pst.*#3\s+#s')
                         and matches(@lemma, 'er\d?$')
                         ]"/>
                     <xsl:with-param name="longueur" select="1"/>
@@ -1993,42 +2001,42 @@
                 <h4>Tous les présents de l'ind. en -er</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#pst.*')
+                        matches(@type, '#VERcjg.*#ind\s+#pst.*')
                         and matches(@lemma, 'er\d?$')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Tous les présents de l'ind. en -ir</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#pst.*')
+                        matches(@type, '#VERcjg.*#ind\s+#pst.*')
                         and matches(@lemma, '[^o]ir\d?$')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Tous les autres présents de l'ind.</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#pst.*')
+                        matches(@type, '#VERcjg.*#ind\s+#pst.*')
                         and not(matches(@lemma, 'er\d?$') or matches(@lemma, '[^o]ir\d?$'))
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Tous les présents du subj. en -er</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#sub\s+#pst.*')
+                        matches(@type, '#VERcjg.*#sub\s+#pst.*')
                         and matches(@lemma, 'er\d?$')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Tous les présents du subj. en -ir</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#sub\s+#pst.*')
+                        matches(@type, '#VERcjg.*#sub\s+#pst.*')
                         and matches(@lemma, '[^o]ir\d?$')
                         ]"></xsl:with-param>
                 </xsl:call-template>
                 <h4>Tous les autres présents du subj.</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#sub\s+#pst.*')
+                        matches(@type, '#VERcjg.*#sub\s+#pst.*')
                         and not(matches(@lemma, 'er\d?$') or matches(@lemma, '[^o]ir\d?$'))
                         ]"></xsl:with-param>
                 </xsl:call-template>
@@ -2037,34 +2045,34 @@
                 <h4>Verbes en -er</h4>
                 <h5>P1</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#1\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#1\s+#s')]"/>
                 </xsl:call-template>
                 <h5>P2</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#2\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#2\s+#s')]"/>
                 </xsl:call-template>
                 <h5>P3, -at ou -aø, cf. Dees 1980 carte 233</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#3\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#3\s+#s')]"/>
                 </xsl:call-template>
                 <h5>P4, -ins?</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#1\s+#p')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#1\s+#p')]"/>
                 </xsl:call-template>
                 <h5>P5</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#2\s+#s')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#2\s+#s')]"/>
                 </xsl:call-template>
                 <h5>P6, -arent ou -erent, Dees 1980 carte 234</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@ana, 'VERcjg.*#psp.*#3\s+#p')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and matches(@type, 'VERcjg.*#psp.*#3\s+#p')]"/>
                 </xsl:call-template>
                 <h4>Parfaits faibles en -i/3e en -i</h4>
                 <xsl:call-template name="verbalDesinentia">
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and
                         matches(@lemma, '[^o]ir\d?$')
                         and not(@lemma = ( $parfaitsFortsEnI, $parfaitsFortsEnS, $parfaitsFortsEnU, $parfaitsFaiblesEnUI))
@@ -2075,7 +2083,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and
                         matches(@lemma, 're\d?$')
                         and not(@lemma = ( $parfaitsFortsEnI, $parfaitsFortsEnS, $parfaitsFortsEnU, $parfaitsFaiblesEnUI  ))
@@ -2086,7 +2094,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and @lemma = $parfaitsFaiblesEnUI
                         ]"></xsl:with-param>
                 </xsl:call-template>
@@ -2095,7 +2103,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and @lemma = $parfaitsFortsEnI
                         ]"></xsl:with-param>
                 </xsl:call-template>
@@ -2104,7 +2112,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and @lemma = $parfaitsFortsEnS
                         ]"></xsl:with-param>
                 </xsl:call-template>
@@ -2113,7 +2121,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#ind\s+#psp')
+                        matches(@type, '#VERcjg\s+#ind\s+#psp')
                         and @lemma = $parfaitsFortsEnU
                         ]"></xsl:with-param>
                 </xsl:call-template>
@@ -2123,7 +2131,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#sub\s+#ipf')
+                        matches(@type, '#VERcjg\s+#sub\s+#ipf')
                         and matches(@lemma, 'er\d?$')
                         ]"/>
                 </xsl:call-template>
@@ -2132,7 +2140,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#sub\s+#ipf')
+                        matches(@type, '#VERcjg\s+#sub\s+#ipf')
                         and (matches(@lemma, 're\d?$') or matches(@lemma, '[^o]ir\d?$')
                         or @lemma = ($parfaitsFortsEnI, $parfaitsFortsEnS))
                         and not(@lemma = ($parfaitsFortsEnU, $parfaitsFaiblesEnUI)
@@ -2145,7 +2153,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#sub\s+#ipf')
+                        matches(@type, '#VERcjg\s+#sub\s+#ipf')
                         and @lemma = ($parfaitsFaiblesEnUI)
                         ]"/>
                 </xsl:call-template>
@@ -2154,7 +2162,7 @@
                     <xsl:with-param
                         name="groupe" 
                         select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg\s+#sub\s+#ipf')
+                        matches(@type, '#VERcjg\s+#sub\s+#ipf')
                         and @lemma = ($parfaitsFortsEnU)
                         ]"/>
                 </xsl:call-template>
@@ -2162,16 +2170,16 @@
                 <h3>Futurs</h3>
                 <p><b>Voir 3e pers. du sg (-t ou pas; ai/ei ou a)</b></p>>
                     <xsl:call-template name="verbalDesinentia">
-                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERcjg.*#fut.*')]"/>
+                        <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERcjg.*#fut.*')]"/>
                     </xsl:call-template>
                 <h3>Conditionnels</h3>
                 <xsl:call-template name="verbalDesinentia">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERcjg.*#con.*')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERcjg.*#con.*')]"/>
                 </xsl:call-template>
                 <h3>nr > rr > r dans futur et conditionnels</h3>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                            matches(@ana, 'VERcjg.*#(con|fut)')
+                            matches(@type, 'VERcjg.*#(con|fut)')
                         and matches(@lemma, 'n')
                         and not(matches(., 'n\w'))
                         ]"/>
@@ -2179,7 +2187,7 @@
                 <h3>rr > r</h3>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERcjg.*#(con|fut)')
+                        matches(@type, 'VERcjg.*#(con|fut)')
                         and not(matches(., 'rr'))
                         ]"/>
                 </xsl:call-template>
@@ -2188,7 +2196,7 @@
                 <h4>Désinence de la P3 des verbes en -er, cf. Dees, carte 442</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#ipf.*3\s+#s')
+                        matches(@type, '#VERcjg.*#ind\s+#ipf.*3\s+#s')
                         and matches(@lemma, 'er\d?$')
                         ]"/>
                     <xsl:with-param name="longueur" select="1"/>
@@ -2196,7 +2204,7 @@
                 <h4>Désinences de la P4, cf. Dees, carte 443</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#ipf.*1\s+#p')
+                        matches(@type, '#VERcjg.*#ind\s+#ipf.*1\s+#p')
                         and matches(@lemma, 'er\d?$')
                         ]"/>
                     <xsl:with-param name="longueur" select="1"/>
@@ -2204,41 +2212,41 @@
                 <h4>Désinences de la P6, cf. Dees, carte 444</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, '#VERcjg.*#ind\s+#ipf.*3\s+#p')
+                        matches(@type, '#VERcjg.*#ind\s+#ipf.*3\s+#p')
                         and matches(@lemma, 'er\d?$')
                         ]"/>
                     <xsl:with-param name="longueur" select="1"/>
                 </xsl:call-template>
                 <h4>Tous les imparfaits</h4>
                 <xsl:call-template name="verbalDesinentia">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERcjg.*#ind\s+#ipf.*')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERcjg.*#ind\s+#ipf.*')]"/>
                 </xsl:call-template>
                 <h4>Tous les impératifs</h4>
                 <xsl:call-template name="verbalDesinentia">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERcjg.*#imp.*')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERcjg.*#imp.*')]"/>
                 </xsl:call-template>
                 <h3>Participe présent</h3>
                 <h4>Répartition selon les usages</h4>
                 <p>
                     <b>Emplois verbaux:</b> <xsl:value-of 
-                        select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')])"/>
+                        select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')])"/>
                     (   <xsl:value-of 
                         select="
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')])
                         div
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa')])
                         * 100
                         "/>%)
                 </p>
                 <p>
                     <b>Emplois nominaux:</b> 
                     <xsl:value-of 
-                        select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#(s|p)\s+#(m|f|n)\s+#(n|r)')])"/>
+                        select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#(s|p)\s+#(m|f|n)\s+#(n|r)')])"/>
                     (   <xsl:value-of 
                         select="
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#(s|p)\s+#(m|f|n)\s+#(n|r)')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#(s|p)\s+#(m|f|n)\s+#(n|r)')])
                         div
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa')])
                         * 100
                         "/>%)
                 </p>
@@ -2249,7 +2257,7 @@
                 <xsl:variable name="monGroupe">
                     <xsl:apply-templates 
                         mode="getDesinentia" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa')]"/>
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -2257,30 +2265,30 @@
                 <h4>Emplois verbaux</h4>
                 <p><b>Constructions avec le verbe aler:</b>
                     <xsl:value-of 
-                        select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')
+                        select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')
                         and ancestor::tei:l/descendant::tei:w[@lemma = 'aler']
                         ])"/>
                     (   <xsl:value-of 
                         select="
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')
                         and ancestor::tei:l/descendant::tei:w[@lemma = 'aler']
                         ])
                         div
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')])
                         "/>%)
                 </p>
                 <p><b>Précédé de en</b>
                     <xsl:value-of 
-                        select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')
+                        select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')
                         and preceding::tei:w[1]/@lemma = 'en1'
                         ])"/>
                     (   <xsl:value-of 
                         select="
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')
                         and preceding::tei:w[1]/@lemma = 'en1'
                         ])
                         div
-                        count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')])
+                        count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')])
                         "/>%)
                 </p>
                 <p>
@@ -2288,34 +2296,34 @@
                     <xsl:call-template name="comptageFormes">
                         <xsl:with-param 
                             name="groupe" 
-                            select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppa\s+#x\s+#x\s+#x')]/preceding::tei:w[1]"/>
+                            select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppa\s+#x\s+#x\s+#x')]/preceding::tei:w[1]"/>
                     </xsl:call-template>
                 </p>
                 <h4>Finales des participes présents</h4>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppa')
+                        matches(@type, 'VERppa')
                         and not(matches(., 'a(n|&#x0303;)t'))
                         ]"/>
                 </xsl:call-template>
                 <h3>Déclinaison des participes présents</h3>
                 <h4>Masc.</h4>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppa.*#m')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppa.*#m')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 <h4>Fém.</h4>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppa.*#f')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppa.*#f')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 <h4>Gérondif invariable</h4>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppa.*#x')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppa.*#x')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -2325,20 +2333,20 @@
                 <h3>Participes passés</h3>
                 <h4>Finales</h4>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <h4>Finales par groupe</h4>
                 <h5>Type faible en -é</h5>
                 <xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe') and matches(@lemma, 'er\d?$')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe') and matches(@lemma, 'er\d?$')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <h5>Type faible en -i</h5>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param 
                         name="groupe" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe') 
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe') 
                         and (matches(@lemma, '[^o]ir\d?$')
                         and not(@lemma = ($parfaitsFaiblesEnUI, $parfaitsFortsEnU, $parfaitsFortsEnI))
                         )]"/>
@@ -2348,13 +2356,13 @@
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param 
                         name="groupe" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe') 
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe') 
                         and @lemma = ($parfaitsFaiblesEnUI, $parfaitsFortsEnU, $parfaitsFortsEnI)]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template>
                 <h5>Type en -eit?</h5>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe') 
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe') 
                         and matches(., '(e|o)i(t|z|s)$')]
                         "></xsl:with-param>
                 </xsl:call-template>
@@ -2362,7 +2370,7 @@
                         <xsl:call-template name="phonolFinales">
                             <xsl:with-param 
                                 name="groupe" 
-                                select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe') 
+                                select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe') 
                                 and @lemma =($parfaitsFortsEnS)]"/>
                             <xsl:with-param name="longueur" select="2"/>
                         </xsl:call-template>
@@ -2370,26 +2378,26 @@
                 
                 <h4>Finales des fém. du 1er gr. (iee / ie)</h4>
                 <p><b>iee > ie</b><xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe.*#f') and matches(@lemma, 'ier\d?$')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe.*#f') and matches(@lemma, 'ier\d?$')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template></p>
                 
                 <p><b>Sondage élargi:</b><xsl:call-template name="phonolFinales">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERppe.*#f') and matches(@lemma, 'er\d?$')]"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERppe.*#f') and matches(@lemma, 'er\d?$')]"/>
                     <xsl:with-param name="longueur" select="2"/>
                 </xsl:call-template></p>
                 
                 <h4>Déclinaison</h4>
                 <h5>Masc.</h5>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#m')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#m')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
                 </xsl:call-template>
                 <h5>Fém.</h5>
                 <xsl:variable name="monGroupe">
-                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#f')]"/>
+                    <xsl:apply-templates mode="getDesinentia" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#f')]"/>
                 </xsl:variable>
                 <xsl:call-template name="makeWordTable">
                     <xsl:with-param name="currentGroup" select="$monGroupe/descendant::tei:w"/>
@@ -2402,7 +2410,7 @@
                 <p><b>Singulier</b>
                     <br /><b>Accord:</b> <xsl:value-of select="
                         count($arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#n')
                         and matches(., '(z|s)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ])
@@ -2410,7 +2418,7 @@
                     <br /><b>Pas d'accord</b>
                     <xsl:value-of select="count(
                         $arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#n')
                         and not(matches(., '(z|s)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ]
@@ -2419,7 +2427,7 @@
                     <b>Pluriel</b>
                     <b>Accord:</b> <xsl:value-of select="
                         count($arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#n')
                         and not(matches(., '(z|s)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ])
@@ -2427,7 +2435,7 @@
                     <b>Pas d'accord</b>
                     <xsl:value-of select="count(
                         $arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#n')
                         and matches(., '(z|s)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ]
@@ -2436,12 +2444,12 @@
                 <br /><b>Singulier, contexte des cas sans accord:</b>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#n')
                         and not(matches(., '(z|s)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#s\s+#m\s+#n') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#s\s+#m\s+#n') 
                     and not(matches(., '(z|s)$'))
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                     ]">
@@ -2450,12 +2458,12 @@
                 <br /><b>Pluriel</b>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#n')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#n')
                         and matches(., '(z|s)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#p\s+#m\s+#n') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#p\s+#m\s+#n') 
                     and matches(., '(z|s)$')
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                     ]">
@@ -2463,11 +2471,11 @@
                 </xsl:for-each>
                 <h6>PP féminins</h6>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#f')
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#f')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#f') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#f') 
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'estre1']]
                     ]">
                     <p><b><xsl:value-of select="ancestor::tei:l/@n"/></b><xsl:value-of select="ancestor::tei:l"/></p>
@@ -2478,7 +2486,7 @@
                 <p><b>Singulier</b>
                     <br /><b>Accord:</b> <xsl:value-of select="
                         count($arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#r')
                         and not(matches(., '(z|s)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ])
@@ -2486,7 +2494,7 @@
                     <br /><b>Pas d'accord</b>
                     <xsl:value-of select="count(
                         $arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#r')
                         and matches(., '(z)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ]
@@ -2495,7 +2503,7 @@
                     <b>Pluriel</b>
                     <b>Accord:</b> <xsl:value-of select="
                         count($arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#r')
                         and matches(., '(z)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ])
@@ -2503,7 +2511,7 @@
                     <b>Pas d'accord</b>
                     <xsl:value-of select="count(
                         $arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#r')
                         and not(matches(., '(z)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ]
@@ -2514,12 +2522,12 @@
                 <br /><b>Singulier</b>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#s\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#s\s+#m\s+#r')
                         and matches(., '(z)$')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#s\s+#m\s+#r') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#s\s+#m\s+#r') 
                     and matches(., '(z)$')
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                     ]">
@@ -2528,12 +2536,12 @@
                 <br /><b>Pluriel</b>
                 <xsl:call-template name="comptageFormes">
                     <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[
-                        matches(@ana, 'VERppe.*#p\s+#m\s+#r')
+                        matches(@type, 'VERppe.*#p\s+#m\s+#r')
                         and not(matches(., '(z)$'))
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#p\s+#m\s+#r')
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#p\s+#m\s+#r')
                     and not(matches(., '(z)$'))
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                     ]">
@@ -2541,11 +2549,11 @@
                 </xsl:for-each>
                 <h6>PP féminins</h6>
                 <xsl:call-template name="comptageFormes">
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#f')
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#f')
                         and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                         ]"></xsl:with-param>
                 </xsl:call-template>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, 'VERppe.*#f') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VERppe.*#f') 
                     and ancestor::tei:l[descendant::tei:w[@lemma = 'avoir']]
                     ]">
                     <p><b ><xsl:value-of select="ancestor::tei:l/@n"/></b><xsl:value-of select="ancestor::tei:l"/></p>
@@ -2557,7 +2565,7 @@
                 <h4>Finales du 1er groupe</h4>
                 <xsl:call-template name="phonolFinales">
                     <xsl:with-param name="longueur" select="2" as="xs:integer"/>
-                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and tokenize(@ana, ' ')[1] =  '#VERinf']"/>
+                    <xsl:with-param name="groupe" select="$arborescenceRegul/descendant::tei:w[matches(@lemma, 'er\d?$') and tokenize(@type, ' ')[1] =  '#VERinf']"/>
                 </xsl:call-template>
                 
                 <h1>Syntaxe</h1>
@@ -2574,13 +2582,13 @@
                 <h3>Vers sans sujet exprimé</h3>
                 <h4>Total</h4>
                 <xsl:value-of select="
-                    count($arborescenceRegul/descendant::tei:l[not(descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
+                    count($arborescenceRegul/descendant::tei:l[not(descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
                     div
                     count($arborescenceRegul/descendant::tei:l)
                     "/>
                 <h4>Discours direct</h4>
                 <xsl:value-of select="
-                    count($arborescenceRegul/descendant::tei:l[descendant::tei:q and not(descendant::tei:q/descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
+                    count($arborescenceRegul/descendant::tei:l[descendant::tei:q and not(descendant::tei:q/descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
                     div
                     count($arborescenceRegul/descendant::tei:l[descendant::tei:q])
                     "/>
@@ -2588,7 +2596,7 @@
                 <xsl:value-of select="
                     count($arborescenceRegul/descendant::tei:l[
                     child::element()/local-name() != 'q' and
-                    not(descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n') and not(ancestor::tei:q)])
+                    not(descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n') and not(ancestor::tei:q)])
                     ])
                     div
                     count($arborescenceRegul/descendant::tei:l[child::element()/local-name() != 'q'])
@@ -2608,12 +2616,12 @@
                 <xsl:value-of select="
                     count(
                     $arborescenceSyntaxe/descendant::tei:l[
-                    descendant::tei:w[matches(@ana, '((NOM|PRO).*#r)|VERinf|VERppe|VERppa') and not(@lemma='soi1')]/following-sibling::tei:w[matches(@ana, 'VERcjg')]
+                    descendant::tei:w[matches(@type, '((NOM|PRO).*#r)|VERinf|VERppe|VERppa') and not(@lemma='soi1')]/following-sibling::tei:w[matches(@type, 'VERcjg')]
                     and
-                    not(descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
+                    not(descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')])])
                     div
                     count($arborescenceSyntaxe/descendant::tei:l[
-                    descendant::tei:w[matches(@ana, '((NOM|PRO).*#r)|VERinf|VERppe|VERppa')  and not(@lemma='soi1')]/following-sibling::tei:w[matches(@ana, 'VERcjg')]])
+                    descendant::tei:w[matches(@type, '((NOM|PRO).*#r)|VERinf|VERppe|VERppa')  and not(@lemma='soi1')]/following-sibling::tei:w[matches(@type, 'VERcjg')]])
                     "/>
                 
                 <h3>Place du sujet par rapport au verbe</h3>
@@ -2624,20 +2632,20 @@
                 <h4>En cas d'antéposition d'un objet direct (réfléchi excepté)</h4>
                 <xsl:call-template name="placeSujet">
                     <xsl:with-param name="lines" select="
-                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
+                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
                             and not(@lemma = 'soi1')
-                            and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                            and not(preceding-sibling::tei:w[matches(@ana, 'VERcjg')])
+                            and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                            and not(preceding-sibling::tei:w[matches(@type, 'VERcjg')])
                             ]
                         ]"/>
                 </xsl:call-template>
                 <h4>En cas d'antéposition d'un objet direct (réfléchi excepté et pronom personnel seul)</h4>
                 <xsl:call-template name="placeSujet">
                     <xsl:with-param name="lines" select="
-                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
+                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
                         and not(@lemma = 'soi1')
-                        and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                        and not(preceding-sibling::tei:w[matches(@ana, 'VERcjg')])
+                        and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                        and not(preceding-sibling::tei:w[matches(@type, 'VERcjg')])
                         ]
                         ]"/>
                     <xsl:with-param name="sujet" select="'#PRO.*#(m|f|n)\s+#n'"></xsl:with-param>
@@ -2645,10 +2653,10 @@
                 <h4>En cas d'antéposition d'un objet direct (réfléchi excepté et nom seul)</h4>
                 <xsl:call-template name="placeSujet">
                     <xsl:with-param name="lines" select="
-                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
+                        $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
                         and not(@lemma = 'soi1')
-                        and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                        and not(preceding-sibling::tei:w[matches(@ana, 'VERcjg')])
+                        and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                        and not(preceding-sibling::tei:w[matches(@type, 'VERcjg')])
                         ]
                         ]"/>
                     <xsl:with-param name="sujet" select="'#NOM.*#(m|f|n)\s+#n'"></xsl:with-param>
@@ -2657,38 +2665,38 @@
                 <h4>Total</h4>
                 <b>Avant: </b>
                 <xsl:value-of select="
-                    count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '#PROper')
+                    count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '#PROper')
                     and (. ='mei' or .= 'moi' or . = 'mi' or . = 'tei' or . ='toi' or . ='lui' or . ='eus' or . ='ues' or . = 'els')
-                    and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                    and not(preceding-sibling::tei:w[matches(@ana, 'VERcjg')])
+                    and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                    and not(preceding-sibling::tei:w[matches(@type, 'VERcjg')])
                     ]
                     ])
                     "/>
                 <b>Après: </b>
                 <xsl:value-of select="
-                    count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '#PROper')
+                    count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '#PROper')
                     and (. ='mei' or .= 'moi' or . = 'mi' or . = 'tei' or . ='toi' or . ='lui' or . ='eus' or . ='ues' or . = 'els')
-                    and preceding-sibling::tei:w[matches(@ana, 'VERcjg')]
-                    and not(following-sibling::tei:w[matches(@ana, 'VERcjg')])
+                    and preceding-sibling::tei:w[matches(@type, 'VERcjg')]
+                    and not(following-sibling::tei:w[matches(@type, 'VERcjg')])
                     ]
                     ])
                     "/>
                 <h4>Discours direct</h4>
                 <b>Avant: </b>
                 <xsl:value-of select="
-                    count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[matches(@ana, '#PROper')
+                    count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[matches(@type, '#PROper')
                     and (. ='mei' or .= 'moi' or . = 'mi' or . = 'tei' or . ='toi' or . ='lui' or . ='eus' or . ='ues' or . = 'els')
-                    and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                    and not(preceding-sibling::tei:w[matches(@ana, 'VERcjg')])
+                    and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                    and not(preceding-sibling::tei:w[matches(@type, 'VERcjg')])
                     ]
                     ])
                     "/>
                 <b>Après: </b>
                 <xsl:value-of select="
-                    count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[matches(@ana, '#PROper')
+                    count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[matches(@type, '#PROper')
                     and (. ='mei' or .= 'moi' or . = 'mi' or . = 'tei' or . ='toi' or . ='lui' or . ='eus' or . ='ues' or . = 'els')
-                    and preceding-sibling::tei:w[matches(@ana, 'VERcjg')]
-                    and not(following-sibling::tei:w[matches(@ana, 'VERcjg')])
+                    and preceding-sibling::tei:w[matches(@type, 'VERcjg')]
+                    and not(following-sibling::tei:w[matches(@type, 'VERcjg')])
                     ]
                     ])
                     "/>
@@ -2697,91 +2705,91 @@
                 <h3>Place de l'objet direct par rapport au verbe</h3>
                 <h4>Avant</h4>
                 <xsl:value-of select="count(
-                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
-                    and not(@lemma = 'soi1')]/following-sibling::tei:w[matches(@ana, 'VERcjg')] ])
+                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
+                    and not(@lemma = 'soi1')]/following-sibling::tei:w[matches(@type, 'VERcjg')] ])
                     "/>
                 <h4>Après</h4>
                 <xsl:value-of select="count(
-                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
-                    and not(@lemma = 'soi1')]/preceding-sibling::tei:w[matches(@ana, 'VERcjg')] ])
+                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
+                    and not(@lemma = 'soi1')]/preceding-sibling::tei:w[matches(@type, 'VERcjg')] ])
                     "/>
                 <h3>Objet direct précédent le verbe, initial ou après le sujet</h3>
                 <h4>Initial</h4>
                 <xsl:value-of select="count(
-                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
+                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
                         and not(@lemma = 'soi1') 
-                        and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                        and not(preceding-sibling::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')])
+                        and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                        and not(preceding-sibling::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')])
                     ] ] )
                     "/>
                 <h4>Après le sujet</h4>
                 <xsl:value-of select="count(
-                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@ana, '(NOM|PRO).*#r')
+                    $arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[matches(@type, '(NOM|PRO).*#r')
                     and not(@lemma = 'soi1') 
-                    and following-sibling::tei:w[matches(@ana, 'VERcjg')]
-                    and preceding-sibling::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]
+                    and following-sibling::tei:w[matches(@type, 'VERcjg')]
+                    and preceding-sibling::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]
                     ] ] )
                     "/>
                 <h3>Place de l'objet direct dans la relative introduite par qui</h3>
                 <b>Avant: </b><!-- TODO: il faudrait remplacer toutes les occurrences de regex objet direct, etc. par un paramètre -->
                 <xsl:value-of select="
                     count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[@lemma = 'qui']
-                    /following-sibling::tei:w[matches(@ana,  '(NOM|PRO).*#r')]/following-sibling::tei:w[matches(@ana, 'VERcjg')]
+                    /following-sibling::tei:w[matches(@type,  '(NOM|PRO).*#r')]/following-sibling::tei:w[matches(@type, 'VERcjg')]
                     ])
                     "/>
                 <br /><b>Après: </b>
                 <xsl:value-of select="
                     count($arborescenceSyntaxe/descendant::tei:l[descendant::tei:w[@lemma = 'qui']
-                    /following-sibling::tei:w[matches(@ana, 'VERcjg')]/following-sibling::tei:w[matches(@ana,  '(NOM|PRO).*#r')]
+                    /following-sibling::tei:w[matches(@type, 'VERcjg')]/following-sibling::tei:w[matches(@type,  '(NOM|PRO).*#r')]
                     ])
                     "/>
                 <h4>Discours direct</h4>
                 <b>Avant: </b>
                 <xsl:value-of select="
                     count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[@lemma = 'qui']
-                    /following-sibling::tei:w[matches(@ana,  '(NOM|PRO).*#r')]/following-sibling::tei:w[matches(@ana, 'VERcjg')]
+                    /following-sibling::tei:w[matches(@type,  '(NOM|PRO).*#r')]/following-sibling::tei:w[matches(@type, 'VERcjg')]
                     ])
                     "/>
                 <br /><b>Après: </b>
                 <xsl:value-of select="
                     count($arborescenceSyntaxe/descendant::tei:q[descendant::tei:w[@lemma = 'qui']
-                    /following-sibling::tei:w[matches(@ana, 'VERcjg')]/following-sibling::tei:w[matches(@ana,  '(NOM|PRO).*#r')]
+                    /following-sibling::tei:w[matches(@type, 'VERcjg')]/following-sibling::tei:w[matches(@type,  '(NOM|PRO).*#r')]
                     ])
                     "/>
                 <h3>Verbe en position initiale du vers</h3>
                 <h4>Impératifs</h4>
                 <p><b>Total:</b>
-                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*#imp') 
+                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*#imp') 
                         and . is ancestor::tei:l/descendant::tei:w[1] ])"/>
                 </p>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*#imp') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*#imp') 
                     and . is ancestor::tei:l/descendant::tei:w[1]
                     ]">
                     <p><b ><xsl:value-of select="ancestor::tei:l/@n"/></b><xsl:value-of select="ancestor::tei:l"/></p>
                 </xsl:for-each>
                 <h4>Annonce du discours direct</h4>
                 <p><b>Total:</b>
-                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*') 
+                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*') 
                         and . is ancestor::tei:l/descendant::tei:w[1]
                         and @lemma = ('dire', 'respondre1')])"/>
                 </p>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*') 
                     and . is ancestor::tei:l/descendant::tei:w[1]
                     and @lemma = ('dire', 'respondre1')]">
                     <p><b ><xsl:value-of select="ancestor::tei:l/@n"/></b><xsl:value-of select="ancestor::tei:l"/></p>
                 </xsl:for-each>
                 <h4>Autre cas</h4>
                 <p><b>Total:</b>
-                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*') 
+                    <xsl:value-of select="count($arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*') 
                         and . is ancestor::tei:l/descendant::tei:w[1]
                         and not(@lemma = ('dire', 'respondre1'))
-                        and not(matches(@ana, '#imp'))
+                        and not(matches(@type, '#imp'))
                         ])"/>
                 </p>
-                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VERcjg.*') 
+                <xsl:for-each select="$arborescenceRegul/descendant::tei:w[matches(@type, '#VERcjg.*') 
                     and . is ancestor::tei:l/descendant::tei:w[1]
                     and not(@lemma = ('dire', 'respondre1'))
-                    and not(matches(@ana, '#imp'))
+                    and not(matches(@type, '#imp'))
                     ]">
                     <p><b ><xsl:value-of select="ancestor::tei:l/@n"/></b><xsl:value-of select="ancestor::tei:l"/></p>
                 </xsl:for-each>
@@ -2812,15 +2820,15 @@
                     count(
                     $arborescenceRegul/descendant::tei:l[
                    /position() &lt; 
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     ])
                     "/>
                 <br /><b>Dans le discours direct:</b>
                 <xsl:value-of select="
                     count(
                     $arborescenceRegul/descendant::tei:l/descendant::tei:q[
-                    descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() &lt; 
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() &lt; 
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     ])
                     "/>
                 
@@ -2828,29 +2836,29 @@
                 <xsl:value-of select="
                     count(
                     $arborescenceRegul/descendant::tei:l[
-                    descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     ])
                     "/>
                 <br /><b>Dans le discours direct:</b>
                 <xsl:value-of select="
                     count(
                     $arborescenceRegul/descendant::tei:l/descendant::tei:q[
-                    descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     ])
                     "/>
                 <h4>Débogage: vers qui ne correspondent ni à l'un, ni à l'autre</h4>
                 <xsl:for-each select="
                     $arborescenceRegul/descendant::tei:l[
                     not(
-                    descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() > 
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     )
                     and 
                     not(
-                    descendant::tei:w[matches(@ana, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() &lt;
-                    descendant::tei:w[matches(@ana, '#VERcjg')]/position()
+                    descendant::tei:w[matches(@type, '#(NOM|PRO).*#(m|f|n)\s+#n')]/position() &lt;
+                    descendant::tei:w[matches(@type, '#VERcjg')]/position()
                     )
                     ]
                     ">
@@ -2897,31 +2905,32 @@
                 <h1>Paradigmes complets</h1>
                 <!-- Substantifs -->
                 <h2>Substantifs</h2>
+                <!-- JBC: on pourrait réécrire cela mieux -->
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#NOM')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'NOM')]"/>
                 </xsl:call-template>
                 <!-- Adjectifs -->
                 <h2>Adjectifs</h2>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#ADJ')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'ADJ')]"/>
                 </xsl:call-template>
                 <!-- Pronoms -->
                 <h2>Pronoms</h2>
                 <xsl:call-template name="tableDeclinaison">
-                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#PRO')]"/>
+                    <xsl:with-param name="arborescenceRegul" select="$arborescenceRegul/descendant::tei:w[matches(@type, 'PRO')]"/>
                 </xsl:call-template>
                 <!-- Déterminants -->
                 <xsl:call-template name="tableDeclinaison">
                     <xsl:with-param 
                         name="arborescenceRegul" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#DET')]"/>
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, 'DET')]"/>
                 </xsl:call-template>
                 <!-- Verbes -->
                 <h1>Verbes</h1>
                 <xsl:call-template name="verbes">
                     <xsl:with-param 
                         name="arborescenceRegul" 
-                        select="$arborescenceRegul/descendant::tei:w[matches(@ana, '#VER')]"/>
+                        select="$arborescenceRegul/descendant::tei:w[matches(@type, 'VER')]"/>
                 </xsl:call-template>
             </body>
         </html>
@@ -2966,12 +2975,14 @@
             <xsl:variable name="graphie" select="."/>
             <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="autreGraphie" select="$graphies[position() != $pos]"/>
-            <xsl:value-of select="round-half-to-even(
-                count($groupe[matches(., $graphie) and not(matches(., $autreGraphie))])
-                div
-                count($groupe)
-                , 4)
-                "/> 
+            <xsl:if test="count($groupe) > 0">
+                <xsl:value-of select="round-half-to-even(
+                    count($groupe[matches(., $graphie) and not(matches(., $autreGraphie))])
+                    div
+                    count($groupe)
+                    , 4)
+                    "/>
+            </xsl:if> 
             <br/>
         </xsl:for-each>
         
@@ -3018,7 +3029,10 @@
             <br/>
         </xsl:for-each-group>
     </xsl:template>
-    
+   
+   
+   <!-- Je commence la correction de la feuille pour la morphologie -->
+   
     <!-- MORPHOLOGIE -->
 <xsl:template match="node() | @*" mode="getDesinentia">
     <xsl:copy>
@@ -3037,10 +3051,10 @@
         <p>fr.a. totale: 
             <xsl:value-of select="count($groupe)"/>
             <br />
-            CSS: <xsl:value-of select="count($groupe[matches(@ana, '#s\s+#(f|m|n)\s+#n')])"/><br />
-            CRS: <xsl:value-of select="count($groupe[matches(@ana, '#s\s+#(f|m|n)\s+#r')])"/><br />
-            CSP: <xsl:value-of select="count($groupe[matches(@ana, '#p\s+#(f|m|n)\s+#n')])"/><br />
-            CRP: <xsl:value-of select="count($groupe[matches(@ana, '#p\s+#(f|m|n)\s+#r')])"/><br />
+            CSS: <xsl:value-of select="count($groupe[matches(@type, 'NOMB.=s') and matches(@type, 'CAS=n')])"/><br />
+            CRS: <xsl:value-of select="count($groupe[matches(@type, 'NOMB.=s') and matches(@type, 'CAS=r')])"/><br />
+            CSP: <xsl:value-of select="count($groupe[matches(@type, 'NOMB.=p') and matches(@type, 'CAS=n')])"/><br />
+            CRP: <xsl:value-of select="count($groupe[matches(@type, 'NOMB.=p') and matches(@type, 'CAS=r')])"/><br />
         </p>
     </xsl:template>
 
@@ -3069,7 +3083,7 @@
             <xsl:otherwise>
         <h3>Masculins</h3>
         <xsl:for-each-group
-            select="$arborescenceRegul[tokenize(@ana, ' ')[3] = '#m']"
+            select="$arborescenceRegul[matches(@type,'GENRE=m')]"
             group-by="@lemma">
             <xsl:sort select="@lemma" order="ascending" data-type="text"/>
             <h4>
@@ -3083,7 +3097,7 @@
 
         <h3>Féminins</h3>
         <xsl:for-each-group
-            select="$arborescenceRegul[tokenize(@ana, ' ')[3] = '#f']"
+            select="$arborescenceRegul[matches(@type,'GENRE=f')]"
             group-by="@lemma">
             <xsl:sort select="@lemma" order="ascending" data-type="text"/>
             <h4>
@@ -3096,7 +3110,7 @@
         <xsl:if test="$withNeutral">
             <h3>Neutres</h3>
             <xsl:for-each-group
-                select="$arborescenceRegul[tokenize(@ana, ' ')[3] = '#n']"
+                select="$arborescenceRegul[matches(@type,'GENRE=n')]"
                 group-by="@lemma">
                 <xsl:sort select="@lemma" order="ascending" data-type="text"/>
                 <h4>
@@ -3112,6 +3126,8 @@
     </xsl:template>
 
 
+<!-- JBC: poursuivre d'ici -->
+
     <xsl:template name="makeWordTable">
         <xsl:param name="currentGroup"/>
         <xsl:param name="withCRI" select="false()"/>
@@ -3119,10 +3135,10 @@
             <xsl:with-param name="groupe" select="$currentGroup"/>
         </xsl:call-template>
         <!--Frequence absolue totale: <xsl:value-of select="count($currentGroup)"/><br/>
-        CSS: <xsl:value-of select="count($currentGroup[matches(@ana, '#s\s+#(m|f|n|x)\s+#n')])"/><br/>
-        CRS: <xsl:value-of select="count($currentGroup[matches(@ana, '#s\s+#(m|f|n|x)\s+#r')])"/><br/>
-        CSP: <xsl:value-of select="count($currentGroup[matches(@ana, '#p\s+#(m|f|n|x)\s+#n')])"/><br/>
-        CRP: <xsl:value-of select="count($currentGroup[matches(@ana, '#p\s+#(m|f|n|x)\s+#r')])"/>-->
+        CSS: <xsl:value-of select="count($currentGroup[matches(@type, '#s\s+#(m|f|n|x)\s+#n')])"/><br/>
+        CRS: <xsl:value-of select="count($currentGroup[matches(@type, '#s\s+#(m|f|n|x)\s+#r')])"/><br/>
+        CSP: <xsl:value-of select="count($currentGroup[matches(@type, '#p\s+#(m|f|n|x)\s+#n')])"/><br/>
+        CRP: <xsl:value-of select="count($currentGroup[matches(@type, '#p\s+#(m|f|n|x)\s+#r')])"/>-->
         <table>
             <tr>
                 <td/>
@@ -3134,14 +3150,14 @@
                 <td>
                     <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$currentGroup[tokenize(@ana, ' ')[2] = '#s' and tokenize(@ana, ' ')[4] = '#n']"
+                            select="$currentGroup[tokenize(@type, ' ')[2] = '#s' and tokenize(@type, ' ')[4] = '#n']"
                         />
                     </xsl:call-template>
                 </td>
                 <td>
                     <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$currentGroup[tokenize(@ana, ' ')[2] = '#p' and tokenize(@ana, ' ')[4] = '#n']"
+                            select="$currentGroup[tokenize(@type, ' ')[2] = '#p' and tokenize(@type, ' ')[4] = '#n']"
                         />
                     </xsl:call-template>
                 </td>
@@ -3151,14 +3167,14 @@
                 <td>
                     <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$currentGroup[tokenize(@ana, ' ')[2] = '#s' and tokenize(@ana, ' ')[4] = '#r']"
+                            select="$currentGroup[tokenize(@type, ' ')[2] = '#s' and tokenize(@type, ' ')[4] = '#r']"
                         />
                     </xsl:call-template>
                 </td>
                 <td>
                     <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$currentGroup[tokenize(@ana, ' ')[2] = '#p' and tokenize(@ana, ' ')[4] = '#r']"
+                            select="$currentGroup[tokenize(@type, ' ')[2] = '#p' and tokenize(@type, ' ')[4] = '#r']"
                         />
                     </xsl:call-template>
                 </td>
@@ -3169,14 +3185,14 @@
                     <td>
                         <xsl:call-template name="makeWordCellValue">
                             <xsl:with-param name="groupe"
-                                select="$currentGroup[tokenize(@ana, ' ')[2] = '#s' and tokenize(@ana, ' ')[4] = '#i']"
+                                select="$currentGroup[tokenize(@type, ' ')[2] = '#s' and tokenize(@type, ' ')[4] = '#i']"
                             />
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="makeWordCellValue">
                             <xsl:with-param name="groupe"
-                                select="$currentGroup[tokenize(@ana, ' ')[2] = '#p' and tokenize(@ana, ' ')[4] = '#i']"
+                                select="$currentGroup[tokenize(@type, ' ')[2] = '#p' and tokenize(@type, ' ')[4] = '#i']"
                             />
                         </xsl:call-template>
                     </td>
@@ -3198,31 +3214,31 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'je' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'je' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                         <br/> CR: <xsl:call-template name="makeWordCellValue">
                             <xsl:with-param name="groupe"
-                                select="$groupe[@lemma = 'je' and tokenize(@ana, ' ')[5] = '#r' ]"
+                                select="$groupe[@lemma = 'je' and tokenize(@type, ' ')[5] = '#r' ]"
                             /></xsl:call-template>
                             <br/>
                             CRI: <xsl:call-template name="makeWordCellValue">
                                 <xsl:with-param name="groupe"
-                                    select="$groupe[@lemma = 'je' and tokenize(@ana, ' ')[5] = '#i' ]"
+                                    select="$groupe[@lemma = 'je' and tokenize(@type, ' ')[5] = '#i' ]"
                                 /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nos1' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'nos1' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nos1' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'nos1' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nos1' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'nos1' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3231,31 +3247,31 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'tu' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'tu' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'tu' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'tu' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'tu' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'tu' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vos' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'vos' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3265,73 +3281,73 @@
                     <b>Masculin</b>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                     <br/>
                     <b>Féminin</b>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: 
                     <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                     <br/>
                     <b>Neutre</b>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#n' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#n' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#n' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#n' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <b>Masculin</b>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                     <br/>
                     <b>Féminin</b>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                     <br/>
                     CRI: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'il' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f' and tokenize(@ana, ' ')[5] = '#i' ]"
+                            select="$groupe[@lemma = 'il' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f' and tokenize(@type, ' ')[5] = '#i' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3340,22 +3356,22 @@
         <br /><b>Sg.</b>
         <br/> CR: <xsl:call-template name="makeWordCellValue">
             <xsl:with-param name="groupe"
-                select="$groupe[@lemma = 'soi1' and tokenize(@ana, ' ')[3] = '#s'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                select="$groupe[@lemma = 'soi1' and tokenize(@type, ' ')[3] = '#s'  and tokenize(@type, ' ')[5] = '#r' ]"
             /></xsl:call-template>
         <br/>
         CRI: <xsl:call-template name="makeWordCellValue">
             <xsl:with-param name="groupe"
-                select="$groupe[@lemma = 'soi1' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[5] = '#i' ]"
+                select="$groupe[@lemma = 'soi1' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[5] = '#i' ]"
             /></xsl:call-template>
         <br /><b>Pl.</b>
         <br/> CR: <xsl:call-template name="makeWordCellValue">
             <xsl:with-param name="groupe"
-                select="$groupe[@lemma = 'soi1' and tokenize(@ana, ' ')[3] = '#p'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                select="$groupe[@lemma = 'soi1' and tokenize(@type, ' ')[3] = '#p'  and tokenize(@type, ' ')[5] = '#r' ]"
             /></xsl:call-template>
         <br/>
         CRI: <xsl:call-template name="makeWordCellValue">
             <xsl:with-param name="groupe"
-                select="$groupe[@lemma = 'soi1' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[5] = '#i' ]"
+                select="$groupe[@lemma = 'soi1' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[5] = '#i' ]"
             /></xsl:call-template>
     </xsl:template>
     
@@ -3372,21 +3388,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3395,21 +3411,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'mon1' or @lemma = 'mien')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3418,21 +3434,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen') and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen') and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3441,21 +3457,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'ton4' or @lemma = 'tuen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3464,21 +3480,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen') and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen') and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3487,21 +3503,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[(@lemma = 'son4' or @lemma = 'suen')  and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3510,21 +3526,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'nostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'nostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'nostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'nostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3533,21 +3549,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'nostre' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'nostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'nostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'nostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'nostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3556,21 +3572,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3579,21 +3595,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vostre' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vostre'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'vostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'vostre' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'vostre' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3602,21 +3618,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'lor2'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'lor2'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'lor2' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#m'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'lor2' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#m'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3625,21 +3641,21 @@
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2' and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'    and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'lor2' and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'    and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2'  and tokenize(@ana, ' ')[3] = '#s' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'lor2'  and tokenize(@type, ' ')[3] = '#s' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
                 <td>
                     <br/> CS: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#n' ]"
+                            select="$groupe[@lemma = 'lor2' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#n' ]"
                         /></xsl:call-template>
                     <br/> CR: <xsl:call-template name="makeWordCellValue">
                         <xsl:with-param name="groupe"
-                            select="$groupe[@lemma = 'lor2' and tokenize(@ana, ' ')[3] = '#p' and tokenize(@ana, ' ')[4] = '#f'  and tokenize(@ana, ' ')[5] = '#r' ]"
+                            select="$groupe[@lemma = 'lor2' and tokenize(@type, ' ')[3] = '#p' and tokenize(@type, ' ')[4] = '#f'  and tokenize(@type, ' ')[5] = '#r' ]"
                         /></xsl:call-template>
                 </td>
             </tr>
@@ -3659,33 +3675,33 @@
                 <th>CS</th>
                <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' ) and tokenize(@ana, ' ')[4] = '#n']"
+                        select="$groupe[(tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' ) and tokenize(@type, ' ')[4] = '#n']"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[tokenize(@ana, ' ')[3] = '#n'  and tokenize(@ana, ' ')[4] = '#n']"
+                        select="$groupe[tokenize(@type, ' ')[3] = '#n'  and tokenize(@type, ' ')[4] = '#n']"
                     /></xsl:call-template></td>
             </tr>
             <tr>
                 <th>CR</th>
                 <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' ) and tokenize(@ana, ' ')[4] = '#r']"
+                        select="$groupe[(tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' ) and tokenize(@type, ' ')[4] = '#r']"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[tokenize(@ana, ' ')[3] = '#n'  and tokenize(@ana, ' ')[4] = '#r']"
+                        select="$groupe[tokenize(@type, ' ')[3] = '#n'  and tokenize(@type, ' ')[4] = '#r']"
                     /></xsl:call-template></td>
             </tr>
             <tr>
                 <th>CRI</th>
                 <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' ) and tokenize(@ana, ' ')[4] = '#i']"
+                        select="$groupe[(tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' ) and tokenize(@type, ' ')[4] = '#i']"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[tokenize(@ana, ' ')[3] = '#n'  and tokenize(@ana, ' ')[4] = '#i']"
+                        select="$groupe[tokenize(@type, ' ')[3] = '#n'  and tokenize(@type, ' ')[4] = '#i']"
                     /></xsl:call-template></td>
             </tr>
         </table>
@@ -3700,33 +3716,33 @@
                 <th>CS (qui)</th>
                 <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[@lemma ='qui' and (tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' )]"
+                        select="$groupe[@lemma ='qui' and (tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' )]"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[@lemma ='qui' and tokenize(@ana, ' ')[3] = '#n']"
+                        select="$groupe[@lemma ='qui' and tokenize(@type, ' ')[3] = '#n']"
                     /></xsl:call-template></td>
             </tr>
             <tr>
                 <th>CR1</th>
                 <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(@lemma ='que2' or @lemma ='que3') and ((tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' ))]"
+                        select="$groupe[(@lemma ='que2' or @lemma ='que3') and ((tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' ))]"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(@lemma ='que2' or @lemma ='que3') and tokenize(@ana, ' ')[3] = '#n']"
+                        select="$groupe[(@lemma ='que2' or @lemma ='que3') and tokenize(@type, ' ')[3] = '#n']"
                     /></xsl:call-template></td>
             </tr>
             <tr>
                 <th>CR2</th>
                 <td> <xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[(@lemma = 'cui' or @lemma ='coi2') and ((tokenize(@ana, ' ')[3] = '#m'  or tokenize(@ana, ' ')[3] = '#f' ))]"
+                        select="$groupe[(@lemma = 'cui' or @lemma ='coi2') and ((tokenize(@type, ' ')[3] = '#m'  or tokenize(@type, ' ')[3] = '#f' ))]"
                     /></xsl:call-template></td>
                 <td><xsl:call-template name="makeWordCellValue">
                     <xsl:with-param name="groupe"
-                        select="$groupe[@lemma ='coi2' and tokenize(@ana, ' ')[3] = '#n'  ]"
+                        select="$groupe[@lemma ='coi2' and tokenize(@type, ' ')[3] = '#n'  ]"
                     /></xsl:call-template></td>
             </tr>
         </table>
@@ -3762,9 +3778,9 @@
             </h3>
             <h4>Infinitif</h4>
             <xsl:variable name="infinitifTotal"
-                select="count(current-group()[matches(@ana, '#VERinf')])"/>
+                select="count(current-group()[matches(@type, '#VERinf')])"/>
             <xsl:for-each-group
-                select="current-group()[matches(@ana, '#VERinf')]"
+                select="current-group()[matches(@type, '#VERinf')]"
                 group-by=".">
                 <xsl:value-of select="current-grouping-key()"/>
                 <xsl:text> (</xsl:text>
@@ -3774,7 +3790,7 @@
                 <xsl:text>) </xsl:text>
             </xsl:for-each-group>
             <!-- ana="#VERcjg #ind #pst #3 #s " -->
-            <xsl:for-each-group select="current-group()" group-by="tokenize(@ana, ' ')[2]">
+            <xsl:for-each-group select="current-group()" group-by="tokenize(@type, ' ')[2]">
                 <xsl:choose>
                     <xsl:when test="current-grouping-key() = '#ind'">
                         <h4>Indicatif</h4>
@@ -3792,7 +3808,7 @@
                 <xsl:choose>
                     <!-- On traite d'abord les modes qui se subdivisent en temps -->
                     <xsl:when test="current-grouping-key() = '#ind' or current-grouping-key() = '#sub'">
-                <xsl:for-each-group select="current-group()" group-by="tokenize(@ana, ' ')[3]">
+                <xsl:for-each-group select="current-group()" group-by="tokenize(@type, ' ')[3]">
                     <xsl:choose>
                         <xsl:when test="current-grouping-key() = '#pst'">
                             <h5>Présent</h5>
@@ -3832,32 +3848,32 @@
         <xsl:param name="longueur" select="1"/>
         <h4>P1</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#1\s+#s')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#1\s+#s')]"/>
             <xsl:with-param name="longueur" select="$longueur"/>
         </xsl:call-template>
         <h4>P2</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#2\s+#s')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#2\s+#s')]"/>
             <xsl:with-param name="longueur" select="$longueur"/>
         </xsl:call-template>
         <h4>P3</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#3\s+#s')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#3\s+#s')]"/>
             <xsl:with-param name="longueur" select="$longueur"/>
         </xsl:call-template>
         <h4>P4</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#1\s+#p')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#1\s+#p')]"/>
             <xsl:with-param name="longueur" select="$longueur"/>
         </xsl:call-template>
         <h4>P5</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#2\s+#p')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#2\s+#p')]"/>
             <xsl:with-param name="longueur" select="$longueur"/>
         </xsl:call-template>
         <h4>P6</h4>
         <xsl:call-template name="phonolFinales">
-            <xsl:with-param name="groupe" select="$groupe[matches(@ana, '#3\s+#p')]"/>
+            <xsl:with-param name="groupe" select="$groupe[matches(@type, '#3\s+#p')]"/>
             <xsl:with-param name="longueur" select="$longueur + 1"/>
         </xsl:call-template>
     </xsl:template>
@@ -3878,12 +3894,12 @@
                 <th>1</th>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#1' and tokenize(@ana, ' ')[$nombre] = '#s']"/>
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#1' and tokenize(@type, ' ')[$nombre] = '#s']"/>
                     </xsl:call-template>
                 </td>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#1' and tokenize(@ana, ' ')[$nombre] = '#p']"/>                        
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#1' and tokenize(@type, ' ')[$nombre] = '#p']"/>                        
                     </xsl:call-template>
                 </td>
             </tr>
@@ -3891,12 +3907,12 @@
                 <th>2</th>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#2' and tokenize(@ana, ' ')[$nombre] = '#s']"/>
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#2' and tokenize(@type, ' ')[$nombre] = '#s']"/>
                     </xsl:call-template>
                 </td>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#2' and tokenize(@ana, ' ')[$nombre] = '#p']"/>
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#2' and tokenize(@type, ' ')[$nombre] = '#p']"/>
                         </xsl:call-template>
                 </td>
             </tr>
@@ -3904,12 +3920,12 @@
                 <th>3</th>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#3' and tokenize(@ana, ' ')[$nombre] = '#s']"/>
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#3' and tokenize(@type, ' ')[$nombre] = '#s']"/>
                     </xsl:call-template>
                 </td>
                 <td>
                     <xsl:call-template name="makeVerbalCell">
-                        <xsl:with-param name="groupe" select="$groupe[tokenize(@ana, ' ')[$personne] = '#3' and tokenize(@ana, ' ')[$nombre] = '#p']"/>
+                        <xsl:with-param name="groupe" select="$groupe[tokenize(@type, ' ')[$personne] = '#3' and tokenize(@type, ' ')[$nombre] = '#p']"/>
                     </xsl:call-template>
                 </td>
             </tr>
@@ -3937,7 +3953,7 @@
     <xsl:value-of select="@xml:id"/>
     <xsl:text>,</xsl:text>
     <xsl:variable name="maPOS">
-        <xsl:value-of select="tokenize(@ana, ' ')[1]"/>
+        <xsl:value-of select="tokenize(@type, ' ')[1]"/>
     </xsl:variable>
     <!-- On réunit certaines catégories -->
     <xsl:choose>
@@ -3975,23 +3991,23 @@
             <xsl:for-each select="$lines">
                 <xsl:if 
                     test="descendant::tei:w
-                    [matches(@ana, $sujet)]/following-sibling::tei:w[matches(@ana, '#VERcjg')]">
+                    [matches(@type, $sujet)]/following-sibling::tei:w[matches(@type, '#VERcjg')]">
                     <noeud>avant</noeud>
                 </xsl:if>
                 <xsl:if 
                     test="descendant::tei:w
-                    [matches(@ana, $sujet)]/preceding::tei:w[matches(@ana, '#VERcjg')]">
+                    [matches(@type, $sujet)]/preceding::tei:w[matches(@type, '#VERcjg')]">
                     <noeud>après</noeud>
                 </xsl:if>
                 <xsl:for-each select="descendant::tei:q">
                     <xsl:if 
                         test="descendant::tei:w
-                        [matches(@ana, $sujet)]/following-sibling::tei:w[matches(@ana, '#VERcjg')]">
+                        [matches(@type, $sujet)]/following-sibling::tei:w[matches(@type, '#VERcjg')]">
                         <noeud>dd:avant</noeud>
                     </xsl:if>
                     <xsl:if 
                         test="descendant::tei:w
-                        [matches(@ana, $sujet)]/preceding-sibling::tei:w[matches(@ana, '#VERcjg')]">
+                        [matches(@type, $sujet)]/preceding-sibling::tei:w[matches(@type, '#VERcjg')]">
                         <noeud>dd:après</noeud>
                     </xsl:if>
                 </xsl:for-each>
