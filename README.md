@@ -9,7 +9,15 @@ Un corpus de chansons de geste.
 
 ***
 
-Les développements présentés ici sont produits pour part, collaborativement, dans le cadre du projet LAKME (*Linguistically Annotated Corpora Using Machine Learning Techniques*, ENS/EPHE/ENC) et pour part dans le cadre de la thèse de doctorat de Jean-Baptiste Camps (Univ. Paris-Sorbonne).
+Les développements présentés ici ont été entrepris dans le cadre de la thèse de doctorat de Jean-Baptiste Camps (Univ. Paris-Sorbonne)\[1\], et ont été poursuivis collaborativement, en bénéficiant des financements des projets,
+
+- LAKME (*Linguistically Annotated Corpora Using Machine Learning Techniques*, ENS/EPHE/ENC | PSL; financement PSL, 2016-2018) 
+- OMÉLiE (*Outils et méthodes pour l'édition linguistique enrichie*; ENC/ENS; financements Scripta-PSL et DIM «Sciences du texte et connaissances nouvelles»).
+
+
+\[1\]: Jean-Baptiste Camps,  _La Chanson d’Otinel: édition complète du corpus manuscrit et prolégomènes à l’édition critique_, thèse de doct., dir. Dominique Boutet, Univ. Paris-Sorbonne, 2016.
+
+***
 
 Les textes médiévaux sont du domaine public.
 <p>
@@ -30,8 +38,5 @@ Le reste est mis à disposition selon une licence Creative Commons Attribution -
 
 Citer ce corpus / Cite this corpus:
 
-_Geste: un corpus de chansons de geste_, dir. Jean-Baptiste Camps, avec la collab. d'Elena Albarran, Alice Cochet & Lucence Ing, Paris, 2016, <a href="http://github.com/Jean-Baptiste-Camps/Geste">http://github.com/Jean-Baptiste-Camps/Geste</a>.
-
-
-
+_Geste: un corpus de chansons de geste_, dir. Jean-Baptiste Camps, avec la collab. d'Elena Albarran, Alice Cochet & Lucence Ing, Paris, 2016-…, <a href="http://github.com/Jean-Baptiste-Camps/Geste">http://github.com/Jean-Baptiste-Camps/Geste</a>.
 
