@@ -36,7 +36,7 @@ Le reste est mis à disposition selon une licence Creative Commons Attribution -
 
 ***
 
-Citer ce corpus / Cite this corpus:
+## Citer ce corpus / Cite this corpus:
 
 _Geste: un corpus de chansons de geste_, dir. Jean-Baptiste Camps, avec la collab. d'Elena Albarran, Alice Cochet & Lucence Ing, Paris, 2016-…, <a href="http://github.com/Jean-Baptiste-Camps/Geste">http://github.com/Jean-Baptiste-Camps/Geste</a>.
 
