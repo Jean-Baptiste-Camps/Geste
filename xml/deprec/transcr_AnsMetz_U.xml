@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/jbc/Data/F/LAKME/02_geste/Geste/odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- TODO:
+- encodage lettrines;
+- résolution des abréviations;
+- annotation linguistique;
+- etc.
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_AnsMetz_U" xml:lang="fr" type="transcr" corresp="jns11089">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Anseïs de Metz</title>
+                <title type="sub">Transcription allographétique d'extraits du manuscrit de la
+                    bibliothèque vaticane (Urb. lat. 375)</title>
+                <editor><persName xml:id="JBC">Jean-Baptiste Camps</persName></editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc xml:id="U">
+                    <msIdentifier>
+                        <country>Cité du Vatican</country>
+                        <settlement>Cité du Vatican</settlement>
+                        <institution>Biblioteca apostolica vaticana</institution>
+                        <repository>Biblioteca apostolica vaticana</repository>
+                        <collection>Urb.lat.</collection>
+                        <idno>375</idno>
+                    </msIdentifier>
+                    <head></head>
+                    <history>
+                        <origin>
+                            <origPlace cert="unknown" resp="#JBC">inc.</origPlace>
+                            <origDate cert="unknown" resp="#JBC">XIIIe s.</origDate>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origPlace cert="unknown" resp="#DEAF" type="lieuComposition">flandr.</origPlace>
+                <origDate cert="unknown" resp="#DEAF" notBefore="1201" notAfter="1233" type="dateComposition">1ert. 13es</origDate>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">inc.</origPlace>
+                <origDate cert="unknown" resp="#JBC" notBefore="1201" notAfter="1300" type="dateManuscrit">13es</origDate>
+            </creation>
+            <langUsage>
+                <p></p>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#JBC" from="201903" to="201904">Transcription initiale du manuscrit et création du fichier</change>
+        </revisionDesc>
+    </teiHeader>
+    	<facsimile xml:id='facs_1'>
+		<surface ulx='0' uly='0' lrx='1384' lry='2174' corresp='Urb.lat.375_0025_fa_0009r_m.jpg'>
+			<graphic url='Urb.lat.375_0025_fa_0009r_m.jpg' width='1384px' height='2174px'/>
+			<zone ulx='143' uly='152' lrx='619' lry='1670' rendition='TextRegion' xml:id='facs_1_region_1551368699131_110'>
+				<zone ulx='164' uly='201' lrx='519' lry='235' rendition='Line' xml:id='facs_1_region_1551368699131_110l1'/>
+				<zone ulx='168' uly='225' lrx='505' lry='266' rendition='Line' xml:id='facs_1_region_1551368699131_110l3'/>
+				<zone ulx='158' uly='253' lrx='547' lry='290' rendition='Line' xml:id='facs_1_region_1551368699131_110l4'/>
+				<zone ulx='163' uly='282' lrx='542' lry='318' rendition='Line' xml:id='facs_1_region_1551368699131_110l5'/>
+				<zone ulx='165' uly='312' lrx='540' lry='349' rendition='Line' xml:id='facs_1_region_1551368699131_110l6'/>
+				<zone ulx='161' uly='338' lrx='618' lry='375' rendition='Line' xml:id='facs_1_region_1551368699131_110l7'/>
+				<zone ulx='165' uly='367' lrx='564' lry='407' rendition='Line' xml:id='facs_1_region_1551368699131_110l8'/>
+				<zone ulx='160' uly='394' lrx='504' lry='436' rendition='Line' xml:id='facs_1_region_1551368699131_110l9'/>
+				<zone ulx='170' uly='425' lrx='510' lry='463' rendition='Line' xml:id='facs_1_region_1551368699131_110l10'/>
+				<zone ulx='167' uly='451' lrx='504' lry='490' rendition='Line' xml:id='facs_1_region_1551368699131_110l11'/>
+				<zone ulx='159' uly='478' lrx='528' lry='515' rendition='Line' xml:id='facs_1_region_1551368699131_110l12'/>
+				<zone ulx='159' uly='506' lrx='536' lry='542' rendition='Line' xml:id='facs_1_region_1551368699131_110l13'/>
+				<zone ulx='163' uly='533' lrx='530' lry='569' rendition='Line' xml:id='facs_1_region_1551368699131_110l14'/>
+				<zone ulx='164' uly='562' lrx='533' lry='598' rendition='Line' xml:id='facs_1_region_1551368699131_110l15'/>
+				<zone ulx='159' uly='593' lrx='610' lry='628' rendition='Line' xml:id='facs_1_region_1551368699131_110l16'/>
+				<zone ulx='155' uly='622' lrx='560' lry='657' rendition='Line' xml:id='facs_1_region_1551368699131_110l17'/>
+				<zone ulx='158' uly='650' lrx='568' lry='688' rendition='Line' xml:id='facs_1_region_1551368699131_110l18'/>
+				<zone ulx='150' uly='675' lrx='610' lry='716' rendition='Line' xml:id='facs_1_region_1551368699131_110l19'/>
+				<zone ulx='160' uly='706' lrx='552' lry='743' rendition='Line' xml:id='facs_1_region_1551368699131_110l20'/>
+				<zone ulx='144' uly='736' lrx='564' lry='773' rendition='Line' xml:id='facs_1_region_1551368699131_110l21'/>
+				<zone ulx='163' uly='765' lrx='593' lry='801' rendition='Line' xml:id='facs_1_region_1551368699131_110l22'/>
+				<zone ulx='158' uly='795' lrx='562' lry='830' rendition='Line' xml:id='facs_1_region_1551368699131_110l23'/>
+				<zone ulx='156' uly='820' lrx='570' lry='857' rendition='Line' xml:id='facs_1_region_1551368699131_110l24'/>
+				<zone ulx='149' uly='852' lrx='484' lry='886' rendition='Line' xml:id='facs_1_region_1551368699131_110l25'/>
+				<zone ulx='155' uly='884' lrx='552' lry='916' rendition='Line' xml:id='facs_1_region_1551368699131_110l26'/>
+				<zone ulx='159' uly='915' lrx='540' lry='947' rendition='Line' xml:id='facs_1_region_1551368699131_110l27'/>
+				<zone ulx='158' uly='946' lrx='492' lry='980' rendition='Line' xml:id='facs_1_region_1551368699131_110l28'/>
+				<zone ulx='159' uly='973' lrx='590' lry='1006' rendition='Line' xml:id='facs_1_region_1551368699131_110l29'/>
+				<zone ulx='153' uly='1005' lrx='472' lry='1036' rendition='Line' xml:id='facs_1_region_1551368699131_110l30'/>
+				<zone ulx='153' uly='1037' lrx='573' lry='1070' rendition='Line' xml:id='facs_1_region_1551368699131_110l31'/>
+				<zone ulx='159' uly='1063' lrx='548' lry='1100' rendition='Line' xml:id='facs_1_region_1551368699131_110l32'/>
+				<zone ulx='145' uly='1096' lrx='611' lry='1130' rendition='Line' xml:id='facs_1_region_1551368699131_110l33'/>
+				<zone ulx='157' uly='1129' lrx='578' lry='1164' rendition='Line' xml:id='facs_1_region_1551368699131_110l34'/>
+				<zone ulx='140' uly='1158' lrx='211' lry='1260' rendition='Line' xml:id='facs_1_line_1551959506260_515'/>
+				<zone ulx='212' uly='1168' lrx='613' lry='1202' rendition='Line' xml:id='facs_1_region_1551368699131_110l35'/>
+				<zone ulx='220' uly='1198' lrx='576' lry='1230' rendition='Line' xml:id='facs_1_region_1551368699131_110l36'/>
+				<zone ulx='223' uly='1228' lrx='548' lry='1261' rendition='Line' xml:id='facs_1_region_1551368699131_110l37'/>
+				<zone ulx='152' uly='1263' lrx='556' lry='1296' rendition='Line' xml:id='facs_1_region_1551368699131_110l38'/>
+				<zone ulx='150' uly='1291' lrx='571' lry='1328' rendition='Line' xml:id='facs_1_region_1551368699131_110l39'/>
+				<zone ulx='158' uly='1325' lrx='584' lry='1356' rendition='Line' xml:id='facs_1_region_1551368699131_110l40'/>
+				<zone ulx='150' uly='1350' lrx='564' lry='1389' rendition='Line' xml:id='facs_1_region_1551368699131_110l41'/>
+				<zone ulx='148' uly='1384' lrx='586' lry='1421' rendition='Line' xml:id='facs_1_region_1551368699131_110l42'/>
+				<zone ulx='162' uly='1407' lrx='526' lry='1452' rendition='Line' xml:id='facs_1_region_1551368699131_110l43'/>
+				<zone ulx='146' uly='1447' lrx='588' lry='1484' rendition='Line' xml:id='facs_1_region_1551368699131_110l45'/>
+				<zone ulx='153' uly='1482' lrx='551' lry='1516' rendition='Line' xml:id='facs_1_region_1551368699131_110l46'/>
+				<zone ulx='152' uly='1513' lrx='566' lry='1550' rendition='Line' xml:id='facs_1_region_1551368699131_110l47'/>
+				<zone ulx='153' uly='1545' lrx='559' lry='1584' rendition='Line' xml:id='facs_1_region_1551368699131_110l48'/>
+				<zone ulx='158' uly='1572' lrx='517' lry='1613' rendition='Line' xml:id='facs_1_region_1551368699131_110l49'/>
+				<zone ulx='166' uly='1603' lrx='583' lry='1640' rendition='Line' xml:id='facs_1_region_1551368699131_110l50'/>
+			</zone>
+			<zone ulx='624' uly='175' lrx='1116' lry='1634' rendition='TextRegion' xml:id='facs_1_region_1551368712652_113'>
+				<zone ulx='633' uly='200' lrx='962' lry='234' rendition='Line' xml:id='facs_1_region_1551368712652_113l1'/>
+				<zone ulx='644' uly='226' lrx='986' lry='260' rendition='Line' xml:id='facs_1_region_1551368712652_113l2'/>
+				<zone ulx='648' uly='253' lrx='1052' lry='287' rendition='Line' xml:id='facs_1_region_1551368712652_113l3'/>
+				<zone ulx='635' uly='283' lrx='1051' lry='318' rendition='Line' xml:id='facs_1_region_1551368712652_113l4'/>
+				<zone ulx='635' uly='312' lrx='1065' lry='347' rendition='Line' xml:id='facs_1_region_1551368712652_113l6'/>
+				<zone ulx='640' uly='340' lrx='1061' lry='375' rendition='Line' xml:id='facs_1_region_1551368712652_113l7'/>
+				<zone ulx='641' uly='367' lrx='1019' lry='402' rendition='Line' xml:id='facs_1_region_1551368712652_113l8'/>
+				<zone ulx='632' uly='396' lrx='1030' lry='433' rendition='Line' xml:id='facs_1_region_1551368712652_113l9'/>
+				<zone ulx='640' uly='424' lrx='1013' lry='458' rendition='Line' xml:id='facs_1_region_1551368712652_113l10'/>
+				<zone ulx='647' uly='449' lrx='1054' lry='488' rendition='Line' xml:id='facs_1_region_1551368712652_113l11'/>
+				<zone ulx='625' uly='475' lrx='707' lry='558' rendition='Line' xml:id='facs_1_line_1551960379684_695'/>
+				<zone ulx='706' uly='479' lrx='993' lry='513' rendition='Line' xml:id='facs_1_region_1551368712652_113l12'/>
+				<zone ulx='702' uly='502' lrx='1062' lry='539' rendition='Line' xml:id='facs_1_region_1551368712652_113l13'/>
+				<zone ulx='711' uly='534' lrx='1108' lry='571' rendition='Line' xml:id='facs_1_line_1551960357982_685'/>
+				<zone ulx='637' uly='561' lrx='1047' lry='595' rendition='Line' xml:id='facs_1_region_1551368712652_113l16'/>
+				<zone ulx='632' uly='588' lrx='1022' lry='624' rendition='Line' xml:id='facs_1_region_1551368712652_113l17'/>
+				<zone ulx='641' uly='619' lrx='1029' lry='656' rendition='Line' xml:id='facs_1_region_1551368712652_113l18'/>
+				<zone ulx='641' uly='649' lrx='960' lry='683' rendition='Line' xml:id='facs_1_region_1551368712652_113l21'/>
+				<zone ulx='626' uly='677' lrx='1052' lry='715' rendition='Line' xml:id='facs_1_region_1551368712652_113l22'/>
+				<zone ulx='628' uly='708' lrx='972' lry='740' rendition='Line' xml:id='facs_1_region_1551368712652_113l23'/>
+				<zone ulx='633' uly='738' lrx='1025' lry='772' rendition='Line' xml:id='facs_1_region_1551368712652_113l24'/>
+				<zone ulx='639' uly='765' lrx='1019' lry='800' rendition='Line' xml:id='facs_1_region_1551368712652_113l25'/>
+				<zone ulx='634' uly='794' lrx='1096' lry='829' rendition='Line' xml:id='facs_1_region_1551368712652_113l27'/>
+				<zone ulx='643' uly='821' lrx='1057' lry='856' rendition='Line' xml:id='facs_1_region_1551368712652_113l28'/>
+				<zone ulx='639' uly='851' lrx='1038' lry='884' rendition='Line' xml:id='facs_1_region_1551368712652_113l29'/>
+				<zone ulx='635' uly='881' lrx='1006' lry='914' rendition='Line' xml:id='facs_1_region_1551368712652_113l30'/>
+				<zone ulx='639' uly='911' lrx='1011' lry='946' rendition='Line' xml:id='facs_1_region_1551368712652_113l31'/>
+				<zone ulx='648' uly='937' lrx='997' lry='978' rendition='Line' xml:id='facs_1_region_1551368712652_113l32'/>
+				<zone ulx='644' uly='970' lrx='909' lry='1004' rendition='Line' xml:id='facs_1_region_1551368712652_113l33'/>
+				<zone ulx='642' uly='1001' lrx='1089' lry='1036' rendition='Line' xml:id='facs_1_region_1551368712652_113l34'/>
+				<zone ulx='644' uly='1036' lrx='1031' lry='1070' rendition='Line' xml:id='facs_1_region_1551368712652_113l35'/>
+				<zone ulx='645' uly='1064' lrx='1032' lry='1096' rendition='Line' xml:id='facs_1_region_1551368712652_113l36'/>
+				<zone ulx='637' uly='1095' lrx='1031' lry='1128' rendition='Line' xml:id='facs_1_region_1551368712652_113l37'/>
+				<zone ulx='633' uly='1128' lrx='1027' lry='1164' rendition='Line' xml:id='facs_1_region_1551368712652_113l39'/>
+				<zone ulx='637' uly='1164' lrx='1050' lry='1200' rendition='Line' xml:id='facs_1_region_1551368712652_113l40'/>
+				<zone ulx='643' uly='1199' lrx='986' lry='1231' rendition='Line' xml:id='facs_1_region_1551368712652_113l41'/>
+				<zone ulx='641' uly='1232' lrx='1068' lry='1264' rendition='Line' xml:id='facs_1_region_1551368712652_113l42'/>
+				<zone ulx='640' uly='1264' lrx='956' lry='1295' rendition='Line' xml:id='facs_1_region_1551368712652_113l43'/>
+				<zone ulx='630' uly='1295' lrx='1050' lry='1330' rendition='Line' xml:id='facs_1_region_1551368712652_113l44'/>
+				<zone ulx='637' uly='1323' lrx='1064' lry='1360' rendition='Line' xml:id='facs_1_region_1551368712652_113l45'/>
+				<zone ulx='617' uly='1353' lrx='701' lry='1455' rendition='Line' xml:id='facs_1_line_1551961404208_920'/>
+				<zone ulx='704' uly='1353' lrx='977' lry='1386' rendition='Line' xml:id='facs_1_region_1551368712652_113l46'/>
+				<zone ulx='703' uly='1390' lrx='1094' lry='1419' rendition='Line' xml:id='facs_1_line_1551961366589_903'/>
+				<zone ulx='703' uly='1418' lrx='1050' lry='1447' rendition='Line' xml:id='facs_1_line_1551961373823_908'/>
+				<zone ulx='626' uly='1443' lrx='985' lry='1482' rendition='Line' xml:id='facs_1_region_1551368712652_113l50'/>
+				<zone ulx='637' uly='1480' lrx='1072' lry='1516' rendition='Line' xml:id='facs_1_region_1551368712652_113l51'/>
+				<zone ulx='625' uly='1511' lrx='978' lry='1545' rendition='Line' xml:id='facs_1_region_1551368712652_113l52'/>
+				<zone ulx='632' uly='1544' lrx='1025' lry='1576' rendition='Line' xml:id='facs_1_region_1551368712652_113l53'/>
+				<zone ulx='634' uly='1570' lrx='1042' lry='1607' rendition='Line' xml:id='facs_1_region_1551368712652_113l54'/>
+				<zone ulx='633' uly='1603' lrx='1025' lry='1637' rendition='Line' xml:id='facs_1_region_1551368712652_113l55'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_2'>
+		<surface ulx='0' uly='0' lrx='1384' lry='2174' corresp='Urb.lat.375_0041_fa_0017r_m.jpg'>
+			<graphic url='Urb.lat.375_0041_fa_0017r_m.jpg' width='1384px' height='2174px'/>
+			<zone ulx='141' uly='153' lrx='612' lry='1680' rendition='TextRegion' xml:id='facs_2_region_1552392490853_211'>
+				<zone ulx='158' uly='213' lrx='504' lry='249' rendition='Line' xml:id='facs_2_region_1552392490853_211l1'/>
+				<zone ulx='155' uly='239' lrx='494' lry='273' rendition='Line' xml:id='facs_2_region_1552392490853_211l2'/>
+				<zone ulx='156' uly='264' lrx='440' lry='301' rendition='Line' xml:id='facs_2_region_1552392490853_211l3'/>
+				<zone ulx='160' uly='291' lrx='496' lry='328' rendition='Line' xml:id='facs_2_region_1552392490853_211l4'/>
+				<zone ulx='151' uly='323' lrx='527' lry='360' rendition='Line' xml:id='facs_2_region_1552392490853_211l5'/>
+				<zone ulx='157' uly='352' lrx='519' lry='389' rendition='Line' xml:id='facs_2_region_1552392490853_211l6'/>
+				<zone ulx='162' uly='376' lrx='476' lry='418' rendition='Line' xml:id='facs_2_region_1552392490853_211l7'/>
+				<zone ulx='155' uly='405' lrx='497' lry='446' rendition='Line' xml:id='facs_2_region_1552392490853_211l8'/>
+				<zone ulx='168' uly='437' lrx='483' lry='473' rendition='Line' xml:id='facs_2_region_1552392490853_211l9'/>
+				<zone ulx='163' uly='465' lrx='519' lry='507' rendition='Line' xml:id='facs_2_region_1552392490853_211l10'/>
+				<zone ulx='160' uly='493' lrx='561' lry='533' rendition='Line' xml:id='facs_2_region_1552392490853_211l11'/>
+				<zone ulx='159' uly='519' lrx='501' lry='554' rendition='Line' xml:id='facs_2_region_1552392490853_211l12'/>
+				<zone ulx='151' uly='552' lrx='520' lry='577' rendition='Line' xml:id='facs_2_line_1552397360280_316'/>
+				<zone ulx='158' uly='577' lrx='525' lry='611' rendition='Line' xml:id='facs_2_region_1552392490853_211l14'/>
+				<zone ulx='160' uly='609' lrx='493' lry='643' rendition='Line' xml:id='facs_2_region_1552392490853_211l15'/>
+				<zone ulx='154' uly='636' lrx='478' lry='673' rendition='Line' xml:id='facs_2_region_1552392490853_211l16'/>
+				<zone ulx='153' uly='667' lrx='556' lry='700' rendition='Line' xml:id='facs_2_region_1552392490853_211l17'/>
+				<zone ulx='153' uly='694' lrx='553' lry='729' rendition='Line' xml:id='facs_2_region_1552392490853_211l18'/>
+				<zone ulx='154' uly='723' lrx='554' lry='759' rendition='Line' xml:id='facs_2_region_1552392490853_211l19'/>
+				<zone ulx='153' uly='755' lrx='601' lry='786' rendition='Line' xml:id='facs_2_region_1552392490853_211l20'/>
+				<zone ulx='153' uly='782' lrx='560' lry='817' rendition='Line' xml:id='facs_2_region_1552392490853_211l21'/>
+				<zone ulx='159' uly='812' lrx='554' lry='846' rendition='Line' xml:id='facs_2_region_1552392490853_211l23'/>
+				<zone ulx='153' uly='844' lrx='543' lry='881' rendition='Line' xml:id='facs_2_region_1552392490853_211l24'/>
+				<zone ulx='153' uly='869' lrx='535' lry='904' rendition='Line' xml:id='facs_2_region_1552392490853_211l25'/>
+				<zone ulx='151' uly='898' lrx='563' lry='932' rendition='Line' xml:id='facs_2_region_1552392490853_211l27'/>
+				<zone ulx='152' uly='931' lrx='532' lry='966' rendition='Line' xml:id='facs_2_region_1552392490853_211l29'/>
+				<zone ulx='155' uly='960' lrx='576' lry='992' rendition='Line' xml:id='facs_2_region_1552392490853_211l30'/>
+				<zone ulx='155' uly='986' lrx='520' lry='1020' rendition='Line' xml:id='facs_2_region_1552392490853_211l31'/>
+				<zone ulx='150' uly='1014' lrx='514' lry='1045' rendition='Line' xml:id='facs_2_region_1552392490853_211l32'/>
+				<zone ulx='153' uly='1048' lrx='501' lry='1088' rendition='Line' xml:id='facs_2_region_1552392490853_211l33'/>
+				<zone ulx='143' uly='1079' lrx='213' lry='1172' rendition='Line' xml:id='facs_2_line_1552398955983_643'/>
+				<zone ulx='217' uly='1080' lrx='556' lry='1117' rendition='Line' xml:id='facs_2_region_1552392490853_211l34'/>
+				<zone ulx='218' uly='1112' lrx='573' lry='1145' rendition='Line' xml:id='facs_2_line_1552398910871_621'/>
+				<zone ulx='211' uly='1144' lrx='574' lry='1183' rendition='Line' xml:id='facs_2_region_1552392490853_211l36'/>
+				<zone ulx='146' uly='1179' lrx='542' lry='1215' rendition='Line' xml:id='facs_2_region_1552392490853_211l37'/>
+				<zone ulx='147' uly='1213' lrx='556' lry='1247' rendition='Line' xml:id='facs_2_region_1552392490853_211l38'/>
+				<zone ulx='150' uly='1253' lrx='582' lry='1289' rendition='Line' xml:id='facs_2_region_1552392490853_211l39'/>
+				<zone ulx='163' uly='1288' lrx='562' lry='1321' rendition='Line' xml:id='facs_2_region_1552392490853_211l40'/>
+				<zone ulx='159' uly='1316' lrx='548' lry='1355' rendition='Line' xml:id='facs_2_region_1552392490853_211l41'/>
+				<zone ulx='156' uly='1352' lrx='461' lry='1382' rendition='Line' xml:id='facs_2_line_1552400857347_810'/>
+				<zone ulx='160' uly='1377' lrx='570' lry='1415' rendition='Line' xml:id='facs_2_region_1552392490853_211l43'/>
+				<zone ulx='159' uly='1411' lrx='544' lry='1442' rendition='Line' xml:id='facs_2_region_1552392490853_211l44'/>
+				<zone ulx='165' uly='1440' lrx='601' lry='1480' rendition='Line' xml:id='facs_2_region_1552392490853_211l45'/>
+				<zone ulx='161' uly='1469' lrx='587' lry='1511' rendition='Line' xml:id='facs_2_region_1552392490853_211l46'/>
+				<zone ulx='159' uly='1500' lrx='570' lry='1538' rendition='Line' xml:id='facs_2_region_1552392490853_211l48'/>
+				<zone ulx='170' uly='1533' lrx='565' lry='1570' rendition='Line' xml:id='facs_2_region_1552392490853_211l49'/>
+				<zone ulx='164' uly='1567' lrx='580' lry='1600' rendition='Line' xml:id='facs_2_region_1552392490853_211l50'/>
+				<zone ulx='162' uly='1599' lrx='565' lry='1632' rendition='Line' xml:id='facs_2_region_1552392490853_211l51'/>
+				<zone ulx='162' uly='1628' lrx='559' lry='1664' rendition='Line' xml:id='facs_2_region_1552392490853_211l52'/>
+			</zone>
+			<zone ulx='618' uly='190' lrx='1087' lry='1730' rendition='TextRegion' xml:id='facs_2_region_1552392501222_214'>
+				<zone ulx='636' uly='208' lrx='1027' lry='250' rendition='Line' xml:id='facs_2_region_1552392501222_214l1'/>
+				<zone ulx='636' uly='236' lrx='1023' lry='280' rendition='Line' xml:id='facs_2_region_1552392501222_214l2'/>
+				<zone ulx='632' uly='263' lrx='931' lry='304' rendition='Line' xml:id='facs_2_region_1552392501222_214l4'/>
+				<zone ulx='635' uly='290' lrx='1070' lry='332' rendition='Line' xml:id='facs_2_region_1552392501222_214l5'/>
+				<zone ulx='639' uly='321' lrx='1052' lry='366' rendition='Line' xml:id='facs_2_region_1552392501222_214l6'/>
+				<zone ulx='640' uly='351' lrx='1062' lry='395' rendition='Line' xml:id='facs_2_region_1552392501222_214l7'/>
+				<zone ulx='642' uly='376' lrx='1009' lry='426' rendition='Line' xml:id='facs_2_region_1552392501222_214l8'/>
+				<zone ulx='640' uly='405' lrx='954' lry='447' rendition='Line' xml:id='facs_2_region_1552392501222_214l9'/>
+				<zone ulx='637' uly='435' lrx='1044' lry='481' rendition='Line' xml:id='facs_2_region_1552392501222_214l10'/>
+				<zone ulx='637' uly='463' lrx='1073' lry='509' rendition='Line' xml:id='facs_2_region_1552392501222_214l12'/>
+				<zone ulx='629' uly='490' lrx='1030' lry='533' rendition='Line' xml:id='facs_2_region_1552392501222_214l13'/>
+				<zone ulx='637' uly='517' lrx='1067' lry='566' rendition='Line' xml:id='facs_2_region_1552392501222_214l14'/>
+				<zone ulx='634' uly='547' lrx='1036' lry='590' rendition='Line' xml:id='facs_2_region_1552392501222_214l15'/>
+				<zone ulx='640' uly='580' lrx='951' lry='617' rendition='Line' xml:id='facs_2_region_1552392501222_214l16'/>
+				<zone ulx='642' uly='611' lrx='989' lry='652' rendition='Line' xml:id='facs_2_region_1552392501222_214l17'/>
+				<zone ulx='638' uly='639' lrx='1013' lry='676' rendition='Line' xml:id='facs_2_region_1552392501222_214l19'/>
+				<zone ulx='641' uly='663' lrx='979' lry='701' rendition='Line' xml:id='facs_2_line_1552402690116_1209'/>
+				<zone ulx='642' uly='691' lrx='1050' lry='733' rendition='Line' xml:id='facs_2_region_1552392501222_214l22'/>
+				<zone ulx='645' uly='722' lrx='972' lry='765' rendition='Line' xml:id='facs_2_region_1552392501222_214l23'/>
+				<zone ulx='642' uly='750' lrx='1092' lry='793' rendition='Line' xml:id='facs_2_region_1552392501222_214l24'/>
+				<zone ulx='641' uly='782' lrx='986' lry='817' rendition='Line' xml:id='facs_2_region_1552392501222_214l25'/>
+				<zone ulx='642' uly='811' lrx='975' lry='848' rendition='Line' xml:id='facs_2_region_1552392501222_214l26'/>
+				<zone ulx='641' uly='839' lrx='1026' lry='880' rendition='Line' xml:id='facs_2_region_1552392501222_214l27'/>
+				<zone ulx='637' uly='868' lrx='1043' lry='910' rendition='Line' xml:id='facs_2_region_1552392501222_214l29'/>
+				<zone ulx='637' uly='898' lrx='955' lry='932' rendition='Line' xml:id='facs_2_region_1552392501222_214l30'/>
+				<zone ulx='636' uly='930' lrx='1028' lry='967' rendition='Line' xml:id='facs_2_region_1552392501222_214l33'/>
+				<zone ulx='642' uly='960' lrx='1011' lry='996' rendition='Line' xml:id='facs_2_region_1552392501222_214l34'/>
+				<zone ulx='639' uly='984' lrx='1028' lry='1018' rendition='Line' xml:id='facs_2_region_1552392501222_214l35'/>
+				<zone ulx='647' uly='1014' lrx='1076' lry='1048' rendition='Line' xml:id='facs_2_region_1552392501222_214l36'/>
+				<zone ulx='636' uly='1047' lrx='947' lry='1080' rendition='Line' xml:id='facs_2_region_1552392501222_214l37'/>
+				<zone ulx='641' uly='1080' lrx='991' lry='1112' rendition='Line' xml:id='facs_2_region_1552392501222_214l38'/>
+				<zone ulx='639' uly='1112' lrx='1028' lry='1149' rendition='Line' xml:id='facs_2_region_1552392501222_214l39'/>
+				<zone ulx='644' uly='1149' lrx='992' lry='1184' rendition='Line' xml:id='facs_2_region_1552392501222_214l40'/>
+				<zone ulx='643' uly='1179' lrx='1024' lry='1215' rendition='Line' xml:id='facs_2_region_1552392501222_214l41'/>
+				<zone ulx='646' uly='1211' lrx='945' lry='1244' rendition='Line' xml:id='facs_2_region_1552392501222_214l42'/>
+				<zone ulx='648' uly='1246' lrx='1012' lry='1287' rendition='Line' xml:id='facs_2_region_1552392501222_214l43'/>
+				<zone ulx='641' uly='1283' lrx='1060' lry='1320' rendition='Line' xml:id='facs_2_region_1552392501222_214l45'/>
+				<zone ulx='618' uly='1322' lrx='705' lry='1412' rendition='Line' xml:id='facs_2_line_1552402301491_996'/>
+				<zone ulx='698' uly='1319' lrx='1058' lry='1351' rendition='Line' xml:id='facs_2_region_1552392501222_214l46'/>
+				<zone ulx='716' uly='1348' lrx='1068' lry='1385' rendition='Line' xml:id='facs_2_region_1552392501222_214l47'/>
+				<zone ulx='712' uly='1378' lrx='1043' lry='1409' rendition='Line' xml:id='facs_2_line_1552402285947_989'/>
+				<zone ulx='639' uly='1410' lrx='1035' lry='1441' rendition='Line' xml:id='facs_2_region_1552392501222_214l49'/>
+				<zone ulx='647' uly='1439' lrx='987' lry='1474' rendition='Line' xml:id='facs_2_line_1552402366964_1026'/>
+				<zone ulx='650' uly='1473' lrx='1021' lry='1502' rendition='Line' xml:id='facs_2_line_1552402409204_1052'/>
+				<zone ulx='644' uly='1504' lrx='983' lry='1539' rendition='Line' xml:id='facs_2_line_1552402426207_1064'/>
+				<zone ulx='651' uly='1535' lrx='1013' lry='1563' rendition='Line' xml:id='facs_2_line_1552402431677_1069'/>
+				<zone ulx='644' uly='1567' lrx='1055' lry='1598' rendition='Line' xml:id='facs_2_line_1552402455534_1081'/>
+				<zone ulx='640' uly='1599' lrx='1001' lry='1633' rendition='Line' xml:id='facs_2_line_1552402461503_1086'/>
+				<zone ulx='650' uly='1634' lrx='1077' lry='1668' rendition='Line' xml:id='facs_2_region_1552392501222_214l56'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_3'>
+		<surface ulx='0' uly='0' lrx='1384' lry='2174' corresp='Urb.lat.375_0057_fa_0025r_m.jpg'>
+			<graphic url='Urb.lat.375_0057_fa_0025r_m.jpg' width='1384px' height='2174px'/>
+			<zone ulx='115' uly='182' lrx='625' lry='1657' rendition='TextRegion' xml:id='facs_3_region_1552406324368_1741'>
+				<zone ulx='143' uly='200' lrx='484' lry='237' rendition='Line' xml:id='facs_3_region_1552406324368_1741l1'/>
+				<zone ulx='147' uly='225' lrx='495' lry='266' rendition='Line' xml:id='facs_3_region_1552406324368_1741l2'/>
+				<zone ulx='149' uly='252' lrx='586' lry='293' rendition='Line' xml:id='facs_3_region_1552406324368_1741l3'/>
+				<zone ulx='145' uly='283' lrx='576' lry='325' rendition='Line' xml:id='facs_3_region_1552406324368_1741l4'/>
+				<zone ulx='148' uly='315' lrx='536' lry='355' rendition='Line' xml:id='facs_3_region_1552406324368_1741l5'/>
+				<zone ulx='146' uly='344' lrx='538' lry='382' rendition='Line' xml:id='facs_3_region_1552406324368_1741l6'/>
+				<zone ulx='141' uly='374' lrx='524' lry='409' rendition='Line' xml:id='facs_3_region_1552406324368_1741l7'/>
+				<zone ulx='141' uly='400' lrx='530' lry='438' rendition='Line' xml:id='facs_3_region_1552406324368_1741l8'/>
+				<zone ulx='148' uly='429' lrx='568' lry='469' rendition='Line' xml:id='facs_3_region_1552406324368_1741l9'/>
+				<zone ulx='148' uly='456' lrx='540' lry='494' rendition='Line' xml:id='facs_3_region_1552406324368_1741l10'/>
+				<zone ulx='147' uly='485' lrx='596' lry='522' rendition='Line' xml:id='facs_3_region_1552406324368_1741l11'/>
+				<zone ulx='151' uly='514' lrx='569' lry='549' rendition='Line' xml:id='facs_3_region_1552406324368_1741l12'/>
+				<zone ulx='149' uly='543' lrx='497' lry='581' rendition='Line' xml:id='facs_3_region_1552406324368_1741l13'/>
+				<zone ulx='144' uly='562' lrx='598' lry='614' rendition='Line' xml:id='facs_3_region_1552406324368_1741l14'/>
+				<zone ulx='152' uly='614' lrx='516' lry='650' rendition='Line' xml:id='facs_3_region_1552406324368_1741l15'/>
+				<zone ulx='142' uly='649' lrx='496' lry='681' rendition='Line' xml:id='facs_3_region_1552406324368_1741l16'/>
+				<zone ulx='145' uly='678' lrx='564' lry='709' rendition='Line' xml:id='facs_3_region_1552406324368_1741l17'/>
+				<zone ulx='142' uly='707' lrx='570' lry='740' rendition='Line' xml:id='facs_3_region_1552406324368_1741l18'/>
+				<zone ulx='146' uly='736' lrx='566' lry='770' rendition='Line' xml:id='facs_3_region_1552406324368_1741l19'/>
+				<zone ulx='143' uly='765' lrx='543' lry='799' rendition='Line' xml:id='facs_3_region_1552406324368_1741l20'/>
+				<zone ulx='140' uly='799' lrx='584' lry='831' rendition='Line' xml:id='facs_3_region_1552406324368_1741l21'/>
+				<zone ulx='143' uly='830' lrx='505' lry='863' rendition='Line' xml:id='facs_3_region_1552406324368_1741l22'/>
+				<zone ulx='141' uly='861' lrx='515' lry='894' rendition='Line' xml:id='facs_3_region_1552406324368_1741l23'/>
+				<zone ulx='152' uly='892' lrx='482' lry='926' rendition='Line' xml:id='facs_3_region_1552406324368_1741l24'/>
+				<zone ulx='150' uly='919' lrx='539' lry='952' rendition='Line' xml:id='facs_3_region_1552406324368_1741l25'/>
+				<zone ulx='147' uly='947' lrx='548' lry='982' rendition='Line' xml:id='facs_3_region_1552406324368_1741l27'/>
+				<zone ulx='156' uly='976' lrx='514' lry='1011' rendition='Line' xml:id='facs_3_region_1552406324368_1741l28'/>
+				<zone ulx='156' uly='1007' lrx='523' lry='1041' rendition='Line' xml:id='facs_3_region_1552406324368_1741l29'/>
+				<zone ulx='162' uly='1041' lrx='534' lry='1073' rendition='Line' xml:id='facs_3_region_1552406324368_1741l30'/>
+				<zone ulx='156' uly='1071' lrx='566' lry='1103' rendition='Line' xml:id='facs_3_region_1552406324368_1741l31'/>
+				<zone ulx='159' uly='1100' lrx='558' lry='1134' rendition='Line' xml:id='facs_3_region_1552406324368_1741l32'/>
+				<zone ulx='152' uly='1132' lrx='525' lry='1167' rendition='Line' xml:id='facs_3_region_1552406324368_1741l33'/>
+				<zone ulx='160' uly='1166' lrx='562' lry='1202' rendition='Line' xml:id='facs_3_region_1552406324368_1741l34'/>
+				<zone ulx='161' uly='1204' lrx='585' lry='1238' rendition='Line' xml:id='facs_3_region_1552406324368_1741l35'/>
+				<zone ulx='163' uly='1238' lrx='560' lry='1271' rendition='Line' xml:id='facs_3_region_1552406324368_1741l36'/>
+				<zone ulx='155' uly='1270' lrx='619' lry='1304' rendition='Line' xml:id='facs_3_region_1552406324368_1741l37'/>
+				<zone ulx='166' uly='1299' lrx='577' lry='1336' rendition='Line' xml:id='facs_3_region_1552406324368_1741l38'/>
+				<zone ulx='161' uly='1325' lrx='557' lry='1364' rendition='Line' xml:id='facs_3_region_1552406324368_1741l39'/>
+				<zone ulx='158' uly='1363' lrx='582' lry='1394' rendition='Line' xml:id='facs_3_region_1552406324368_1741l40'/>
+				<zone ulx='162' uly='1394' lrx='574' lry='1427' rendition='Line' xml:id='facs_3_region_1552406324368_1741l41'/>
+				<zone ulx='132' uly='1419' lrx='233' lry='1511' rendition='Line' xml:id='facs_3_line_1552406767094_1951'/>
+				<zone ulx='236' uly='1423' lrx='599' lry='1458' rendition='Line' xml:id='facs_3_region_1552406324368_1741l42'/>
+				<zone ulx='230' uly='1459' lrx='624' lry='1490' rendition='Line' xml:id='facs_3_line_1552406717070_1923'/>
+				<zone ulx='231' uly='1487' lrx='620' lry='1519' rendition='Line' xml:id='facs_3_region_1552406324368_1741l44'/>
+				<zone ulx='177' uly='1517' lrx='583' lry='1552' rendition='Line' xml:id='facs_3_line_1552406723761_1928'/>
+				<zone ulx='153' uly='1552' lrx='620' lry='1583' rendition='Line' xml:id='facs_3_region_1552406324368_1741l46'/>
+				<zone ulx='167' uly='1585' lrx='597' lry='1620' rendition='Line' xml:id='facs_3_region_1552406324368_1741l47'/>
+				<zone ulx='179' uly='1620' lrx='591' lry='1656' rendition='Line' xml:id='facs_3_region_1552406324368_1741l48'/>
+			</zone>
+			<zone ulx='624' uly='179' lrx='1094' lry='1661' rendition='TextRegion' xml:id='facs_3_region_1552406343610_1744'>
+				<zone ulx='626' uly='191' lrx='1022' lry='229' rendition='Line' xml:id='facs_3_region_1552406343610_1744l1'/>
+				<zone ulx='622' uly='221' lrx='1074' lry='254' rendition='Line' xml:id='facs_3_region_1552406343610_1744l2'/>
+				<zone ulx='630' uly='247' lrx='1036' lry='283' rendition='Line' xml:id='facs_3_region_1552406343610_1744l4'/>
+				<zone ulx='621' uly='280' lrx='1040' lry='313' rendition='Line' xml:id='facs_3_region_1552406343610_1744l5'/>
+				<zone ulx='624' uly='307' lrx='1007' lry='344' rendition='Line' xml:id='facs_3_region_1552406343610_1744l6'/>
+				<zone ulx='627' uly='339' lrx='1004' lry='372' rendition='Line' xml:id='facs_3_region_1552406343610_1744l7'/>
+				<zone ulx='627' uly='367' lrx='1010' lry='404' rendition='Line' xml:id='facs_3_region_1552406343610_1744l8'/>
+				<zone ulx='628' uly='393' lrx='1079' lry='429' rendition='Line' xml:id='facs_3_region_1552406343610_1744l9'/>
+				<zone ulx='623' uly='421' lrx='1019' lry='459' rendition='Line' xml:id='facs_3_region_1552406343610_1744l10'/>
+				<zone ulx='627' uly='453' lrx='1059' lry='489' rendition='Line' xml:id='facs_3_region_1552406343610_1744l11'/>
+				<zone ulx='629' uly='480' lrx='1043' lry='516' rendition='Line' xml:id='facs_3_region_1552406343610_1744l13'/>
+				<zone ulx='627' uly='507' lrx='980' lry='539' rendition='Line' xml:id='facs_3_region_1552406343610_1744l14'/>
+				<zone ulx='632' uly='536' lrx='1028' lry='570' rendition='Line' xml:id='facs_3_region_1552406343610_1744l16'/>
+				<zone ulx='631' uly='569' lrx='1047' lry='602' rendition='Line' xml:id='facs_3_region_1552406343610_1744l17'/>
+				<zone ulx='625' uly='614' lrx='1074' lry='646' rendition='Line' xml:id='facs_3_region_1552406343610_1744l18'/>
+				<zone ulx='621' uly='641' lrx='686' lry='735' rendition='Line' xml:id='facs_3_line_1552562777791_164'/>
+				<zone ulx='683' uly='642' lrx='1029' lry='679' rendition='Line' xml:id='facs_3_region_1552406343610_1744l19'/>
+				<zone ulx='688' uly='678' lrx='1079' lry='708' rendition='Line' xml:id='facs_3_line_1552562719730_142'/>
+				<zone ulx='687' uly='705' lrx='977' lry='738' rendition='Line' xml:id='facs_3_line_1552562739466_151'/>
+				<zone ulx='627' uly='735' lrx='985' lry='770' rendition='Line' xml:id='facs_3_region_1552406343610_1744l23'/>
+				<zone ulx='625' uly='766' lrx='1083' lry='800' rendition='Line' xml:id='facs_3_region_1552406343610_1744l24'/>
+				<zone ulx='630' uly='796' lrx='1032' lry='830' rendition='Line' xml:id='facs_3_region_1552406343610_1744l25'/>
+				<zone ulx='636' uly='827' lrx='1027' lry='860' rendition='Line' xml:id='facs_3_region_1552406343610_1744l26'/>
+				<zone ulx='631' uly='857' lrx='1043' lry='895' rendition='Line' xml:id='facs_3_region_1552406343610_1744l27'/>
+				<zone ulx='631' uly='888' lrx='1065' lry='922' rendition='Line' xml:id='facs_3_region_1552406343610_1744l29'/>
+				<zone ulx='631' uly='917' lrx='1031' lry='950' rendition='Line' xml:id='facs_3_region_1552406343610_1744l30'/>
+				<zone ulx='632' uly='948' lrx='1090' lry='981' rendition='Line' xml:id='facs_3_region_1552406343610_1744l31'/>
+				<zone ulx='630' uly='974' lrx='1053' lry='1007' rendition='Line' xml:id='facs_3_region_1552406343610_1744l32'/>
+				<zone ulx='633' uly='1005' lrx='1021' lry='1038' rendition='Line' xml:id='facs_3_region_1552406343610_1744l33'/>
+				<zone ulx='629' uly='1029' lrx='696' lry='1130' rendition='Line' xml:id='facs_3_line_1552563073444_294'/>
+				<zone ulx='699' uly='1043' lrx='1065' lry='1068' rendition='Line' xml:id='facs_3_line_1552563062145_288'/>
+				<zone ulx='699' uly='1067' lrx='1087' lry='1101' rendition='Line' xml:id='facs_3_line_1552562837554_203'/>
+				<zone ulx='699' uly='1102' lrx='1074' lry='1131' rendition='Line' xml:id='facs_3_line_1552562886531_218'/>
+				<zone ulx='630' uly='1134' lrx='1060' lry='1168' rendition='Line' xml:id='facs_3_region_1552406343610_1744l37'/>
+				<zone ulx='640' uly='1164' lrx='1082' lry='1202' rendition='Line' xml:id='facs_3_region_1552406343610_1744l38'/>
+				<zone ulx='634' uly='1189' lrx='1053' lry='1237' rendition='Line' xml:id='facs_3_region_1552406343610_1744l39'/>
+				<zone ulx='629' uly='1231' lrx='1037' lry='1268' rendition='Line' xml:id='facs_3_region_1552406343610_1744l40'/>
+				<zone ulx='644' uly='1265' lrx='1074' lry='1303' rendition='Line' xml:id='facs_3_region_1552406343610_1744l41'/>
+				<zone ulx='643' uly='1295' lrx='1056' lry='1334' rendition='Line' xml:id='facs_3_region_1552406343610_1744l42'/>
+				<zone ulx='649' uly='1325' lrx='1074' lry='1362' rendition='Line' xml:id='facs_3_region_1552406343610_1744l43'/>
+				<zone ulx='641' uly='1352' lrx='1060' lry='1389' rendition='Line' xml:id='facs_3_region_1552406343610_1744l44'/>
+				<zone ulx='641' uly='1386' lrx='1052' lry='1423' rendition='Line' xml:id='facs_3_region_1552406343610_1744l45'/>
+				<zone ulx='649' uly='1417' lrx='1048' lry='1456' rendition='Line' xml:id='facs_3_region_1552406343610_1744l47'/>
+				<zone ulx='643' uly='1442' lrx='1064' lry='1485' rendition='Line' xml:id='facs_3_region_1552406343610_1744l48'/>
+				<zone ulx='644' uly='1473' lrx='1057' lry='1517' rendition='Line' xml:id='facs_3_region_1552406343610_1744l49'/>
+				<zone ulx='647' uly='1507' lrx='1071' lry='1550' rendition='Line' xml:id='facs_3_region_1552406343610_1744l50'/>
+				<zone ulx='647' uly='1537' lrx='1077' lry='1581' rendition='Line' xml:id='facs_3_region_1552406343610_1744l51'/>
+				<zone ulx='653' uly='1575' lrx='1068' lry='1617' rendition='Line' xml:id='facs_3_region_1552406343610_1744l52'/>
+				<zone ulx='655' uly='1612' lrx='1056' lry='1653' rendition='Line' xml:id='facs_3_region_1552406343610_1744l53'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_4'>
+		<surface ulx='0' uly='0' lrx='1384' lry='2174' corresp='Urb.lat.375_0073_fa_0033r_m.jpg'>
+			<graphic url='Urb.lat.375_0073_fa_0033r_m.jpg' width='1384px' height='2174px'/>
+			<zone ulx='94' uly='149' lrx='569' lry='1691' rendition='TextRegion' xml:id='facs_4_region_1552570354781_766'>
+				<zone ulx='151' uly='227' lrx='515' lry='259' rendition='Line' xml:id='facs_4_region_1552570354781_766l2'/>
+				<zone ulx='147' uly='252' lrx='543' lry='289' rendition='Line' xml:id='facs_4_region_1552570354781_766l3'/>
+				<zone ulx='145' uly='279' lrx='528' lry='316' rendition='Line' xml:id='facs_4_region_1552570354781_766l4'/>
+				<zone ulx='143' uly='308' lrx='568' lry='344' rendition='Line' xml:id='facs_4_region_1552570354781_766l5'/>
+				<zone ulx='147' uly='341' lrx='517' lry='376' rendition='Line' xml:id='facs_4_region_1552570354781_766l6'/>
+				<zone ulx='109' uly='364' lrx='192' lry='474' rendition='Line' xml:id='facs_4_line_1552570773569_1083'/>
+				<zone ulx='195' uly='369' lrx='522' lry='405' rendition='Line' xml:id='facs_4_region_1552570354781_766l7'/>
+				<zone ulx='193' uly='395' lrx='563' lry='430' rendition='Line' xml:id='facs_4_region_1552570354781_766l8'/>
+				<zone ulx='191' uly='422' lrx='566' lry='460' rendition='Line' xml:id='facs_4_region_1552570354781_766l9'/>
+				<zone ulx='196' uly='455' lrx='505' lry='480' rendition='Line' xml:id='facs_4_line_1552570513705_807'/>
+				<zone ulx='113' uly='477' lrx='564' lry='514' rendition='Line' xml:id='facs_4_region_1552570354781_766l11'/>
+				<zone ulx='143' uly='506' lrx='487' lry='542' rendition='Line' xml:id='facs_4_region_1552570354781_766l12'/>
+				<zone ulx='141' uly='532' lrx='458' lry='569' rendition='Line' xml:id='facs_4_region_1552570354781_766l13'/>
+				<zone ulx='139' uly='560' lrx='558' lry='596' rendition='Line' xml:id='facs_4_region_1552570354781_766l14'/>
+				<zone ulx='139' uly='592' lrx='507' lry='626' rendition='Line' xml:id='facs_4_region_1552570354781_766l15'/>
+				<zone ulx='136' uly='620' lrx='545' lry='659' rendition='Line' xml:id='facs_4_region_1552570354781_766l16'/>
+				<zone ulx='134' uly='651' lrx='456' lry='685' rendition='Line' xml:id='facs_4_region_1552570354781_766l17'/>
+				<zone ulx='135' uly='679' lrx='509' lry='714' rendition='Line' xml:id='facs_4_region_1552570354781_766l18'/>
+				<zone ulx='131' uly='705' lrx='490' lry='742' rendition='Line' xml:id='facs_4_region_1552570354781_766l19'/>
+				<zone ulx='132' uly='738' lrx='488' lry='775' rendition='Line' xml:id='facs_4_region_1552570354781_766l20'/>
+				<zone ulx='136' uly='766' lrx='490' lry='802' rendition='Line' xml:id='facs_4_region_1552570354781_766l21'/>
+				<zone ulx='131' uly='793' lrx='529' lry='832' rendition='Line' xml:id='facs_4_region_1552570354781_766l22'/>
+				<zone ulx='128' uly='823' lrx='500' lry='858' rendition='Line' xml:id='facs_4_region_1552570354781_766l23'/>
+				<zone ulx='128' uly='851' lrx='514' lry='888' rendition='Line' xml:id='facs_4_region_1552570354781_766l24'/>
+				<zone ulx='130' uly='878' lrx='544' lry='924' rendition='Line' xml:id='facs_4_region_1552570354781_766l25'/>
+				<zone ulx='128' uly='914' lrx='511' lry='951' rendition='Line' xml:id='facs_4_region_1552570354781_766l26'/>
+				<zone ulx='129' uly='946' lrx='491' lry='982' rendition='Line' xml:id='facs_4_region_1552570354781_766l27'/>
+				<zone ulx='131' uly='976' lrx='513' lry='1015' rendition='Line' xml:id='facs_4_region_1552570354781_766l28'/>
+				<zone ulx='120' uly='1003' lrx='478' lry='1038' rendition='Line' xml:id='facs_4_region_1552570354781_766l29'/>
+				<zone ulx='129' uly='1031' lrx='431' lry='1072' rendition='Line' xml:id='facs_4_region_1552570354781_766l30'/>
+				<zone ulx='130' uly='1060' lrx='496' lry='1103' rendition='Line' xml:id='facs_4_region_1552570354781_766l31'/>
+				<zone ulx='127' uly='1095' lrx='545' lry='1134' rendition='Line' xml:id='facs_4_region_1552570354781_766l32'/>
+				<zone ulx='123' uly='1126' lrx='477' lry='1164' rendition='Line' xml:id='facs_4_region_1552570354781_766l33'/>
+				<zone ulx='118' uly='1160' lrx='511' lry='1200' rendition='Line' xml:id='facs_4_region_1552570354781_766l34'/>
+				<zone ulx='120' uly='1194' lrx='477' lry='1233' rendition='Line' xml:id='facs_4_region_1552570354781_766l35'/>
+				<zone ulx='130' uly='1225' lrx='511' lry='1265' rendition='Line' xml:id='facs_4_region_1552570354781_766l36'/>
+				<zone ulx='130' uly='1256' lrx='485' lry='1300' rendition='Line' xml:id='facs_4_region_1552570354781_766l37'/>
+				<zone ulx='123' uly='1290' lrx='521' lry='1337' rendition='Line' xml:id='facs_4_region_1552570354781_766l38'/>
+				<zone ulx='130' uly='1321' lrx='527' lry='1364' rendition='Line' xml:id='facs_4_region_1552570354781_766l39'/>
+				<zone ulx='131' uly='1351' lrx='527' lry='1394' rendition='Line' xml:id='facs_4_region_1552570354781_766l40'/>
+				<zone ulx='126' uly='1378' lrx='556' lry='1425' rendition='Line' xml:id='facs_4_region_1552570354781_766l41'/>
+				<zone ulx='130' uly='1413' lrx='571' lry='1455' rendition='Line' xml:id='facs_4_region_1552570354781_766l42'/>
+				<zone ulx='130' uly='1445' lrx='502' lry='1489' rendition='Line' xml:id='facs_4_region_1552570354781_766l43'/>
+				<zone ulx='128' uly='1478' lrx='532' lry='1520' rendition='Line' xml:id='facs_4_region_1552570354781_766l44'/>
+				<zone ulx='129' uly='1504' lrx='457' lry='1547' rendition='Line' xml:id='facs_4_region_1552570354781_766l45'/>
+				<zone ulx='135' uly='1541' lrx='527' lry='1584' rendition='Line' xml:id='facs_4_region_1552570354781_766l46'/>
+				<zone ulx='128' uly='1565' lrx='479' lry='1612' rendition='Line' xml:id='facs_4_region_1552570354781_766l47'/>
+				<zone ulx='128' uly='1601' lrx='506' lry='1643' rendition='Line' xml:id='facs_4_region_1552570354781_766l48'/>
+				<zone ulx='127' uly='1632' lrx='504' lry='1677' rendition='Line' xml:id='facs_4_region_1552570354781_766l49'/>
+			</zone>
+			<zone ulx='592' uly='149' lrx='1076' lry='1700' rendition='TextRegion' xml:id='facs_4_region_1552570366857_769'>
+				<zone ulx='629' uly='225' lrx='968' lry='269' rendition='Line' xml:id='facs_4_region_1552570366857_769l1'/>
+				<zone ulx='624' uly='254' lrx='1040' lry='295' rendition='Line' xml:id='facs_4_region_1552570366857_769l2'/>
+				<zone ulx='615' uly='283' lrx='1025' lry='325' rendition='Line' xml:id='facs_4_region_1552570366857_769l3'/>
+				<zone ulx='625' uly='313' lrx='967' lry='354' rendition='Line' xml:id='facs_4_region_1552570366857_769l4'/>
+				<zone ulx='629' uly='344' lrx='1011' lry='391' rendition='Line' xml:id='facs_4_region_1552570366857_769l5'/>
+				<zone ulx='629' uly='374' lrx='979' lry='418' rendition='Line' xml:id='facs_4_region_1552570366857_769l6'/>
+				<zone ulx='627' uly='401' lrx='990' lry='444' rendition='Line' xml:id='facs_4_region_1552570366857_769l7'/>
+				<zone ulx='621' uly='427' lrx='1017' lry='473' rendition='Line' xml:id='facs_4_region_1552570366857_769l9'/>
+				<zone ulx='620' uly='452' lrx='1006' lry='499' rendition='Line' xml:id='facs_4_region_1552570366857_769l10'/>
+				<zone ulx='622' uly='484' lrx='995' lry='524' rendition='Line' xml:id='facs_4_region_1552570366857_769l11'/>
+				<zone ulx='618' uly='511' lrx='967' lry='552' rendition='Line' xml:id='facs_4_region_1552570366857_769l12'/>
+				<zone ulx='625' uly='539' lrx='999' lry='582' rendition='Line' xml:id='facs_4_region_1552570366857_769l13'/>
+				<zone ulx='622' uly='565' lrx='982' lry='607' rendition='Line' xml:id='facs_4_region_1552570366857_769l14'/>
+				<zone ulx='624' uly='600' lrx='1062' lry='644' rendition='Line' xml:id='facs_4_region_1552570366857_769l15'/>
+				<zone ulx='618' uly='632' lrx='1006' lry='667' rendition='Line' xml:id='facs_4_region_1552570366857_769l16'/>
+				<zone ulx='623' uly='660' lrx='998' lry='696' rendition='Line' xml:id='facs_4_region_1552570366857_769l17'/>
+				<zone ulx='615' uly='685' lrx='983' lry='724' rendition='Line' xml:id='facs_4_region_1552570366857_769l18'/>
+				<zone ulx='622' uly='710' lrx='993' lry='756' rendition='Line' xml:id='facs_4_region_1552570366857_769l19'/>
+				<zone ulx='612' uly='744' lrx='987' lry='787' rendition='Line' xml:id='facs_4_region_1552570366857_769l20'/>
+				<zone ulx='619' uly='776' lrx='920' lry='815' rendition='Line' xml:id='facs_4_region_1552570366857_769l21'/>
+				<zone ulx='612' uly='805' lrx='977' lry='842' rendition='Line' xml:id='facs_4_region_1552570366857_769l22'/>
+				<zone ulx='611' uly='832' lrx='1003' lry='874' rendition='Line' xml:id='facs_4_region_1552570366857_769l23'/>
+				<zone ulx='607' uly='863' lrx='919' lry='898' rendition='Line' xml:id='facs_4_region_1552570366857_769l24'/>
+				<zone ulx='609' uly='892' lrx='975' lry='929' rendition='Line' xml:id='facs_4_region_1552570366857_769l25'/>
+				<zone ulx='611' uly='925' lrx='987' lry='962' rendition='Line' xml:id='facs_4_region_1552570366857_769l26'/>
+				<zone ulx='615' uly='955' lrx='999' lry='992' rendition='Line' xml:id='facs_4_region_1552570366857_769l27'/>
+				<zone ulx='613' uly='987' lrx='953' lry='1023' rendition='Line' xml:id='facs_4_region_1552570366857_769l28'/>
+				<zone ulx='615' uly='1012' lrx='1007' lry='1050' rendition='Line' xml:id='facs_4_region_1552570366857_769l29'/>
+				<zone ulx='613' uly='1041' lrx='979' lry='1081' rendition='Line' xml:id='facs_4_region_1552570366857_769l30'/>
+				<zone ulx='615' uly='1074' lrx='983' lry='1114' rendition='Line' xml:id='facs_4_region_1552570366857_769l31'/>
+				<zone ulx='610' uly='1105' lrx='987' lry='1142' rendition='Line' xml:id='facs_4_region_1552570366857_769l32'/>
+				<zone ulx='601' uly='1137' lrx='997' lry='1176' rendition='Line' xml:id='facs_4_region_1552570366857_769l33'/>
+				<zone ulx='611' uly='1175' lrx='1045' lry='1216' rendition='Line' xml:id='facs_4_region_1552570366857_769l34'/>
+				<zone ulx='607' uly='1207' lrx='991' lry='1246' rendition='Line' xml:id='facs_4_region_1552570366857_769l35'/>
+				<zone ulx='609' uly='1239' lrx='1025' lry='1280' rendition='Line' xml:id='facs_4_region_1552570366857_769l36'/>
+				<zone ulx='601' uly='1277' lrx='1072' lry='1323' rendition='Line' xml:id='facs_4_region_1552570366857_769l37'/>
+				<zone ulx='600' uly='1309' lrx='951' lry='1344' rendition='Line' xml:id='facs_4_region_1552570366857_769l38'/>
+				<zone ulx='595' uly='1336' lrx='999' lry='1379' rendition='Line' xml:id='facs_4_region_1552570366857_769l39'/>
+				<zone ulx='594' uly='1365' lrx='985' lry='1404' rendition='Line' xml:id='facs_4_region_1552570366857_769l40'/>
+				<zone ulx='598' uly='1392' lrx='985' lry='1431' rendition='Line' xml:id='facs_4_region_1552570366857_769l41'/>
+				<zone ulx='601' uly='1426' lrx='1038' lry='1463' rendition='Line' xml:id='facs_4_region_1552570366857_769l42'/>
+				<zone ulx='607' uly='1459' lrx='1030' lry='1495' rendition='Line' xml:id='facs_4_region_1552570366857_769l43'/>
+				<zone ulx='606' uly='1490' lrx='952' lry='1524' rendition='Line' xml:id='facs_4_region_1552570366857_769l44'/>
+				<zone ulx='600' uly='1520' lrx='1012' lry='1560' rendition='Line' xml:id='facs_4_region_1552570366857_769l45'/>
+				<zone ulx='601' uly='1548' lrx='960' lry='1591' rendition='Line' xml:id='facs_4_region_1552570366857_769l46'/>
+				<zone ulx='608' uly='1590' lrx='1044' lry='1625' rendition='Line' xml:id='facs_4_region_1552570366857_769l47'/>
+				<zone ulx='604' uly='1620' lrx='1031' lry='1660' rendition='Line' xml:id='facs_4_region_1552570366857_769l48'/>
+				<zone ulx='601' uly='1649' lrx='975' lry='1688' rendition='Line' xml:id='facs_4_region_1552570366857_769l49'/>
+			</zone>
+		</surface>
+	</facsimile>
+    <text xml:lang="fro">
+        <body>
+            <lg>
+            <gap unit="fol" quantity="14" reason="sampling"/>
+            <pb facs='#facs_1' xml:id='Urb.lat.375_0025_fa_0009r_m.jpg' n='1'/>
+            <cb facs='#facs_1_region_1551368699131_110'/>
+					<lb facs='#facs_1_region_1551368699131_110l1'/><l>Loeıs font ou-palaıʒ amener</l>
+					<lb facs='#facs_1_region_1551368699131_110l3'/><l>Or anſeıs fu ⁊-lı-ſıen barnes<note>Doute sur le ⁊/ . S&apos;agit-il bien de la forme non barrée ? Pas sûr.</note></l>
+					<lb facs='#facs_1_region_1551368699131_110l4'/><l>L enfeſ ı-uınt quı fu enchaaneʒ</l>
+					<lb facs='#facs_1_region_1551368699131_110l5'/><l> leſ .ıı. poıns δerıer le-δos noeʒ</l>
+					<lb facs='#facs_1_region_1551368699131_110l6'/><l>Q̃ lı ſanc ert par les engles coleʒ</l>
+					<lb facs='#facs_1_region_1551368699131_110l7'/><l>T ant eſtoıt megreſ δeffeſ ⁊ δeſcharneʒ</l>
+					<lb facs='#facs_1_region_1551368699131_110l8'/><l>Q̃ a-grant paıne pooıt ſoꝛ pıeʒ eſter</l>
+					<lb facs='#facs_1_region_1551368699131_110l9'/><l>Voıt anſeıs ⁊ ſa-mere ploꝛer</l>
+					<lb facs='#facs_1_region_1551368699131_110l10'/><l>Aſ-pıez loꝛ-chıet m͛ci loꝛ a-crıe</l>
+					<lb facs='#facs_1_region_1551368699131_110l11'/><l> meʒ δıſt ıl q̃r me tueʒ poꝛ δe</l>
+					<lb facs='#facs_1_region_1551368699131_110l12'/><l>Trop aı δe-mal ſofert ⁊ enδure</l>
+					<lb facs='#facs_1_region_1551368699131_110l13'/><l>Toʒ lı barnageſ a δe pıtıe ploꝛe</l>
+					<lb facs='#facs_1_region_1551368699131_110l14'/><l>Neıs clarıſſ ne-le-pot eſgarδer</l>
+					<lb facs='#facs_1_region_1551368699131_110l15'/><l>Ꝺe ſon h͛mıne ſe pꝛıſt a ceueter</l>
+                <lb facs='#facs_1_region_1551368699131_110l16'/><l>C ıl <unclear>δe-lauıll̃</unclear> en ont entre euʒ ꝑle</l>
+					<lb facs='#facs_1_region_1551368699131_110l17'/><l>Ꝺıſt l&apos;un a-l&apos;autre ꝯment poꝛõ <unclear>δͣer</unclear></l>
+					<lb facs='#facs_1_region_1551368699131_110l18'/><l>Q̃ cıſt vaſaux nos feſt ſı mal mener</l>
+					<lb facs='#facs_1_region_1551368699131_110l19'/><l>Ꝺeuant nos ıex fet nos amıs tuer</l>
+					<lb facs='#facs_1_region_1551368699131_110l20'/><l>Jl en-puet bıen encoꝛe meſerrer</l>
+					<lb facs='#facs_1_region_1551368699131_110l21'/><l>Se-luδı-as faıt ſes amıs manδer</l>
+					<lb facs='#facs_1_region_1551368699131_110l22'/><l>Ꝺeuers no δame nos δeurıon toꝛner</l>
+					<lb facs='#facs_1_region_1551368699131_110l23'/><l>L ı autre δıent ce faıt a-graanter</l>
+					<lb facs='#facs_1_region_1551368699131_110l24'/><l>ntrauz le vont fıancıer ⁊ ıurer</l>
+					<lb facs='#facs_1_region_1551368699131_110l25'/><l>Loeis fu ou palaıʒ ameneſ</l>
+					<lb facs='#facs_1_region_1551368699131_110l26'/><l>Ꝺeuant l&apos;eſpıeʒ anſeıs lımẽbꝛes</l>
+					<lb facs='#facs_1_region_1551368699131_110l27'/><l>Ꝺıſt anſeıs feraı vos δeſmẽbꝛer</l>
+					<lb facs='#facs_1_region_1551368699131_110l28'/><l> voſtre m͛e feraı ıẽ tͣıner</l>
+					<lb facs='#facs_1_region_1551368699131_110l29'/><l>poꝛ quoı oſaſteſ mon chıer ꝑe <unclear>aδeſer</unclear></l>
+					<lb facs='#facs_1_region_1551368699131_110l30'/><l>Ꝺıſt loeıs ıſı δeuoıt aler</l>
+					<lb facs='#facs_1_region_1551368699131_110l31'/><l>nus hõ ne puet δe ſon ıoꝛ treſpaſer</l>
+					<lb facs='#facs_1_region_1551368699131_110l32'/><l>avſı vos pꝛı que m&apos;en facıeʒ aler</l>
+					<lb facs='#facs_1_region_1551368699131_110l33'/><l>hoꝛs δeceſt mont δ&apos;aucune moꝛt outͤr</l>
+					<lb facs='#facs_1_region_1551368699131_110l34'/><l>Mout volentıers δıſt anſeıs lı ber</l>
+					<lb facs='#facs_1_line_1551959506260_515'/><l>t</l>
+					<lb facs='#facs_1_region_1551368699131_110l35'/><l>ous ſes amıs faıt ou palaiʒ mõter</l>
+					<lb facs='#facs_1_region_1551368699131_110l36'/><l> ıl ı-uınδꝛent ne l&apos;oſerent veer </l>
+					<lb facs='#facs_1_region_1551368699131_110l37'/><l> anſeıs loꝛ ꝯmence a-moſtrer</l>
+					<lb facs='#facs_1_region_1551368699131_110l38'/><l>C oment .Ger. fu moꝛt ⁊ ent͛reʒ</l>
+					<lb facs='#facs_1_region_1551368699131_110l39'/><l>Par les neueus qͥl δeuſſent amer</l>
+					<lb facs='#facs_1_region_1551368699131_110l40'/><l>h͛naut meſ níeʒ ſı ma ſon fıʒ lıure</l>
+					<lb facs='#facs_1_region_1551368699131_110l41'/><l>Poꝛ faíre tant ꝯ vos Ꝺeuıſeres</l>
+					<lb facs='#facs_1_region_1551368699131_110l42'/><l>Ꝺíſt l&apos;un a-l&apos;autre cı a-mout a-penſer</l>
+					<lb facs='#facs_1_region_1551368699131_110l43'/><l>Sı-feſon oꝛ cı-loeıs fıner</l>
+					<lb facs='#facs_1_region_1551368699131_110l45'/><l>Jamaíʒ lı-ꝑe ne-nos voroıt amer</l>
+					<lb facs='#facs_1_region_1551368699131_110l46'/><l> δıſt r. tot ceu leſſıes eſter</l>
+					<lb facs='#facs_1_region_1551368699131_110l47'/><l>Se anſeıs le me ueut parδoner</l>
+					<lb facs='#facs_1_region_1551368699131_110l48'/><l>Jre ⁊ δıſcoꝛδe ⁊ male volente</l>
+					<lb facs='#facs_1_region_1551368699131_110l49'/><l>Je feraı voír loeís traıner</l>
+					<lb facs='#facs_1_region_1551368699131_110l50'/><l>a vnes foꝛcheſ δeſoꝛ belín leuer</l>
+                <cb facs='#facs_1_region_1551368712652_113'/>
+					<lb facs='#facs_1_region_1551368712652_113l1'/><l>Q̃ le vera La-m͛e o-le vıs cl͛r</l>
+					<lb facs='#facs_1_region_1551368712652_113l2'/><l> ſes amıs ⁊-tuıt ſı-parente</l>
+					<lb facs='#facs_1_region_1551368712652_113l3'/><l>Cert voſtre honte δıſt loeıs le-ber</l>
+					<lb facs='#facs_1_region_1551368712652_113l4'/><l>Maíʒ faıteſ moı δeδens t͛re boter</l>
+					<lb facs='#facs_1_region_1551368712652_113l6'/><l>Ov vos me feteſ ens enʒ ẽ la-m͛ ruer</l>
+					<lb facs='#facs_1_region_1551368712652_113l7'/><l>Vne grant pıere entoꝛ mõ col noer</l>
+					<lb facs='#facs_1_region_1551368712652_113l8'/><l>Ꝺıſt anſeıs bıen le vıl craanter</l>
+					<lb facs='#facs_1_region_1551368712652_113l9'/><l>Se-meſ lıgnages le veut ıſſı loer</l>
+					<lb facs='#facs_1_region_1551368712652_113l10'/><l> cıl reſponδent bñ le uolõ <unclear>gͤer</unclear></l>
+					<lb facs='#facs_1_region_1551368712652_113l11'/><l>Qͥ faıt tel <unclear>mͣtre</unclear> bıen le δoıt ꝯperer</l>
+					<lb facs='#facs_1_line_1551960379684_695'/><l>L</l>
+					<lb facs='#facs_1_region_1551368712652_113l12'/><l>a fuſt lı-pleʒ otroıeʒ ⁊-<unclear>gr??eʒ</unclear></l>
+					<lb facs='#facs_1_region_1551368712652_113l13'/><l>ne fuſt guıreſ qͥ haut ſet eſcͥeʒ</l>
+					<lb facs='#facs_1_line_1551960357982_685'/><l>par δıeu faıt ıl maueſem̃t ou͛s</l>
+					<lb facs='#facs_1_region_1551368712652_113l16'/><l>ncoꝛ neſ mıe venu no parenteʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l17'/><l>Lı roy δe france ne gerın lı-ſenes</l>
+					<lb facs='#facs_1_region_1551368712652_113l18'/><l>Ne mauuoıſín ne-lı-autre barneʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l21'/><l>nſoꝛq̃tot ſe-loeıs penδez</l>
+					<lb facs='#facs_1_region_1551368712652_113l22'/><l>Ꝺoon mõ-frere ıe vos δı ocıez</l>
+					<lb facs='#facs_1_region_1551368712652_113l23'/><l> δıſt .r. c&apos;eſt fıne verıteʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l24'/><l>Se mon ꝯceıl treſtoʒ croıre voleʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l25'/><l>Le matınet aıns q̃ ıoꝛ ſoıt leueʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l27'/><l>Soít noſtre eſfoꝛs ou val beton meneʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l28'/><l>Conroíeʒ δ&apos;armes garnıs ⁊ apꝛeſteʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l29'/><l> enʒ ou val treſtoʒ coıʒ vos teneʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l30'/><l>a auʒ ıroı fıers ⁊ δeſmeſureſ</l>
+					<lb facs='#facs_1_region_1551368712652_113l31'/><l>Il en ıſtront ıel ſaı δe verıteʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l32'/><l>P l⁹ δe .x.m aſ v͛s elmes gemeſ</l>
+					<lb facs='#facs_1_region_1551368712652_113l33'/><l>Car ıl ıa δe ch̃r aſſes</l>
+					<lb facs='#facs_1_region_1551368712652_113l34'/><l>S&apos;ıl nos enchaucent ꝑ δerıere <unclear>ſauδꝛes</unclear></l>
+					<lb facs='#facs_1_region_1551368712652_113l35'/><l>toʒ les pꝛenδꝛeʒ ſı q̃ vos le veroıʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l36'/><l>Se maneſıer ı-puet eſtre enꝯtreʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l37'/><l>Poꝛ luı δoon volentıerſ rauereſ</l>
+					<lb facs='#facs_1_region_1551368712652_113l39'/><l>Ꝺıſt anſeıs certes bıen δıt aueſ</l>
+					<lb facs='#facs_1_region_1551368712652_113l40'/><l>La-coꝛt δepart ſı-uont a-loꝛ-oſtes</l>
+					<lb facs='#facs_1_region_1551368712652_113l41'/><l>Loeıs fu en-pͥſon remeneʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l42'/><l>a grant δeſtrece plus q̃ δeuant aſes</l>
+					<lb facs='#facs_1_region_1551368712652_113l43'/><l>anſeıs fu ou-pales oſteleʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l44'/><l>Jl ⁊-ſa-m͛e quí tant out δe-bıauteʒ</l>
+					<lb facs='#facs_1_region_1551368712652_113l45'/><l>Jcele nuıt fu poures ſes δıgners</l>
+					<lb facs='#facs_1_line_1551961404208_920'/><l></l>
+					<lb facs='#facs_1_region_1551368712652_113l46'/><l>n pꝛıſon fu remeneʒ loeıs</l>
+					<lb facs='#facs_1_line_1551961366589_903'/><l>Maıs ıl amaſt mıex eſtre <sic>nort</sic> amq̃ vıs</l>
+					<lb facs='#facs_1_line_1551961373823_908'/><l>.r. manδa lı bon pꝛevoſt oeδın</l>
+					<lb facs='#facs_1_region_1551368712652_113l50'/><l> les ıureſ δe boꝛδele la cıt</l>
+					<lb facs='#facs_1_region_1551368712652_113l51'/><l> ıl ı-uıenent volentıers <unclear>nõ eıııııs</unclear></l>
+					<lb facs='#facs_1_region_1551368712652_113l52'/><l>Jl loꝛ moſtͣ ſı-ꝯ-loꝛ fu auıs</l>
+					<lb facs='#facs_1_region_1551368712652_113l53'/><l>Bıau ſire <unclear>mereſ</unclear> δıſ .r. lı-h͛δıs</l>
+					<lb facs='#facs_1_region_1551368712652_113l54'/><l>fetes vo gent armer a-le-matın</l>
+					<lb facs='#facs_1_region_1551368712652_113l55'/><l>Car auec moı le<add place='above'>s</add>-ꝯuenra venır</l>
+				
+			
+			<pb facs='#facs_2' xml:id='Urb.lat.375_0041_fa_0017r_m.jpg' n='2'/>
+            <cb facs='#facs_2_region_1552392490853_211'/>
+				
+					<lb facs='#facs_2_region_1552392490853_211l1'/><l>Guıre bıau fıʒ ꝯnoıſſıeʒ v⁹ ceſtuí</l>
+					<lb facs='#facs_2_region_1552392490853_211l2'/><l>Qͣnt ıl le-vıt a-poı δu ſens n&apos;ıſſı</l>
+					<lb facs='#facs_2_region_1552392490853_211l3'/><l>Oıl δıſt ıl q̃ ce eſt δo vo ſıʒ</l>
+					<lb facs='#facs_2_region_1552392490853_211l4'/><l>Qva Gırõuıll̃ fu en la pͥſon mıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l5'/><l>fouqͥer l&apos;entent a-poı n&apos;erage vıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l6'/><l>Laſ δıſt fouqͥer <unclear>ꝯt</unclear> δeſeruı mõ fıʒ</l>
+					<lb facs='#facs_2_region_1552392490853_211l7'/><l> .r. ſıre ꝯ v⁹ fet mal ſeruír</l>
+					<lb facs='#facs_2_region_1552392490853_211l8'/><l>Vos ne voſıſtes paſ rẽδꝛe loeís</l>
+					<lb facs='#facs_2_region_1552392490853_211l9'/><l>Poꝛ δelıurer δoon q̃ ıe voı-cí</l>
+					<lb facs='#facs_2_region_1552392490853_211l10'/><l>Oꝛ ſont ıl moꝛt ⁊ δu cıecle partı</l>
+					<lb facs='#facs_2_region_1552392490853_211l11'/><l>De laıδe moꝛt ſont moꝛt ce-poıſe mı</l>
+					<lb facs='#facs_2_region_1552392490853_211l12'/><l>Oꝛ fuſt lı uns ⁊ lı autre toʒ vıs</l>
+					<lb facs='#facs_2_line_1552397360280_316'/><l> δıſt guıre noſ l&apos;ẽ poꝛterõ δ&apos;ıcı</l>
+					<lb facs='#facs_2_region_1552392490853_211l14'/><l> en_foꝛon ou moſtıer .S̃. ſeurın</l>
+					<lb facs='#facs_2_region_1552392490853_211l15'/><l>Ce δıſt foqͥer aınʒ l&apos;en_foꝛõ ıcı</l>
+					<lb facs='#facs_2_region_1552392490853_211l16'/><l>Leſ maneſıer ⁊ ıoſte loeıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l17'/><l>font vne foſe ſı-ont enʒ δoõ mıſ</l>
+					<lb facs='#facs_2_region_1552392490853_211l18'/><l>nꝯtre t͛re font leſ foꝛqueſ flatír</l>
+					<lb facs='#facs_2_region_1552392490853_211l19'/><l>Ꝺe gıronuıll̃ leſ put l&apos;en bıen veír</l>
+					<lb facs='#facs_2_region_1552392490853_211l20'/><l>Qvant oꝛent faıt ſı ſont ou retoꝛ mıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l21'/><l>Ꝺvſqͣ boꝛδele ne pꝛıſtrẽt onq̃s fín</l>
+					<lb facs='#facs_2_region_1552392490853_211l23'/><l>a loꝛ oſtex ſont maıntenant v͛tı</l>
+					<lb facs='#facs_2_region_1552392490853_211l24'/><l>La δemenerent loꝛ δoloꝛ ⁊ loꝛ crı</l>
+					<lb facs='#facs_2_region_1552392490853_211l25'/><l> δıſt guıreſ ſıre entenδeʒ a-mı</l>
+					<lb facs='#facs_2_region_1552392490853_211l27'/><l>Alon noſ ent tot δꝛoıt au pleſſeıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l29'/><l>Sı-m&apos;aıt δex ne uenreſ ıameſ cí</l>
+					<lb facs='#facs_2_region_1552392490853_211l30'/><l>Ꝺe-meſ .v. frereſ ſont ıa-lı-δuí ocıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l31'/><l>Se noſ fuſon en-la-bataılle pꝛıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l32'/><l>tout autreſı noſ ı-feut moꝛír</l>
+					<lb facs='#facs_2_region_1552392490853_211l33'/><l>ꝯme ıl a-fet δoon le-palaſín</l>
+					<lb facs='#facs_2_line_1552398955983_643'/><l>I</l>
+					<lb facs='#facs_2_region_1552392490853_211l34'/><l>tel ſegnoꝛ ne faıt paſ bon ſ͛uír</l>
+					<lb facs='#facs_2_line_1552398910871_621'/><l>Qͥ faıt ſeſ hõmeſ v͛gonδ͛ ⁊ honír</l>
+					<lb facs='#facs_2_region_1552392490853_211l36'/><l> δıſt foquıer v⁹ δıteſ voír amís</l>
+					<lb facs='#facs_2_region_1552392490853_211l37'/><l>A .ıııȷ.M. ſont δe-boꝛδıaux partíʒ</l>
+					<lb facs='#facs_2_region_1552392490853_211l38'/><l>Ja ſ&apos;en alaſſent tot δꝛoıt au-pleſſeíʒ</l>
+					<lb facs='#facs_2_region_1552392490853_211l39'/><l>Le remanant en menoıt δe-ſeſ fıʒ</l>
+					<lb facs='#facs_2_region_1552392490853_211l40'/><l>Qͣnt .ı. meſ vıent a-<del rend='barré exponctué'>foqͥer</del> <add place='above'>.r.</add> ſı-lı-δít</l>
+					<lb facs='#facs_2_region_1552392490853_211l41'/><l> Sıre fouqͥer ſ&apos;en va a-tot ſeſ fıʒ</l>
+					<lb facs='#facs_2_line_1552400857347_810'/><l>Ne fınera δeſı au-pleſſeıs</l>
+					<lb facs='#facs_2_region_1552392490853_211l43'/><l> a-ıure δıeu qͥ en-croıʒ fu mıſ</l>
+					<lb facs='#facs_2_region_1552392490853_211l44'/><l>Q̃ maıs nul ıoꝛ ne v⁹ voδꝛa ſ͛uír</l>
+					<lb facs='#facs_2_region_1552392490853_211l45'/><l>Qͥ a-<unclear>cen</unclear> faıt bıau frere q̃r me δı</l>
+					<lb facs='#facs_2_region_1552392490853_211l46'/><l>Reſpont lı meſ oꝛ entenδeſ amí</l>
+					<lb facs='#facs_2_region_1552392490853_211l48'/><l>Vos l&apos;en_voıaſtes poꝛ voſ fıʒ ẽfoır</l>
+					<lb facs='#facs_2_region_1552392490853_211l49'/><l>Laſus ou mõt qͥ eſt δeſuſ belín</l>
+					<lb facs='#facs_2_region_1552392490853_211l50'/><l>Maıs ıl eſtoıent ml̃t treſ bıen en_foı</l>
+					<lb facs='#facs_2_region_1552392490853_211l51'/><l>Cıl quı penδoıt ce eſtoıt δo ſon-fıl</l>
+					<lb facs='#facs_2_region_1552392490853_211l52'/><l>ꝯ vos vaut renδꝛe ꝓ loeıs vo fıl</l>
+							
+            <cb facs='#facs_2_region_1552392501222_214'/>
+				    <lb facs='#facs_2_region_1552392501222_214l1'/><l>S&apos;en eſt fouquıer coꝛocıeʒ ⁊ marí</l>
+					<lb facs='#facs_2_region_1552392501222_214l2'/><l>Ꝺex δıſt r. ꝯ puıʒ eſragıer vıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l4'/><l>S̃ Marıe roıne genıtrıx</l>
+					<lb facs='#facs_2_region_1552392501222_214l5'/><l>ꝯme on toꝛmente cheſꝯ ıoꝛ meſ-amís</l>
+					<lb facs='#facs_2_region_1552392501222_214l6'/><l>Certeſ ceſt δꝛoıʒ ſe-ıl en eſt marıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l7'/><l>C&apos;eſt par ma coupe que ſeſ fıʒ eſt ocıſ</l>
+					<lb facs='#facs_2_region_1552392501222_214l8'/><l>Jl eſt mõteʒ ſoꝛ .ı. cheual δe-pͥs</l>
+					<lb facs='#facs_2_region_1552392501222_214l9'/><l> avec luı lı vaſal anſeıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l10'/><l>Ꝺe_ſoꝛ boꝛδıaux l&apos;atant en .ı. larís</l>
+					<lb facs='#facs_2_region_1552392501222_214l12'/><l>Devant fouquıer <unclear>a-genoıllons</unclear> eſt mıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l13'/><l>Sıre foquıer poꝛ amoꝛ δıeu m͛cı</l>
+					<lb facs='#facs_2_region_1552392501222_214l14'/><l>Teneʒ m&apos;eſpee δe-moı ſoıt le-chıef pꝛıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l15'/><l>Q̃r le faı ſıre poꝛ amoꝛ δıeu m͛cı</l>
+					<lb facs='#facs_2_region_1552392501222_214l16'/><l>Sı-en fera a-peſ tot le paıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l17'/><l> ſı ert δo vengıe lı voſtre fıʒ</l>
+					<lb facs='#facs_2_region_1552392501222_214l19'/><l>Qvı par ma coupe ı-a eſte ocıs</l>
+					<lb facs='#facs_2_line_1552402690116_1209'/><l> s&apos;aı encoꝛe δe-loꝛ gent .ıııȷ.xx</l>
+					<lb facs='#facs_2_region_1552392501222_214l22'/><l>faıteſ leſ-toʒ δetraıre a-<unclear>bũs</unclear> rõcıns<note>On pourrait aussi lire &apos;a vns&apos; (en interprétant le trait comme la poursuite du jambage de la ligne précédente).</note></l>
+					<lb facs='#facs_2_region_1552392501222_214l23'/><l> δıſt guıre ſıre ꝑδoneʒ luí</l>
+					<lb facs='#facs_2_region_1552392501222_214l24'/><l>Reſpont fouquıer volentıers bıau δouʒ fıʒ</l>
+					<lb facs='#facs_2_region_1552392501222_214l25'/><l>No ſıreſ eſt ne lı δeuõ fallır</l>
+					<lb facs='#facs_2_region_1552392501222_214l26'/><l>r. δꝛeca ſı-le-beſſa ou vıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l27'/><l>Treſtoʒ retoꝛnet a-boꝛδele la-cıt</l>
+					<lb facs='#facs_2_region_1552392501222_214l29'/><l> δıſt fouquıer ſıre entenδeʒ a-mí</l>
+					<lb facs='#facs_2_region_1552392501222_214l30'/><l>vos aueʒ cı ch̃r .ıııı.xx.</l>
+					<lb facs='#facs_2_region_1552392501222_214l33'/><l> ıl en tıenet bñ .cc. δeſ vos pͥs</l>
+					<lb facs='#facs_2_region_1552392501222_214l34'/><l>Se tu feſoıeʒ oꝛe leſ loꝛ moꝛír</l>
+					<lb facs='#facs_2_region_1552392501222_214l35'/><l>Jl referoıent δeſ noſtres autreſı</l>
+					<lb facs='#facs_2_region_1552392501222_214l36'/><l>Maıs l&apos;un poꝛ l&apos;autre ſoıt ẽ eſchãge mıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l37'/><l>Sı raueron noſ ch̃r δe-pͥs</l>
+					<lb facs='#facs_2_region_1552392501222_214l38'/><l>Qͥ la languıſſent a-δoloꝛoʒ <unclear>mıs</unclear></l>
+					<lb facs='#facs_2_region_1552392501222_214l39'/><l> ſ&apos;ıl ı-muerent tu aſ noıent ꝯqͥs</l>
+					<lb facs='#facs_2_region_1552392501222_214l40'/><l> δıſt .r. par ma foı ıe-l&apos;otrí</l>
+					<lb facs='#facs_2_region_1552392501222_214l41'/><l>Jl ı enuoıe l&apos;abe δe ſaınt ſeurín</l>
+					<lb facs='#facs_2_region_1552392501222_214l42'/><l>Qͥ en amaıne ch̃r .c. ⁊ .x.</l>
+					<lb facs='#facs_2_region_1552392501222_214l43'/><l>Ml̃t δeſcharneʒ δoleroʒ ⁊ chaıtís</l>
+					<lb facs='#facs_2_region_1552392501222_214l45'/><l>Gͣnt ıoıe maıne qͥl ſont eſchapeʒ vís</l>
+					<lb facs='#facs_2_line_1552402301491_996'/><l>O</l>
+					<lb facs='#facs_2_region_1552392501222_214l46'/><l> ꝛ vos laıron δeh͛naut le palaſín</l>
+					<lb facs='#facs_2_region_1552392501222_214l47'/><l> δe-luδıe au-gent coꝛſ ſegnoꝛı</l>
+					<lb facs='#facs_2_line_1552402285947_989'/><l>La-male fame q̃ δex puıſt maleır</l>
+					<lb facs='#facs_2_region_1552392501222_214l49'/><l>Q̃r ele fıſt tant q̃ Gerb̃t fu ocıſ</l>
+					<lb facs='#facs_2_line_1552402366964_1026'/><l>Par ſeſ .ıı. fıʒ ſı-ꝯme aueſ oı</l>
+					<lb facs='#facs_2_line_1552402409204_1052'/><l>Cruel vẽıance fıſt .r. lı gentıl</l>
+					<lb facs='#facs_2_line_1552402426207_1064'/><l>Ꝺe ſes .ıı. fıʒ ꝯ-δe-ſes anemıs</l>
+					<lb facs='#facs_2_line_1552402431677_1069'/><l>a ceſ matereſ ſarõ bıen reuenír</l>
+					<lb facs='#facs_2_line_1552402455534_1081'/><l>Sı vos δıron δu meſagıer ſeguın</l>
+					<lb facs='#facs_2_line_1552402461503_1086'/><l>Qͥ paſſe bleue ⁊ treſtot le-paıs</l>
+					<lb facs='#facs_2_region_1552392501222_214l56'/><l>vıent a-lımogeſ la a-ſon-oſtel pꝛıs</l>
+				
+			
+			<pb facs='#facs_3' xml:id='Urb.lat.375_0057_fa_0025r_m.jpg' n='3'/>
+            <cb facs='#facs_3_region_1552406324368_1741'/>
+				
+					<lb facs='#facs_3_region_1552406324368_1741l1'/><l>Lvδıe pꝛoıe ıhũ δe-belleem</l>
+					<lb facs='#facs_3_region_1552406324368_1741l2'/><l>Qͥ δe la  v͛ge naſquı uraem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l3'/><l>Qͥl leſ δeſfenδe δe moꝛt ⁊ δe-toꝛment</l>
+					<lb facs='#facs_3_region_1552406324368_1741l4'/><l>a ſon chaſtel leſ ramaınt ſauuement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l5'/><l>Q̃ n&apos;í aıt moꝛt ne amí ne ꝑent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l6'/><l>Meſ ıe-cuıt bıen ꝑ δıeu q̃ el ment</l>
+					<lb facs='#facs_3_region_1552406324368_1741l7'/><l> cıl en vont tant aceſmeement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l8'/><l>ꝯtre ſoleıl reluıſt l&apos;oꝛ ⁊ l&apos;argent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l9'/><l> ceſ banıereſ ventelerent au uent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l10'/><l>Lı foꝛt cheual en vont p͛mıeremẽt</l>
+					<lb facs='#facs_3_region_1552406324368_1741l11'/><l>La grant pouδꝛıere eſt mellee <unclear>o-le-vent</unclear></l>
+					<lb facs='#facs_3_region_1552406324368_1741l12'/><l>N&apos;out míe ale .ıı. lıeueſ ſolement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l13'/><l>Qͣnt <unclear>l&apos;eſꝑcoıt</unclear> anſeıs  ſa-gent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l14'/><l>Qͥ a-boꝛδele eſt ou haut manδemẽt</l>
+					<lb facs='#facs_3_region_1552406324368_1741l15'/><l>Vınt a .r. ſı-lı-δıt errament</l>
+					<lb facs='#facs_3_region_1552406324368_1741l16'/><l>r. leſ voıt a-poı δ&apos;ıre ne-fent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l17'/><l>Certeſ δıſt ıl ne noſ pꝛıſen noıent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l18'/><l>Ꝺıſt anſeıſ ſire qu&apos;ıl ont gͣnt gent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l19'/><l>v⁹ δıteſ voır δıſt ıl par .S̃. vıncent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l20'/><l>nos en ıſtron enꝯtre leſ loꝛ-gent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l21'/><l>Ꝺeuant noſ lıceſ noſ <unclear>regon</unclear> ſagem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l22'/><l>S&apos;alon enſemble ſı oꝛδeneem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l23'/><l>Se ıl venoıent δ&apos;eſpoír ⁊-liem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l24'/><l>Demenõ noſ oꝛe ſı ſagem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l25'/><l>par nos meffes n&apos;ı-ꝑδereſ noıent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l27'/><l>Ꝺıſt anſeıs δehaıt quı-le δeffent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l28'/><l>Oꝛ ı-para qͥ aura harδement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l29'/><l>Meſ oꝛ ſoneſ cel coꝛ ſeurement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l30'/><l>Jl pꝛıſt le coꝛ ſel ſona hautem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l31'/><l>Qv&apos;aual boꝛδele l&apos;ent oı hautement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l32'/><l>aſ armeſ coꝛent coꝛocıe  δolent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l33'/><l>ncoꝛ a-tel quı ſe δeut δurem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l34'/><l>Ꝺeſ cop qͥl pꝛıſt au-gͣnt toꝛnoıem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l35'/><l>Qͥ a hauberc mout volentıers le-pꝛẽt</l>
+					<lb facs='#facs_3_region_1552406324368_1741l36'/><l>Ꝺıſt anſeıs haſteſ vos bone gent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l37'/><l>Qͣnt nos venδꝛon enſenble au caplem̃t</l>
+					<lb facs='#facs_3_region_1552406324368_1741l38'/><l>Mauδıt ſoıt cıl qͥ bñ ch̃r ne-ſe vent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l39'/><l> ıl reſponδent aleſ ſeurement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l40'/><l>Q̃ par cel δıeu qͥ fıſt le fıermament</l>
+					<lb facs='#facs_3_region_1552406324368_1741l41'/><l>Q̃ par noſ coupeſ ne-ꝑδereſ noıent</l>
+					<lb facs='#facs_3_line_1552406767094_1951'/><l>G</l>
+					<lb facs='#facs_3_region_1552406324368_1741l42'/><l>vıreſ ſen ıſt treſtot pꝛemıerement</l>
+					<lb facs='#facs_3_line_1552406717070_1923'/><l>L&apos;en_ſeıgne poꝛte ſı-la δeſploıe au-uent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l44'/><l>Joſte leſ lıces ſ&apos;areſtent maıntenant</l>
+					<lb facs='#facs_3_line_1552406723761_1928'/><l>Leſ lanceſ δꝛoıteſ ⁊ ſı eſpeſſemẽt</l>
+					<lb facs='#facs_3_region_1552406324368_1741l46'/><l>Q̃l n&apos;eſt nuſ hõ quı loꝛ feıſt noıent</l>
+					<lb facs='#facs_3_region_1552406324368_1741l47'/><l>Q̃ nel ꝯparaſt a-δouble chıerement</l>
+					<lb facs='#facs_3_region_1552406324368_1741l48'/><l>ʒ vos b͛aut ſoꝛ le cheual coꝛãt</l>
+				
+			
+            <cb facs='#facs_3_region_1552406343610_1744'/>
+				
+					<lb facs='#facs_3_region_1552406343610_1744l1'/><l>Jl n&apos;a ſı-bon δeſoʒ le-fıermament</l>
+					<lb facs='#facs_3_region_1552406343610_1744l2'/><l>δeuant leſ autreſ pl⁹ que arc ne-δeſtẽt</l>
+					<lb facs='#facs_3_region_1552406343610_1744l4'/><l>La lance ou poıg ou .ı. mace pent</l>
+					<lb facs='#facs_3_region_1552406343610_1744l5'/><l>Qͥ fu floꝛete la-pucele au-cos gent</l>
+					<lb facs='#facs_3_region_1552406343610_1744l6'/><l>fılle mıllon le δuc δe <unclear>bouınent</unclear></l>
+					<lb facs='#facs_3_region_1552406343610_1744l7'/><l>Qͥ ert ſ&apos;amıe l&apos;amoít δurem̃t</l>
+					<lb facs='#facs_3_region_1552406343610_1744l8'/><l>Sı ꝯpaıgnõ le-ſıeuet errãment</l>
+					<lb facs='#facs_3_region_1552406343610_1744l9'/><l>Bıen ſont .ıııȷ. mıle par-δeuant .ı. renc</l>
+					<lb facs='#facs_3_region_1552406343610_1744l10'/><l>Toʒ leſ melloꝛs  par <unclear>ellıſement</unclear></l>
+					<lb facs='#facs_3_region_1552406343610_1744l11'/><l>Jl n&apos;ont cheual ne-ſoıt foꝛt δurem̃t</l>
+					<lb facs='#facs_3_region_1552406343610_1744l13'/><l> poꝛ δeronpꝛe le feſ pꝛemıerem̃t</l>
+					<lb facs='#facs_3_region_1552406343610_1744l14'/><l>Ꝺıſt anſeıs veſ ıcı bele gent</l>
+					<lb facs='#facs_3_region_1552406343610_1744l16'/><l> δıſt .. bel ſont ıl voırement</l>
+					<lb facs='#facs_3_region_1552406343610_1744l17'/><l>Sı m&apos;aıt δex ne me m͛uel noıent</l>
+					<lb facs='#facs_3_region_1552406343610_1744l18'/><l>Ov cıſt aſemblent tant í-a ıl gͣnt gent</l>
+					<lb facs='#facs_3_line_1552562777791_164'/><l>S</l>
+					<lb facs='#facs_3_region_1552406343610_1744l19'/><l>ı-ꝯ-b͛aut vınt poıgnãt la-pꝛaele</l>
+					<lb facs='#facs_3_line_1552562719730_142'/><l>La lance ou poıg ou-la-mance ventele</l>
+					<lb facs='#facs_3_line_1552562739466_151'/><l>Qͤ lı δona floꝛete la-pucele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l23'/><l>Soꝛ le δeſtͥer coꝛeoꝛ δe caſtele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l24'/><l>Qͣnt ſe regarδe tot lı-cuer lı-ſautele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l25'/><l>Jl voıt ernaut le-cuer lı-renouele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l26'/><l>Qͥ ne voloıt eſloıgnıer δe-boꝛδele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l27'/><l>a ıı. <unclear>tretıeſ</unclear> loıg δe ſa-gent ſ&apos;areſte</l>
+					<lb facs='#facs_3_region_1552406343610_1744l29'/><l>Poꝛ δemãδer ſauoír qu&apos;ıl poꝛoıt fere</l>
+					<lb facs='#facs_3_region_1552406343610_1744l30'/><l>S&apos;ıl leſ ıront en_vaír ne requere</l>
+					<lb facs='#facs_3_region_1552406343610_1744l31'/><l>tant ꝯme ıl ſoıent ſı pꝛeſ δe-loꝛ-repere</l>
+					<lb facs='#facs_3_region_1552406343610_1744l32'/><l>ʒ vos guıon quı leſ autreſ chaele</l>
+					<lb facs='#facs_3_region_1552406343610_1744l33'/><l>Manδe foqͥer δeuant q̃ ıl ſ&apos;areſte</l>
+					<lb facs='#facs_3_line_1552563073444_294'/><l>S</l>
+					<lb facs='#facs_3_line_1552563062145_288'/><l>J ꝯme ıl oꝛent loꝛ-gent fet areſter</l>
+					<lb facs='#facs_3_line_1552562837554_203'/><l>Beraut δeſſueure ſa-gent fet areſt͛</l>
+					<lb facs='#facs_3_line_1552562886531_218'/><l>ntre .ıı rẽſ faıt <unclear>eſme δeıoſter</unclear></l>
+					<lb facs='#facs_3_region_1552406343610_1744l37'/><l>Ꝺ&apos;anbeδeu pars l&apos;alerent regarδer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l38'/><l>L&apos;eſcu au-col quı mout reluıſoıt cl͛r</l>
+					<lb facs='#facs_3_region_1552406343610_1744l39'/><l>Lı .ı. a-l&apos;autre l&apos;auoıt pͥs <unclear>a-noſtrer</unclear></l>
+					<lb facs='#facs_3_region_1552406343610_1744l40'/><l>Veʒ la b͛aut q̃rnaut fıſt aδober</l>
+					<lb facs='#facs_3_region_1552406343610_1744l41'/><l>n&apos;a-tel vaſal ıuſque en-la-roge-mer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l42'/><l>Qͥ oꝛ voδꝛoıt ſa pꝛoece moſtrer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l43'/><l>Mıen encıent qͥl troueroıt ſon-per</l>
+					<lb facs='#facs_3_region_1552406343610_1744l44'/><l>r. δeſſoıure qͥ ne puet enδurer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l45'/><l>Ꝺeıoſte faıre ſe-pꝛıſt a-acheſmer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l47'/><l>Beraut le-uoıt ſı-ꝯmẽce a-penſer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l48'/><l>Ꝺex δıſt b͛aut quı tot aſ a-ſauuer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l49'/><l>Jraı ıeu δont a-mõſegnoꝛ ıoſter</l>
+					<lb facs='#facs_3_region_1552406343610_1744l50'/><l>Qͥ tanteſ foıʒ m&apos;a-fet δu ſuen δoner</l>
+					<lb facs='#facs_3_region_1552406343610_1744l51'/><l>Mout volentıers le voδꝛoıe eſchıuer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l52'/><l>Meſ ıo voı bıen ne-le-puıʒ refuſer</l>
+					<lb facs='#facs_3_region_1552406343610_1744l53'/><l>Q̃ par la ıoſte m&apos;en ꝯuenδꝛa aler</l>
+				
+			
+			<pb facs='#facs_4' xml:id='Urb.lat.375_0073_fa_0033r_m.jpg' n='4'/>
+            <cb facs='#facs_4_region_1552570354781_766'/>
+				
+					<lb facs='#facs_4_region_1552570354781_766l2'/><l>tout le nonbꝛe δe cheſſes vıueſ</l>
+					<lb facs='#facs_4_region_1552570354781_766l3'/><l>Jl ſet ceſt art ıe n&apos;ẽ mentıraı mıe</l>
+					<lb facs='#facs_4_region_1552570354781_766l4'/><l>S&apos;ıl vout .ı. hoſt en vne pꝛaıerıe</l>
+					<lb facs='#facs_4_region_1552570354781_766l5'/><l>Jl ſauroıt toſt le nõbꝛe δ&apos;ax meıſme</l>
+					<lb facs='#facs_4_region_1552570354781_766l6'/><l>ꝯbıen ıl ſont en-la-loꝛ ꝯpagníe</l>
+					<lb facs='#facs_4_line_1552570773569_1083'/><l>A</l>
+					<lb facs='#facs_4_region_1552570354781_766l7'/><l>pꝛeſ l-apͥſt le cl͛rc auſtrologıe</l>
+					<lb facs='#facs_4_region_1552570354781_766l8'/><l>Ce eſt .ı. art quí mout eſt couoıtıe</l>
+					<lb facs='#facs_4_region_1552570354781_766l9'/><l>Qͥ le ſaroıt mout lı-pleroıt ſa-uıe</l>
+					<lb facs='#facs_4_line_1552570513705_807'/><l> ſı aroıt honoꝛ ⁊ manantíe</l>
+					<lb facs='#facs_4_region_1552570354781_766l11'/><l> grant auoír  mout grant ſegnoꝛıe</l>
+					<lb facs='#facs_4_region_1552570354781_766l12'/><l>Jl ſaroıt bñ ꝯ-fet en romaníe</l>
+					<lb facs='#facs_4_region_1552570354781_766l13'/><l> q̃ on faıt δela en paıeníe</l>
+					<lb facs='#facs_4_region_1552570354781_766l14'/><l>Ov par-δeca en-france la-garníe</l>
+					<lb facs='#facs_4_region_1552570354781_766l15'/><l>Ov tot partot le mõδe qͥ-toꝛníe</l>
+					<lb facs='#facs_4_region_1552570354781_766l16'/><l>Par ıceſt art fu Joſeph treſtot ſíre</l>
+					<lb facs='#facs_4_region_1552570354781_766l17'/><l>Ꝺe pharaon ⁊ δe-ſa-ꝯpagníe</l>
+					<lb facs='#facs_4_region_1552570354781_766l18'/><l>Qͥ ſet ceſ art ne vos enqͥer mẽtır</l>
+					<lb facs='#facs_4_region_1552570354781_766l19'/><l>Jl ſet mout bñ q̃ eſt a-δeuenír</l>
+					<lb facs='#facs_4_region_1552570354781_766l20'/><l>Se-ıl vaoıt .ıı. chãpıonſ venır</l>
+					<lb facs='#facs_4_region_1552570354781_766l21'/><l>Qͥ en .ı. champ δeuſſent eſcremír</l>
+					<lb facs='#facs_4_region_1552570354781_766l22'/><l>Jl ſauroıt bıen lıq̃l δeuroıt venqͥr</l>
+					<lb facs='#facs_4_region_1552570354781_766l23'/><l>Lı-ſınatoꝛ δe-rome ſanſ mẽtır</l>
+					<lb facs='#facs_4_region_1552570354781_766l24'/><l>Par ıceſt art ꝯceıllıerent ıaδıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l25'/><l>Ꝺeſ  foꝛs bataılles ⁊ δeſ-peſanſ huſtıns</l>
+					<lb facs='#facs_4_region_1552570354781_766l26'/><l>tout bıen ſaroıt qͥ en aroıt le-pís</l>
+					<lb facs='#facs_4_region_1552570354781_766l27'/><l>Ꝑ ıceſt art ſoꝛent ıe vos pleuıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l28'/><l>tvıt lı-troı roı q̃ fu-neʒ ıhũ crıſt</l>
+					<lb facs='#facs_4_region_1552570354781_766l29'/><l>Sı-le-reqͥſtret δ&apos;eſtranges paıʒ</l>
+					<lb facs='#facs_4_region_1552570354781_766l30'/><l> par l&apos;eſtoıle qͥ aꝑut auſı</l>
+					<lb facs='#facs_4_region_1552570354781_766l31'/><l>Ꝺe ceſ  .vıı. ars q̃ ıe-ſı vos δeuıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l32'/><l>Lut ıl en-lıure treſtot ıel vos pleuís</l>
+					<lb facs='#facs_4_region_1552570354781_766l33'/><l>a nıgromance au-δeraın le-mıſt</l>
+					<lb facs='#facs_4_region_1552570354781_766l34'/><l>Ce eſt .vn. art δeſ vı. le-pl⁹ haís</l>
+					<lb facs='#facs_4_region_1552570354781_766l35'/><l>Q̃r lı-δeableſ en eſt tot poſteıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l36'/><l>Qͥ δ&apos;eſt art apꝛent ıel vos pleuıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l37'/><l>N&apos;eſt mıe mout δu-δeable haıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l38'/><l>Par ıceſt art ſoıt l&apos;en leſ larecıns</l>
+					<lb facs='#facs_4_region_1552570354781_766l39'/><l>Qͤ larons font ⁊ ꝑ nuıt ⁊ par δís</l>
+					<lb facs='#facs_4_region_1552570354781_766l40'/><l> ſ&apos;en ſet on lef abaıʒ δeſ maſtíns</l>
+					<lb facs='#facs_4_region_1552570354781_766l41'/><l>Jl n&apos;eſt v-mont oıſıau tant ſoıt petıt</l>
+					<lb facs='#facs_4_region_1552570354781_766l42'/><l>ne tant ſoıt grant m͛uelloʒ ne foꝛnís</l>
+					<lb facs='#facs_4_region_1552570354781_766l43'/><l>Qͥl ne ſeuſt ſa raıſon ⁊ ſeſ δís</l>
+					<lb facs='#facs_4_region_1552570354781_766l44'/><l>De-luı meıſme faıt bıen vne ꝑtrıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l45'/><l>Ov .ı. eſtoꝛ fauꝯ ou eſm͛ıs</l>
+					<lb facs='#facs_4_region_1552570354781_766l46'/><l>De .ıı. toꝛchaſ faıt ıl .ıı. foꝛs roncís</l>
+					<lb facs='#facs_4_region_1552570354781_766l47'/><l>Ja-ne-ſeroıt en-ſı-foꝛt pͥſon mís</l>
+					<lb facs='#facs_4_region_1552570354781_766l48'/><l>Qͥl n&apos;ẽ ıſſıſt aıns qͥl fuſt mıeδís</l>
+					<lb facs='#facs_4_region_1552570354781_766l49'/><l>Ceus δe-laıenſ aroıt en .ı. ıoꝛ pͥs</l>
+				
+			
+            <cb facs='#facs_4_region_1552570366857_769'/>
+				
+					<lb facs='#facs_4_region_1552570366857_769l1'/><l> tot δeſtruıt le paıſ  bꝛuı</l>
+					<lb facs='#facs_4_region_1552570366857_769l2'/><l> ſ&apos;ıl voloıent toʒ leſ pꝛenδꝛoıent vı́s</l>
+					<lb facs='#facs_4_region_1552570366857_769l3'/><l>Ja-n&apos;en-ſeroıt nıſ .ı. tot ſol malmı́s</l>
+					<lb facs='#facs_4_region_1552570366857_769l4'/><l>ne n&apos;í aroít mellee nı eſtrıf</l>
+					<lb facs='#facs_4_region_1552570366857_769l5'/><l><unclear>Mout aδeſens</unclear> ce-lı-δıt amaurís</l>
+					<lb facs='#facs_4_region_1552570366857_769l6'/><l>Pleuſt a-δıeu le-roı δe-paraδís</l>
+					<lb facs='#facs_4_region_1552570366857_769l7'/><l>Qͤ ıl fuſt oꝛe entre nos cı aſſıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l9'/><l>Sı-δeſtruıroı́t nos moꝛtel enemís</l>
+					<lb facs='#facs_4_region_1552570366857_769l10'/><l>Qͥ ne nos pͥſent vallant .ı. parıſı</l>
+					<lb facs='#facs_4_region_1552570366857_769l11'/><l>neſ pꝛenδꝛıon en .x. ans aꝯplıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l12'/><l>Manδeʒ le ſıre ce a-δıt ernaís</l>
+					<lb facs='#facs_4_region_1552570366857_769l13'/><l>Mout volentıers ce-a-δıt anſeís</l>
+					<lb facs='#facs_4_region_1552570366857_769l14'/><l>Q̃r ꝑ ıhũ qͥ en-la-croıʒ fu mís</l>
+					<lb facs='#facs_4_region_1552570366857_769l15'/><l>foꝛtment δeſıre q̃ cıſt chaſtıau ſoıt pͥs</l>
+					<lb facs='#facs_4_region_1552570366857_769l16'/><l> <unclear>ſ&apos;aı</unclear> grant δote δe-ceuſ δe-mon paíʒ</l>
+					<lb facs='#facs_4_region_1552570366857_769l17'/><l>Qͤ ne ſ&apos;ı metent paıen ⁊ ſaraſín</l>
+					<lb facs='#facs_4_region_1552570366857_769l18'/><l>Jl en apele ſon vallet <unclear>telamın</unclear></l>
+					<lb facs='#facs_4_region_1552570366857_769l19'/><l>v⁹ en-ıroıʒ bıau-frere en mon paıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l20'/><l>voer ma-m͛e <unclear>charıſſe</unclear> o-le-cl͛r vís</l>
+					<lb facs='#facs_4_region_1552570366857_769l21'/><l>A floꝛıuıle la-cıte ſegnoꝛıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l22'/><l>Salueʒ moí δıſt ıl toʒ meſ amís</l>
+					<lb facs='#facs_4_region_1552570366857_769l23'/><l>Ꝺıteſ <unclear>a-tule</unclear> quí eſt lı-mıen amıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l24'/><l> reueneſ par aıle le-país</l>
+					<lb facs='#facs_4_region_1552570366857_769l25'/><l>Qͥl me ſecoꝛe poꝛ-δıeu δe-ꝑaδıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l26'/><l>Q̃r lı-lınage fromont qͥ fu ıaδıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l27'/><l>a moꝛt mõ ꝑe g͛b͛t le-bñ marchís<note>bñ ou bũ ? en toutes lettres donne &apos;bon&apos;…</note></l>
+					<lb facs='#facs_4_region_1552570366857_769l28'/><l>Oꝛ leſ auon en .ı. chaſtel aſſís</l>
+					<lb facs='#facs_4_region_1552570366857_769l29'/><l>Meſ tant eſt foꝛt δe-mur ⁊ δe-palıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l30'/><l> δe gıronδe δont eſt roıδe lı-fíʒ</l>
+					<lb facs='#facs_4_region_1552570366857_769l31'/><l>Qͤ neſ-pꝛenδꝛon en .x ans aꝯplís</l>
+					<lb facs='#facs_4_region_1552570366857_769l32'/><l>volentıers ſıre ce a-δıt tel_amín</l>
+					<lb facs='#facs_4_region_1552570366857_769l33'/><l>Son erre atoꝛne ſı-eſt δe-l&apos;oſt ꝑtıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l34'/><l>Lvı q̃r ſ&apos;en-toꝛne ⁊ eſt au-chemín Mís</l>
+					<lb facs='#facs_4_region_1552570366857_769l35'/><l>aſ-grans ıoꝛneeʒ treſpaſſe le-país</l>
+					<lb facs='#facs_4_region_1552570366857_769l36'/><l>Paſſent leſ mons le-uaus ⁊ leſ larís</l>
+					<lb facs='#facs_4_region_1552570366857_769l37'/><l>tant qu&apos;en gaſcoıgne ſe-ſont au-tͤs-ıoꝛ-mís</l>
+					<lb facs='#facs_4_region_1552570366857_769l38'/><l>Oꝛ vos leron δe-ceuſ eſter ící</l>
+					<lb facs='#facs_4_region_1552570366857_769l39'/><l>Sı vos δıron δu-bon vaſſal gerín</l>
+					<lb facs='#facs_4_region_1552570366857_769l40'/><l>De ſon neueu lı vallet mal_uoıſín </l>
+					<lb facs='#facs_4_region_1552570366857_769l41'/><l>Qͣ armeſ vınδꝛet pluſ δe .xl.M</l>
+					<lb facs='#facs_4_region_1552570366857_769l42'/><l><unclear>Deſ mons δ&apos;anſaı ı-eſt venu qͣns .G.</unclear></l>
+					<lb facs='#facs_4_region_1552570366857_769l43'/><l>a bar ſur aube vinrent ꝑ .ı. marsδí</l>
+					<lb facs='#facs_4_region_1552570366857_769l44'/><l>Cıl en remaıne pl⁹ δe .xııȷ. mıl</l>
+					<lb facs='#facs_4_region_1552570366857_769l45'/><l> cıl δe meſ ı-out grant gent tramıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l46'/><l>La veıſſıeʒ tant eſcu vert ⁊ bıs</l>
+					<lb facs='#facs_4_region_1552570366857_769l47'/><l>L&apos;enſoıgne poꝛte <unclear>δeſ-mons δ&apos;anſaı qͣns .G.</unclear></l>
+					<lb facs='#facs_4_region_1552570366857_769l48'/><l>aınſ le quart ıoꝛ vınδꝛet <unclear>a-monſeguın</unclear></l>
+					<lb facs='#facs_4_region_1552570366857_769l49'/><l>Q̃r ſı le coıle lı bon vaſſal gerın</l>
+				</lg>
+			
+        </body>
+    </text>
+</TEI>

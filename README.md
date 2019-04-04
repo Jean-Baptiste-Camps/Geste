@@ -40,3 +40,25 @@ Le reste est mis à disposition selon une licence Creative Commons Attribution -
 
 _Geste: un corpus de chansons de geste_, dir. Jean-Baptiste Camps, avec la collab. d'Elena Albarran, Alice Cochet & Lucence Ing, Paris, 2016-…, <a href="http://github.com/Jean-Baptiste-Camps/Geste">http://github.com/Jean-Baptiste-Camps/Geste</a>.
 
+## Organisation de l'entrepôt
+
+La représentation canonique des données est contenue dans le dossier:
+
+- `xml`: textes du corpus geste: éditions numérisées (ed\_), transcriptions à nouveaux frais (transcr\_);
+
+Le modèle est contenu dans le dossier:
+
+- `odd`
+
+Les données sont en outre disponibles en format:
+
+- `tsv`: avec l'annotation linguistique;
+- `txt`: exports en texte brut;
+- `nemo-data`: conversion au format CapiTainS, pour publication.
+
+
+
+
+
+
+

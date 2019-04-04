@@ -1,0 +1,2438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="transcr_GarLorr_X"
+     type="transcr"
+     xml:lang="fr"
+     corresp="jns5643"
+     version="5">
+    <teiHeader>
+      <fileDesc>
+            <titleStmt>
+                <title type="main">Garin le Lorrain</title>
+                <title type="sub">Transcription allographétique du fragment de la
+                    bibliothèque vaticane (Vat. lat. 273)</title>
+                <editor>
+               <persName xml:id="JBC">Jean-Baptiste Camps</persName>
+            </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>VATICANO (CITTA DEL)</country>
+                        <repository>Biblioteca apostolica Vaticana</repository>
+                        <!--<altIdentifier>-->
+                        <idno>Vat. lat. 00273</idno>
+                        <!--</altIdentifier>-->
+                    </msIdentifier>
+                </msDesc>
+                <biblStruct xml:id="edGL" status="draft">
+                    <analytic>
+                        <editor xml:id="Pamfilova">
+                            <persName>
+                                <forename>Xenia</forename>
+                                <surname>Pamfilova </surname>
+                            </persName>
+                        </editor>
+                        <!--<title type="main">Garin le Lorrain</title>-->
+                        <title type="sub">Fragments de manuscrits de chansons de geste</title>
+                        <idno type="DOI">10.3406/roma.1931.4053</idno>
+                    </analytic>
+                    <monogr>
+                        <title>Romania</title>
+                        <imprint>
+                            <pubPlace>Paris</pubPlace>
+                            <date>1931</date>
+                        </imprint>
+                        <biblScope unit="issue" n="57">t. 57</biblScope>
+                        <biblScope unit="page" from="504" to="547">504-547</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+      <encodingDesc>
+         <refsDecl n="CTS">
+            <cRefPattern n="mot"
+                         matchPattern="(\w+)(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
+               <p>Ce pointeur extrait les mots</p>
+            </cRefPattern>
+            <cRefPattern n="vers"
+                         matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+               <p>Ce pointeur extrait les vers</p>
+            </cRefPattern>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+            <creation>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">traits champ. et
+                    pic.</origPlace>
+                <origDate cert="unknown"
+                      resp="DEAF"
+                      notBefore="1175"
+                      notAfter="1200"
+                      type="dateComposition">1175-1200</origDate>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">traits de l’Est (mais
+                    peuvent remonter à l’original)</origPlace>
+                <origDate cert="unknown" resp="unknown" type="dateManuscrit">inconnue</origDate>
+            <!-- JBC: XIIIe à vue de nez -->
+            </creation>
+        </profileDesc>
+      <revisionDesc status="draft">
+            <change when="2019-02" who="#JBC" status="draft">Transcription à la Bibliothèque Vaticane</change>
+        </revisionDesc>
+   </teiHeader>
+    <text xml:lang="fr" xml:base="urn:cts:froLit:geste.jns5643.transcr_GarLorr_X">
+        <body>
+            <lg n="I" type="laisse" xml:id="L_001">
+                <gap reason="lacuna"/>
+                <cb n="a"/>
+                <l xml:id="edGL_l_1" n="1">
+                    <w lemma="devant" type="POS=PRE">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                  </hi>
+                  <hi rend="initiale detach">e</hi>
+                  <choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>a<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="Vaunuble" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">
+                  <choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>aunuble</w>
+                    <w lemma="avoir"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
+                  rend="aggl">a</w>
+                    <w lemma="Rigaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <expan>Ri<ex>gaus</ex>
+                     </expan>
+                     <abbr>
+                        <pc type="orig">.</pc>RI<pc type="orig">.</pc>
+                     </abbr>
+                  </choice>
+               </w>
+                    <w lemma="siege" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>ege</w>
+                    <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">m<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="9"/>
+                <l xml:id="edGL_l_2" n="2">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                     <hi rend="initiale detach">O</hi>nt</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>l</w>
+                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="gent1" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>j</reg>
+                        <orig>ı</orig>
+                     </choice>e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>t</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
+                     <expan>
+                        <ex>m</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+                  <choice>
+                     <expan>p<ex>er</ex>
+                     </expan>
+                     <abbr>ꝑ</abbr>
+                  </choice>er<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>z</reg>
+                     <orig>ʒ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">.</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="10"/>
+                <l xml:id="edGL_l_3" n="3">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="öil" type="POS=ADVgen|DEGRE=p">
+                     <hi rend="initiale detach">O</hi>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>l</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=f|CAS=n">ma</w>
+                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>ame</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="foi" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r">
+                     <choice>
+                        <expan>q<ex>ue</ex>
+                        </expan>
+                        <abbr>q̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>o<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <expan>s<ex>aint</ex>
+                        </expan>
+                        <abbr>s̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="Denis" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>en<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="11"/>
+                <l xml:id="edGL_l_4" n="4">
+                    <q>
+                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">
+                     <hi rend="initiale detach">b</hi>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>o<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <num>
+                     <w lemma="trois" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">.<choice>
+                           <reg>i</reg>
+                           <orig>ı</orig>
+                        </choice>
+                        <choice>
+                           <reg>i</reg>
+                           <orig>ı</orig>
+                        </choice>
+                        <choice>
+                           <reg>i</reg>
+                           <orig>ȷ</orig>
+                        </choice>.</w>
+                        <w lemma="mil1" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">
+                        <choice>
+                           <reg>m</reg>
+                           <orig>M</orig>
+                        </choice>.</w>
+                  </num>
+                        <w lemma="de" type="POS=PRE">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e</w>
+                        <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                     <choice>
+                        <expan>ch<ex>eva</ex>l<ex>ie</ex>r</expan>
+                        <abbr>ch<c rend="apos">̃</c>r</abbr>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="gentil" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p">gent<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="12"/>
+                <l xml:id="edGL_l_5" n="5">
+                    <w lemma="huimais" type="POS=ADVgen|DEGRE=-">
+                  <hi rend="initiale detach">h</hi>u<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <orig>́</orig>me<reg>́</reg>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="devoir"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=p"
+                  cert="low">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>e<choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>o<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+               <note resp="#JBC">La nature 
+                            exacte de la finale est indécidable, en l'absence d'occurrence
+                            résolue.</note>
+                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <expan>Be<ex>gon</ex>
+                     </expan>
+                     <abbr>be<pc type="orig">.</pc>
+                     </abbr>
+                  </choice>
+               </w>
+                    <w lemma="revenir" type="POS=VERinf">re<choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>en<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <orig>́</orig>r</w>
+                    <pc type="supplied">:</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="13"/>
+                <l xml:id="edGL_l_6" n="6">
+                    <w lemma="riche" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>r</reg>
+                        <orig>R</orig>
+                     </choice>
+                  </hi>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>che</w>
+                    <w lemma="servise" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>er<space unit="chars" quantity="1"/>
+                  <choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>e</w>
+                    <w lemma="en2" type="POS=PROadv">e<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+                    <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>t</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
+                     <expan>
+                        <ex>m</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+                  <choice>
+                     <expan>p<ex>er</ex>
+                     </expan>
+                     <abbr>ꝑ</abbr>
+                  </choice>er<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>z</reg>
+                     <orig>ʒ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">'</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="14"/>
+                <l xml:id="edGL_l_7" n="7">
+                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                            <abbr>
+                        <hi rend="initiale detach">b</hi>eg̃</abbr>
+                            <expan>Beg<ex>on</ex>
+                     </expan>
+                        </choice>
+               </w>
+                    <w lemma="emporter2" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">empo<choice>
+                     <reg>r</reg>
+                     <orig>ꝛ</orig>
+                  </choice>te<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">au</w>
+                    <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">loh<choice>
+                     <expan>
+                        <ex>er</ex>
+                     </expan>
+                     <abbr>͛</abbr>
+                  </choice>an</w>
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <reg>g</reg>
+                     <orig>G</orig>
+                  </choice>ar<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+                    <pc type="supplied">,</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="15"/>
+                <l xml:id="edGL_l_8" n="8">
+                    <w lemma="Ardenne" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">
+                  <hi rend="initiale detach">a</hi>r<choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>ane</w>
+                    <w lemma="laissier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">le<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>e<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="en1" type="POS=PRE">e<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+                    <w lemma="Ardenois" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">ar<choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>eno<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>o<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="metre2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">m<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">,</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="16"/>
+                <l xml:id="edGL_l_9" n="9">
+                    <w lemma="en1" type="POS=PRE">
+                  <hi rend="initiale detach">e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </hi>
+               </w>
+                    <w lemma="Lohereine" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">loh<choice>
+                     <expan>
+                        <ex>er</ex>
+                     </expan>
+                     <abbr>͛</abbr>
+                  </choice>a<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>ne</w>
+                    <w lemma="de" type="POS=PRE" rend="elision">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
+                    <w lemma="part1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">
+                  <choice>
+                     <expan>p<ex>ar</ex>
+                     </expan>
+                     <abbr>ꝑ</abbr>
+                  </choice>t</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>o<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="guenchir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ganch<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">.</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="17"/>
+                <l xml:id="edGL_l_10" n="10">
+                    <w lemma="de" type="POS=PRE">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                  </hi>e</w>
+                    <w lemma="ci" type="POS=ADVgen|DEGRE=-">c<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w lemma="Gorde" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">go<choice>
+                     <reg>r</reg>
+                     <orig>ꝛ</orig>
+                  </choice>
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>e</w>
+                    <w lemma="ne1" type="POS=ADVneg">ne</w>
+                    <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p">p<choice>
+                     <expan>
+                        <ex>r</ex>i</expan>
+                     <abbr>ͥ</abbr>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>tre<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="onque" type="POS=ADVgen|DEGRE=-">on<choice>
+                     <expan>q<ex>ue</ex>
+                     </expan>
+                     <abbr>q̃</abbr>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">f<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="18"/>
+                <cb n="b"/>
+                <gap reason="lacuna"/>
+                <lb n="19"/>
+                <l xml:id="edGL_l_11" n="11">
+                    <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=f|CAS=r">
+                  <hi rend="initiale detach">c</hi>e<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="damoisele" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>amo<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>ele<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="chanter" type="POS=VERinf">chant<choice>
+                     <expan>
+                        <ex>er</ex>
+                     </expan>
+                     <abbr>͛</abbr>
+                  </choice>
+               </w>
+                    <w lemma="et" type="POS=CONcoo" rend="aggl">
+                  <choice>
+                     <expan>
+                        <ex>et</ex>
+                     </expan>
+                     <abbr></abbr>
+                  </choice>
+               </w>
+                    <w lemma="esbaudir" type="POS=VERinf">e<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>bau<choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>r</w>
+                    <pc type="supplied">:</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="20"/>
+                <l xml:id="edGL_l_12" n="12">
+                    <w lemma="haut" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">
+                  <hi rend="initiale detach">h</hi>alte</w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>t</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n">la</w>
+                    <w lemma="feste1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">fe<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>te</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="chascun" type="POS=PROind|NOMB.=s|GENRE=n|CAS=n">cha<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>cu<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>alt</w>
+                    <w lemma="öir" type="POS=VERinf">o<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <reg>̈</reg>r</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="21"/>
+                <!--          <lb/>547 FRAGMENTS DE CHANSONS DE GESTE. 13-40 -->
+                <l xml:id="edGL_l_13" n="13">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">
+                     <hi rend="initiale detach">S</hi>a<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>te</w>
+                        <w lemma="Marie" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">mar<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>t</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>u<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <reg>g</reg>
+                     <orig>G</orig>
+                  </choice>ar<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">,</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="1"/>
+                <l xml:id="edGL_l_14" n="14">
+                    <q>
+                        <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>r</reg>
+                           <orig>R</orig>
+                        </choice>
+                     </hi>e<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>ne</w>
+                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>ame</w>
+                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n">q<choice>
+                        <expan>
+                           <ex>u</ex>i</expan>
+                        <abbr>ͥ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>eu</w>
+                        <w lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ten<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="2"/>
+                <l xml:id="edGL_l_15" n="15">
+                    <q>
+                        <w lemma="sauver" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">
+                     <hi rend="initiale detach">s</hi>au<choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>e</w>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">mo<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="et" type="POS=CONcoo" rend="aggl">
+                     <choice>
+                        <expan>
+                           <ex>et</ex>
+                        </expan>
+                        <abbr></abbr>
+                     </choice>
+                  </w>
+                        <w lemma="trestot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r">t<choice>
+                        <expan>
+                           <ex>r</ex>e</expan>
+                        <abbr>ͤ</abbr>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>to<choice>
+                        <reg>z</reg>
+                        <orig>ʒ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=r">me<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">am<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="3"/>
+                <l xml:id="edGL_l_16" n="16">
+                    <q>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" rend="aggl">
+                     <hi rend="initiale detach">L</hi>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">cuer<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w lemma="trembler1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">tra<choice>
+                        <expan>
+                           <ex>m</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>ble</w>
+                        <w lemma="et" type="POS=CONcoo" rend="aggl">
+                     <choice>
+                        <expan>
+                           <ex>et</ex>
+                        </expan>
+                        <abbr></abbr>
+                     </choice>
+                  </w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r">me</w>
+                        <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pre<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                        <w lemma="doloir" type="POS=VERinf">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>ol<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>r</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="4"/>
+                <l xml:id="edGL_l_17" n="17">
+                    <q>
+                        <w lemma="que4" type="POS=CONsub" rend="elision">
+                     <choice>
+                                <abbr xml:id="abbr_quil_01">
+                           <hi rend="initiale detach">Q</hi>ͥl</abbr>
+                                <expan>q<ex>u</ex>
+                        </expan>
+                            </choice>
+                  </w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
+                     <choice>
+                                <abbr corresp="#abbr_quil_01"/>
+                                <expan>il</expan>
+                            </choice>
+                  </w>
+                        <w lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i"
+                     rend="elision">m</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="avis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">a<choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <orig>́</orig>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="que4" type="POS=CONsub" rend="elision">
+                     <choice>
+                                <abbr xml:id="abbr_quil_02">qͥl</abbr>
+                                <expan>q<ex>u</ex>
+                        </expan>
+                            </choice>
+                  </w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
+                     <choice>
+                                <abbr corresp="#abbr_quil_02"/>
+                                <expan>
+                           <choice>
+                              <reg>i</reg>
+                              <orig>ı</orig>
+                           </choice>l</expan>
+                            </choice>
+                  </w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>o<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e</w>
+                        <w lemma="partir" type="POS=VERinf">
+                     <choice>
+                        <expan>p<ex>ar</ex>
+                        </expan>
+                        <abbr>ꝑ</abbr>
+                     </choice>t<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>r</w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="5"/>
+                <l xml:id="edGL_l_18" n="18">
+                    <q>
+                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>d</reg>
+                           <orig>δ</orig>
+                        </choice>
+                     </hi>ex</w>
+                        <pc type="supplied">!</pc>
+                        <w lemma="se" type="POS=CONsub">
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>e</w>
+                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n" rend="elision">c</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
+                        <expan>
+                           <ex>u</ex>i</expan>
+                        <abbr>ͥ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>o<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e</w>
+                        <w lemma="avenir" type="POS=VERinf">a<choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>en<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <orig>́</orig>r</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="6"/>
+                <l xml:id="edGL_l_19" n="19">
+                    <q>
+                        <w lemma="doner" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>d</reg>
+                           <orig>δ</orig>
+                        </choice>
+                     </hi>one<choice>
+                        <reg>z</reg>
+                        <orig>ʒ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>re</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="par" type="POS=PRE">
+                     <choice>
+                        <expan>p<ex>ar</ex>
+                        </expan>
+                        <abbr>ꝑ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="tens" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ten<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="vëoir" type="POS=VERinf">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>e<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>r</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="7"/>
+                <l xml:id="edGL_l_20" n="20">
+                    <q>
+                        <w lemma="et" type="POS=CONcoo">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <expan>
+                              <ex>et</ex>
+                           </expan>
+                           <abbr></abbr>
+                        </choice>
+                     </hi>
+                  </w>
+                        <w lemma="de" type="POS=PRE" rend="elision">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
+                        <w lemma="chose" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">cho<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>e</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="se" type="POS=CONsub">
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>e</w>
+                        <w lemma="tu" type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=i">to<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="plaire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ple<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r"
+                     rend="elision">m</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="escremir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>c<choice>
+                        <expan>
+                           <ex>r</ex>e</expan>
+                        <abbr>ͤ</abbr>
+                     </choice>m<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="supplied">»</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="8"/>
+                <cb n="c"/>
+                <gap reason="lacuna"/>
+                <!-- TODO: le vers précédent est peut-être en partie récupérable -->
+                <lb n="9"/>
+                <l xml:id="edGL_l_21" n="21">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="dire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>d</reg>
+                           <orig>δ</orig>
+                        </choice>
+                     </hi>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>te<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="de" type="POS=PRE" rend="elision">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="où" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">o</w>
+                        <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>ene<choice>
+                        <reg>z</reg>
+                        <orig>ʒ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>os</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="10"/>
+                <l xml:id="edGL_l_22" n="22">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="de" type="POS=PRE">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>d</reg>
+                           <orig>δ</orig>
+                        </choice>
+                     </hi>e</w>
+                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <expan>s<ex>aint</ex>
+                        </expan>
+                        <abbr>s̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="Amant" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">amant</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="de" type="POS=PRE">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e</w>
+                        <w lemma="ce2" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">ce</w>
+                        <w lemma="nostre" type="POS=ADJpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <expan>n<ex>ost</ex>re</expan>
+                        <abbr>nrẽ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">pa<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="11"/>
+                <l xml:id="edGL_l_23" n="23">
+                    <q>
+                        <w lemma="movoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=1|NOMB.=p">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>m</reg>
+                           <orig>M</orig>
+                        </choice>
+                     </hi>eume<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">no<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w rend="elision" lemma="ne1" type="POS=ADVneg">n</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="avoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
+                     rend="aggl">a</w>
+                        <w lemma="mie" type="POS=ADVneg">m<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e</w>
+                        <num>
+                            <pc type="orig">.</pc>
+                        <w lemma="quinze" type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r">xv</w>
+                        <pc type="orig">.</pc>
+                  </num>
+                        <w lemma="di" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="12"/>
+                <l xml:id="edGL_l_24" n="24">
+                    <q>
+                        <pc type="supplied">—</pc>
+                        <w lemma="quel1" type="POS=DETint|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                                <abbr>
+                           <hi rend="initiale detach">Q</hi>̃</abbr>
+                                <expan>Q<ex>ue</ex>
+                        </expan>
+                            </choice>x</w>
+                        <w lemma="ome" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">ho<choice>
+                        <expan>
+                           <ex>m</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n">ce</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" rend="elision">q</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="en1" type="POS=PRE">a<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="cel" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r">cele</w>
+                        <w lemma="biere" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">b<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>ere</w>
+                        <w lemma="jesir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">g<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="13"/>
+                <l xml:id="edGL_l_25" n="25">
+                    <q>
+                        <w lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
+                     rend="aggl">
+                     <hi rend="initiale detach">E</hi>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>l</w>
+                        <w lemma="malade" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">mala<choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="o3" type="POS=CONcoo" rend="aggl">o</w>
+                        <w lemma="navrer" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">na<choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>r</ex>e</expan>
+                        <abbr>ͤ</abbr>
+                     </choice>
+                     <choice>
+                        <reg>z</reg>
+                        <orig>ʒ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="o3" type="POS=CONcoo">o</w>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">oc<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <pc type="supplied">»</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="14"/>
+                <l xml:id="edGL_l_26" n="26">
+                    <w lemma="et" type="POS=CONcoo">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <expan>
+                           <ex>et</ex>
+                        </expan>
+                        <abbr></abbr>
+                     </choice>
+                  </hi>
+               </w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>t</w>
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <w lemma="abé1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">abe<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">:</pc>
+                    <pc type="supplied">«</pc>
+                    <q>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>os</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w lemma="savoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=2|NOMB.=p">
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>auro<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>z</reg>
+                        <orig>ʒ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="par" type="POS=PRE">
+                     <choice>
+                        <expan>p<ex>ar</ex>
+                        </expan>
+                        <abbr>ꝑ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">m<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="15"/>
+                <l xml:id="edGL_l_27" n="27">
+                    <q>
+                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" rend="elision">C</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="vostre" type="POS=DETpos|PERS.=2|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <expan>v<ex>ost</ex>re</expan>
+                        <abbr>urẽ</abbr>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>us</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <expan>Be<ex>gues</ex>
+                        </expan>
+                        <abbr>
+                           <pc type="orig">.</pc>be<pc type="orig">.</pc>
+                        </abbr>
+                     </choice>
+                  </w>
+                        <w lemma="de" type="POS=PRE">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e</w>
+                        <w lemma="Belin" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">bel<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>n</w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="16"/>
+                <l xml:id="edGL_l_28" n="28">
+                    <q>
+                        <w lemma="en1" type="POS=PRE">
+                     <hi rend="initiale detach">e</hi>n</w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
+                        <w lemma="forest" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <expan>Fro<ex>mont</ex>
+                        </expan>
+                        <abbr>
+                           <pc type="orig">.</pc>fro<pc type="orig">.</pc>
+                        </abbr>
+                     </choice>
+                  </w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">lo</w>
+                        <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">po<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>te<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>f</w>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="17"/>
+                <l xml:id="edGL_l_29" n="29">
+                    <q>
+                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
+                     <hi rend="initiale detach">L</hi>o</w>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>os</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="avoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
+                     rend="aggl">a</w>
+                        <w lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
+                     rend="elision">l</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="en2" type="POS=PROadv">en</w>
+                        <w lemma="detrenchier" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>etranch<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e<reg>́</reg>
+                  </w>
+                        <w lemma="et" type="POS=CONcoo">
+                     <choice>
+                        <expan>
+                           <ex>et</ex>
+                        </expan>
+                        <abbr></abbr>
+                     </choice>
+                  </w>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">.</pc>
+                        <!--<w/>-->
+                    </q>
+                    <pc type="supplied">»</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="18"/>
+                <l xml:id="edGL_l_30" n="30">
+                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">
+                  <hi rend="initiale detach">L</hi>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>us</ex>
+                     </expan>
+                     <abbr>⁹</abbr>
+                  </choice>
+               </w>
+                    <w lemma="il"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
+                  rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="entendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ente<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <pc type="supplied">,</pc>
+                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w lemma="poi" type="POS=ADVgen|DEGRE=-">po</w>
+                    <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="enragier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>ra<choice>
+                     <reg>j</reg>
+                     <orig>ı</orig>
+                  </choice>e</w>
+                    <w lemma="vif" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">
+                  <choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="orig">.</pc>
+                </l>
+                <cb n="d"/>
+                <lb n="19"/>
+                <gap/>
+                <lb n="20"/>
+                <l xml:id="edGL_l_31" n="31">
+                    <w lemma="grant" type="POS=OUT">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>g</reg>
+                        <orig>G</orig>
+                     </choice>
+                  </hi>rant</w>
+                    <w lemma="duel" type="POS=OUT">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>uel</w>
+                    <w lemma="et" type="POS=CONcoo">
+                  <choice>
+                     <expan>
+                        <ex>et</ex>
+                     </expan>
+                     <abbr></abbr>
+                  </choice>
+               </w>
+                    <w lemma="grant" type="POS=OUT">grant</w>
+                    <w lemma="cri" type="POS=OUT">cr<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="21"/>
+                <l xml:id="edGL_l_32" n="32">
+                    <w lemma="nëis" type="POS=ADVgen|DEGRE=-">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>n</reg>
+                        <orig>N</orig>
+                     </choice>
+                  </hi>e<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>eu</w>
+                    <w lemma="toner" type="POS=VERppa|NOMB.=s|GENRE=m|CAS=r">tona<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>t</w>
+                    <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="i2" type="POS=PROadv">
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+               </w>
+                    <w lemma="peser" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=s">po<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>t</w>
+                    <w lemma="en2" type="POS=PROadv">an</w>
+                    <w lemma="öir" type="POS=VERinf">o<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <reg>̈</reg>r</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="22"/>
+                <l xml:id="edGL_l_33" n="33">
+                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                  <hi rend="initiale detach">G</hi>ar<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>e</w>
+                    <w lemma="pasmer" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pa<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>me</w>
+                    <w lemma="que4" type="POS=CONsub">
+                  <choice>
+                     <expan>q<ex>ue</ex>
+                     </expan>
+                     <abbr>q̃</abbr>
+                  </choice>
+               </w>
+                    <w lemma="ne1" type="POS=ADVneg">ne</w>
+                    <w lemma="soi1"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
+                  rend="elision">
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="en2" type="POS=PROadv">e<choice>
+                     <expan>
+                        <ex>n</ex>
+                     </expan>
+                     <abbr>̃</abbr>
+                  </choice>
+               </w>
+                    <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pot</w>
+                    <w lemma="tenir1" type="POS=VERinf">ten<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>r</w>
+                    <pc type="supplied">.</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="23"/>
+                <l xml:id="edGL_l_34" n="34">
+                    <w lemma="a3+le"
+                  type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r"
+                  rend="aggl">
+                  <hi rend="initiale detach">a</hi>u</w>
+                    <w lemma="relever" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">rele<choice>
+                     <reg>v</reg>
+                     <orig>u</orig>
+                  </choice>
+                  <choice>
+                     <expan>
+                        <ex>er</ex>
+                     </expan>
+                     <abbr>͛</abbr>
+                  </choice>
+               </w>
+                    <w lemma="or4" type="POS=ADVgen|DEGRE=-">o<choice>
+                     <reg>r</reg>
+                     <orig>ꝛ</orig>
+                  </choice>
+               </w>
+                    <w lemma="öir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">o<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>e<choice>
+                     <reg>z</reg>
+                     <orig>ʒ</orig>
+                  </choice>
+               </w>
+                    <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=n|CAS=r">
+                  <choice>
+                     <expan>q<ex>ue</ex>
+                     </expan>
+                     <abbr>q̃</abbr>
+                  </choice>
+               </w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>l</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>t</w>
+                    <pc type="supplied">:</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="24"/>
+                <l xml:id="edGL_l_35" n="35">
+                    <pc type="supplied">«</pc>
+                    <q>
+                        <w lemma="por2" type="POS=PRE">
+                     <hi rend="initiale detach">p</hi>o<choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="coi2" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">co<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">b<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>au</w>
+                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere</w>
+                        <pc type="supplied">,</pc>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>os</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
+                        <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                     <choice>
+                        <expan>Fro<ex>mont</ex>
+                        </expan>
+                        <abbr>
+                           <pc type="orig">.</pc>fro<pc type="orig">.</pc>
+                        </abbr>
+                     </choice>
+                  </w>
+                  <note resp="#JBC">La consonne finale est indécidable (entre -t, -z ou -s), le fragment n'ayant
+                            pas d'occurrence développée.</note>
+                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <pc type="supplied">?</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="25"/>
+                <l xml:id="edGL_l_36" n="36">
+                    <w lemma="ja" type="POS=ADVgen|DEGRE=-">
+                  <hi rend="initiale detach">
+                     <choice>
+                        <reg>j</reg>
+                        <orig>J</orig>
+                     </choice>
+                  </hi>a</w>
+                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">
+                  <choice>
+                     <reg>d</reg>
+                     <orig>δ</orig>
+                  </choice>
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>o<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>t</w>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>l</w>
+                    <w lemma="que4" type="POS=CONsub" rend="elision">
+                  <choice>
+                            <abbr xml:id="abbr_quil_03">qͥl</abbr>
+                            <expan>q<ex>u</ex>
+                     </expan>
+                        </choice>
+               </w>
+                    <pc type="supplied">'</pc>
+                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                            <abbr corresp="#abbr_quil_03"/>
+                            <expan>il</expan>
+                        </choice>
+               </w>
+                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">e<choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>to<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>t</w>
+                    <w lemma="nostre" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">
+                  <choice>
+                     <expan>n<ex>ost</ex>re</expan>
+                     <abbr>nrẽ</abbr>
+                  </choice>
+               </w>
+                    <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
+                     <reg>i</reg>
+                     <orig>ı</orig>
+                  </choice>
+                  <choice>
+                     <reg>s</reg>
+                     <orig>ſ</orig>
+                  </choice>
+               </w>
+                    <pc type="supplied">'</pc>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="26"/>
+                <l xml:id="edGL_l_37" n="37">
+                    <q>
+                        <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>n</reg>
+                           <orig>N</orig>
+                        </choice>
+                     </hi>o<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=1|NOMB.=p">e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>en</w>
+                        <w lemma="guerroiier2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">g<choice>
+                        <expan>
+                           <ex>uer</ex>
+                        </expan>
+                        <abbr>͛</abbr>
+                     </choice>ro<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>e<reg>́</reg>
+                  </w>
+                        <w lemma="et" type="POS=CONcoo">
+                     <choice>
+                        <expan>
+                           <ex>et</ex>
+                        </expan>
+                        <abbr></abbr>
+                     </choice>
+                  </w>
+                        <w lemma="häir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ha<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>
+                  </w>
+                        <pc type="supplied">,</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="27"/>
+                <l xml:id="edGL_l_38" n="38">
+                    <q>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" rend="aggl">
+                     <hi rend="initiale detach">L</hi>a</w>
+                        <w lemma="pais" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">pe<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                        <w lemma="faire" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n">fete</w>
+                        <w lemma="devant" type="POS=PRE">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e<space unit="chars" quantity="1"/>
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>a<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ro<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">pep<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>
+                  </w>
+                        <pc type="supplied">.</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="28"/>
+                <l xml:id="edGL_l_39" n="39">
+                    <q>
+                        <w lemma="or4" type="POS=ADVgen|DEGRE=-">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>o</reg>
+                           <orig>O</orig>
+                        </choice>
+                     </hi>
+                     <choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <expan>
+                           <ex>os</ex>
+                        </expan>
+                        <abbr>⁹</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">o<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <w lemma="morir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">mo<choice>
+                        <reg>r</reg>
+                        <orig>ꝛ</orig>
+                     </choice>t</w>
+                        <pc type="supplied">!</pc>
+                        <w lemma="ja" type="POS=ADVgen|DEGRE=-">
+                     <choice>
+                        <reg>j</reg>
+                        <orig>ı</orig>
+                     </choice>a</w>
+                        <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="en2" type="POS=PROadv">en</w>
+                        <w lemma="pöoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p">pu<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>e<choice>
+                        <expan>
+                           <ex>n</ex>
+                        </expan>
+                        <abbr>̃</abbr>
+                     </choice>t</w>
+                        <w lemma="jöir" type="POS=VERinf">
+                     <choice>
+                        <reg>j</reg>
+                        <orig>ı</orig>
+                     </choice>o<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <reg>̈</reg>r</w>
+                        <pc type="supplied">!</pc>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <lb n="29"/>
+                <l xml:id="edGL_l_40" n="40">
+                    <q>
+                        <w lemma="mais1" type="POS=CONcoo">
+                     <hi rend="initiale detach">
+                        <choice>
+                           <reg>m</reg>
+                           <orig>M</orig>
+                        </choice>
+                     </hi>e<choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>
+                  </w>
+                        <w lemma="par" type="POS=PRE">
+                     <choice>
+                        <expan>p<ex>ar</ex>
+                        </expan>
+                        <abbr>ꝑ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="cel" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">celu<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                  </w>
+                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
+                        <expan>
+                           <ex>u</ex>i</expan>
+                        <abbr>ͥ</abbr>
+                     </choice>
+                  </w>
+                        <w lemma="de" type="POS=PRE">
+                     <choice>
+                        <reg>d</reg>
+                        <orig>δ</orig>
+                     </choice>e</w>
+                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" rend="elision">l</w>
+                        <pc type="supplied">'</pc>
+                        <w lemma="aigue" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">e<choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>e</w>
+                        <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>
+                     <choice>
+                        <reg>s</reg>
+                        <orig>ſ</orig>
+                     </choice>t</w>
+                        <w lemma="vin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                     <choice>
+                        <reg>v</reg>
+                        <orig>u</orig>
+                     </choice>
+                     <choice>
+                        <reg>i</reg>
+                        <orig>ı</orig>
+                     </choice>n</w>
+                    </q>
+                    <pc type="orig">.</pc>
+                </l>
+                <gap unit="" reason="lacuna"/>
+            </lg>
+        </body>
+    </text>
+</TEI>

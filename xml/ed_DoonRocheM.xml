@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../../odd/out/Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../../odd/out/Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../odd/Modele.odd"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_DoonRocheM" type="ed" xml:lang="fr" version="5">
+<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_DoonRocheM" type="ed" xml:lang="fr" version="5" corresp="jns3756">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -91,7 +90,7 @@
          </langUsage>
       </profileDesc>
        
-       <encodingDesc><refsDecl n="CTS">
+      <!-- <encodingDesc><refsDecl n="CTS">
            <cRefPattern n="mots" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:lg[@n='$1']/tei:l[@n='$2']/tei:w[@n='$3'])">
                <p>Ce pointeur pointe vers les mots du texte</p>
            </cRefPattern>
@@ -101,7 +100,7 @@
            <cRefPattern n="laisse" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:lg[@n='$1'])">
                <p>Ce pointeur pointe vers les laisses du texte</p>
            </cRefPattern>
-       </refsDecl></encodingDesc>
+       </refsDecl></encodingDesc>-->
       <revisionDesc status="draft">
           <change who="#ED" when="2018-02-19" status="draft">Ajout de la numérotation des mots pour la capitanisation</change>
          <change who="#ED" when="2018-02-19" status="draft">Numérotation des via XSL</change>
@@ -113,7 +112,7 @@
        
    </teiHeader>
 
-   <text xml:lang="fro" xml:base="urn:cts:froLit:jns47.jns3756.ed_DoonRocheM">
+   <text xml:lang="fro">
 
       <front>
          <pb n="1" facs="https://fr.wikisource.org/wiki/Page%3AAnonyme_-_Doon_de_la_Roche.djvu/1"/>

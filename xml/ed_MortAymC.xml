@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../../odd/out/Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../../odd/out/Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../odd/Modele.odd"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_MortAymC" xml:lang="fr" type="ed" version="5">
+<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_MortAymC" xml:lang="fr" type="ed" version="5" corresp="jns4161">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -86,7 +85,7 @@
                bourguignons</language>
          </langUsage>
       </profileDesc>
-      <encodingDesc>
+      <!--<encodingDesc>
          <refsDecl n="CTS">
             <cRefPattern n="mots" matchPattern="(\w+).(\w+).(\w+)"
                replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:lg[@n='$1']/tei:l[@n='$2']/tei:w[@n='$3'])">
@@ -101,7 +100,7 @@
                <p>Ce pointeur prend en compte les laisses</p>
             </cRefPattern>
          </refsDecl>
-      </encodingDesc>
+      </encodingDesc>-->
 
       <revisionDesc status="draft">
          <!-- Les notes de bas de pages n'ont pas encore réintégrés dans le body -->
@@ -123,7 +122,7 @@
          <change who="#AJ" when="2018-01-10" status="draft">Réalisation du TeiHeader</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:lang="fro" xml:base="urn:cts:froLit:jns47.jns4161.ed_MortAymC">
+   <text xml:lang="fro">
       <front>
          <div type="page_de_titre">
 
