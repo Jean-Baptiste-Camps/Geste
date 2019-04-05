@@ -100,11 +100,6 @@
         </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="mot"
-                         matchPattern="(\w+)(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
-               <p>Ce pointeur extrait les mots</p>
-            </cRefPattern>
             <cRefPattern n="vers"
                          matchPattern="(\w+)"
                          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
@@ -141,8 +136,8 @@
    </teiHeader>
 
     <!--  FRAGMENTS DE GIRBERT DE METZ  -->
-    <text xml:lang="fre" xml:base="urn:cts:froLit:geste.jns3669.ed_GerbMetzMe2">
-        <front>
+    <text xml:lang="fro" xml:base="urn:cts:froLit:geste.jns3669.ed_GerbMetzMe2">
+        <front xml:lang="fr">
             <pb n="441"
              facs="http://www.persee.fr/doc/roma_0035-8029_1905_num_34_135_5417"/>
             <head>

@@ -120,12 +120,13 @@
             <xsl:apply-templates select="@* | tei:fileDesc"/>
             <encodingDesc>
                 <refsDecl n="CTS">
-                    <cRefPattern 
+                    <!-- JBC: removing word level indexing with CapiTainS for performance -->
+                    <!--<cRefPattern 
                         n="mot"
                         matchPattern="(\w+)(\w+)"
                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
                         <p>Ce pointeur extrait les mots</p>
-                    </cRefPattern>
+                    </cRefPattern>-->
                     <cRefPattern 
                         n="vers"
                         matchPattern="(\w+)"

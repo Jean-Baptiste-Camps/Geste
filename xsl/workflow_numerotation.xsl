@@ -26,8 +26,9 @@
     </xsl:template>
     
     <xsl:template match="tei:l" mode="numerotation">
-        <xsl:variable name="number">
-            <xsl:number format="1" level="any" from="tei:text" count="tei:l[not(@n)]"/><!-- On compte ceux qui ne sont pas numérotés, car une numérotation manuelle signifie qu'il y a un vers répété -->
+        <xsl:variable name="number" select="count(preceding::tei:l[not(@n)]) + 1">
+            <!-- Removed because weird behavirou -->
+            <!--<xsl:number format="1" level="single" from="tei:text" count="tei:l[not(@n)]"/>--><!-- On compte ceux qui ne sont pas numérotés, car une numérotation manuelle signifie qu'il y a un vers répété -->
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="@n">

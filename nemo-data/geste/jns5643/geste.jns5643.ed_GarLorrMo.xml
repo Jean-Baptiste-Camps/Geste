@@ -57,7 +57,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
          <sourceDesc>
             <biblStruct xml:id="edM" status="draft">
                <analytic>
-                  <editor xml:id="Mone">
+                  <editor sameAs="#Mone">
                      <persName>
                         <surname>Mone</surname>
                      </persName>
@@ -82,11 +82,6 @@ Mériterait d'être repris en détail (avec une édition sous la main).
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="mot"
-                         matchPattern="(\w+)(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
-               <p>Ce pointeur extrait les mots</p>
-            </cRefPattern>
             <cRefPattern n="vers"
                          matchPattern="(\w+)"
                          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
@@ -1980,7 +1975,7 @@ Mériterait d'être repris en détail (avec une édition sous la main).
                   lemma="cel"
                   type="POS=DETdem|NOMB.=p|GENRE=m|CAS=n">cil</w>
                <w xml:id="edM_w_000546" lemma="soudoiier1" type="POS=OUT">sol<gap unit="char" reason="facsimile" quantity="3"/>
-                  <supplied resp="#JBC">do</supplied>ier</w>
+                  <supplied resp="#JBC" reason="damage">do</supplied>ier</w>
                <w xml:id="edM_w_000547"
                   lemma="soi1"
                   type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r">se</w>

@@ -79,11 +79,6 @@
         </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="mot"
-                         matchPattern="(\w+)(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
-               <p>Ce pointeur extrait les mots</p>
-            </cRefPattern>
             <cRefPattern n="vers"
                          matchPattern="(\w+)"
                          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
@@ -110,13 +105,14 @@
             <change when="2019-02" who="#JBC" status="draft">Transcription à la Bibliothèque Vaticane</change>
         </revisionDesc>
    </teiHeader>
-    <text xml:lang="fr" xml:base="urn:cts:froLit:geste.jns5643.transcr_GarLorr_X">
+    <text xml:lang="fro"
+         xml:base="urn:cts:froLit:geste.jns5643.transcr_GarLorr_X">
         <body>
             <lg n="I" type="laisse" xml:id="L_001">
                 <gap reason="lacuna"/>
                 <cb n="a"/>
                 <l xml:id="edGL_l_1" n="1">
-                    <w lemma="devant" type="POS=PRE">
+                    <w xml:id="_w_000001" lemma="devant" type="POS=PRE">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>d</reg>
@@ -133,15 +129,20 @@
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="Vaunuble" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">
+                    <w xml:id="_w_000002"
+                  lemma="Vaunuble"
+                  type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">
                   <choice>
                      <reg>v</reg>
                      <orig>u</orig>
                   </choice>aunuble</w>
-                    <w lemma="avoir"
+                    <w xml:id="_w_000003"
+                  lemma="avoir"
                   type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                   rend="aggl">a</w>
-                    <w lemma="Rigaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000004"
+                  lemma="Rigaut"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <expan>Ri<ex>gaus</ex>
                      </expan>
@@ -150,7 +151,9 @@
                      </abbr>
                   </choice>
                </w>
-                    <w lemma="siege" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000005"
+                  lemma="siege"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
@@ -159,7 +162,9 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>ege</w>
-                    <w lemma="metre2" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">m<choice>
+                    <w xml:id="_w_000006"
+                  lemma="metre2"
+                  type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">m<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -170,18 +175,22 @@
                </w>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="9"/>
+                <lb n="1"/>
                 <l xml:id="edGL_l_2" n="2">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                        <w xml:id="_w_000007"
+                     lemma="avoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
                      <hi rend="initiale detach">O</hi>nt</w>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n">
+                        <w xml:id="_w_000008"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n">
                      <choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>l</w>
-                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
+                        <w xml:id="_w_000009" lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e<choice>
@@ -191,7 +200,9 @@
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="gent1" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000010"
+                     lemma="gent1"
+                     type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
                      <choice>
                         <reg>j</reg>
                         <orig>ı</orig>
@@ -203,8 +214,12 @@
                      </choice>t</w>
                         <pc type="supplied">?</pc>
                     </q>
-                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
-                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000011"
+                  lemma="ce1"
+                  type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w xml:id="_w_000012"
+                  lemma="dire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -213,9 +228,14 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>t</w>
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" rend="elision">l</w>
+                    <w xml:id="_w_000013"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n"
+                  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
+                    <w xml:id="_w_000014"
+                  lemma="empererriz"
+                  type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
                      <expan>
                         <ex>m</ex>
                      </expan>
@@ -237,11 +257,11 @@
                     <pc type="supplied">.</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="10"/>
+                <lb n="2"/>
                 <l xml:id="edGL_l_3" n="3">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="öil" type="POS=ADVgen|DEGRE=p">
+                        <w xml:id="_w_000015" lemma="öil" type="POS=ADVgen|DEGRE=p">
                      <hi rend="initiale detach">O</hi>
                      <choice>
                         <reg>i</reg>
@@ -249,26 +269,36 @@
                      </choice>
                      <reg>̈</reg>l</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=f|CAS=n">ma</w>
-                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                        <w xml:id="_w_000016"
+                     lemma="mon1"
+                     type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=f|CAS=n">ma</w>
+                        <w xml:id="_w_000017"
+                     lemma="dame"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>ame</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="foi" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
+                        <w xml:id="_w_000018"
+                     lemma="foi"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r">
+                        <w xml:id="_w_000019"
+                     lemma="que2"
+                     type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r">
                      <choice>
                         <expan>q<ex>ue</ex>
                         </expan>
                         <abbr>q̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">
+                        <w xml:id="_w_000020"
+                     lemma="devoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -277,14 +307,18 @@
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000021"
+                     lemma="saint"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <expan>s<ex>aint</ex>
                         </expan>
                         <abbr>s̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="Denis" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000022"
+                     lemma="Denis"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -301,10 +335,10 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="11"/>
+                <lb n="3"/>
                 <l xml:id="edGL_l_4" n="4">
                     <q>
-                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">
+                        <w xml:id="_w_000023" lemma="bien1" type="POS=ADVgen|DEGRE=p">
                      <hi rend="initiale detach">b</hi>
                      <choice>
                         <reg>i</reg>
@@ -316,7 +350,9 @@
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                        <w xml:id="_w_000024"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
                      <choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
@@ -327,7 +363,9 @@
                         <abbr>̃</abbr>
                      </choice>t</w>
                         <num>
-                     <w lemma="trois" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">.<choice>
+                     <w xml:id="_w_000025"
+                        lemma="trois"
+                        type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">.<choice>
                            <reg>i</reg>
                            <orig>ı</orig>
                         </choice>
@@ -339,18 +377,22 @@
                            <reg>i</reg>
                            <orig>ȷ</orig>
                         </choice>.</w>
-                        <w lemma="mil1" type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">
+                        <w xml:id="_w_000026"
+                        lemma="mil1"
+                        type="POS=PROcar|NOMB.=p|GENRE=m|CAS=n">
                         <choice>
                            <reg>m</reg>
                            <orig>M</orig>
                         </choice>.</w>
                   </num>
-                        <w lemma="de" type="POS=PRE">
+                        <w xml:id="_w_000027" lemma="de" type="POS=PRE">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>e</w>
-                        <w lemma="chevalier" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000028"
+                     lemma="chevalier"
+                     type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
                      <choice>
                         <expan>ch<ex>eva</ex>l<ex>ie</ex>r</expan>
                         <abbr>ch<c rend="apos">̃</c>r</abbr>
@@ -360,7 +402,9 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="gentil" type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p">gent<choice>
+                        <w xml:id="_w_000029"
+                     lemma="gentil"
+                     type="POS=ADJqua|NOMB.=p|GENRE=m|CAS=r|DEGRE=p">gent<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -373,9 +417,9 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="12"/>
+                <lb n="4"/>
                 <l xml:id="edGL_l_5" n="5">
-                    <w lemma="huimais" type="POS=ADVgen|DEGRE=-">
+                    <w xml:id="_w_000030" lemma="huimais" type="POS=ADVgen|DEGRE=-">
                   <hi rend="initiale detach">h</hi>u<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
@@ -386,7 +430,8 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="devoir"
+                    <w xml:id="_w_000031"
+                  lemma="devoir"
                   type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=p"
                   cert="low">
                   <choice>
@@ -405,8 +450,10 @@
                <note resp="#JBC">La nature 
                             exacte de la finale est indécidable, en l'absence d'occurrence
                             résolue.</note>
-                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
-                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000032" lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w xml:id="_w_000033"
+                  lemma="Begues"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <expan>Be<ex>gon</ex>
                      </expan>
@@ -414,7 +461,7 @@
                      </abbr>
                   </choice>
                </w>
-                    <w lemma="revenir" type="POS=VERinf">re<choice>
+                    <w xml:id="_w_000034" lemma="revenir" type="POS=VERinf">re<choice>
                      <reg>v</reg>
                      <orig>u</orig>
                   </choice>en<choice>
@@ -425,9 +472,11 @@
                     <pc type="supplied">:</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="13"/>
+                <lb n="5"/>
                 <l xml:id="edGL_l_6" n="6">
-                    <w lemma="riche" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">
+                    <w xml:id="_w_000035"
+                  lemma="riche"
+                  type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>r</reg>
@@ -438,7 +487,9 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>che</w>
-                    <w lemma="servise" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000036"
+                  lemma="servise"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
@@ -455,14 +506,16 @@
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>e</w>
-                    <w lemma="en2" type="POS=PROadv">e<choice>
+                    <w xml:id="_w_000037" lemma="en2" type="POS=PROadv">e<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
                      <abbr>̃</abbr>
                   </choice>
                </w>
-                    <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
+                    <w xml:id="_w_000038"
+                  lemma="faire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -470,9 +523,14 @@
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>t</w>
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n" rend="elision">l</w>
+                    <w xml:id="_w_000039"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n"
+                  rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w lemma="empererriz" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
+                    <w xml:id="_w_000040"
+                  lemma="empererriz"
+                  type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">e<choice>
                      <expan>
                         <ex>m</ex>
                      </expan>
@@ -494,9 +552,11 @@
                     <pc type="supplied">'</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="14"/>
+                <lb n="6"/>
                 <l xml:id="edGL_l_7" n="7">
-                    <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000041"
+                  lemma="Begues"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                             <abbr>
                         <hi rend="initiale detach">b</hi>eg̃</abbr>
@@ -504,7 +564,9 @@
                      </expan>
                         </choice>
                </w>
-                    <w lemma="emporter2" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">empo<choice>
+                    <w xml:id="_w_000042"
+                  lemma="emporter2"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">empo<choice>
                      <reg>r</reg>
                      <orig>ꝛ</orig>
                   </choice>te<choice>
@@ -513,14 +575,20 @@
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">au</w>
-                    <w lemma="loherenc" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">loh<choice>
+                    <w xml:id="_w_000043"
+                  lemma="a3+le"
+                  type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">au</w>
+                    <w xml:id="_w_000044"
+                  lemma="loherenc"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">loh<choice>
                      <expan>
                         <ex>er</ex>
                      </expan>
                      <abbr>͛</abbr>
                   </choice>an</w>
-                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000045"
+                  lemma="Garin"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <reg>g</reg>
                      <orig>G</orig>
@@ -538,14 +606,18 @@
                     <pc type="supplied">,</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="15"/>
+                <lb n="7"/>
                 <l xml:id="edGL_l_8" n="8">
-                    <w lemma="Ardenne" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">
+                    <w xml:id="_w_000046"
+                  lemma="Ardenne"
+                  type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">
                   <hi rend="initiale detach">a</hi>r<choice>
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>ane</w>
-                    <w lemma="laissier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">le<choice>
+                    <w xml:id="_w_000047"
+                  lemma="laissier"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">le<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>
@@ -559,14 +631,16 @@
                      <abbr>̃</abbr>
                   </choice>t</w>
                     <pc type="supplied">,</pc>
-                    <w lemma="en1" type="POS=PRE">e<choice>
+                    <w xml:id="_w_000048" lemma="en1" type="POS=PRE">e<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
                      <abbr>̃</abbr>
                   </choice>
                </w>
-                    <w lemma="Ardenois" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">ar<choice>
+                    <w xml:id="_w_000049"
+                  lemma="Ardenois"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">ar<choice>
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>eno<choice>
@@ -578,7 +652,9 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                    <w xml:id="_w_000050"
+                  lemma="estre1"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
                   <choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
@@ -588,7 +664,9 @@
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="metre2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">m<choice>
+                    <w xml:id="_w_000051"
+                  lemma="metre2"
+                  type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">m<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -600,9 +678,9 @@
                     <pc type="supplied">,</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="16"/>
+                <lb n="8"/>
                 <l xml:id="edGL_l_9" n="9">
-                    <w lemma="en1" type="POS=PRE">
+                    <w xml:id="_w_000052" lemma="en1" type="POS=PRE">
                   <hi rend="initiale detach">e<choice>
                         <expan>
                            <ex>n</ex>
@@ -611,7 +689,9 @@
                      </choice>
                   </hi>
                </w>
-                    <w lemma="Lohereine" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">loh<choice>
+                    <w xml:id="_w_000053"
+                  lemma="Lohereine"
+                  type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">loh<choice>
                      <expan>
                         <ex>er</ex>
                      </expan>
@@ -620,21 +700,27 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>ne</w>
-                    <w lemma="de" type="POS=PRE" rend="elision">
+                    <w xml:id="_w_000054" lemma="de" type="POS=PRE" rend="elision">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>
                </w>
                     <pc type="supplied">'</pc>
-                    <w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
-                    <w lemma="part1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">
+                    <w xml:id="_w_000055"
+                  lemma="autre"
+                  type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
+                    <w xml:id="_w_000056"
+                  lemma="part1"
+                  type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">
                   <choice>
                      <expan>p<ex>ar</ex>
                      </expan>
                      <abbr>ꝑ</abbr>
                   </choice>t</w>
-                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
+                    <w xml:id="_w_000057"
+                  lemma="estre1"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">
                   <choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
@@ -644,7 +730,9 @@
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="guenchir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ganch<choice>
+                    <w xml:id="_w_000058"
+                  lemma="guenchir"
+                  type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ganch<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -652,22 +740,24 @@
                     <pc type="supplied">.</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="17"/>
+                <lb n="9"/>
                 <l xml:id="edGL_l_10" n="10">
-                    <w lemma="de" type="POS=PRE">
+                    <w xml:id="_w_000059" lemma="de" type="POS=PRE">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>
                   </hi>e</w>
-                    <w lemma="ci" type="POS=ADVgen|DEGRE=-">c<choice>
+                    <w xml:id="_w_000060" lemma="ci" type="POS=ADVgen|DEGRE=-">c<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
-                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
-                    <w lemma="Gorde" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">go<choice>
+                    <w xml:id="_w_000061" lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w xml:id="_w_000062"
+                  lemma="Gorde"
+                  type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">go<choice>
                      <reg>r</reg>
                      <orig>ꝛ</orig>
                   </choice>
@@ -675,8 +765,10 @@
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>e</w>
-                    <w lemma="ne1" type="POS=ADVneg">ne</w>
-                    <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p">p<choice>
+                    <w xml:id="_w_000063" lemma="ne1" type="POS=ADVneg">ne</w>
+                    <w xml:id="_w_000064"
+                  lemma="prendre"
+                  type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p">p<choice>
                      <expan>
                         <ex>r</ex>i</expan>
                      <abbr>ͥ</abbr>
@@ -690,7 +782,7 @@
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="onque" type="POS=ADVgen|DEGRE=-">on<choice>
+                    <w xml:id="_w_000065" lemma="onque" type="POS=ADVgen|DEGRE=-">on<choice>
                      <expan>q<ex>ue</ex>
                      </expan>
                      <abbr>q̃</abbr>
@@ -700,7 +792,9 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="fin1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">f<choice>
+                    <w xml:id="_w_000066"
+                  lemma="fin1"
+                  type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">f<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -713,18 +807,22 @@
                </w>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="18"/>
+                <lb n="10"/>
                 <cb n="b"/>
                 <gap reason="lacuna"/>
-                <lb n="19"/>
+                <lb n="1"/>
                 <l xml:id="edGL_l_11" n="11">
-                    <w lemma="cel" type="POS=DETdem|NOMB.=p|GENRE=f|CAS=r">
+                    <w xml:id="_w_000067"
+                  lemma="cel"
+                  type="POS=DETdem|NOMB.=p|GENRE=f|CAS=r">
                   <hi rend="initiale detach">c</hi>e<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="damoisele" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">
+                    <w xml:id="_w_000068"
+                  lemma="damoisele"
+                  type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -740,14 +838,14 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="chanter" type="POS=VERinf">chant<choice>
+                    <w xml:id="_w_000069" lemma="chanter" type="POS=VERinf">chant<choice>
                      <expan>
                         <ex>er</ex>
                      </expan>
                      <abbr>͛</abbr>
                   </choice>
                </w>
-                    <w lemma="et" type="POS=CONcoo" rend="aggl">
+                    <w xml:id="_w_000070" lemma="et" type="POS=CONcoo" rend="aggl">
                   <choice>
                      <expan>
                         <ex>et</ex>
@@ -755,7 +853,7 @@
                      <abbr></abbr>
                   </choice>
                </w>
-                    <w lemma="esbaudir" type="POS=VERinf">e<choice>
+                    <w xml:id="_w_000071" lemma="esbaudir" type="POS=VERinf">e<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>bau<choice>
@@ -769,21 +867,31 @@
                     <pc type="supplied">:</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="20"/>
+                <lb n="2"/>
                 <l xml:id="edGL_l_12" n="12">
-                    <w lemma="haut" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">
+                    <w xml:id="_w_000072"
+                  lemma="haut"
+                  type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">
                   <hi rend="initiale detach">h</hi>alte</w>
-                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                    <w xml:id="_w_000073"
+                  lemma="estre1"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>t</w>
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n">la</w>
-                    <w lemma="feste1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">fe<choice>
+                    <w xml:id="_w_000074"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n">la</w>
+                    <w xml:id="_w_000075"
+                  lemma="feste1"
+                  type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">fe<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>te</w>
                     <pc type="supplied">,</pc>
-                    <w lemma="chascun" type="POS=PROind|NOMB.=s|GENRE=n|CAS=n">cha<choice>
+                    <w xml:id="_w_000076"
+                  lemma="chascun"
+                  type="POS=PROind|NOMB.=s|GENRE=n|CAS=n">cha<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>cu<choice>
@@ -797,8 +905,12 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000077"
+                  lemma="il"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="_w_000078"
+                  lemma="voloir"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>v</reg>
                      <orig>u</orig>
@@ -807,7 +919,7 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>alt</w>
-                    <w lemma="öir" type="POS=VERinf">o<choice>
+                    <w xml:id="_w_000079" lemma="öir" type="POS=VERinf">o<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -815,12 +927,14 @@
                     <pc type="supplied">.</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="21"/>
+                <lb n="3"/>
                 <!--          <lb/>547 FRAGMENTS DE CHANSONS DE GESTE. 13-40 -->
                 <l xml:id="edGL_l_13" n="13">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">
+                        <w xml:id="_w_000080"
+                     lemma="saint"
+                     type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">
                      <hi rend="initiale detach">S</hi>a<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
@@ -831,14 +945,20 @@
                         </expan>
                         <abbr>̃</abbr>
                      </choice>te</w>
-                        <w lemma="Marie" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">mar<choice>
+                        <w xml:id="_w_000081"
+                     lemma="Marie"
+                     type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=n">mar<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e</w>
                         <pc type="supplied">!</pc>
                     </q>
-                    <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
-                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000082"
+                  lemma="ce1"
+                  type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w xml:id="_w_000083"
+                  lemma="dire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -847,12 +967,16 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>t</w>
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
+                    <w xml:id="_w_000084"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
-                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000085"
+                  lemma="duc2"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -861,7 +985,9 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000086"
+                  lemma="Garin"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <reg>g</reg>
                      <orig>G</orig>
@@ -883,10 +1009,12 @@
                     <pc type="supplied">,</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="1"/>
+                <lb n="4"/>
                 <l xml:id="edGL_l_14" n="14">
                     <q>
-                        <w lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                        <w xml:id="_w_000087"
+                     lemma="röine1"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>r</reg>
@@ -896,19 +1024,27 @@
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>ne</w>
-                        <w lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
+                        <w xml:id="_w_000088"
+                     lemma="dame"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>ame</w>
-                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n">q<choice>
+                        <w xml:id="_w_000089"
+                     lemma="qui"
+                     type="POS=PROrel|NOMB.=s|GENRE=f|CAS=n">q<choice>
                         <expan>
                            <ex>u</ex>i</expan>
                         <abbr>ͥ</abbr>
                      </choice>
                   </w>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
+                        <w xml:id="_w_000090"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w xml:id="_w_000091"
+                     lemma="cors1"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
                         <reg>r</reg>
                         <orig>ꝛ</orig>
                      </choice>
@@ -917,12 +1053,16 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000092"
+                     lemma="dieu"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>eu</w>
-                        <w lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ten<choice>
+                        <w xml:id="_w_000093"
+                     lemma="tenir1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ten<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -935,22 +1075,28 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="2"/>
+                <lb n="5"/>
                 <l xml:id="edGL_l_15" n="15">
                     <q>
-                        <w lemma="sauver" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">
+                        <w xml:id="_w_000094"
+                     lemma="sauver"
+                     type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">
                      <hi rend="initiale detach">s</hi>au<choice>
                         <reg>v</reg>
                         <orig>u</orig>
                      </choice>e</w>
-                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">mo<choice>
+                        <w xml:id="_w_000095"
+                     lemma="mon1"
+                     type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">mo<choice>
                         <expan>
                            <ex>n</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="cors1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
+                        <w xml:id="_w_000096"
+                     lemma="cors1"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">co<choice>
                         <reg>r</reg>
                         <orig>ꝛ</orig>
                      </choice>
@@ -959,7 +1105,7 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="et" type="POS=CONcoo" rend="aggl">
+                        <w xml:id="_w_000097" lemma="et" type="POS=CONcoo" rend="aggl">
                      <choice>
                         <expan>
                            <ex>et</ex>
@@ -967,7 +1113,9 @@
                         <abbr></abbr>
                      </choice>
                   </w>
-                        <w lemma="trestot" type="POS=DETind|NOMB.=p|GENRE=m|CAS=r">t<choice>
+                        <w xml:id="_w_000098"
+                     lemma="trestot"
+                     type="POS=DETind|NOMB.=p|GENRE=m|CAS=r">t<choice>
                         <expan>
                            <ex>r</ex>e</expan>
                         <abbr>ͤ</abbr>
@@ -980,12 +1128,16 @@
                         <orig>ʒ</orig>
                      </choice>
                   </w>
-                        <w lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=r">me<choice>
+                        <w xml:id="_w_000099"
+                     lemma="mon1"
+                     type="POS=DETpos|PERS.=1|NOMB.=p|GENRE=m|CAS=r">me<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="ami" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">am<choice>
+                        <w xml:id="_w_000100"
+                     lemma="ami"
+                     type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">am<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -998,29 +1150,38 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="3"/>
+                <lb n="6"/>
                 <l xml:id="edGL_l_16" n="16">
                     <q>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" rend="aggl">
+                        <w xml:id="_w_000101"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n"
+                     rend="aggl">
                      <hi rend="initiale detach">L</hi>
                      <choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">cuer<choice>
+                        <w xml:id="_w_000102"
+                     lemma="cuer2"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">cuer<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
-                        <w lemma="trembler1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">tra<choice>
+                        <w xml:id="_w_000103"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w xml:id="_w_000104"
+                     lemma="trembler1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">tra<choice>
                         <expan>
                            <ex>m</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>ble</w>
-                        <w lemma="et" type="POS=CONcoo" rend="aggl">
+                        <w xml:id="_w_000105" lemma="et" type="POS=CONcoo" rend="aggl">
                      <choice>
                         <expan>
                            <ex>et</ex>
@@ -1028,15 +1189,19 @@
                         <abbr></abbr>
                      </choice>
                   </w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r">me</w>
-                        <w lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pre<choice>
+                        <w xml:id="_w_000106"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r">me</w>
+                        <w xml:id="_w_000107"
+                     lemma="prendre"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pre<choice>
                         <expan>
                            <ex>n</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>t</w>
-                        <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
-                        <w lemma="doloir" type="POS=VERinf">
+                        <w xml:id="_w_000108" lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                        <w xml:id="_w_000109" lemma="doloir" type="POS=VERinf">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1048,10 +1213,13 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="4"/>
+                <lb n="7"/>
                 <l xml:id="edGL_l_17" n="17">
                     <q>
-                        <w lemma="que4" type="POS=CONsub" rend="elision">
+                        <w xml:id="_w_000110"
+                     lemma="que4"
+                     type="POS=CONsub"
+                     rend="elision">
                      <choice>
                                 <abbr xml:id="abbr_quil_01">
                            <hi rend="initiale detach">Q</hi>ͥl</abbr>
@@ -1060,21 +1228,28 @@
                             </choice>
                   </w>
                         <pc type="supplied">'</pc>
-                        <w lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
+                        <w xml:id="_w_000111"
+                     lemma="il"
+                     type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
                      <choice>
                                 <abbr corresp="#abbr_quil_01"/>
                                 <expan>il</expan>
                             </choice>
                   </w>
-                        <w lemma="je"
+                        <w xml:id="_w_000112"
+                     lemma="je"
                      type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i"
                      rend="elision">m</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <w xml:id="_w_000113"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="avis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">a<choice>
+                        <w xml:id="_w_000114"
+                     lemma="avis"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">a<choice>
                         <reg>v</reg>
                         <orig>u</orig>
                      </choice>
@@ -1088,7 +1263,10 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="que4" type="POS=CONsub" rend="elision">
+                        <w xml:id="_w_000115"
+                     lemma="que4"
+                     type="POS=CONsub"
+                     rend="elision">
                      <choice>
                                 <abbr xml:id="abbr_quil_02">qͥl</abbr>
                                 <expan>q<ex>u</ex>
@@ -1096,7 +1274,9 @@
                             </choice>
                   </w>
                         <pc type="supplied">'</pc>
-                        <w lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
+                        <w xml:id="_w_000116"
+                     lemma="il"
+                     type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">
                      <choice>
                                 <abbr corresp="#abbr_quil_02"/>
                                 <expan>
@@ -1106,8 +1286,12 @@
                            </choice>l</expan>
                             </choice>
                   </w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
-                        <w lemma="devoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">
+                        <w xml:id="_w_000117"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w xml:id="_w_000118"
+                     lemma="devoir"
+                     type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1115,7 +1299,7 @@
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e</w>
-                        <w lemma="partir" type="POS=VERinf">
+                        <w xml:id="_w_000119" lemma="partir" type="POS=VERinf">
                      <choice>
                         <expan>p<ex>ar</ex>
                         </expan>
@@ -1128,10 +1312,12 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="5"/>
+                <lb n="8"/>
                 <l xml:id="edGL_l_18" n="18">
                     <q>
-                        <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000120"
+                     lemma="dieu"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>d</reg>
@@ -1139,18 +1325,23 @@
                         </choice>
                      </hi>ex</w>
                         <pc type="supplied">!</pc>
-                        <w lemma="se" type="POS=CONsub">
+                        <w xml:id="_w_000121" lemma="se" type="POS=CONsub">
                      <choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>e</w>
-                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n" rend="elision">c</w>
+                        <w xml:id="_w_000122"
+                     lemma="ce1"
+                     type="POS=PROdem|NOMB.=s|GENRE=n|CAS=n"
+                     rend="elision">c</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <w xml:id="_w_000123"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
+                        <w xml:id="_w_000124" lemma="bien1" type="POS=ADVgen|DEGRE=p">b<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e<choice>
@@ -1160,14 +1351,20 @@
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
+                        <w xml:id="_w_000125"
+                     lemma="qui"
+                     type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
                         <expan>
                            <ex>u</ex>i</expan>
                         <abbr>ͥ</abbr>
                      </choice>
                   </w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
-                        <w lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                        <w xml:id="_w_000126"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
+                        <w xml:id="_w_000127"
+                     lemma="devoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1175,7 +1372,7 @@
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e</w>
-                        <w lemma="avenir" type="POS=VERinf">a<choice>
+                        <w xml:id="_w_000128" lemma="avenir" type="POS=VERinf">a<choice>
                         <reg>v</reg>
                         <orig>u</orig>
                      </choice>en<choice>
@@ -1187,10 +1384,12 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="6"/>
+                <lb n="9"/>
                 <l xml:id="edGL_l_19" n="19">
                     <q>
-                        <w lemma="doner" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
+                        <w xml:id="_w_000129"
+                     lemma="doner"
+                     type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>d</reg>
@@ -1201,14 +1400,20 @@
                         <orig>ʒ</orig>
                      </choice>
                   </w>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
+                        <w xml:id="_w_000130"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w xml:id="_w_000131"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
                         <pc type="supplied">,</pc>
-                        <w lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000132"
+                     lemma="seignor"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
@@ -1218,19 +1423,21 @@
                         <orig>ı</orig>
                      </choice>re</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="par" type="POS=PRE">
+                        <w xml:id="_w_000133" lemma="par" type="POS=PRE">
                      <choice>
                         <expan>p<ex>ar</ex>
                         </expan>
                         <abbr>ꝑ</abbr>
                      </choice>
                   </w>
-                        <w lemma="tens" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ten<choice>
+                        <w xml:id="_w_000134"
+                     lemma="tens"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ten<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="vëoir" type="POS=VERinf">
+                        <w xml:id="_w_000135" lemma="vëoir" type="POS=VERinf">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -1243,10 +1450,10 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="7"/>
+                <lb n="10"/>
                 <l xml:id="edGL_l_20" n="20">
                     <q>
-                        <w lemma="et" type="POS=CONcoo">
+                        <w xml:id="_w_000136" lemma="et" type="POS=CONcoo">
                      <hi rend="initiale detach">
                         <choice>
                            <expan>
@@ -1256,39 +1463,50 @@
                         </choice>
                      </hi>
                   </w>
-                        <w lemma="de" type="POS=PRE" rend="elision">
+                        <w xml:id="_w_000137" lemma="de" type="POS=PRE" rend="elision">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>
                   </w>
                         <pc type="supplied">'</pc>
-                        <w lemma="autre" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
-                        <w lemma="chose" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">cho<choice>
+                        <w xml:id="_w_000138"
+                     lemma="autre"
+                     type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">autre</w>
+                        <w xml:id="_w_000139"
+                     lemma="chose"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">cho<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>e</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="se" type="POS=CONsub">
+                        <w xml:id="_w_000140" lemma="se" type="POS=CONsub">
                      <choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>e</w>
-                        <w lemma="tu" type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=i">to<choice>
+                        <w xml:id="_w_000141"
+                     lemma="tu"
+                     type="POS=PROper|PERS.=2|NOMB.=s|GENRE=m|CAS=i">to<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="plaire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ple<choice>
+                        <w xml:id="_w_000142"
+                     lemma="plaire"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ple<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="je"
+                        <w xml:id="_w_000143"
+                     lemma="je"
                      type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r"
                      rend="elision">m</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="escremir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">e<choice>
+                        <w xml:id="_w_000144"
+                     lemma="escremir"
+                     type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>c<choice>
@@ -1309,15 +1527,17 @@
                     <pc type="supplied">»</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="8"/>
+                <lb n="11"/>
                 <cb n="c"/>
                 <gap reason="lacuna"/>
                 <!-- TODO: le vers précédent est peut-être en partie récupérable -->
-                <lb n="9"/>
+                <lb n="1"/>
                 <l xml:id="edGL_l_21" n="21">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="dire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
+                        <w xml:id="_w_000145"
+                     lemma="dire"
+                     type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>d</reg>
@@ -1332,22 +1552,30 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
+                        <w xml:id="_w_000146"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w xml:id="_w_000147"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">mo<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
                         <pc type="supplied">,</pc>
-                        <w lemma="de" type="POS=PRE" rend="elision">
+                        <w xml:id="_w_000148" lemma="de" type="POS=PRE" rend="elision">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>
                   </w>
                         <pc type="supplied">'</pc>
-                        <w lemma="où" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">o</w>
-                        <w lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">
+                        <w xml:id="_w_000149"
+                     lemma="où"
+                     type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">o</w>
+                        <w xml:id="_w_000150"
+                     lemma="venir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -1356,7 +1584,9 @@
                         <orig>ʒ</orig>
                      </choice>
                   </w>
-                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
+                        <w xml:id="_w_000151"
+                     lemma="vos"
+                     type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -1369,7 +1599,9 @@
                      </choice>
                   </w>
                         <pc type="supplied">,</pc>
-                        <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
+                        <w xml:id="_w_000152"
+                     lemma="ami"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1382,39 +1614,49 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="10"/>
+                <lb n="2"/>
                 <l xml:id="edGL_l_22" n="22">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="de" type="POS=PRE">
+                        <w xml:id="_w_000153" lemma="de" type="POS=PRE">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>d</reg>
                            <orig>δ</orig>
                         </choice>
                      </hi>e</w>
-                        <w lemma="saint" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000154"
+                     lemma="saint"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <expan>s<ex>aint</ex>
                         </expan>
                         <abbr>s̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="Amant" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">amant</w>
+                        <w xml:id="_w_000155"
+                     lemma="Amant"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">amant</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="de" type="POS=PRE">
+                        <w xml:id="_w_000156" lemma="de" type="POS=PRE">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>e</w>
-                        <w lemma="ce2" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">ce</w>
-                        <w lemma="nostre" type="POS=ADJpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000157"
+                     lemma="ce2"
+                     type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">ce</w>
+                        <w xml:id="_w_000158"
+                     lemma="nostre"
+                     type="POS=ADJpos|PERS.=1|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <expan>n<ex>ost</ex>re</expan>
                         <abbr>nrẽ</abbr>
                      </choice>
                   </w>
-                        <w lemma="päis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">pa<choice>
+                        <w xml:id="_w_000159"
+                     lemma="päis"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">pa<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1428,10 +1670,12 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="11"/>
+                <lb n="3"/>
                 <l xml:id="edGL_l_23" n="23">
                     <q>
-                        <w lemma="movoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=1|NOMB.=p">
+                        <w xml:id="_w_000160"
+                     lemma="movoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=1|NOMB.=p">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>m</reg>
@@ -1442,26 +1686,33 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">no<choice>
+                        <w xml:id="_w_000161"
+                     lemma="nos1"
+                     type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">no<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w rend="elision" lemma="ne1" type="POS=ADVneg">n</w>
+                        <w xml:id="_w_000162" rend="elision" lemma="ne1" type="POS=ADVneg">n</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="avoir"
+                        <w xml:id="_w_000163"
+                     lemma="avoir"
                      type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                      rend="aggl">a</w>
-                        <w lemma="mie" type="POS=ADVneg">m<choice>
+                        <w xml:id="_w_000164" lemma="mie" type="POS=ADVneg">m<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>e</w>
                         <num>
                             <pc type="orig">.</pc>
-                        <w lemma="quinze" type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r">xv</w>
+                        <w xml:id="_w_000165"
+                        lemma="quinze"
+                        type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r">xv</w>
                         <pc type="orig">.</pc>
                   </num>
-                        <w lemma="di" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000166"
+                     lemma="di"
+                     type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1479,45 +1730,62 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="12"/>
+                <lb n="4"/>
                 <l xml:id="edGL_l_24" n="24">
                     <q>
                         <pc type="supplied">—</pc>
-                        <w lemma="quel1" type="POS=DETint|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000167"
+                     lemma="quel1"
+                     type="POS=DETint|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                                 <abbr>
                            <hi rend="initiale detach">Q</hi>̃</abbr>
                                 <expan>Q<ex>ue</ex>
                         </expan>
                             </choice>x</w>
-                        <w lemma="ome" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">ho<choice>
+                        <w xml:id="_w_000168"
+                     lemma="ome"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">ho<choice>
                         <expan>
                            <ex>m</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <w xml:id="_w_000169"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n">ce</w>
+                        <w xml:id="_w_000170"
+                     lemma="ce1"
+                     type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n">ce</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" rend="elision">q</w>
+                        <w xml:id="_w_000171"
+                     lemma="que2"
+                     type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n"
+                     rend="elision">q</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="en1" type="POS=PRE">a<choice>
+                        <w xml:id="_w_000172" lemma="en1" type="POS=PRE">a<choice>
                         <expan>
                            <ex>n</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>
                   </w>
-                        <w lemma="cel" type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r">cele</w>
-                        <w lemma="biere" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">b<choice>
+                        <w xml:id="_w_000173"
+                     lemma="cel"
+                     type="POS=DETdem|NOMB.=s|GENRE=f|CAS=r">cele</w>
+                        <w xml:id="_w_000174"
+                     lemma="biere"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">b<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>ere</w>
-                        <w lemma="jesir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">g<choice>
+                        <w xml:id="_w_000175"
+                     lemma="jesir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">g<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1529,10 +1797,11 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="13"/>
+                <lb n="5"/>
                 <l xml:id="edGL_l_25" n="25">
                     <q>
-                        <w lemma="estre1"
+                        <w xml:id="_w_000176"
+                     lemma="estre1"
                      type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                      rend="aggl">
                      <hi rend="initiale detach">E</hi>
@@ -1540,12 +1809,16 @@
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000177"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>l</w>
-                        <w lemma="malade" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">mala<choice>
+                        <w xml:id="_w_000178"
+                     lemma="malade"
+                     type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">mala<choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>e<choice>
@@ -1553,8 +1826,10 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="o3" type="POS=CONcoo" rend="aggl">o</w>
-                        <w lemma="navrer" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">na<choice>
+                        <w xml:id="_w_000179" lemma="o3" type="POS=CONcoo" rend="aggl">o</w>
+                        <w xml:id="_w_000180"
+                     lemma="navrer"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">na<choice>
                         <reg>v</reg>
                         <orig>u</orig>
                      </choice>
@@ -1568,8 +1843,10 @@
                         <orig>ʒ</orig>
                      </choice>
                   </w>
-                        <w lemma="o3" type="POS=CONcoo">o</w>
-                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">oc<choice>
+                        <w xml:id="_w_000181" lemma="o3" type="POS=CONcoo">o</w>
+                        <w xml:id="_w_000182"
+                     lemma="ocire"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">oc<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1583,9 +1860,9 @@
                     <pc type="supplied">»</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="14"/>
+                <lb n="6"/>
                 <l xml:id="edGL_l_26" n="26">
-                    <w lemma="et" type="POS=CONcoo">
+                    <w xml:id="_w_000183" lemma="et" type="POS=CONcoo">
                   <hi rend="initiale detach">
                      <choice>
                         <expan>
@@ -1595,7 +1872,9 @@
                      </choice>
                   </hi>
                </w>
-                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000184"
+                  lemma="dire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -1604,12 +1883,16 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>t</w>
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
+                    <w xml:id="_w_000185"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">l<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
-                    <w lemma="abé1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">abe<choice>
+                    <w xml:id="_w_000186"
+                  lemma="abé1"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">abe<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>
@@ -1617,7 +1900,9 @@
                     <pc type="supplied">:</pc>
                     <pc type="supplied">«</pc>
                     <q>
-                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
+                        <w xml:id="_w_000187"
+                     lemma="vos"
+                     type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=n">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -1629,8 +1914,12 @@
                         <abbr>⁹</abbr>
                      </choice>
                   </w>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                        <w lemma="savoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=2|NOMB.=p">
+                        <w xml:id="_w_000188"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w xml:id="_w_000189"
+                     lemma="savoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=2|NOMB.=p">
                      <choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
@@ -1643,14 +1932,16 @@
                         <orig>ʒ</orig>
                      </choice>
                   </w>
-                        <w lemma="par" type="POS=PRE">
+                        <w xml:id="_w_000190" lemma="par" type="POS=PRE">
                      <choice>
                         <expan>p<ex>ar</ex>
                         </expan>
                         <abbr>ꝑ</abbr>
                      </choice>
                   </w>
-                        <w lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">m<choice>
+                        <w xml:id="_w_000191"
+                     lemma="je"
+                     type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">m<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1659,16 +1950,23 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="15"/>
+                <lb n="7"/>
                 <l xml:id="edGL_l_27" n="27">
                     <q>
-                        <w lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n" rend="elision">C</w>
+                        <w xml:id="_w_000192"
+                     lemma="ce1"
+                     type="POS=PROdem|NOMB.=s|GENRE=m|CAS=n"
+                     rend="elision">C</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                        <w xml:id="_w_000193"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="vostre" type="POS=DETpos|PERS.=2|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000194"
+                     lemma="vostre"
+                     type="POS=DETpos|PERS.=2|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <expan>v<ex>ost</ex>re</expan>
                         <abbr>urẽ</abbr>
@@ -1678,12 +1976,16 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere<choice>
+                        <w xml:id="_w_000195"
+                     lemma="frere"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000196"
+                     lemma="duc2"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1695,7 +1997,9 @@
                         <abbr>⁹</abbr>
                      </choice>
                   </w>
-                        <w lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000197"
+                     lemma="Begues"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <expan>Be<ex>gues</ex>
                         </expan>
@@ -1704,12 +2008,14 @@
                         </abbr>
                      </choice>
                   </w>
-                        <w lemma="de" type="POS=PRE">
+                        <w xml:id="_w_000198" lemma="de" type="POS=PRE">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>e</w>
-                        <w lemma="Belin" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">bel<choice>
+                        <w xml:id="_w_000199"
+                     lemma="Belin"
+                     type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">bel<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>n</w>
@@ -1717,20 +2023,26 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="16"/>
+                <lb n="8"/>
                 <l xml:id="edGL_l_28" n="28">
                     <q>
-                        <w lemma="en1" type="POS=PRE">
+                        <w xml:id="_w_000200" lemma="en1" type="POS=PRE">
                      <hi rend="initiale detach">e</hi>n</w>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
-                        <w lemma="forest" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
+                        <w xml:id="_w_000201"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
+                        <w xml:id="_w_000202"
+                     lemma="forest"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">fo<choice>
                         <reg>r</reg>
                         <orig>ꝛ</orig>
                      </choice>e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000203"
+                     lemma="Fromund"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <expan>Fro<ex>mont</ex>
                         </expan>
@@ -1739,8 +2051,12 @@
                         </abbr>
                      </choice>
                   </w>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">lo</w>
-                        <w lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">po<choice>
+                        <w xml:id="_w_000204"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">lo</w>
+                        <w xml:id="_w_000205"
+                     lemma="pöestëif"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">po<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>te<choice>
@@ -1751,12 +2067,16 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="17"/>
+                <lb n="9"/>
                 <l xml:id="edGL_l_29" n="29">
                     <q>
-                        <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000206"
+                     lemma="il"
+                     type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
                      <hi rend="initiale detach">L</hi>o</w>
-                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">
+                        <w xml:id="_w_000207"
+                     lemma="vos"
+                     type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -1768,15 +2088,19 @@
                         <abbr>⁹</abbr>
                      </choice>
                   </w>
-                        <w lemma="avoir"
+                        <w xml:id="_w_000208"
+                     lemma="avoir"
                      type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s"
                      rend="aggl">a</w>
-                        <w lemma="il"
+                        <w xml:id="_w_000209"
+                     lemma="il"
                      type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
                      rend="elision">l</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="en2" type="POS=PROadv">en</w>
-                        <w lemma="detrenchier" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000210" lemma="en2" type="POS=PROadv">en</w>
+                        <w xml:id="_w_000211"
+                     lemma="detrenchier"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -1785,7 +2109,7 @@
                         <orig>ı</orig>
                      </choice>e<reg>́</reg>
                   </w>
-                        <w lemma="et" type="POS=CONcoo">
+                        <w xml:id="_w_000212" lemma="et" type="POS=CONcoo">
                      <choice>
                         <expan>
                            <ex>et</ex>
@@ -1793,7 +2117,9 @@
                         <abbr></abbr>
                      </choice>
                   </w>
-                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
+                        <w xml:id="_w_000213"
+                     lemma="ocire"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -1808,16 +2134,20 @@
                     <pc type="supplied">»</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="18"/>
+                <lb n="10"/>
                 <l xml:id="edGL_l_30" n="30">
-                    <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000214"
+                  lemma="le"
+                  type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">
                   <hi rend="initiale detach">L</hi>
                   <choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
-                    <w lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000215"
+                  lemma="duc2"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -1829,22 +2159,27 @@
                      <abbr>⁹</abbr>
                   </choice>
                </w>
-                    <w lemma="il"
+                    <w xml:id="_w_000216"
+                  lemma="il"
                   type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
                   rend="elision">l</w>
                     <pc type="supplied">'</pc>
-                    <w lemma="entendre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ente<choice>
+                    <w xml:id="_w_000217"
+                  lemma="entendre"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">ente<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
                     <pc type="supplied">,</pc>
-                    <w lemma="a3" type="POS=PRE" rend="aggl">a</w>
-                    <w lemma="poi" type="POS=ADVgen|DEGRE=-">po</w>
-                    <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                    <w xml:id="_w_000218" lemma="a3" type="POS=PRE" rend="aggl">a</w>
+                    <w xml:id="_w_000219" lemma="poi" type="POS=ADVgen|DEGRE=-">po</w>
+                    <w xml:id="_w_000220" lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
                     <pc type="supplied">'</pc>
-                    <w lemma="enragier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
+                    <w xml:id="_w_000221"
+                  lemma="enragier"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">e<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
@@ -1853,7 +2188,9 @@
                      <reg>j</reg>
                      <orig>ı</orig>
                   </choice>e</w>
-                    <w lemma="vif" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">
+                    <w xml:id="_w_000222"
+                  lemma="vif"
+                  type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">
                   <choice>
                      <reg>v</reg>
                      <orig>u</orig>
@@ -1870,23 +2207,23 @@
                     <pc type="orig">.</pc>
                 </l>
                 <cb n="d"/>
-                <lb n="19"/>
+                <lb n="1"/>
                 <gap/>
-                <lb n="20"/>
+                <lb n="2"/>
                 <l xml:id="edGL_l_31" n="31">
-                    <w lemma="grant" type="POS=OUT">
+                    <w xml:id="_w_000223" lemma="grant" type="POS=OUT">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>g</reg>
                         <orig>G</orig>
                      </choice>
                   </hi>rant</w>
-                    <w lemma="duel" type="POS=OUT">
+                    <w xml:id="_w_000224" lemma="duel" type="POS=OUT">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>uel</w>
-                    <w lemma="et" type="POS=CONcoo">
+                    <w xml:id="_w_000225" lemma="et" type="POS=CONcoo">
                   <choice>
                      <expan>
                         <ex>et</ex>
@@ -1894,17 +2231,17 @@
                      <abbr></abbr>
                   </choice>
                </w>
-                    <w lemma="grant" type="POS=OUT">grant</w>
-                    <w lemma="cri" type="POS=OUT">cr<choice>
+                    <w xml:id="_w_000226" lemma="grant" type="POS=OUT">grant</w>
+                    <w xml:id="_w_000227" lemma="cri" type="POS=OUT">cr<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="21"/>
+                <lb n="3"/>
                 <l xml:id="edGL_l_32" n="32">
-                    <w lemma="nëis" type="POS=ADVgen|DEGRE=-">
+                    <w xml:id="_w_000228" lemma="nëis" type="POS=ADVgen|DEGRE=-">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>n</reg>
@@ -1915,26 +2252,32 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000229"
+                  lemma="dieu"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
                   </choice>eu</w>
-                    <w lemma="toner" type="POS=VERppa|NOMB.=s|GENRE=m|CAS=r">tona<choice>
+                    <w xml:id="_w_000230"
+                  lemma="toner"
+                  type="POS=VERppa|NOMB.=s|GENRE=m|CAS=r">tona<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
                      <abbr>̃</abbr>
                   </choice>t</w>
-                    <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                    <w xml:id="_w_000231" lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
                     <pc type="supplied">'</pc>
-                    <w lemma="i2" type="POS=PROadv">
+                    <w xml:id="_w_000232" lemma="i2" type="POS=PROadv">
                   <choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
                </w>
-                    <w lemma="peser" type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=s">po<choice>
+                    <w xml:id="_w_000233"
+                  lemma="peser"
+                  type="POS=VERcjg|MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=s">po<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -1942,8 +2285,8 @@
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>t</w>
-                    <w lemma="en2" type="POS=PROadv">an</w>
-                    <w lemma="öir" type="POS=VERinf">o<choice>
+                    <w xml:id="_w_000234" lemma="en2" type="POS=PROadv">an</w>
+                    <w xml:id="_w_000235" lemma="öir" type="POS=VERinf">o<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -1951,9 +2294,11 @@
                     <pc type="supplied">.</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="22"/>
+                <lb n="4"/>
                 <l xml:id="edGL_l_33" n="33">
-                    <w lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000236"
+                  lemma="Garin"
+                  type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                   <hi rend="initiale detach">G</hi>ar<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
@@ -1969,24 +2314,29 @@
                      <orig>ſ</orig>
                   </choice>
                </w>
-                    <w lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
+                    <w xml:id="_w_000237"
+                  lemma="soi1"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">
                   <choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>e</w>
-                    <w lemma="pasmer" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pa<choice>
+                    <w xml:id="_w_000238"
+                  lemma="pasmer"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pa<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>me</w>
-                    <w lemma="que4" type="POS=CONsub">
+                    <w xml:id="_w_000239" lemma="que4" type="POS=CONsub">
                   <choice>
                      <expan>q<ex>ue</ex>
                      </expan>
                      <abbr>q̃</abbr>
                   </choice>
                </w>
-                    <w lemma="ne1" type="POS=ADVneg">ne</w>
-                    <w lemma="soi1"
+                    <w xml:id="_w_000240" lemma="ne1" type="POS=ADVneg">ne</w>
+                    <w xml:id="_w_000241"
+                  lemma="soi1"
                   type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r"
                   rend="elision">
                   <choice>
@@ -1995,28 +2345,33 @@
                   </choice>
                </w>
                     <pc type="supplied">'</pc>
-                    <w lemma="en2" type="POS=PROadv">e<choice>
+                    <w xml:id="_w_000242" lemma="en2" type="POS=PROadv">e<choice>
                      <expan>
                         <ex>n</ex>
                      </expan>
                      <abbr>̃</abbr>
                   </choice>
                </w>
-                    <w lemma="pöoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pot</w>
-                    <w lemma="tenir1" type="POS=VERinf">ten<choice>
+                    <w xml:id="_w_000243"
+                  lemma="pöoir"
+                  type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">pot</w>
+                    <w xml:id="_w_000244" lemma="tenir1" type="POS=VERinf">ten<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>r</w>
                     <pc type="supplied">.</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="23"/>
+                <lb n="5"/>
                 <l xml:id="edGL_l_34" n="34">
-                    <w lemma="a3+le"
+                    <w xml:id="_w_000245"
+                  lemma="a3+le"
                   type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r"
                   rend="aggl">
                   <hi rend="initiale detach">a</hi>u</w>
-                    <w lemma="relever" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">rele<choice>
+                    <w xml:id="_w_000246"
+                  lemma="relever"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">rele<choice>
                      <reg>v</reg>
                      <orig>u</orig>
                   </choice>
@@ -2027,12 +2382,14 @@
                      <abbr>͛</abbr>
                   </choice>
                </w>
-                    <w lemma="or4" type="POS=ADVgen|DEGRE=-">o<choice>
+                    <w xml:id="_w_000247" lemma="or4" type="POS=ADVgen|DEGRE=-">o<choice>
                      <reg>r</reg>
                      <orig>ꝛ</orig>
                   </choice>
                </w>
-                    <w lemma="öir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">o<choice>
+                    <w xml:id="_w_000248"
+                  lemma="öir"
+                  type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">o<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>e<choice>
@@ -2040,19 +2397,25 @@
                      <orig>ʒ</orig>
                   </choice>
                </w>
-                    <w lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=n|CAS=r">
+                    <w xml:id="_w_000249"
+                  lemma="que2"
+                  type="POS=PROrel|NOMB.=s|GENRE=n|CAS=r">
                   <choice>
                      <expan>q<ex>ue</ex>
                      </expan>
                      <abbr>q̃</abbr>
                   </choice>
                </w>
-                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000250"
+                  lemma="il"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>l</w>
-                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000251"
+                  lemma="dire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -2068,29 +2431,37 @@
                     <pc type="supplied">:</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="24"/>
+                <lb n="6"/>
                 <l xml:id="edGL_l_35" n="35">
                     <pc type="supplied">«</pc>
                     <q>
-                        <w lemma="por2" type="POS=PRE">
+                        <w xml:id="_w_000252" lemma="por2" type="POS=PRE">
                      <hi rend="initiale detach">p</hi>o<choice>
                         <reg>r</reg>
                         <orig>ꝛ</orig>
                      </choice>
                   </w>
-                        <w lemma="coi2" type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">co<choice>
+                        <w xml:id="_w_000253"
+                     lemma="coi2"
+                     type="POS=PROint|NOMB.=s|GENRE=n|CAS=r">co<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
                         <pc type="supplied">,</pc>
-                        <w lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">b<choice>
+                        <w xml:id="_w_000254"
+                     lemma="bel1"
+                     type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">b<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>au</w>
-                        <w lemma="frere" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere</w>
+                        <w xml:id="_w_000255"
+                     lemma="frere"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">frere</w>
                         <pc type="supplied">,</pc>
-                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000256"
+                     lemma="vos"
+                     type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -2102,8 +2473,12 @@
                         <abbr>⁹</abbr>
                      </choice>
                   </w>
-                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
-                        <w lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
+                        <w xml:id="_w_000257"
+                     lemma="avoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
+                        <w xml:id="_w_000258"
+                     lemma="Fromund"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">
                      <choice>
                         <expan>Fro<ex>mont</ex>
                         </expan>
@@ -2114,7 +2489,9 @@
                   </w>
                   <note resp="#JBC">La consonne finale est indécidable (entre -t, -z ou -s), le fragment n'ayant
                             pas d'occurrence développée.</note>
-                        <w lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
+                        <w xml:id="_w_000259"
+                     lemma="ocire"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">oc<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -2127,16 +2504,18 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="25"/>
+                <lb n="7"/>
                 <l xml:id="edGL_l_36" n="36">
-                    <w lemma="ja" type="POS=ADVgen|DEGRE=-">
+                    <w xml:id="_w_000260" lemma="ja" type="POS=ADVgen|DEGRE=-">
                   <hi rend="initiale detach">
                      <choice>
                         <reg>j</reg>
                         <orig>J</orig>
                      </choice>
                   </hi>a</w>
-                    <w lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">
+                    <w xml:id="_w_000261"
+                  lemma="dire"
+                  type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">
                   <choice>
                      <reg>d</reg>
                      <orig>δ</orig>
@@ -2152,12 +2531,17 @@
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>t</w>
-                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000262"
+                  lemma="il"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>l</w>
-                    <w lemma="que4" type="POS=CONsub" rend="elision">
+                    <w xml:id="_w_000263"
+                  lemma="que4"
+                  type="POS=CONsub"
+                  rend="elision">
                   <choice>
                             <abbr xml:id="abbr_quil_03">qͥl</abbr>
                             <expan>q<ex>u</ex>
@@ -2165,26 +2549,34 @@
                         </choice>
                </w>
                     <pc type="supplied">'</pc>
-                    <w lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000264"
+                  lemma="il"
+                  type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                             <abbr corresp="#abbr_quil_03"/>
                             <expan>il</expan>
                         </choice>
                </w>
-                    <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">e<choice>
+                    <w xml:id="_w_000265"
+                  lemma="estre1"
+                  type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=s">e<choice>
                      <reg>s</reg>
                      <orig>ſ</orig>
                   </choice>to<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>t</w>
-                    <w lemma="nostre" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">
+                    <w xml:id="_w_000266"
+                  lemma="nostre"
+                  type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <expan>n<ex>ost</ex>re</expan>
                      <abbr>nrẽ</abbr>
                   </choice>
                </w>
-                    <w lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
+                    <w xml:id="_w_000267"
+                  lemma="ami"
+                  type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">am<choice>
                      <reg>i</reg>
                      <orig>ı</orig>
                   </choice>
@@ -2196,10 +2588,12 @@
                     <pc type="supplied">'</pc>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="26"/>
+                <lb n="8"/>
                 <l xml:id="edGL_l_37" n="37">
                     <q>
-                        <w lemma="nos1" type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000268"
+                     lemma="nos1"
+                     type="POS=PROper|PERS.=1|NOMB.=p|GENRE=m|CAS=r">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>n</reg>
@@ -2210,14 +2604,18 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=1|NOMB.=p">e<choice>
+                        <w xml:id="_w_000269"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=1|NOMB.=p">e<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>en</w>
-                        <w lemma="guerroiier2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">g<choice>
+                        <w xml:id="_w_000270"
+                     lemma="guerroiier2"
+                     type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">g<choice>
                         <expan>
                            <ex>uer</ex>
                         </expan>
@@ -2227,7 +2625,7 @@
                         <orig>ı</orig>
                      </choice>e<reg>́</reg>
                   </w>
-                        <w lemma="et" type="POS=CONcoo">
+                        <w xml:id="_w_000271" lemma="et" type="POS=CONcoo">
                      <choice>
                         <expan>
                            <ex>et</ex>
@@ -2235,7 +2633,9 @@
                         <abbr></abbr>
                      </choice>
                   </w>
-                        <w lemma="häir" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ha<choice>
+                        <w xml:id="_w_000272"
+                     lemma="häir"
+                     type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">ha<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -2245,19 +2645,28 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="27"/>
+                <lb n="9"/>
                 <l xml:id="edGL_l_38" n="38">
                     <q>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" rend="aggl">
+                        <w xml:id="_w_000273"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r"
+                     rend="aggl">
                      <hi rend="initiale detach">L</hi>a</w>
-                        <w lemma="pais" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">pe<choice>
+                        <w xml:id="_w_000274"
+                     lemma="pais"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">pe<choice>
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                        <w lemma="faire" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n">fete</w>
-                        <w lemma="devant" type="POS=PRE">
+                        <w xml:id="_w_000275"
+                     lemma="estre1"
+                     type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                        <w xml:id="_w_000276"
+                     lemma="faire"
+                     type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n">fete</w>
+                        <w xml:id="_w_000277" lemma="devant" type="POS=PRE">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
@@ -2271,13 +2680,19 @@
                         </expan>
                         <abbr>̃</abbr>
                      </choice>t</w>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                        <w lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ro<choice>
+                        <w xml:id="_w_000278"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
+                        <w xml:id="_w_000279"
+                     lemma="roi2"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ro<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">pep<choice>
+                        <w xml:id="_w_000280"
+                     lemma="Pepin"
+                     type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">pep<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -2292,10 +2707,10 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="28"/>
+                <lb n="10"/>
                 <l xml:id="edGL_l_39" n="39">
                     <q>
-                        <w lemma="or4" type="POS=ADVgen|DEGRE=-">
+                        <w xml:id="_w_000281" lemma="or4" type="POS=ADVgen|DEGRE=-">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>o</reg>
@@ -2307,7 +2722,9 @@
                         <orig>ꝛ</orig>
                      </choice>
                   </w>
-                        <w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
+                        <w xml:id="_w_000282"
+                     lemma="vos"
+                     type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>
@@ -2319,26 +2736,32 @@
                         <abbr>⁹</abbr>
                      </choice>
                   </w>
-                        <w lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">o<choice>
+                        <w xml:id="_w_000283"
+                     lemma="avoir"
+                     type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">o<choice>
                         <expan>
                            <ex>n</ex>
                         </expan>
                         <abbr>̃</abbr>
                      </choice>t</w>
-                        <w lemma="morir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">mo<choice>
+                        <w xml:id="_w_000284"
+                     lemma="morir"
+                     type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">mo<choice>
                         <reg>r</reg>
                         <orig>ꝛ</orig>
                      </choice>t</w>
                         <pc type="supplied">!</pc>
-                        <w lemma="ja" type="POS=ADVgen|DEGRE=-">
+                        <w xml:id="_w_000285" lemma="ja" type="POS=ADVgen|DEGRE=-">
                      <choice>
                         <reg>j</reg>
                         <orig>ı</orig>
                      </choice>a</w>
-                        <w lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
+                        <w xml:id="_w_000286" lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="en2" type="POS=PROadv">en</w>
-                        <w lemma="pöoir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p">pu<choice>
+                        <w xml:id="_w_000287" lemma="en2" type="POS=PROadv">en</w>
+                        <w xml:id="_w_000288"
+                     lemma="pöoir"
+                     type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=p">pu<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -2355,7 +2778,7 @@
                         </expan>
                         <abbr>̃</abbr>
                      </choice>t</w>
-                        <w lemma="jöir" type="POS=VERinf">
+                        <w xml:id="_w_000289" lemma="jöir" type="POS=VERinf">
                      <choice>
                         <reg>j</reg>
                         <orig>ı</orig>
@@ -2368,10 +2791,10 @@
                     </q>
                     <pc type="orig">.</pc>
                 </l>
-                <lb n="29"/>
+                <lb n="11"/>
                 <l xml:id="edGL_l_40" n="40">
                     <q>
-                        <w lemma="mais1" type="POS=CONcoo">
+                        <w xml:id="_w_000290" lemma="mais1" type="POS=CONcoo">
                      <hi rend="initiale detach">
                         <choice>
                            <reg>m</reg>
@@ -2382,36 +2805,47 @@
                         <orig>ſ</orig>
                      </choice>
                   </w>
-                        <w lemma="par" type="POS=PRE">
+                        <w xml:id="_w_000291" lemma="par" type="POS=PRE">
                      <choice>
                         <expan>p<ex>ar</ex>
                         </expan>
                         <abbr>ꝑ</abbr>
                      </choice>
                   </w>
-                        <w lemma="cel" type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">celu<choice>
+                        <w xml:id="_w_000292"
+                     lemma="cel"
+                     type="POS=PROdem|NOMB.=s|GENRE=m|CAS=r">celu<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
                   </w>
-                        <w lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
+                        <w xml:id="_w_000293"
+                     lemma="qui"
+                     type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">q<choice>
                         <expan>
                            <ex>u</ex>i</expan>
                         <abbr>ͥ</abbr>
                      </choice>
                   </w>
-                        <w lemma="de" type="POS=PRE">
+                        <w xml:id="_w_000294" lemma="de" type="POS=PRE">
                      <choice>
                         <reg>d</reg>
                         <orig>δ</orig>
                      </choice>e</w>
-                        <w lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r" rend="elision">l</w>
+                        <w xml:id="_w_000295"
+                     lemma="le"
+                     type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r"
+                     rend="elision">l</w>
                         <pc type="supplied">'</pc>
-                        <w lemma="aigue" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">e<choice>
+                        <w xml:id="_w_000296"
+                     lemma="aigue"
+                     type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">e<choice>
                         <reg>v</reg>
                         <orig>u</orig>
                      </choice>e</w>
-                        <w lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
+                        <w xml:id="_w_000297"
+                     lemma="faire"
+                     type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">f<choice>
                         <reg>i</reg>
                         <orig>ı</orig>
                      </choice>
@@ -2419,7 +2853,9 @@
                         <reg>s</reg>
                         <orig>ſ</orig>
                      </choice>t</w>
-                        <w lemma="vin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
+                        <w xml:id="_w_000298"
+                     lemma="vin"
+                     type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">
                      <choice>
                         <reg>v</reg>
                         <orig>u</orig>

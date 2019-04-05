@@ -1,0 +1,2240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="fr"
+     xml:id="ed_CroisBaudriM2"
+     type="ed"
+     corresp="jns9024"
+     version="5">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Siège d'Antioche / Récit de la première croisade d'après Baudri de
+               Bourgueil</title>
+            <title type="sub">Fragments Hatton: numérisation de l'édition de P. Meyer</title>
+            <editor xml:id="PM">Paul Meyer</editor>
+            <respStmt xml:id="MLB">
+               <resp>Encodage en TEI</resp>
+               <persName>Marie-Laurence Bonhomme</persName>
+            </respStmt>
+            <respStmt xml:id="JBC">
+               <resp>édition numérique sous la direction de</resp>
+               <persName>Jean-Baptiste Camps</persName>
+            </respStmt>
+         </titleStmt>
+         <!--<editionStmt>
+            <edition>Édition électronique réalisée dans le cadre du Master 2 TNAH de l'École
+               nationale des chartes, en <date type="created" when="2018-04">avril
+                  2018</date>.</edition>
+            <!-\-<respStmt>
+               <name>Marie-Laurence Bonhomme</name>
+               <resp>Encodage en TEI</resp>
+            </respStmt>-\->
+         </editionStmt>-->
+         <publicationStmt>
+            <authority>
+               <persName>Jean-Baptiste Camps</persName>
+               <address>
+                  <orgName>École nationale des chartes</orgName>
+                  <addrLine>65 rue de Richelieu</addrLine>
+                  <addrLine>F-75002 Paris</addrLine>
+               </address>
+               <email>jbcamps@hotmail.com</email>
+            </authority>
+            <availability status="free">
+               <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                  d'auteurs médiévaux sont dans le domaine public.</licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                  d'encodage et d'annotation sont mis à disposition selon les termes de la licence
+                  Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International
+                  (CC BY-SA 4.0). </licence>
+            </availability>
+            <date when="2018">2018</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct xml:id="Me1" type="article" status="draft">
+               <!-- JBC: bon traitement de la source. -->
+               <analytic>
+                  <title>Mélanges de poésie française</title>
+                  <author>Paul Meyer</author>
+               </analytic>
+               <monogr>
+                  <title>Romania</title>
+                  <imprint>
+                     <pubPlace>Paris</pubPlace>
+                     <publisher>F. Vieweg, libraire-éditeur</publisher>
+                     <date type="published" when="1877">1877</date>
+                     <biblScope unit="volume">t.6</biblScope>
+                     <biblScope unit="issue">n°24</biblScope>
+                     <biblScope unit="page">pp.481-503</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="CTS">
+            <cRefPattern n="vers"
+                         matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+               <p>Ce pointeur extrait les vers</p>
+            </cRefPattern>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <!-- JBC: description des métadonnées du texte source, communiquées dans le fichier csv (date du ms., etc.) -->
+         <creation>
+            <origPlace cert="unknown" resp="#PM" type="lieuComposition">anglo-normand</origPlace>
+            <origDate cert="unknown"
+                      resp="DEAF"
+                      type="dateComposition"
+                      notBefore="1175"
+                      notAfter="1200">déb. XIIIe</origDate>
+            <origPlace cert="unknown" resp="#PM" type="lieuManuscrit">Angleterre</origPlace>
+            <origDate cert="unknown"
+                      resp="#PM"
+                      type="dateManuscrit"
+                      notBefore="1240"
+                      notAfter="1260">"écriture du milieu ou de la seconde moitié du XIII siècle" (Meyer
+               1876, p. 2); milieu du XIIIe (DEAF)</origDate>
+         </creation>
+         <langUsage>
+            <language cert="unknown" resp="#PM" ident="xno" usage="100">anglo-normand</language>
+         </langUsage>
+         <!--  -->
+      </profileDesc>
+      <revisionDesc status="draft">
+         <!-- JBC:
+         TODO: 
+         - voir comment on traite le fait que les passages cités ici proviennent de différents manuscrits ;
+         - segmentation faite automatiquement et non vérifiée ;
+         - résolution des abréviations à revoir. 
+         -->
+         <change when="2019-04" who="#JBC" status="draft">Séparation en deux fichiers</change>
+         <change when="2018-11" who="#JBC" status="draft">Correction, renumérotation, intégration de
+            l'étiquetage relu par Alice Cochet</change>
+         <change when="201808" who="#JBC" status="draft">Correction du document</change>
+         <change when="2018" who="#MLB" status="draft">Encodage du document</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="fro" xml:base="urn:cts:froLit:geste.jns9024.ed_CroisBaudriM2">
+      <!-- JBC: de mon point de vue, tout ce qui est «introduction» de l'édition même doit plutôt aller
+      dans le front, que dans le body. Ceci dit, votre choix peut se justifier par le respect de la forme
+      article, et l'imbrication des différents éléments de contenu-->
+      <front>
+         <!-- Tout ce qui est de l'ordre de l'introduction du fragment. -->
+         <div type="introduction">
+            <head>II.LE POÈME DE LA CROISADE IMITÉ DE BAUDRI DE BOURGUEIL. FRAGMENT NOUVELLEMENT
+               DÉCOUVERT.</head>
+            <p>Lorsque, il y a environ deux ans<note n="1">Romania, V, 1 et suiv.</note>, je
+               dissertais sur la chanson de la première croisade composée principalement d'après
+                  l'<bibl status="draft">
+                  <title>Historia Hierosolymitara</title> de
+                     <author>Baudri</author>
+               </bibl>, l'évèque de Dôle, je disais que l'auteur de ce
+               poème était, « sinon un Français ou un Normand du continent, au moins un Normand
+               d'Angleterre ayant conservé le bon usage de la langue, les fautes nombreuses que nous
+               rencontrons dans les deux mss. de son œuvre devant, selon toute probabilité, être
+               portées au compte des copistes. »</p>
+            <p>Un heureux hasard est venu confirmer mon opinion. Nous avons maintenant la preuve que
+               le poème dont je ne connaissais que deux mss. exécutés en Angleterre, est l'œuvre
+               d'un Français du continent. Il y a quelques mois, M. W . H. Turner, qui achève
+               actuellement le catalogue des chartes de la Bodléienne<note n="2">Ce catalogue est
+                  sous presse et sera prochainement publié.</note>, trouva, dans la reliure d'un
+               livre acheté à Londres, deux feuillets manuscrits d'un poëme français. Grâce à
+               l'obligeance de mon ami M. Neubauer, sous—bibliothécaire de la Bodleienne, ces
+               feuillets me furent communiqués, et j'y reconnus deux fragments du poème imité de
+               Baudri. J'ai fait reproduire en héliogravure<pb n="490"/>un côté de l'un d'eux, et
+               tout lecteur ayant quelques connaissances en paléographie reconnaîtra que l'écriture
+               de ce fragment est française, et qu'elle appartient au milieu du XIII<hi rend="exposant">e</hi> siècle.</p>
+            <p>Le premier de ces feuillets coïncide avec le premier des morceaux que j'ai publiés
+               l'an dernier, d'après les mss. d'Oxford et de Spalding.. Les chiffres placés entre [
+               ] à droite du texte faciliteront la comparaison avec ce morceau. On remarquera qu'en
+               général le texte du fragment est supérieur à celui des mss. entiers. C'est ce que je
+               fais ressortir dans les notes<note n="1">Je reproduis, dans la transcription de ces
+                  fragments, celles des abréviations qui peuvent donner lieu à doute. Je restitue en
+                  italiques quelques mots ou lettres qui manquent actuellement par suite de
+                  déchirures.</note>.</p>
+            <p>Ces précieux fragments ont été donnés à la Bodléienne. On les a fixés dans la reliure
+               du <bibl status="draft">
+                  <msIdentifier>
+                     <idno>ms. Hatton 77</idno>
+                  </msIdentifier>
+               </bibl> qui est le plus ancien des deux mss. du poème de la
+               croisade.</p>
+         </div>
+      </front>
+      <body>
+         <lg>
+            <gap quantity="2" unit="lines" reason="damage"/>
+            <note>Dans le premier fragment, les deux premiers vers de chaque page ont été
+               coupés.</note>
+            <metamark>(r°)</metamark>
+            <l xml:id="Me1_l_1" n="1">
+               <pc type="supplied">—</pc>
+               <w xml:id="Me1_w_000001">Voire</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000002">dist</w>
+               <w xml:id="Me1_w_000003" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000004">
+                  <abbr>emꝑ<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <pc type="supplied">,</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000005">ne</w>
+               <w xml:id="Me1_w_000006" rend="elision">m</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000007">en</w>
+               <w xml:id="Me1_w_000008">puis</w>
+               <w xml:id="Me1_w_000009">esclairier</w>
+               <pc type="supplied">.</pc>
+               <pc type="supplied">»</pc>
+            </l>
+            <l xml:id="Me1_l_2" n="2">
+               <w xml:id="Me1_w_000010">Puis</w>
+               <w xml:id="Me1_w_000011">a</w>
+               <w xml:id="Me1_w_000012">fait</w>
+               <w xml:id="Me1_w_000013">Menuiax</w>
+               <w xml:id="Me1_w_000014">Godefroi</w>
+               <w xml:id="Me1_w_000015">acointier</w>
+               <note>Menuiax<pc type="supplied">,</pc> O<pc type="supplied">.</pc> Sp<pc type="supplied">.</pc> eneveis qui n'a pas de sens<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_3" n="3">
+               <w xml:id="Me1_w_000016">Qu</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000017">il</w>
+               <w xml:id="Me1_w_000018">lait</w>
+               <w xml:id="Me1_w_000019">Costantinoble</w>
+               <w xml:id="Me1_w_000020">et</w>
+               <w xml:id="Me1_w_000021" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000022">aut</w>
+               <w xml:id="Me1_w_000023">fors</w>
+               <w xml:id="Me1_w_000024">herbergier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_4" n="4">
+               <w xml:id="Me1_w_000025">Car</w>
+               <w xml:id="Me1_w_000026">la</w>
+               <w xml:id="Me1_w_000027">gens</w>
+               <w xml:id="Me1_w_000028">ne</w>
+               <w xml:id="Me1_w_000029">li</w>
+               <w xml:id="Me1_w_000030">sires</w>
+               <w xml:id="Me1_w_000031">ne</w>
+               <w xml:id="Me1_w_000032" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000033">i</w>
+               <w xml:id="Me1_w_000034">ont</w>
+               <w xml:id="Me1_w_000035">gaires</w>
+               <w xml:id="Me1_w_000036">chier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_5" n="5">
+               <w xml:id="Me1_w_000037">Quant</w>
+               <w xml:id="Me1_w_000038">Godefrois</w>
+               <w xml:id="Me1_w_000039" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000040">oi</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000041">sa</w>
+               <w xml:id="Me1_w_000042">gent</w>
+               <w xml:id="Me1_w_000043">a</w>
+               <w xml:id="Me1_w_000044">fait</w>
+               <w xml:id="Me1_w_000045">logier</w>
+            </l>
+            <metamark>[545]</metamark>
+            <l xml:id="Me1_l_6" n="6">
+               <w xml:id="Me1_w_000046">Auques</w>
+               <w xml:id="Me1_w_000047">
+                  <sic>loig</sic>
+               </w>
+               <w xml:id="Me1_w_000048">de</w>
+               <w xml:id="Me1_w_000049">la</w>
+               <w xml:id="Me1_w_000050">vile</w>
+               <w xml:id="Me1_w_000051">dalés</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000052">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000053">grant</w>
+               <w xml:id="Me1_w_000054">vergier</w>
+            </l>
+            <l xml:id="Me1_l_7" n="7">
+               <w xml:id="Me1_w_000055">Qui</w>
+               <w xml:id="Me1_w_000056">fu</w>
+               <w xml:id="Me1_w_000057" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000058">empereor</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000059">mervillous</w>
+               <w xml:id="Me1_w_000060">et</w>
+               <w xml:id="Me1_w_000061">plenier</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_8" n="8">
+               <w xml:id="Me1_w_000062">Et</w>
+               <w xml:id="Me1_w_000063">i</w>
+               <w xml:id="Me1_w_000064">coroit</w>
+               <w xml:id="Me1_w_000065">une</w>
+               <w xml:id="Me1_w_000066">aigue</w>
+               <w xml:id="Me1_w_000067">qui</w>
+               <w xml:id="Me1_w_000068">menoit</w>
+               <w xml:id="Me1_w_000069">grant</w>
+               <w xml:id="Me1_w_000070">tempier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_9" n="9">
+               <w xml:id="Me1_w_000071">Assez</w>
+               <w xml:id="Me1_w_000072">i</w>
+               <w xml:id="Me1_w_000073">fussent</w>
+               <w xml:id="Me1_w_000074">bien</w>
+               <w xml:id="Me1_w_000075">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000076">lor</w>
+               <w xml:id="Me1_w_000077">cors</w>
+               <w xml:id="Me1_w_000078">aaisier</w>
+            </l>
+            <l xml:id="Me1_l_10" n="10">
+               <w xml:id="Me1_w_000079">Se</w>
+               <w xml:id="Me1_w_000080">ne</w>
+               <w xml:id="Me1_w_000081">fussent</w>
+               <w xml:id="Me1_w_000082">li</w>
+               <w xml:id="Me1_w_000083">Griu</w>
+               <w xml:id="Me1_w_000084">qui</w>
+               <w xml:id="Me1_w_000085">les</w>
+               <w xml:id="Me1_w_000086">vont</w>
+               <w xml:id="Me1_w_000087">abaier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <metamark>[550]</metamark>
+            <l xml:id="Me1_l_11" n="11">
+               <w xml:id="Me1_w_000088">A</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000089">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000090">soir</w>
+               <w xml:id="Me1_w_000091">i</w>
+               <w xml:id="Me1_w_000092">alerent</w>
+               <w xml:id="Me1_w_000093">
+                  <abbr>ꝑ</abbr>
+               </w>
+               <w xml:id="Me1_w_000094">lor</w>
+               <w xml:id="Me1_w_000095">fort</w>
+               <w xml:id="Me1_w_000096">
+                  <abbr>enꝯbrier</abbr>
+               </w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_12" n="12">
+               <w xml:id="Me1_w_000097">Car</w>
+               <w xml:id="Me1_w_000098">cil</w>
+               <w xml:id="Me1_w_000099">qui</w>
+               <w xml:id="Me1_w_000100" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000101">ost</w>
+               <w xml:id="Me1_w_000102">devoient</w>
+               <w xml:id="Me1_w_000103">la</w>
+               <w xml:id="Me1_w_000104">nuit</w>
+               <w xml:id="Me1_w_000105">eschergaitier</w>
+            </l>
+            <l xml:id="Me1_l_13" n="13">
+               <w xml:id="Me1_w_000106">En</w>
+               <w xml:id="Me1_w_000107">ont</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000108">vij</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000109">detrenchiez</w>
+               <w xml:id="Me1_w_000110">qui</w>
+               <w xml:id="Me1_w_000111">gisent</w>
+               <w xml:id="Me1_w_000112">el</w>
+               <w xml:id="Me1_w_000113">gravier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_14" n="14">
+               <w xml:id="Me1_w_000114">Bien</w>
+               <w xml:id="Me1_w_000115">le</w>
+               <w xml:id="Me1_w_000116">sot</w>
+               <w xml:id="Me1_w_000117" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000118">
+                  <abbr>emꝑ</abbr>
+               </w>
+               <w xml:id="Me1_w_000119">ains</w>
+               <w xml:id="Me1_w_000120" rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000121">il</w>
+               <w xml:id="Me1_w_000122" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000123">alast</w>
+               <w xml:id="Me1_w_000124">couchier</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_15" n="15">
+               <w xml:id="Me1_w_000125">Se</w>
+               <w xml:id="Me1_w_000126">il</w>
+               <w xml:id="Me1_w_000127">en</w>
+               <w xml:id="Me1_w_000128">est</w>
+               <w xml:id="Me1_w_000129">maris</w>
+               <w xml:id="Me1_w_000130">nus</w>
+               <w xml:id="Me1_w_000131" rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000132">en</w>
+               <w xml:id="Me1_w_000133">doit</w>
+               <w xml:id="Me1_w_000134">mervillier</w>
+               <note>Ce vers est faux dans O<pc type="supplied">.</pc> et Sp<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <metamark>[555]</metamark>
+            <l xml:id="Me1_l_16" n="16">
+               <w xml:id="Me1_w_000135">Au</w>
+               <w xml:id="Me1_w_000136">matinnet</w>
+               <w xml:id="Me1_w_000137">a</w>
+               <w xml:id="Me1_w_000138" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000139">aube</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000140">quant</w>
+               <w xml:id="Me1_w_000141">il</w>
+               <w xml:id="Me1_w_000142">dut</w>
+               <w xml:id="Me1_w_000143">esclairier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_17" n="17">
+               <w xml:id="Me1_w_000144">Manda</w>
+               <w xml:id="Me1_w_000145">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000146">Godefroi</w>
+               <w xml:id="Me1_w_000147">le</w>
+               <w xml:id="Me1_w_000148">nobile</w>
+               <w xml:id="Me1_w_000149">guerrier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="1"/>
+            <l xml:id="Me1_l_18" n="18">
+               <w xml:id="Me1_w_000150">Li</w>
+               <w xml:id="Me1_w_000151">bons</w>
+               <w xml:id="Me1_w_000152">dus</w>
+               <w xml:id="Me1_w_000153">
+                  <abbr>God<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000154">a</w>
+               <w xml:id="Me1_w_000155">la</w>
+               <w xml:id="Me1_w_000156">
+                  <abbr>ꝑole</abbr>
+               </w>
+               <w xml:id="Me1_w_000157">oie</w>
+            </l>
+            <l xml:id="Me1_l_19" n="19">
+               <w xml:id="Me1_w_000158">
+                  <sic>Q</sic>
+               </w>
+               <w xml:id="Me1_w_000159">Alexis</w>
+               <w xml:id="Me1_w_000160">le</w>
+               <w xml:id="Me1_w_000161">manda</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000162">que</w>
+               <w xml:id="Me1_w_000163">Jhesus</w>
+               <w xml:id="Me1_w_000164">maleie</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <l xml:id="Me1_l_20" n="20">
+               <w xml:id="Me1_w_000165">Toz</w>
+               <w xml:id="Me1_w_000166">les</w>
+               <w xml:id="Me1_w_000167">millors</w>
+               <w xml:id="Me1_w_000168">manda</w>
+               <w xml:id="Me1_w_000169">de</w>
+               <w xml:id="Me1_w_000170">sa</w>
+               <w xml:id="Me1_w_000171">grant</w>
+               <w xml:id="Me1_w_000172">baronnie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <metamark>[560]</metamark>
+            <l xml:id="Me1_l_21" n="21">
+               <w xml:id="Me1_w_000173">Bien</w>
+               <w xml:id="Me1_w_000174">les</w>
+               <w xml:id="Me1_w_000175">fist</w>
+               <w xml:id="Me1_w_000176">conreer</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000177">ce</w>
+               <w xml:id="Me1_w_000178">fu</w>
+               <w xml:id="Me1_w_000179">grans</w>
+               <w xml:id="Me1_w_000180">cortoisie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_22" n="22">
+               <w xml:id="Me1_w_000181">Puis</w>
+               <w xml:id="Me1_w_000182">montent</w>
+               <w xml:id="Me1_w_000183">es</w>
+               <w xml:id="Me1_w_000184">destriers</w>
+               <w xml:id="Me1_w_000185">qui</w>
+               <w xml:id="Me1_w_000186">vinrent</w>
+               <w xml:id="Me1_w_000187">de</w>
+               <w xml:id="Me1_w_000188">Hongrie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_23" n="23">
+               <w xml:id="Me1_w_000189">25</w>
+               <w xml:id="Me1_w_000190">Dui</w>
+               <w xml:id="Me1_w_000191">et</w>
+               <w xml:id="Me1_w_000192">dui</w>
+               <w xml:id="Me1_w_000193">sont</w>
+               <w xml:id="Me1_w_000194">entré</w>
+               <w xml:id="Me1_w_000195">
+                  <abbr>ꝑ</abbr>
+               </w>
+               <w xml:id="Me1_w_000196">la</w>
+               <w xml:id="Me1_w_000197">porte</w>
+               <w xml:id="Me1_w_000198">Goulie</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_24" n="24">
+               <w xml:id="Me1_w_000199">Merveilles</w>
+               <w xml:id="Me1_w_000200">les</w>
+               <w xml:id="Me1_w_000201">esgardent</w>
+               <w xml:id="Me1_w_000202">cele</w>
+               <w xml:id="Me1_w_000203">gens</w>
+               <w xml:id="Me1_w_000204">Grifonnie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_25" n="25">
+               <w xml:id="Me1_w_000205">Et</w>
+               <w xml:id="Me1_w_000206">dit</w>
+               <w xml:id="Me1_w_000207">li</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000208">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000209">a</w>
+               <w xml:id="Me1_w_000210" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000211">autre</w>
+               <pc type="supplied">:</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000212">Veés</w>
+               <w xml:id="Me1_w_000213">quelt</w>
+               <w xml:id="Me1_w_000214">baronnie</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <metamark>[565]</metamark>
+            <note>17 Ce vers est faux dans O. et Sp.</note>
+            <pb n="491"/>
+            <l xml:id="Me1_l_26" n="26">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000215">Et</w>
+               <w xml:id="Me1_w_000216">
+                  <abbr>ꝯ</abbr>
+               </w>
+               <w xml:id="Me1_w_000217">samble</w>
+               <w xml:id="Me1_w_000218">preudom</w>
+               <w xml:id="Me1_w_000219">li</w>
+               <w xml:id="Me1_w_000220">sires</w>
+               <w xml:id="Me1_w_000221">qui</w>
+               <w xml:id="Me1_w_000222">les</w>
+               <w xml:id="Me1_w_000223">guie</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <l xml:id="Me1_l_27" n="27">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000224">
+                  <abbr>Ml't</abbr>
+               </w>
+               <w xml:id="Me1_w_000225">fait</w>
+               <w xml:id="Me1_w_000226">nostre</w>
+               <w xml:id="Me1_w_000227">
+                  <abbr>emꝑ<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000228">Alexis</w>
+               <w xml:id="Me1_w_000229">grant</w>
+               <w xml:id="Me1_w_000230">folie</w>
+            </l>
+            <l xml:id="Me1_l_28" n="28">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000231">Quant</w>
+               <w xml:id="Me1_w_000232">il</w>
+               <w xml:id="Me1_w_000233">nes</w>
+               <w xml:id="Me1_w_000234">fait</w>
+               <w xml:id="Me1_w_000235">passer</w>
+               <w xml:id="Me1_w_000236">outre</w>
+               <w xml:id="Me1_w_000237">la</w>
+               <w xml:id="Me1_w_000238">Rômenie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <gap unit="lines" quantity="2" reason="damage"/>
+            <l xml:id="Me1_l_31" n="31">
+               <w xml:id="Me1_w_000239">L</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000240">empereor</w>
+               <w xml:id="Me1_w_000241">troverent</w>
+               <w xml:id="Me1_w_000242">qui</w>
+               <w xml:id="Me1_w_000243">fist</w>
+               <w xml:id="Me1_w_000244">chiere</w>
+               <w xml:id="Me1_w_000245">marie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_32" n="32">
+               <w xml:id="Me1_w_000246">Et</w>
+               <w xml:id="Me1_w_000247">fu</w>
+               <w xml:id="Me1_w_000248">en</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000249">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000250">encloistre</w>
+               <w xml:id="Me1_w_000251">lés</w>
+               <w xml:id="Me1_w_000252">une</w>
+               <w xml:id="Me1_w_000253">praerie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_33" n="33">
+               <w xml:id="Me1_w_000254">Sor</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000255">ij</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000256">pailes</w>
+               <w xml:id="Me1_w_000257">seoit</w>
+               <w xml:id="Me1_w_000258">qui</w>
+               <w xml:id="Me1_w_000259">furent</w>
+               <w xml:id="Me1_w_000260">de</w>
+               <w xml:id="Me1_w_000261">Hongrie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_34" n="34">
+               <w xml:id="Me1_w_000262">Lés</w>
+               <w xml:id="Me1_w_000263">lui</w>
+               <w xml:id="Me1_w_000264">fu</w>
+               <w xml:id="Me1_w_000265">Murgalez</w>
+               <w xml:id="Me1_w_000266">qui</w>
+               <w xml:id="Me1_w_000267">fu</w>
+               <w xml:id="Me1_w_000268">dus</w>
+               <w xml:id="Me1_w_000269">de</w>
+               <w xml:id="Me1_w_000270">Hongrie</w>
+               <note>mgalez<pc type="supplied">,</pc> avec une abréviation dont le sens
+                  m'est pas très<pc type="supplied">—</pc>sûr<pc type="supplied">.</pc> La leçon
+                  d'O<pc type="supplied">.</pc> et de Sp<pc type="supplied">,</pc> est
+                  corrompue<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_35" n="35">
+               <w xml:id="Me1_w_000271">Et</w>
+               <w xml:id="Me1_w_000272">ses</w>
+               <w xml:id="Me1_w_000273">oncles</w>
+               <w xml:id="Me1_w_000274">de</w>
+               <w xml:id="Me1_w_000275">pere</w>
+               <w xml:id="Me1_w_000276">a</w>
+               <w xml:id="Me1_w_000277">la</w>
+               <w xml:id="Me1_w_000278">barbe</w>
+               <w xml:id="Me1_w_000279">florie</w>
+               <note>O<pc type="supplied">.</pc> Sp<pc type="supplied">.</pc> Et si onques
+                     despuis (<pc type="supplied">!</pc>
+                  <pc type="supplied">!</pc>)</note>
+            </l>
+            <metamark>[575]</metamark>
+            <l xml:id="Me1_l_36" n="36">
+               <w xml:id="Me1_w_000280">
+                  <supplied reason="blank" resp="#PM">Et bi</supplied>en</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000281">c</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000282">duc</w>
+               <w xml:id="Me1_w_000283">et</w>
+               <w xml:id="Me1_w_000284">
+                  <abbr>ꝯte</abbr>
+               </w>
+               <w xml:id="Me1_w_000285">de</w>
+               <w xml:id="Me1_w_000286">maisnie</w>
+               <w xml:id="Me1_w_000287">escharie</w>
+            </l>
+            <l xml:id="Me1_l_37" n="37">
+               <w xml:id="Me1_w_000288">
+                  <supplied reason="blank" resp="#PM">Furen</supplied>t</w>
+               <w xml:id="Me1_w_000289">environ</w>
+               <w xml:id="Me1_w_000290">lui</w>
+               <w xml:id="Me1_w_000291">et</w>
+               <w xml:id="Me1_w_000292">ne</w>
+               <w xml:id="Me1_w_000293" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000294">esturent</w>
+               <w xml:id="Me1_w_000295">mie</w>
+               <note>O<pc type="supplied">.</pc> Sp<pc type="supplied">.</pc> et ne se
+                        sistrent<pc type="supplied">,</pc> qui semble préférable<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_38" n="38">
+               <w xml:id="Me1_w_000296">Li</w>
+               <w xml:id="Me1_w_000297">dus</w>
+               <w xml:id="Me1_w_000298">ala</w>
+               <w xml:id="Me1_w_000299">avant</w>
+               <w xml:id="Me1_w_000300">a</w>
+               <w xml:id="Me1_w_000301">la</w>
+               <w xml:id="Me1_w_000302">chiere</w>
+               <w xml:id="Me1_w_000303">hardie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_39" n="39">
+               <w xml:id="Me1_w_000304">L</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000305">empereor</w>
+               <w xml:id="Me1_w_000306">salue</w>
+               <w xml:id="Me1_w_000307">de</w>
+               <w xml:id="Me1_w_000308">Deu</w>
+               <w xml:id="Me1_w_000309">le</w>
+               <w xml:id="Me1_w_000310">fil</w>
+               <w xml:id="Me1_w_000311">Marie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_40" n="40">
+               <w xml:id="Me1_w_000312">Alexis</w>
+               <w xml:id="Me1_w_000313">li</w>
+               <w xml:id="Me1_w_000314">respont</w>
+               <pc type="supplied">:</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000315">Et</w>
+               <w xml:id="Me1_w_000316">il</w>
+               <w xml:id="Me1_w_000317">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000318">beneie</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <metamark>[580]</metamark>
+            <l xml:id="Me1_l_41" n="41">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000319">Mais</w>
+               <w xml:id="Me1_w_000320">je</w>
+               <w xml:id="Me1_w_000321">ne</w>
+               <w xml:id="Me1_w_000322">salu</w>
+               <w xml:id="Me1_w_000323">pas</w>
+               <w xml:id="Me1_w_000324">la</w>
+               <w xml:id="Me1_w_000325">vostre</w>
+               <w xml:id="Me1_w_000326">
+                  <abbr>ꝯpaignie</abbr>
+               </w>
+            </l>
+            <l xml:id="Me1_l_42" n="42">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000327">Qui</w>
+               <w xml:id="Me1_w_000328">ont</w>
+               <w xml:id="Me1_w_000329">mes</w>
+               <w xml:id="Me1_w_000330">homes</w>
+               <w xml:id="Me1_w_000331">mors</w>
+               <w xml:id="Me1_w_000332">et</w>
+               <w xml:id="Me1_w_000333">ma</w>
+               <w xml:id="Me1_w_000334">terre</w>
+               <w xml:id="Me1_w_000335">gastie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_43" n="43">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000336">Toute</w>
+               <w xml:id="Me1_w_000337">ceste</w>
+               <w xml:id="Me1_w_000338">contrée</w>
+               <w xml:id="Me1_w_000339">en</w>
+               <w xml:id="Me1_w_000340">est</w>
+               <w xml:id="Me1_w_000341">vers</w>
+               <w xml:id="Me1_w_000342">ox</w>
+               <w xml:id="Me1_w_000343">marie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_44" n="44">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000344">Si</w>
+               <w xml:id="Me1_w_000345">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000346">consillerai</w>
+               <w xml:id="Me1_w_000347">sans</w>
+               <w xml:id="Me1_w_000348">nesune</w>
+               <w xml:id="Me1_w_000349">boisdie</w>
+            </l>
+            <l xml:id="Me1_l_45" n="45">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000350">Que</w>
+               <w xml:id="Me1_w_000351">passissiez</w>
+               <w xml:id="Me1_w_000352">le</w>
+               <w xml:id="Me1_w_000353">Bras</w>
+               <w xml:id="Me1_w_000354">le</w>
+               <w xml:id="Me1_w_000355">matin</w>
+               <w xml:id="Me1_w_000356">o</w>
+               <w xml:id="Me1_w_000357">navie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <metamark>[585]</metamark>
+            <l xml:id="Me1_l_46" n="46">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000358">
+                  <supplied reason="blank" resp="#PM">Je</supplied>
+               </w>
+               <w xml:id="Me1_w_000359">vos</w>
+               <w xml:id="Me1_w_000360">ferai</w>
+               <w xml:id="Me1_w_000361">avoir</w>
+               <w xml:id="Me1_w_000362">bonne</w>
+               <w xml:id="Me1_w_000363">marcheandie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_47" n="47">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000364">Si</w>
+               <supplied reason="blank" resp="#PM">
+                  <w xml:id="Me1_w_000365">que</w> 
+                  <w xml:id="Me1_w_000366">vostre</w> 
+                  <w xml:id="Me1_w_000367">os</w>
+               </supplied>
+               <w xml:id="Me1_w_000368">en</w>
+               <w xml:id="Me1_w_000369">iert</w>
+               <w xml:id="Me1_w_000370">bien</w>
+               <w xml:id="Me1_w_000371">
+                  <abbr>ꝑ</abbr>
+               </w>
+               <w xml:id="Me1_w_000372">tot</w>
+               <w xml:id="Me1_w_000373">replenie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_48" n="48">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000374">Et</w>
+               <w xml:id="Me1_w_000375">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000376">me</w>
+               <w xml:id="Me1_w_000377">juerrés</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000378">ques</w>
+               <w xml:id="Me1_w_000379">avés</w>
+               <w xml:id="Me1_w_000380">en</w>
+               <w xml:id="Me1_w_000381">baillie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_49" n="49">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000382">A</w>
+               <w xml:id="Me1_w_000383">bien</w>
+               <w xml:id="Me1_w_000384">garder</w>
+               <w xml:id="Me1_w_000385">ma</w>
+               <w xml:id="Me1_w_000386">terre</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000387">mes</w>
+               <w xml:id="Me1_w_000388">
+                  <abbr>m'bres</abbr>
+               </w>
+               <w xml:id="Me1_w_000389">et</w>
+               <w xml:id="Me1_w_000390">ma</w>
+               <w xml:id="Me1_w_000391">vie</w>
+               <note>La fin de ce vers n'est pas une cheville<pc type="supplied">,</pc> c'est
+                     la formule des actes de fidélité<pc type="supplied">,</pc> principalement dans
+                     le Midi <pc type="supplied">:</pc> non ti decebrai de ta vida ne de ta membra
+                     que a tuo corpore junecta sunt<pc type="supplied">,</pc> Recueil d'anciens
+                        textes<pc type="supplied">,</pc> partie provençale<pc type="supplied">,</pc>
+                     n° 42<pc type="supplied">;</pc> cf<pc type="supplied">.</pc> Vaissète<pc type="supplied">,</pc> 1l<pc type="supplied">,</pc> pF<pc type="supplied">.</pc> CXXI<pc type="supplied">,</pc> CXXVI<pc type="supplied">,</pc>
+                        CLAXI<pc type="supplied">,</pc> etc<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_50" n="50">
+               <pc type="supplied">—</pc>
+               <w xml:id="Me1_w_000392">Volentiers</w>
+               <pc type="supplied">,</pc>
+               <pc type="supplied">»</pc>
+               <w xml:id="Me1_w_000393">dist</w>
+               <w xml:id="Me1_w_000394">li</w>
+               <w xml:id="Me1_w_000395">dus</w>
+               <pc type="supplied">,</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000396">Dex</w>
+               <w xml:id="Me1_w_000397">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000398">en</w>
+               <w xml:id="Me1_w_000399">prest</w>
+               <w xml:id="Me1_w_000400">aie</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <metamark>[590]</metamark>
+            <l xml:id="Me1_l_51" n="51">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000401">Mès</w>
+               <w xml:id="Me1_w_000402">seürté</w>
+               <w xml:id="Me1_w_000403" rend="elision">m</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000404">en</w>
+               <w xml:id="Me1_w_000405">faites</w>
+               <w xml:id="Me1_w_000406">que</w>
+               <w xml:id="Me1_w_000407" rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000408">i</w>
+               <w xml:id="Me1_w_000409">ait</w>
+               <w xml:id="Me1_w_000410">trecherie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_52" n="52">
+               <pc type="supplied">—</pc>
+               <w xml:id="Me1_w_000411">Et</w>
+               <w xml:id="Me1_w_000412">je</w>
+               <w xml:id="Me1_w_000413">ensi</w>
+               <w xml:id="Me1_w_000414" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000415">otroi</w>
+               <pc type="supplied">,</pc>
+               <pc type="supplied">»</pc>
+               <w xml:id="Me1_w_000416">Alexis</w>
+               <w xml:id="Me1_w_000417">li</w>
+               <w xml:id="Me1_w_000418">escrie</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_53" n="53">
+               <w xml:id="Me1_w_000419">Les</w>
+               <w xml:id="Me1_w_000420">
+                  <abbr>s<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000421">font</w>
+               <w xml:id="Me1_w_000422">aporter</w>
+               <w xml:id="Me1_w_000423">a</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000424">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000425">vesque</w>
+               <w xml:id="Me1_w_000426">Ysaïe</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_54" n="54">
+               <w xml:id="Me1_w_000427">Ambedui</w>
+               <w xml:id="Me1_w_000428">ont</w>
+               <w xml:id="Me1_w_000429">juré</w>
+               <w xml:id="Me1_w_000430">et</w>
+               <w xml:id="Me1_w_000431">ont</w>
+               <w xml:id="Me1_w_000432">lor</w>
+               <w xml:id="Me1_w_000433">foi</w>
+               <w xml:id="Me1_w_000434">plevie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_55" n="55">
+               <w xml:id="Me1_w_000435">Quant</w>
+               <w xml:id="Me1_w_000436">sont</w>
+               <w xml:id="Me1_w_000437">entrebaisié</w>
+               <w xml:id="Me1_w_000438">si</w>
+               <w xml:id="Me1_w_000439">fu</w>
+               <w xml:id="Me1_w_000440">la</w>
+               <w xml:id="Me1_w_000441">departie</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <metamark>[595]</metamark>
+            <l xml:id="Me1_l_56" n="56">
+               <w xml:id="Me1_w_000442">
+                  <supplied reason="blank" resp="#PM">
+                     <w xml:id="Me1_w_000443">Et</w> 
+                     <w xml:id="Me1_w_000444">li</w> 
+                     <w xml:id="Me1_w_000445">dus</w>
+                  </supplied>
+               </w>
+               <w xml:id="Me1_w_000446">retorna</w>
+               <w xml:id="Me1_w_000447">a</w>
+               <w xml:id="Me1_w_000448">sa</w>
+               <w xml:id="Me1_w_000449">herbergerie</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_57" n="57">
+               <w xml:id="Me1_w_000450">A</w>
+               <w xml:id="Me1_w_000451">toz</w>
+               <w xml:id="Me1_w_000452">ses</w>
+               <w xml:id="Me1_w_000453">
+                  <abbr>ꝯpaignons</abbr>
+               </w>
+               <w xml:id="Me1_w_000454">a</w>
+               <w xml:id="Me1_w_000455">sa</w>
+               <w xml:id="Me1_w_000456">voie</w>
+               <w xml:id="Me1_w_000457">bastie</w>
+            </l>
+            <l xml:id="Me1_l_58" n="58">
+               <w xml:id="Me1_w_000458">Que</w>
+               <w xml:id="Me1_w_000459">demain</w>
+               <w xml:id="Me1_w_000460">passeront</w>
+               <w xml:id="Me1_w_000461">quant</w>
+               <w xml:id="Me1_w_000462" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000463">aube</w>
+               <w xml:id="Me1_w_000464">iert</w>
+               <w xml:id="Me1_w_000465">esclarcie</w>
+               <pc type="supplied">.</pc>
+            </l>
+
+            <gap unit="fol" quantity="4" reason="lacuna"/>
+            <note>
+               <p>Entre ce feuillet et l'autre il y a, selon le ms. d'Oxford, si j'ai bien
+                  compté, une lacuné de 237 vers, soit quatre de nos feuillets. Comme ce second
+                  fragment appartient à une partie du poème que je n'ai pas publiée dans ma
+                  dissertation, je<pb n="492"/>vais, pour rendre plus facile l'intelligence du
+                  morceau , transcrire d'après le ms. d'Oxford le début de la tirade, le faisant
+                  imprimer en italiques. Je ne donne qu'exceptionnellement, dans les notes, les
+                  variantes du ms. d'Oxford, qui en général sont sans valeur.</p>
+               <p>Dans ce morceau le poète traite sa matière avec une grande liberté, prêtant à ses
+                  personnages des discours dont on trouve à peine l'idée dans le texte latin. Ainsi
+                  les paroles mises dans la bouche de Boëmond (v. 12—7) paraissent avoir pour
+                  origine ces mots de Baudri : « Francis prætendere se juramentum nulli nisi « Deo
+                  debere, cujus milites erant in via<note n="1">Bongars, 93/46; Histor. occid. des
+                     croisades, IV (non encore achevé), 25 c.</note>. » La résistance de Raimon de
+                  Saint— Gilles, lorsqu'on le prie de prêter serment à l'empereur, est indiquée par
+                  Baudri : « Comes autem S. Ægidii plus aliis renitebatur. » Mais je ne vois pas que
+                  le message envoyé à Alexis par « deux prudhommes, Alexandre et Renier », se
+                  rencontre dans aucun récit latin.</p>
+            </note>
+            <l xml:id="Me1_l_59" n="59">
+               <w xml:id="Me1_w_000466">Godefrei</w>
+               <w xml:id="Me1_w_000467">de</w>
+               <w xml:id="Me1_w_000468">Boillon</w>
+               <w xml:id="Me1_w_000469">od</w>
+               <w xml:id="Me1_w_000470">le</w>
+               <w xml:id="Me1_w_000471">grand</w>
+               <w xml:id="Me1_w_000472">hardement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_60" n="60">
+               <w xml:id="Me1_w_000473">Qui</w>
+               <w xml:id="Me1_w_000474">en</w>
+               <w xml:id="Me1_w_000475">Romanie</w>
+               <w xml:id="Me1_w_000476">ot</w>
+               <w xml:id="Me1_w_000477">esté</w>
+               <w xml:id="Me1_w_000478">
+                  <supplied reason="blank" resp="#PM">mult</supplied>
+               </w>
+               <w xml:id="Me1_w_000479">lungement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_61" n="61">
+               <w xml:id="Me1_w_000480">Fu</w>
+               <w xml:id="Me1_w_000481">retornez</w>
+               <w xml:id="Me1_w_000482">ariere</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000483">Deu</w>
+               <w xml:id="Me1_w_000484">li</w>
+               <w xml:id="Me1_w_000485">soit</w>
+               <w xml:id="Me1_w_000486">en</w>
+               <w xml:id="Me1_w_000487">present</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <l xml:id="Me1_l_62" n="62">
+               <w xml:id="Me1_w_000488">Por</w>
+               <w xml:id="Me1_w_000489">endroit</w>
+               <w xml:id="Me1_w_000490">la</w>
+               <w xml:id="Me1_w_000491">vitaille</w>
+               <w xml:id="Me1_w_000492">dont</w>
+               <w xml:id="Me1_w_000493">
+                  <supplied reason="blank" resp="#PM">il</supplied>
+               </w>
+               <w xml:id="Me1_w_000494">ot</w>
+               <w xml:id="Me1_w_000495">escharsement</w>
+            </l>
+            <l xml:id="Me1_l_63" n="63">
+               <w xml:id="Me1_w_000496">Mais</w>
+               <w xml:id="Me1_w_000497">quant</w>
+               <w xml:id="Me1_w_000498">de</w>
+               <w xml:id="Me1_w_000499">Buiamon</w>
+               <w xml:id="Me1_w_000500">aprist</w>
+               <w xml:id="Me1_w_000501" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000502">aveinement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_64" n="64">
+               <w xml:id="Me1_w_000503">Tel</w>
+               <w xml:id="Me1_w_000504">joie</w>
+               <w xml:id="Me1_w_000505">en</w>
+               <w xml:id="Me1_w_000506">out</w>
+               <w xml:id="Me1_w_000507">le</w>
+               <w xml:id="Me1_w_000508">duc</w>
+               <w xml:id="Me1_w_000509">que</w>
+               <w xml:id="Me1_w_000510">
+                  <supplied reason="blank" resp="#PM">tres</supplied>tut</w>
+               <w xml:id="Me1_w_000511" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000512">en</w>
+               <w xml:id="Me1_w_000513">esprent</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_65" n="65">
+               <w xml:id="Me1_w_000514">Et</w>
+               <w xml:id="Me1_w_000515">quant</w>
+               <w xml:id="Me1_w_000516">il</w>
+               <w xml:id="Me1_w_000517" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000518">entrevirent</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000519">ce</w>
+               <w xml:id="Me1_w_000520">sachiez</w>
+               <w xml:id="Me1_w_000521">voirement</w>
+            </l>
+            <l xml:id="Me1_l_66" n="66">
+               <w xml:id="Me1_w_000522">Plus</w>
+               <w xml:id="Me1_w_000523">
+                  <supplied reason="blank" resp="#PM">grant</supplied>
+               </w>
+               <w xml:id="Me1_w_000524">joie</w>
+               <w xml:id="Me1_w_000525">se</w>
+               <w xml:id="Me1_w_000526">firent</w>
+               <w xml:id="Me1_w_000527" rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000528">assez</w>
+               <w xml:id="Me1_w_000529">ne</w>
+               <w xml:id="Me1_w_000530">funt</w>
+               <w xml:id="Me1_w_000531">parent</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <metamark>(p. 22)</metamark>
+            <l xml:id="Me1_l_67" n="67">
+               <w xml:id="Me1_w_000532">Le</w>
+               <w xml:id="Me1_w_000533">jor</w>
+               <w xml:id="Me1_w_000534">vint</w>
+               <w xml:id="Me1_w_000535">li</w>
+               <w xml:id="Me1_w_000536">evesques</w>
+               <w xml:id="Me1_w_000537">et</w>
+               <w xml:id="Me1_w_000538">le</w>
+               <w xml:id="Me1_w_000539">conte</w>
+               <w xml:id="Me1_w_000540">ensement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_68" n="68">
+               <w xml:id="Me1_w_000541">Dan</w>
+               <w xml:id="Me1_w_000542">Reimond</w>
+               <w xml:id="Me1_w_000543">de</w>
+               <w xml:id="Me1_w_000544">Saint</w>
+               <w xml:id="Me1_w_000545">Gile</w>
+               <w xml:id="Me1_w_000546">od</w>
+               <w xml:id="Me1_w_000547">le</w>
+               <w xml:id="Me1_w_000548">grant</w>
+               <w xml:id="Me1_w_000549">escient</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_69" n="69">
+               <w xml:id="Me1_w_000550">Huit</w>
+               <w xml:id="Me1_w_000551">jor</w>
+               <w xml:id="Me1_w_000552">furent</w>
+               <w xml:id="Me1_w_000553">ensemble</w>
+               <w xml:id="Me1_w_000554">por</w>
+               <w xml:id="Me1_w_000555">atendre</w>
+               <w xml:id="Me1_w_000556">lor</w>
+               <w xml:id="Me1_w_000557">gent</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_70" n="70">
+               <w xml:id="Me1_w_000558">Alexis</w>
+               <w xml:id="Me1_w_000559" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000560">emperere</w>
+               <w xml:id="Me1_w_000561">cui</w>
+               <w xml:id="Me1_w_000562">tote</w>
+               <w xml:id="Me1_w_000563">Grece</w>
+               <w xml:id="Me1_w_000564">apent</w>
+            </l>
+            <l xml:id="Me1_l_71" n="71">
+               <w xml:id="Me1_w_000565">Par</w>
+               <w xml:id="Me1_w_000566">ses</w>
+               <w xml:id="Me1_w_000567">
+                  <abbr>corꝑals</abbr>
+               </w>
+               <note n="2">Baudri<pc type="supplied">,</pc> 93/6 <pc type="supplied">:</pc>
+                  <pc type="supplied">«</pc> Misit autem ad hoc quendam suum corpalatium <pc type="supplied">»</pc>
+                  <pc type="supplied">;</pc> voy<pc type="supplied">.</pc> Du Cange<pc type="supplied">,</pc> cura palatii<pc type="supplied">,</pc> sous cura 7<pc type="supplied">.</pc>
+               </note>
+               <w xml:id="Me1_w_000568">lor</w>
+               <w xml:id="Me1_w_000569">manda</w>
+               <w xml:id="Me1_w_000570">parlement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_72" n="72">
+               <w xml:id="Me1_w_000571">Et</w>
+               <w xml:id="Me1_w_000572">que</w>
+               <w xml:id="Me1_w_000573">fussent</w>
+               <w xml:id="Me1_w_000574">si</w>
+               <w xml:id="Me1_w_000575">home</w>
+               <w xml:id="Me1_w_000576">par</w>
+               <w xml:id="Me1_w_000577">tel</w>
+               <w xml:id="Me1_w_000578">devisement</w>
+            </l>
+            <l xml:id="Me1_l_73" n="73">
+               <w xml:id="Me1_w_000579">Que</w>
+               <w xml:id="Me1_w_000580">le</w>
+               <w xml:id="Me1_w_000581">marchié</w>
+               <w xml:id="Me1_w_000582">
+                  <supplied reason="blank" resp="#PM">tot</supplied>
+               </w>
+               <w xml:id="Me1_w_000583">plentivosement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_74" n="74">
+               <w xml:id="Me1_w_000584">Et</w>
+               <w xml:id="Me1_w_000585">après</w>
+               <w xml:id="Me1_w_000586">les</w>
+               <w xml:id="Me1_w_000587">siwist</w>
+               <w xml:id="Me1_w_000588">od</w>
+               <w xml:id="Me1_w_000589">son</w>
+               <w xml:id="Me1_w_000590">efforcement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_75" n="75">
+               <w xml:id="Me1_w_000591">Mais</w>
+               <w xml:id="Me1_w_000592">tut</w>
+               <w xml:id="Me1_w_000593">ont</w>
+               <w xml:id="Me1_w_000594">respondu</w>
+               <w xml:id="Me1_w_000595" rend="elision">qu</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000596">il</w>
+               <w xml:id="Me1_w_000597">nel</w>
+               <w xml:id="Me1_w_000598">f<supplied reason="blank" resp="#PM">e</supplied>ront</w>
+               <w xml:id="Me1_w_000599">naient</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_76" n="76">
+               <w xml:id="Me1_w_000600">Ne</w>
+               <w xml:id="Me1_w_000601">ja</w>
+               <w xml:id="Me1_w_000602">sur</w>
+               <w xml:id="Me1_w_000603">Damedeu</w>
+               <w xml:id="Me1_w_000604" rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000605">avront</w>
+               <w xml:id="Me1_w_000606">avoement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_77" n="77">
+               <w xml:id="Me1_w_000607">Car</w>
+               <w xml:id="Me1_w_000608">por</w>
+               <w xml:id="Me1_w_000609">lui</w>
+               <w xml:id="Me1_w_000610">sunt</w>
+               <w xml:id="Me1_w_000611">
+                  <supplied reason="blank" resp="#PM">tut</supplied>
+               </w>
+               <w xml:id="Me1_w_000612">meü</w>
+               <w xml:id="Me1_w_000613">et</w>
+               <w xml:id="Me1_w_000614">soen</w>
+               <w xml:id="Me1_w_000615">sont</w>
+               <w xml:id="Me1_w_000616">
+                  <supplied reason="blank" resp="#PM">tut</supplied>
+               </w>
+               <w xml:id="Me1_w_000617">quitement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_78" n="78">
+               <w xml:id="Me1_w_000618">Quant</w>
+               <w xml:id="Me1_w_000619">Alexis</w>
+               <w xml:id="Me1_w_000620" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000621">oï</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000622">qui</w>
+               <w xml:id="Me1_w_000623">Deus</w>
+               <w xml:id="Me1_w_000624">doinst</w>
+               <w xml:id="Me1_w_000625">marrement</w>
+               <pc type="supplied">!</pc>
+            </l>
+            <l xml:id="Me1_l_79" n="79">
+               <w xml:id="Me1_w_000626">Si</w>
+               <w xml:id="Me1_w_000627">lor</w>
+               <w xml:id="Me1_w_000628">ad</w>
+               <w xml:id="Me1_w_000629">
+                  <supplied reason="blank" resp="#PM">il</supplied>
+               </w>
+               <w xml:id="Me1_w_000630">veé</w>
+               <w xml:id="Me1_w_000631">marchié</w>
+               <w xml:id="Me1_w_000632">et</w>
+               <w xml:id="Me1_w_000633">passement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_80" n="80">
+               <w xml:id="Me1_w_000634">Tuit</w>
+               <w xml:id="Me1_w_000635">li</w>
+               <w xml:id="Me1_w_000636">baron</w>
+               <w xml:id="Me1_w_000637">de</w>
+               <w xml:id="Me1_w_000638" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000639">ost</w>
+               <w xml:id="Me1_w_000640">en</w>
+               <w xml:id="Me1_w_000641">funt</w>
+               <w xml:id="Me1_w_000642">assemblement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_81" n="81">
+               <w xml:id="Me1_w_000643">Saveir</w>
+               <w xml:id="Me1_w_000644">coment</w>
+               <w xml:id="Me1_w_000645">il</w>
+               <w xml:id="Me1_w_000646">le</w>
+               <w xml:id="Me1_w_000647">front</w>
+               <note n="3">Corr<pc type="supplied">.</pc> S<pc type="supplied">.</pc> come
+                     le feront<pc type="supplied">.</pc>
+               </note>
+               <w xml:id="Me1_w_000648">et</w>
+               <w xml:id="Me1_w_000649">com</w>
+               <w xml:id="Me1_w_000650">faitierement</w>
+            </l>
+            <l xml:id="Me1_l_82" n="82">
+               <w xml:id="Me1_w_000651">Si</w>
+               <w xml:id="Me1_w_000652">poront</w>
+               <w xml:id="Me1_w_000653">contenir</w>
+               <w xml:id="Me1_w_000654">endroit</w>
+               <note n="4">Ms<pc type="supplied">.</pc> Si porent c<pc type="supplied">.</pc> dendroit<pc type="supplied">.</pc>
+               </note>
+               <w xml:id="Me1_w_000655" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000656">arestement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_83" n="83">
+               <w xml:id="Me1_w_000657">Dan</w>
+               <w xml:id="Me1_w_000658">Raimon</w>
+               <w xml:id="Me1_w_000659">de</w>
+               <w xml:id="Me1_w_000660">Saint</w>
+               <w xml:id="Me1_w_000661">Giîle</w>
+               <w xml:id="Me1_w_000662">parla</w>
+               <w xml:id="Me1_w_000663">premierement</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_84" n="84">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000664">Seignors</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000665">ge</w>
+               <w xml:id="Me1_w_000666">vos</w>
+               <w xml:id="Me1_w_000667">dirai</w>
+               <w xml:id="Me1_w_000668">le</w>
+               <w xml:id="Me1_w_000669">mien</w>
+               <w xml:id="Me1_w_000670">entendement</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <pb n="493"/>
+            <l xml:id="Me1_l_85" n="85">
+               <w xml:id="Me1_w_000671">Cist</w>
+               <w xml:id="Me1_w_000672">Griffon</w>
+               <w xml:id="Me1_w_000673">sun<supplied reason="blank" resp="#PM">t</supplied>
+               </w>
+               <w xml:id="Me1_w_000674">felon</w>
+               <w xml:id="Me1_w_000675">et</w>
+               <w xml:id="Me1_w_000676">plain</w>
+               <w xml:id="Me1_w_000677" rend="elision">d</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000678">utragement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_86" n="86">
+               <w xml:id="Me1_w_000679">Et</w>
+               <w xml:id="Me1_w_000680">se</w>
+               <w xml:id="Me1_w_000681">mainent</w>
+               <w xml:id="Me1_w_000682">vers</w>
+               <w xml:id="Me1_w_000683">Deu</w>
+               <w xml:id="Me1_w_000684">et</w>
+               <w xml:id="Me1_w_000685">vèrs</w>
+               <w xml:id="Me1_w_000686">nos</w>
+               <w xml:id="Me1_w_000687">malement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_87" n="87">
+               <w xml:id="Me1_w_000688">Et</w>
+               <w xml:id="Me1_w_000689">nos</w>
+               <w xml:id="Me1_w_000690">avons</w>
+               <w xml:id="Me1_w_000691">ici</w>
+               <w xml:id="Me1_w_000692">merveillus</w>
+               <w xml:id="Me1_w_000693">
+                  <supplied reason="blank" resp="#PM">a</supplied>jostement</w>
+               <pc type="supplied">.</pc>
+            </l>
+               <gap unit="fol" quantity="4"/>
+         </lg>
+
+         <note resp="#PM">Voici le texte du second fragment :</note>
+
+         <lg>
+            <l xml:id="Me1_l_89" n="89">
+               <w xml:id="Me1_w_000694">Et</w>
+               <w xml:id="Me1_w_000695">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000696">avons</w>
+               <w xml:id="Me1_w_000697">ici</w>
+               <w xml:id="Me1_w_000698">mervillous</w>
+               <w xml:id="Me1_w_000699">jostement</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_90" n="90">
+               <w xml:id="Me1_w_000700">S</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000701">Alexis</w>
+               <w xml:id="Me1_w_000702" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000703">
+                  <abbr>emꝑ<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000704">ne</w>
+               <w xml:id="Me1_w_000705">fait</w>
+               <w xml:id="Me1_w_000706">nostre</w>
+               <w xml:id="Me1_w_000707">talent</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_91" n="91">
+               <w xml:id="Me1_w_000708">Je</w>
+               <w xml:id="Me1_w_000709">lo</w>
+               <w xml:id="Me1_w_000710">bien</w>
+               <w xml:id="Me1_w_000711">et</w>
+               <w xml:id="Me1_w_000712">
+                  <abbr>ꝯseil</abbr>
+               </w>
+               <w xml:id="Me1_w_000713">que</w>
+               <w xml:id="Me1_w_000714">tot</w>
+               <w xml:id="Me1_w_000715">
+                  <abbr>ꝯmunement</abbr>
+               </w>
+            </l>
+            <l xml:id="Me1_l_92" n="92">
+               <w xml:id="Me1_w_000716">Asaillons</w>
+               <w xml:id="Me1_w_000717">sa</w>
+               <w xml:id="Me1_w_000718">cité</w>
+               <w xml:id="Me1_w_000719">qui</w>
+               <w xml:id="Me1_w_000720">vers</w>
+               <w xml:id="Me1_w_000721">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000722">prent</w>
+               <w xml:id="Me1_w_000723">
+                  <abbr>ꝯtent</abbr>
+               </w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_93" n="93">
+               <w xml:id="Me1_w_000724">Grijois</w>
+               <w xml:id="Me1_w_000725">sont</w>
+               <w xml:id="Me1_w_000726">plain</w>
+               <w xml:id="Me1_w_000727" rend="elision">d</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000728">engien</w>
+               <w xml:id="Me1_w_000729">et</w>
+               <w xml:id="Me1_w_000730">de</w>
+               <w xml:id="Me1_w_000731">decevement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_94" n="94">
+               <w xml:id="Me1_w_000732">Mais</w>
+               <w xml:id="Me1_w_000733">coart</w>
+               <w xml:id="Me1_w_000734">et</w>
+               <w xml:id="Me1_w_000735">lanier</w>
+               <w xml:id="Me1_w_000736">sont</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000737">sans</w>
+               <w xml:id="Me1_w_000738">deffendement</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_95" n="95">
+               <w xml:id="Me1_w_000739">Plus</w>
+               <w xml:id="Me1_w_000740">valent</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000741">xx</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000742">des</w>
+               <w xml:id="Me1_w_000743">nos</w>
+               <w xml:id="Me1_w_000744">que</w>
+               <w xml:id="Me1_w_000745">ne</w>
+               <w xml:id="Me1_w_000746">font</w>
+               <w xml:id="Me1_w_000747">des</w>
+               <w xml:id="Me1_w_000748">lor</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000749">c</w>
+               <pc type="supplied">.</pc>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_96" n="96">
+               <w xml:id="Me1_w_000750">Sempres</w>
+               <w xml:id="Me1_w_000751">les</w>
+               <w xml:id="Me1_w_000752">arons</w>
+               <w xml:id="Me1_w_000753">pris</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000754">
+                  <abbr>ꝑ<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000755">le</w>
+               <w xml:id="Me1_w_000756">mien</w>
+               <w xml:id="Me1_w_000757">escient</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_97" n="97">
+               <w xml:id="Me1_w_000758">Puis</w>
+               <w xml:id="Me1_w_000759">ferons</w>
+               <w xml:id="Me1_w_000760">de</w>
+               <w xml:id="Me1_w_000761">la</w>
+               <w xml:id="Me1_w_000762">terre</w>
+               <w xml:id="Me1_w_000763">nostre</w>
+               <w xml:id="Me1_w_000764">
+                  <abbr>ꝯmandement</abbr>
+               </w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_98" n="98">
+               <w xml:id="Me1_w_000765">Or</w>
+               <w xml:id="Me1_w_000766">en</w>
+               <w xml:id="Me1_w_000767">dites</w>
+               <w xml:id="Me1_w_000768">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000769">autre</w>
+               <w xml:id="Me1_w_000770">ce</w>
+               <w xml:id="Me1_w_000771">que</w>
+               <w xml:id="Me1_w_000772">chascuns</w>
+               <w xml:id="Me1_w_000773">en</w>
+               <w xml:id="Me1_w_000774">sent</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_99" n="99">
+               <w xml:id="Me1_w_000775">Car</w>
+               <w xml:id="Me1_w_000776">je</w>
+               <w xml:id="Me1_w_000777">
+                  <abbr>v<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000778">en</w>
+               <w xml:id="Me1_w_000779">ait</w>
+               <w xml:id="Me1_w_000780">dit</w>
+               <w xml:id="Me1_w_000781">le</w>
+               <w xml:id="Me1_w_000782">mien</w>
+               <w xml:id="Me1_w_000783">
+                  <abbr>ꝯseillement</abbr>
+               </w>
+               <note>Ce vers<pc type="supplied">,</pc> assez peu utile<pc type="supplied">,</pc> manque dans O<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_100" n="100">
+               <pc type="supplied">—</pc>
+               <w xml:id="Me1_w_000784">
+                  <abbr>ꝑ</abbr>
+               </w>
+               <w xml:id="Me1_w_000785">Deu</w>
+               <pc type="supplied">!</pc>
+               <pc type="supplied">»</pc>
+               <w xml:id="Me1_w_000786">dist</w>
+               <w xml:id="Me1_w_000787">Buiemons</w>
+               <pc type="supplied">,</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000788">ci</w>
+               <w xml:id="Me1_w_000789">a</w>
+               <w xml:id="Me1_w_000790">mal</w>
+               <w xml:id="Me1_w_000791">loement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_101" n="101">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000792">
+                  <abbr>N<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000793">somes</w>
+               <w xml:id="Me1_w_000794">ci</w>
+               <w xml:id="Me1_w_000795">venu</w>
+               <w xml:id="Me1_w_000796">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000797">Deu</w>
+               <w xml:id="Me1_w_000798">tot</w>
+               <w xml:id="Me1_w_000799">purement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_102" n="102">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000800">Et</w>
+               <w xml:id="Me1_w_000801">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000802">paiens</w>
+               <w xml:id="Me1_w_000803">destruire</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000804">se</w>
+               <w xml:id="Me1_w_000805">il</w>
+               <w xml:id="Me1_w_000806">le</w>
+               <w xml:id="Me1_w_000807">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000808">
+                  <abbr>ꝯsent</abbr>
+               </w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_103" n="103">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000809">Et</w>
+               <w xml:id="Me1_w_000810">del</w>
+               <w xml:id="Me1_w_000811">torner</w>
+               <w xml:id="Me1_w_000812">arriere</w>
+               <w xml:id="Me1_w_000813" rend="elision">n</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000814">i</w>
+               <w xml:id="Me1_w_000815">a</w>
+               <w xml:id="Me1_w_000816">
+                  <abbr>p<hi rend="exposant">r</hi>pensement</abbr>
+               </w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_104" n="104">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000817">
+                  <abbr>P<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000818">ce</w>
+               <w xml:id="Me1_w_000819">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000820">vient</w>
+               <w xml:id="Me1_w_000821">miex</w>
+               <w xml:id="Me1_w_000822">faire</w>
+               <w xml:id="Me1_w_000823">son</w>
+               <w xml:id="Me1_w_000824">asegurement</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_105" n="105">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000825">Que</w>
+               <w xml:id="Me1_w_000826">ja</w>
+               <w xml:id="Me1_w_000827">des</w>
+               <w xml:id="Me1_w_000828">crestiens</w>
+               <w xml:id="Me1_w_000829">faceon</w>
+               <w xml:id="Me1_w_000830">ociement</w>
+               <pc type="supplied">.</pc>
+               <pc type="supplied">»</pc>
+            </l>
+            <l xml:id="Me1_l_106" n="106">
+               <w xml:id="Me1_w_000831">Trestuit</w>
+               <w xml:id="Me1_w_000832" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000833">ont</w>
+               <w xml:id="Me1_w_000834">otrié</w>
+               <w xml:id="Me1_w_000835">fors</w>
+               <w xml:id="Me1_w_000836">Raïmon</w>
+               <w xml:id="Me1_w_000837">seulement</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <lb n="1"/>
+            <l xml:id="Me1_l_107" n="107">
+               <w xml:id="Me1_w_000838">
+                  <supplied reason="blank" resp="#PM">A</supplied>u</w>
+               <w xml:id="Me1_w_000839">dit</w>
+               <w xml:id="Me1_w_000840">dant</w>
+               <w xml:id="Me1_w_000841">Buiemon</w>
+               <w xml:id="Me1_w_000842">se</w>
+               <w xml:id="Me1_w_000843">tiennent</w>
+               <w xml:id="Me1_w_000844">li</w>
+               <w xml:id="Me1_w_000845">paumier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_108" n="108">
+               <w xml:id="Me1_w_000846">Fors</w>
+               <w xml:id="Me1_w_000847">Raīmon</w>
+               <w xml:id="Me1_w_000848">de</w>
+               <w xml:id="Me1_w_000849">
+                  <abbr>S<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000850">Gile</w>
+               <w xml:id="Me1_w_000851">qui</w>
+               <w xml:id="Me1_w_000852">nel</w>
+               <w xml:id="Me1_w_000853">volt</w>
+               <w xml:id="Me1_w_000854">otrier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_109" n="109">
+               <w xml:id="Me1_w_000855">Il</w>
+               <w xml:id="Me1_w_000856">ont</w>
+               <w xml:id="Me1_w_000857">pris</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000858">ij</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000859">preudōmes</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000860">Alissandre</w>
+               <w xml:id="Me1_w_000861">et</w>
+               <w xml:id="Me1_w_000862">Renier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_110" n="110">
+               <w xml:id="Me1_w_000863">Et</w>
+               <w xml:id="Me1_w_000864">furent</w>
+               <w xml:id="Me1_w_000865">Longuebart</w>
+               <w xml:id="Me1_w_000866">et</w>
+               <w xml:id="Me1_w_000867">
+                  <abbr>ml't</abbr>
+               </w>
+               <w xml:id="Me1_w_000868">bon</w>
+               <w xml:id="Me1_w_000869">latimier</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_111" n="111">
+               <w xml:id="Me1_w_000870">Alexis</w>
+               <w xml:id="Me1_w_000871">les</w>
+               <w xml:id="Me1_w_000872">envoient</w>
+               <w xml:id="Me1_w_000873">lor</w>
+               <w xml:id="Me1_w_000874">
+                  <abbr>ꝯseil</abbr>
+               </w>
+               <w xml:id="Me1_w_000875">ensaignier</w>
+               <note>Il y a de plus dans O <pc type="supplied">:</pc> Cil i sunt alé
+                     chascun sur son destrier || Que od els<pc type="supplied">.</pc>
+                  <pc type="supplied">.</pc>
+                  <pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_112" n="112">
+               <w xml:id="Me1_w_000876">Avuec</w>
+               <w xml:id="Me1_w_000877">ox</w>
+               <w xml:id="Me1_w_000878">nen</w>
+               <w xml:id="Me1_w_000879">alerent</w>
+               <w xml:id="Me1_w_000880">fors</w>
+               <w xml:id="Me1_w_000881">que</w>
+               <w xml:id="Me1_w_000882">dui</w>
+               <w xml:id="Me1_w_000883">escuier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_113" n="113">
+               <w xml:id="Me1_w_000884">L</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000885">empereor</w>
+               <w xml:id="Me1_w_000886">troverent</w>
+               <w xml:id="Me1_w_000887">seant</w>
+               <w xml:id="Me1_w_000888">en</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000889">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000890">vergier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_114" n="114">
+               <w xml:id="Me1_w_000891">
+                  <abbr>ꝯsillant</abbr>
+               </w>
+               <w xml:id="Me1_w_000892">a</w>
+               <w xml:id="Me1_w_000893">ses</w>
+               <w xml:id="Me1_w_000894">hommes</w>
+               <w xml:id="Me1_w_000895">desoz</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000896">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000897">olivier</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_115" n="115">
+               <w xml:id="Me1_w_000898"/>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000899">Il</w>
+               <w xml:id="Me1_w_000900">sont</w>
+               <w xml:id="Me1_w_000901">alé</w>
+               <w xml:id="Me1_w_000902">avant</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000903" rend="elision">s</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000904">ont</w>
+               <w xml:id="Me1_w_000905">parlé<supplied reason="blank" resp="#PM">r</supplied>
+               </w>
+               <w xml:id="Me1_w_000906">au</w>
+               <w xml:id="Me1_w_000907">portier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_116" n="116">
+               <w xml:id="Me1_w_000908">Qui</w>
+               <w xml:id="Me1_w_000909">dist</w>
+               <w xml:id="Me1_w_000910" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000911">empereor</w>
+               <pc type="supplied">:</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000912">La</w>
+               <w xml:id="Me1_w_000913">fors</w>
+               <w xml:id="Me1_w_000914">sont</w>
+               <w xml:id="Me1_w_000915">messagier</w>
+               <pc type="supplied">.</pc>
+               <pc type="supplied">»</pc>
+               <w xml:id="Me1_w_000916">
+                  <note>De plus dans O <pc type="supplied">:</pc> Qui volent od lui de son preu
+                        conseillier<pc type="supplied">.</pc>
+                  </note>
+               </w>
+            </l>
+            <l xml:id="Me1_l_117" n="117">
+               <w xml:id="Me1_w_000917">L</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_000918">
+                  <abbr>emꝑ<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000919">respont</w>
+               <pc type="supplied">:</pc>
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000920">Faites</w>
+               <w xml:id="Me1_w_000921">les</w>
+               <w xml:id="Me1_w_000922">aprochier</w>
+               <pc type="supplied">.</pc>
+               <pc type="supplied">»</pc>
+            </l>
+            <l xml:id="Me1_l_118" n="118">
+               <w xml:id="Me1_w_000923">Dont</w>
+               <w xml:id="Me1_w_000924">sont</w>
+               <w xml:id="Me1_w_000925">avant</w>
+               <w xml:id="Me1_w_000926">venu</w>
+               <w xml:id="Me1_w_000927">li</w>
+               <w xml:id="Me1_w_000928">cortois</w>
+               <w xml:id="Me1_w_000929">messagier<note>O<pc type="supplied">.</pc> Cil sunt alé avant lor parole
+                        nuncier<pc type="supplied">.</pc>
+                  </note>
+               </w>
+            </l>
+            <l xml:id="Me1_l_119" n="119">
+               <w xml:id="Me1_w_000930">Alexi</w>
+               <w xml:id="Me1_w_000931">saluerent</w>
+               <w xml:id="Me1_w_000932">
+                  <abbr>ꝯme</abbr>
+               </w>
+               <w xml:id="Me1_w_000933">roi</w>
+               <w xml:id="Me1_w_000934">droiturier</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <metamark>(v°)</metamark>
+            <l xml:id="Me1_l_120" n="120">
+               <pc type="supplied">«</pc>
+               <w xml:id="Me1_w_000935">Biax</w>
+               <w xml:id="Me1_w_000936">sire</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000937">enten</w>
+               <w xml:id="Me1_w_000938">a</w>
+               <w xml:id="Me1_w_000939">moi</w>
+               <pc type="supplied">;</pc>
+               <w xml:id="Me1_w_000940">ne</w>
+               <w xml:id="Me1_w_000941">te</w>
+               <w xml:id="Me1_w_000942">chaut</w>
+               <w xml:id="Me1_w_000943">anuier<note>O<pc type="supplied">.</pc> a nos<pc type="supplied">.</pc> ne te
+                        doit<pc type="supplied">.</pc>
+                  </note>
+               </w>
+            </l>
+            <pb n="494"/>
+            <l xml:id="Me1_l_121" n="121">
+               <w xml:id="Me1_w_000944">Trés</w>
+               <w xml:id="Me1_w_000945">bien</w>
+               <w xml:id="Me1_w_000946">as</w>
+               <w xml:id="Me1_w_000947">tu</w>
+               <w xml:id="Me1_w_000948">oï</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000949">bien</w>
+               <w xml:id="Me1_w_000950">a</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000951">j</w>
+               <pc type="supplied">.</pc>
+               <w xml:id="Me1_w_000952">an</w>
+               <w xml:id="Me1_w_000953">entier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_122" n="122">
+               <w xml:id="Me1_w_000954">Que</w>
+               <w xml:id="Me1_w_000955">li</w>
+               <w xml:id="Me1_w_000956">bons</w>
+               <w xml:id="Me1_w_000957">
+                  <abbr>apost<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_000958">Urbains</w>
+               <w xml:id="Me1_w_000959">que</w>
+               <w xml:id="Me1_w_000960">Dex</w>
+               <w xml:id="Me1_w_000961">a</w>
+               <w xml:id="Me1_w_000962">chier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_123" n="123">
+               <w xml:id="Me1_w_000963">A</w>
+               <w xml:id="Me1_w_000964">fait</w>
+               <w xml:id="Me1_w_000965">as</w>
+               <w xml:id="Me1_w_000966">crestiens</w>
+               <w xml:id="Me1_w_000967">banir</w>
+               <w xml:id="Me1_w_000968">et</w>
+               <w xml:id="Me1_w_000969">preechier</w>
+            </l>
+            <l xml:id="Me1_l_124" n="124">
+               <w xml:id="Me1_w_000970">Que</w>
+               <w xml:id="Me1_w_000971">tuit</w>
+               <w xml:id="Me1_w_000972">cil</w>
+               <w xml:id="Me1_w_000973">qui</w>
+               <w xml:id="Me1_w_000974">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_000975">Deu</w>
+               <w xml:id="Me1_w_000976">se</w>
+               <w xml:id="Me1_w_000977">volroient</w>
+               <w xml:id="Me1_w_000978">croisier</w>
+            </l>
+            <l xml:id="Me1_l_125" n="125">
+               <w xml:id="Me1_w_000979">Et</w>
+               <w xml:id="Me1_w_000980">aler</w>
+               <w xml:id="Me1_w_000981">sor</w>
+               <w xml:id="Me1_w_000982">paiens</w>
+               <w xml:id="Me1_w_000983">
+                  <abbr>ꝯquerre</abbr>
+               </w>
+               <w xml:id="Me1_w_000984">et</w>
+               <w xml:id="Me1_w_000985">desraisnier</w>
+            </l>
+            <l xml:id="Me1_l_126" n="126">
+               <w xml:id="Me1_w_000986">Icele</w>
+               <w xml:id="Me1_w_000987">sainte</w>
+               <w xml:id="Me1_w_000988">terre</w>
+               <w xml:id="Me1_w_000989">ou</w>
+               <w xml:id="Me1_w_000990">Dex</w>
+               <w xml:id="Me1_w_000991">volt</w>
+               <w xml:id="Me1_w_000992">travillier</w>
+            </l>
+            <l xml:id="Me1_l_127" n="127">
+               <w xml:id="Me1_w_000993">Et</w>
+               <w xml:id="Me1_w_000994">ou</w>
+               <w xml:id="Me1_w_000995">soufri</w>
+               <w xml:id="Me1_w_000996">son</w>
+               <w xml:id="Me1_w_000997">cors</w>
+               <w xml:id="Me1_w_000998">batre</w>
+               <w xml:id="Me1_w_000999">et</w>
+               <w xml:id="Me1_w_001000">crucefier</w>
+               <note>O<pc type="supplied">.</pc> Et ou soffri por mos son biau cors a
+                        plaier<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_128" n="128">
+               <w xml:id="Me1_w_001001">Seroient</w>
+               <w xml:id="Me1_w_001002">tuit</w>
+               <w xml:id="Me1_w_001003">assox</w>
+               <w xml:id="Me1_w_001004">de</w>
+               <w xml:id="Me1_w_001005">Deu</w>
+               <w xml:id="Me1_w_001006">le</w>
+               <w xml:id="Me1_w_001007">justicier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_129" n="129">
+               <w xml:id="Me1_w_001008">
+                  <abbr>P<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001009">ce</w>
+               <w xml:id="Me1_w_001010">ont</w>
+               <w xml:id="Me1_w_001011">il</w>
+               <w xml:id="Me1_w_001012">guerpi</w>
+               <w xml:id="Me1_w_001013">et</w>
+               <w xml:id="Me1_w_001014">enfant</w>
+               <w xml:id="Me1_w_001015">et</w>
+               <w xml:id="Me1_w_001016">moillier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_130" n="130">
+               <w xml:id="Me1_w_001017">Et</w>
+               <w xml:id="Me1_w_001018">sōmes</w>
+               <w xml:id="Me1_w_001019">ci</w>
+               <w xml:id="Me1_w_001020">venu</w>
+               <w xml:id="Me1_w_001021">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001022">nos</w>
+               <w xml:id="Me1_w_001023">cors</w>
+               <w xml:id="Me1_w_001024">travillier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_131" n="131">
+               <w xml:id="Me1_w_001025">Et</w>
+               <w xml:id="Me1_w_001026">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001027">la</w>
+               <w xml:id="Me1_w_001028">passion</w>
+               <w xml:id="Me1_w_001029">nostre</w>
+               <w xml:id="Me1_w_001030">Signor</w>
+               <w xml:id="Me1_w_001031">vengier</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_132" n="132">
+               <w xml:id="Me1_w_001032">Mais</w>
+               <w xml:id="Me1_w_001033">tu</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_001034">que</w>
+               <w xml:id="Me1_w_001035">le</w>
+               <w xml:id="Me1_w_001036">pues</w>
+               <w xml:id="Me1_w_001037">faire</w>
+               <w xml:id="Me1_w_001038">et</w>
+               <w xml:id="Me1_w_001039">qui</w>
+               <w xml:id="Me1_w_001040">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001041">dois</w>
+               <w xml:id="Me1_w_001042">aidier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_133" n="133">
+               <w xml:id="Me1_w_001043">
+                  <supplied reason="blank" resp="#PM">C</supplied>ui</w>
+               <w xml:id="Me1_w_001044">il</w>
+               <w xml:id="Me1_w_001045">tolent</w>
+               <w xml:id="Me1_w_001046">plus</w>
+               <w xml:id="Me1_w_001047">terre</w>
+               <w xml:id="Me1_w_001048">
+                  <abbr>ꝯ</abbr>
+               </w>
+               <w xml:id="Me1_w_001049">ne</w>
+               <w xml:id="Me1_w_001050">poroit</w>
+               <w xml:id="Me1_w_001051">proisier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_134" n="134">
+               <supplied reason="blank" resp="#PM">
+                  <w xml:id="Me1_w_001052">Ne</w> 
+                  <w xml:id="Me1_w_001053">sai</w>
+               </supplied>
+               <w xml:id="Me1_w_001054">p</w>
+               <w xml:id="Me1_w_001055">quel</w>
+               <w xml:id="Me1_w_001056">
+                  <abbr>ꝯseil</abbr>
+               </w>
+               <w xml:id="Me1_w_001057">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001058">en</w>
+               <w xml:id="Me1_w_001059">viex</w>
+               <w xml:id="Me1_w_001060">eslongier</w>
+               <note>Un vers a été oublié après celui<pc type="supplied">—</pc>ci<pc type="supplied">;</pc> le voici d'après O <pc type="supplied">:</pc> Et por
+                     ce vemmes ça et te volom proier<pc type="supplied">.</pc>
+               </note>
+            </l>
+            <l xml:id="Me1_l_135" n="135">
+               <w xml:id="Me1_w_001061">Que</w>
+               <w xml:id="Me1_w_001062">a</w>
+               <w xml:id="Me1_w_001063">nostre</w>
+               <w xml:id="Me1_w_001064">passage</w>
+               <w xml:id="Me1_w_001065">ne</w>
+               <w xml:id="Me1_w_001066">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001067">fai</w>
+               <w xml:id="Me1_w_001068">
+                  <abbr>enꝯbrier</abbr>
+               </w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_136" n="136">
+               <w xml:id="Me1_w_001069">Mais</w>
+               <w xml:id="Me1_w_001070">vien</w>
+               <w xml:id="Me1_w_001071">ensamble</w>
+               <w xml:id="Me1_w_001072">o</w>
+               <w xml:id="Me1_w_001073">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001074">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001075">la</w>
+               <w xml:id="Me1_w_001076">loi</w>
+               <w xml:id="Me1_w_001077">essaucier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_137" n="137">
+               <w xml:id="Me1_w_001078">Et</w>
+               <w xml:id="Me1_w_001079">
+                  <abbr>p<hi rend="exposant">r</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001080">les</w>
+               <w xml:id="Me1_w_001081">
+                  <abbr>Sarr<pc type="supplied">.</pc>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001082">destruire</w>
+               <w xml:id="Me1_w_001083">et</w>
+               <w xml:id="Me1_w_001084">guerroier</w>
+               <pc type="supplied">;</pc>
+            </l>
+            <l xml:id="Me1_l_138" n="138">
+               <w xml:id="Me1_w_001085">O</w>
+               <w xml:id="Me1_w_001086">la</w>
+               <w xml:id="Me1_w_001087">force</w>
+               <w xml:id="Me1_w_001088">de</w>
+               <w xml:id="Me1_w_001089">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001090">les</w>
+               <w xml:id="Me1_w_001091">poroies</w>
+               <w xml:id="Me1_w_001092">chacier</w>
+            </l>
+            <l xml:id="Me1_l_139" n="139">
+               <w xml:id="Me1_w_001093">De</w>
+               <w xml:id="Me1_w_001094">toute</w>
+               <w xml:id="Me1_w_001095">Rōmenie</w>
+               <w xml:id="Me1_w_001096">que</w>
+               <w xml:id="Me1_w_001097">tu</w>
+               <w xml:id="Me1_w_001098">as</w>
+               <w xml:id="Me1_w_001099">a</w>
+               <w xml:id="Me1_w_001100">traitier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_140" n="140">
+               <w xml:id="Me1_w_001101">
+                  <abbr>N<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001102">et</w>
+               <w xml:id="Me1_w_001103">la</w>
+               <w xml:id="Me1_w_001104">nostre</w>
+               <w xml:id="Me1_w_001105">gens</w>
+               <w xml:id="Me1_w_001106">i</w>
+               <w xml:id="Me1_w_001107">irons</w>
+               <w xml:id="Me1_w_001108">tot</w>
+               <w xml:id="Me1_w_001109">premier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_141" n="141">
+               <w xml:id="Me1_w_001110">Et</w>
+               <w xml:id="Me1_w_001111">ferons</w>
+               <w xml:id="Me1_w_001112">la</w>
+               <w xml:id="Me1_w_001113">bataille</w>
+               <w xml:id="Me1_w_001114">au</w>
+               <w xml:id="Me1_w_001115">fer</w>
+               <w xml:id="Me1_w_001116">et</w>
+               <w xml:id="Me1_w_001117">a</w>
+               <w xml:id="Me1_w_001118" rend="elision">l</w>
+               <pc type="supplied">'</pc>
+               <w xml:id="Me1_w_001119">acier</w>
+               <pc type="supplied">:</pc>
+            </l>
+            <l xml:id="Me1_l_142" n="142">
+               <supplied reason="blank" resp="#PM">
+                  <w xml:id="Me1_w_001120" rend="elision">N</w>
+               </supplied>
+               <w xml:id="Me1_w_001121">an</w>
+               <w xml:id="Me1_w_001122">i</w>
+               <w xml:id="Me1_w_001123">avra</w>
+               <w xml:id="Me1_w_001124">cité</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_001125">tant</w>
+               <w xml:id="Me1_w_001126">soit</w>
+               <w xml:id="Me1_w_001127">a</w>
+               <w xml:id="Me1_w_001128">mur</w>
+               <w xml:id="Me1_w_001129">doublier</w>
+            </l>
+            <l xml:id="Me1_l_143" n="143">
+               <w xml:id="Me1_w_001130">Ne</w>
+               <w xml:id="Me1_w_001131">vile</w>
+               <w xml:id="Me1_w_001132">ne</w>
+               <w xml:id="Me1_w_001133">chastel</w>
+               <pc type="supplied">,</pc>
+               <w xml:id="Me1_w_001134">tant</w>
+               <w xml:id="Me1_w_001135">soit</w>
+               <w xml:id="Me1_w_001136">en</w>
+               <w xml:id="Me1_w_001137">haut</w>
+               <w xml:id="Me1_w_001138">rochier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_144" n="144">
+               <w xml:id="Me1_w_001139">Ne</w>
+               <w xml:id="Me1_w_001140">tant</w>
+               <w xml:id="Me1_w_001141">soit</w>
+               <w xml:id="Me1_w_001142">haut</w>
+               <w xml:id="Me1_w_001143">levée</w>
+               <w xml:id="Me1_w_001144">sor</w>
+               <w xml:id="Me1_w_001145">mur</w>
+               <w xml:id="Me1_w_001146">ne</w>
+               <w xml:id="Me1_w_001147">sor</w>
+               <w xml:id="Me1_w_001148">terrier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_145" n="145">
+               <w xml:id="Me1_w_001149">Que</w>
+               <w xml:id="Me1_w_001150">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001151">ne</w>
+               <w xml:id="Me1_w_001152">la</w>
+               <w xml:id="Me1_w_001153">prenons</w>
+               <w xml:id="Me1_w_001154">et</w>
+               <w xml:id="Me1_w_001155">façons</w>
+               <w xml:id="Me1_w_001156">trebuchier</w>
+               <pc type="supplied">.</pc>
+            </l>
+            <l xml:id="Me1_l_146" n="146">
+               <w xml:id="Me1_w_001157">Toie</w>
+               <w xml:id="Me1_w_001158">sera</w>
+               <w xml:id="Me1_w_001159">la</w>
+               <supplied reason="blank" resp="#PM">
+                  <w xml:id="Me1_w_001160">terre</w> 
+                  <w xml:id="Me1_w_001161">quant</w> 
+               </supplied>
+               <w xml:id="Me1_w_001162">
+                  <supplied resp="#PM">ven</supplied>ras</w>
+               <w xml:id="Me1_w_001163">au</w>
+               <w xml:id="Me1_w_001164">derrier</w>
+               <pc type="supplied">,</pc>
+            </l>
+            <l xml:id="Me1_l_147" n="147">
+               <w xml:id="Me1_w_001165">Et</w>
+               <w xml:id="Me1_w_001166">encor</w>
+               <w xml:id="Me1_w_001167">en</w>
+               <w xml:id="Me1_w_001168">avras</w>
+               <w xml:id="Me1_w_001169">le</w>
+               <w xml:id="Me1_w_001170">Damedeu</w>
+               <w xml:id="Me1_w_001171">loier</w>
+            </l>
+            <l xml:id="Me1_l_148" n="148">
+               <w xml:id="Me1_w_001172">Se</w>
+               <w xml:id="Me1_w_001173">loialment</w>
+               <w xml:id="Me1_w_001174">te</w>
+               <w xml:id="Me1_w_001175">mainnes</w>
+               <w xml:id="Me1_w_001176">vers</w>
+               <w xml:id="Me1_w_001177">
+                  <abbr>n<hi rend="exposant">ꝯ</hi>
+                  </abbr>
+               </w>
+               <w xml:id="Me1_w_001178">et</w>
+               <w xml:id="Me1_w_001179">sans</w>
+               <w xml:id="Me1_w_001180">trechier<note>qui ait tant haut terrier | Ne tant soit … sor si haut rochier<pc type="supplied">.</pc>
+                  </note>
+               </w>
+            </l>
+         </lg>
+
+         <!--<div type="section">
+               
+               
+                  </quote>
+               </cit>
+            </div>
+            <div type="section">
+               <head>III. PROLOGUE EN VERS FRANÇAIS D'UNE HISTOIRE PERDUE DE
+                  PHILIPPE—AUGUSTE.</head>
+               <p>Le <bibl><msIdentifier>ms. du <repository>Musée Britannique</repository> coté <idno>Addit.21212</idno></msIdentifier></bibl>, et acquis
+                  du libraire E. Tross le 12 janvier 1856, est un volume de format oblong, en
+                  parchemin, ayant 255 mill. de hauteur et 145 de largeur. Il contient, à partir du
+                  cinquième feuillet, la Philippide de Guillaume Breton. Dans la marge supérieure du
+                  même</p>
+            </div>
+         -->
+      </body>
+   </text>
+</TEI>

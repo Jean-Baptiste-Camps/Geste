@@ -1,0 +1,4419 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="file:/home/jbc/Data/F/LAKME/02_geste/Geste/odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!-- TODO:
+- relecture et correction transcription;
+- encodage lettrines;
+- résolution des abréviations;
+- annotation linguistique;
+- etc.
+--><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_AnsMetz_U" xml:lang="fr" type="transcr" corresp="jns11089" version="5">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">Anseïs de Metz</title>
+				<title type="sub">Transcription allographétique d'extraits du manuscrit de la
+					bibliothèque vaticane (Urb. lat. 375)</title>
+				<editor><persName xml:id="JBC">Jean-Baptiste Camps</persName></editor>
+			</titleStmt>
+			<publicationStmt>
+				<authority>
+					<persName>
+						<forename>Jean-Baptiste</forename>
+						<surname>Camps</surname>
+					</persName>
+					<address>
+						<orgName>École nationale des chartes</orgName>
+						<addrLine>65 rue de Richelieu</addrLine>
+						<addrLine>F-75002 Paris</addrLine>
+					</address>
+					<email>jbcamps@hotmail.com</email>
+				</authority>
+				<availability status="free">
+					<licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+						d'auteurs médiévaux sont dans le domaine public.</licence>
+					<licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+						d'encodage et d'annotation sont mis à disposition selon les termes de la
+						licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+						International (CC BY-SA 4.0). </licence>
+				</availability>
+				<date>2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<msDesc xml:id="U">
+					<msIdentifier>
+						<country>Cité du Vatican</country>
+						<settlement>Cité du Vatican</settlement>
+						<institution>Biblioteca apostolica vaticana</institution>
+						<repository>Biblioteca apostolica vaticana</repository>
+						<collection>Urb.lat.</collection>
+						<idno>375</idno>
+					</msIdentifier>
+					<head/>
+					<history>
+						<origin>
+							<origPlace cert="unknown" resp="#JBC">inc.</origPlace>
+							<origDate cert="unknown" resp="#JBC">XIIIe s.</origDate>
+						</origin>
+					</history>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<origPlace cert="unknown" resp="#DEAF" type="lieuComposition">flandr.</origPlace>
+				<origDate cert="unknown" resp="#DEAF" notBefore="1201" notAfter="1233" type="dateComposition">1ert. 13es</origDate>
+				<origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">inc.</origPlace>
+				<origDate cert="unknown" resp="#JBC" notBefore="1201" notAfter="1300" type="dateManuscrit">13es</origDate>
+			</creation>
+			<langUsage>
+				<p/>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc status="draft">
+			<change who="#JBC" from="201903" to="201904" status="draft">Transcription initiale du
+				manuscrit et création du fichier</change>
+		</revisionDesc>
+	</teiHeader>
+	<facsimile xml:id="facs_1">
+		<surface ulx="0" uly="0" lrx="1384" lry="2174" corresp="Urb.lat.375_0025_fa_0009r_m.jpg">
+			<graphic url="Urb.lat.375_0025_fa_0009r_m.jpg" width="1384px" height="2174px"/>
+			<zone ulx="143" uly="152" lrx="619" lry="1670" rendition="TextRegion" xml:id="facs_1_region_1551368699131_110" rotate="0">
+				<zone ulx="164" uly="201" lrx="519" lry="235" rendition="Line" xml:id="facs_1_region_1551368699131_110l1" rotate="0"/>
+				<zone ulx="168" uly="225" lrx="505" lry="266" rendition="Line" xml:id="facs_1_region_1551368699131_110l3" rotate="0"/>
+				<zone ulx="158" uly="253" lrx="547" lry="290" rendition="Line" xml:id="facs_1_region_1551368699131_110l4" rotate="0"/>
+				<zone ulx="163" uly="282" lrx="542" lry="318" rendition="Line" xml:id="facs_1_region_1551368699131_110l5" rotate="0"/>
+				<zone ulx="165" uly="312" lrx="540" lry="349" rendition="Line" xml:id="facs_1_region_1551368699131_110l6" rotate="0"/>
+				<zone ulx="161" uly="338" lrx="618" lry="375" rendition="Line" xml:id="facs_1_region_1551368699131_110l7" rotate="0"/>
+				<zone ulx="165" uly="367" lrx="564" lry="407" rendition="Line" xml:id="facs_1_region_1551368699131_110l8" rotate="0"/>
+				<zone ulx="160" uly="394" lrx="504" lry="436" rendition="Line" xml:id="facs_1_region_1551368699131_110l9" rotate="0"/>
+				<zone ulx="170" uly="425" lrx="510" lry="463" rendition="Line" xml:id="facs_1_region_1551368699131_110l10" rotate="0"/>
+				<zone ulx="167" uly="451" lrx="504" lry="490" rendition="Line" xml:id="facs_1_region_1551368699131_110l11" rotate="0"/>
+				<zone ulx="159" uly="478" lrx="528" lry="515" rendition="Line" xml:id="facs_1_region_1551368699131_110l12" rotate="0"/>
+				<zone ulx="159" uly="506" lrx="536" lry="542" rendition="Line" xml:id="facs_1_region_1551368699131_110l13" rotate="0"/>
+				<zone ulx="163" uly="533" lrx="530" lry="569" rendition="Line" xml:id="facs_1_region_1551368699131_110l14" rotate="0"/>
+				<zone ulx="164" uly="562" lrx="533" lry="598" rendition="Line" xml:id="facs_1_region_1551368699131_110l15" rotate="0"/>
+				<zone ulx="159" uly="593" lrx="610" lry="628" rendition="Line" xml:id="facs_1_region_1551368699131_110l16" rotate="0"/>
+				<zone ulx="155" uly="622" lrx="560" lry="657" rendition="Line" xml:id="facs_1_region_1551368699131_110l17" rotate="0"/>
+				<zone ulx="158" uly="650" lrx="568" lry="688" rendition="Line" xml:id="facs_1_region_1551368699131_110l18" rotate="0"/>
+				<zone ulx="150" uly="675" lrx="610" lry="716" rendition="Line" xml:id="facs_1_region_1551368699131_110l19" rotate="0"/>
+				<zone ulx="160" uly="706" lrx="552" lry="743" rendition="Line" xml:id="facs_1_region_1551368699131_110l20" rotate="0"/>
+				<zone ulx="144" uly="736" lrx="564" lry="773" rendition="Line" xml:id="facs_1_region_1551368699131_110l21" rotate="0"/>
+				<zone ulx="163" uly="765" lrx="593" lry="801" rendition="Line" xml:id="facs_1_region_1551368699131_110l22" rotate="0"/>
+				<zone ulx="158" uly="795" lrx="562" lry="830" rendition="Line" xml:id="facs_1_region_1551368699131_110l23" rotate="0"/>
+				<zone ulx="156" uly="820" lrx="570" lry="857" rendition="Line" xml:id="facs_1_region_1551368699131_110l24" rotate="0"/>
+				<zone ulx="149" uly="852" lrx="484" lry="886" rendition="Line" xml:id="facs_1_region_1551368699131_110l25" rotate="0"/>
+				<zone ulx="155" uly="884" lrx="552" lry="916" rendition="Line" xml:id="facs_1_region_1551368699131_110l26" rotate="0"/>
+				<zone ulx="159" uly="915" lrx="540" lry="947" rendition="Line" xml:id="facs_1_region_1551368699131_110l27" rotate="0"/>
+				<zone ulx="158" uly="946" lrx="492" lry="980" rendition="Line" xml:id="facs_1_region_1551368699131_110l28" rotate="0"/>
+				<zone ulx="159" uly="973" lrx="590" lry="1006" rendition="Line" xml:id="facs_1_region_1551368699131_110l29" rotate="0"/>
+				<zone ulx="153" uly="1005" lrx="472" lry="1036" rendition="Line" xml:id="facs_1_region_1551368699131_110l30" rotate="0"/>
+				<zone ulx="153" uly="1037" lrx="573" lry="1070" rendition="Line" xml:id="facs_1_region_1551368699131_110l31" rotate="0"/>
+				<zone ulx="159" uly="1063" lrx="548" lry="1100" rendition="Line" xml:id="facs_1_region_1551368699131_110l32" rotate="0"/>
+				<zone ulx="145" uly="1096" lrx="611" lry="1130" rendition="Line" xml:id="facs_1_region_1551368699131_110l33" rotate="0"/>
+				<zone ulx="157" uly="1129" lrx="578" lry="1164" rendition="Line" xml:id="facs_1_region_1551368699131_110l34" rotate="0"/>
+				<zone ulx="140" uly="1158" lrx="211" lry="1260" rendition="Line" xml:id="facs_1_line_1551959506260_515" rotate="0"/>
+				<zone ulx="212" uly="1168" lrx="613" lry="1202" rendition="Line" xml:id="facs_1_region_1551368699131_110l35" rotate="0"/>
+				<zone ulx="220" uly="1198" lrx="576" lry="1230" rendition="Line" xml:id="facs_1_region_1551368699131_110l36" rotate="0"/>
+				<zone ulx="223" uly="1228" lrx="548" lry="1261" rendition="Line" xml:id="facs_1_region_1551368699131_110l37" rotate="0"/>
+				<zone ulx="152" uly="1263" lrx="556" lry="1296" rendition="Line" xml:id="facs_1_region_1551368699131_110l38" rotate="0"/>
+				<zone ulx="150" uly="1291" lrx="571" lry="1328" rendition="Line" xml:id="facs_1_region_1551368699131_110l39" rotate="0"/>
+				<zone ulx="158" uly="1325" lrx="584" lry="1356" rendition="Line" xml:id="facs_1_region_1551368699131_110l40" rotate="0"/>
+				<zone ulx="150" uly="1350" lrx="564" lry="1389" rendition="Line" xml:id="facs_1_region_1551368699131_110l41" rotate="0"/>
+				<zone ulx="148" uly="1384" lrx="586" lry="1421" rendition="Line" xml:id="facs_1_region_1551368699131_110l42" rotate="0"/>
+				<zone ulx="162" uly="1407" lrx="526" lry="1452" rendition="Line" xml:id="facs_1_region_1551368699131_110l43" rotate="0"/>
+				<zone ulx="146" uly="1447" lrx="588" lry="1484" rendition="Line" xml:id="facs_1_region_1551368699131_110l45" rotate="0"/>
+				<zone ulx="153" uly="1482" lrx="551" lry="1516" rendition="Line" xml:id="facs_1_region_1551368699131_110l46" rotate="0"/>
+				<zone ulx="152" uly="1513" lrx="566" lry="1550" rendition="Line" xml:id="facs_1_region_1551368699131_110l47" rotate="0"/>
+				<zone ulx="153" uly="1545" lrx="559" lry="1584" rendition="Line" xml:id="facs_1_region_1551368699131_110l48" rotate="0"/>
+				<zone ulx="158" uly="1572" lrx="517" lry="1613" rendition="Line" xml:id="facs_1_region_1551368699131_110l49" rotate="0"/>
+				<zone ulx="166" uly="1603" lrx="583" lry="1640" rendition="Line" xml:id="facs_1_region_1551368699131_110l50" rotate="0"/>
+			</zone>
+			<zone ulx="624" uly="175" lrx="1116" lry="1634" rendition="TextRegion" xml:id="facs_1_region_1551368712652_113" rotate="0">
+				<zone ulx="633" uly="200" lrx="962" lry="234" rendition="Line" xml:id="facs_1_region_1551368712652_113l1" rotate="0"/>
+				<zone ulx="644" uly="226" lrx="986" lry="260" rendition="Line" xml:id="facs_1_region_1551368712652_113l2" rotate="0"/>
+				<zone ulx="648" uly="253" lrx="1052" lry="287" rendition="Line" xml:id="facs_1_region_1551368712652_113l3" rotate="0"/>
+				<zone ulx="635" uly="283" lrx="1051" lry="318" rendition="Line" xml:id="facs_1_region_1551368712652_113l4" rotate="0"/>
+				<zone ulx="635" uly="312" lrx="1065" lry="347" rendition="Line" xml:id="facs_1_region_1551368712652_113l6" rotate="0"/>
+				<zone ulx="640" uly="340" lrx="1061" lry="375" rendition="Line" xml:id="facs_1_region_1551368712652_113l7" rotate="0"/>
+				<zone ulx="641" uly="367" lrx="1019" lry="402" rendition="Line" xml:id="facs_1_region_1551368712652_113l8" rotate="0"/>
+				<zone ulx="632" uly="396" lrx="1030" lry="433" rendition="Line" xml:id="facs_1_region_1551368712652_113l9" rotate="0"/>
+				<zone ulx="640" uly="424" lrx="1013" lry="458" rendition="Line" xml:id="facs_1_region_1551368712652_113l10" rotate="0"/>
+				<zone ulx="647" uly="449" lrx="1054" lry="488" rendition="Line" xml:id="facs_1_region_1551368712652_113l11" rotate="0"/>
+				<zone ulx="625" uly="475" lrx="707" lry="558" rendition="Line" xml:id="facs_1_line_1551960379684_695" rotate="0"/>
+				<zone ulx="706" uly="479" lrx="993" lry="513" rendition="Line" xml:id="facs_1_region_1551368712652_113l12" rotate="0"/>
+				<zone ulx="702" uly="502" lrx="1062" lry="539" rendition="Line" xml:id="facs_1_region_1551368712652_113l13" rotate="0"/>
+				<zone ulx="711" uly="534" lrx="1108" lry="571" rendition="Line" xml:id="facs_1_line_1551960357982_685" rotate="0"/>
+				<zone ulx="637" uly="561" lrx="1047" lry="595" rendition="Line" xml:id="facs_1_region_1551368712652_113l16" rotate="0"/>
+				<zone ulx="632" uly="588" lrx="1022" lry="624" rendition="Line" xml:id="facs_1_region_1551368712652_113l17" rotate="0"/>
+				<zone ulx="641" uly="619" lrx="1029" lry="656" rendition="Line" xml:id="facs_1_region_1551368712652_113l18" rotate="0"/>
+				<zone ulx="641" uly="649" lrx="960" lry="683" rendition="Line" xml:id="facs_1_region_1551368712652_113l21" rotate="0"/>
+				<zone ulx="626" uly="677" lrx="1052" lry="715" rendition="Line" xml:id="facs_1_region_1551368712652_113l22" rotate="0"/>
+				<zone ulx="628" uly="708" lrx="972" lry="740" rendition="Line" xml:id="facs_1_region_1551368712652_113l23" rotate="0"/>
+				<zone ulx="633" uly="738" lrx="1025" lry="772" rendition="Line" xml:id="facs_1_region_1551368712652_113l24" rotate="0"/>
+				<zone ulx="639" uly="765" lrx="1019" lry="800" rendition="Line" xml:id="facs_1_region_1551368712652_113l25" rotate="0"/>
+				<zone ulx="634" uly="794" lrx="1096" lry="829" rendition="Line" xml:id="facs_1_region_1551368712652_113l27" rotate="0"/>
+				<zone ulx="643" uly="821" lrx="1057" lry="856" rendition="Line" xml:id="facs_1_region_1551368712652_113l28" rotate="0"/>
+				<zone ulx="639" uly="851" lrx="1038" lry="884" rendition="Line" xml:id="facs_1_region_1551368712652_113l29" rotate="0"/>
+				<zone ulx="635" uly="881" lrx="1006" lry="914" rendition="Line" xml:id="facs_1_region_1551368712652_113l30" rotate="0"/>
+				<zone ulx="639" uly="911" lrx="1011" lry="946" rendition="Line" xml:id="facs_1_region_1551368712652_113l31" rotate="0"/>
+				<zone ulx="648" uly="937" lrx="997" lry="978" rendition="Line" xml:id="facs_1_region_1551368712652_113l32" rotate="0"/>
+				<zone ulx="644" uly="970" lrx="909" lry="1004" rendition="Line" xml:id="facs_1_region_1551368712652_113l33" rotate="0"/>
+				<zone ulx="642" uly="1001" lrx="1089" lry="1036" rendition="Line" xml:id="facs_1_region_1551368712652_113l34" rotate="0"/>
+				<zone ulx="644" uly="1036" lrx="1031" lry="1070" rendition="Line" xml:id="facs_1_region_1551368712652_113l35" rotate="0"/>
+				<zone ulx="645" uly="1064" lrx="1032" lry="1096" rendition="Line" xml:id="facs_1_region_1551368712652_113l36" rotate="0"/>
+				<zone ulx="637" uly="1095" lrx="1031" lry="1128" rendition="Line" xml:id="facs_1_region_1551368712652_113l37" rotate="0"/>
+				<zone ulx="633" uly="1128" lrx="1027" lry="1164" rendition="Line" xml:id="facs_1_region_1551368712652_113l39" rotate="0"/>
+				<zone ulx="637" uly="1164" lrx="1050" lry="1200" rendition="Line" xml:id="facs_1_region_1551368712652_113l40" rotate="0"/>
+				<zone ulx="643" uly="1199" lrx="986" lry="1231" rendition="Line" xml:id="facs_1_region_1551368712652_113l41" rotate="0"/>
+				<zone ulx="641" uly="1232" lrx="1068" lry="1264" rendition="Line" xml:id="facs_1_region_1551368712652_113l42" rotate="0"/>
+				<zone ulx="640" uly="1264" lrx="956" lry="1295" rendition="Line" xml:id="facs_1_region_1551368712652_113l43" rotate="0"/>
+				<zone ulx="630" uly="1295" lrx="1050" lry="1330" rendition="Line" xml:id="facs_1_region_1551368712652_113l44" rotate="0"/>
+				<zone ulx="637" uly="1323" lrx="1064" lry="1360" rendition="Line" xml:id="facs_1_region_1551368712652_113l45" rotate="0"/>
+				<zone ulx="617" uly="1353" lrx="701" lry="1455" rendition="Line" xml:id="facs_1_line_1551961404208_920" rotate="0"/>
+				<zone ulx="704" uly="1353" lrx="977" lry="1386" rendition="Line" xml:id="facs_1_region_1551368712652_113l46" rotate="0"/>
+				<zone ulx="703" uly="1390" lrx="1094" lry="1419" rendition="Line" xml:id="facs_1_line_1551961366589_903" rotate="0"/>
+				<zone ulx="703" uly="1418" lrx="1050" lry="1447" rendition="Line" xml:id="facs_1_line_1551961373823_908" rotate="0"/>
+				<zone ulx="626" uly="1443" lrx="985" lry="1482" rendition="Line" xml:id="facs_1_region_1551368712652_113l50" rotate="0"/>
+				<zone ulx="637" uly="1480" lrx="1072" lry="1516" rendition="Line" xml:id="facs_1_region_1551368712652_113l51" rotate="0"/>
+				<zone ulx="625" uly="1511" lrx="978" lry="1545" rendition="Line" xml:id="facs_1_region_1551368712652_113l52" rotate="0"/>
+				<zone ulx="632" uly="1544" lrx="1025" lry="1576" rendition="Line" xml:id="facs_1_region_1551368712652_113l53" rotate="0"/>
+				<zone ulx="634" uly="1570" lrx="1042" lry="1607" rendition="Line" xml:id="facs_1_region_1551368712652_113l54" rotate="0"/>
+				<zone ulx="633" uly="1603" lrx="1025" lry="1637" rendition="Line" xml:id="facs_1_region_1551368712652_113l55" rotate="0"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_2">
+		<surface ulx="0" uly="0" lrx="1384" lry="2174" corresp="Urb.lat.375_0041_fa_0017r_m.jpg">
+			<graphic url="Urb.lat.375_0041_fa_0017r_m.jpg" width="1384px" height="2174px"/>
+			<zone ulx="141" uly="153" lrx="612" lry="1680" rendition="TextRegion" xml:id="facs_2_region_1552392490853_211" rotate="0">
+				<zone ulx="158" uly="213" lrx="504" lry="249" rendition="Line" xml:id="facs_2_region_1552392490853_211l1" rotate="0"/>
+				<zone ulx="155" uly="239" lrx="494" lry="273" rendition="Line" xml:id="facs_2_region_1552392490853_211l2" rotate="0"/>
+				<zone ulx="156" uly="264" lrx="440" lry="301" rendition="Line" xml:id="facs_2_region_1552392490853_211l3" rotate="0"/>
+				<zone ulx="160" uly="291" lrx="496" lry="328" rendition="Line" xml:id="facs_2_region_1552392490853_211l4" rotate="0"/>
+				<zone ulx="151" uly="323" lrx="527" lry="360" rendition="Line" xml:id="facs_2_region_1552392490853_211l5" rotate="0"/>
+				<zone ulx="157" uly="352" lrx="519" lry="389" rendition="Line" xml:id="facs_2_region_1552392490853_211l6" rotate="0"/>
+				<zone ulx="162" uly="376" lrx="476" lry="418" rendition="Line" xml:id="facs_2_region_1552392490853_211l7" rotate="0"/>
+				<zone ulx="155" uly="405" lrx="497" lry="446" rendition="Line" xml:id="facs_2_region_1552392490853_211l8" rotate="0"/>
+				<zone ulx="168" uly="437" lrx="483" lry="473" rendition="Line" xml:id="facs_2_region_1552392490853_211l9" rotate="0"/>
+				<zone ulx="163" uly="465" lrx="519" lry="507" rendition="Line" xml:id="facs_2_region_1552392490853_211l10" rotate="0"/>
+				<zone ulx="160" uly="493" lrx="561" lry="533" rendition="Line" xml:id="facs_2_region_1552392490853_211l11" rotate="0"/>
+				<zone ulx="159" uly="519" lrx="501" lry="554" rendition="Line" xml:id="facs_2_region_1552392490853_211l12" rotate="0"/>
+				<zone ulx="151" uly="552" lrx="520" lry="577" rendition="Line" xml:id="facs_2_line_1552397360280_316" rotate="0"/>
+				<zone ulx="158" uly="577" lrx="525" lry="611" rendition="Line" xml:id="facs_2_region_1552392490853_211l14" rotate="0"/>
+				<zone ulx="160" uly="609" lrx="493" lry="643" rendition="Line" xml:id="facs_2_region_1552392490853_211l15" rotate="0"/>
+				<zone ulx="154" uly="636" lrx="478" lry="673" rendition="Line" xml:id="facs_2_region_1552392490853_211l16" rotate="0"/>
+				<zone ulx="153" uly="667" lrx="556" lry="700" rendition="Line" xml:id="facs_2_region_1552392490853_211l17" rotate="0"/>
+				<zone ulx="153" uly="694" lrx="553" lry="729" rendition="Line" xml:id="facs_2_region_1552392490853_211l18" rotate="0"/>
+				<zone ulx="154" uly="723" lrx="554" lry="759" rendition="Line" xml:id="facs_2_region_1552392490853_211l19" rotate="0"/>
+				<zone ulx="153" uly="755" lrx="601" lry="786" rendition="Line" xml:id="facs_2_region_1552392490853_211l20" rotate="0"/>
+				<zone ulx="153" uly="782" lrx="560" lry="817" rendition="Line" xml:id="facs_2_region_1552392490853_211l21" rotate="0"/>
+				<zone ulx="159" uly="812" lrx="554" lry="846" rendition="Line" xml:id="facs_2_region_1552392490853_211l23" rotate="0"/>
+				<zone ulx="153" uly="844" lrx="543" lry="881" rendition="Line" xml:id="facs_2_region_1552392490853_211l24" rotate="0"/>
+				<zone ulx="153" uly="869" lrx="535" lry="904" rendition="Line" xml:id="facs_2_region_1552392490853_211l25" rotate="0"/>
+				<zone ulx="151" uly="898" lrx="563" lry="932" rendition="Line" xml:id="facs_2_region_1552392490853_211l27" rotate="0"/>
+				<zone ulx="152" uly="931" lrx="532" lry="966" rendition="Line" xml:id="facs_2_region_1552392490853_211l29" rotate="0"/>
+				<zone ulx="155" uly="960" lrx="576" lry="992" rendition="Line" xml:id="facs_2_region_1552392490853_211l30" rotate="0"/>
+				<zone ulx="155" uly="986" lrx="520" lry="1020" rendition="Line" xml:id="facs_2_region_1552392490853_211l31" rotate="0"/>
+				<zone ulx="150" uly="1014" lrx="514" lry="1045" rendition="Line" xml:id="facs_2_region_1552392490853_211l32" rotate="0"/>
+				<zone ulx="153" uly="1048" lrx="501" lry="1088" rendition="Line" xml:id="facs_2_region_1552392490853_211l33" rotate="0"/>
+				<zone ulx="143" uly="1079" lrx="213" lry="1172" rendition="Line" xml:id="facs_2_line_1552398955983_643" rotate="0"/>
+				<zone ulx="217" uly="1080" lrx="556" lry="1117" rendition="Line" xml:id="facs_2_region_1552392490853_211l34" rotate="0"/>
+				<zone ulx="218" uly="1112" lrx="573" lry="1145" rendition="Line" xml:id="facs_2_line_1552398910871_621" rotate="0"/>
+				<zone ulx="211" uly="1144" lrx="574" lry="1183" rendition="Line" xml:id="facs_2_region_1552392490853_211l36" rotate="0"/>
+				<zone ulx="146" uly="1179" lrx="542" lry="1215" rendition="Line" xml:id="facs_2_region_1552392490853_211l37" rotate="0"/>
+				<zone ulx="147" uly="1213" lrx="556" lry="1247" rendition="Line" xml:id="facs_2_region_1552392490853_211l38" rotate="0"/>
+				<zone ulx="150" uly="1253" lrx="582" lry="1289" rendition="Line" xml:id="facs_2_region_1552392490853_211l39" rotate="0"/>
+				<zone ulx="163" uly="1288" lrx="562" lry="1321" rendition="Line" xml:id="facs_2_region_1552392490853_211l40" rotate="0"/>
+				<zone ulx="159" uly="1316" lrx="548" lry="1355" rendition="Line" xml:id="facs_2_region_1552392490853_211l41" rotate="0"/>
+				<zone ulx="156" uly="1352" lrx="461" lry="1382" rendition="Line" xml:id="facs_2_line_1552400857347_810" rotate="0"/>
+				<zone ulx="160" uly="1377" lrx="570" lry="1415" rendition="Line" xml:id="facs_2_region_1552392490853_211l43" rotate="0"/>
+				<zone ulx="159" uly="1411" lrx="544" lry="1442" rendition="Line" xml:id="facs_2_region_1552392490853_211l44" rotate="0"/>
+				<zone ulx="165" uly="1440" lrx="601" lry="1480" rendition="Line" xml:id="facs_2_region_1552392490853_211l45" rotate="0"/>
+				<zone ulx="161" uly="1469" lrx="587" lry="1511" rendition="Line" xml:id="facs_2_region_1552392490853_211l46" rotate="0"/>
+				<zone ulx="159" uly="1500" lrx="570" lry="1538" rendition="Line" xml:id="facs_2_region_1552392490853_211l48" rotate="0"/>
+				<zone ulx="170" uly="1533" lrx="565" lry="1570" rendition="Line" xml:id="facs_2_region_1552392490853_211l49" rotate="0"/>
+				<zone ulx="164" uly="1567" lrx="580" lry="1600" rendition="Line" xml:id="facs_2_region_1552392490853_211l50" rotate="0"/>
+				<zone ulx="162" uly="1599" lrx="565" lry="1632" rendition="Line" xml:id="facs_2_region_1552392490853_211l51" rotate="0"/>
+				<zone ulx="162" uly="1628" lrx="559" lry="1664" rendition="Line" xml:id="facs_2_region_1552392490853_211l52" rotate="0"/>
+			</zone>
+			<zone ulx="618" uly="190" lrx="1087" lry="1730" rendition="TextRegion" xml:id="facs_2_region_1552392501222_214" rotate="0">
+				<zone ulx="636" uly="208" lrx="1027" lry="250" rendition="Line" xml:id="facs_2_region_1552392501222_214l1" rotate="0"/>
+				<zone ulx="636" uly="236" lrx="1023" lry="280" rendition="Line" xml:id="facs_2_region_1552392501222_214l2" rotate="0"/>
+				<zone ulx="632" uly="263" lrx="931" lry="304" rendition="Line" xml:id="facs_2_region_1552392501222_214l4" rotate="0"/>
+				<zone ulx="635" uly="290" lrx="1070" lry="332" rendition="Line" xml:id="facs_2_region_1552392501222_214l5" rotate="0"/>
+				<zone ulx="639" uly="321" lrx="1052" lry="366" rendition="Line" xml:id="facs_2_region_1552392501222_214l6" rotate="0"/>
+				<zone ulx="640" uly="351" lrx="1062" lry="395" rendition="Line" xml:id="facs_2_region_1552392501222_214l7" rotate="0"/>
+				<zone ulx="642" uly="376" lrx="1009" lry="426" rendition="Line" xml:id="facs_2_region_1552392501222_214l8" rotate="0"/>
+				<zone ulx="640" uly="405" lrx="954" lry="447" rendition="Line" xml:id="facs_2_region_1552392501222_214l9" rotate="0"/>
+				<zone ulx="637" uly="435" lrx="1044" lry="481" rendition="Line" xml:id="facs_2_region_1552392501222_214l10" rotate="0"/>
+				<zone ulx="637" uly="463" lrx="1073" lry="509" rendition="Line" xml:id="facs_2_region_1552392501222_214l12" rotate="0"/>
+				<zone ulx="629" uly="490" lrx="1030" lry="533" rendition="Line" xml:id="facs_2_region_1552392501222_214l13" rotate="0"/>
+				<zone ulx="637" uly="517" lrx="1067" lry="566" rendition="Line" xml:id="facs_2_region_1552392501222_214l14" rotate="0"/>
+				<zone ulx="634" uly="547" lrx="1036" lry="590" rendition="Line" xml:id="facs_2_region_1552392501222_214l15" rotate="0"/>
+				<zone ulx="640" uly="580" lrx="951" lry="617" rendition="Line" xml:id="facs_2_region_1552392501222_214l16" rotate="0"/>
+				<zone ulx="642" uly="611" lrx="989" lry="652" rendition="Line" xml:id="facs_2_region_1552392501222_214l17" rotate="0"/>
+				<zone ulx="638" uly="639" lrx="1013" lry="676" rendition="Line" xml:id="facs_2_region_1552392501222_214l19" rotate="0"/>
+				<zone ulx="641" uly="663" lrx="979" lry="701" rendition="Line" xml:id="facs_2_line_1552402690116_1209" rotate="0"/>
+				<zone ulx="642" uly="691" lrx="1050" lry="733" rendition="Line" xml:id="facs_2_region_1552392501222_214l22" rotate="0"/>
+				<zone ulx="645" uly="722" lrx="972" lry="765" rendition="Line" xml:id="facs_2_region_1552392501222_214l23" rotate="0"/>
+				<zone ulx="642" uly="750" lrx="1092" lry="793" rendition="Line" xml:id="facs_2_region_1552392501222_214l24" rotate="0"/>
+				<zone ulx="641" uly="782" lrx="986" lry="817" rendition="Line" xml:id="facs_2_region_1552392501222_214l25" rotate="0"/>
+				<zone ulx="642" uly="811" lrx="975" lry="848" rendition="Line" xml:id="facs_2_region_1552392501222_214l26" rotate="0"/>
+				<zone ulx="641" uly="839" lrx="1026" lry="880" rendition="Line" xml:id="facs_2_region_1552392501222_214l27" rotate="0"/>
+				<zone ulx="637" uly="868" lrx="1043" lry="910" rendition="Line" xml:id="facs_2_region_1552392501222_214l29" rotate="0"/>
+				<zone ulx="637" uly="898" lrx="955" lry="932" rendition="Line" xml:id="facs_2_region_1552392501222_214l30" rotate="0"/>
+				<zone ulx="636" uly="930" lrx="1028" lry="967" rendition="Line" xml:id="facs_2_region_1552392501222_214l33" rotate="0"/>
+				<zone ulx="642" uly="960" lrx="1011" lry="996" rendition="Line" xml:id="facs_2_region_1552392501222_214l34" rotate="0"/>
+				<zone ulx="639" uly="984" lrx="1028" lry="1018" rendition="Line" xml:id="facs_2_region_1552392501222_214l35" rotate="0"/>
+				<zone ulx="647" uly="1014" lrx="1076" lry="1048" rendition="Line" xml:id="facs_2_region_1552392501222_214l36" rotate="0"/>
+				<zone ulx="636" uly="1047" lrx="947" lry="1080" rendition="Line" xml:id="facs_2_region_1552392501222_214l37" rotate="0"/>
+				<zone ulx="641" uly="1080" lrx="991" lry="1112" rendition="Line" xml:id="facs_2_region_1552392501222_214l38" rotate="0"/>
+				<zone ulx="639" uly="1112" lrx="1028" lry="1149" rendition="Line" xml:id="facs_2_region_1552392501222_214l39" rotate="0"/>
+				<zone ulx="644" uly="1149" lrx="992" lry="1184" rendition="Line" xml:id="facs_2_region_1552392501222_214l40" rotate="0"/>
+				<zone ulx="643" uly="1179" lrx="1024" lry="1215" rendition="Line" xml:id="facs_2_region_1552392501222_214l41" rotate="0"/>
+				<zone ulx="646" uly="1211" lrx="945" lry="1244" rendition="Line" xml:id="facs_2_region_1552392501222_214l42" rotate="0"/>
+				<zone ulx="648" uly="1246" lrx="1012" lry="1287" rendition="Line" xml:id="facs_2_region_1552392501222_214l43" rotate="0"/>
+				<zone ulx="641" uly="1283" lrx="1060" lry="1320" rendition="Line" xml:id="facs_2_region_1552392501222_214l45" rotate="0"/>
+				<zone ulx="618" uly="1322" lrx="705" lry="1412" rendition="Line" xml:id="facs_2_line_1552402301491_996" rotate="0"/>
+				<zone ulx="698" uly="1319" lrx="1058" lry="1351" rendition="Line" xml:id="facs_2_region_1552392501222_214l46" rotate="0"/>
+				<zone ulx="716" uly="1348" lrx="1068" lry="1385" rendition="Line" xml:id="facs_2_region_1552392501222_214l47" rotate="0"/>
+				<zone ulx="712" uly="1378" lrx="1043" lry="1409" rendition="Line" xml:id="facs_2_line_1552402285947_989" rotate="0"/>
+				<zone ulx="639" uly="1410" lrx="1035" lry="1441" rendition="Line" xml:id="facs_2_region_1552392501222_214l49" rotate="0"/>
+				<zone ulx="647" uly="1439" lrx="987" lry="1474" rendition="Line" xml:id="facs_2_line_1552402366964_1026" rotate="0"/>
+				<zone ulx="650" uly="1473" lrx="1021" lry="1502" rendition="Line" xml:id="facs_2_line_1552402409204_1052" rotate="0"/>
+				<zone ulx="644" uly="1504" lrx="983" lry="1539" rendition="Line" xml:id="facs_2_line_1552402426207_1064" rotate="0"/>
+				<zone ulx="651" uly="1535" lrx="1013" lry="1563" rendition="Line" xml:id="facs_2_line_1552402431677_1069" rotate="0"/>
+				<zone ulx="644" uly="1567" lrx="1055" lry="1598" rendition="Line" xml:id="facs_2_line_1552402455534_1081" rotate="0"/>
+				<zone ulx="640" uly="1599" lrx="1001" lry="1633" rendition="Line" xml:id="facs_2_line_1552402461503_1086" rotate="0"/>
+				<zone ulx="650" uly="1634" lrx="1077" lry="1668" rendition="Line" xml:id="facs_2_region_1552392501222_214l56" rotate="0"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_3">
+		<surface ulx="0" uly="0" lrx="1384" lry="2174" corresp="Urb.lat.375_0057_fa_0025r_m.jpg">
+			<graphic url="Urb.lat.375_0057_fa_0025r_m.jpg" width="1384px" height="2174px"/>
+			<zone ulx="115" uly="182" lrx="625" lry="1657" rendition="TextRegion" xml:id="facs_3_region_1552406324368_1741" rotate="0">
+				<zone ulx="143" uly="200" lrx="484" lry="237" rendition="Line" xml:id="facs_3_region_1552406324368_1741l1" rotate="0"/>
+				<zone ulx="147" uly="225" lrx="495" lry="266" rendition="Line" xml:id="facs_3_region_1552406324368_1741l2" rotate="0"/>
+				<zone ulx="149" uly="252" lrx="586" lry="293" rendition="Line" xml:id="facs_3_region_1552406324368_1741l3" rotate="0"/>
+				<zone ulx="145" uly="283" lrx="576" lry="325" rendition="Line" xml:id="facs_3_region_1552406324368_1741l4" rotate="0"/>
+				<zone ulx="148" uly="315" lrx="536" lry="355" rendition="Line" xml:id="facs_3_region_1552406324368_1741l5" rotate="0"/>
+				<zone ulx="146" uly="344" lrx="538" lry="382" rendition="Line" xml:id="facs_3_region_1552406324368_1741l6" rotate="0"/>
+				<zone ulx="141" uly="374" lrx="524" lry="409" rendition="Line" xml:id="facs_3_region_1552406324368_1741l7" rotate="0"/>
+				<zone ulx="141" uly="400" lrx="530" lry="438" rendition="Line" xml:id="facs_3_region_1552406324368_1741l8" rotate="0"/>
+				<zone ulx="148" uly="429" lrx="568" lry="469" rendition="Line" xml:id="facs_3_region_1552406324368_1741l9" rotate="0"/>
+				<zone ulx="148" uly="456" lrx="540" lry="494" rendition="Line" xml:id="facs_3_region_1552406324368_1741l10" rotate="0"/>
+				<zone ulx="147" uly="485" lrx="596" lry="522" rendition="Line" xml:id="facs_3_region_1552406324368_1741l11" rotate="0"/>
+				<zone ulx="151" uly="514" lrx="569" lry="549" rendition="Line" xml:id="facs_3_region_1552406324368_1741l12" rotate="0"/>
+				<zone ulx="149" uly="543" lrx="497" lry="581" rendition="Line" xml:id="facs_3_region_1552406324368_1741l13" rotate="0"/>
+				<zone ulx="144" uly="562" lrx="598" lry="614" rendition="Line" xml:id="facs_3_region_1552406324368_1741l14" rotate="0"/>
+				<zone ulx="152" uly="614" lrx="516" lry="650" rendition="Line" xml:id="facs_3_region_1552406324368_1741l15" rotate="0"/>
+				<zone ulx="142" uly="649" lrx="496" lry="681" rendition="Line" xml:id="facs_3_region_1552406324368_1741l16" rotate="0"/>
+				<zone ulx="145" uly="678" lrx="564" lry="709" rendition="Line" xml:id="facs_3_region_1552406324368_1741l17" rotate="0"/>
+				<zone ulx="142" uly="707" lrx="570" lry="740" rendition="Line" xml:id="facs_3_region_1552406324368_1741l18" rotate="0"/>
+				<zone ulx="146" uly="736" lrx="566" lry="770" rendition="Line" xml:id="facs_3_region_1552406324368_1741l19" rotate="0"/>
+				<zone ulx="143" uly="765" lrx="543" lry="799" rendition="Line" xml:id="facs_3_region_1552406324368_1741l20" rotate="0"/>
+				<zone ulx="140" uly="799" lrx="584" lry="831" rendition="Line" xml:id="facs_3_region_1552406324368_1741l21" rotate="0"/>
+				<zone ulx="143" uly="830" lrx="505" lry="863" rendition="Line" xml:id="facs_3_region_1552406324368_1741l22" rotate="0"/>
+				<zone ulx="141" uly="861" lrx="515" lry="894" rendition="Line" xml:id="facs_3_region_1552406324368_1741l23" rotate="0"/>
+				<zone ulx="152" uly="892" lrx="482" lry="926" rendition="Line" xml:id="facs_3_region_1552406324368_1741l24" rotate="0"/>
+				<zone ulx="150" uly="919" lrx="539" lry="952" rendition="Line" xml:id="facs_3_region_1552406324368_1741l25" rotate="0"/>
+				<zone ulx="147" uly="947" lrx="548" lry="982" rendition="Line" xml:id="facs_3_region_1552406324368_1741l27" rotate="0"/>
+				<zone ulx="156" uly="976" lrx="514" lry="1011" rendition="Line" xml:id="facs_3_region_1552406324368_1741l28" rotate="0"/>
+				<zone ulx="156" uly="1007" lrx="523" lry="1041" rendition="Line" xml:id="facs_3_region_1552406324368_1741l29" rotate="0"/>
+				<zone ulx="162" uly="1041" lrx="534" lry="1073" rendition="Line" xml:id="facs_3_region_1552406324368_1741l30" rotate="0"/>
+				<zone ulx="156" uly="1071" lrx="566" lry="1103" rendition="Line" xml:id="facs_3_region_1552406324368_1741l31" rotate="0"/>
+				<zone ulx="159" uly="1100" lrx="558" lry="1134" rendition="Line" xml:id="facs_3_region_1552406324368_1741l32" rotate="0"/>
+				<zone ulx="152" uly="1132" lrx="525" lry="1167" rendition="Line" xml:id="facs_3_region_1552406324368_1741l33" rotate="0"/>
+				<zone ulx="160" uly="1166" lrx="562" lry="1202" rendition="Line" xml:id="facs_3_region_1552406324368_1741l34" rotate="0"/>
+				<zone ulx="161" uly="1204" lrx="585" lry="1238" rendition="Line" xml:id="facs_3_region_1552406324368_1741l35" rotate="0"/>
+				<zone ulx="163" uly="1238" lrx="560" lry="1271" rendition="Line" xml:id="facs_3_region_1552406324368_1741l36" rotate="0"/>
+				<zone ulx="155" uly="1270" lrx="619" lry="1304" rendition="Line" xml:id="facs_3_region_1552406324368_1741l37" rotate="0"/>
+				<zone ulx="166" uly="1299" lrx="577" lry="1336" rendition="Line" xml:id="facs_3_region_1552406324368_1741l38" rotate="0"/>
+				<zone ulx="161" uly="1325" lrx="557" lry="1364" rendition="Line" xml:id="facs_3_region_1552406324368_1741l39" rotate="0"/>
+				<zone ulx="158" uly="1363" lrx="582" lry="1394" rendition="Line" xml:id="facs_3_region_1552406324368_1741l40" rotate="0"/>
+				<zone ulx="162" uly="1394" lrx="574" lry="1427" rendition="Line" xml:id="facs_3_region_1552406324368_1741l41" rotate="0"/>
+				<zone ulx="132" uly="1419" lrx="233" lry="1511" rendition="Line" xml:id="facs_3_line_1552406767094_1951" rotate="0"/>
+				<zone ulx="236" uly="1423" lrx="599" lry="1458" rendition="Line" xml:id="facs_3_region_1552406324368_1741l42" rotate="0"/>
+				<zone ulx="230" uly="1459" lrx="624" lry="1490" rendition="Line" xml:id="facs_3_line_1552406717070_1923" rotate="0"/>
+				<zone ulx="231" uly="1487" lrx="620" lry="1519" rendition="Line" xml:id="facs_3_region_1552406324368_1741l44" rotate="0"/>
+				<zone ulx="177" uly="1517" lrx="583" lry="1552" rendition="Line" xml:id="facs_3_line_1552406723761_1928" rotate="0"/>
+				<zone ulx="153" uly="1552" lrx="620" lry="1583" rendition="Line" xml:id="facs_3_region_1552406324368_1741l46" rotate="0"/>
+				<zone ulx="167" uly="1585" lrx="597" lry="1620" rendition="Line" xml:id="facs_3_region_1552406324368_1741l47" rotate="0"/>
+				<zone ulx="179" uly="1620" lrx="591" lry="1656" rendition="Line" xml:id="facs_3_region_1552406324368_1741l48" rotate="0"/>
+			</zone>
+			<zone ulx="624" uly="179" lrx="1094" lry="1661" rendition="TextRegion" xml:id="facs_3_region_1552406343610_1744" rotate="0">
+				<zone ulx="626" uly="191" lrx="1022" lry="229" rendition="Line" xml:id="facs_3_region_1552406343610_1744l1" rotate="0"/>
+				<zone ulx="622" uly="221" lrx="1074" lry="254" rendition="Line" xml:id="facs_3_region_1552406343610_1744l2" rotate="0"/>
+				<zone ulx="630" uly="247" lrx="1036" lry="283" rendition="Line" xml:id="facs_3_region_1552406343610_1744l4" rotate="0"/>
+				<zone ulx="621" uly="280" lrx="1040" lry="313" rendition="Line" xml:id="facs_3_region_1552406343610_1744l5" rotate="0"/>
+				<zone ulx="624" uly="307" lrx="1007" lry="344" rendition="Line" xml:id="facs_3_region_1552406343610_1744l6" rotate="0"/>
+				<zone ulx="627" uly="339" lrx="1004" lry="372" rendition="Line" xml:id="facs_3_region_1552406343610_1744l7" rotate="0"/>
+				<zone ulx="627" uly="367" lrx="1010" lry="404" rendition="Line" xml:id="facs_3_region_1552406343610_1744l8" rotate="0"/>
+				<zone ulx="628" uly="393" lrx="1079" lry="429" rendition="Line" xml:id="facs_3_region_1552406343610_1744l9" rotate="0"/>
+				<zone ulx="623" uly="421" lrx="1019" lry="459" rendition="Line" xml:id="facs_3_region_1552406343610_1744l10" rotate="0"/>
+				<zone ulx="627" uly="453" lrx="1059" lry="489" rendition="Line" xml:id="facs_3_region_1552406343610_1744l11" rotate="0"/>
+				<zone ulx="629" uly="480" lrx="1043" lry="516" rendition="Line" xml:id="facs_3_region_1552406343610_1744l13" rotate="0"/>
+				<zone ulx="627" uly="507" lrx="980" lry="539" rendition="Line" xml:id="facs_3_region_1552406343610_1744l14" rotate="0"/>
+				<zone ulx="632" uly="536" lrx="1028" lry="570" rendition="Line" xml:id="facs_3_region_1552406343610_1744l16" rotate="0"/>
+				<zone ulx="631" uly="569" lrx="1047" lry="602" rendition="Line" xml:id="facs_3_region_1552406343610_1744l17" rotate="0"/>
+				<zone ulx="625" uly="614" lrx="1074" lry="646" rendition="Line" xml:id="facs_3_region_1552406343610_1744l18" rotate="0"/>
+				<zone ulx="621" uly="641" lrx="686" lry="735" rendition="Line" xml:id="facs_3_line_1552562777791_164" rotate="0"/>
+				<zone ulx="683" uly="642" lrx="1029" lry="679" rendition="Line" xml:id="facs_3_region_1552406343610_1744l19" rotate="0"/>
+				<zone ulx="688" uly="678" lrx="1079" lry="708" rendition="Line" xml:id="facs_3_line_1552562719730_142" rotate="0"/>
+				<zone ulx="687" uly="705" lrx="977" lry="738" rendition="Line" xml:id="facs_3_line_1552562739466_151" rotate="0"/>
+				<zone ulx="627" uly="735" lrx="985" lry="770" rendition="Line" xml:id="facs_3_region_1552406343610_1744l23" rotate="0"/>
+				<zone ulx="625" uly="766" lrx="1083" lry="800" rendition="Line" xml:id="facs_3_region_1552406343610_1744l24" rotate="0"/>
+				<zone ulx="630" uly="796" lrx="1032" lry="830" rendition="Line" xml:id="facs_3_region_1552406343610_1744l25" rotate="0"/>
+				<zone ulx="636" uly="827" lrx="1027" lry="860" rendition="Line" xml:id="facs_3_region_1552406343610_1744l26" rotate="0"/>
+				<zone ulx="631" uly="857" lrx="1043" lry="895" rendition="Line" xml:id="facs_3_region_1552406343610_1744l27" rotate="0"/>
+				<zone ulx="631" uly="888" lrx="1065" lry="922" rendition="Line" xml:id="facs_3_region_1552406343610_1744l29" rotate="0"/>
+				<zone ulx="631" uly="917" lrx="1031" lry="950" rendition="Line" xml:id="facs_3_region_1552406343610_1744l30" rotate="0"/>
+				<zone ulx="632" uly="948" lrx="1090" lry="981" rendition="Line" xml:id="facs_3_region_1552406343610_1744l31" rotate="0"/>
+				<zone ulx="630" uly="974" lrx="1053" lry="1007" rendition="Line" xml:id="facs_3_region_1552406343610_1744l32" rotate="0"/>
+				<zone ulx="633" uly="1005" lrx="1021" lry="1038" rendition="Line" xml:id="facs_3_region_1552406343610_1744l33" rotate="0"/>
+				<zone ulx="629" uly="1029" lrx="696" lry="1130" rendition="Line" xml:id="facs_3_line_1552563073444_294" rotate="0"/>
+				<zone ulx="699" uly="1043" lrx="1065" lry="1068" rendition="Line" xml:id="facs_3_line_1552563062145_288" rotate="0"/>
+				<zone ulx="699" uly="1067" lrx="1087" lry="1101" rendition="Line" xml:id="facs_3_line_1552562837554_203" rotate="0"/>
+				<zone ulx="699" uly="1102" lrx="1074" lry="1131" rendition="Line" xml:id="facs_3_line_1552562886531_218" rotate="0"/>
+				<zone ulx="630" uly="1134" lrx="1060" lry="1168" rendition="Line" xml:id="facs_3_region_1552406343610_1744l37" rotate="0"/>
+				<zone ulx="640" uly="1164" lrx="1082" lry="1202" rendition="Line" xml:id="facs_3_region_1552406343610_1744l38" rotate="0"/>
+				<zone ulx="634" uly="1189" lrx="1053" lry="1237" rendition="Line" xml:id="facs_3_region_1552406343610_1744l39" rotate="0"/>
+				<zone ulx="629" uly="1231" lrx="1037" lry="1268" rendition="Line" xml:id="facs_3_region_1552406343610_1744l40" rotate="0"/>
+				<zone ulx="644" uly="1265" lrx="1074" lry="1303" rendition="Line" xml:id="facs_3_region_1552406343610_1744l41" rotate="0"/>
+				<zone ulx="643" uly="1295" lrx="1056" lry="1334" rendition="Line" xml:id="facs_3_region_1552406343610_1744l42" rotate="0"/>
+				<zone ulx="649" uly="1325" lrx="1074" lry="1362" rendition="Line" xml:id="facs_3_region_1552406343610_1744l43" rotate="0"/>
+				<zone ulx="641" uly="1352" lrx="1060" lry="1389" rendition="Line" xml:id="facs_3_region_1552406343610_1744l44" rotate="0"/>
+				<zone ulx="641" uly="1386" lrx="1052" lry="1423" rendition="Line" xml:id="facs_3_region_1552406343610_1744l45" rotate="0"/>
+				<zone ulx="649" uly="1417" lrx="1048" lry="1456" rendition="Line" xml:id="facs_3_region_1552406343610_1744l47" rotate="0"/>
+				<zone ulx="643" uly="1442" lrx="1064" lry="1485" rendition="Line" xml:id="facs_3_region_1552406343610_1744l48" rotate="0"/>
+				<zone ulx="644" uly="1473" lrx="1057" lry="1517" rendition="Line" xml:id="facs_3_region_1552406343610_1744l49" rotate="0"/>
+				<zone ulx="647" uly="1507" lrx="1071" lry="1550" rendition="Line" xml:id="facs_3_region_1552406343610_1744l50" rotate="0"/>
+				<zone ulx="647" uly="1537" lrx="1077" lry="1581" rendition="Line" xml:id="facs_3_region_1552406343610_1744l51" rotate="0"/>
+				<zone ulx="653" uly="1575" lrx="1068" lry="1617" rendition="Line" xml:id="facs_3_region_1552406343610_1744l52" rotate="0"/>
+				<zone ulx="655" uly="1612" lrx="1056" lry="1653" rendition="Line" xml:id="facs_3_region_1552406343610_1744l53" rotate="0"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_4">
+		<surface ulx="0" uly="0" lrx="1384" lry="2174" corresp="Urb.lat.375_0073_fa_0033r_m.jpg">
+			<graphic url="Urb.lat.375_0073_fa_0033r_m.jpg" width="1384px" height="2174px"/>
+			<zone ulx="94" uly="149" lrx="569" lry="1691" rendition="TextRegion" xml:id="facs_4_region_1552570354781_766" rotate="0">
+				<zone ulx="151" uly="227" lrx="515" lry="259" rendition="Line" xml:id="facs_4_region_1552570354781_766l2" rotate="0"/>
+				<zone ulx="147" uly="252" lrx="543" lry="289" rendition="Line" xml:id="facs_4_region_1552570354781_766l3" rotate="0"/>
+				<zone ulx="145" uly="279" lrx="528" lry="316" rendition="Line" xml:id="facs_4_region_1552570354781_766l4" rotate="0"/>
+				<zone ulx="143" uly="308" lrx="568" lry="344" rendition="Line" xml:id="facs_4_region_1552570354781_766l5" rotate="0"/>
+				<zone ulx="147" uly="341" lrx="517" lry="376" rendition="Line" xml:id="facs_4_region_1552570354781_766l6" rotate="0"/>
+				<zone ulx="109" uly="364" lrx="192" lry="474" rendition="Line" xml:id="facs_4_line_1552570773569_1083" rotate="0"/>
+				<zone ulx="195" uly="369" lrx="522" lry="405" rendition="Line" xml:id="facs_4_region_1552570354781_766l7" rotate="0"/>
+				<zone ulx="193" uly="395" lrx="563" lry="430" rendition="Line" xml:id="facs_4_region_1552570354781_766l8" rotate="0"/>
+				<zone ulx="191" uly="422" lrx="566" lry="460" rendition="Line" xml:id="facs_4_region_1552570354781_766l9" rotate="0"/>
+				<zone ulx="196" uly="455" lrx="505" lry="480" rendition="Line" xml:id="facs_4_line_1552570513705_807" rotate="0"/>
+				<zone ulx="113" uly="477" lrx="564" lry="514" rendition="Line" xml:id="facs_4_region_1552570354781_766l11" rotate="0"/>
+				<zone ulx="143" uly="506" lrx="487" lry="542" rendition="Line" xml:id="facs_4_region_1552570354781_766l12" rotate="0"/>
+				<zone ulx="141" uly="532" lrx="458" lry="569" rendition="Line" xml:id="facs_4_region_1552570354781_766l13" rotate="0"/>
+				<zone ulx="139" uly="560" lrx="558" lry="596" rendition="Line" xml:id="facs_4_region_1552570354781_766l14" rotate="0"/>
+				<zone ulx="139" uly="592" lrx="507" lry="626" rendition="Line" xml:id="facs_4_region_1552570354781_766l15" rotate="0"/>
+				<zone ulx="136" uly="620" lrx="545" lry="659" rendition="Line" xml:id="facs_4_region_1552570354781_766l16" rotate="0"/>
+				<zone ulx="134" uly="651" lrx="456" lry="685" rendition="Line" xml:id="facs_4_region_1552570354781_766l17" rotate="0"/>
+				<zone ulx="135" uly="679" lrx="509" lry="714" rendition="Line" xml:id="facs_4_region_1552570354781_766l18" rotate="0"/>
+				<zone ulx="131" uly="705" lrx="490" lry="742" rendition="Line" xml:id="facs_4_region_1552570354781_766l19" rotate="0"/>
+				<zone ulx="132" uly="738" lrx="488" lry="775" rendition="Line" xml:id="facs_4_region_1552570354781_766l20" rotate="0"/>
+				<zone ulx="136" uly="766" lrx="490" lry="802" rendition="Line" xml:id="facs_4_region_1552570354781_766l21" rotate="0"/>
+				<zone ulx="131" uly="793" lrx="529" lry="832" rendition="Line" xml:id="facs_4_region_1552570354781_766l22" rotate="0"/>
+				<zone ulx="128" uly="823" lrx="500" lry="858" rendition="Line" xml:id="facs_4_region_1552570354781_766l23" rotate="0"/>
+				<zone ulx="128" uly="851" lrx="514" lry="888" rendition="Line" xml:id="facs_4_region_1552570354781_766l24" rotate="0"/>
+				<zone ulx="130" uly="878" lrx="544" lry="924" rendition="Line" xml:id="facs_4_region_1552570354781_766l25" rotate="0"/>
+				<zone ulx="128" uly="914" lrx="511" lry="951" rendition="Line" xml:id="facs_4_region_1552570354781_766l26" rotate="0"/>
+				<zone ulx="129" uly="946" lrx="491" lry="982" rendition="Line" xml:id="facs_4_region_1552570354781_766l27" rotate="0"/>
+				<zone ulx="131" uly="976" lrx="513" lry="1015" rendition="Line" xml:id="facs_4_region_1552570354781_766l28" rotate="0"/>
+				<zone ulx="120" uly="1003" lrx="478" lry="1038" rendition="Line" xml:id="facs_4_region_1552570354781_766l29" rotate="0"/>
+				<zone ulx="129" uly="1031" lrx="431" lry="1072" rendition="Line" xml:id="facs_4_region_1552570354781_766l30" rotate="0"/>
+				<zone ulx="130" uly="1060" lrx="496" lry="1103" rendition="Line" xml:id="facs_4_region_1552570354781_766l31" rotate="0"/>
+				<zone ulx="127" uly="1095" lrx="545" lry="1134" rendition="Line" xml:id="facs_4_region_1552570354781_766l32" rotate="0"/>
+				<zone ulx="123" uly="1126" lrx="477" lry="1164" rendition="Line" xml:id="facs_4_region_1552570354781_766l33" rotate="0"/>
+				<zone ulx="118" uly="1160" lrx="511" lry="1200" rendition="Line" xml:id="facs_4_region_1552570354781_766l34" rotate="0"/>
+				<zone ulx="120" uly="1194" lrx="477" lry="1233" rendition="Line" xml:id="facs_4_region_1552570354781_766l35" rotate="0"/>
+				<zone ulx="130" uly="1225" lrx="511" lry="1265" rendition="Line" xml:id="facs_4_region_1552570354781_766l36" rotate="0"/>
+				<zone ulx="130" uly="1256" lrx="485" lry="1300" rendition="Line" xml:id="facs_4_region_1552570354781_766l37" rotate="0"/>
+				<zone ulx="123" uly="1290" lrx="521" lry="1337" rendition="Line" xml:id="facs_4_region_1552570354781_766l38" rotate="0"/>
+				<zone ulx="130" uly="1321" lrx="527" lry="1364" rendition="Line" xml:id="facs_4_region_1552570354781_766l39" rotate="0"/>
+				<zone ulx="131" uly="1351" lrx="527" lry="1394" rendition="Line" xml:id="facs_4_region_1552570354781_766l40" rotate="0"/>
+				<zone ulx="126" uly="1378" lrx="556" lry="1425" rendition="Line" xml:id="facs_4_region_1552570354781_766l41" rotate="0"/>
+				<zone ulx="130" uly="1413" lrx="571" lry="1455" rendition="Line" xml:id="facs_4_region_1552570354781_766l42" rotate="0"/>
+				<zone ulx="130" uly="1445" lrx="502" lry="1489" rendition="Line" xml:id="facs_4_region_1552570354781_766l43" rotate="0"/>
+				<zone ulx="128" uly="1478" lrx="532" lry="1520" rendition="Line" xml:id="facs_4_region_1552570354781_766l44" rotate="0"/>
+				<zone ulx="129" uly="1504" lrx="457" lry="1547" rendition="Line" xml:id="facs_4_region_1552570354781_766l45" rotate="0"/>
+				<zone ulx="135" uly="1541" lrx="527" lry="1584" rendition="Line" xml:id="facs_4_region_1552570354781_766l46" rotate="0"/>
+				<zone ulx="128" uly="1565" lrx="479" lry="1612" rendition="Line" xml:id="facs_4_region_1552570354781_766l47" rotate="0"/>
+				<zone ulx="128" uly="1601" lrx="506" lry="1643" rendition="Line" xml:id="facs_4_region_1552570354781_766l48" rotate="0"/>
+				<zone ulx="127" uly="1632" lrx="504" lry="1677" rendition="Line" xml:id="facs_4_region_1552570354781_766l49" rotate="0"/>
+			</zone>
+			<zone ulx="592" uly="149" lrx="1076" lry="1700" rendition="TextRegion" xml:id="facs_4_region_1552570366857_769" rotate="0">
+				<zone ulx="629" uly="225" lrx="968" lry="269" rendition="Line" xml:id="facs_4_region_1552570366857_769l1" rotate="0"/>
+				<zone ulx="624" uly="254" lrx="1040" lry="295" rendition="Line" xml:id="facs_4_region_1552570366857_769l2" rotate="0"/>
+				<zone ulx="615" uly="283" lrx="1025" lry="325" rendition="Line" xml:id="facs_4_region_1552570366857_769l3" rotate="0"/>
+				<zone ulx="625" uly="313" lrx="967" lry="354" rendition="Line" xml:id="facs_4_region_1552570366857_769l4" rotate="0"/>
+				<zone ulx="629" uly="344" lrx="1011" lry="391" rendition="Line" xml:id="facs_4_region_1552570366857_769l5" rotate="0"/>
+				<zone ulx="629" uly="374" lrx="979" lry="418" rendition="Line" xml:id="facs_4_region_1552570366857_769l6" rotate="0"/>
+				<zone ulx="627" uly="401" lrx="990" lry="444" rendition="Line" xml:id="facs_4_region_1552570366857_769l7" rotate="0"/>
+				<zone ulx="621" uly="427" lrx="1017" lry="473" rendition="Line" xml:id="facs_4_region_1552570366857_769l9" rotate="0"/>
+				<zone ulx="620" uly="452" lrx="1006" lry="499" rendition="Line" xml:id="facs_4_region_1552570366857_769l10" rotate="0"/>
+				<zone ulx="622" uly="484" lrx="995" lry="524" rendition="Line" xml:id="facs_4_region_1552570366857_769l11" rotate="0"/>
+				<zone ulx="618" uly="511" lrx="967" lry="552" rendition="Line" xml:id="facs_4_region_1552570366857_769l12" rotate="0"/>
+				<zone ulx="625" uly="539" lrx="999" lry="582" rendition="Line" xml:id="facs_4_region_1552570366857_769l13" rotate="0"/>
+				<zone ulx="622" uly="565" lrx="982" lry="607" rendition="Line" xml:id="facs_4_region_1552570366857_769l14" rotate="0"/>
+				<zone ulx="624" uly="600" lrx="1062" lry="644" rendition="Line" xml:id="facs_4_region_1552570366857_769l15" rotate="0"/>
+				<zone ulx="618" uly="632" lrx="1006" lry="667" rendition="Line" xml:id="facs_4_region_1552570366857_769l16" rotate="0"/>
+				<zone ulx="623" uly="660" lrx="998" lry="696" rendition="Line" xml:id="facs_4_region_1552570366857_769l17" rotate="0"/>
+				<zone ulx="615" uly="685" lrx="983" lry="724" rendition="Line" xml:id="facs_4_region_1552570366857_769l18" rotate="0"/>
+				<zone ulx="622" uly="710" lrx="993" lry="756" rendition="Line" xml:id="facs_4_region_1552570366857_769l19" rotate="0"/>
+				<zone ulx="612" uly="744" lrx="987" lry="787" rendition="Line" xml:id="facs_4_region_1552570366857_769l20" rotate="0"/>
+				<zone ulx="619" uly="776" lrx="920" lry="815" rendition="Line" xml:id="facs_4_region_1552570366857_769l21" rotate="0"/>
+				<zone ulx="612" uly="805" lrx="977" lry="842" rendition="Line" xml:id="facs_4_region_1552570366857_769l22" rotate="0"/>
+				<zone ulx="611" uly="832" lrx="1003" lry="874" rendition="Line" xml:id="facs_4_region_1552570366857_769l23" rotate="0"/>
+				<zone ulx="607" uly="863" lrx="919" lry="898" rendition="Line" xml:id="facs_4_region_1552570366857_769l24" rotate="0"/>
+				<zone ulx="609" uly="892" lrx="975" lry="929" rendition="Line" xml:id="facs_4_region_1552570366857_769l25" rotate="0"/>
+				<zone ulx="611" uly="925" lrx="987" lry="962" rendition="Line" xml:id="facs_4_region_1552570366857_769l26" rotate="0"/>
+				<zone ulx="615" uly="955" lrx="999" lry="992" rendition="Line" xml:id="facs_4_region_1552570366857_769l27" rotate="0"/>
+				<zone ulx="613" uly="987" lrx="953" lry="1023" rendition="Line" xml:id="facs_4_region_1552570366857_769l28" rotate="0"/>
+				<zone ulx="615" uly="1012" lrx="1007" lry="1050" rendition="Line" xml:id="facs_4_region_1552570366857_769l29" rotate="0"/>
+				<zone ulx="613" uly="1041" lrx="979" lry="1081" rendition="Line" xml:id="facs_4_region_1552570366857_769l30" rotate="0"/>
+				<zone ulx="615" uly="1074" lrx="983" lry="1114" rendition="Line" xml:id="facs_4_region_1552570366857_769l31" rotate="0"/>
+				<zone ulx="610" uly="1105" lrx="987" lry="1142" rendition="Line" xml:id="facs_4_region_1552570366857_769l32" rotate="0"/>
+				<zone ulx="601" uly="1137" lrx="997" lry="1176" rendition="Line" xml:id="facs_4_region_1552570366857_769l33" rotate="0"/>
+				<zone ulx="611" uly="1175" lrx="1045" lry="1216" rendition="Line" xml:id="facs_4_region_1552570366857_769l34" rotate="0"/>
+				<zone ulx="607" uly="1207" lrx="991" lry="1246" rendition="Line" xml:id="facs_4_region_1552570366857_769l35" rotate="0"/>
+				<zone ulx="609" uly="1239" lrx="1025" lry="1280" rendition="Line" xml:id="facs_4_region_1552570366857_769l36" rotate="0"/>
+				<zone ulx="601" uly="1277" lrx="1072" lry="1323" rendition="Line" xml:id="facs_4_region_1552570366857_769l37" rotate="0"/>
+				<zone ulx="600" uly="1309" lrx="951" lry="1344" rendition="Line" xml:id="facs_4_region_1552570366857_769l38" rotate="0"/>
+				<zone ulx="595" uly="1336" lrx="999" lry="1379" rendition="Line" xml:id="facs_4_region_1552570366857_769l39" rotate="0"/>
+				<zone ulx="594" uly="1365" lrx="985" lry="1404" rendition="Line" xml:id="facs_4_region_1552570366857_769l40" rotate="0"/>
+				<zone ulx="598" uly="1392" lrx="985" lry="1431" rendition="Line" xml:id="facs_4_region_1552570366857_769l41" rotate="0"/>
+				<zone ulx="601" uly="1426" lrx="1038" lry="1463" rendition="Line" xml:id="facs_4_region_1552570366857_769l42" rotate="0"/>
+				<zone ulx="607" uly="1459" lrx="1030" lry="1495" rendition="Line" xml:id="facs_4_region_1552570366857_769l43" rotate="0"/>
+				<zone ulx="606" uly="1490" lrx="952" lry="1524" rendition="Line" xml:id="facs_4_region_1552570366857_769l44" rotate="0"/>
+				<zone ulx="600" uly="1520" lrx="1012" lry="1560" rendition="Line" xml:id="facs_4_region_1552570366857_769l45" rotate="0"/>
+				<zone ulx="601" uly="1548" lrx="960" lry="1591" rendition="Line" xml:id="facs_4_region_1552570366857_769l46" rotate="0"/>
+				<zone ulx="608" uly="1590" lrx="1044" lry="1625" rendition="Line" xml:id="facs_4_region_1552570366857_769l47" rotate="0"/>
+				<zone ulx="604" uly="1620" lrx="1031" lry="1660" rendition="Line" xml:id="facs_4_region_1552570366857_769l48" rotate="0"/>
+				<zone ulx="601" uly="1649" lrx="975" lry="1688" rendition="Line" xml:id="facs_4_region_1552570366857_769l49" rotate="0"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<text xml:lang="fro">
+		<body>
+			<lg>
+				<gap unit="fol" quantity="2" reason="lacuna"/>
+				<gap unit="fol" quantity="14" reason="sampling"/>
+				<pb facs="#facs_1" xml:id="Urb.lat.375_0025_fa_0009r_m.jpg" n="9r"/>
+				<cb facs="#facs_1_region_1551368699131_110" n="9a"/>
+				<lb n="1"/>
+				<l n="1" xml:id="U_l_1">
+					<w xml:id="U_w_000001">Loeıs</w>
+					<w xml:id="U_w_000002">font</w>
+					<w xml:id="U_w_000003" rend="aggl">ou</w>
+					<w xml:id="U_w_000004">palaıʒ</w>
+					<w xml:id="U_w_000005">amener</w>
+				</l>
+				<lb n="2"/>
+				<l n="2" xml:id="U_l_2">
+					<w xml:id="U_w_000006">Or</w>
+					<w xml:id="U_w_000007">anſeıs</w>
+					<w xml:id="U_w_000008">fu</w>
+					<w xml:id="U_w_000009" rend="aggl">⁊</w>
+					<w xml:id="U_w_000010" rend="aggl">lı</w>
+					<w xml:id="U_w_000011">ſıen</w>
+					<w xml:id="U_w_000012">barnes</w>
+					<!--Doute sur le ⁊/ . S'agit-il bien de la forme non barrée ? Pas sûr.-->
+				</l>
+				<lb n="3"/>
+				<l n="3" xml:id="U_l_3">
+					<w xml:id="U_w_000013">L</w>
+					<w xml:id="U_w_000014">enfeſ</w>
+					<w xml:id="U_w_000015" rend="aggl">ı</w>
+					<w xml:id="U_w_000016">uınt</w>
+					<w xml:id="U_w_000017">quı</w>
+					<w xml:id="U_w_000018">fu</w>
+					<w xml:id="U_w_000019">enchaaneʒ</w>
+				</l>
+				<lb n="4"/>
+				<l n="4" xml:id="U_l_4">
+					<w xml:id="U_w_000020"></w>
+					<w xml:id="U_w_000021">leſ</w>
+					<w xml:id="U_w_000022">.ıı.</w>
+					<w xml:id="U_w_000023">poıns</w>
+					<w xml:id="U_w_000024">δerıer</w>
+					<w xml:id="U_w_000025" rend="aggl">le</w>
+					<w xml:id="U_w_000026">δos</w>
+					<w xml:id="U_w_000027">noeʒ</w>
+				</l>
+				<lb n="5"/>
+				<l n="5" xml:id="U_l_5">
+					<w xml:id="U_w_000028">Q̃</w>
+					<w xml:id="U_w_000029">lı</w>
+					<w xml:id="U_w_000030">ſanc</w>
+					<w xml:id="U_w_000031">ert</w>
+					<w xml:id="U_w_000032">par</w>
+					<w xml:id="U_w_000033">les</w>
+					<w xml:id="U_w_000034">engles</w>
+					<w xml:id="U_w_000035">coleʒ</w>
+				</l>
+				<lb n="6"/>
+				<l n="6" xml:id="U_l_6">
+					<w xml:id="U_w_000036">T</w>
+					<w xml:id="U_w_000037">ant</w>
+					<w xml:id="U_w_000038">eſtoıt</w>
+					<w xml:id="U_w_000039">megreſ</w>
+					<w xml:id="U_w_000040">δeffeſ</w>
+					<w xml:id="U_w_000041">⁊</w>
+					<w xml:id="U_w_000042">δeſcharneʒ</w>
+				</l>
+				<lb n="7"/>
+				<l n="7" xml:id="U_l_7">
+					<w xml:id="U_w_000043">Q̃</w>
+					<w xml:id="U_w_000044" rend="aggl">a</w>
+					<w xml:id="U_w_000045">grant</w>
+					<w xml:id="U_w_000046">paıne</w>
+					<w xml:id="U_w_000047">pooıt</w>
+					<w xml:id="U_w_000048">ſoꝛ</w>
+					<w xml:id="U_w_000049">pıeʒ</w>
+					<w xml:id="U_w_000050">eſter</w>
+				</l>
+				<lb n="8"/>
+				<l n="8" xml:id="U_l_8">
+					<w xml:id="U_w_000051">Voıt</w>
+					<w xml:id="U_w_000052">anſeıs</w>
+					<w xml:id="U_w_000053">⁊</w>
+					<w xml:id="U_w_000054" rend="aggl">ſa</w>
+					<w xml:id="U_w_000055">mere</w>
+					<w xml:id="U_w_000056">ploꝛer</w>
+				</l>
+				<lb n="9"/>
+				<l n="9" xml:id="U_l_9">
+					<w xml:id="U_w_000057" rend="aggl">Aſ</w>
+					<w xml:id="U_w_000058">pıez</w>
+					<w xml:id="U_w_000059" rend="aggl">loꝛ</w>
+					<w xml:id="U_w_000060">chıet</w>
+					<w xml:id="U_w_000061">m͛ci</w>
+					<w xml:id="U_w_000062">loꝛ</w>
+					<w xml:id="U_w_000063" rend="aggl">a</w>
+					<w xml:id="U_w_000064">crıe</w>
+				</l>
+				<lb n="10"/>
+				<l n="10" xml:id="U_l_10">
+					<w xml:id="U_w_000065"></w>
+					<w xml:id="U_w_000066">meʒ</w>
+					<w xml:id="U_w_000067">δıſt</w>
+					<w xml:id="U_w_000068">ıl</w>
+					<w xml:id="U_w_000069">q̃r</w>
+					<w xml:id="U_w_000070">me</w>
+					<w xml:id="U_w_000071">tueʒ</w>
+					<w xml:id="U_w_000072">poꝛ</w>
+					<w xml:id="U_w_000073">δe</w>
+				</l>
+				<lb n="11"/>
+				<l n="11" xml:id="U_l_11">
+					<w xml:id="U_w_000074">Trop</w>
+					<w xml:id="U_w_000075">aı</w>
+					<w xml:id="U_w_000076" rend="aggl">δe</w>
+					<w xml:id="U_w_000077">mal</w>
+					<w xml:id="U_w_000078">ſofert</w>
+					<w xml:id="U_w_000079">⁊</w>
+					<w xml:id="U_w_000080">enδure</w>
+				</l>
+				<lb n="12"/>
+				<l n="12" xml:id="U_l_12">
+					<w xml:id="U_w_000081">Toʒ</w>
+					<w xml:id="U_w_000082">lı</w>
+					<w xml:id="U_w_000083">barnageſ</w>
+					<w xml:id="U_w_000084">a</w>
+					<w xml:id="U_w_000085">δe</w>
+					<w xml:id="U_w_000086">pıtıe</w>
+					<w xml:id="U_w_000087">ploꝛe</w>
+				</l>
+				<lb n="13"/>
+				<l n="13" xml:id="U_l_13">
+					<w xml:id="U_w_000088">Neıs</w>
+					<w xml:id="U_w_000089">clarıſſ</w>
+					<w xml:id="U_w_000090" rend="aggl">ne</w>
+					<w xml:id="U_w_000091" rend="aggl">le</w>
+					<w xml:id="U_w_000092">pot</w>
+					<w xml:id="U_w_000093">eſgarδer</w>
+				</l>
+				<lb n="14"/>
+				<l n="14" xml:id="U_l_14">
+					<w xml:id="U_w_000094">Ꝺe</w>
+					<w xml:id="U_w_000095">ſon</w>
+					<w xml:id="U_w_000096">h͛mıne</w>
+					<w xml:id="U_w_000097">ſe</w>
+					<w xml:id="U_w_000098">pꝛıſt</w>
+					<w xml:id="U_w_000099">a</w>
+					<w xml:id="U_w_000100">ceueter</w>
+				</l>
+				<lb n="15"/>
+				<l n="15" xml:id="U_l_15">
+					<w xml:id="U_w_000101">C</w>
+					<w xml:id="U_w_000102">ıl</w>
+					<unclear><w xml:id="U_w_000103" rend="aggl">δe</w><w xml:id="U_w_000104">lauıll̃</w></unclear>
+					<w xml:id="U_w_000105">en</w>
+					<w xml:id="U_w_000106">ont</w>
+					<w xml:id="U_w_000107">entre</w>
+					<w xml:id="U_w_000108">euʒ</w>
+					<w xml:id="U_w_000109">ꝑle</w>
+				</l>
+				<lb n="16"/>
+				<l n="16" xml:id="U_l_16">
+					<w xml:id="U_w_000110">Ꝺıſt</w>
+					<w xml:id="U_w_000111" rend="elision">l</w>
+					<w xml:id="U_w_000112">un</w>
+					<w xml:id="U_w_000113" rend="aggl">a</w>
+					<w xml:id="U_w_000114" rend="elision">l</w>
+					<w xml:id="U_w_000115">autre</w>
+					<w xml:id="U_w_000116">ꝯment</w>
+					<w xml:id="U_w_000117">poꝛõ</w>
+					<unclear><w xml:id="U_w_000118">δͣer</w></unclear>
+				</l>
+				<lb n="17"/>
+				<l n="17" xml:id="U_l_17">
+					<w xml:id="U_w_000119">Q̃</w>
+					<w xml:id="U_w_000120">cıſt</w>
+					<w xml:id="U_w_000121">vaſaux</w>
+					<w xml:id="U_w_000122">nos</w>
+					<w xml:id="U_w_000123">feſt</w>
+					<w xml:id="U_w_000124">ſı</w>
+					<w xml:id="U_w_000125">mal</w>
+					<w xml:id="U_w_000126">mener</w>
+				</l>
+				<lb n="18"/>
+				<l n="18" xml:id="U_l_18">
+					<w xml:id="U_w_000127">Ꝺeuant</w>
+					<w xml:id="U_w_000128">nos</w>
+					<w xml:id="U_w_000129">ıex</w>
+					<w xml:id="U_w_000130">fet</w>
+					<w xml:id="U_w_000131">nos</w>
+					<w xml:id="U_w_000132">amıs</w>
+					<w xml:id="U_w_000133">tuer</w>
+				</l>
+				<lb n="19"/>
+				<l n="19" xml:id="U_l_19">
+					<w xml:id="U_w_000134">Jl</w>
+					<w xml:id="U_w_000135" rend="aggl">en</w>
+					<w xml:id="U_w_000136">puet</w>
+					<w xml:id="U_w_000137">bıen</w>
+					<w xml:id="U_w_000138">encoꝛe</w>
+					<w xml:id="U_w_000139">meſerrer</w>
+				</l>
+				<lb n="20"/>
+				<l n="20" xml:id="U_l_20">
+					<w xml:id="U_w_000140" rend="aggl">Se</w>
+					<w xml:id="U_w_000141" rend="aggl">luδı</w>
+					<w xml:id="U_w_000142">as</w>
+					<w xml:id="U_w_000143">faıt</w>
+					<w xml:id="U_w_000144">ſes</w>
+					<w xml:id="U_w_000145">amıs</w>
+					<w xml:id="U_w_000146">manδer</w>
+				</l>
+				<lb n="21"/>
+				<l n="21" xml:id="U_l_21">
+					<w xml:id="U_w_000147">Ꝺeuers</w>
+					<w xml:id="U_w_000148">no</w>
+					<w xml:id="U_w_000149">δame</w>
+					<w xml:id="U_w_000150">nos</w>
+					<w xml:id="U_w_000151">δeurıon</w>
+					<w xml:id="U_w_000152">toꝛner</w>
+				</l>
+				<lb n="22"/>
+				<l n="22" xml:id="U_l_22">
+					<w xml:id="U_w_000153">L</w>
+					<w xml:id="U_w_000154">ı</w>
+					<w xml:id="U_w_000155">autre</w>
+					<w xml:id="U_w_000156">δıent</w>
+					<w xml:id="U_w_000157">ce</w>
+					<w xml:id="U_w_000158">faıt</w>
+					<w xml:id="U_w_000159" rend="aggl">a</w>
+					<w xml:id="U_w_000160">graanter</w>
+				</l>
+				<lb n="23"/>
+				<l n="23" xml:id="U_l_23">
+					<w xml:id="U_w_000161">ntrauz</w>
+					<w xml:id="U_w_000162">le</w>
+					<w xml:id="U_w_000163">vont</w>
+					<w xml:id="U_w_000164">fıancıer</w>
+					<w xml:id="U_w_000165">⁊</w>
+					<w xml:id="U_w_000166">ıurer</w>
+				</l>
+				<lb n="24"/>
+				<l n="24" xml:id="U_l_24">
+					<w xml:id="U_w_000167">Loeis</w>
+					<w xml:id="U_w_000168">fu</w>
+					<w xml:id="U_w_000169">ou</w>
+					<w xml:id="U_w_000170">palaıʒ</w>
+					<w xml:id="U_w_000171">ameneſ</w>
+				</l>
+				<lb n="25"/>
+				<l n="25" xml:id="U_l_25">
+					<w xml:id="U_w_000172">Ꝺeuant</w>
+					<w xml:id="U_w_000173" rend="elision">l</w>
+					<w xml:id="U_w_000174">eſpıeʒ</w>
+					<w xml:id="U_w_000175">anſeıs</w>
+					<w xml:id="U_w_000176">lımẽbꝛes</w>
+				</l>
+				<lb n="26"/>
+				<l n="26" xml:id="U_l_26">
+					<w xml:id="U_w_000177">Ꝺıſt</w>
+					<w xml:id="U_w_000178">anſeıs</w>
+					<w xml:id="U_w_000179">feraı</w>
+					<w xml:id="U_w_000180">vos</w>
+					<w xml:id="U_w_000181">δeſmẽbꝛer</w>
+				</l>
+				<lb n="27"/>
+				<l n="27" xml:id="U_l_27">
+					<w xml:id="U_w_000182"></w>
+					<w xml:id="U_w_000183">voſtre</w>
+					<w xml:id="U_w_000184">m͛e</w>
+					<w xml:id="U_w_000185">feraı</w>
+					<w xml:id="U_w_000186">ıẽ</w>
+					<w xml:id="U_w_000187">tͣıner</w>
+				</l>
+				<lb n="28"/>
+				<l n="28" xml:id="U_l_28">
+					<w xml:id="U_w_000188">poꝛ</w>
+					<w xml:id="U_w_000189">quoı</w>
+					<w xml:id="U_w_000190">oſaſteſ</w>
+					<w xml:id="U_w_000191">mon</w>
+					<w xml:id="U_w_000192">chıer</w>
+					<w xml:id="U_w_000193">ꝑe</w>
+					<unclear><w xml:id="U_w_000194">aδeſer</w></unclear>
+				</l>
+				<lb n="29"/>
+				<l n="29" xml:id="U_l_29">
+					<w xml:id="U_w_000195">Ꝺıſt</w>
+					<w xml:id="U_w_000196">loeıs</w>
+					<w xml:id="U_w_000197">ıſı</w>
+					<w xml:id="U_w_000198">δeuoıt</w>
+					<w xml:id="U_w_000199">aler</w>
+				</l>
+				<lb n="30"/>
+				<l n="30" xml:id="U_l_30">
+					<w xml:id="U_w_000200">nus</w>
+					<w xml:id="U_w_000201">hõ</w>
+					<w xml:id="U_w_000202">ne</w>
+					<w xml:id="U_w_000203">puet</w>
+					<w xml:id="U_w_000204">δe</w>
+					<w xml:id="U_w_000205">ſon</w>
+					<w xml:id="U_w_000206">ıoꝛ</w>
+					<w xml:id="U_w_000207">treſpaſer</w>
+				</l>
+				<lb n="31"/>
+				<l n="31" xml:id="U_l_31">
+					<w xml:id="U_w_000208">avſı</w>
+					<w xml:id="U_w_000209">vos</w>
+					<w xml:id="U_w_000210">pꝛı</w>
+					<w xml:id="U_w_000211">que</w>
+					<w xml:id="U_w_000212" rend="elision">m</w>
+					<w xml:id="U_w_000213">en</w>
+					<w xml:id="U_w_000214">facıeʒ</w>
+					<w xml:id="U_w_000215">aler</w>
+				</l>
+				<lb n="32"/>
+				<l n="32" xml:id="U_l_32">
+					<w xml:id="U_w_000216">hoꝛs</w>
+					<w xml:id="U_w_000217">δeceſt</w>
+					<w xml:id="U_w_000218">mont</w>
+					<w xml:id="U_w_000219" rend="elision">δ</w>
+					<w xml:id="U_w_000220">aucune</w>
+					<w xml:id="U_w_000221">moꝛt</w>
+					<w xml:id="U_w_000222">outͤr</w>
+				</l>
+				<lb n="33"/>
+				<l n="33" xml:id="U_l_33">
+					<w xml:id="U_w_000223">Mout</w>
+					<w xml:id="U_w_000224">volentıers</w>
+					<w xml:id="U_w_000225">δıſt</w>
+					<w xml:id="U_w_000226">anſeıs</w>
+					<w xml:id="U_w_000227">lı</w>
+					<w xml:id="U_w_000228">ber</w>
+				</l>
+				<lb n="34"/>
+				<l n="34" xml:id="U_l_34">
+					<w xml:id="U_w_000229">t</w>
+				</l>
+				<lb n="35"/>
+				<l n="35" xml:id="U_l_35">
+					<w xml:id="U_w_000230">ous</w>
+					<w xml:id="U_w_000231">ſes</w>
+					<w xml:id="U_w_000232">amıs</w>
+					<w xml:id="U_w_000233">faıt</w>
+					<w xml:id="U_w_000234">ou</w>
+					<w xml:id="U_w_000235">palaiʒ</w>
+					<w xml:id="U_w_000236">mõter</w>
+				</l>
+				<lb n="36"/>
+				<l n="36" xml:id="U_l_36">
+					<w xml:id="U_w_000237"></w>
+					<w xml:id="U_w_000238">ıl</w>
+					<w xml:id="U_w_000239" rend="aggl">ı</w>
+					<w xml:id="U_w_000240">uınδꝛent</w>
+					<w xml:id="U_w_000241">ne</w>
+					<w xml:id="U_w_000242" rend="elision">l</w>
+					<w xml:id="U_w_000243">oſerent</w>
+					<w xml:id="U_w_000244">veer</w>
+				</l>
+				<lb n="37"/>
+				<l n="37" xml:id="U_l_37">
+					<w xml:id="U_w_000245"></w>
+					<w xml:id="U_w_000246">anſeıs</w>
+					<w xml:id="U_w_000247">loꝛ</w>
+					<w xml:id="U_w_000248">ꝯmence</w>
+					<w xml:id="U_w_000249" rend="aggl">a</w>
+					<w xml:id="U_w_000250">moſtrer</w>
+				</l>
+				<lb n="38"/>
+				<l n="38" xml:id="U_l_38">
+					<w xml:id="U_w_000251">C</w>
+					<w xml:id="U_w_000252">oment</w>
+					<w xml:id="U_w_000253">.Ger.</w>
+					<w xml:id="U_w_000254">fu</w>
+					<w xml:id="U_w_000255">moꝛt</w>
+					<w xml:id="U_w_000256">⁊</w>
+					<w xml:id="U_w_000257">ent͛reʒ</w>
+				</l>
+				<lb n="39"/>
+				<l n="39" xml:id="U_l_39">
+					<w xml:id="U_w_000258">Par</w>
+					<w xml:id="U_w_000259">les</w>
+					<w xml:id="U_w_000260">neueus</w>
+					<w xml:id="U_w_000261">qͥl</w>
+					<w xml:id="U_w_000262">δeuſſent</w>
+					<w xml:id="U_w_000263">amer</w>
+				</l>
+				<lb n="40"/>
+				<l n="40" xml:id="U_l_40">
+					<w xml:id="U_w_000264">h͛naut</w>
+					<w xml:id="U_w_000265">meſ</w>
+					<w xml:id="U_w_000266">níeʒ</w>
+					<w xml:id="U_w_000267">ſı</w>
+					<w xml:id="U_w_000268">ma</w>
+					<w xml:id="U_w_000269">ſon</w>
+					<w xml:id="U_w_000270">fıʒ</w>
+					<w xml:id="U_w_000271">lıure</w>
+				</l>
+				<lb n="41"/>
+				<l n="41" xml:id="U_l_41">
+					<w xml:id="U_w_000272">Poꝛ</w>
+					<w xml:id="U_w_000273">faíre</w>
+					<w xml:id="U_w_000274">tant</w>
+					<w xml:id="U_w_000275">ꝯ</w>
+					<w xml:id="U_w_000276">vos</w>
+					<w xml:id="U_w_000277">Ꝺeuıſeres</w>
+				</l>
+				<lb n="42"/>
+				<l n="42" xml:id="U_l_42">
+					<w xml:id="U_w_000278">Ꝺíſt</w>
+					<w xml:id="U_w_000279" rend="elision">l</w>
+					<w xml:id="U_w_000280">un</w>
+					<w xml:id="U_w_000281" rend="aggl">a</w>
+					<w xml:id="U_w_000282" rend="elision">l</w>
+					<w xml:id="U_w_000283">autre</w>
+					<w xml:id="U_w_000284">cı</w>
+					<w xml:id="U_w_000285" rend="aggl">a</w>
+					<w xml:id="U_w_000286">mout</w>
+					<w xml:id="U_w_000287" rend="aggl">a</w>
+					<w xml:id="U_w_000288">penſer</w>
+				</l>
+				<lb n="43"/>
+				<l n="43" xml:id="U_l_43">
+					<w xml:id="U_w_000289" rend="aggl">Sı</w>
+					<w xml:id="U_w_000290">feſon</w>
+					<w xml:id="U_w_000291">oꝛ</w>
+					<w xml:id="U_w_000292" rend="aggl">cı</w>
+					<w xml:id="U_w_000293">loeıs</w>
+					<w xml:id="U_w_000294">fıner</w>
+				</l>
+				<lb n="44"/>
+				<l n="44" xml:id="U_l_44">
+					<w xml:id="U_w_000295">Jamaíʒ</w>
+					<w xml:id="U_w_000296" rend="aggl">lı</w>
+					<w xml:id="U_w_000297">ꝑe</w>
+					<w xml:id="U_w_000298" rend="aggl">ne</w>
+					<w xml:id="U_w_000299">nos</w>
+					<w xml:id="U_w_000300">voroıt</w>
+					<w xml:id="U_w_000301">amer</w>
+				</l>
+				<lb n="45"/>
+				<l n="45" xml:id="U_l_45">
+					<w xml:id="U_w_000302"></w>
+					<w xml:id="U_w_000303">δıſt</w>
+					<w xml:id="U_w_000304">r.</w>
+					<w xml:id="U_w_000305">tot</w>
+					<w xml:id="U_w_000306">ceu</w>
+					<w xml:id="U_w_000307">leſſıes</w>
+					<w xml:id="U_w_000308">eſter</w>
+				</l>
+				<lb n="46"/>
+				<l n="46" xml:id="U_l_46">
+					<w xml:id="U_w_000309">Se</w>
+					<w xml:id="U_w_000310">anſeıs</w>
+					<w xml:id="U_w_000311">le</w>
+					<w xml:id="U_w_000312">me</w>
+					<w xml:id="U_w_000313">ueut</w>
+					<w xml:id="U_w_000314">parδoner</w>
+				</l>
+				<lb n="47"/>
+				<l n="47" xml:id="U_l_47">
+					<w xml:id="U_w_000315">Jre</w>
+					<w xml:id="U_w_000316">⁊</w>
+					<w xml:id="U_w_000317">δıſcoꝛδe</w>
+					<w xml:id="U_w_000318">⁊</w>
+					<w xml:id="U_w_000319">male</w>
+					<w xml:id="U_w_000320">volente</w>
+				</l>
+				<lb n="48"/>
+				<l n="48" xml:id="U_l_48">
+					<w xml:id="U_w_000321">Je</w>
+					<w xml:id="U_w_000322">feraı</w>
+					<w xml:id="U_w_000323">voír</w>
+					<w xml:id="U_w_000324">loeís</w>
+					<w xml:id="U_w_000325">traıner</w>
+				</l>
+				<lb n="49"/>
+				<l n="49" xml:id="U_l_49">
+					<w xml:id="U_w_000326">a</w>
+					<w xml:id="U_w_000327">vnes</w>
+					<w xml:id="U_w_000328">foꝛcheſ</w>
+					<w xml:id="U_w_000329">δeſoꝛ</w>
+					<w xml:id="U_w_000330">belín</w>
+					<w xml:id="U_w_000331">leuer</w>
+				</l>
+				<cb facs="#facs_1_region_1551368712652_113" n="9b"/>
+				<lb n="1"/>
+				<l n="50" xml:id="U_l_50">
+					<w xml:id="U_w_000332">Q̃</w>
+					<w xml:id="U_w_000333">le</w>
+					<w xml:id="U_w_000334">vera</w>
+					<w xml:id="U_w_000335" rend="aggl">La</w>
+					<w xml:id="U_w_000336">m͛e</w>
+					<w xml:id="U_w_000337" rend="aggl">o</w>
+					<w xml:id="U_w_000338">le</w>
+					<w xml:id="U_w_000339">vıs</w>
+					<w xml:id="U_w_000340">cl͛r</w>
+				</l>
+				<lb n="2"/>
+				<l n="51" xml:id="U_l_51">
+					<w xml:id="U_w_000341"></w>
+					<w xml:id="U_w_000342">ſes</w>
+					<w xml:id="U_w_000343">amıs</w>
+					<w xml:id="U_w_000344" rend="aggl">⁊</w>
+					<w xml:id="U_w_000345">tuıt</w>
+					<w xml:id="U_w_000346" rend="aggl">ſı</w>
+					<w xml:id="U_w_000347">parente</w>
+				</l>
+				<lb n="3"/>
+				<l n="52" xml:id="U_l_52">
+					<w xml:id="U_w_000348">Cert</w>
+					<w xml:id="U_w_000349">voſtre</w>
+					<w xml:id="U_w_000350">honte</w>
+					<w xml:id="U_w_000351">δıſt</w>
+					<w xml:id="U_w_000352">loeıs</w>
+					<w xml:id="U_w_000353" rend="aggl">le</w>
+					<w xml:id="U_w_000354">ber</w>
+				</l>
+				<lb n="4"/>
+				<l n="53" xml:id="U_l_53">
+					<w xml:id="U_w_000355">Maíʒ</w>
+					<w xml:id="U_w_000356">faıteſ</w>
+					<w xml:id="U_w_000357">moı</w>
+					<w xml:id="U_w_000358">δeδens</w>
+					<w xml:id="U_w_000359">t͛re</w>
+					<w xml:id="U_w_000360">boter</w>
+				</l>
+				<lb n="5"/>
+				<l n="54" xml:id="U_l_54">
+					<w xml:id="U_w_000361">Ov</w>
+					<w xml:id="U_w_000362">vos</w>
+					<w xml:id="U_w_000363">me</w>
+					<w xml:id="U_w_000364">feteſ</w>
+					<w xml:id="U_w_000365">ens</w>
+					<w xml:id="U_w_000366">enʒ</w>
+					<w xml:id="U_w_000367">ẽ</w>
+					<w xml:id="U_w_000368" rend="aggl">la</w>
+					<w xml:id="U_w_000369">m͛</w>
+					<w xml:id="U_w_000370">ruer</w>
+				</l>
+				<lb n="6"/>
+				<l n="55" xml:id="U_l_55">
+					<w xml:id="U_w_000371">Vne</w>
+					<w xml:id="U_w_000372">grant</w>
+					<w xml:id="U_w_000373">pıere</w>
+					<w xml:id="U_w_000374">entoꝛ</w>
+					<w xml:id="U_w_000375">mõ</w>
+					<w xml:id="U_w_000376">col</w>
+					<w xml:id="U_w_000377">noer</w>
+				</l>
+				<lb n="7"/>
+				<l n="56" xml:id="U_l_56">
+					<w xml:id="U_w_000378">Ꝺıſt</w>
+					<w xml:id="U_w_000379">anſeıs</w>
+					<w xml:id="U_w_000380">bıen</w>
+					<w xml:id="U_w_000381">le</w>
+					<w xml:id="U_w_000382">vıl</w>
+					<w xml:id="U_w_000383">craanter</w>
+				</l>
+				<lb n="8"/>
+				<l n="57" xml:id="U_l_57">
+					<w xml:id="U_w_000384" rend="aggl">Se</w>
+					<w xml:id="U_w_000385">meſ</w>
+					<w xml:id="U_w_000386">lıgnages</w>
+					<w xml:id="U_w_000387">le</w>
+					<w xml:id="U_w_000388">veut</w>
+					<w xml:id="U_w_000389">ıſſı</w>
+					<w xml:id="U_w_000390">loer</w>
+				</l>
+				<lb n="9"/>
+				<l n="58" xml:id="U_l_58">
+					<w xml:id="U_w_000391"></w>
+					<w xml:id="U_w_000392">cıl</w>
+					<w xml:id="U_w_000393">reſponδent</w>
+					<w xml:id="U_w_000394">bñ</w>
+					<w xml:id="U_w_000395">le</w>
+					<w xml:id="U_w_000396">uolõ</w>
+					<unclear><w xml:id="U_w_000397">gͤer</w></unclear>
+				</l>
+				<lb n="10"/>
+				<l n="59" xml:id="U_l_59">
+					<w xml:id="U_w_000398">Qͥ</w>
+					<w xml:id="U_w_000399">faıt</w>
+					<w xml:id="U_w_000400">tel</w>
+					<unclear><w xml:id="U_w_000401">mͣtre</w></unclear>
+					<w xml:id="U_w_000402">bıen</w>
+					<w xml:id="U_w_000403">le</w>
+					<w xml:id="U_w_000404">δoıt</w>
+					<w xml:id="U_w_000405">ꝯperer</w>
+				</l>
+				<lb n="11"/>
+				<l n="60" xml:id="U_l_60">
+					<w xml:id="U_w_000406">L</w>
+				</l>
+				<lb n="12"/>
+				<l n="61" xml:id="U_l_61">
+					<w xml:id="U_w_000407">a</w>
+					<w xml:id="U_w_000408">fuſt</w>
+					<w xml:id="U_w_000409" rend="aggl">lı</w>
+					<w xml:id="U_w_000410">pleʒ</w>
+					<w xml:id="U_w_000411">otroıeʒ</w>
+					<w xml:id="U_w_000412" rend="aggl">⁊</w>
+					<unclear><w xml:id="U_w_000413">gr??eʒ</w></unclear>
+				</l>
+				<lb n="13"/>
+				<l n="62" xml:id="U_l_62">
+					<w xml:id="U_w_000414">ne</w>
+					<w xml:id="U_w_000415">fuſt</w>
+					<w xml:id="U_w_000416">guıreſ</w>
+					<w xml:id="U_w_000417">qͥ</w>
+					<w xml:id="U_w_000418">haut</w>
+					<w xml:id="U_w_000419">ſet</w>
+					<w xml:id="U_w_000420">eſcͥeʒ</w>
+				</l>
+				<lb n="14"/>
+				<l n="63" xml:id="U_l_63">
+					<w xml:id="U_w_000421">par</w>
+					<w xml:id="U_w_000422">δıeu</w>
+					<w xml:id="U_w_000423">faıt</w>
+					<w xml:id="U_w_000424">ıl</w>
+					<w xml:id="U_w_000425">maueſem̃t</w>
+					<w xml:id="U_w_000426">ou͛s</w>
+				</l>
+				<lb n="15"/>
+				<l n="64" xml:id="U_l_64">
+					<w xml:id="U_w_000427">ncoꝛ</w>
+					<w xml:id="U_w_000428">neſ</w>
+					<w xml:id="U_w_000429">mıe</w>
+					<w xml:id="U_w_000430">venu</w>
+					<w xml:id="U_w_000431">no</w>
+					<w xml:id="U_w_000432">parenteʒ</w>
+				</l>
+				<lb n="16"/>
+				<l n="65" xml:id="U_l_65">
+					<w xml:id="U_w_000433">Lı</w>
+					<w xml:id="U_w_000434">roy</w>
+					<w xml:id="U_w_000435">δe</w>
+					<w xml:id="U_w_000436">france</w>
+					<w xml:id="U_w_000437">ne</w>
+					<w xml:id="U_w_000438">gerın</w>
+					<w xml:id="U_w_000439" rend="aggl">lı</w>
+					<w xml:id="U_w_000440">ſenes</w>
+				</l>
+				<lb n="17"/>
+				<l n="66" xml:id="U_l_66">
+					<w xml:id="U_w_000441">Ne</w>
+					<w xml:id="U_w_000442">mauuoıſín</w>
+					<w xml:id="U_w_000443" rend="aggl">ne</w>
+					<w xml:id="U_w_000444" rend="aggl">lı</w>
+					<w xml:id="U_w_000445">autre</w>
+					<w xml:id="U_w_000446">barneʒ</w>
+				</l>
+				<lb n="18"/>
+				<l n="67" xml:id="U_l_67">
+					<w xml:id="U_w_000447">nſoꝛq̃tot</w>
+					<w xml:id="U_w_000448" rend="aggl">ſe</w>
+					<w xml:id="U_w_000449">loeıs</w>
+					<w xml:id="U_w_000450">penδez</w>
+				</l>
+				<lb n="19"/>
+				<l n="68" xml:id="U_l_68">
+					<w xml:id="U_w_000451">Ꝺoon</w>
+					<w xml:id="U_w_000452" rend="aggl">mõ</w>
+					<w xml:id="U_w_000453">frere</w>
+					<w xml:id="U_w_000454">ıe</w>
+					<w xml:id="U_w_000455">vos</w>
+					<w xml:id="U_w_000456">δı</w>
+					<w xml:id="U_w_000457">ocıez</w>
+				</l>
+				<lb n="20"/>
+				<l n="69" xml:id="U_l_69">
+					<w xml:id="U_w_000458"></w>
+					<w xml:id="U_w_000459">δıſt</w>
+					<w xml:id="U_w_000460">.r.</w>
+					<w xml:id="U_w_000461" rend="elision">c</w>
+					<w xml:id="U_w_000462">eſt</w>
+					<w xml:id="U_w_000463">fıne</w>
+					<w xml:id="U_w_000464">verıteʒ</w>
+				</l>
+				<lb n="21"/>
+				<l n="70" xml:id="U_l_70">
+					<w xml:id="U_w_000465">Se</w>
+					<w xml:id="U_w_000466">mon</w>
+					<w xml:id="U_w_000467">ꝯceıl</w>
+					<w xml:id="U_w_000468">treſtoʒ</w>
+					<w xml:id="U_w_000469">croıre</w>
+					<w xml:id="U_w_000470">voleʒ</w>
+				</l>
+				<lb n="22"/>
+				<l n="71" xml:id="U_l_71">
+					<w xml:id="U_w_000471">Le</w>
+					<w xml:id="U_w_000472">matınet</w>
+					<w xml:id="U_w_000473">aıns</w>
+					<w xml:id="U_w_000474">q̃</w>
+					<w xml:id="U_w_000475">ıoꝛ</w>
+					<w xml:id="U_w_000476">ſoıt</w>
+					<w xml:id="U_w_000477">leueʒ</w>
+				</l>
+				<lb n="23"/>
+				<l n="72" xml:id="U_l_72">
+					<w xml:id="U_w_000478">Soít</w>
+					<w xml:id="U_w_000479">noſtre</w>
+					<w xml:id="U_w_000480">eſfoꝛs</w>
+					<w xml:id="U_w_000481">ou</w>
+					<w xml:id="U_w_000482">val</w>
+					<w xml:id="U_w_000483">beton</w>
+					<w xml:id="U_w_000484">meneʒ</w>
+				</l>
+				<lb n="24"/>
+				<l n="73" xml:id="U_l_73">
+					<w xml:id="U_w_000485">Conroíeʒ</w>
+					<w xml:id="U_w_000486" rend="elision">δ</w>
+					<w xml:id="U_w_000487">armes</w>
+					<w xml:id="U_w_000488">garnıs</w>
+					<w xml:id="U_w_000489">⁊</w>
+					<w xml:id="U_w_000490">apꝛeſteʒ</w>
+				</l>
+				<lb n="25"/>
+				<l n="74" xml:id="U_l_74">
+					<w xml:id="U_w_000491"></w>
+					<w xml:id="U_w_000492">enʒ</w>
+					<w xml:id="U_w_000493">ou</w>
+					<w xml:id="U_w_000494">val</w>
+					<w xml:id="U_w_000495">treſtoʒ</w>
+					<w xml:id="U_w_000496">coıʒ</w>
+					<w xml:id="U_w_000497">vos</w>
+					<w xml:id="U_w_000498">teneʒ</w>
+				</l>
+				<lb n="26"/>
+				<l n="75" xml:id="U_l_75">
+					<w xml:id="U_w_000499">a</w>
+					<w xml:id="U_w_000500">auʒ</w>
+					<w xml:id="U_w_000501">ıroı</w>
+					<w xml:id="U_w_000502">fıers</w>
+					<w xml:id="U_w_000503">⁊</w>
+					<w xml:id="U_w_000504">δeſmeſureſ</w>
+				</l>
+				<lb n="27"/>
+				<l n="76" xml:id="U_l_76">
+					<w xml:id="U_w_000505">Il</w>
+					<w xml:id="U_w_000506">en</w>
+					<w xml:id="U_w_000507">ıſtront</w>
+					<w xml:id="U_w_000508">ıel</w>
+					<w xml:id="U_w_000509">ſaı</w>
+					<w xml:id="U_w_000510">δe</w>
+					<w xml:id="U_w_000511">verıteʒ</w>
+				</l>
+				<lb n="28"/>
+				<l n="77" xml:id="U_l_77">
+					<w xml:id="U_w_000512">P</w>
+					<w xml:id="U_w_000513">l⁹</w>
+					<w xml:id="U_w_000514">δe</w>
+					<w xml:id="U_w_000515">.x.m</w>
+					<w xml:id="U_w_000516">aſ</w>
+					<w xml:id="U_w_000517">v͛s</w>
+					<w xml:id="U_w_000518">elmes</w>
+					<w xml:id="U_w_000519">gemeſ</w>
+				</l>
+				<lb n="29"/>
+				<l n="78" xml:id="U_l_78">
+					<w xml:id="U_w_000520">Car</w>
+					<w xml:id="U_w_000521">ıl</w>
+					<w xml:id="U_w_000522">ıa</w>
+					<w xml:id="U_w_000523">δe</w>
+					<w xml:id="U_w_000524">ch̃r</w>
+					<w xml:id="U_w_000525">aſſes</w>
+				</l>
+				<lb n="30"/>
+				<l n="79" xml:id="U_l_79">
+					<w xml:id="U_w_000526" rend="elision">S</w>
+					<w xml:id="U_w_000527">ıl</w>
+					<w xml:id="U_w_000528">nos</w>
+					<w xml:id="U_w_000529">enchaucent</w>
+					<w xml:id="U_w_000530">ꝑ</w>
+					<w xml:id="U_w_000531">δerıere</w>
+					<unclear><w xml:id="U_w_000532">ſauδꝛes</w></unclear>
+				</l>
+				<lb n="31"/>
+				<l n="80" xml:id="U_l_80">
+					<w xml:id="U_w_000533">toʒ</w>
+					<w xml:id="U_w_000534">les</w>
+					<w xml:id="U_w_000535">pꝛenδꝛeʒ</w>
+					<w xml:id="U_w_000536">ſı</w>
+					<w xml:id="U_w_000537">q̃</w>
+					<w xml:id="U_w_000538">vos</w>
+					<w xml:id="U_w_000539">le</w>
+					<w xml:id="U_w_000540">veroıʒ</w>
+				</l>
+				<lb n="32"/>
+				<l n="81" xml:id="U_l_81">
+					<w xml:id="U_w_000541">Se</w>
+					<w xml:id="U_w_000542">maneſıer</w>
+					<w xml:id="U_w_000543" rend="aggl">ı</w>
+					<w xml:id="U_w_000544">puet</w>
+					<w xml:id="U_w_000545">eſtre</w>
+					<w xml:id="U_w_000546">enꝯtreʒ</w>
+				</l>
+				<lb n="33"/>
+				<l n="82" xml:id="U_l_82">
+					<w xml:id="U_w_000547">Poꝛ</w>
+					<w xml:id="U_w_000548">luı</w>
+					<w xml:id="U_w_000549">δoon</w>
+					<w xml:id="U_w_000550">volentıerſ</w>
+					<w xml:id="U_w_000551">rauereſ</w>
+				</l>
+				<lb n="34"/>
+				<l n="83" xml:id="U_l_83">
+					<w xml:id="U_w_000552">Ꝺıſt</w>
+					<w xml:id="U_w_000553">anſeıs</w>
+					<w xml:id="U_w_000554">certes</w>
+					<w xml:id="U_w_000555">bıen</w>
+					<w xml:id="U_w_000556">δıt</w>
+					<w xml:id="U_w_000557">aueſ</w>
+				</l>
+				<lb n="35"/>
+				<l n="84" xml:id="U_l_84">
+					<w xml:id="U_w_000558" rend="aggl">La</w>
+					<w xml:id="U_w_000559">coꝛt</w>
+					<w xml:id="U_w_000560">δepart</w>
+					<w xml:id="U_w_000561" rend="aggl">ſı</w>
+					<w xml:id="U_w_000562">uont</w>
+					<w xml:id="U_w_000563" rend="aggl">a</w>
+					<w xml:id="U_w_000564" rend="aggl">loꝛ</w>
+					<w xml:id="U_w_000565">oſtes</w>
+				</l>
+				<lb n="36"/>
+				<l n="85" xml:id="U_l_85">
+					<w xml:id="U_w_000566">Loeıs</w>
+					<w xml:id="U_w_000567">fu</w>
+					<w xml:id="U_w_000568" rend="aggl">en</w>
+					<w xml:id="U_w_000569">pͥſon</w>
+					<w xml:id="U_w_000570">remeneʒ</w>
+				</l>
+				<lb n="37"/>
+				<l n="86" xml:id="U_l_86">
+					<w xml:id="U_w_000571">a</w>
+					<w xml:id="U_w_000572">grant</w>
+					<w xml:id="U_w_000573">δeſtrece</w>
+					<w xml:id="U_w_000574">plus</w>
+					<w xml:id="U_w_000575">q̃</w>
+					<w xml:id="U_w_000576">δeuant</w>
+					<w xml:id="U_w_000577">aſes</w>
+				</l>
+				<lb n="38"/>
+				<l n="87" xml:id="U_l_87">
+					<w xml:id="U_w_000578">anſeıs</w>
+					<w xml:id="U_w_000579">fu</w>
+					<w xml:id="U_w_000580" rend="aggl">ou</w>
+					<w xml:id="U_w_000581">pales</w>
+					<w xml:id="U_w_000582">oſteleʒ</w>
+				</l>
+				<lb n="39"/>
+				<l n="88" xml:id="U_l_88">
+					<w xml:id="U_w_000583">Jl</w>
+					<w xml:id="U_w_000584" rend="aggl">⁊</w>
+					<w xml:id="U_w_000585" rend="aggl">ſa</w>
+					<w xml:id="U_w_000586">m͛e</w>
+					<w xml:id="U_w_000587">quí</w>
+					<w xml:id="U_w_000588">tant</w>
+					<w xml:id="U_w_000589">out</w>
+					<w xml:id="U_w_000590" rend="aggl">δe</w>
+					<w xml:id="U_w_000591">bıauteʒ</w>
+				</l>
+				<lb n="40"/>
+				<l n="89" xml:id="U_l_89">
+					<w xml:id="U_w_000592">Jcele</w>
+					<w xml:id="U_w_000593">nuıt</w>
+					<w xml:id="U_w_000594">fu</w>
+					<w xml:id="U_w_000595">poures</w>
+					<w xml:id="U_w_000596">ſes</w>
+					<w xml:id="U_w_000597">δıgners</w>
+				</l>
+				<lb n="41"/>
+				<l n="90" xml:id="U_l_90">
+					<w xml:id="U_w_000598"></w>
+				</l>
+				<lb n="42"/>
+				<l n="91" xml:id="U_l_91">
+					<w xml:id="U_w_000599">n</w>
+					<w xml:id="U_w_000600">pꝛıſon</w>
+					<w xml:id="U_w_000601">fu</w>
+					<w xml:id="U_w_000602">remeneʒ</w>
+					<w xml:id="U_w_000603">loeıs</w>
+				</l>
+				<lb n="43"/>
+				<l n="92" xml:id="U_l_92">
+					<w xml:id="U_w_000604">Maıs</w>
+					<w xml:id="U_w_000605">ıl</w>
+					<w xml:id="U_w_000606">amaſt</w>
+					<w xml:id="U_w_000607">mıex</w>
+					<w xml:id="U_w_000608">eſtre</w>
+					<sic><w xml:id="U_w_000609">nort</w></sic>
+					<w xml:id="U_w_000610">amq̃</w>
+					<w xml:id="U_w_000611">vıs</w>
+				</l>
+				<lb n="44"/>
+				<l n="93" xml:id="U_l_93">
+					<w xml:id="U_w_000612">.r.</w>
+					<w xml:id="U_w_000613">manδa</w>
+					<w xml:id="U_w_000614">lı</w>
+					<w xml:id="U_w_000615">bon</w>
+					<w xml:id="U_w_000616">pꝛevoſt</w>
+					<w xml:id="U_w_000617">oeδın</w>
+				</l>
+				<lb n="45"/>
+				<l n="94" xml:id="U_l_94">
+					<w xml:id="U_w_000618"></w>
+					<w xml:id="U_w_000619">les</w>
+					<w xml:id="U_w_000620">ıureſ</w>
+					<w xml:id="U_w_000621">δe</w>
+					<w xml:id="U_w_000622">boꝛδele</w>
+					<w xml:id="U_w_000623">la</w>
+					<w xml:id="U_w_000624">cıt</w>
+				</l>
+				<lb n="46"/>
+				<l n="95" xml:id="U_l_95">
+					<w xml:id="U_w_000625"></w>
+					<w xml:id="U_w_000626">ıl</w>
+					<w xml:id="U_w_000627" rend="aggl">ı</w>
+					<w xml:id="U_w_000628">uıenent</w>
+					<w xml:id="U_w_000629">volentıers</w>
+					<unclear><w xml:id="U_w_000630">nõ</w><w xml:id="U_w_000631">eıııııs</w></unclear>
+				</l>
+				<lb n="47"/>
+				<l n="96" xml:id="U_l_96">
+					<w xml:id="U_w_000632">Jl</w>
+					<w xml:id="U_w_000633">loꝛ</w>
+					<w xml:id="U_w_000634">moſtͣ</w>
+					<w xml:id="U_w_000635" rend="aggl">ſı</w>
+					<w xml:id="U_w_000636" rend="aggl">ꝯ</w>
+					<w xml:id="U_w_000637">loꝛ</w>
+					<w xml:id="U_w_000638">fu</w>
+					<w xml:id="U_w_000639">auıs</w>
+				</l>
+				<lb n="48"/>
+				<l n="97" xml:id="U_l_97">
+					<w xml:id="U_w_000640">Bıau</w>
+					<w xml:id="U_w_000641">ſire</w>
+					<unclear><w xml:id="U_w_000642">mereſ</w></unclear>
+					<w xml:id="U_w_000643">δıſ</w>
+					<w xml:id="U_w_000644">.r.</w>
+					<w xml:id="U_w_000645" rend="aggl">lı</w>
+					<w xml:id="U_w_000646">h͛δıs</w>
+				</l>
+				<lb n="49"/>
+				<l n="98" xml:id="U_l_98">
+					<w xml:id="U_w_000647">fetes</w>
+					<w xml:id="U_w_000648">vo</w>
+					<w xml:id="U_w_000649">gent</w>
+					<w xml:id="U_w_000650">armer</w>
+					<w xml:id="U_w_000651" rend="aggl">a</w>
+					<w xml:id="U_w_000652" rend="aggl">le</w>
+					<w xml:id="U_w_000653">matın</w>
+				</l>
+				<lb n="50"/>
+				<l n="99" xml:id="U_l_99">
+					<w xml:id="U_w_000654">Car</w>
+					<w xml:id="U_w_000655">auec</w>
+					<w xml:id="U_w_000656">moı</w>
+					<w xml:id="U_w_000657" rend="aggl">le<add place="above" status="unremarkable">s</add></w>
+					<w xml:id="U_w_000658">ꝯuenra</w>
+					<w xml:id="U_w_000659">venır</w>
+				</l>
+				
+				<gap unit="fol" quantity="15" reason="sampling"/>
+
+				<pb facs="#facs_2" xml:id="Urb.lat.375_0041_fa_0017r_m.jpg" n="17r"/>
+				<cb facs="#facs_2_region_1552392490853_211" n="17a"/>
+
+				<lb n="1"/>
+				<l n="100" xml:id="U_l_100">
+					<w xml:id="U_w_000660">Guıre</w>
+					<w xml:id="U_w_000661">bıau</w>
+					<w xml:id="U_w_000662">fıʒ</w>
+					<w xml:id="U_w_000663">ꝯnoıſſıeʒ</w>
+					<w xml:id="U_w_000664">v⁹</w>
+					<w xml:id="U_w_000665">ceſtuí</w>
+				</l>
+				<lb n="2"/>
+				<l n="101" xml:id="U_l_101">
+					<w xml:id="U_w_000666">Qͣnt</w>
+					<w xml:id="U_w_000667">ıl</w>
+					<w xml:id="U_w_000668" rend="aggl">le</w>
+					<w xml:id="U_w_000669">vıt</w>
+					<w xml:id="U_w_000670" rend="aggl">a</w>
+					<w xml:id="U_w_000671">poı</w>
+					<w xml:id="U_w_000672">δu</w>
+					<w xml:id="U_w_000673">ſens</w>
+					<w xml:id="U_w_000674" rend="elision">n</w>
+					<w xml:id="U_w_000675">ıſſı</w>
+				</l>
+				<lb n="3"/>
+				<l n="102" xml:id="U_l_102">
+					<w xml:id="U_w_000676">Oıl</w>
+					<w xml:id="U_w_000677">δıſt</w>
+					<w xml:id="U_w_000678">ıl</w>
+					<w xml:id="U_w_000679">q̃</w>
+					<w xml:id="U_w_000680">ce</w>
+					<w xml:id="U_w_000681">eſt</w>
+					<w xml:id="U_w_000682">δo</w>
+					<w xml:id="U_w_000683">vo</w>
+					<w xml:id="U_w_000684">ſıʒ</w>
+				</l>
+				<lb n="4"/>
+				<l n="103" xml:id="U_l_103">
+					<w xml:id="U_w_000685">Qva</w>
+					<w xml:id="U_w_000686">Gırõuıll̃</w>
+					<w xml:id="U_w_000687">fu</w>
+					<w xml:id="U_w_000688">en</w>
+					<w xml:id="U_w_000689">la</w>
+					<w xml:id="U_w_000690">pͥſon</w>
+					<w xml:id="U_w_000691">mıs</w>
+				</l>
+				<lb n="5"/>
+				<l n="104" xml:id="U_l_104">
+					<w xml:id="U_w_000692">fouqͥer</w>
+					<w xml:id="U_w_000693" rend="elision">l</w>
+					<w xml:id="U_w_000694">entent</w>
+					<w xml:id="U_w_000695" rend="aggl">a</w>
+					<w xml:id="U_w_000696">poı</w>
+					<w xml:id="U_w_000697" rend="elision">n</w>
+					<w xml:id="U_w_000698">erage</w>
+					<w xml:id="U_w_000699">vıs</w>
+				</l>
+				<lb n="6"/>
+				<l n="105" xml:id="U_l_105">
+					<w xml:id="U_w_000700">Laſ</w>
+					<w xml:id="U_w_000701">δıſt</w>
+					<w xml:id="U_w_000702">fouqͥer</w>
+					<unclear><w xml:id="U_w_000703">ꝯt</w></unclear>
+					<w xml:id="U_w_000704">δeſeruı</w>
+					<w xml:id="U_w_000705">mõ</w>
+					<w xml:id="U_w_000706">fıʒ</w>
+				</l>
+				<lb n="7"/>
+				<l n="106" xml:id="U_l_106">
+					<w xml:id="U_w_000707"></w>
+					<w xml:id="U_w_000708">.r.</w>
+					<w xml:id="U_w_000709">ſıre</w>
+					<w xml:id="U_w_000710">ꝯ</w>
+					<w xml:id="U_w_000711">v⁹</w>
+					<w xml:id="U_w_000712">fet</w>
+					<w xml:id="U_w_000713">mal</w>
+					<w xml:id="U_w_000714">ſeruír</w>
+				</l>
+				<lb n="8"/>
+				<l n="107" xml:id="U_l_107">
+					<w xml:id="U_w_000715">Vos</w>
+					<w xml:id="U_w_000716">ne</w>
+					<w xml:id="U_w_000717">voſıſtes</w>
+					<w xml:id="U_w_000718">paſ</w>
+					<w xml:id="U_w_000719">rẽδꝛe</w>
+					<w xml:id="U_w_000720">loeís</w>
+				</l>
+				<lb n="9"/>
+				<l n="108" xml:id="U_l_108">
+					<w xml:id="U_w_000721">Poꝛ</w>
+					<w xml:id="U_w_000722">δelıurer</w>
+					<w xml:id="U_w_000723">δoon</w>
+					<w xml:id="U_w_000724">q̃</w>
+					<w xml:id="U_w_000725">ıe</w>
+					<w xml:id="U_w_000726" rend="aggl">voı</w>
+					<w xml:id="U_w_000727">cí</w>
+				</l>
+				<lb n="10"/>
+				<l n="109" xml:id="U_l_109">
+					<w xml:id="U_w_000728">Oꝛ</w>
+					<w xml:id="U_w_000729">ſont</w>
+					<w xml:id="U_w_000730">ıl</w>
+					<w xml:id="U_w_000731">moꝛt</w>
+					<w xml:id="U_w_000732">⁊</w>
+					<w xml:id="U_w_000733">δu</w>
+					<w xml:id="U_w_000734">cıecle</w>
+					<w xml:id="U_w_000735">partı</w>
+				</l>
+				<lb n="11"/>
+				<l n="110" xml:id="U_l_110">
+					<w xml:id="U_w_000736">De</w>
+					<w xml:id="U_w_000737">laıδe</w>
+					<w xml:id="U_w_000738">moꝛt</w>
+					<w xml:id="U_w_000739">ſont</w>
+					<w xml:id="U_w_000740">moꝛt</w>
+					<w xml:id="U_w_000741" rend="aggl">ce</w>
+					<w xml:id="U_w_000742">poıſe</w>
+					<w xml:id="U_w_000743">mı</w>
+				</l>
+				<lb n="12"/>
+				<l n="111" xml:id="U_l_111">
+					<w xml:id="U_w_000744">Oꝛ</w>
+					<w xml:id="U_w_000745">fuſt</w>
+					<w xml:id="U_w_000746">lı</w>
+					<w xml:id="U_w_000747">uns</w>
+					<w xml:id="U_w_000748">⁊</w>
+					<w xml:id="U_w_000749">lı</w>
+					<w xml:id="U_w_000750">autre</w>
+					<w xml:id="U_w_000751">toʒ</w>
+					<w xml:id="U_w_000752">vıs</w>
+				</l>
+				<lb n="13"/>
+				<l n="112" xml:id="U_l_112">
+					<w xml:id="U_w_000753"></w>
+					<w xml:id="U_w_000754">δıſt</w>
+					<w xml:id="U_w_000755">guıre</w>
+					<w xml:id="U_w_000756">noſ</w>
+					<w xml:id="U_w_000757" rend="elision">l</w>
+					<w xml:id="U_w_000758">ẽ</w>
+					<w xml:id="U_w_000759">poꝛterõ</w>
+					<w xml:id="U_w_000760" rend="elision">δ</w>
+					<w xml:id="U_w_000761">ıcı</w>
+				</l>
+				<lb n="14"/>
+				<l n="113" xml:id="U_l_113">
+					<w xml:id="U_w_000762"></w>
+					<w xml:id="U_w_000763">en_foꝛon</w>
+					<w xml:id="U_w_000764">ou</w>
+					<w xml:id="U_w_000765">moſtıer</w>
+					<w xml:id="U_w_000766">.S̃.</w>
+					<w xml:id="U_w_000767">ſeurın</w>
+				</l>
+				<lb n="15"/>
+				<l n="114" xml:id="U_l_114">
+					<w xml:id="U_w_000768">Ce</w>
+					<w xml:id="U_w_000769">δıſt</w>
+					<w xml:id="U_w_000770">foqͥer</w>
+					<w xml:id="U_w_000771">aınʒ</w>
+					<w xml:id="U_w_000772" rend="elision">l</w>
+					<w xml:id="U_w_000773">en_foꝛõ</w>
+					<w xml:id="U_w_000774">ıcı</w>
+				</l>
+				<lb n="16"/>
+				<l n="115" xml:id="U_l_115">
+					<w xml:id="U_w_000775">Leſ</w>
+					<w xml:id="U_w_000776">maneſıer</w>
+					<w xml:id="U_w_000777">⁊</w>
+					<w xml:id="U_w_000778">ıoſte</w>
+					<w xml:id="U_w_000779">loeıs</w>
+				</l>
+				<lb n="17"/>
+				<l n="116" xml:id="U_l_116">
+					<w xml:id="U_w_000780">font</w>
+					<w xml:id="U_w_000781">vne</w>
+					<w xml:id="U_w_000782">foſe</w>
+					<w xml:id="U_w_000783" rend="aggl">ſı</w>
+					<w xml:id="U_w_000784">ont</w>
+					<w xml:id="U_w_000785">enʒ</w>
+					<w xml:id="U_w_000786">δoõ</w>
+					<w xml:id="U_w_000787">mıſ</w>
+				</l>
+				<lb n="18"/>
+				<l n="117" xml:id="U_l_117">
+					<w xml:id="U_w_000788">nꝯtre</w>
+					<w xml:id="U_w_000789">t͛re</w>
+					<w xml:id="U_w_000790">font</w>
+					<w xml:id="U_w_000791">leſ</w>
+					<w xml:id="U_w_000792">foꝛqueſ</w>
+					<w xml:id="U_w_000793">flatír</w>
+				</l>
+				<lb n="19"/>
+				<l n="118" xml:id="U_l_118">
+					<w xml:id="U_w_000794">Ꝺe</w>
+					<w xml:id="U_w_000795">gıronuıll̃</w>
+					<w xml:id="U_w_000796">leſ</w>
+					<w xml:id="U_w_000797">put</w>
+					<w xml:id="U_w_000798" rend="elision">l</w>
+					<w xml:id="U_w_000799">en</w>
+					<w xml:id="U_w_000800">bıen</w>
+					<w xml:id="U_w_000801">veír</w>
+				</l>
+				<lb n="20"/>
+				<l n="119" xml:id="U_l_119">
+					<w xml:id="U_w_000802">Qvant</w>
+					<w xml:id="U_w_000803">oꝛent</w>
+					<w xml:id="U_w_000804">faıt</w>
+					<w xml:id="U_w_000805">ſı</w>
+					<w xml:id="U_w_000806">ſont</w>
+					<w xml:id="U_w_000807">ou</w>
+					<w xml:id="U_w_000808">retoꝛ</w>
+					<w xml:id="U_w_000809">mıs</w>
+				</l>
+				<lb n="21"/>
+				<l n="120" xml:id="U_l_120">
+					<w xml:id="U_w_000810">Ꝺvſqͣ</w>
+					<w xml:id="U_w_000811">boꝛδele</w>
+					<w xml:id="U_w_000812">ne</w>
+					<w xml:id="U_w_000813">pꝛıſtrẽt</w>
+					<w xml:id="U_w_000814">onq̃s</w>
+					<w xml:id="U_w_000815">fín</w>
+				</l>
+				<lb n="22"/>
+				<l n="121" xml:id="U_l_121">
+					<w xml:id="U_w_000816">a</w>
+					<w xml:id="U_w_000817">loꝛ</w>
+					<w xml:id="U_w_000818">oſtex</w>
+					<w xml:id="U_w_000819">ſont</w>
+					<w xml:id="U_w_000820">maıntenant</w>
+					<w xml:id="U_w_000821">v͛tı</w>
+				</l>
+				<lb n="23"/>
+				<l n="122" xml:id="U_l_122">
+					<w xml:id="U_w_000822">La</w>
+					<w xml:id="U_w_000823">δemenerent</w>
+					<w xml:id="U_w_000824">loꝛ</w>
+					<w xml:id="U_w_000825">δoloꝛ</w>
+					<w xml:id="U_w_000826">⁊</w>
+					<w xml:id="U_w_000827">loꝛ</w>
+					<w xml:id="U_w_000828">crı</w>
+				</l>
+				<lb n="24"/>
+				<l n="123" xml:id="U_l_123">
+					<w xml:id="U_w_000829"></w>
+					<w xml:id="U_w_000830">δıſt</w>
+					<w xml:id="U_w_000831">guıreſ</w>
+					<w xml:id="U_w_000832">ſıre</w>
+					<w xml:id="U_w_000833">entenδeʒ</w>
+					<w xml:id="U_w_000834" rend="aggl">a</w>
+					<w xml:id="U_w_000835">mı</w>
+				</l>
+				<lb n="25"/>
+				<l n="124" xml:id="U_l_124">
+					<w xml:id="U_w_000836">Alon</w>
+					<w xml:id="U_w_000837">noſ</w>
+					<w xml:id="U_w_000838">ent</w>
+					<w xml:id="U_w_000839">tot</w>
+					<w xml:id="U_w_000840">δꝛoıt</w>
+					<w xml:id="U_w_000841">au</w>
+					<w xml:id="U_w_000842">pleſſeıs</w>
+				</l>
+				<lb n="26"/>
+				<l n="125" xml:id="U_l_125">
+					<w xml:id="U_w_000843" rend="aggl">Sı</w>
+					<w xml:id="U_w_000844" rend="elision">m</w>
+					<w xml:id="U_w_000845">aıt</w>
+					<w xml:id="U_w_000846">δex</w>
+					<w xml:id="U_w_000847">ne</w>
+					<w xml:id="U_w_000848">uenreſ</w>
+					<w xml:id="U_w_000849">ıameſ</w>
+					<w xml:id="U_w_000850">cí</w>
+				</l>
+				<lb n="27"/>
+				<l n="126" xml:id="U_l_126">
+					<w xml:id="U_w_000851" rend="aggl">Ꝺe</w>
+					<w xml:id="U_w_000852">meſ</w>
+					<w xml:id="U_w_000853">.v.</w>
+					<w xml:id="U_w_000854">frereſ</w>
+					<w xml:id="U_w_000855">ſont</w>
+					<w xml:id="U_w_000856" rend="aggl">ıa</w>
+					<w xml:id="U_w_000857" rend="aggl">lı</w>
+					<w xml:id="U_w_000858">δuí</w>
+					<w xml:id="U_w_000859">ocıs</w>
+				</l>
+				<lb n="28"/>
+				<l n="127" xml:id="U_l_127">
+					<w xml:id="U_w_000860">Se</w>
+					<w xml:id="U_w_000861">noſ</w>
+					<w xml:id="U_w_000862">fuſon</w>
+					<w xml:id="U_w_000863" rend="aggl">en</w>
+					<w xml:id="U_w_000864" rend="aggl">la</w>
+					<w xml:id="U_w_000865">bataılle</w>
+					<w xml:id="U_w_000866">pꝛıs</w>
+				</l>
+				<lb n="29"/>
+				<l n="128" xml:id="U_l_128">
+					<w xml:id="U_w_000867">tout</w>
+					<w xml:id="U_w_000868">autreſı</w>
+					<w xml:id="U_w_000869">noſ</w>
+					<w xml:id="U_w_000870" rend="aggl">ı</w>
+					<w xml:id="U_w_000871">feut</w>
+					<w xml:id="U_w_000872">moꝛír</w>
+				</l>
+				<lb n="30"/>
+				<l n="129" xml:id="U_l_129">
+					<w xml:id="U_w_000873">ꝯme</w>
+					<w xml:id="U_w_000874">ıl</w>
+					<w xml:id="U_w_000875" rend="aggl">a</w>
+					<w xml:id="U_w_000876">fet</w>
+					<w xml:id="U_w_000877">δoon</w>
+					<w xml:id="U_w_000878" rend="aggl">le</w>
+					<w xml:id="U_w_000879">palaſín</w>
+				</l>
+				<lb n="31"/>
+				<l n="130" xml:id="U_l_130">
+					<w xml:id="U_w_000880">I</w>
+				</l>
+				<lb n="32"/>
+				<l n="131" xml:id="U_l_131">
+					<w xml:id="U_w_000881">tel</w>
+					<w xml:id="U_w_000882">ſegnoꝛ</w>
+					<w xml:id="U_w_000883">ne</w>
+					<w xml:id="U_w_000884">faıt</w>
+					<w xml:id="U_w_000885">paſ</w>
+					<w xml:id="U_w_000886">bon</w>
+					<w xml:id="U_w_000887">ſ͛uír</w>
+				</l>
+				<lb n="33"/>
+				<l n="132" xml:id="U_l_132">
+					<w xml:id="U_w_000888">Qͥ</w>
+					<w xml:id="U_w_000889">faıt</w>
+					<w xml:id="U_w_000890">ſeſ</w>
+					<w xml:id="U_w_000891">hõmeſ</w>
+					<w xml:id="U_w_000892">v͛gonδ͛</w>
+					<w xml:id="U_w_000893">⁊</w>
+					<w xml:id="U_w_000894">honír</w>
+				</l>
+				<lb n="34"/>
+				<l n="133" xml:id="U_l_133">
+					<w xml:id="U_w_000895"></w>
+					<w xml:id="U_w_000896">δıſt</w>
+					<w xml:id="U_w_000897">foquıer</w>
+					<w xml:id="U_w_000898">v⁹</w>
+					<w xml:id="U_w_000899">δıteſ</w>
+					<w xml:id="U_w_000900">voír</w>
+					<w xml:id="U_w_000901">amís</w>
+				</l>
+				<lb n="35"/>
+				<l n="134" xml:id="U_l_134">
+					<w xml:id="U_w_000902">A</w>
+					<w xml:id="U_w_000903">.ıııȷ.M.</w>
+					<w xml:id="U_w_000904">ſont</w>
+					<w xml:id="U_w_000905" rend="aggl">δe</w>
+					<w xml:id="U_w_000906">boꝛδıaux</w>
+					<w xml:id="U_w_000907">partíʒ</w>
+				</l>
+				<lb n="36"/>
+				<l n="135" xml:id="U_l_135">
+					<w xml:id="U_w_000908">Ja</w>
+					<w xml:id="U_w_000909" rend="elision">ſ</w>
+					<w xml:id="U_w_000910">en</w>
+					<w xml:id="U_w_000911">alaſſent</w>
+					<w xml:id="U_w_000912">tot</w>
+					<w xml:id="U_w_000913">δꝛoıt</w>
+					<w xml:id="U_w_000914" rend="aggl">au</w>
+					<w xml:id="U_w_000915">pleſſeíʒ</w>
+				</l>
+				<lb n="37"/>
+				<l n="136" xml:id="U_l_136">
+					<w xml:id="U_w_000916">Le</w>
+					<w xml:id="U_w_000917">remanant</w>
+					<w xml:id="U_w_000918">en</w>
+					<w xml:id="U_w_000919">menoıt</w>
+					<w xml:id="U_w_000920" rend="aggl">δe</w>
+					<w xml:id="U_w_000921">ſeſ</w>
+					<w xml:id="U_w_000922">fıʒ</w>
+				</l>
+				<lb n="38"/>
+				<l n="137" xml:id="U_l_137">
+					<w xml:id="U_w_000923">Qͣnt</w>
+					<w xml:id="U_w_000924">.ı.</w>
+					<w xml:id="U_w_000925">meſ</w>
+					<w xml:id="U_w_000926">vıent</w>
+					<w xml:id="U_w_000927" rend="aggl">a</w>
+					<del rend="barré exponctué" status="unremarkable"><w xml:id="U_w_000928">foqͥer</w></del>
+					<add place="above" status="unremarkable"><w xml:id="U_w_000929">.r.</w></add>
+					<w xml:id="U_w_000930" rend="aggl">ſı</w>
+					<w xml:id="U_w_000931" rend="aggl">lı</w>
+					<w xml:id="U_w_000932">δít</w>
+				</l>
+				<lb n="39"/>
+				<l n="138" xml:id="U_l_138">
+					<w xml:id="U_w_000933">Sıre</w>
+					<w xml:id="U_w_000934">fouqͥer</w>
+					<w xml:id="U_w_000935" rend="elision">ſ</w>
+					<w xml:id="U_w_000936">en</w>
+					<w xml:id="U_w_000937">va</w>
+					<w xml:id="U_w_000938" rend="aggl">a</w>
+					<w xml:id="U_w_000939">tot</w>
+					<w xml:id="U_w_000940">ſeſ</w>
+					<w xml:id="U_w_000941">fıʒ</w>
+				</l>
+				<lb n="40"/>
+				<l n="139" xml:id="U_l_139">
+					<w xml:id="U_w_000942">Ne</w>
+					<w xml:id="U_w_000943">fınera</w>
+					<w xml:id="U_w_000944">δeſı</w>
+					<w xml:id="U_w_000945" rend="aggl">au</w>
+					<w xml:id="U_w_000946">pleſſeıs</w>
+				</l>
+				<lb n="41"/>
+				<l n="140" xml:id="U_l_140">
+					<w xml:id="U_w_000947"></w>
+					<w xml:id="U_w_000948" rend="aggl">a</w>
+					<w xml:id="U_w_000949">ıure</w>
+					<w xml:id="U_w_000950">δıeu</w>
+					<w xml:id="U_w_000951">qͥ</w>
+					<w xml:id="U_w_000952" rend="aggl">en</w>
+					<w xml:id="U_w_000953">croıʒ</w>
+					<w xml:id="U_w_000954">fu</w>
+					<w xml:id="U_w_000955">mıſ</w>
+				</l>
+				<lb n="42"/>
+				<l n="141" xml:id="U_l_141">
+					<w xml:id="U_w_000956">Q̃</w>
+					<w xml:id="U_w_000957">maıs</w>
+					<w xml:id="U_w_000958">nul</w>
+					<w xml:id="U_w_000959">ıoꝛ</w>
+					<w xml:id="U_w_000960">ne</w>
+					<w xml:id="U_w_000961">v⁹</w>
+					<w xml:id="U_w_000962">voδꝛa</w>
+					<w xml:id="U_w_000963">ſ͛uír</w>
+				</l>
+				<lb n="43"/>
+				<l n="142" xml:id="U_l_142">
+					<w xml:id="U_w_000964">Qͥ</w>
+					<w xml:id="U_w_000965" rend="aggl">a</w>
+					<unclear><w xml:id="U_w_000966">cen</w></unclear>
+					<w xml:id="U_w_000967">faıt</w>
+					<w xml:id="U_w_000968">bıau</w>
+					<w xml:id="U_w_000969">frere</w>
+					<w xml:id="U_w_000970">q̃r</w>
+					<w xml:id="U_w_000971">me</w>
+					<w xml:id="U_w_000972">δı</w>
+				</l>
+				<lb n="44"/>
+				<l n="143" xml:id="U_l_143">
+					<w xml:id="U_w_000973">Reſpont</w>
+					<w xml:id="U_w_000974">lı</w>
+					<w xml:id="U_w_000975">meſ</w>
+					<w xml:id="U_w_000976">oꝛ</w>
+					<w xml:id="U_w_000977">entenδeſ</w>
+					<w xml:id="U_w_000978">amí</w>
+				</l>
+				<lb n="45"/>
+				<l n="144" xml:id="U_l_144">
+					<w xml:id="U_w_000979">Vos</w>
+					<w xml:id="U_w_000980" rend="elision">l</w>
+					<w xml:id="U_w_000981">en_voıaſtes</w>
+					<w xml:id="U_w_000982">poꝛ</w>
+					<w xml:id="U_w_000983">voſ</w>
+					<w xml:id="U_w_000984">fıʒ</w>
+					<w xml:id="U_w_000985">ẽfoır</w>
+				</l>
+				<lb n="46"/>
+				<l n="145" xml:id="U_l_145">
+					<w xml:id="U_w_000986">Laſus</w>
+					<w xml:id="U_w_000987">ou</w>
+					<w xml:id="U_w_000988">mõt</w>
+					<w xml:id="U_w_000989">qͥ</w>
+					<w xml:id="U_w_000990">eſt</w>
+					<w xml:id="U_w_000991">δeſuſ</w>
+					<w xml:id="U_w_000992">belín</w>
+				</l>
+				<lb n="47"/>
+				<l n="146" xml:id="U_l_146">
+					<w xml:id="U_w_000993">Maıs</w>
+					<w xml:id="U_w_000994">ıl</w>
+					<w xml:id="U_w_000995">eſtoıent</w>
+					<w xml:id="U_w_000996">ml̃t</w>
+					<w xml:id="U_w_000997">treſ</w>
+					<w xml:id="U_w_000998">bıen</w>
+					<w xml:id="U_w_000999">en_foı</w>
+				</l>
+				<lb n="48"/>
+				<l n="147" xml:id="U_l_147">
+					<w xml:id="U_w_001000">Cıl</w>
+					<w xml:id="U_w_001001">quı</w>
+					<w xml:id="U_w_001002">penδoıt</w>
+					<w xml:id="U_w_001003">ce</w>
+					<w xml:id="U_w_001004">eſtoıt</w>
+					<w xml:id="U_w_001005">δo</w>
+					<w xml:id="U_w_001006" rend="aggl">ſon</w>
+					<w xml:id="U_w_001007">fıl</w>
+				</l>
+				<lb n="49"/>
+				<l n="148" xml:id="U_l_148">
+					<w xml:id="U_w_001008">ꝯ</w>
+					<w xml:id="U_w_001009">vos</w>
+					<w xml:id="U_w_001010">vaut</w>
+					<w xml:id="U_w_001011">renδꝛe</w>
+					<w xml:id="U_w_001012">ꝓ</w>
+					<w xml:id="U_w_001013">loeıs</w>
+					<w xml:id="U_w_001014">vo</w>
+					<w xml:id="U_w_001015">fıl</w>
+				</l>
+
+				<cb facs="#facs_2_region_1552392501222_214" n="17b"/>
+				<lb n="1"/>
+				<l n="149" xml:id="U_l_149">
+					<w xml:id="U_w_001016" rend="elision">S</w>
+					<w xml:id="U_w_001017">en</w>
+					<w xml:id="U_w_001018">eſt</w>
+					<w xml:id="U_w_001019">fouquıer</w>
+					<w xml:id="U_w_001020">coꝛocıeʒ</w>
+					<w xml:id="U_w_001021">⁊</w>
+					<w xml:id="U_w_001022">marí</w>
+				</l>
+				<lb n="2"/>
+				<l n="150" xml:id="U_l_150">
+					<w xml:id="U_w_001023">Ꝺex</w>
+					<w xml:id="U_w_001024">δıſt</w>
+					<w xml:id="U_w_001025">r.</w>
+					<w xml:id="U_w_001026">ꝯ</w>
+					<w xml:id="U_w_001027">puıʒ</w>
+					<w xml:id="U_w_001028">eſragıer</w>
+					<w xml:id="U_w_001029">vıs</w>
+				</l>
+				<lb n="3"/>
+				<l n="151" xml:id="U_l_151">
+					<w xml:id="U_w_001030">S̃</w>
+					<w xml:id="U_w_001031">Marıe</w>
+					<w xml:id="U_w_001032">roıne</w>
+					<w xml:id="U_w_001033">genıtrıx</w>
+				</l>
+				<lb n="4"/>
+				<l n="152" xml:id="U_l_152">
+					<w xml:id="U_w_001034">ꝯme</w>
+					<w xml:id="U_w_001035">on</w>
+					<w xml:id="U_w_001036">toꝛmente</w>
+					<w xml:id="U_w_001037">cheſꝯ</w>
+					<w xml:id="U_w_001038">ıoꝛ</w>
+					<w xml:id="U_w_001039" rend="aggl">meſ</w>
+					<w xml:id="U_w_001040">amís</w>
+				</l>
+				<lb n="5"/>
+				<l n="153" xml:id="U_l_153">
+					<w xml:id="U_w_001041">Certeſ</w>
+					<w xml:id="U_w_001042">ceſt</w>
+					<w xml:id="U_w_001043">δꝛoıʒ</w>
+					<w xml:id="U_w_001044" rend="aggl">ſe</w>
+					<w xml:id="U_w_001045">ıl</w>
+					<w xml:id="U_w_001046">en</w>
+					<w xml:id="U_w_001047">eſt</w>
+					<w xml:id="U_w_001048">marıs</w>
+				</l>
+				<lb n="6"/>
+				<l n="154" xml:id="U_l_154">
+					<w xml:id="U_w_001049" rend="elision">C</w>
+					<w xml:id="U_w_001050">eſt</w>
+					<w xml:id="U_w_001051">par</w>
+					<w xml:id="U_w_001052">ma</w>
+					<w xml:id="U_w_001053">coupe</w>
+					<w xml:id="U_w_001054">que</w>
+					<w xml:id="U_w_001055">ſeſ</w>
+					<w xml:id="U_w_001056">fıʒ</w>
+					<w xml:id="U_w_001057">eſt</w>
+					<w xml:id="U_w_001058">ocıſ</w>
+				</l>
+				<lb n="7"/>
+				<l n="155" xml:id="U_l_155">
+					<w xml:id="U_w_001059">Jl</w>
+					<w xml:id="U_w_001060">eſt</w>
+					<w xml:id="U_w_001061">mõteʒ</w>
+					<w xml:id="U_w_001062">ſoꝛ</w>
+					<w xml:id="U_w_001063">.ı.</w>
+					<w xml:id="U_w_001064">cheual</w>
+					<w xml:id="U_w_001065" rend="aggl">δe</w>
+					<w xml:id="U_w_001066">pͥs</w>
+				</l>
+				<lb n="8"/>
+				<l n="156" xml:id="U_l_156">
+					<w xml:id="U_w_001067"></w>
+					<w xml:id="U_w_001068">avec</w>
+					<w xml:id="U_w_001069">luı</w>
+					<w xml:id="U_w_001070">lı</w>
+					<w xml:id="U_w_001071">vaſal</w>
+					<w xml:id="U_w_001072">anſeıs</w>
+				</l>
+				<lb n="9"/>
+				<l n="157" xml:id="U_l_157">
+					<w xml:id="U_w_001073">Ꝺe_ſoꝛ</w>
+					<w xml:id="U_w_001074">boꝛδıaux</w>
+					<w xml:id="U_w_001075" rend="elision">l</w>
+					<w xml:id="U_w_001076">atant</w>
+					<w xml:id="U_w_001077">en</w>
+					<w xml:id="U_w_001078">.ı.</w>
+					<w xml:id="U_w_001079">larís</w>
+				</l>
+				<lb n="10"/>
+				<l n="158" xml:id="U_l_158">
+					<w xml:id="U_w_001080">Devant</w>
+					<w xml:id="U_w_001081">fouquıer</w>
+					<unclear><w xml:id="U_w_001082" rend="aggl">a</w><w xml:id="U_w_001083">genoıllons</w></unclear>
+					<w xml:id="U_w_001084">eſt</w>
+					<w xml:id="U_w_001085">mıs</w>
+				</l>
+				<lb n="11"/>
+				<l n="159" xml:id="U_l_159">
+					<w xml:id="U_w_001086">Sıre</w>
+					<w xml:id="U_w_001087">foquıer</w>
+					<w xml:id="U_w_001088">poꝛ</w>
+					<w xml:id="U_w_001089">amoꝛ</w>
+					<w xml:id="U_w_001090">δıeu</w>
+					<w xml:id="U_w_001091">m͛cı</w>
+				</l>
+				<lb n="12"/>
+				<l n="160" xml:id="U_l_160">
+					<w xml:id="U_w_001092">Teneʒ</w>
+					<w xml:id="U_w_001093" rend="elision">m</w>
+					<w xml:id="U_w_001094">eſpee</w>
+					<w xml:id="U_w_001095" rend="aggl">δe</w>
+					<w xml:id="U_w_001096">moı</w>
+					<w xml:id="U_w_001097">ſoıt</w>
+					<w xml:id="U_w_001098" rend="aggl">le</w>
+					<w xml:id="U_w_001099">chıef</w>
+					<w xml:id="U_w_001100">pꝛıs</w>
+				</l>
+				<lb n="13"/>
+				<l n="161" xml:id="U_l_161">
+					<w xml:id="U_w_001101">Q̃r</w>
+					<w xml:id="U_w_001102">le</w>
+					<w xml:id="U_w_001103">faı</w>
+					<w xml:id="U_w_001104">ſıre</w>
+					<w xml:id="U_w_001105">poꝛ</w>
+					<w xml:id="U_w_001106">amoꝛ</w>
+					<w xml:id="U_w_001107">δıeu</w>
+					<w xml:id="U_w_001108">m͛cı</w>
+				</l>
+				<lb n="14"/>
+				<l n="162" xml:id="U_l_162">
+					<w xml:id="U_w_001109" rend="aggl">Sı</w>
+					<w xml:id="U_w_001110">en</w>
+					<w xml:id="U_w_001111">fera</w>
+					<w xml:id="U_w_001112" rend="aggl">a</w>
+					<w xml:id="U_w_001113">peſ</w>
+					<w xml:id="U_w_001114">tot</w>
+					<w xml:id="U_w_001115">le</w>
+					<w xml:id="U_w_001116">paıs</w>
+				</l>
+				<lb n="15"/>
+				<l n="163" xml:id="U_l_163">
+					<w xml:id="U_w_001117"></w>
+					<w xml:id="U_w_001118">ſı</w>
+					<w xml:id="U_w_001119">ert</w>
+					<w xml:id="U_w_001120">δo</w>
+					<w xml:id="U_w_001121">vengıe</w>
+					<w xml:id="U_w_001122">lı</w>
+					<w xml:id="U_w_001123">voſtre</w>
+					<w xml:id="U_w_001124">fıʒ</w>
+				</l>
+				<lb n="16"/>
+				<l n="164" xml:id="U_l_164">
+					<w xml:id="U_w_001125">Qvı</w>
+					<w xml:id="U_w_001126">par</w>
+					<w xml:id="U_w_001127">ma</w>
+					<w xml:id="U_w_001128">coupe</w>
+					<w xml:id="U_w_001129" rend="aggl">ı</w>
+					<w xml:id="U_w_001130">a</w>
+					<w xml:id="U_w_001131">eſte</w>
+					<w xml:id="U_w_001132">ocıs</w>
+				</l>
+				<lb n="17"/>
+				<l n="165" xml:id="U_l_165">
+					<w xml:id="U_w_001133"></w>
+					<w xml:id="U_w_001134" rend="elision">s</w>
+					<w xml:id="U_w_001135">aı</w>
+					<w xml:id="U_w_001136">encoꝛe</w>
+					<w xml:id="U_w_001137" rend="aggl">δe</w>
+					<w xml:id="U_w_001138">loꝛ</w>
+					<w xml:id="U_w_001139">gent</w>
+					<w xml:id="U_w_001140">.ıııȷ.xx</w>
+				</l>
+				<lb n="18"/>
+				<l n="166" xml:id="U_l_166">
+					<w xml:id="U_w_001141">faıteſ</w>
+					<w xml:id="U_w_001142" rend="aggl">leſ</w>
+					<w xml:id="U_w_001143">toʒ</w>
+					<w xml:id="U_w_001144">δetraıre</w>
+					<w xml:id="U_w_001145" rend="aggl">a</w>
+					<unclear><w xml:id="U_w_001146">bũs</w></unclear>
+					<w xml:id="U_w_001147">rõcıns</w>
+					<note>On pourrait aussi lire 'a vns' (en interprétant le trait comme la
+						poursuite du jambage de la ligne précédente).</note>
+				</l>
+				<lb n="19"/>
+				<l n="167" xml:id="U_l_167">
+					<w xml:id="U_w_001148"></w>
+					<w xml:id="U_w_001149">δıſt</w>
+					<w xml:id="U_w_001150">guıre</w>
+					<w xml:id="U_w_001151">ſıre</w>
+					<w xml:id="U_w_001152">ꝑδoneʒ</w>
+					<w xml:id="U_w_001153">luí</w>
+				</l>
+				<lb n="20"/>
+				<l n="168" xml:id="U_l_168">
+					<w xml:id="U_w_001154">Reſpont</w>
+					<w xml:id="U_w_001155">fouquıer</w>
+					<w xml:id="U_w_001156">volentıers</w>
+					<w xml:id="U_w_001157">bıau</w>
+					<w xml:id="U_w_001158">δouʒ</w>
+					<w xml:id="U_w_001159">fıʒ</w>
+				</l>
+				<lb n="21"/>
+				<l n="169" xml:id="U_l_169">
+					<w xml:id="U_w_001160">No</w>
+					<w xml:id="U_w_001161">ſıreſ</w>
+					<w xml:id="U_w_001162">eſt</w>
+					<w xml:id="U_w_001163">ne</w>
+					<w xml:id="U_w_001164">lı</w>
+					<w xml:id="U_w_001165">δeuõ</w>
+					<w xml:id="U_w_001166">fallır</w>
+				</l>
+				<lb n="22"/>
+				<l n="170" xml:id="U_l_170">
+					<w xml:id="U_w_001167">r.</w>
+					<w xml:id="U_w_001168">δꝛeca</w>
+					<w xml:id="U_w_001169" rend="aggl">ſı</w>
+					<w xml:id="U_w_001170" rend="aggl">le</w>
+					<w xml:id="U_w_001171">beſſa</w>
+					<w xml:id="U_w_001172">ou</w>
+					<w xml:id="U_w_001173">vıs</w>
+				</l>
+				<lb n="23"/>
+				<l n="171" xml:id="U_l_171">
+					<w xml:id="U_w_001174">Treſtoʒ</w>
+					<w xml:id="U_w_001175">retoꝛnet</w>
+					<w xml:id="U_w_001176" rend="aggl">a</w>
+					<w xml:id="U_w_001177">boꝛδele</w>
+					<w xml:id="U_w_001178" rend="aggl">la</w>
+					<w xml:id="U_w_001179">cıt</w>
+				</l>
+				<lb n="24"/>
+				<l n="172" xml:id="U_l_172">
+					<w xml:id="U_w_001180"></w>
+					<w xml:id="U_w_001181">δıſt</w>
+					<w xml:id="U_w_001182">fouquıer</w>
+					<w xml:id="U_w_001183">ſıre</w>
+					<w xml:id="U_w_001184">entenδeʒ</w>
+					<w xml:id="U_w_001185" rend="aggl">a</w>
+					<w xml:id="U_w_001186">mí</w>
+				</l>
+				<lb n="25"/>
+				<l n="173" xml:id="U_l_173">
+					<w xml:id="U_w_001187">vos</w>
+					<w xml:id="U_w_001188">aueʒ</w>
+					<w xml:id="U_w_001189">cı</w>
+					<w xml:id="U_w_001190">ch̃r</w>
+					<w xml:id="U_w_001191">.ıııı.xx.</w>
+				</l>
+				<lb n="26"/>
+				<l n="174" xml:id="U_l_174">
+					<w xml:id="U_w_001192"></w>
+					<w xml:id="U_w_001193">ıl</w>
+					<w xml:id="U_w_001194">en</w>
+					<w xml:id="U_w_001195">tıenet</w>
+					<w xml:id="U_w_001196">bñ</w>
+					<w xml:id="U_w_001197">.cc.</w>
+					<w xml:id="U_w_001198">δeſ</w>
+					<w xml:id="U_w_001199">vos</w>
+					<w xml:id="U_w_001200">pͥs</w>
+				</l>
+				<lb n="27"/>
+				<l n="175" xml:id="U_l_175">
+					<w xml:id="U_w_001201">Se</w>
+					<w xml:id="U_w_001202">tu</w>
+					<w xml:id="U_w_001203">feſoıeʒ</w>
+					<w xml:id="U_w_001204">oꝛe</w>
+					<w xml:id="U_w_001205">leſ</w>
+					<w xml:id="U_w_001206">loꝛ</w>
+					<w xml:id="U_w_001207">moꝛír</w>
+				</l>
+				<lb n="28"/>
+				<l n="176" xml:id="U_l_176">
+					<w xml:id="U_w_001208">Jl</w>
+					<w xml:id="U_w_001209">referoıent</w>
+					<w xml:id="U_w_001210">δeſ</w>
+					<w xml:id="U_w_001211">noſtres</w>
+					<w xml:id="U_w_001212">autreſı</w>
+				</l>
+				<lb n="29"/>
+				<l n="177" xml:id="U_l_177">
+					<w xml:id="U_w_001213">Maıs</w>
+					<w xml:id="U_w_001214" rend="elision">l</w>
+					<w xml:id="U_w_001215">un</w>
+					<w xml:id="U_w_001216">poꝛ</w>
+					<w xml:id="U_w_001217" rend="elision">l</w>
+					<w xml:id="U_w_001218">autre</w>
+					<w xml:id="U_w_001219">ſoıt</w>
+					<w xml:id="U_w_001220">ẽ</w>
+					<w xml:id="U_w_001221">eſchãge</w>
+					<w xml:id="U_w_001222">mıs</w>
+				</l>
+				<lb n="30"/>
+				<l n="178" xml:id="U_l_178">
+					<w xml:id="U_w_001223">Sı</w>
+					<w xml:id="U_w_001224">raueron</w>
+					<w xml:id="U_w_001225">noſ</w>
+					<w xml:id="U_w_001226">ch̃r</w>
+					<w xml:id="U_w_001227" rend="aggl">δe</w>
+					<w xml:id="U_w_001228">pͥs</w>
+				</l>
+				<lb n="31"/>
+				<l n="179" xml:id="U_l_179">
+					<w xml:id="U_w_001229">Qͥ</w>
+					<w xml:id="U_w_001230">la</w>
+					<w xml:id="U_w_001231">languıſſent</w>
+					<w xml:id="U_w_001232" rend="aggl">a</w>
+					<w xml:id="U_w_001233">δoloꝛoʒ</w>
+					<unclear><w xml:id="U_w_001234">mıs</w></unclear>
+				</l>
+				<lb n="32"/>
+				<l n="180" xml:id="U_l_180">
+					<w xml:id="U_w_001235"></w>
+					<w xml:id="U_w_001236" rend="elision">ſ</w>
+					<w xml:id="U_w_001237">ıl</w>
+					<w xml:id="U_w_001238" rend="aggl">ı</w>
+					<w xml:id="U_w_001239">muerent</w>
+					<w xml:id="U_w_001240">tu</w>
+					<w xml:id="U_w_001241">aſ</w>
+					<w xml:id="U_w_001242">noıent</w>
+					<w xml:id="U_w_001243">ꝯqͥs</w>
+				</l>
+				<lb n="33"/>
+				<l n="181" xml:id="U_l_181">
+					<w xml:id="U_w_001244"></w>
+					<w xml:id="U_w_001245">δıſt</w>
+					<w xml:id="U_w_001246">.r.</w>
+					<w xml:id="U_w_001247">par</w>
+					<w xml:id="U_w_001248">ma</w>
+					<w xml:id="U_w_001249">foı</w>
+					<w xml:id="U_w_001250" rend="aggl">ıe</w>
+					<w xml:id="U_w_001251" rend="elision">l</w>
+					<w xml:id="U_w_001252">otrí</w>
+				</l>
+				<lb n="34"/>
+				<l n="182" xml:id="U_l_182">
+					<w xml:id="U_w_001253">Jl</w>
+					<w xml:id="U_w_001254">ı</w>
+					<w xml:id="U_w_001255">enuoıe</w>
+					<w xml:id="U_w_001256" rend="elision">l</w>
+					<w xml:id="U_w_001257">abe</w>
+					<w xml:id="U_w_001258">δe</w>
+					<w xml:id="U_w_001259">ſaınt</w>
+					<w xml:id="U_w_001260">ſeurín</w>
+				</l>
+				<lb n="35"/>
+				<l n="183" xml:id="U_l_183">
+					<w xml:id="U_w_001261">Qͥ</w>
+					<w xml:id="U_w_001262">en</w>
+					<w xml:id="U_w_001263">amaıne</w>
+					<w xml:id="U_w_001264">ch̃r</w>
+					<w xml:id="U_w_001265">.c.</w>
+					<w xml:id="U_w_001266">⁊</w>
+					<w xml:id="U_w_001267">.x.</w>
+				</l>
+				<lb n="36"/>
+				<l n="184" xml:id="U_l_184">
+					<w xml:id="U_w_001268">Ml̃t</w>
+					<w xml:id="U_w_001269">δeſcharneʒ</w>
+					<w xml:id="U_w_001270">δoleroʒ</w>
+					<w xml:id="U_w_001271">⁊</w>
+					<w xml:id="U_w_001272">chaıtís</w>
+				</l>
+				<lb n="37"/>
+				<l n="185" xml:id="U_l_185">
+					<w xml:id="U_w_001273">Gͣnt</w>
+					<w xml:id="U_w_001274">ıoıe</w>
+					<w xml:id="U_w_001275">maıne</w>
+					<w xml:id="U_w_001276">qͥl</w>
+					<w xml:id="U_w_001277">ſont</w>
+					<w xml:id="U_w_001278">eſchapeʒ</w>
+					<w xml:id="U_w_001279">vís</w>
+				</l>
+				<lb n="38"/>
+				<l n="186" xml:id="U_l_186">
+					<w xml:id="U_w_001280">O</w>
+				</l>
+				<lb n="39"/>
+				<l n="187" xml:id="U_l_187">
+					<w xml:id="U_w_001281">ꝛ</w>
+					<w xml:id="U_w_001282">vos</w>
+					<w xml:id="U_w_001283">laıron</w>
+					<w xml:id="U_w_001284">δeh͛naut</w>
+					<w xml:id="U_w_001285">le</w>
+					<w xml:id="U_w_001286">palaſín</w>
+				</l>
+				<lb n="40"/>
+				<l n="188" xml:id="U_l_188">
+					<w xml:id="U_w_001287"></w>
+					<w xml:id="U_w_001288" rend="aggl">δe</w>
+					<w xml:id="U_w_001289">luδıe</w>
+					<w xml:id="U_w_001290" rend="aggl">au</w>
+					<w xml:id="U_w_001291">gent</w>
+					<w xml:id="U_w_001292">coꝛſ</w>
+					<w xml:id="U_w_001293">ſegnoꝛı</w>
+				</l>
+				<lb n="41"/>
+				<l n="189" xml:id="U_l_189">
+					<w xml:id="U_w_001294" rend="aggl">La</w>
+					<w xml:id="U_w_001295">male</w>
+					<w xml:id="U_w_001296">fame</w>
+					<w xml:id="U_w_001297">q̃</w>
+					<w xml:id="U_w_001298">δex</w>
+					<w xml:id="U_w_001299">puıſt</w>
+					<w xml:id="U_w_001300">maleır</w>
+				</l>
+				<lb n="42"/>
+				<l n="190" xml:id="U_l_190">
+					<w xml:id="U_w_001301">Q̃r</w>
+					<w xml:id="U_w_001302">ele</w>
+					<w xml:id="U_w_001303">fıſt</w>
+					<w xml:id="U_w_001304">tant</w>
+					<w xml:id="U_w_001305">q̃</w>
+					<w xml:id="U_w_001306">Gerb̃t</w>
+					<w xml:id="U_w_001307">fu</w>
+					<w xml:id="U_w_001308">ocıſ</w>
+				</l>
+				<lb n="43"/>
+				<l n="191" xml:id="U_l_191">
+					<w xml:id="U_w_001309">Par</w>
+					<w xml:id="U_w_001310">ſeſ</w>
+					<w xml:id="U_w_001311">.ıı.</w>
+					<w xml:id="U_w_001312">fıʒ</w>
+					<w xml:id="U_w_001313" rend="aggl">ſı</w>
+					<w xml:id="U_w_001314">ꝯme</w>
+					<w xml:id="U_w_001315">aueſ</w>
+					<w xml:id="U_w_001316">oı</w>
+				</l>
+				<lb n="44"/>
+				<l n="192" xml:id="U_l_192">
+					<w xml:id="U_w_001317">Cruel</w>
+					<w xml:id="U_w_001318">vẽıance</w>
+					<w xml:id="U_w_001319">fıſt</w>
+					<w xml:id="U_w_001320">.r.</w>
+					<w xml:id="U_w_001321">lı</w>
+					<w xml:id="U_w_001322">gentıl</w>
+				</l>
+				<lb n="45"/>
+				<l n="193" xml:id="U_l_193">
+					<w xml:id="U_w_001323">Ꝺe</w>
+					<w xml:id="U_w_001324">ſes</w>
+					<w xml:id="U_w_001325">.ıı.</w>
+					<w xml:id="U_w_001326">fıʒ</w>
+					<w xml:id="U_w_001327" rend="aggl">ꝯ</w>
+					<w xml:id="U_w_001328" rend="aggl">δe</w>
+					<w xml:id="U_w_001329">ſes</w>
+					<w xml:id="U_w_001330">anemıs</w>
+				</l>
+				<lb n="46"/>
+				<l n="194" xml:id="U_l_194">
+					<w xml:id="U_w_001331">a</w>
+					<w xml:id="U_w_001332">ceſ</w>
+					<w xml:id="U_w_001333">matereſ</w>
+					<w xml:id="U_w_001334">ſarõ</w>
+					<w xml:id="U_w_001335">bıen</w>
+					<w xml:id="U_w_001336">reuenír</w>
+				</l>
+				<lb n="47"/>
+				<l n="195" xml:id="U_l_195">
+					<w xml:id="U_w_001337">Sı</w>
+					<w xml:id="U_w_001338">vos</w>
+					<w xml:id="U_w_001339">δıron</w>
+					<w xml:id="U_w_001340">δu</w>
+					<w xml:id="U_w_001341">meſagıer</w>
+					<w xml:id="U_w_001342">ſeguın</w>
+				</l>
+				<lb n="48"/>
+				<l n="196" xml:id="U_l_196">
+					<w xml:id="U_w_001343">Qͥ</w>
+					<w xml:id="U_w_001344">paſſe</w>
+					<w xml:id="U_w_001345">bleue</w>
+					<w xml:id="U_w_001346">⁊</w>
+					<w xml:id="U_w_001347">treſtot</w>
+					<w xml:id="U_w_001348" rend="aggl">le</w>
+					<w xml:id="U_w_001349">paıs</w>
+				</l>
+				<lb n="49"/>
+				<l n="197" xml:id="U_l_197">
+					<w xml:id="U_w_001350">vıent</w>
+					<w xml:id="U_w_001351" rend="aggl">a</w>
+					<w xml:id="U_w_001352">lımogeſ</w>
+					<w xml:id="U_w_001353">la</w>
+					<w xml:id="U_w_001354" rend="aggl">a</w>
+					<w xml:id="U_w_001355" rend="aggl">ſon</w>
+					<w xml:id="U_w_001356">oſtel</w>
+					<w xml:id="U_w_001357">pꝛıs</w>
+				</l>
+
+				<gap unit="fol" quantity="15" reason="sampling"/>
+				<pb facs="#facs_3" xml:id="Urb.lat.375_0057_fa_0025r_m.jpg" n="25r"/>
+				<cb facs="#facs_3_region_1552406324368_1741" n="25a"/>
+
+				<lb n="1"/>
+				<l n="198" xml:id="U_l_198">
+					<w xml:id="U_w_001358">Lvδıe</w>
+					<w xml:id="U_w_001359">pꝛoıe</w>
+					<w xml:id="U_w_001360">ıhũ</w>
+					<w xml:id="U_w_001361" rend="aggl">δe</w>
+					<w xml:id="U_w_001362">belleem</w>
+				</l>
+				<lb n="2"/>
+				<l n="199" xml:id="U_l_199">
+					<w xml:id="U_w_001363">Qͥ</w>
+					<w xml:id="U_w_001364">δe</w>
+					<w xml:id="U_w_001365">la</w>
+					<w xml:id="U_w_001366">v͛ge</w>
+					<w xml:id="U_w_001367">naſquı</w>
+					<w xml:id="U_w_001368">uraem̃t</w>
+				</l>
+				<lb n="3"/>
+				<l n="200" xml:id="U_l_200">
+					<w xml:id="U_w_001369">Qͥl</w>
+					<w xml:id="U_w_001370">leſ</w>
+					<w xml:id="U_w_001371">δeſfenδe</w>
+					<w xml:id="U_w_001372">δe</w>
+					<w xml:id="U_w_001373">moꝛt</w>
+					<w xml:id="U_w_001374">⁊</w>
+					<w xml:id="U_w_001375" rend="aggl">δe</w>
+					<w xml:id="U_w_001376">toꝛment</w>
+				</l>
+				<lb n="4"/>
+				<l n="201" xml:id="U_l_201">
+					<w xml:id="U_w_001377">a</w>
+					<w xml:id="U_w_001378">ſon</w>
+					<w xml:id="U_w_001379">chaſtel</w>
+					<w xml:id="U_w_001380">leſ</w>
+					<w xml:id="U_w_001381">ramaınt</w>
+					<w xml:id="U_w_001382">ſauuement</w>
+				</l>
+				<lb n="5"/>
+				<l n="202" xml:id="U_l_202">
+					<w xml:id="U_w_001383">Q̃</w>
+					<w xml:id="U_w_001384" rend="elision">n</w>
+					<w xml:id="U_w_001385">í</w>
+					<w xml:id="U_w_001386">aıt</w>
+					<w xml:id="U_w_001387">moꝛt</w>
+					<w xml:id="U_w_001388">ne</w>
+					<w xml:id="U_w_001389">amí</w>
+					<w xml:id="U_w_001390">ne</w>
+					<w xml:id="U_w_001391">ꝑent</w>
+				</l>
+				<lb n="6"/>
+				<l n="203" xml:id="U_l_203">
+					<w xml:id="U_w_001392">Meſ</w>
+					<w xml:id="U_w_001393" rend="aggl">ıe</w>
+					<w xml:id="U_w_001394">cuıt</w>
+					<w xml:id="U_w_001395">bıen</w>
+					<w xml:id="U_w_001396">ꝑ</w>
+					<w xml:id="U_w_001397">δıeu</w>
+					<w xml:id="U_w_001398">q̃</w>
+					<w xml:id="U_w_001399">el</w>
+					<w xml:id="U_w_001400">ment</w>
+				</l>
+				<lb n="7"/>
+				<l n="204" xml:id="U_l_204">
+					<w xml:id="U_w_001401"></w>
+					<w xml:id="U_w_001402">cıl</w>
+					<w xml:id="U_w_001403">en</w>
+					<w xml:id="U_w_001404">vont</w>
+					<w xml:id="U_w_001405">tant</w>
+					<w xml:id="U_w_001406">aceſmeement</w>
+				</l>
+				<lb n="8"/>
+				<l n="205" xml:id="U_l_205">
+					<w xml:id="U_w_001407">ꝯtre</w>
+					<w xml:id="U_w_001408">ſoleıl</w>
+					<w xml:id="U_w_001409">reluıſt</w>
+					<w xml:id="U_w_001410" rend="elision">l</w>
+					<w xml:id="U_w_001411">oꝛ</w>
+					<w xml:id="U_w_001412">⁊</w>
+					<w xml:id="U_w_001413" rend="elision">l</w>
+					<w xml:id="U_w_001414">argent</w>
+				</l>
+				<lb n="9"/>
+				<l n="206" xml:id="U_l_206">
+					<w xml:id="U_w_001415"></w>
+					<w xml:id="U_w_001416">ceſ</w>
+					<w xml:id="U_w_001417">banıereſ</w>
+					<w xml:id="U_w_001418">ventelerent</w>
+					<w xml:id="U_w_001419">au</w>
+					<w xml:id="U_w_001420">uent</w>
+				</l>
+				<lb n="10"/>
+				<l n="207" xml:id="U_l_207">
+					<w xml:id="U_w_001421">Lı</w>
+					<w xml:id="U_w_001422">foꝛt</w>
+					<w xml:id="U_w_001423">cheual</w>
+					<w xml:id="U_w_001424">en</w>
+					<w xml:id="U_w_001425">vont</w>
+					<w xml:id="U_w_001426">p͛mıeremẽt</w>
+				</l>
+				<lb n="11"/>
+				<l n="208" xml:id="U_l_208">
+					<w xml:id="U_w_001427">La</w>
+					<w xml:id="U_w_001428">grant</w>
+					<w xml:id="U_w_001429">pouδꝛıere</w>
+					<w xml:id="U_w_001430">eſt</w>
+					<w xml:id="U_w_001431">mellee</w>
+					<unclear><w xml:id="U_w_001432" rend="aggl">o</w><w xml:id="U_w_001433" rend="aggl">le</w><w xml:id="U_w_001434">vent</w></unclear>
+				</l>
+				<lb n="12"/>
+				<l n="209" xml:id="U_l_209">
+					<w xml:id="U_w_001435" rend="elision">N</w>
+					<w xml:id="U_w_001436">out</w>
+					<w xml:id="U_w_001437">míe</w>
+					<w xml:id="U_w_001438">ale</w>
+					<w xml:id="U_w_001439">.ıı.</w>
+					<w xml:id="U_w_001440">lıeueſ</w>
+					<w xml:id="U_w_001441">ſolement</w>
+				</l>
+				<lb n="13"/>
+				<l n="210" xml:id="U_l_210">
+					<w xml:id="U_w_001442">Qͣnt</w>
+					<unclear><w xml:id="U_w_001443" rend="elision">l</w><w xml:id="U_w_001444">eſꝑcoıt</w></unclear>
+					<w xml:id="U_w_001445">anſeıs</w>
+					<w xml:id="U_w_001446"></w>
+					<w xml:id="U_w_001447" rend="aggl">ſa</w>
+					<w xml:id="U_w_001448">gent</w>
+				</l>
+				<lb n="14"/>
+				<l n="211" xml:id="U_l_211">
+					<w xml:id="U_w_001449">Qͥ</w>
+					<w xml:id="U_w_001450" rend="aggl">a</w>
+					<w xml:id="U_w_001451">boꝛδele</w>
+					<w xml:id="U_w_001452">eſt</w>
+					<w xml:id="U_w_001453">ou</w>
+					<w xml:id="U_w_001454">haut</w>
+					<w xml:id="U_w_001455">manδemẽt</w>
+				</l>
+				<lb n="15"/>
+				<l n="212" xml:id="U_l_212">
+					<w xml:id="U_w_001456">Vınt</w>
+					<w xml:id="U_w_001457">a</w>
+					<w xml:id="U_w_001458">.r.</w>
+					<w xml:id="U_w_001459" rend="aggl">ſı</w>
+					<w xml:id="U_w_001460" rend="aggl">lı</w>
+					<w xml:id="U_w_001461">δıt</w>
+					<w xml:id="U_w_001462">errament</w>
+				</l>
+				<lb n="16"/>
+				<l n="213" xml:id="U_l_213">
+					<w xml:id="U_w_001463">r.</w>
+					<w xml:id="U_w_001464">leſ</w>
+					<w xml:id="U_w_001465">voıt</w>
+					<w xml:id="U_w_001466" rend="aggl">a</w>
+					<w xml:id="U_w_001467">poı</w>
+					<w xml:id="U_w_001468" rend="elision">δ</w>
+					<w xml:id="U_w_001469">ıre</w>
+					<w xml:id="U_w_001470" rend="aggl">ne</w>
+					<w xml:id="U_w_001471">fent</w>
+				</l>
+				<lb n="17"/>
+				<l n="214" xml:id="U_l_214">
+					<w xml:id="U_w_001472">Certeſ</w>
+					<w xml:id="U_w_001473">δıſt</w>
+					<w xml:id="U_w_001474">ıl</w>
+					<w xml:id="U_w_001475">ne</w>
+					<w xml:id="U_w_001476">noſ</w>
+					<w xml:id="U_w_001477">pꝛıſen</w>
+					<w xml:id="U_w_001478">noıent</w>
+				</l>
+				<lb n="18"/>
+				<l n="215" xml:id="U_l_215">
+					<w xml:id="U_w_001479">Ꝺıſt</w>
+					<w xml:id="U_w_001480">anſeıſ</w>
+					<w xml:id="U_w_001481">ſire</w>
+					<w xml:id="U_w_001482" rend="elision">qu</w>
+					<w xml:id="U_w_001483">ıl</w>
+					<w xml:id="U_w_001484">ont</w>
+					<w xml:id="U_w_001485">gͣnt</w>
+					<w xml:id="U_w_001486">gent</w>
+				</l>
+				<lb n="19"/>
+				<l n="216" xml:id="U_l_216">
+					<w xml:id="U_w_001487">v⁹</w>
+					<w xml:id="U_w_001488">δıteſ</w>
+					<w xml:id="U_w_001489">voır</w>
+					<w xml:id="U_w_001490">δıſt</w>
+					<w xml:id="U_w_001491">ıl</w>
+					<w xml:id="U_w_001492">par</w>
+					<w xml:id="U_w_001493">.S̃.</w>
+					<w xml:id="U_w_001494">vıncent</w>
+				</l>
+				<lb n="20"/>
+				<l n="217" xml:id="U_l_217">
+					<w xml:id="U_w_001495">nos</w>
+					<w xml:id="U_w_001496">en</w>
+					<w xml:id="U_w_001497">ıſtron</w>
+					<w xml:id="U_w_001498">enꝯtre</w>
+					<w xml:id="U_w_001499">leſ</w>
+					<w xml:id="U_w_001500" rend="aggl">loꝛ</w>
+					<w xml:id="U_w_001501">gent</w>
+				</l>
+				<lb n="21"/>
+				<l n="218" xml:id="U_l_218">
+					<w xml:id="U_w_001502">Ꝺeuant</w>
+					<w xml:id="U_w_001503">noſ</w>
+					<w xml:id="U_w_001504">lıceſ</w>
+					<w xml:id="U_w_001505">noſ</w>
+					<unclear><w xml:id="U_w_001506">regon</w></unclear>
+					<w xml:id="U_w_001507">ſagem̃t</w>
+				</l>
+				<lb n="22"/>
+				<l n="219" xml:id="U_l_219">
+					<w xml:id="U_w_001508" rend="elision">S</w>
+					<w xml:id="U_w_001509">alon</w>
+					<w xml:id="U_w_001510">enſemble</w>
+					<w xml:id="U_w_001511">ſı</w>
+					<w xml:id="U_w_001512">oꝛδeneem̃t</w>
+				</l>
+				<lb n="23"/>
+				<l n="220" xml:id="U_l_220">
+					<w xml:id="U_w_001513">Se</w>
+					<w xml:id="U_w_001514">ıl</w>
+					<w xml:id="U_w_001515">venoıent</w>
+					<w xml:id="U_w_001516" rend="elision">δ</w>
+					<w xml:id="U_w_001517">eſpoír</w>
+					<w xml:id="U_w_001518" rend="aggl">⁊</w>
+					<w xml:id="U_w_001519">liem̃t</w>
+				</l>
+				<lb n="24"/>
+				<l n="221" xml:id="U_l_221">
+					<w xml:id="U_w_001520">Demenõ</w>
+					<w xml:id="U_w_001521">noſ</w>
+					<w xml:id="U_w_001522">oꝛe</w>
+					<w xml:id="U_w_001523">ſı</w>
+					<w xml:id="U_w_001524">ſagem̃t</w>
+				</l>
+				<lb n="25"/>
+				<l n="222" xml:id="U_l_222">
+					<w xml:id="U_w_001525">par</w>
+					<w xml:id="U_w_001526">nos</w>
+					<w xml:id="U_w_001527">meffes</w>
+					<w xml:id="U_w_001528" rend="elision">n</w>
+					<w xml:id="U_w_001529" rend="aggl">ı</w>
+					<w xml:id="U_w_001530">ꝑδereſ</w>
+					<w xml:id="U_w_001531">noıent</w>
+				</l>
+				<lb n="26"/>
+				<l n="223" xml:id="U_l_223">
+					<w xml:id="U_w_001532">Ꝺıſt</w>
+					<w xml:id="U_w_001533">anſeıs</w>
+					<w xml:id="U_w_001534">δehaıt</w>
+					<w xml:id="U_w_001535" rend="aggl">quı</w>
+					<w xml:id="U_w_001536">le</w>
+					<w xml:id="U_w_001537">δeffent</w>
+				</l>
+				<lb n="27"/>
+				<l n="224" xml:id="U_l_224">
+					<w xml:id="U_w_001538">Oꝛ</w>
+					<w xml:id="U_w_001539" rend="aggl">ı</w>
+					<w xml:id="U_w_001540">para</w>
+					<w xml:id="U_w_001541">qͥ</w>
+					<w xml:id="U_w_001542">aura</w>
+					<w xml:id="U_w_001543">harδement</w>
+				</l>
+				<lb n="28"/>
+				<l n="225" xml:id="U_l_225">
+					<w xml:id="U_w_001544">Meſ</w>
+					<w xml:id="U_w_001545">oꝛ</w>
+					<w xml:id="U_w_001546">ſoneſ</w>
+					<w xml:id="U_w_001547">cel</w>
+					<w xml:id="U_w_001548">coꝛ</w>
+					<w xml:id="U_w_001549">ſeurement</w>
+				</l>
+				<lb n="29"/>
+				<l n="226" xml:id="U_l_226">
+					<w xml:id="U_w_001550">Jl</w>
+					<w xml:id="U_w_001551">pꝛıſt</w>
+					<w xml:id="U_w_001552">le</w>
+					<w xml:id="U_w_001553">coꝛ</w>
+					<w xml:id="U_w_001554">ſel</w>
+					<w xml:id="U_w_001555">ſona</w>
+					<w xml:id="U_w_001556">hautem̃t</w>
+				</l>
+				<lb n="30"/>
+				<l n="227" xml:id="U_l_227">
+					<w xml:id="U_w_001557" rend="elision">Qv</w>
+					<w xml:id="U_w_001558">aual</w>
+					<w xml:id="U_w_001559">boꝛδele</w>
+					<w xml:id="U_w_001560" rend="elision">l</w>
+					<w xml:id="U_w_001561">ent</w>
+					<w xml:id="U_w_001562">oı</w>
+					<w xml:id="U_w_001563">hautement</w>
+				</l>
+				<lb n="31"/>
+				<l n="228" xml:id="U_l_228">
+					<w xml:id="U_w_001564">aſ</w>
+					<w xml:id="U_w_001565">armeſ</w>
+					<w xml:id="U_w_001566">coꝛent</w>
+					<w xml:id="U_w_001567">coꝛocıe</w>
+					<w xml:id="U_w_001568"></w>
+					<w xml:id="U_w_001569">δolent</w>
+				</l>
+				<lb n="32"/>
+				<l n="229" xml:id="U_l_229">
+					<w xml:id="U_w_001570">ncoꝛ</w>
+					<w xml:id="U_w_001571" rend="aggl">a</w>
+					<w xml:id="U_w_001572">tel</w>
+					<w xml:id="U_w_001573">quı</w>
+					<w xml:id="U_w_001574">ſe</w>
+					<w xml:id="U_w_001575">δeut</w>
+					<w xml:id="U_w_001576">δurem̃t</w>
+				</l>
+				<lb n="33"/>
+				<l n="230" xml:id="U_l_230">
+					<w xml:id="U_w_001577">Ꝺeſ</w>
+					<w xml:id="U_w_001578">cop</w>
+					<w xml:id="U_w_001579">qͥl</w>
+					<w xml:id="U_w_001580">pꝛıſt</w>
+					<w xml:id="U_w_001581" rend="aggl">au</w>
+					<w xml:id="U_w_001582">gͣnt</w>
+					<w xml:id="U_w_001583">toꝛnoıem̃t</w>
+				</l>
+				<lb n="34"/>
+				<l n="231" xml:id="U_l_231">
+					<w xml:id="U_w_001584">Qͥ</w>
+					<w xml:id="U_w_001585">a</w>
+					<w xml:id="U_w_001586">hauberc</w>
+					<w xml:id="U_w_001587">mout</w>
+					<w xml:id="U_w_001588">volentıers</w>
+					<w xml:id="U_w_001589" rend="aggl">le</w>
+					<w xml:id="U_w_001590">pꝛẽt</w>
+				</l>
+				<lb n="35"/>
+				<l n="232" xml:id="U_l_232">
+					<w xml:id="U_w_001591">Ꝺıſt</w>
+					<w xml:id="U_w_001592">anſeıs</w>
+					<w xml:id="U_w_001593">haſteſ</w>
+					<w xml:id="U_w_001594">vos</w>
+					<w xml:id="U_w_001595">bone</w>
+					<w xml:id="U_w_001596">gent</w>
+				</l>
+				<lb n="36"/>
+				<l n="233" xml:id="U_l_233">
+					<w xml:id="U_w_001597">Qͣnt</w>
+					<w xml:id="U_w_001598">nos</w>
+					<w xml:id="U_w_001599">venδꝛon</w>
+					<w xml:id="U_w_001600">enſenble</w>
+					<w xml:id="U_w_001601">au</w>
+					<w xml:id="U_w_001602">caplem̃t</w>
+				</l>
+				<lb n="37"/>
+				<l n="234" xml:id="U_l_234">
+					<w xml:id="U_w_001603">Mauδıt</w>
+					<w xml:id="U_w_001604">ſoıt</w>
+					<w xml:id="U_w_001605">cıl</w>
+					<w xml:id="U_w_001606">qͥ</w>
+					<w xml:id="U_w_001607">bñ</w>
+					<w xml:id="U_w_001608">ch̃r</w>
+					<w xml:id="U_w_001609" rend="aggl">ne</w>
+					<w xml:id="U_w_001610">ſe</w>
+					<w xml:id="U_w_001611">vent</w>
+				</l>
+				<lb n="38"/>
+				<l n="235" xml:id="U_l_235">
+					<w xml:id="U_w_001612"></w>
+					<w xml:id="U_w_001613">ıl</w>
+					<w xml:id="U_w_001614">reſponδent</w>
+					<w xml:id="U_w_001615">aleſ</w>
+					<w xml:id="U_w_001616">ſeurement</w>
+				</l>
+				<lb n="39"/>
+				<l n="236" xml:id="U_l_236">
+					<w xml:id="U_w_001617">Q̃</w>
+					<w xml:id="U_w_001618">par</w>
+					<w xml:id="U_w_001619">cel</w>
+					<w xml:id="U_w_001620">δıeu</w>
+					<w xml:id="U_w_001621">qͥ</w>
+					<w xml:id="U_w_001622">fıſt</w>
+					<w xml:id="U_w_001623">le</w>
+					<w xml:id="U_w_001624">fıermament</w>
+				</l>
+				<lb n="40"/>
+				<l n="237" xml:id="U_l_237">
+					<w xml:id="U_w_001625">Q̃</w>
+					<w xml:id="U_w_001626">par</w>
+					<w xml:id="U_w_001627">noſ</w>
+					<w xml:id="U_w_001628">coupeſ</w>
+					<w xml:id="U_w_001629" rend="aggl">ne</w>
+					<w xml:id="U_w_001630">ꝑδereſ</w>
+					<w xml:id="U_w_001631">noıent</w>
+				</l>
+				<lb n="41"/>
+				<l n="238" xml:id="U_l_238">
+					<w xml:id="U_w_001632">G</w>
+				</l>
+				<lb n="42"/>
+				<l n="239" xml:id="U_l_239">
+					<w xml:id="U_w_001633">vıreſ</w>
+					<w xml:id="U_w_001634">ſen</w>
+					<w xml:id="U_w_001635">ıſt</w>
+					<w xml:id="U_w_001636">treſtot</w>
+					<w xml:id="U_w_001637">pꝛemıerement</w>
+				</l>
+				<lb n="43"/>
+				<l n="240" xml:id="U_l_240">
+					<w xml:id="U_w_001638" rend="elision">L</w>
+					<w xml:id="U_w_001639">en_ſeıgne</w>
+					<w xml:id="U_w_001640">poꝛte</w>
+					<w xml:id="U_w_001641" rend="aggl">ſı</w>
+					<w xml:id="U_w_001642">la</w>
+					<w xml:id="U_w_001643">δeſploıe</w>
+					<w xml:id="U_w_001644" rend="aggl">au</w>
+					<w xml:id="U_w_001645">uent</w>
+				</l>
+				<lb n="44"/>
+				<l n="241" xml:id="U_l_241">
+					<w xml:id="U_w_001646">Joſte</w>
+					<w xml:id="U_w_001647">leſ</w>
+					<w xml:id="U_w_001648">lıces</w>
+					<w xml:id="U_w_001649" rend="elision">ſ</w>
+					<w xml:id="U_w_001650">areſtent</w>
+					<w xml:id="U_w_001651">maıntenant</w>
+				</l>
+				<lb n="45"/>
+				<l n="242" xml:id="U_l_242">
+					<w xml:id="U_w_001652">Leſ</w>
+					<w xml:id="U_w_001653">lanceſ</w>
+					<w xml:id="U_w_001654">δꝛoıteſ</w>
+					<w xml:id="U_w_001655">⁊</w>
+					<w xml:id="U_w_001656">ſı</w>
+					<w xml:id="U_w_001657">eſpeſſemẽt</w>
+				</l>
+				<lb n="46"/>
+				<l n="243" xml:id="U_l_243">
+					<w xml:id="U_w_001658">Q̃l</w>
+					<w xml:id="U_w_001659" rend="elision">n</w>
+					<w xml:id="U_w_001660">eſt</w>
+					<w xml:id="U_w_001661">nuſ</w>
+					<w xml:id="U_w_001662">hõ</w>
+					<w xml:id="U_w_001663">quı</w>
+					<w xml:id="U_w_001664">loꝛ</w>
+					<w xml:id="U_w_001665">feıſt</w>
+					<w xml:id="U_w_001666">noıent</w>
+				</l>
+				<lb n="47"/>
+				<l n="244" xml:id="U_l_244">
+					<w xml:id="U_w_001667">Q̃</w>
+					<w xml:id="U_w_001668">nel</w>
+					<w xml:id="U_w_001669">ꝯparaſt</w>
+					<w xml:id="U_w_001670" rend="aggl">a</w>
+					<w xml:id="U_w_001671">δouble</w>
+					<w xml:id="U_w_001672">chıerement</w>
+				</l>
+				<lb n="48"/>
+				<l n="245" xml:id="U_l_245">
+					<w xml:id="U_w_001673">ʒ</w>
+					<w xml:id="U_w_001674">vos</w>
+					<w xml:id="U_w_001675">b͛aut</w>
+					<w xml:id="U_w_001676">ſoꝛ</w>
+					<w xml:id="U_w_001677">le</w>
+					<w xml:id="U_w_001678">cheual</w>
+					<w xml:id="U_w_001679">coꝛãt</w>
+				</l>
+
+
+				<cb facs="#facs_3_region_1552406343610_1744" n="25b"/>
+
+				<lb n="1"/>
+				<l n="246" xml:id="U_l_246">
+					<w xml:id="U_w_001680">Jl</w>
+					<w xml:id="U_w_001681" rend="elision">n</w>
+					<w xml:id="U_w_001682">a</w>
+					<w xml:id="U_w_001683" rend="aggl">ſı</w>
+					<w xml:id="U_w_001684">bon</w>
+					<w xml:id="U_w_001685">δeſoʒ</w>
+					<w xml:id="U_w_001686" rend="aggl">le</w>
+					<w xml:id="U_w_001687">fıermament</w>
+				</l>
+				<lb n="2"/>
+				<l n="247" xml:id="U_l_247">
+					<w xml:id="U_w_001688">δeuant</w>
+					<w xml:id="U_w_001689">leſ</w>
+					<w xml:id="U_w_001690">autreſ</w>
+					<w xml:id="U_w_001691">pl⁹</w>
+					<w xml:id="U_w_001692">que</w>
+					<w xml:id="U_w_001693">arc</w>
+					<w xml:id="U_w_001694" rend="aggl">ne</w>
+					<w xml:id="U_w_001695">δeſtẽt</w>
+				</l>
+				<lb n="3"/>
+				<l n="248" xml:id="U_l_248">
+					<w xml:id="U_w_001696">La</w>
+					<w xml:id="U_w_001697">lance</w>
+					<w xml:id="U_w_001698">ou</w>
+					<w xml:id="U_w_001699">poıg</w>
+					<w xml:id="U_w_001700">ou</w>
+					<w xml:id="U_w_001701">.ı.</w>
+					<w xml:id="U_w_001702">mace</w>
+					<w xml:id="U_w_001703">pent</w>
+				</l>
+				<lb n="4"/>
+				<l n="249" xml:id="U_l_249">
+					<w xml:id="U_w_001704">Qͥ</w>
+					<w xml:id="U_w_001705">fu</w>
+					<w xml:id="U_w_001706">floꝛete</w>
+					<w xml:id="U_w_001707" rend="aggl">la</w>
+					<w xml:id="U_w_001708">pucele</w>
+					<w xml:id="U_w_001709" rend="aggl">au</w>
+					<w xml:id="U_w_001710">cos</w>
+					<w xml:id="U_w_001711">gent</w>
+				</l>
+				<lb n="5"/>
+				<l n="250" xml:id="U_l_250">
+					<w xml:id="U_w_001712">fılle</w>
+					<w xml:id="U_w_001713">mıllon</w>
+					<w xml:id="U_w_001714">le</w>
+					<w xml:id="U_w_001715">δuc</w>
+					<w xml:id="U_w_001716">δe</w>
+					<unclear><w xml:id="U_w_001717">bouınent</w></unclear>
+				</l>
+				<lb n="6"/>
+				<l n="251" xml:id="U_l_251">
+					<w xml:id="U_w_001718">Qͥ</w>
+					<w xml:id="U_w_001719">ert</w>
+					<w xml:id="U_w_001720" rend="elision">ſ</w>
+					<w xml:id="U_w_001721">amıe</w>
+					<w xml:id="U_w_001722" rend="elision">l</w>
+					<w xml:id="U_w_001723">amoít</w>
+					<w xml:id="U_w_001724">δurem̃t</w>
+				</l>
+				<lb n="7"/>
+				<l n="252" xml:id="U_l_252">
+					<w xml:id="U_w_001725">Sı</w>
+					<w xml:id="U_w_001726">ꝯpaıgnõ</w>
+					<w xml:id="U_w_001727" rend="aggl">le</w>
+					<w xml:id="U_w_001728">ſıeuet</w>
+					<w xml:id="U_w_001729">errãment</w>
+				</l>
+				<lb n="8"/>
+				<l n="253" xml:id="U_l_253">
+					<w xml:id="U_w_001730">Bıen</w>
+					<w xml:id="U_w_001731">ſont</w>
+					<w xml:id="U_w_001732">.ıııȷ.</w>
+					<w xml:id="U_w_001733">mıle</w>
+					<w xml:id="U_w_001734" rend="aggl">par</w>
+					<w xml:id="U_w_001735">δeuant</w>
+					<w xml:id="U_w_001736">.ı.</w>
+					<w xml:id="U_w_001737">renc</w>
+				</l>
+				<lb n="9"/>
+				<l n="254" xml:id="U_l_254">
+					<w xml:id="U_w_001738">Toʒ</w>
+					<w xml:id="U_w_001739">leſ</w>
+					<w xml:id="U_w_001740">melloꝛs</w>
+					<w xml:id="U_w_001741"></w>
+					<w xml:id="U_w_001742">par</w>
+					<unclear><w xml:id="U_w_001743">ellıſement</w></unclear>
+				</l>
+				<lb n="10"/>
+				<l n="255" xml:id="U_l_255">
+					<w xml:id="U_w_001744">Jl</w>
+					<w xml:id="U_w_001745" rend="elision">n</w>
+					<w xml:id="U_w_001746">ont</w>
+					<w xml:id="U_w_001747">cheual</w>
+					<w xml:id="U_w_001748" rend="aggl">ne</w>
+					<w xml:id="U_w_001749">ſoıt</w>
+					<w xml:id="U_w_001750">foꝛt</w>
+					<w xml:id="U_w_001751">δurem̃t</w>
+				</l>
+				<lb n="11"/>
+				<l n="256" xml:id="U_l_256">
+					<w xml:id="U_w_001752"></w>
+					<w xml:id="U_w_001753">poꝛ</w>
+					<w xml:id="U_w_001754">δeronpꝛe</w>
+					<w xml:id="U_w_001755">le</w>
+					<w xml:id="U_w_001756">feſ</w>
+					<w xml:id="U_w_001757">pꝛemıerem̃t</w>
+				</l>
+				<lb n="12"/>
+				<l n="257" xml:id="U_l_257">
+					<w xml:id="U_w_001758">Ꝺıſt</w>
+					<w xml:id="U_w_001759">anſeıs</w>
+					<w xml:id="U_w_001760">veſ</w>
+					<w xml:id="U_w_001761">ıcı</w>
+					<w xml:id="U_w_001762">bele</w>
+					<w xml:id="U_w_001763">gent</w>
+				</l>
+				<lb n="13"/>
+				<l n="258" xml:id="U_l_258">
+					<w xml:id="U_w_001764"></w>
+					<w xml:id="U_w_001765">δıſt</w>
+					<w xml:id="U_w_001766">..</w>
+					<w xml:id="U_w_001767">bel</w>
+					<w xml:id="U_w_001768">ſont</w>
+					<w xml:id="U_w_001769">ıl</w>
+					<w xml:id="U_w_001770">voırement</w>
+				</l>
+				<lb n="14"/>
+				<l n="259" xml:id="U_l_259">
+					<w xml:id="U_w_001771">Sı</w>
+					<w xml:id="U_w_001772" rend="elision">m</w>
+					<w xml:id="U_w_001773">aıt</w>
+					<w xml:id="U_w_001774">δex</w>
+					<w xml:id="U_w_001775">ne</w>
+					<w xml:id="U_w_001776">me</w>
+					<w xml:id="U_w_001777">m͛uel</w>
+					<w xml:id="U_w_001778">noıent</w>
+				</l>
+				<lb n="15"/>
+				<l n="260" xml:id="U_l_260">
+					<w xml:id="U_w_001779">Ov</w>
+					<w xml:id="U_w_001780">cıſt</w>
+					<w xml:id="U_w_001781">aſemblent</w>
+					<w xml:id="U_w_001782">tant</w>
+					<w xml:id="U_w_001783" rend="aggl">í</w>
+					<w xml:id="U_w_001784">a</w>
+					<w xml:id="U_w_001785">ıl</w>
+					<w xml:id="U_w_001786">gͣnt</w>
+					<w xml:id="U_w_001787">gent</w>
+				</l>
+				<lb n="16"/>
+				<l n="261" xml:id="U_l_261">
+					<w xml:id="U_w_001788">S</w>
+				</l>
+				<lb n="17"/>
+				<l n="262" xml:id="U_l_262">
+					<w xml:id="U_w_001789" rend="aggl">ı</w>
+					<w xml:id="U_w_001790" rend="aggl">ꝯ</w>
+					<w xml:id="U_w_001791">b͛aut</w>
+					<w xml:id="U_w_001792">vınt</w>
+					<w xml:id="U_w_001793">poıgnãt</w>
+					<w xml:id="U_w_001794" rend="aggl">la</w>
+					<w xml:id="U_w_001795">pꝛaele</w>
+				</l>
+				<lb n="18"/>
+				<l n="263" xml:id="U_l_263">
+					<w xml:id="U_w_001796">La</w>
+					<w xml:id="U_w_001797">lance</w>
+					<w xml:id="U_w_001798">ou</w>
+					<w xml:id="U_w_001799">poıg</w>
+					<w xml:id="U_w_001800" rend="aggl">ou</w>
+					<w xml:id="U_w_001801" rend="aggl">la</w>
+					<w xml:id="U_w_001802">mance</w>
+					<w xml:id="U_w_001803">ventele</w>
+				</l>
+				<lb n="19"/>
+				<l n="264" xml:id="U_l_264">
+					<w xml:id="U_w_001804">Qͤ</w>
+					<w xml:id="U_w_001805">lı</w>
+					<w xml:id="U_w_001806">δona</w>
+					<w xml:id="U_w_001807">floꝛete</w>
+					<w xml:id="U_w_001808" rend="aggl">la</w>
+					<w xml:id="U_w_001809">pucele</w>
+				</l>
+				<lb n="20"/>
+				<l n="265" xml:id="U_l_265">
+					<w xml:id="U_w_001810">Soꝛ</w>
+					<w xml:id="U_w_001811">le</w>
+					<w xml:id="U_w_001812">δeſtͥer</w>
+					<w xml:id="U_w_001813">coꝛeoꝛ</w>
+					<w xml:id="U_w_001814">δe</w>
+					<w xml:id="U_w_001815">caſtele</w>
+				</l>
+				<lb n="21"/>
+				<l n="266" xml:id="U_l_266">
+					<w xml:id="U_w_001816">Qͣnt</w>
+					<w xml:id="U_w_001817">ſe</w>
+					<w xml:id="U_w_001818">regarδe</w>
+					<w xml:id="U_w_001819">tot</w>
+					<w xml:id="U_w_001820" rend="aggl">lı</w>
+					<w xml:id="U_w_001821">cuer</w>
+					<w xml:id="U_w_001822" rend="aggl">lı</w>
+					<w xml:id="U_w_001823">ſautele</w>
+				</l>
+				<lb n="22"/>
+				<l n="267" xml:id="U_l_267">
+					<w xml:id="U_w_001824">Jl</w>
+					<w xml:id="U_w_001825">voıt</w>
+					<w xml:id="U_w_001826">ernaut</w>
+					<w xml:id="U_w_001827" rend="aggl">le</w>
+					<w xml:id="U_w_001828">cuer</w>
+					<w xml:id="U_w_001829" rend="aggl">lı</w>
+					<w xml:id="U_w_001830">renouele</w>
+				</l>
+				<lb n="23"/>
+				<l n="268" xml:id="U_l_268">
+					<w xml:id="U_w_001831">Qͥ</w>
+					<w xml:id="U_w_001832">ne</w>
+					<w xml:id="U_w_001833">voloıt</w>
+					<w xml:id="U_w_001834">eſloıgnıer</w>
+					<w xml:id="U_w_001835" rend="aggl">δe</w>
+					<w xml:id="U_w_001836">boꝛδele</w>
+				</l>
+				<lb n="24"/>
+				<l n="269" xml:id="U_l_269">
+					<w xml:id="U_w_001837">a</w>
+					<w xml:id="U_w_001838">ıı.</w>
+					<unclear><w xml:id="U_w_001839">tretıeſ</w></unclear>
+					<w xml:id="U_w_001840">loıg</w>
+					<w xml:id="U_w_001841">δe</w>
+					<w xml:id="U_w_001842" rend="aggl">ſa</w>
+					<w xml:id="U_w_001843">gent</w>
+					<w xml:id="U_w_001844" rend="elision">ſ</w>
+					<w xml:id="U_w_001845">areſte</w>
+				</l>
+				<lb n="25"/>
+				<l n="270" xml:id="U_l_270">
+					<w xml:id="U_w_001846">Poꝛ</w>
+					<w xml:id="U_w_001847">δemãδer</w>
+					<w xml:id="U_w_001848">ſauoír</w>
+					<w xml:id="U_w_001849" rend="elision">qu</w>
+					<w xml:id="U_w_001850">ıl</w>
+					<w xml:id="U_w_001851">poꝛoıt</w>
+					<w xml:id="U_w_001852">fere</w>
+				</l>
+				<lb n="26"/>
+				<l n="271" xml:id="U_l_271">
+					<w xml:id="U_w_001853" rend="elision">S</w>
+					<w xml:id="U_w_001854">ıl</w>
+					<w xml:id="U_w_001855">leſ</w>
+					<w xml:id="U_w_001856">ıront</w>
+					<w xml:id="U_w_001857">en_vaír</w>
+					<w xml:id="U_w_001858">ne</w>
+					<w xml:id="U_w_001859">requere</w>
+				</l>
+				<lb n="27"/>
+				<l n="272" xml:id="U_l_272">
+					<w xml:id="U_w_001860">tant</w>
+					<w xml:id="U_w_001861">ꝯme</w>
+					<w xml:id="U_w_001862">ıl</w>
+					<w xml:id="U_w_001863">ſoıent</w>
+					<w xml:id="U_w_001864">ſı</w>
+					<w xml:id="U_w_001865">pꝛeſ</w>
+					<w xml:id="U_w_001866" rend="aggl">δe</w>
+					<w xml:id="U_w_001867" rend="aggl">loꝛ</w>
+					<w xml:id="U_w_001868">repere</w>
+				</l>
+				<lb n="28"/>
+				<l n="273" xml:id="U_l_273">
+					<w xml:id="U_w_001869">ʒ</w>
+					<w xml:id="U_w_001870">vos</w>
+					<w xml:id="U_w_001871">guıon</w>
+					<w xml:id="U_w_001872">quı</w>
+					<w xml:id="U_w_001873">leſ</w>
+					<w xml:id="U_w_001874">autreſ</w>
+					<w xml:id="U_w_001875">chaele</w>
+				</l>
+				<lb n="29"/>
+				<l n="274" xml:id="U_l_274">
+					<w xml:id="U_w_001876">Manδe</w>
+					<w xml:id="U_w_001877">foqͥer</w>
+					<w xml:id="U_w_001878">δeuant</w>
+					<w xml:id="U_w_001879">q̃</w>
+					<w xml:id="U_w_001880">ıl</w>
+					<w xml:id="U_w_001881" rend="elision">ſ</w>
+					<w xml:id="U_w_001882">areſte</w>
+				</l>
+				<lb n="30"/>
+				<l n="275" xml:id="U_l_275">
+					<w xml:id="U_w_001883">S</w>
+				</l>
+				<lb n="31"/>
+				<l n="276" xml:id="U_l_276">
+					<w xml:id="U_w_001884">J</w>
+					<w xml:id="U_w_001885">ꝯme</w>
+					<w xml:id="U_w_001886">ıl</w>
+					<w xml:id="U_w_001887">oꝛent</w>
+					<w xml:id="U_w_001888" rend="aggl">loꝛ</w>
+					<w xml:id="U_w_001889">gent</w>
+					<w xml:id="U_w_001890">fet</w>
+					<w xml:id="U_w_001891">areſter</w>
+				</l>
+				<lb n="32"/>
+				<l n="277" xml:id="U_l_277">
+					<w xml:id="U_w_001892">Beraut</w>
+					<w xml:id="U_w_001893">δeſſueure</w>
+					<w xml:id="U_w_001894" rend="aggl">ſa</w>
+					<w xml:id="U_w_001895">gent</w>
+					<w xml:id="U_w_001896">fet</w>
+					<w xml:id="U_w_001897">areſt͛</w>
+				</l>
+				<lb n="33"/>
+				<l n="278" xml:id="U_l_278">
+					<w xml:id="U_w_001898">ntre</w>
+					<w xml:id="U_w_001899">.ıı</w>
+					<w xml:id="U_w_001900">rẽſ</w>
+					<w xml:id="U_w_001901">faıt</w>
+					<unclear><w xml:id="U_w_001902">eſme</w><w xml:id="U_w_001903">δeıoſter</w></unclear>
+				</l>
+				<lb n="34"/>
+				<l n="279" xml:id="U_l_279">
+					<w xml:id="U_w_001904" rend="elision">Ꝺ</w>
+					<w xml:id="U_w_001905">anbeδeu</w>
+					<w xml:id="U_w_001906">pars</w>
+					<w xml:id="U_w_001907" rend="elision">l</w>
+					<w xml:id="U_w_001908">alerent</w>
+					<w xml:id="U_w_001909">regarδer</w>
+				</l>
+				<lb n="35"/>
+				<l n="280" xml:id="U_l_280">
+					<w xml:id="U_w_001910" rend="elision">L</w>
+					<w xml:id="U_w_001911">eſcu</w>
+					<w xml:id="U_w_001912" rend="aggl">au</w>
+					<w xml:id="U_w_001913">col</w>
+					<w xml:id="U_w_001914">quı</w>
+					<w xml:id="U_w_001915">mout</w>
+					<w xml:id="U_w_001916">reluıſoıt</w>
+					<w xml:id="U_w_001917">cl͛r</w>
+				</l>
+				<lb n="36"/>
+				<l n="281" xml:id="U_l_281">
+					<w xml:id="U_w_001918">Lı</w>
+					<w xml:id="U_w_001919">.ı.</w>
+					<w xml:id="U_w_001920" rend="aggl">a</w>
+					<w xml:id="U_w_001921" rend="elision">l</w>
+					<w xml:id="U_w_001922">autre</w>
+					<w xml:id="U_w_001923" rend="elision">l</w>
+					<w xml:id="U_w_001924">auoıt</w>
+					<w xml:id="U_w_001925">pͥs</w>
+					<unclear><w xml:id="U_w_001926" rend="aggl">a</w><w xml:id="U_w_001927">noſtrer</w></unclear>
+				</l>
+				<lb n="37"/>
+				<l n="282" xml:id="U_l_282">
+					<w xml:id="U_w_001928">Veʒ</w>
+					<w xml:id="U_w_001929">la</w>
+					<w xml:id="U_w_001930">b͛aut</w>
+					<w xml:id="U_w_001931">q̃rnaut</w>
+					<w xml:id="U_w_001932">fıſt</w>
+					<w xml:id="U_w_001933">aδober</w>
+				</l>
+				<lb n="38"/>
+				<l n="283" xml:id="U_l_283">
+					<w xml:id="U_w_001934" rend="elision">n</w>
+					<w xml:id="U_w_001935" rend="aggl">a</w>
+					<w xml:id="U_w_001936">tel</w>
+					<w xml:id="U_w_001937">vaſal</w>
+					<w xml:id="U_w_001938">ıuſque</w>
+					<w xml:id="U_w_001939" rend="aggl">en</w>
+					<w xml:id="U_w_001940" rend="aggl">la</w>
+					<w xml:id="U_w_001941" rend="aggl">roge</w>
+					<w xml:id="U_w_001942">mer</w>
+				</l>
+				<lb n="39"/>
+				<l n="284" xml:id="U_l_284">
+					<w xml:id="U_w_001943">Qͥ</w>
+					<w xml:id="U_w_001944">oꝛ</w>
+					<w xml:id="U_w_001945">voδꝛoıt</w>
+					<w xml:id="U_w_001946">ſa</w>
+					<w xml:id="U_w_001947">pꝛoece</w>
+					<w xml:id="U_w_001948">moſtrer</w>
+				</l>
+				<lb n="40"/>
+				<l n="285" xml:id="U_l_285">
+					<w xml:id="U_w_001949">Mıen</w>
+					<w xml:id="U_w_001950">encıent</w>
+					<w xml:id="U_w_001951">qͥl</w>
+					<w xml:id="U_w_001952">troueroıt</w>
+					<w xml:id="U_w_001953" rend="aggl">ſon</w>
+					<w xml:id="U_w_001954">per</w>
+				</l>
+				<lb n="41"/>
+				<l n="286" xml:id="U_l_286">
+					<w xml:id="U_w_001955">r.</w>
+					<w xml:id="U_w_001956">δeſſoıure</w>
+					<w xml:id="U_w_001957">qͥ</w>
+					<w xml:id="U_w_001958">ne</w>
+					<w xml:id="U_w_001959">puet</w>
+					<w xml:id="U_w_001960">enδurer</w>
+				</l>
+				<lb n="42"/>
+				<l n="287" xml:id="U_l_287">
+					<w xml:id="U_w_001961">Ꝺeıoſte</w>
+					<w xml:id="U_w_001962">faıre</w>
+					<w xml:id="U_w_001963" rend="aggl">ſe</w>
+					<w xml:id="U_w_001964">pꝛıſt</w>
+					<w xml:id="U_w_001965" rend="aggl">a</w>
+					<w xml:id="U_w_001966">acheſmer</w>
+				</l>
+				<lb n="43"/>
+				<l n="288" xml:id="U_l_288">
+					<w xml:id="U_w_001967">Beraut</w>
+					<w xml:id="U_w_001968" rend="aggl">le</w>
+					<w xml:id="U_w_001969">uoıt</w>
+					<w xml:id="U_w_001970" rend="aggl">ſı</w>
+					<w xml:id="U_w_001971">ꝯmẽce</w>
+					<w xml:id="U_w_001972" rend="aggl">a</w>
+					<w xml:id="U_w_001973">penſer</w>
+				</l>
+				<lb n="44"/>
+				<l n="289" xml:id="U_l_289">
+					<w xml:id="U_w_001974">Ꝺex</w>
+					<w xml:id="U_w_001975">δıſt</w>
+					<w xml:id="U_w_001976">b͛aut</w>
+					<w xml:id="U_w_001977">quı</w>
+					<w xml:id="U_w_001978">tot</w>
+					<w xml:id="U_w_001979">aſ</w>
+					<w xml:id="U_w_001980" rend="aggl">a</w>
+					<w xml:id="U_w_001981">ſauuer</w>
+				</l>
+				<lb n="45"/>
+				<l n="290" xml:id="U_l_290">
+					<w xml:id="U_w_001982">Jraı</w>
+					<w xml:id="U_w_001983">ıeu</w>
+					<w xml:id="U_w_001984">δont</w>
+					<w xml:id="U_w_001985" rend="aggl">a</w>
+					<w xml:id="U_w_001986">mõſegnoꝛ</w>
+					<w xml:id="U_w_001987">ıoſter</w>
+				</l>
+				<lb n="46"/>
+				<l n="291" xml:id="U_l_291">
+					<w xml:id="U_w_001988">Qͥ</w>
+					<w xml:id="U_w_001989">tanteſ</w>
+					<w xml:id="U_w_001990">foıʒ</w>
+					<w xml:id="U_w_001991" rend="elision">m</w>
+					<w xml:id="U_w_001992" rend="aggl">a</w>
+					<w xml:id="U_w_001993">fet</w>
+					<w xml:id="U_w_001994">δu</w>
+					<w xml:id="U_w_001995">ſuen</w>
+					<w xml:id="U_w_001996">δoner</w>
+				</l>
+				<lb n="47"/>
+				<l n="292" xml:id="U_l_292">
+					<w xml:id="U_w_001997">Mout</w>
+					<w xml:id="U_w_001998">volentıers</w>
+					<w xml:id="U_w_001999">le</w>
+					<w xml:id="U_w_002000">voδꝛoıe</w>
+					<w xml:id="U_w_002001">eſchıuer</w>
+				</l>
+				<lb n="48"/>
+				<l n="293" xml:id="U_l_293">
+					<w xml:id="U_w_002002">Meſ</w>
+					<w xml:id="U_w_002003">ıo</w>
+					<w xml:id="U_w_002004">voı</w>
+					<w xml:id="U_w_002005">bıen</w>
+					<w xml:id="U_w_002006" rend="aggl">ne</w>
+					<w xml:id="U_w_002007" rend="aggl">le</w>
+					<w xml:id="U_w_002008">puıʒ</w>
+					<w xml:id="U_w_002009">refuſer</w>
+				</l>
+				<lb n="49"/>
+				<l n="294" xml:id="U_l_294">
+					<w xml:id="U_w_002010">Q̃</w>
+					<w xml:id="U_w_002011">par</w>
+					<w xml:id="U_w_002012">la</w>
+					<w xml:id="U_w_002013">ıoſte</w>
+					<w xml:id="U_w_002014" rend="elision">m</w>
+					<w xml:id="U_w_002015">en</w>
+					<w xml:id="U_w_002016">ꝯuenδꝛa</w>
+					<w xml:id="U_w_002017">aler</w>
+				</l>
+
+				<gap unit="fol" quantity="15" reason="sampling"/>
+				<pb facs="#facs_4" xml:id="Urb.lat.375_0073_fa_0033r_m.jpg" n="33r"/>
+				<cb facs="#facs_4_region_1552570354781_766" n="33a"/>
+
+				<lb n="1"/>
+				<l n="295" xml:id="U_l_295">
+					<w xml:id="U_w_002018">tout</w>
+					<w xml:id="U_w_002019">le</w>
+					<w xml:id="U_w_002020">nonbꝛe</w>
+					<w xml:id="U_w_002021">δe</w>
+					<w xml:id="U_w_002022">cheſſes</w>
+					<w xml:id="U_w_002023">vıueſ</w>
+				</l>
+				<lb n="2"/>
+				<l n="296" xml:id="U_l_296">
+					<w xml:id="U_w_002024">Jl</w>
+					<w xml:id="U_w_002025">ſet</w>
+					<w xml:id="U_w_002026">ceſt</w>
+					<w xml:id="U_w_002027">art</w>
+					<w xml:id="U_w_002028">ıe</w>
+					<w xml:id="U_w_002029" rend="elision">n</w>
+					<w xml:id="U_w_002030">ẽ</w>
+					<w xml:id="U_w_002031">mentıraı</w>
+					<w xml:id="U_w_002032">mıe</w>
+				</l>
+				<lb n="3"/>
+				<l n="297" xml:id="U_l_297">
+					<w xml:id="U_w_002033" rend="elision">S</w>
+					<w xml:id="U_w_002034">ıl</w>
+					<w xml:id="U_w_002035">vout</w>
+					<w xml:id="U_w_002036">.ı.</w>
+					<w xml:id="U_w_002037">hoſt</w>
+					<w xml:id="U_w_002038">en</w>
+					<w xml:id="U_w_002039">vne</w>
+					<w xml:id="U_w_002040">pꝛaıerıe</w>
+				</l>
+				<lb n="4"/>
+				<l n="298" xml:id="U_l_298">
+					<w xml:id="U_w_002041">Jl</w>
+					<w xml:id="U_w_002042">ſauroıt</w>
+					<w xml:id="U_w_002043">toſt</w>
+					<w xml:id="U_w_002044">le</w>
+					<w xml:id="U_w_002045">nõbꝛe</w>
+					<w xml:id="U_w_002046" rend="elision">δ</w>
+					<w xml:id="U_w_002047">ax</w>
+					<w xml:id="U_w_002048">meıſme</w>
+				</l>
+				<lb n="5"/>
+				<l n="299" xml:id="U_l_299">
+					<w xml:id="U_w_002049">ꝯbıen</w>
+					<w xml:id="U_w_002050">ıl</w>
+					<w xml:id="U_w_002051">ſont</w>
+					<w xml:id="U_w_002052" rend="aggl">en</w>
+					<w xml:id="U_w_002053" rend="aggl">la</w>
+					<w xml:id="U_w_002054">loꝛ</w>
+					<w xml:id="U_w_002055">ꝯpagníe</w>
+				</l>
+				<lb n="6"/>
+				<l n="300" xml:id="U_l_300">
+					<w xml:id="U_w_002056">A</w>
+				</l>
+				<lb n="7"/>
+				<l n="301" xml:id="U_l_301">
+					<w xml:id="U_w_002057">pꝛeſ</w>
+					<w xml:id="U_w_002058" rend="aggl">l</w>
+					<w xml:id="U_w_002059">apͥſt</w>
+					<w xml:id="U_w_002060">le</w>
+					<w xml:id="U_w_002061">cl͛rc</w>
+					<w xml:id="U_w_002062">auſtrologıe</w>
+				</l>
+				<lb n="8"/>
+				<l n="302" xml:id="U_l_302">
+					<w xml:id="U_w_002063">Ce</w>
+					<w xml:id="U_w_002064">eſt</w>
+					<w xml:id="U_w_002065">.ı.</w>
+					<w xml:id="U_w_002066">art</w>
+					<w xml:id="U_w_002067">quí</w>
+					<w xml:id="U_w_002068">mout</w>
+					<w xml:id="U_w_002069">eſt</w>
+					<w xml:id="U_w_002070">couoıtıe</w>
+				</l>
+				<lb n="9"/>
+				<l n="303" xml:id="U_l_303">
+					<w xml:id="U_w_002071">Qͥ</w>
+					<w xml:id="U_w_002072">le</w>
+					<w xml:id="U_w_002073">ſaroıt</w>
+					<w xml:id="U_w_002074">mout</w>
+					<w xml:id="U_w_002075" rend="aggl">lı</w>
+					<w xml:id="U_w_002076">pleroıt</w>
+					<w xml:id="U_w_002077" rend="aggl">ſa</w>
+					<w xml:id="U_w_002078">uıe</w>
+				</l>
+				<lb n="10"/>
+				<l n="304" xml:id="U_l_304">
+					<w xml:id="U_w_002079"></w>
+					<w xml:id="U_w_002080">ſı</w>
+					<w xml:id="U_w_002081">aroıt</w>
+					<w xml:id="U_w_002082">honoꝛ</w>
+					<w xml:id="U_w_002083">⁊</w>
+					<w xml:id="U_w_002084">manantíe</w>
+				</l>
+				<lb n="11"/>
+				<l n="305" xml:id="U_l_305">
+					<w xml:id="U_w_002085"></w>
+					<w xml:id="U_w_002086">grant</w>
+					<w xml:id="U_w_002087">auoír</w>
+					<w xml:id="U_w_002088"></w>
+					<w xml:id="U_w_002089">mout</w>
+					<w xml:id="U_w_002090">grant</w>
+					<w xml:id="U_w_002091">ſegnoꝛıe</w>
+				</l>
+				<lb n="12"/>
+				<l n="306" xml:id="U_l_306">
+					<w xml:id="U_w_002092">Jl</w>
+					<w xml:id="U_w_002093">ſaroıt</w>
+					<w xml:id="U_w_002094">bñ</w>
+					<w xml:id="U_w_002095" rend="aggl">ꝯ</w>
+					<w xml:id="U_w_002096">fet</w>
+					<w xml:id="U_w_002097">en</w>
+					<w xml:id="U_w_002098">romaníe</w>
+				</l>
+				<lb n="13"/>
+				<l n="307" xml:id="U_l_307">
+					<w xml:id="U_w_002099"></w>
+					<w xml:id="U_w_002100">q̃</w>
+					<w xml:id="U_w_002101">on</w>
+					<w xml:id="U_w_002102">faıt</w>
+					<w xml:id="U_w_002103">δela</w>
+					<w xml:id="U_w_002104">en</w>
+					<w xml:id="U_w_002105">paıeníe</w>
+				</l>
+				<lb n="14"/>
+				<l n="308" xml:id="U_l_308">
+					<w xml:id="U_w_002106">Ov</w>
+					<w xml:id="U_w_002107" rend="aggl">par</w>
+					<w xml:id="U_w_002108">δeca</w>
+					<w xml:id="U_w_002109" rend="aggl">en</w>
+					<w xml:id="U_w_002110">france</w>
+					<w xml:id="U_w_002111" rend="aggl">la</w>
+					<w xml:id="U_w_002112">garníe</w>
+				</l>
+				<lb n="15"/>
+				<l n="309" xml:id="U_l_309">
+					<w xml:id="U_w_002113">Ov</w>
+					<w xml:id="U_w_002114">tot</w>
+					<w xml:id="U_w_002115">partot</w>
+					<w xml:id="U_w_002116">le</w>
+					<w xml:id="U_w_002117">mõδe</w>
+					<w xml:id="U_w_002118" rend="aggl">qͥ</w>
+					<w xml:id="U_w_002119">toꝛníe</w>
+				</l>
+				<lb n="16"/>
+				<l n="310" xml:id="U_l_310">
+					<w xml:id="U_w_002120">Par</w>
+					<w xml:id="U_w_002121">ıceſt</w>
+					<w xml:id="U_w_002122">art</w>
+					<w xml:id="U_w_002123">fu</w>
+					<w xml:id="U_w_002124">Joſeph</w>
+					<w xml:id="U_w_002125">treſtot</w>
+					<w xml:id="U_w_002126">ſíre</w>
+				</l>
+				<lb n="17"/>
+				<l n="311" xml:id="U_l_311">
+					<w xml:id="U_w_002127">Ꝺe</w>
+					<w xml:id="U_w_002128">pharaon</w>
+					<w xml:id="U_w_002129">⁊</w>
+					<w xml:id="U_w_002130" rend="aggl">δe</w>
+					<w xml:id="U_w_002131" rend="aggl">ſa</w>
+					<w xml:id="U_w_002132">ꝯpagníe</w>
+				</l>
+				<lb n="18"/>
+				<l n="312" xml:id="U_l_312">
+					<w xml:id="U_w_002133">Qͥ</w>
+					<w xml:id="U_w_002134">ſet</w>
+					<w xml:id="U_w_002135">ceſ</w>
+					<w xml:id="U_w_002136">art</w>
+					<w xml:id="U_w_002137">ne</w>
+					<w xml:id="U_w_002138">vos</w>
+					<w xml:id="U_w_002139">enqͥer</w>
+					<w xml:id="U_w_002140">mẽtır</w>
+				</l>
+				<lb n="19"/>
+				<l n="313" xml:id="U_l_313">
+					<w xml:id="U_w_002141">Jl</w>
+					<w xml:id="U_w_002142">ſet</w>
+					<w xml:id="U_w_002143">mout</w>
+					<w xml:id="U_w_002144">bñ</w>
+					<w xml:id="U_w_002145">q̃</w>
+					<w xml:id="U_w_002146">eſt</w>
+					<w xml:id="U_w_002147" rend="aggl">a</w>
+					<w xml:id="U_w_002148">δeuenír</w>
+				</l>
+				<lb n="20"/>
+				<l n="314" xml:id="U_l_314">
+					<w xml:id="U_w_002149" rend="aggl">Se</w>
+					<w xml:id="U_w_002150">ıl</w>
+					<w xml:id="U_w_002151">vaoıt</w>
+					<w xml:id="U_w_002152">.ıı.</w>
+					<w xml:id="U_w_002153">chãpıonſ</w>
+					<w xml:id="U_w_002154">venır</w>
+				</l>
+				<lb n="21"/>
+				<l n="315" xml:id="U_l_315">
+					<w xml:id="U_w_002155">Qͥ</w>
+					<w xml:id="U_w_002156">en</w>
+					<w xml:id="U_w_002157">.ı.</w>
+					<w xml:id="U_w_002158">champ</w>
+					<w xml:id="U_w_002159">δeuſſent</w>
+					<w xml:id="U_w_002160">eſcremír</w>
+				</l>
+				<lb n="22"/>
+				<l n="316" xml:id="U_l_316">
+					<w xml:id="U_w_002161">Jl</w>
+					<w xml:id="U_w_002162">ſauroıt</w>
+					<w xml:id="U_w_002163">bıen</w>
+					<w xml:id="U_w_002164">lıq̃l</w>
+					<w xml:id="U_w_002165">δeuroıt</w>
+					<w xml:id="U_w_002166">venqͥr</w>
+				</l>
+				<lb n="23"/>
+				<l n="317" xml:id="U_l_317">
+					<w xml:id="U_w_002167" rend="aggl">Lı</w>
+					<w xml:id="U_w_002168">ſınatoꝛ</w>
+					<w xml:id="U_w_002169" rend="aggl">δe</w>
+					<w xml:id="U_w_002170">rome</w>
+					<w xml:id="U_w_002171">ſanſ</w>
+					<w xml:id="U_w_002172">mẽtır</w>
+				</l>
+				<lb n="24"/>
+				<l n="318" xml:id="U_l_318">
+					<w xml:id="U_w_002173">Par</w>
+					<w xml:id="U_w_002174">ıceſt</w>
+					<w xml:id="U_w_002175">art</w>
+					<w xml:id="U_w_002176">ꝯceıllıerent</w>
+					<w xml:id="U_w_002177">ıaδıs</w>
+				</l>
+				<lb n="25"/>
+				<l n="319" xml:id="U_l_319">
+					<w xml:id="U_w_002178">Ꝺeſ</w>
+					<w xml:id="U_w_002179">foꝛs</w>
+					<w xml:id="U_w_002180">bataılles</w>
+					<w xml:id="U_w_002181">⁊</w>
+					<w xml:id="U_w_002182" rend="aggl">δeſ</w>
+					<w xml:id="U_w_002183">peſanſ</w>
+					<w xml:id="U_w_002184">huſtıns</w>
+				</l>
+				<lb n="26"/>
+				<l n="320" xml:id="U_l_320">
+					<w xml:id="U_w_002185">tout</w>
+					<w xml:id="U_w_002186">bıen</w>
+					<w xml:id="U_w_002187">ſaroıt</w>
+					<w xml:id="U_w_002188">qͥ</w>
+					<w xml:id="U_w_002189">en</w>
+					<w xml:id="U_w_002190">aroıt</w>
+					<w xml:id="U_w_002191" rend="aggl">le</w>
+					<w xml:id="U_w_002192">pís</w>
+				</l>
+				<lb n="27"/>
+				<l n="321" xml:id="U_l_321">
+					<w xml:id="U_w_002193">Ꝑ</w>
+					<w xml:id="U_w_002194">ıceſt</w>
+					<w xml:id="U_w_002195">art</w>
+					<w xml:id="U_w_002196">ſoꝛent</w>
+					<w xml:id="U_w_002197">ıe</w>
+					<w xml:id="U_w_002198">vos</w>
+					<w xml:id="U_w_002199">pleuıs</w>
+				</l>
+				<lb n="28"/>
+				<l n="322" xml:id="U_l_322">
+					<w xml:id="U_w_002200">tvıt</w>
+					<w xml:id="U_w_002201" rend="aggl">lı</w>
+					<w xml:id="U_w_002202">troı</w>
+					<w xml:id="U_w_002203">roı</w>
+					<w xml:id="U_w_002204">q̃</w>
+					<w xml:id="U_w_002205" rend="aggl">fu</w>
+					<w xml:id="U_w_002206">neʒ</w>
+					<w xml:id="U_w_002207">ıhũ</w>
+					<w xml:id="U_w_002208">crıſt</w>
+				</l>
+				<lb n="29"/>
+				<l n="323" xml:id="U_l_323">
+					<w xml:id="U_w_002209" rend="aggl">Sı</w>
+					<w xml:id="U_w_002210" rend="aggl">le</w>
+					<w xml:id="U_w_002211">reqͥſtret</w>
+					<w xml:id="U_w_002212" rend="elision">δ</w>
+					<w xml:id="U_w_002213">eſtranges</w>
+					<w xml:id="U_w_002214">paıʒ</w>
+				</l>
+				<lb n="30"/>
+				<l n="324" xml:id="U_l_324">
+					<w xml:id="U_w_002215"></w>
+					<w xml:id="U_w_002216">par</w>
+					<w xml:id="U_w_002217" rend="elision">l</w>
+					<w xml:id="U_w_002218">eſtoıle</w>
+					<w xml:id="U_w_002219">qͥ</w>
+					<w xml:id="U_w_002220">aꝑut</w>
+					<w xml:id="U_w_002221">auſı</w>
+				</l>
+				<lb n="31"/>
+				<l n="325" xml:id="U_l_325">
+					<w xml:id="U_w_002222">Ꝺe</w>
+					<w xml:id="U_w_002223">ceſ</w>
+					<w xml:id="U_w_002224">.vıı.</w>
+					<w xml:id="U_w_002225">ars</w>
+					<w xml:id="U_w_002226">q̃</w>
+					<w xml:id="U_w_002227" rend="aggl">ıe</w>
+					<w xml:id="U_w_002228">ſı</w>
+					<w xml:id="U_w_002229">vos</w>
+					<w xml:id="U_w_002230">δeuıs</w>
+				</l>
+				<lb n="32"/>
+				<l n="326" xml:id="U_l_326">
+					<w xml:id="U_w_002231">Lut</w>
+					<w xml:id="U_w_002232">ıl</w>
+					<w xml:id="U_w_002233" rend="aggl">en</w>
+					<w xml:id="U_w_002234">lıure</w>
+					<w xml:id="U_w_002235">treſtot</w>
+					<w xml:id="U_w_002236">ıel</w>
+					<w xml:id="U_w_002237">vos</w>
+					<w xml:id="U_w_002238">pleuís</w>
+				</l>
+				<lb n="33"/>
+				<l n="327" xml:id="U_l_327">
+					<w xml:id="U_w_002239">a</w>
+					<w xml:id="U_w_002240">nıgromance</w>
+					<w xml:id="U_w_002241" rend="aggl">au</w>
+					<w xml:id="U_w_002242">δeraın</w>
+					<w xml:id="U_w_002243" rend="aggl">le</w>
+					<w xml:id="U_w_002244">mıſt</w>
+				</l>
+				<lb n="34"/>
+				<l n="328" xml:id="U_l_328">
+					<w xml:id="U_w_002245">Ce</w>
+					<w xml:id="U_w_002246">eſt</w>
+					<w xml:id="U_w_002247">.vn.</w>
+					<w xml:id="U_w_002248">art</w>
+					<w xml:id="U_w_002249">δeſ</w>
+					<w xml:id="U_w_002250">vı.</w>
+					<w xml:id="U_w_002251" rend="aggl">le</w>
+					<w xml:id="U_w_002252">pl⁹</w>
+					<w xml:id="U_w_002253">haís</w>
+				</l>
+				<lb n="35"/>
+				<l n="329" xml:id="U_l_329">
+					<w xml:id="U_w_002254">Q̃r</w>
+					<w xml:id="U_w_002255" rend="aggl">lı</w>
+					<w xml:id="U_w_002256">δeableſ</w>
+					<w xml:id="U_w_002257">en</w>
+					<w xml:id="U_w_002258">eſt</w>
+					<w xml:id="U_w_002259">tot</w>
+					<w xml:id="U_w_002260">poſteıs</w>
+				</l>
+				<lb n="36"/>
+				<l n="330" xml:id="U_l_330">
+					<w xml:id="U_w_002261">Qͥ</w>
+					<w xml:id="U_w_002262" rend="elision">δ</w>
+					<w xml:id="U_w_002263">eſt</w>
+					<w xml:id="U_w_002264">art</w>
+					<w xml:id="U_w_002265">apꝛent</w>
+					<w xml:id="U_w_002266">ıel</w>
+					<w xml:id="U_w_002267">vos</w>
+					<w xml:id="U_w_002268">pleuıs</w>
+				</l>
+				<lb n="37"/>
+				<l n="331" xml:id="U_l_331">
+					<w xml:id="U_w_002269" rend="elision">N</w>
+					<w xml:id="U_w_002270">eſt</w>
+					<w xml:id="U_w_002271">mıe</w>
+					<w xml:id="U_w_002272">mout</w>
+					<w xml:id="U_w_002273" rend="aggl">δu</w>
+					<w xml:id="U_w_002274">δeable</w>
+					<w xml:id="U_w_002275">haıs</w>
+				</l>
+				<lb n="38"/>
+				<l n="332" xml:id="U_l_332">
+					<w xml:id="U_w_002276">Par</w>
+					<w xml:id="U_w_002277">ıceſt</w>
+					<w xml:id="U_w_002278">art</w>
+					<w xml:id="U_w_002279">ſoıt</w>
+					<w xml:id="U_w_002280" rend="elision">l</w>
+					<w xml:id="U_w_002281">en</w>
+					<w xml:id="U_w_002282">leſ</w>
+					<w xml:id="U_w_002283">larecıns</w>
+				</l>
+				<lb n="39"/>
+				<l n="333" xml:id="U_l_333">
+					<w xml:id="U_w_002284">Qͤ</w>
+					<w xml:id="U_w_002285">larons</w>
+					<w xml:id="U_w_002286">font</w>
+					<w xml:id="U_w_002287">⁊</w>
+					<w xml:id="U_w_002288">ꝑ</w>
+					<w xml:id="U_w_002289">nuıt</w>
+					<w xml:id="U_w_002290">⁊</w>
+					<w xml:id="U_w_002291">par</w>
+					<w xml:id="U_w_002292">δís</w>
+				</l>
+				<lb n="40"/>
+				<l n="334" xml:id="U_l_334">
+					<w xml:id="U_w_002293"></w>
+					<w xml:id="U_w_002294" rend="elision">ſ</w>
+					<w xml:id="U_w_002295">en</w>
+					<w xml:id="U_w_002296">ſet</w>
+					<w xml:id="U_w_002297">on</w>
+					<w xml:id="U_w_002298">lef</w>
+					<w xml:id="U_w_002299">abaıʒ</w>
+					<w xml:id="U_w_002300">δeſ</w>
+					<w xml:id="U_w_002301">maſtíns</w>
+				</l>
+				<lb n="41"/>
+				<l n="335" xml:id="U_l_335">
+					<w xml:id="U_w_002302">Jl</w>
+					<w xml:id="U_w_002303" rend="elision">n</w>
+					<w xml:id="U_w_002304">eſt</w>
+					<w xml:id="U_w_002305" rend="aggl">v</w>
+					<w xml:id="U_w_002306">mont</w>
+					<w xml:id="U_w_002307">oıſıau</w>
+					<w xml:id="U_w_002308">tant</w>
+					<w xml:id="U_w_002309">ſoıt</w>
+					<w xml:id="U_w_002310">petıt</w>
+				</l>
+				<lb n="42"/>
+				<l n="336" xml:id="U_l_336">
+					<w xml:id="U_w_002311">ne</w>
+					<w xml:id="U_w_002312">tant</w>
+					<w xml:id="U_w_002313">ſoıt</w>
+					<w xml:id="U_w_002314">grant</w>
+					<w xml:id="U_w_002315">m͛uelloʒ</w>
+					<w xml:id="U_w_002316">ne</w>
+					<w xml:id="U_w_002317">foꝛnís</w>
+				</l>
+				<lb n="43"/>
+				<l n="337" xml:id="U_l_337">
+					<w xml:id="U_w_002318">Qͥl</w>
+					<w xml:id="U_w_002319">ne</w>
+					<w xml:id="U_w_002320">ſeuſt</w>
+					<w xml:id="U_w_002321">ſa</w>
+					<w xml:id="U_w_002322">raıſon</w>
+					<w xml:id="U_w_002323">⁊</w>
+					<w xml:id="U_w_002324">ſeſ</w>
+					<w xml:id="U_w_002325">δís</w>
+				</l>
+				<lb n="44"/>
+				<l n="338" xml:id="U_l_338">
+					<w xml:id="U_w_002326" rend="aggl">De</w>
+					<w xml:id="U_w_002327">luı</w>
+					<w xml:id="U_w_002328">meıſme</w>
+					<w xml:id="U_w_002329">faıt</w>
+					<w xml:id="U_w_002330">bıen</w>
+					<w xml:id="U_w_002331">vne</w>
+					<w xml:id="U_w_002332">ꝑtrıs</w>
+				</l>
+				<lb n="45"/>
+				<l n="339" xml:id="U_l_339">
+					<w xml:id="U_w_002333">Ov</w>
+					<w xml:id="U_w_002334">.ı.</w>
+					<w xml:id="U_w_002335">eſtoꝛ</w>
+					<w xml:id="U_w_002336">fauꝯ</w>
+					<w xml:id="U_w_002337">ou</w>
+					<w xml:id="U_w_002338">eſm͛ıs</w>
+				</l>
+				<lb n="46"/>
+				<l n="340" xml:id="U_l_340">
+					<w xml:id="U_w_002339">De</w>
+					<w xml:id="U_w_002340">.ıı.</w>
+					<w xml:id="U_w_002341">toꝛchaſ</w>
+					<w xml:id="U_w_002342">faıt</w>
+					<w xml:id="U_w_002343">ıl</w>
+					<w xml:id="U_w_002344">.ıı.</w>
+					<w xml:id="U_w_002345">foꝛs</w>
+					<w xml:id="U_w_002346">roncís</w>
+				</l>
+				<lb n="47"/>
+				<l n="341" xml:id="U_l_341">
+					<w xml:id="U_w_002347" rend="aggl">Ja</w>
+					<w xml:id="U_w_002348" rend="aggl">ne</w>
+					<w xml:id="U_w_002349">ſeroıt</w>
+					<w xml:id="U_w_002350" rend="aggl">en</w>
+					<w xml:id="U_w_002351" rend="aggl">ſı</w>
+					<w xml:id="U_w_002352">foꝛt</w>
+					<w xml:id="U_w_002353">pͥſon</w>
+					<w xml:id="U_w_002354">mís</w>
+				</l>
+				<lb n="48"/>
+				<l n="342" xml:id="U_l_342">
+					<w xml:id="U_w_002355">Qͥl</w>
+					<w xml:id="U_w_002356" rend="elision">n</w>
+					<w xml:id="U_w_002357">ẽ</w>
+					<w xml:id="U_w_002358">ıſſıſt</w>
+					<w xml:id="U_w_002359">aıns</w>
+					<w xml:id="U_w_002360">qͥl</w>
+					<w xml:id="U_w_002361">fuſt</w>
+					<w xml:id="U_w_002362">mıeδís</w>
+				</l>
+				<lb n="49"/>
+				<l n="343" xml:id="U_l_343">
+					<w xml:id="U_w_002363">Ceus</w>
+					<w xml:id="U_w_002364" rend="aggl">δe</w>
+					<w xml:id="U_w_002365">laıenſ</w>
+					<w xml:id="U_w_002366">aroıt</w>
+					<w xml:id="U_w_002367">en</w>
+					<w xml:id="U_w_002368">.ı.</w>
+					<w xml:id="U_w_002369">ıoꝛ</w>
+					<w xml:id="U_w_002370">pͥs</w>
+				</l>
+
+
+				<cb facs="#facs_4_region_1552570366857_769" n="33b"/>
+
+				<lb n="1"/>
+				<l n="344" xml:id="U_l_344">
+					<w xml:id="U_w_002371"></w>
+					<w xml:id="U_w_002372">tot</w>
+					<w xml:id="U_w_002373">δeſtruıt</w>
+					<w xml:id="U_w_002374">le</w>
+					<w xml:id="U_w_002375">paıſ</w>
+					<w xml:id="U_w_002376"></w>
+					<w xml:id="U_w_002377">bꝛuı</w>
+				</l>
+				<lb n="2"/>
+				<l n="345" xml:id="U_l_345">
+					<w xml:id="U_w_002378"></w>
+					<w xml:id="U_w_002379" rend="elision">ſ</w>
+					<w xml:id="U_w_002380">ıl</w>
+					<w xml:id="U_w_002381">voloıent</w>
+					<w xml:id="U_w_002382">toʒ</w>
+					<w xml:id="U_w_002383">leſ</w>
+					<w xml:id="U_w_002384">pꝛenδꝛoıent</w>
+					<w xml:id="U_w_002385">vı́s</w>
+				</l>
+				<lb n="3"/>
+				<l n="346" xml:id="U_l_346">
+					<w xml:id="U_w_002386" rend="aggl">Ja</w>
+					<w xml:id="U_w_002387" rend="elision">n</w>
+					<w xml:id="U_w_002388" rend="aggl">en</w>
+					<w xml:id="U_w_002389">ſeroıt</w>
+					<w xml:id="U_w_002390">nıſ</w>
+					<w xml:id="U_w_002391">.ı.</w>
+					<w xml:id="U_w_002392">tot</w>
+					<w xml:id="U_w_002393">ſol</w>
+					<w xml:id="U_w_002394">malmı́s</w>
+				</l>
+				<lb n="4"/>
+				<l n="347" xml:id="U_l_347">
+					<w xml:id="U_w_002395">ne</w>
+					<w xml:id="U_w_002396" rend="elision">n</w>
+					<w xml:id="U_w_002397">í</w>
+					<w xml:id="U_w_002398">aroít</w>
+					<w xml:id="U_w_002399">mellee</w>
+					<w xml:id="U_w_002400">nı</w>
+					<w xml:id="U_w_002401">eſtrıf</w>
+				</l>
+				<lb n="5"/>
+				<l n="348" xml:id="U_l_348">
+					<unclear><w xml:id="U_w_002402">Mout</w><w xml:id="U_w_002403">aδeſens</w></unclear>
+					<w xml:id="U_w_002404" rend="aggl">ce</w>
+					<w xml:id="U_w_002405" rend="aggl">lı</w>
+					<w xml:id="U_w_002406">δıt</w>
+					<w xml:id="U_w_002407">amaurís</w>
+				</l>
+				<lb n="6"/>
+				<l n="349" xml:id="U_l_349">
+					<w xml:id="U_w_002408">Pleuſt</w>
+					<w xml:id="U_w_002409" rend="aggl">a</w>
+					<w xml:id="U_w_002410">δıeu</w>
+					<w xml:id="U_w_002411" rend="aggl">le</w>
+					<w xml:id="U_w_002412">roı</w>
+					<w xml:id="U_w_002413" rend="aggl">δe</w>
+					<w xml:id="U_w_002414">paraδís</w>
+				</l>
+				<lb n="7"/>
+				<l n="350" xml:id="U_l_350">
+					<w xml:id="U_w_002415">Qͤ</w>
+					<w xml:id="U_w_002416">ıl</w>
+					<w xml:id="U_w_002417">fuſt</w>
+					<w xml:id="U_w_002418">oꝛe</w>
+					<w xml:id="U_w_002419">entre</w>
+					<w xml:id="U_w_002420">nos</w>
+					<w xml:id="U_w_002421">cı</w>
+					<w xml:id="U_w_002422">aſſıs</w>
+				</l>
+				<lb n="8"/>
+				<l n="351" xml:id="U_l_351">
+					<w xml:id="U_w_002423" rend="aggl">Sı</w>
+					<w xml:id="U_w_002424">δeſtruıroı́t</w>
+					<w xml:id="U_w_002425">nos</w>
+					<w xml:id="U_w_002426">moꝛtel</w>
+					<w xml:id="U_w_002427">enemís</w>
+				</l>
+				<lb n="9"/>
+				<l n="352" xml:id="U_l_352">
+					<w xml:id="U_w_002428">Qͥ</w>
+					<w xml:id="U_w_002429">ne</w>
+					<w xml:id="U_w_002430">nos</w>
+					<w xml:id="U_w_002431">pͥſent</w>
+					<w xml:id="U_w_002432">vallant</w>
+					<w xml:id="U_w_002433">.ı.</w>
+					<w xml:id="U_w_002434">parıſı</w>
+				</l>
+				<lb n="10"/>
+				<l n="353" xml:id="U_l_353">
+					<w xml:id="U_w_002435">neſ</w>
+					<w xml:id="U_w_002436">pꝛenδꝛıon</w>
+					<w xml:id="U_w_002437">en</w>
+					<w xml:id="U_w_002438">.x.</w>
+					<w xml:id="U_w_002439">ans</w>
+					<w xml:id="U_w_002440">aꝯplıs</w>
+				</l>
+				<lb n="11"/>
+				<l n="354" xml:id="U_l_354">
+					<w xml:id="U_w_002441">Manδeʒ</w>
+					<w xml:id="U_w_002442">le</w>
+					<w xml:id="U_w_002443">ſıre</w>
+					<w xml:id="U_w_002444">ce</w>
+					<w xml:id="U_w_002445" rend="aggl">a</w>
+					<w xml:id="U_w_002446">δıt</w>
+					<w xml:id="U_w_002447">ernaís</w>
+				</l>
+				<lb n="12"/>
+				<l n="355" xml:id="U_l_355">
+					<w xml:id="U_w_002448">Mout</w>
+					<w xml:id="U_w_002449">volentıers</w>
+					<w xml:id="U_w_002450" rend="aggl">ce</w>
+					<w xml:id="U_w_002451" rend="aggl">a</w>
+					<w xml:id="U_w_002452">δıt</w>
+					<w xml:id="U_w_002453">anſeís</w>
+				</l>
+				<lb n="13"/>
+				<l n="356" xml:id="U_l_356">
+					<w xml:id="U_w_002454">Q̃r</w>
+					<w xml:id="U_w_002455">ꝑ</w>
+					<w xml:id="U_w_002456">ıhũ</w>
+					<w xml:id="U_w_002457">qͥ</w>
+					<w xml:id="U_w_002458" rend="aggl">en</w>
+					<w xml:id="U_w_002459" rend="aggl">la</w>
+					<w xml:id="U_w_002460">croıʒ</w>
+					<w xml:id="U_w_002461">fu</w>
+					<w xml:id="U_w_002462">mís</w>
+				</l>
+				<lb n="14"/>
+				<l n="357" xml:id="U_l_357">
+					<w xml:id="U_w_002463">foꝛtment</w>
+					<w xml:id="U_w_002464">δeſıre</w>
+					<w xml:id="U_w_002465">q̃</w>
+					<w xml:id="U_w_002466">cıſt</w>
+					<w xml:id="U_w_002467">chaſtıau</w>
+					<w xml:id="U_w_002468">ſoıt</w>
+					<w xml:id="U_w_002469">pͥs</w>
+				</l>
+				<lb n="15"/>
+				<l n="358" xml:id="U_l_358">
+					<w xml:id="U_w_002470"></w>
+					<unclear><w xml:id="U_w_002471" rend="elision">ſ</w><w xml:id="U_w_002472">aı</w></unclear>
+					<w xml:id="U_w_002473">grant</w>
+					<w xml:id="U_w_002474">δote</w>
+					<w xml:id="U_w_002475" rend="aggl">δe</w>
+					<w xml:id="U_w_002476">ceuſ</w>
+					<w xml:id="U_w_002477" rend="aggl">δe</w>
+					<w xml:id="U_w_002478">mon</w>
+					<w xml:id="U_w_002479">paíʒ</w>
+				</l>
+				<lb n="16"/>
+				<l n="359" xml:id="U_l_359">
+					<w xml:id="U_w_002480">Qͤ</w>
+					<w xml:id="U_w_002481">ne</w>
+					<w xml:id="U_w_002482" rend="elision">ſ</w>
+					<w xml:id="U_w_002483">ı</w>
+					<w xml:id="U_w_002484">metent</w>
+					<w xml:id="U_w_002485">paıen</w>
+					<w xml:id="U_w_002486">⁊</w>
+					<w xml:id="U_w_002487">ſaraſín</w>
+				</l>
+				<lb n="17"/>
+				<l n="360" xml:id="U_l_360">
+					<w xml:id="U_w_002488">Jl</w>
+					<w xml:id="U_w_002489">en</w>
+					<w xml:id="U_w_002490">apele</w>
+					<w xml:id="U_w_002491">ſon</w>
+					<w xml:id="U_w_002492">vallet</w>
+					<unclear><w xml:id="U_w_002493">telamın</w></unclear>
+				</l>
+				<lb n="18"/>
+				<l n="361" xml:id="U_l_361">
+					<w xml:id="U_w_002494">v⁹</w>
+					<w xml:id="U_w_002495" rend="aggl">en</w>
+					<w xml:id="U_w_002496">ıroıʒ</w>
+					<w xml:id="U_w_002497" rend="aggl">bıau</w>
+					<w xml:id="U_w_002498">frere</w>
+					<w xml:id="U_w_002499">en</w>
+					<w xml:id="U_w_002500">mon</w>
+					<w xml:id="U_w_002501">paıs</w>
+				</l>
+				<lb n="19"/>
+				<l n="362" xml:id="U_l_362">
+					<w xml:id="U_w_002502">voer</w>
+					<w xml:id="U_w_002503" rend="aggl">ma</w>
+					<w xml:id="U_w_002504">m͛e</w>
+					<unclear><w xml:id="U_w_002505">charıſſe</w></unclear>
+					<w xml:id="U_w_002506" rend="aggl">o</w>
+					<w xml:id="U_w_002507" rend="aggl">le</w>
+					<w xml:id="U_w_002508">cl͛r</w>
+					<w xml:id="U_w_002509">vís</w>
+				</l>
+				<lb n="20"/>
+				<l n="363" xml:id="U_l_363">
+					<w xml:id="U_w_002510">A</w>
+					<w xml:id="U_w_002511">floꝛıuıle</w>
+					<w xml:id="U_w_002512" rend="aggl">la</w>
+					<w xml:id="U_w_002513">cıte</w>
+					<w xml:id="U_w_002514">ſegnoꝛıs</w>
+				</l>
+				<lb n="21"/>
+				<l n="364" xml:id="U_l_364">
+					<w xml:id="U_w_002515">Salueʒ</w>
+					<w xml:id="U_w_002516">moí</w>
+					<w xml:id="U_w_002517">δıſt</w>
+					<w xml:id="U_w_002518">ıl</w>
+					<w xml:id="U_w_002519">toʒ</w>
+					<w xml:id="U_w_002520">meſ</w>
+					<w xml:id="U_w_002521">amís</w>
+				</l>
+				<lb n="22"/>
+				<l n="365" xml:id="U_l_365">
+					<w xml:id="U_w_002522">Ꝺıteſ</w>
+					<unclear><w xml:id="U_w_002523" rend="aggl">a</w><w xml:id="U_w_002524">tule</w></unclear>
+					<w xml:id="U_w_002525">quí</w>
+					<w xml:id="U_w_002526">eſt</w>
+					<w xml:id="U_w_002527" rend="aggl">lı</w>
+					<w xml:id="U_w_002528">mıen</w>
+					<w xml:id="U_w_002529">amıs</w>
+				</l>
+				<lb n="23"/>
+				<l n="366" xml:id="U_l_366">
+					<w xml:id="U_w_002530"></w>
+					<w xml:id="U_w_002531">reueneſ</w>
+					<w xml:id="U_w_002532">par</w>
+					<w xml:id="U_w_002533">aıle</w>
+					<w xml:id="U_w_002534" rend="aggl">le</w>
+					<w xml:id="U_w_002535">país</w>
+				</l>
+				<lb n="24"/>
+				<l n="367" xml:id="U_l_367">
+					<w xml:id="U_w_002536">Qͥl</w>
+					<w xml:id="U_w_002537">me</w>
+					<w xml:id="U_w_002538">ſecoꝛe</w>
+					<w xml:id="U_w_002539" rend="aggl">poꝛ</w>
+					<w xml:id="U_w_002540">δıeu</w>
+					<w xml:id="U_w_002541" rend="aggl">δe</w>
+					<w xml:id="U_w_002542">ꝑaδıs</w>
+				</l>
+				<lb n="25"/>
+				<l n="368" xml:id="U_l_368">
+					<w xml:id="U_w_002543">Q̃r</w>
+					<w xml:id="U_w_002544" rend="aggl">lı</w>
+					<w xml:id="U_w_002545">lınage</w>
+					<w xml:id="U_w_002546">fromont</w>
+					<w xml:id="U_w_002547">qͥ</w>
+					<w xml:id="U_w_002548">fu</w>
+					<w xml:id="U_w_002549">ıaδıs</w>
+				</l>
+				<lb n="26"/>
+				<l n="369" xml:id="U_l_369">
+					<w xml:id="U_w_002550">a</w>
+					<w xml:id="U_w_002551">moꝛt</w>
+					<w xml:id="U_w_002552">mõ</w>
+					<w xml:id="U_w_002553">ꝑe</w>
+					<w xml:id="U_w_002554">g͛b͛t</w>
+					<w xml:id="U_w_002555" rend="aggl">le</w>
+					<w xml:id="U_w_002556">bñ</w>
+					<w xml:id="U_w_002557">marchís</w>
+					<note>bñ ou bũ ? en toutes lettres donne 'bon'…</note>
+				</l>
+				<lb n="27"/>
+				<l n="370" xml:id="U_l_370">
+					<w xml:id="U_w_002558">Oꝛ</w>
+					<w xml:id="U_w_002559">leſ</w>
+					<w xml:id="U_w_002560">auon</w>
+					<w xml:id="U_w_002561">en</w>
+					<w xml:id="U_w_002562">.ı.</w>
+					<w xml:id="U_w_002563">chaſtel</w>
+					<w xml:id="U_w_002564">aſſís</w>
+				</l>
+				<lb n="28"/>
+				<l n="371" xml:id="U_l_371">
+					<w xml:id="U_w_002565">Meſ</w>
+					<w xml:id="U_w_002566">tant</w>
+					<w xml:id="U_w_002567">eſt</w>
+					<w xml:id="U_w_002568">foꝛt</w>
+					<w xml:id="U_w_002569" rend="aggl">δe</w>
+					<w xml:id="U_w_002570">mur</w>
+					<w xml:id="U_w_002571">⁊</w>
+					<w xml:id="U_w_002572" rend="aggl">δe</w>
+					<w xml:id="U_w_002573">palıs</w>
+				</l>
+				<lb n="29"/>
+				<l n="372" xml:id="U_l_372">
+					<w xml:id="U_w_002574"></w>
+					<w xml:id="U_w_002575">δe</w>
+					<w xml:id="U_w_002576">gıronδe</w>
+					<w xml:id="U_w_002577">δont</w>
+					<w xml:id="U_w_002578">eſt</w>
+					<w xml:id="U_w_002579">roıδe</w>
+					<w xml:id="U_w_002580" rend="aggl">lı</w>
+					<w xml:id="U_w_002581">fíʒ</w>
+				</l>
+				<lb n="30"/>
+				<l n="373" xml:id="U_l_373">
+					<w xml:id="U_w_002582">Qͤ</w>
+					<w xml:id="U_w_002583" rend="aggl">neſ</w>
+					<w xml:id="U_w_002584">pꝛenδꝛon</w>
+					<w xml:id="U_w_002585">en</w>
+					<w xml:id="U_w_002586">.x</w>
+					<w xml:id="U_w_002587">ans</w>
+					<w xml:id="U_w_002588">aꝯplís</w>
+				</l>
+				<lb n="31"/>
+				<l n="374" xml:id="U_l_374">
+					<w xml:id="U_w_002589">volentıers</w>
+					<w xml:id="U_w_002590">ſıre</w>
+					<w xml:id="U_w_002591">ce</w>
+					<w xml:id="U_w_002592" rend="aggl">a</w>
+					<w xml:id="U_w_002593">δıt</w>
+					<w xml:id="U_w_002594">tel_amín</w>
+				</l>
+				<lb n="32"/>
+				<l n="375" xml:id="U_l_375">
+					<w xml:id="U_w_002595">Son</w>
+					<w xml:id="U_w_002596">erre</w>
+					<w xml:id="U_w_002597">atoꝛne</w>
+					<w xml:id="U_w_002598" rend="aggl">ſı</w>
+					<w xml:id="U_w_002599">eſt</w>
+					<w xml:id="U_w_002600" rend="aggl">δe</w>
+					<w xml:id="U_w_002601" rend="elision">l</w>
+					<w xml:id="U_w_002602">oſt</w>
+					<w xml:id="U_w_002603">ꝑtıs</w>
+				</l>
+				<lb n="33"/>
+				<l n="376" xml:id="U_l_376">
+					<w xml:id="U_w_002604">Lvı</w>
+					<w xml:id="U_w_002605">q̃r</w>
+					<w xml:id="U_w_002606" rend="elision">ſ</w>
+					<w xml:id="U_w_002607" rend="aggl">en</w>
+					<w xml:id="U_w_002608">toꝛne</w>
+					<w xml:id="U_w_002609">⁊</w>
+					<w xml:id="U_w_002610">eſt</w>
+					<w xml:id="U_w_002611" rend="aggl">au</w>
+					<w xml:id="U_w_002612">chemín</w>
+					<w xml:id="U_w_002613">Mís</w>
+				</l>
+				<lb n="34"/>
+				<l n="377" xml:id="U_l_377">
+					<w xml:id="U_w_002614" rend="aggl">aſ</w>
+					<w xml:id="U_w_002615">grans</w>
+					<w xml:id="U_w_002616">ıoꝛneeʒ</w>
+					<w xml:id="U_w_002617">treſpaſſe</w>
+					<w xml:id="U_w_002618" rend="aggl">le</w>
+					<w xml:id="U_w_002619">país</w>
+				</l>
+				<lb n="35"/>
+				<l n="378" xml:id="U_l_378">
+					<w xml:id="U_w_002620">Paſſent</w>
+					<w xml:id="U_w_002621">leſ</w>
+					<w xml:id="U_w_002622">mons</w>
+					<w xml:id="U_w_002623" rend="aggl">le</w>
+					<w xml:id="U_w_002624">uaus</w>
+					<w xml:id="U_w_002625">⁊</w>
+					<w xml:id="U_w_002626">leſ</w>
+					<w xml:id="U_w_002627">larís</w>
+				</l>
+				<lb n="36"/>
+				<l n="379" xml:id="U_l_379">
+					<w xml:id="U_w_002628">tant</w>
+					<w xml:id="U_w_002629" rend="elision">qu</w>
+					<w xml:id="U_w_002630">en</w>
+					<w xml:id="U_w_002631">gaſcoıgne</w>
+					<w xml:id="U_w_002632" rend="aggl">ſe</w>
+					<w xml:id="U_w_002633">ſont</w>
+					<w xml:id="U_w_002634" rend="aggl">au</w>
+					<w xml:id="U_w_002635" rend="aggl">tͤs</w>
+					<w xml:id="U_w_002636" rend="aggl">ıoꝛ</w>
+					<w xml:id="U_w_002637">mís</w>
+				</l>
+				<lb n="37"/>
+				<l n="380" xml:id="U_l_380">
+					<w xml:id="U_w_002638">Oꝛ</w>
+					<w xml:id="U_w_002639">vos</w>
+					<w xml:id="U_w_002640">leron</w>
+					<w xml:id="U_w_002641" rend="aggl">δe</w>
+					<w xml:id="U_w_002642">ceuſ</w>
+					<w xml:id="U_w_002643">eſter</w>
+					<w xml:id="U_w_002644">ící</w>
+				</l>
+				<lb n="38"/>
+				<l n="381" xml:id="U_l_381">
+					<w xml:id="U_w_002645">Sı</w>
+					<w xml:id="U_w_002646">vos</w>
+					<w xml:id="U_w_002647">δıron</w>
+					<w xml:id="U_w_002648" rend="aggl">δu</w>
+					<w xml:id="U_w_002649">bon</w>
+					<w xml:id="U_w_002650">vaſſal</w>
+					<w xml:id="U_w_002651">gerín</w>
+				</l>
+				<lb n="39"/>
+				<l n="382" xml:id="U_l_382">
+					<w xml:id="U_w_002652">De</w>
+					<w xml:id="U_w_002653">ſon</w>
+					<w xml:id="U_w_002654">neueu</w>
+					<w xml:id="U_w_002655">lı</w>
+					<w xml:id="U_w_002656">vallet</w>
+					<w xml:id="U_w_002657">mal_uoıſín</w>
+				</l>
+				<lb n="40"/>
+				<l n="383" xml:id="U_l_383">
+					<w xml:id="U_w_002658">Qͣ</w>
+					<w xml:id="U_w_002659">armeſ</w>
+					<w xml:id="U_w_002660">vınδꝛet</w>
+					<w xml:id="U_w_002661">pluſ</w>
+					<w xml:id="U_w_002662">δe</w>
+					<w xml:id="U_w_002663">.xl.M</w>
+				</l>
+				<lb n="41"/>
+				<l n="384" xml:id="U_l_384">
+					<unclear><w xml:id="U_w_002664">Deſ</w><w xml:id="U_w_002665">mons</w><w xml:id="U_w_002666" rend="elision">δ</w><w xml:id="U_w_002667">anſaı</w><w xml:id="U_w_002668" rend="aggl">ı</w><w xml:id="U_w_002669">eſt</w><w xml:id="U_w_002670">venu</w><w xml:id="U_w_002671">qͣns</w><w xml:id="U_w_002672">.G.</w></unclear>
+				</l>
+				<lb n="42"/>
+				<l n="385" xml:id="U_l_385">
+					<w xml:id="U_w_002673">a</w>
+					<w xml:id="U_w_002674">bar</w>
+					<w xml:id="U_w_002675">ſur</w>
+					<w xml:id="U_w_002676">aube</w>
+					<w xml:id="U_w_002677">vinrent</w>
+					<w xml:id="U_w_002678">ꝑ</w>
+					<w xml:id="U_w_002679">.ı.</w>
+					<w xml:id="U_w_002680">marsδí</w>
+				</l>
+				<lb n="43"/>
+				<l n="386" xml:id="U_l_386">
+					<w xml:id="U_w_002681">Cıl</w>
+					<w xml:id="U_w_002682">en</w>
+					<w xml:id="U_w_002683">remaıne</w>
+					<w xml:id="U_w_002684">pl⁹</w>
+					<w xml:id="U_w_002685">δe</w>
+					<w xml:id="U_w_002686">.xııȷ.</w>
+					<w xml:id="U_w_002687">mıl</w>
+				</l>
+				<lb n="44"/>
+				<l n="387" xml:id="U_l_387">
+					<w xml:id="U_w_002688"></w>
+					<w xml:id="U_w_002689">cıl</w>
+					<w xml:id="U_w_002690">δe</w>
+					<w xml:id="U_w_002691">meſ</w>
+					<w xml:id="U_w_002692" rend="aggl">ı</w>
+					<w xml:id="U_w_002693">out</w>
+					<w xml:id="U_w_002694">grant</w>
+					<w xml:id="U_w_002695">gent</w>
+					<w xml:id="U_w_002696">tramıs</w>
+				</l>
+				<lb n="45"/>
+				<l n="388" xml:id="U_l_388">
+					<w xml:id="U_w_002697">La</w>
+					<w xml:id="U_w_002698">veıſſıeʒ</w>
+					<w xml:id="U_w_002699">tant</w>
+					<w xml:id="U_w_002700">eſcu</w>
+					<w xml:id="U_w_002701">vert</w>
+					<w xml:id="U_w_002702">⁊</w>
+					<w xml:id="U_w_002703">bıs</w>
+				</l>
+				<lb n="46"/>
+				<l n="389" xml:id="U_l_389">
+					<w xml:id="U_w_002704" rend="elision">L</w>
+					<w xml:id="U_w_002705">enſoıgne</w>
+					<w xml:id="U_w_002706">poꝛte</w>
+					<unclear><w xml:id="U_w_002707" rend="aggl">δeſ</w><w xml:id="U_w_002708">mons</w><w xml:id="U_w_002709" rend="elision">δ</w><w xml:id="U_w_002710">anſaı</w><w xml:id="U_w_002711">qͣns</w><w xml:id="U_w_002712">.G.</w></unclear>
+				</l>
+				<lb n="47"/>
+				<l n="390" xml:id="U_l_390">
+					<w xml:id="U_w_002713">aınſ</w>
+					<w xml:id="U_w_002714">le</w>
+					<w xml:id="U_w_002715">quart</w>
+					<w xml:id="U_w_002716">ıoꝛ</w>
+					<w xml:id="U_w_002717">vınδꝛet</w>
+					<unclear><w xml:id="U_w_002718" rend="aggl">a</w><w xml:id="U_w_002719">monſeguın</w></unclear>
+				</l>
+				<lb n="48"/>
+				<l n="391" xml:id="U_l_391">
+					<w xml:id="U_w_002720">Q̃r</w>
+					<w xml:id="U_w_002721">ſı</w>
+					<w xml:id="U_w_002722">le</w>
+					<w xml:id="U_w_002723">coıle</w>
+					<w xml:id="U_w_002724">lı</w>
+					<w xml:id="U_w_002725">bon</w>
+					<w xml:id="U_w_002726">vaſſal</w>
+					<w xml:id="U_w_002727">gerın</w>
+				</l>
+			</lg>
+
+		</body>
+	</text>
+</TEI>
