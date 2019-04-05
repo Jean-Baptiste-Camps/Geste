@@ -5,26 +5,44 @@
     xmlns:ti="http://chs.harvard.edu/xmlns/cts" exclude-result-prefixes="xs tei ti" version="2.0">
     
     <xsl:output method="xml" indent="yes"/>
-
+    
     <xsl:variable name="myURI">
         <xsl:value-of select="tokenize(base-uri(), '/')[position() != last()]" separator="/"/>
         <xsl:text>/?select=*.xml</xsl:text>
     </xsl:variable>
-
+    
     <xsl:variable name="myCollection" select="collection($myURI)"/>
-
-
+    
+    
     <xsl:template match="/">
-
+        <!-- Do not forget the textgroup description ! -->
+        
+        <xsl:result-document href="../nemo-data/geste/__cts__.xml">
+            <!-- 
+                The urn of the textgroup node must contains only the urn up to the textgroup component
+            -->
+            <ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:froLit:geste">
+                <!-- 
+                    Groupname is the name of the textgroup. 
+                    There needs to be at least one groupname node, with a clear lang declaration. 
+                    One groupname at least is required.
+                -->
+                <ti:groupname xml:lang="fr">Geste</ti:groupname>
+                <!--<ti:groupname xml:lang="lat">Marcus Valerius Martialis</ti:groupname>-->
+            </ti:textgroup>
+        </xsl:result-document>
+        
+        
+        
         <xsl:for-each-group select="$myCollection" group-by="/tei:TEI/@corresp">
-
+            
             <!-- Create the work descriptor -->
             <xsl:result-document href="../nemo-data/geste/{current-grouping-key()}/__cts__.xml">
-
+                
                 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:froLit:geste"
                     urn="urn:cts:froLit:geste.{current-grouping-key()}" xml:lang="fro">
                     <!-- To supply a title, we take the first main title of the first doc.
-                    But, would be cleaner to get it from querying Jonas
+                        But, would be cleaner to get it from querying Jonas
                     -->
                     <ti:title xml:lang="fre">
                         <xsl:value-of
@@ -33,13 +51,13 @@
                     </ti:title>
                     <!-- And now a node by document -->
                     <!-- 
-      For each "text", either edition, translation, or commentary, 
-      there should be a ti:edition, ti:translation, or ti:commentary node
-
-      The edition nodes has two attributes :
-        - The first one, workUrn, contains only the urn up to the work component
-        - The second, urn, contains the full urn
-    -->
+                        For each "text", either edition, translation, or commentary, 
+                        there should be a ti:edition, ti:translation, or ti:commentary node
+                        
+                        The edition nodes has two attributes :
+                        - The first one, workUrn, contains only the urn up to the work component
+                        - The second, urn, contains the full urn
+                    -->
                     <xsl:for-each select="current-group()">
                         <ti:edition workUrn="urn:cts:froLit:geste.{current-grouping-key()}"
                             urn="urn:cts:froLit:geste.{current-grouping-key()}.{tei:TEI/@xml:id}">
@@ -62,9 +80,9 @@
                     <xsl:apply-templates/>
                 </xsl:result-document>
             </xsl:for-each>
-
+            
         </xsl:for-each-group>
-
+        
     </xsl:template>
     
     
@@ -76,9 +94,9 @@
             <xsl:apply-templates select="tei:titleStmt" mode="metadata"/>
         </ti:label>
         <!--
-                                Edition, Translation, and Commentary must have at least one description node.
-                                Description node needs xml:lang declaration, it reflects the language of the description.
-                                -->
+            Edition, Translation, and Commentary must have at least one description node.
+            Description node needs xml:lang declaration, it reflects the language of the description.
+        -->
         <ti:description xml:lang="fre">
             <xsl:apply-templates select="tei:sourceDesc" mode="metadata"/>
         </ti:description>
@@ -89,7 +107,7 @@
         <xsl:text>: </xsl:text>
     </xsl:template>
     
-
+    
     
     <xsl:template match="tei:editor" mode="metadata">
         <xsl:if test="not(preceding-sibling::element()[1]/local-name() = 'editor')">
@@ -102,9 +120,9 @@
     <!--<xsl:template mode="metadata" match="tei:titleStmt">
         
         
-    </xsl:template>
-    
-    <xsl:template match="tei:sourceDesc"></xsl:template>-->
+        </xsl:template>
+        
+        <xsl:template match="tei:sourceDesc"></xsl:template>-->
     
     
     <!-- Default mode -->
@@ -126,7 +144,7 @@
                         matchPattern="(\w+)(\w+)"
                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1']//tei:w[@xml:id='$2'])">
                         <p>Ce pointeur extrait les mots</p>
-                    </cRefPattern>-->
+                        </cRefPattern>-->
                     <cRefPattern 
                         n="vers"
                         matchPattern="(\w+)"
@@ -152,6 +170,6 @@
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
-
-
+    
+    
 </xsl:stylesheet>
