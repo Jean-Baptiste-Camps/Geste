@@ -30,9 +30,12 @@
    <!-- Character level tokenization -->
 
 <xsl:template match="text()[ancestor::tei:w]"><!-- On pourrait rajouter and not(normalize-space(.) = '') mais la regex doit le traiter -->
-    <xsl:analyze-string select="." regex="\S">
+    <xsl:analyze-string select="normalize-unicode(., 'NFD')" regex="\S">
         <xsl:matching-substring>
             <c>
+                <xsl:if test="matches(., '\p{M}')">
+                    <xsl:attribute name="type">combining</xsl:attribute>
+                </xsl:if>
                 <xsl:value-of select="." />
             </c>
         </xsl:matching-substring>
