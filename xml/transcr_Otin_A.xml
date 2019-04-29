@@ -9,7 +9,7 @@ TODO: vérifier tous les paiens, pour voir les cas où point devant ou non
 <?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
 <?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
 <?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
-<!DOCTYPE TEI SYSTEM "../../../02_transcriptions/abreviations.dtd"[
+<!DOCTYPE TEI SYSTEM "../dtd/abreviations.dtd"[
 <!-- TILDES -->
 <!ENTITY tilde1-nasale-an "<choice><expan><ex>an</ex></expan><abbr>&#x0303;</abbr></choice>">
 <!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
@@ -7211,10 +7211,10 @@ TODO: vérifier tous les paiens, pour voir les cas où point devant ou non
                     <w>cro&i;&accent;ras</w>
                     <w>mes</w>
                     <w>an</w>
-                    <w>a<choice>
+                    <w>a<!--<choice>
                             <orig>&i;&accent;</orig>
                             <reg>&i;&ed-dierese;</reg>
-                        </choice>e</w>
+                        </choice>-->&i;&accent;&ed-dierese;e</w>
                     <pc type="supplied">.</pc></q>
                 </l>
                 <lb/>

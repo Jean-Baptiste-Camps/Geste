@@ -26,6 +26,11 @@
         <xsl:text>  </xsl:text>
     </xsl:template>-->
     <xsl:template match="tei:pc[@type='orig']"/>
+    
+    <xsl:template match="tei:pc[@type='supplied']">
+        <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
+    </xsl:template>
 
 
 <!--    <xsl:template match="tei:lg">
@@ -114,6 +119,10 @@
             <xsl:apply-templates/>
         </xsl:variable>
         <xsl:value-of select="normalize-unicode($texte, 'NFC')"/>
+        <!-- Gestion alambiquée des élisions, car l'encodage devrait etre amélioré -->
+        <xsl:if test="@rend='elision' and not(following-sibling::element()[1][local-name(.) = 'pc' and @type = 'supplied'])">
+            <xsl:text>'</xsl:text>
+        </xsl:if>
         <xsl:text> </xsl:text>
     </xsl:template>
    
