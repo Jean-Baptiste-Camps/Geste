@@ -8,8 +8,8 @@
     <xsl:import href="tei_to_pandora_human.xsl"/>
     
     <xsl:template match="tei:w">
-        <!--<xsl:value-of select="@xml:id"/>-->
-        <!--<xsl:text>&#9;</xsl:text>-->
+        <xsl:value-of select="@xml:id"/>
+        <xsl:text>&#9;</xsl:text>
         <xsl:if test="ancestor::tei:del"><xsl:text>&lt;</xsl:text></xsl:if>
         <xsl:if test="ancestor::tei:sic[not(@ana)]"><xsl:text>†</xsl:text></xsl:if>
         <xsl:if test="ancestor::tei:add"><xsl:text>\</xsl:text></xsl:if>

@@ -49,10 +49,10 @@
         <xsl:variable name="texte">
             <xsl:apply-templates/>
         </xsl:variable>
-        <xsl:value-of select="normalize-unicode($texte, 'NFD')"/>
+        <xsl:value-of select="translate(normalize-unicode($texte, 'NFD'), ' ', '')"/>
         <!-- If it is not the last on the line -->
         <xsl:if
-            test="generate-id(.) != generate-id(ancestor::tei:l/descendant::tei:w[position() = last()]) and not(@rend)">
+            test="generate-id(.) != generate-id(ancestor::tei:l/descendant::tei:w[position() = last()])">
             <xsl:text> </xsl:text>
         </xsl:if>
     </xsl:template>
