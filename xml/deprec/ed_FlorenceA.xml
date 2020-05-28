@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" 
+    type="application/xml"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
+<!-- TODO: il semblerait qu'il y ait un problème coté métadonnées. À corriger. -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_FlorenceA" xml:lang="fr" type="ed"
+    version="5" corresp="jns11097">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Florence de Rome: fragment de Sion</title>
+                <title type="sub">Texte fondé sur l'édition Aebischer</title>
+                <editor><persName>Paul Aebischer</persName></editor>
+                <respStmt xml:id="JBC">
+                    <resp>édition numérique sous la direction de</resp>
+                    <persName>Jean-Baptiste Camps</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName>
+                        <forename>Jean-Baptiste</forename>
+                        <surname>Camps</surname>
+                    </persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes
+                        d'auteurs médiévaux sont dans le domaine public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail
+                        d'encodage et d'annotation sont mis à disposition selon les termes de la
+                        licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+                        International (CC BY-SA 4.0). </licence>
+                </availability>
+                <date>2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct xml:id="edA" status="draft">
+                    <analytic>
+                        <editor xml:id="Aebischer">
+                            <persName>
+                                <forename>Paul</forename>
+                                <surname>Aebischer</surname>
+                            </persName>
+                        </editor>
+                        <title>Fragments de la Chanson de la Reine Sebile et du roman de Florence de
+                            Rome conservés aux Archives cantonales de Sion</title>
+                    </analytic>
+                    <monogr>
+                        <title>Zeitschrift fur Romanische Philologie</title>
+                        <imprint>
+                            <date>1950</date>
+                        </imprint>
+                        <biblScope>66</biblScope>
+                        <biblScope>385-408</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origDate cert="unknown" resp="DEAF" notBefore="1201" notAfter="1225"
+                    type="dateComposition">1erq. 13es.</origDate>
+                <origDate cert="unknown" resp="DEAF" notBefore="1280" notAfter="1300"
+                    type="dateManuscrit">fin du XIIIe siècle</origDate>
+                <origPlace cert="unknown" resp="DEAF" type="lieuComposition">pic.</origPlace>
+                <origPlace cert="unknown" resp="DEAF" type="lieuManuscrit">Est (Lorraine ou région
+                    environnante selon Aebischer)</origPlace>
+            </creation>
+            <langUsage>
+                <language cert="unknown" resp="DEAF" ident="fro" usage="100">ancien français avec
+                    traits de l'Est (Lorraine ou région environnante selon Aebischer, mais
+                    coloration dialectale moins forte que dans l'autre texte du fragment
+                    (MacaireAl3T)</language>
+                <!-- 
+                    TODO: préciser localisation à partir de l'article d'Æbischer.
+                    -->
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change who="#JBC" when="2017-12-12" status="draft">OCR avec Tesseract 4.0, correction
+                de l'OCR et encodage</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="fro">
+        <body>
+            <!-- 
+        TODO:
+        - rendre compte de la résolution des abréviations (ex);
+        
+        -->
+            <lg type="laisse">
+                <l n="1">
+                    <w><pb n="2r" facs=""/><cb n="a"/>Ha</w>
+                    <pc type="supplied">,</pc>
+                    <w>Deus</w>
+                    <pc type="supplied">,</pc>
+                    <w>ce</w>
+                    <w>dit</w>
+                    <w>Florence</w>
+                    <pc type="supplied">,</pc>
+                    <w>qui</w>
+                    <w>sofris</w>
+                    <w>paision</w>
+                    <pc type="supplied">,</pc>
+                    <note resp="#Aebischer">A. Wallenskiöld, op. cit., t. II, p. 124, vers 3015
+                        sqq.</note>
+                </l>
+                <l n="2">
+                    <w>Comme</w>
+                    <w>par</w>
+                    <w>est</w>
+                    <w>or</w>
+                    <w>Miles</w>
+                    <w>de</w>
+                    <w>male</w>
+                    <w>traïson</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="3">
+                    <w>Qant</w>
+                    <w>il</w>
+                    <w>voit</w>
+                    <w>mort</w>
+                    <choice>
+                        <corr resp="#Aebischer"/>
+                        <sic><w>mort</w></sic>
+                    </choice>
+                    <w>son</w>
+                    <w>frere</w>
+                    <w>an</w>
+                    <w>mé</w>
+                    <w>ceste</w>
+                    <note resp="#Aebischer"><mentioned>m. an me ceste</mentioned> tracés</note>
+                    <w>maison</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="4">
+                    <w>Puis</w>
+                    <w>se</w>
+                    <w>vuet</w>
+                    <w>marier</w>
+                    <w>a</w>
+                    <w>coite</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>esperons</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="5">
+                    <w>Mès</w>
+                    <w>par</w>
+                    <w>icel</w>
+                    <w>apostre</w>
+                    <w rend="elision">c</w>
+                    <pc type="supplied">'</pc>
+                    <w>on</w>
+                    <w>qiert</w>
+                    <w>au</w>
+                    <w>Pré</w>
+                    <w>Noiron</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="6">
+                    <w>Jemais</w>
+                    <w>de</w>
+                    <w>mariage</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>avrai</w>
+                    <w>benieçon</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="7">
+                    <w>Et</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>avenoit</w>
+                    <w>or</w>
+                    <w>chose</w>
+                    <w>que</w>
+                    <w>preïsse</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">baron</reg>
+                            <orig>baran</orig>
+                        </choice></w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="8">
+                    <w>Por</w>
+                    <w>trestot</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>or</w>
+                    <w>dou</w>
+                    <w>segle</w>
+                    <w>ne</w>
+                    <w>pranroie</w>
+                    <w>Milon</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="9">
+                    <w>Je</w>
+                    <w>ne</w>
+                    <w rend="elision">m</w>
+                    <pc type="supplied">'</pc>
+                    <w>i</w>
+                    <w>fieroie</w>
+                    <pc type="supplied">:</pc>
+                    <w>trop</w>
+                    <w>resanble</w>
+                    <w>felon</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                </lg>
+            <lg type="laisse">
+                <l n="10">
+                    <pc type="supplied">«</pc>
+                    <w>Dame</w>
+                    <pc type="supplied">,</pc>
+                    <w>ce</w>
+                    <w>respont</w>
+                    <w>Miles</w>
+                    <pc type="supplied">,</pc>
+                    <w>li</w>
+                    <w>traïtes</w>
+                    <w>provez</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="11">
+                    <w>Par</w>
+                    <w>saint</w>
+                    <w>Pere</w>
+                    <w>de</w>
+                    <w>Rome</w>
+                    <pc type="supplied">,</pc>
+                    <w>de</w>
+                    <w>folie</w>
+                    <w>parlez</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="12">
+                    <w>A</w>
+                    <w>moiller</w>
+                    <w>vous</w>
+                    <w>prandra</w>
+                    <pc type="supplied">,</pc>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>est</w>
+                    <w>li</w>
+                    <w>plaiz</w>
+                    <w>devisez</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="13">
+                    <w>Qar</w>
+                    <w>li</w>
+                    <w>miez</w>
+                    <w>des</w>
+                    <w>barons</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>est</w>
+                    <w>dever</w>
+                    <w>moi</w>
+                    <w>tornez</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="14">
+                    <w>Les</w>
+                    <w>traïtors</w>
+                    <w>apele</w>
+                    <pc type="supplied">,</pc>
+                    <w>ses</w>
+                    <w>a</w>
+                    <w>aressonez</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="15">
+                    <pc type="supplied">«</pc>
+                    <w>Seignor</w>
+                    <pc type="supplied">,</pc>
+                    <w>franc</w>
+                    <w>chevalier</w>
+                    <pc type="supplied">,</pc>
+                    <w>a</w>
+                    <w>moi</w>
+                    <w>an</w>
+                    <w>antandez</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="16">
+                    <w>Il</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>i</w>
+                    <w>a</w>
+                    <w>cel</w>
+                    <w>de</w>
+                    <w>vous</w>
+                    <w>ne</w>
+                    <w>soit</w>
+                    <w>moult</w>
+                    <w>bien</w>
+                    <w>armez</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="17">
+                    <w>Les</w>
+                    <w>bons</w>
+                    <w>branz</w>
+                    <w>acerins</w>
+                    <pc type="supplied">,</pc>
+                    <w>près</w>
+                    <w>de</w>
+                    <w>vous</w>
+                    <w>les</w>
+                    <w>tenez</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="18">
+                    <w>Qar</w>
+                    <w>par</w>
+                    <w>icel</w>
+                    <w>signor</w>
+                    <w>qui</w>
+                    <w>an</w>
+                    <w>croiz</w>
+                    <w>fu</w>
+                    <w>penez</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="19">
+                    <w>Ne</w>
+                    <w>vous</w>
+                    <w>i</w>
+                    <w>vadroit</w>
+                    <w>force</w>
+                    <pc type="supplied">.</pc>
+                    <w>II</w>
+                    <pc type="supplied">.</pc>
+                    <w>deniers</w>
+                    <w>menoez</w>
+                </l>
+                <l n="20">
+                    <w>Je</w>
+                    <w>ne</w>
+                    <w>face</w>
+                    <w>de</w>
+                    <w>vous</w>
+                    <w>totes</w>
+                    <w>mes</w>
+                    <w>volontez</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="21">
+                    <pc type="supplied">«</pc>
+                    <w>Se</w>
+                    <w>Deu</w>
+                    <w>plait</w>
+                    <pc type="supplied">,</pc>
+                    <w>dit</w>
+                    <w>Florence</w>
+                    <pc type="supplied">,</pc>
+                    <w>ja</w>
+                    <w>le</w>
+                    <w>jor</w>
+                    <w>ne</w>
+                    <w>verrez</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="22">
+                    <w>Or</w>
+                    <w>orrez</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>Agravain</w>
+                    <w>con</w>
+                    <w>il</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>est</w>
+                    <w>demenez</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="23">
+                    <w>De</w>
+                    <w>la</w>
+                    <w>mort</w>
+                    <w>de</w>
+                    <w>son</w>
+                    <choice>
+                        <corr resp="#Aebischer"/>
+                        <sic>pere</sic>
+                    </choice>
+                    <w>frere</w>
+                    <w>ne</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>est</w>
+                    <w>pas</w>
+                    <w>obliez</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="24">
+                    <w>Au</w>
+                    <w>plus</w>
+                    <w>tost</w>
+                    <w>que</w>
+                    <w>il</w>
+                    <w>pot</w>
+                    <pc type="supplied">,</pc>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>en</w>
+                    <w>est</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>ielluc</w>
+                    <w>anblez</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="25">
+                    <w>Et</w>
+                    <w>vient</w>
+                    <w>a</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>apostoile</w>
+                    <pc type="supplied">,</pc>
+                    <w>si</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>i</w>
+                    <w>est</w>
+                    <w>confessez</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="26">
+                    <w><cb n="b"/>Je</w>
+                    <w>cui</w>
+                    <w rend="elision">q</w>
+                    <pc type="supplied">'</pc>
+                    <w>as</w>
+                    <w>traïtors</w>
+                    <w>sara</w>
+                    <w>estorz</w>
+                    <w>livrez</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="27" met="-1">
+                    <w>Je</w>
+                    <w>i</w>
+                    <w>sarai</w>
+                    <choice>
+                        <corr resp="#Aebischer"/>
+                        <sic>avec</sic>
+                    </choice>
+                    <w>atot</w>
+                    <pc type="supplied">.</pc>
+                    <w>M</w>
+                    <pc type="supplied">.</pc>
+                    <w>homes</w>
+                    <w>armez</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="28">
+                    <pc type="supplied">«</pc>
+                    <w>Sire</w>
+                    <pc type="supplied">,</pc>
+                    <w>dit</w>
+                    <w>Agravain</w>
+                    <pc type="supplied">,</pc>
+                    <w>Deus</w>
+                    <w>an</w>
+                    <w>soit</w>
+                    <w>aorez</w>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse">
+                <l n="29">
+                    <w>Qant</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>apostoiles</w>
+                    <w>sot</w>
+                    <w>la</w>
+                    <w>traïson</w>
+                    <choice>
+                        <corr resp="#Aebischer"><w>ital</w></corr>
+                        <sic><w>matal</w></sic>
+                    </choice><!-- NB: on pourrait discuter le statut de cette modification -->
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="30">
+                    <w>Bien</w>
+                    <w>conut</w>
+                    <w>Agravain</w>
+                    <w>con</w>
+                    <w>baron</w>
+                    <w>natural</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="31">
+                    <w>Il</w>
+                    <w>fist</w>
+                    <w>armer</w>
+                    <pc type="supplied">.</pc>
+                    <w>M</w>
+                    <pc type="supplied">.</pc>
+                    <w>homes</w>
+                    <w>qi<gap unit="char" reason="damage" min="5" max="15" cert="low"/>t</w>
+                    <w>furent</w>
+                    <w>vassal</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="32">
+                    <w>S</w>
+                    <pc type="supplied">'</pc>
+                    <w>ont</w>
+                    <w>cintes</w>
+                    <w>les</w>
+                    <w>espees</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="33">
+                    <w>Par</w>
+                    <w>les</w>
+                    <w>renges</w>
+                    <w>de</w>
+                    <w>soie</w>
+                    <w>qui</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="34">
+                    <w>Puis</w>
+                    <w>esfublent</w>
+                    <w>les</w>
+                    <w>chapes</w>
+                    <pc type="supplied">;</pc>
+                    <w>on</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="35">
+                    <pc type="supplied">«</pc>
+                    <w>Seignor</w>
+                    <pc type="supplied">,</pc>
+                    <w>dit</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>apostoiles</w>
+                    <pc type="supplied">,</pc>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="36">
+                    <w>Tuit</w>
+                    <w>li</w>
+                    <w>traïtor</w>
+                    <w>sont</w>
+                    <w>ou</w>
+                    <w>palais</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="37">
+                    <w>Nes</w>
+                    <w>ociez</w>
+                    <w>vous</w>
+                    <w>mie</w>
+                    <pc type="supplied">,</pc>
+                    <w>pour</w>
+                    <w>Deu</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">’</pc>
+                    <w>espe<supplied reason="damage" resp="#Aebischer">rital</supplied></w>
+                </l>
+                <l n="38">
+                    <w>Anz</w>
+                    <w>ou</w>
+                    <w>fonz</w>
+                    <w>de</w>
+                    <w>ma</w>
+                    <w>chart<supplied reason="damage" resp="#Aebischer">re</supplied></w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="39">
+                    <w>Tant</w>
+                    <w>que</w>
+                    <w>viegne</w>
+                    <w>Esmerez</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="40">
+                    <w>Je</w>
+                    <w>croi</w>
+                    <w rend="elision">q</w>
+                    <pc type="supplied">'</pc>
+                    <w>il</w>
+                    <w>lor</w>
+                    <w>fera</w>
+                    <w>t<gap unit="char" reason="damage" min="5" max="15" cert="low"/></w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="41">
+                    <w>Q</w>
+                    <pc type="supplied">'</pc>
+                    <w>il</w>
+                    <w>ocistrent</w>
+                    <w>son</w>
+                    <w>frere</w>
+                    <pc type="supplied">,</pc>
+                    <w>moult</w>
+                    <w>par</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="42">
+                    <w>Ne</w>
+                    <w>croiroit</w>
+                    <w>pes</w>
+                    <w>li</w>
+                    <w>rois</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                </l>
+                <l n="43">
+                    <w>Ou</w>
+                    <w>palais</w>
+                    <w>sont</w>
+                    <w>venu</w>
+                    <w>ansanble</w>
+                    <w>par</w>
+                    <w>igal</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="44">
+                    <w>Et</w>
+                    <w>montent</w>
+                    <w>les</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">degrez</reg>
+                            <orig>degez</orig>
+                        </choice></w>
+                    <w>de</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">marbre</reg>
+                            <orig>mabre</orig>
+                        </choice></w>
+                    <w>anperial</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="45">
+                    <w>Qant</w>
+                    <w>il</w>
+                    <w>furent</w>
+                    <w>antré</w>
+                    <w>dedanz</w>
+                    <w>tut</w>
+                    <w>communal</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="46">
+                    <w>Chescuns</w>
+                    <w>sesist</w>
+                    <w>le</w>
+                    <w>suen</w>
+                    <pc type="supplied">,</pc>
+                    <w rend="elision">c</w>
+                    <pc type="supplied">'</pc>
+                    <w>onqes</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>i</w>
+                    <w>ot</w>
+                    <w>estal</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="47">
+                    <w>Fors</w>
+                    <w>Milon</w>
+                    <w>le</w>
+                    <w>traïte</w>
+                    <pc type="supplied">,</pc>
+                    <w>o</w>
+                    <w>le</w>
+                    <w>cors</w>
+                    <w>desloial</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="48">
+                    <w>Il</w>
+                    <w>a</w>
+                    <w>trate</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>espee</w>
+                    <pc type="supplied">,</pc>
+                    <w>qar</w>
+                    <w>il</w>
+                    <w>sot</w>
+                    <w>moult</w>
+                    <w>de</w>
+                    <w>mal</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="49">
+                    <w>Damedeu</w>
+                    <w>a</w>
+                    <w>juré</w>
+                    <w>le</w>
+                    <w>pere</w>
+                    <w>esperital</w>
+                </l>
+                <l n="50">
+                    <w>Q</w>
+                    <pc type="supplied">'</pc>
+                    <pc type="supplied">'</pc>
+                    <w>il</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>i</w>
+                    <w>a</w>
+                    <w>si</w>
+                    <w>hardi</w>
+                    <w>duc</w>
+                    <pc type="supplied">,</pc>
+                    <w>prince</w>
+                    <w>ne</w>
+                    <w>chessal</w>
+                </l>
+                </lg>
+            <lg type="laisse">
+                <l n="51">
+                    <pb n="2v" facs=""/><cb n="a"/>Miles
+                    <pc type="supplied">,</pc>
+                    <w>dit</w>
+                    <w>Agravain</w>
+                    <pc type="supplied">,</pc>
+                    <w>trop</w>
+                    <w>estes</w>
+                    <w>esbahiz</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="52">
+                    <w>De</w>
+                    <w>Sanson</w>
+                    <w rend="elision">g</w>
+                    <pc type="supplied">'</pc>
+                    <w>avez</w>
+                    <w>mort</w>
+                    <w>sui</w>
+                    <w>je</w>
+                    <w>moult</w>
+                    <w>mal</w>
+                    <w>bailliz</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="53">
+                    <w>Danz</w>
+                    <w>gloz</w>
+                    <pc type="supplied">,</pc>
+                    <w>vous</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>estes</w>
+                    <w>pes</w>
+                    <w><choice>
+                            <corr resp="#Aebischer">anpereres</corr>
+                            <sic>anperes</sic>
+                        </choice></w>
+                    <w><choice>
+                            <corr resp="#Aebischer">esliz</corr>
+                            <sic>desliz</sic>
+                        </choice></w><!-- JBC: ici aussi -->
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="54">
+                    <w>Vos</w>
+                    <w>avez</w>
+                    <w>mort</w>
+                    <w>mon</w>
+                    <choice>
+                        <corr resp="#Aebischer"/>
+                        <sic>pere</sic>
+                    </choice>
+                    <w>frere</w><!-- JBC: TODO, vérifier cette corr. -->
+                    <pc type="supplied">:</pc>
+                    <w>pour</w>
+                    <w>ce</w>
+                    <w>estes</w>
+                    <w>traïz</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="55">
+                    <w>Or</w>
+                    <w>aproche</w>
+                    <w>li</w>
+                    <w>termes</w>
+                    <w>que</w>
+                    <w>vous</w>
+                    <w>sarez</w>
+                    <w>honiz</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="56">
+                    <w>L</w>
+                    <pc type="supplied">'</pc>
+                    <w>apostoiles</w>
+                    <w>de</w>
+                    <w>Rome</w>
+                    <w>ne</w>
+                    <w>fu</w>
+                    <w>pes</w>
+                    <w>esbaïz</w>
+                </l>
+                <l n="57">
+                    <w><supplied reason="damage" resp="#Aebischer">Ve</supplied>nuz</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w>a</w>
+                    <w>le</w>
+                    <w>samiz</w>
+                </l>
+                <l n="58">
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w>assez</w>
+                    <w>fu</w>
+                    <w>hardiz</w>
+                </l>
+                <l n="59">
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w>es</w>
+                    <w>tot</w>
+                    <w>tot</w>
+                    <w>sanglant</w>
+                    <w>le</w>
+                    <w>viz</w>
+                </l>
+                <l n="60">
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w><supplied reason="damage" resp="#Aebischer">b</supplied>ien</w>
+                    <w>est</w>
+                    <w>droiz</w>
+                    <w>vostre</w>
+                    <w>diz</w>
+                </l>
+                <l n="61">
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>oiles</w>
+                    <w>sanglant</w>
+                    <w>a</w>
+                    <w>tot</w>
+                    <w>le</w>
+                    <w>vis</w>
+                </l>
+                <l n="62">
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>tort</w>
+                    <w>est</w>
+                    <w>cil</w>
+                    <w>Sanses</w>
+                    <w>ocis</w>
+                </l>
+                <l n="63">
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>iens</w>
+                    <w>cors</w>
+                    <w>soit</w>
+                    <w>oniz</w>
+                </l>
+                <l n="64">
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>ris</w>
+                </l>
+                <l n="65">
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>pes</w>
+                    <w>vestis</w>
+                </l>
+                <l n="66">
+                    <w>Certe</w>
+                    <w><gap unit="char" reason="damage" min="5" max="15" cert="low"/>mant</w>
+                    <w>fu</w>
+                    <w>Esmerez</w>
+                    <w>traïs</w>
+                </l>
+                <l n="67">
+                    <w>Se</w>
+                    <gap unit="char" reason="damage" min="5" max="15" cert="low"/>
+                    <w>freres</w>
+                    <pc type="supplied">,</pc>
+                    <w>par</w>
+                    <w>saint</w>
+                    <w>Po</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>Epolis</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="68">
+                    <w>Ne</w>
+                    <w>vous</w>
+                    <w>garantira</w>
+                    <w>pas</w>
+                    <w>trestoz</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>or</w>
+                    <w>de</w>
+                    <w>Brandis</w>
+                </l>
+                <l n="69">
+                    <w>Que</w>
+                    <w>ne</w>
+                    <w>fussiez</w>
+                    <w>detraiz</w>
+                    <w>a</w>
+                    <w>coues</w>
+                    <w>de</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">roncis</reg>
+                            <orig>roncins</orig>
+                        </choice></w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="70">
+                    <w>Comme</w>
+                    <w>Miles</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>antant</w>
+                    <pc type="supplied">,</pc>
+                    <w>li</w>
+                    <w>sans</w>
+                    <w>li</w>
+                    <w>est</w>
+                    <w>fuis</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <l n="71">
+                    <w>De</w>
+                    <w>la</w>
+                    <w>honte</w>
+                    <w rend="elision">q</w>
+                    <pc type="supplied">'</pc>
+                    <w>il</w>
+                    <w>ot</w>
+                    <w>fu</w>
+                    <w>tanz</w>
+                    <pc type="supplied">,</pc>
+                    <w>a</w>
+                    <w>an</w>
+                    <w>palis</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                </lg>
+            <lg type="laisse">
+                <l n="72">
+                    <w>Qant</w>
+                    <w>ore</w>
+                    <w>ot</w>
+                    <w>Florence</w>
+                    <w>la</w>
+                    <w>mortel</w>
+                    <w>traïson</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="73">
+                    <w>De</w>
+                    <w>grant</w>
+                    <w>duel</w>
+                    <w>ot</w>
+                    <w>grant</w>
+                    <w>joie</w>
+                    <pc type="supplied">,</pc>
+                    <w>qant</w>
+                    <w>ele</w>
+                    <w>vit</w>
+                    <w>Sanson</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="74">
+                    <w>En</w>
+                    <w>une</w>
+                    <w>aute</w>
+                    <w>tor</w>
+                    <w>anfermerent</w>
+                    <w>Milon</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="75">
+                    <w>Anz</w>
+                    <w>ou</w>
+                    <w>fonz</w>
+                    <w>de</w>
+                    <w>la</w>
+                    <w>chartre</w>
+                    <w>furent</w>
+                    <w>mis</w>
+                    <w>li</w>
+                    <w>gloton</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                </lg>
+            <lg type="laisse">
+                <l n="76">
+                    <w><cb n="b"/>Q</w>
+                    <pc type="supplied">'</pc>
+                    <w>il</w>
+                    <w>mistrent</w>
+                    <w>an</w>
+                    <w>prison</w>
+                    <w>trestoz</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>une</w>
+                    <w>matire</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="77">
+                    <w>Miles</w>
+                    <w>fut</w>
+                    <w>tot</w>
+                    <w>par</w>
+                    <w>lui</w>
+                    <pc type="supplied">,</pc>
+                    <w>noblemant</w>
+                    <pc type="supplied">,</pc>
+                    <w>comme</w>
+                    <w>sire</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="78">
+                    <w>An</w>
+                    <w>la</w>
+                    <w>plus</w>
+                    <w>aute</w>
+                    <w>tor</w>
+                    <w>que</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>an</w>
+                    <w>li</w>
+                    <w>pot</w>
+                    <w>eslire</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <l n="79">
+                    <w>Fables</w>
+                    <w>et</w>
+                    <w>chançonates</w>
+                    <w>font</w>
+                    <w>dedevant</w>
+                    <w>le</w>
+                    <w>sire</w>
+                </l>
+                <l n="80">
+                    <w>Harper</w>
+                    <w>et</w>
+                    <w>violer</w>
+                    <pc type="supplied">,</pc>
+                    <w>conter</w>
+                    <w>et</w>
+                    <w>romanz</w>
+                    <w>lire</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="81">
+                    <w>Mès</w>
+                    <w>il</w>
+                    <w>fu</w>
+                    <w>moult</w>
+                    <w>dolanz</w>
+                    <pc type="supplied">,</pc>
+                    <w>si</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>ot</w>
+                    <w>talan</w>
+                    <w>de</w>
+                    <w>rire</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="82">
+                    <w>A</w>
+                    <w>li</w>
+                    <w>atre</w>
+                    <w>gloton</w>
+                    <w>sont</w>
+                    <w>tuit</w>
+                    <w>a</w>
+                    <w>une</w>
+                    <w>tire</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="83">
+                    <w>Devant</w>
+                    <w>ces</w>
+                    <w rend="elision">n</w>
+                    <pc type="supplied">'</pc>
+                    <w>a</w>
+                    <w>lumiere</w>
+                    <pc type="supplied">,</pc>
+                    <w>ne</w>
+                    <w>chandoile</w>
+                    <w>de</w>
+                    <w>cire</w>
+                    <pc type="supplied">!</pc>
+                </l>
+                <l n="84">
+                    <w>Or</w>
+                    <w>dirons</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>Esmeré</w>
+                    <w>et</w>
+                    <w>dou</w>
+                    <w>fort</w>
+                    <w>rois</w>
+                    <choice>
+                        <corr resp="#Aebischer"><w>Garsire</w></corr>
+                        <sic/>
+                    </choice>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="85">
+                    <w>Qar</w>
+                    <w>li</w>
+                    <w>vaillarz</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>an</w>
+                    <w>fuit</w>
+                    <pc type="supplied">,</pc>
+                    <w>dolorous</w>
+                    <w>et</w>
+                    <w>plains</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>ire</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="86">
+                    <w>Pour</w>
+                    <w>ses</w>
+                    <w>homes</w>
+                    <w>qui</w>
+                    <w>sont</w>
+                    <w>livré</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">a</reg>
+                            <orig>et</orig>
+                        </choice></w>
+                    <w>tel</w>
+                    <w>martire</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="87">
+                    <w>Et</w>
+                    <w>li</w>
+                    <w>bers</w>
+                    <w>vai</w>
+                    <w>après</w>
+                    <pc type="supplied">,</pc>
+                    <w>pour</w>
+                    <w>lui</w>
+                    <w>tot</w>
+                    <w><choice>
+                            <corr resp="#Aebischer">desconfire</corr>
+                            <sic>desconconfire</sic>
+                        </choice></w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="88">
+                    <w>Mès</w>
+                    <w>Grifon</w>
+                    <w>ne</w>
+                    <w>ont</w>
+                    <w>mais</w>
+                    <w>de</w>
+                    <w>nule</w>
+                    <w>part</w>
+                    <w>ou</w>
+                    <w>fuire</w>
+                </l>
+                <l n="89" met="-1">
+                    <w>Q</w>
+                    <pc type="supplied">'</pc>
+                    <w>Esmerez</w>
+                    <w>les</w>
+                    <w>chace</w>
+                    <w>o</w>
+                    <w>ces</w>
+                    <w>de</w>
+                    <w>son</w>
+                    <w>anpire</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="90">
+                    <pc type="supplied">«</pc>
+                    <w>Seignor</w>
+                    <pc type="supplied">,</pc>
+                    <w>veez</w>
+                    <w>la</w>
+                    <w>gent</w>
+                    <w><choice>
+                            <reg resp="#Aebischer">ver</reg>
+                            <orig>vez</orig>
+                        </choice></w>
+                    <w>cui</w>
+                    <w>mes</w>
+                    <w>cors</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>aire</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <l n="91">
+                    <w>Droit</w>
+                    <w>vers</w>
+                    <w>Costantenoble</w>
+                    <w>icest</w>
+                    <w>vanz</w>
+                    <w>si</w>
+                    <w>nous</w>
+                    <w>tire</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <l n="92">
+                    <w>Moult</w>
+                    <w>i</w>
+                    <w>ai</w>
+                    <w>grant</w>
+                    <w>tresor</w>
+                    <pc type="supplied">,</pc>
+                    <w>je</w>
+                    <w>sai</w>
+                    <w>sanz</w>
+                    <w>contredire</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="93">
+                    <w>Vous</w>
+                    <w>an</w>
+                    <w>avrez</w>
+                    <w rend="elision">l</w>
+                    <pc type="supplied">'</pc>
+                    <w>onour</w>
+                    <pc type="supplied">,</pc>
+                    <w>et</w>
+                    <w>je</w>
+                    <w>an</w>
+                    <w>sarai</w>
+                    <w>sire</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                </lg>
+            <lg type="laisse">
+                <l n="94">
+                    <w>Moult</w>
+                    <w>est</w>
+                    <w>Costantenoble</w>
+                    <w>cité</w>
+                    <w>de</w>
+                    <w>grant</w>
+                    <w>deport</w>
+                    <pc type="supplied">:</pc>
+                </l>
+                <l n="95">
+                    <w>Li</w>
+                    <w>mur</w>
+                    <w>an</w>
+                    <w>sont</w>
+                    <w>fermé</w>
+                    <w>lez</w>
+                    <w>la</w>
+                    <w>mer</w>
+                    <w>et</w>
+                    <pc type="supplied">.</pc>
+                    <w>I</w>
+                    <pc type="supplied">.</pc>
+                    <w>gort</w>
+                    <pc type="supplied">;</pc>
+                </l>
+                <l n="96">
+                    <w>D</w>
+                    <pc type="supplied">'</pc>
+                    <w>arbres</w>
+                    <w>et</w>
+                    <w>de</w>
+                    <w>loriers</w>
+                    <w>i</w>
+                    <w>ot</w>
+                    <w>de</w>
+                    <w>moult</w>
+                    <w>bon</w>
+                    <w>ort</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="97">
+                    <w>Mès</w>
+                    <w>Garsires</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>an</w>
+                    <w>fut</w>
+                    <w>sanz</w>
+                    <w>joie</w>
+                    <w>et</w>
+                    <w>sanz</w>
+                    <w>deport</w>
+                    <pc type="supplied">,</pc>
+                </l>
+                <l n="98">
+                    <w>Pour</w>
+                    <w>ses</w>
+                    <w>homes</w>
+                    <w>qui</w>
+                    <w>furent</w>
+                    <w>devant</w>
+                    <w>Rome</w>
+                    <w>tuit</w>
+                    <w>mort</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="99">
+                    <w>Droit</w>
+                    <w>vers</w>
+                    <w>Costantenoble</w>
+                    <w>sont</w>
+                    <w>venu</w>
+                    <w>près</w>
+                    <w rend="elision">d</w>
+                    <pc type="supplied">'</pc>
+                    <w>un</w>
+                    <w>port</w>
+                    <pc type="supplied">.</pc>
+                </l>
+                <l n="100">
+                    <w>Dou</w>
+                    <w>duel</w>
+                    <w>et</w>
+                    <w>de</w>
+                    <w>la</w>
+                    <w>honte</w>
+                    <w rend="elision">s</w>
+                    <pc type="supplied">'</pc>
+                    <w>est</w>
+                    <w>apoiez</w>
+                    <w>au</w>
+                    <w>bort</w>
+                    <pc type="supplied">.</pc>
+                </l>
+            </lg>
+        </body>
+        <back>
+            <head>Apparat et notes</head>
+            <p>1 3 mort mort — 4 m. an me ceste tracés — 7 baran 23 son pere frere — 27 avec atot.
+                Il manque un pied au second hémistiche. —29 matal — 44 degez de mabre 53 anperes
+                desliz — 54 mon pere frere — 69 roncins 84 Garsire manque — 86 et tel — 87
+                desconconfire — 89 Le premier hémistiche est incomplet — 90 vez</p>
+        </back>
+    </text>
+</TEI>

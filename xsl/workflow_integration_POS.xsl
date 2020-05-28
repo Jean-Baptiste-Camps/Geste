@@ -9,8 +9,8 @@
     sous une forme <note type="annotation"> ?
     -->
     
-    <!--TODO:  
-        Modifier la feuille pour préfixer les @ana, et inclure, quand nécessaire, les POS et flect. en M -->
+    <!-- Je modifie pour utiliser @pos et @msd (MàJ de la TEI) - TODO: à tester -->
+    
     <xsl:variable name="POS_file" select="
         concat('../tag/', 
         tokenize(base-uri(), '/')[last()])"/>
@@ -38,14 +38,12 @@
     <xsl:template match="tei:w">
         <xsl:variable name="monID" select="@xml:id"/>
         <xsl:variable name="mesPOS" select="$POS//row[ID = $monID]"/>
-        <xsl:variable name="monType">
-            <xsl:for-each select="$mesPOS/(PPOS|MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']">
+        <xsl:variable name="maPOS" select="$mesPOS/PPOS"/>
+        <xsl:variable name="maMorph">
+            <xsl:for-each select="$mesPOS/(MODE|TEMPS|PERS.|NOMB.|GENRE|CAS|DEGRÉ)[. != '']">
                 <!--<xsl:text>#</xsl:text>
                 <xsl:text>CATTEX2009_MS_</xsl:text>-->
                 <xsl:choose>
-                    <xsl:when test="local-name(.) ='PPOS'">
-                        <xsl:text>POS=</xsl:text>
-                    </xsl:when>
                     <xsl:when test="local-name(.) ='DEGRÉ'">
                         <xsl:text>DEGRE=</xsl:text>
                     </xsl:when>
@@ -103,7 +101,8 @@
         </xsl:variable>
         <xsl:copy>
             <xsl:attribute name="lemma" select="normalize-space(normalize-unicode($mesPOS/PLEMMA, 'NFC'))"/>
-            <xsl:attribute name="type" select="normalize-space(normalize-unicode($monType, 'NFC'))"/>
+            <xsl:attribute name="pos" select="normalize-space(normalize-unicode($maPOS, 'NFC'))"/>
+            <xsl:attribute name="msd" select="normalize-space(normalize-unicode($maMorph, 'NFC'))"/>
             <xsl:if test="$monAna != ''">
                 <xsl:attribute name="ana" select="normalize-space(normalize-unicode($monAna, 'NFC'))"/>
             </xsl:if>

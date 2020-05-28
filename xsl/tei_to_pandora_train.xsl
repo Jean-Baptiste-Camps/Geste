@@ -36,6 +36,14 @@ avant de le normaliser
     <xsl:strip-space elements="*"/>
     
     <xsl:template match="/">
+        <xsl:text>form</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:text>lemma</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:text>POS</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:text>morph</xsl:text>
+        <xsl:text>&#xA;</xsl:text>
         <xsl:apply-templates select="descendant::tei:l"/><!-- Ajouter un test pour éviter de récupérer les vers vides -->
     </xsl:template>
     
@@ -64,7 +72,7 @@ avant de le normaliser
         <xsl:text>&#9;</xsl:text>
         <xsl:value-of select="normalize-unicode(translate(normalize-space(@lemma), ' ', '_'), 'NFC')"/>
         <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="translate(normalize-space(substring-after(tokenize(@type, '\|')[1], 'POS=')), ' ', '')"/>
+        <xsl:value-of select="translate(normalize-space(@pos), ' ', '')"/>
         <!--<xsl:text>(</xsl:text>-->
         <xsl:text>&#9;</xsl:text>
         <xsl:variable name="morph">
@@ -72,7 +80,7 @@ avant de le normaliser
                 <xsl:value-of select="substring-after(., '#CATTEX2009_MS_')"/>
                 <xsl:if test="position() != last()"><xsl:text>|</xsl:text></xsl:if>
             </xsl:for-each>-->
-            <xsl:value-of select="translate(normalize-space(substring-after(@type, '|')), ' ', '')"/>
+            <xsl:value-of select="translate(normalize-space(@msd), ' ', '')"/>
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="$morph != ''"><xsl:value-of select="$morph"/></xsl:when>
@@ -97,7 +105,14 @@ avant de le normaliser
     <xsl:template match="tei:note"/>
     
     <!-- JBC: ici, on va garder les sic, et virer les 
-    corr éditoriales (à reréfléchir si besoin) -->
+    corr éditoriales (à reréfléchir si besoin).
+    Ou plutôt l'inverse - ah oui, mais en fait, ça va varier selon les docs.
+    Zut.
+    Une approche qui peut marcher:
+    -->
+    <xsl:template match="tei:choice[tei:corr]">
+        <xsl:apply-templates select="tei:corr"/>
+    </xsl:template>
     <!--<xsl:template match="tei:sic"/>-->
     <!--<xsl:template match="tei:corr[@type='editorial']"/>-->
     
