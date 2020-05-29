@@ -57,14 +57,16 @@ avant de le normaliser
         données en plus.
         -->
         <xsl:apply-templates select="descendant::tei:w[
-            not(@lemma = '' or contains(@type,'POS=OUT')
+            not(@lemma = '' or @pos ='OUT'
             or ancestor::tei:del
             or descendant::tei:gap)
-            ]"/>
-        <xsl:text>&#xA;</xsl:text>
+            ]
+            | descendant::tei:pc[@type='supplied']
+            "
+        />
     </xsl:template>
     
-    <xsl:template match="tei:w">
+    <xsl:template match="tei:w | tei:pc">
         <xsl:variable name="contenu">
             <xsl:apply-templates/>
         </xsl:variable>
@@ -113,6 +115,9 @@ avant de le normaliser
     <xsl:template match="tei:choice[tei:corr]">
         <xsl:apply-templates select="tei:corr"/>
     </xsl:template>
+    <!-- SEUL PROBLÈME: pour les éditions qui normalisent trop la langue, on aura la version normalisée. Cf. par ex.
+    Aebischer sur FlorenceA et Macaire.
+    -->
     <!--<xsl:template match="tei:sic"/>-->
     <!--<xsl:template match="tei:corr[@type='editorial']"/>-->
     

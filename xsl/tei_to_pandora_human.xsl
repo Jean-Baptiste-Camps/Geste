@@ -16,15 +16,26 @@
     <xsl:output method="text"/>
     
     <xsl:template match="/">
+        <xsl:text>id</xsl:text>
+        <xsl:text>  </xsl:text>
+        <xsl:text>form</xsl:text>
+        <xsl:text>  </xsl:text>
+        <xsl:text>lemma</xsl:text>
+        <xsl:text>  </xsl:text>
+        <xsl:text>POS</xsl:text>
+        <xsl:text>  </xsl:text>
+        <xsl:text>morph</xsl:text>
+        <xsl:text>&#xA;</xsl:text>
         <xsl:apply-templates select="descendant::tei:l"/>
     </xsl:template>
     
     <xsl:template match="tei:l">
-        <xsl:apply-templates select="descendant::tei:w"/>
+        <xsl:apply-templates select="
+            descendant::tei:w | descendant::tei:pc"/>
         <!--<xsl:text>&#xA;</xsl:text>-->
     </xsl:template>
     
-    <xsl:template match="tei:w">
+    <xsl:template match="tei:w | tei:pc">
         <!--<xsl:value-of select="@xml:id"/>-->
         <!--<xsl:text>&#9;</xsl:text>-->
         <xsl:if test="ancestor::tei:del"><xsl:text>&lt;</xsl:text></xsl:if>

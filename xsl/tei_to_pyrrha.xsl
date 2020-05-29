@@ -7,7 +7,7 @@
     
     <xsl:import href="tei_to_pandora_human.xsl"/>
     
-    <xsl:template match="tei:w">
+    <xsl:template match="tei:w | tei:pc">
         <xsl:value-of select="@xml:id"/>
         <xsl:text>&#9;</xsl:text>
         <xsl:if test="ancestor::tei:del"><xsl:text>&lt;</xsl:text></xsl:if>
@@ -22,7 +22,7 @@
         <xsl:text>&#9;</xsl:text>
         <xsl:value-of select="normalize-unicode(translate(normalize-space(@lemma), ' ', '_'), 'NFC')"/>
         <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="translate(normalize-space(substring-after(tokenize(@type, '\|')[1], 'POS=')), ' ', '')"/>
+        <xsl:value-of select="translate(normalize-space(@pos), ' ', '')"/>
         <!--<xsl:text>(</xsl:text>-->
         <xsl:text>&#9;</xsl:text>
         <xsl:variable name="morph">
@@ -30,7 +30,7 @@
                 <xsl:value-of select="substring-after(., '#CATTEX2009_MS_')"/>
                 <xsl:if test="position() != last()"><xsl:text>|</xsl:text></xsl:if>
             </xsl:for-each>-->
-            <xsl:value-of select="translate(normalize-space(substring-after(@type, '|')), ' ', '')"/>
+            <xsl:value-of select="translate(normalize-space(@msd), ' ', '')"/>
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="$morph != ''"><xsl:value-of select="$morph"/></xsl:when>
