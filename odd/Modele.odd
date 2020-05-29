@@ -594,12 +594,12 @@ Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'�
                     <head>Contenu des vers</head>
                     <p>Le contenu des vers se compose régulièrement de mots lexicaux (i.e. pouvant
                         être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi>: <specList>
-                            <specDesc key="w" atts="xml:id rend lemma lemmaRef ana"/>
+                            <specDesc key="w" atts="xml:id rend lemma lemmaRef pos msd"/>
                         </specList>
                     </p>
                     <p>Dans la version définitive de l'édition, l'attribut <att>xml:id</att> doit
                         être renseigné, de même que les attributs <att>lemma</att>,
-                            <att>lemmaRef</att> et <att>ana</att> (voir infra, la section sur
+                            <att>lemmaRef</att>, <att>pos</att> et <att>msd</att> (voir infra, la section sur
                         l'annotation linguistique, <ptr target="#DIV_LING"/>) ; tandis que
                         l'attribut <att>rend</att> doit être employé, dans les transcriptions de
                         manuscrits, lorsque la segmentation graphique diffère de la segmentation
@@ -623,22 +623,22 @@ Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'�
                             <w>mois</w>
                             <w>entier</w><pc type="supplied">.</pc></l>
                         <!-- Deuxième exemple: texte annoté linguistiquement d'une transcription imitative de manuscrit -->
-                        <l n="261" xml:id="M_l_261"><w lemma="se" ana="#CONsub" xml:id="M_w_001852"
+                        <l n="261" xml:id="M_l_261"><w lemma="se" pos="CONsub" xml:id="M_w_001852"
                                     ><hi rend="initiale detach"
                                         >s</hi><choice><reg>i</reg><orig>ı</orig></choice></w>
-                            <w lemma="a3" ana="#PRE" xml:id="M_w_001853" rend="aggl"
+                            <w lemma="a3" pos="PRE" xml:id="M_w_001853" rend="aggl"
                                         ><choice><reg>a</reg><orig>ɑ</orig></choice></w><name
-                                type="sword"><w lemma="Durendal" ana="#NOMpro #s #m #r"
+                                type="sword"><w lemma="Durendal" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"
                                     xml:id="M_w_001854"
                                         >durend<choice><reg>a</reg><orig>ɑ</orig></choice>l</w></name>
-                            <w lemma="je" ana="#PROper #1 #s #m #r" xml:id="M_w_001855">me</w>
-                            <w lemma="pöoir" ana="#VERcjg #sub #pst #1 #s" xml:id="M_w_001856"
+                            <w lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=r" xml:id="M_w_001855">me</w>
+                            <w lemma="pöoir" pos="VERcjg" msd="MODE=sub|TEMPS=pst|NOMB.=s|GENRE=m|CAS=r" xml:id="M_w_001856"
                                         >pu<choice><reg>i</reg><orig>ı</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice><choice><reg>s</reg><orig>ſ</orig></choice>e</w>
-                            <w lemma="a3" ana="#PRE" xml:id="M_w_001857" rend="aggl"
+                            <w lemma="a3" pos="PRE" xml:id="M_w_001857" rend="aggl"
                                         ><choice><reg>a</reg><orig>ɑ</orig></choice></w><w
-                                lemma="il" ana="#PROper #3 #p #m #i" xml:id="M_w_001858"
+                                     lemma="il" pos="PROper" msd="PERS.=3|NOMB.=p|GENRE=m|CAS=i" xml:id="M_w_001858"
                                         >ue<choice><reg>s</reg><orig>ſ</orig></choice></w>
-                            <w lemma="mesler" ana="#VERinf" xml:id="M_w_001859">meller</w></l>
+                            <w lemma="mesler" pos="VERinf" xml:id="M_w_001859">meller</w></l>
                     </egXML>
                     <p>Néanmoins, lorsque cela est nécessaire, d'autres éléments peuvent être
                         utilisés à ce même niveau pour signaler des substitutions du scribe, ajouts,
@@ -2401,9 +2401,9 @@ CC 3778 Li casteax ne doutoit assaut
                 <head>Interprétation et analyse (linguistique)</head>
                 <p>Les mots sont étiquetés linguistiquement en utilisant l'élément <gi>w</gi> et ses
                     attributs <specList>
-                        <specDesc key="w" atts="lemma ana"/>
-                    </specList> L'attribut <att>ana</att> est utilisé pour pointer vers les éléments
-                    d'analyse morphosyntaxique et syntaxique. </p>
+                        <specDesc key="w" atts="lemma pos msd"/>
+                    </specList> <!--L'attribut <att>ana</att> est utilisé pour pointer vers les éléments
+                    d'analyse morphosyntaxique et syntaxique.--> </p>
                 <!-- Voir 17.4 Linguistic Annotation -->
                 <!-- TODO: à développer -->
                 <p>Dans les cas où l'on souhaite annoter au niveau du caractère, on pourra également
@@ -2659,7 +2659,7 @@ CC 3778 Li casteax ne doutoit assaut
                                     <elementRef key="origDate"/>
                                 </alternate>
                         </content>
-                        <constraintSpec scheme="isoschematron" ident="change-when-or-from-to">
+                        <constraintSpec scheme="schematron" ident="change-when-or-from-to">
                             <constraint>
                                 <s:assert test="tei:origPlace[@type='lieuComposition'] 
                                     and tei:origDate[@type='dateComposition'] 
@@ -2683,7 +2683,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                     </elementSpec>
                     <elementSpec ident="change" mode="change">
-                        <constraintSpec scheme="isoschematron" ident="change-when-or-from-to">
+                        <constraintSpec scheme="schematron" ident="change-when-or-from-to">
                             <constraint>
                                 <s:assert test="@when or (@from and @to)">La date du changement doit
                                     être spécifiée</s:assert>
@@ -2736,7 +2736,7 @@ CC 3778 Li casteax ne doutoit assaut
                         <classes mode="change">
                             <memberOf key="att.placement" mode="delete"/>
                         </classes>
-                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                        <constraintSpec ident="typeNote" scheme="schematron">
                             <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
                             <constraint>
                                 <s:rule
@@ -2781,7 +2781,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="hi" mode="change">
                         <!-- @rend à définir avec vallist -->
                         <!-- TODO: cette contrainte ne marche pas -->
-                        <constraintSpec scheme="isoschematron"
+                        <constraintSpec scheme="schematron"
                             ident="rend-obligatoire-transcriptions">
                             <constraint>
                                 <s:assert
@@ -2875,7 +2875,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <classRef key="model.choicePart" minOccurs="2" maxOccurs="unbounded"/>
                             <!-- Voir s'il faut limiter à strictement deux -->
                         </content>
-                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                        <constraintSpec ident="typeNote" scheme="schematron">
                             <constraint>
                                 <s:assert test="ancestor::tei:w or not(/tei:TEI[@type='transcr'])">Dans les transcriptions
                                 de manuscrits, choice ne doit pas être utilisé à un niveau supérieur au mot.</s:assert>
@@ -2885,7 +2885,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="reg" mode="change"> </elementSpec>
                     <elementSpec ident="orig" mode="change"> </elementSpec>
                     <elementSpec ident="gap" mode="change">
-                        <constraintSpec ident="typeNote" scheme="isoschematron">
+                        <constraintSpec ident="typeNote" scheme="schematron">
                             <!--<s:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>-->
                             <constraint>
                                 <s:assert test="@quantity or (@min and @max)">Une quantité
@@ -2988,7 +2988,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="del" mode="change">
                         <attList>
                             <attDef ident="rend" mode="change" usage="req">
-                                <constraintSpec scheme="isoschematron" ident="repasse-only-in-subst">
+                                <constraintSpec scheme="schematron" ident="repasse-only-in-subst">
                                     <constraint>
                                         <s:assert
                                             test="not(@rend='repassé') or (@rend='repassé' and parent::subst)"
@@ -3344,6 +3344,7 @@ CC 3778 Li casteax ne doutoit assaut
                                 <classRef key="placeName"/>
                                 <elementRef key="subst"/>
                                 <!-- Pour les cas de corrections à un niveau supérieur au mot -->
+                                <elementRef key="choice"/>
                             </alternate>
                         </content>
                     </elementSpec>
@@ -3527,7 +3528,7 @@ CC 3778 Li casteax ne doutoit assaut
 
                     <moduleRef key="textstructure" include="TEI back body front div text"/>
                     <elementSpec ident="TEI" mode="change">
-                        <!--<constraintSpec ident="TEI_xml:id" scheme="isoschematron">
+                        <!--<constraintSpec ident="TEI_xml:id" scheme="schematron">
                             <constraint>
                                 
                             </constraint>
@@ -3698,7 +3699,7 @@ CC 3778 Li casteax ne doutoit assaut
                                 <classRef key="model.pPart.transcriptional"/>
                             </alternate>
                         </content>
-                        <constraintSpec ident="noBlanksInW" scheme="isoschematron">
+                        <constraintSpec ident="noBlanksInW" scheme="schematron">
                             <constraint>
                                 <s:assert
                                     test=".[not(child::text()[normalize-space(.) != '' and contains(., ' ')])]"
@@ -3790,7 +3791,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec type="atts" module="namesdates" ident="att.datable.custom"
                         mode="delete"/>
                     <elementSpec ident="persName" module="namesdates" mode="change">
-                        <constraintSpec scheme="isoschematron" ident="persNameContent">
+                        <constraintSpec scheme="schematron" ident="persNameContent">
                         <constraint>
                             <s:rule
                                 context="//tei:body//tei:persName">
@@ -4141,7 +4142,9 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                     </elementSpec>
                     <elementSpec ident="measure" mode="change">
-                        <content/>
+                        <content>
+                            <empty/>
+                        </content>
                         <attList>
                             <attDef ident="quantity" mode="change" usage="req"/>
                             <attDef ident="unit" mode="change" usage="req">
@@ -4220,7 +4223,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </attList>
                     </elementSpec>
                     <elementSpec ident="origDate" mode="change">
-                        <constraintSpec scheme="isoschematron"
+                        <constraintSpec scheme="schematron"
                             ident="origDate-when-or-from-to-or-notBefore-notAfteer">
                             <constraint>
                                 <s:assert
