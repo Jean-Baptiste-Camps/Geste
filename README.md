@@ -57,6 +57,15 @@ Le modèle est contenu dans le dossier:
 Les données sont en outre disponibles en format:
 
 - `tsv`: avec l'annotation linguistique;
-- `txt`: exports en texte brut;
-- `nemo-data`: conversion au format CapiTainS, pour publication.
+- `txt`: exports en texte brut.
+
+L'archive contient également:
+
+- `css`: des feuilles de style pour les documents xml;
+- `doc`: de la documentation sur l'annotation linguistique;
+- `dtd`: les entités utilisées pour les éditions allographétiques;
+- `xsl`: des feuilles de transformation et exports variés des données.
+
+
+
 
