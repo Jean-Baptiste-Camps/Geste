@@ -4,7 +4,8 @@ pour ces fragments, comme pour ceux du même lot, il faut:
 - corriger les problèmes de validité
 
 --><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrBa" xml:lang="fr" type="ed" version="5" corresp="jns5643">
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrBa" xml:lang="fr" type="ed" version="5" corresp="jns5643">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -270,7 +271,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000047" lemma="i2" pos="PROadv">i</w>
                <w xml:id="edB_w_000048" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
                <w xml:id="edB_w_000049" lemma="a3" pos="PRE">a</w>
-               <w xml:id="edB_w_000050" lemma="vint+mil1" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r"><pc type="orig">.</pc>xx<hi rend="superscript"><pc type="orig">.</pc>m<pc type="orig">.</pc></hi></w>
+               <w xml:id="edB_w_000050" lemma="vint+mil1" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.xx<hi rend="superscript">.m.</hi></w>
                <w xml:id="edB_w_000051" lemma="compagnon" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">compaingnons</w>
             </l>
             <lb n="2"/>
@@ -287,21 +288,15 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             </l>
             <lb n="3"/>
             <l xml:id="edB_l_9" n="9">
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000060" lemma="" pos="OUT">S</w><!-- JBC: nom propre à résoudre ? -->
-               <pc type="orig">.</pc>
+               
+               <w xml:id="edB_w_000060" lemma="" pos="OUT">.S.</w><!-- JBC: nom propre à résoudre ? -->
                <w xml:id="edB_w_000061" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r" rend="elision">l</w>
                <w xml:id="edB_w_000062" lemma="en2" pos="PROadv">en</w>
                <w xml:id="edB_w_000063" lemma="depriier" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">deprie</w>
                <w xml:id="edB_w_000064" lemma="qui" pos="OUT" rend="aggl">qui</w>
                <w xml:id="edB_w_000065" lemma="mout" pos="ADVgen" msd="DEGRE=-">
                   <choice>
-                     <abbr>
-                        <choice>
-                           <abbr>mlt'</abbr>
-                           <expan>m<ex>ou</ex>lt</expan>
-                        </choice>
-                     </abbr>
+                     <abbr>mlt'</abbr>
                      <expan>m<ex>ou</ex>lt</expan>
                   </choice>
                </w>
@@ -323,7 +318,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000073" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">roi</w>
                <w xml:id="edB_w_000074" lemma="Charles" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>kl'<pc type="orig">.</pc></abbr>
+                     <abbr>.kl'.</abbr>
                      <expan>k<ex>ar</ex>l<ex><!--us-->on</ex></expan>
                      <!-- JBC: 'on' (il faut que ça assonne !) -->
                   </choice>
@@ -386,7 +381,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000108" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">lui</w>
                <w xml:id="edB_w_000109" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
                <w xml:id="edB_w_000110" lemma="dis1+mil1" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r"><!--<choice>
-                     <abbr>--><pc type="orig">.</pc>x<pc type="orig">.</pc><hi rend="superscript">m</hi><!--</abbr>
+                     <abbr>-->.x.<hi rend="superscript">m</hi><!--</abbr>
                      <expan>10 000</expan>
                   </choice>--></w>
                <w xml:id="edB_w_000111" lemma="compagnon" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">compaingnons</w>
@@ -406,7 +401,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000119" lemma="por2" pos="PRE">por</w>
                <w xml:id="edB_w_000120" lemma="paien" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aiens</ex></expan>
                   </choice>
                </w>
@@ -474,9 +469,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <lb n="16"/>
             <l xml:id="edB_l_22" n="22">
                <w xml:id="edB_w_000155" lemma="a3" pos="PRE">À</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000156" lemma="catre" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">IIII</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000156" lemma="catre" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">.IIII.</w>
                <w xml:id="edB_w_000157" lemma="lieue" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">liues</w>
                <w xml:id="edB_w_000158" lemma="de" pos="PRE">de</w>
                <w xml:id="edB_w_000159" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
@@ -606,7 +599,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000228" lemma="estre1" pos="VERcjg" msd="MODE=sub|TEMPS=ipf|PERS.=3|NOMB.=p" cert="low">fuissent</w>
                <w xml:id="edB_w_000229" lemma="paien" pos="OUT" rend="aggl">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aiens</ex></expan>
                   </choice>
                </w>
@@ -654,9 +647,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000244" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
                <w xml:id="edB_w_000245" lemma="plus" pos="ADVgen" msd="DEGRE=-">plus</w>
                <w xml:id="edB_w_000246" lemma="de" pos="PRE">de</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000247" lemma="trois" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">III</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000247" lemma="trois" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.III.</w>
                <w xml:id="edB_w_000248" lemma="mil1" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">mil</w>
             </l>
             <lb n="31"/>
@@ -665,9 +656,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000249" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
                <w xml:id="edB_w_000250" lemma="armer" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">armes</w>
                <w xml:id="edB_w_000251" lemma="sor2" pos="PRE">sor</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000252" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000252" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_000253" lemma="destrier1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">destrier</w>
                <w xml:id="edB_w_000254" lemma="de" pos="PRE">de</w>
                <w xml:id="edB_w_000255" lemma="pris1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">pris</w>
@@ -697,9 +686,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000267" lemma="escu" pos="OUT">escu</w>
                <w xml:id="edB_w_000268" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
                <w xml:id="edB_w_000269" lemma="escrire" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r">escrit</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000270" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000270" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_000271" lemma="mastin" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">mastin</w>
             </l>
             <lb n="35"/>
@@ -726,9 +713,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                      <expan>ch<ex>evalie</ex>rs</expan>
                   </choice>
                </w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000284" lemma="dis1" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">x</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000284" lemma="dis1" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.x.</w>
             </l>
             <lb n="37"/>
             <l xml:id="edB_l_43" n="43">
@@ -898,9 +883,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000373" lemma="ne1" pos="ADVneg">ne</w>
                <w xml:id="edB_w_000374" lemma="prisier" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">prisent</w>
                <w xml:id="edB_w_000375" lemma="valoir" pos="VERppa" msd="NOMB.=s|GENRE=m|CAS=r">vaillant</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000376" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000376" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">.i.</w>
                <w xml:id="edB_w_000377" lemma="angevin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">angeuin</w>
             </l>
             <lb n="9"/>
@@ -954,9 +937,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000402" lemma="i2" pos="PROadv">i</w>
                <w xml:id="edB_w_000403" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
                <w xml:id="edB_w_000404" lemma="de" pos="PRE">de</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_000405" lemma="carante+sis2" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">XLVI</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_000405" lemma="carante+sis2" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.XLVI.</w>
             </l>
             <lb n="13"/>
             <l xml:id="edB_l_63" n="63">
@@ -1589,7 +1570,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000813" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p">orent</w>
                <w xml:id="edB_w_000814" lemma="paien" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aiens</ex></expan>
                   </choice>
                </w>
@@ -1797,7 +1778,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000946" lemma="fuir" pos="VERppa" msd="NOMB.=x|GENRE=x|CAS=x">fuiant</w>
                <w xml:id="edB_w_000947" lemma="paien" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aiens</ex></expan>
                   </choice>
                   <!--et-->
@@ -1881,7 +1862,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_000998" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">Dient</w>
                <w xml:id="edB_w_000999" lemma="paien" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aiens</ex></expan>
                   </choice>
                   <!--male-->
@@ -2082,12 +2063,10 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <lb n="10"/>
             <l xml:id="edB_l_155" n="155">
                <w xml:id="edB_w_001102" lemma="ferir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">Fiert</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001103" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001103" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.i.</w>
                <w xml:id="edB_w_001104" lemma="paien" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>p<pc type="orig">.</pc></abbr>
+                     <abbr>.p.</abbr>
                      <expan>p<ex>aien</ex></expan>
                   </choice>
                </w>
@@ -2189,9 +2168,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_164" n="164">
                <w xml:id="edB_w_001166" lemma="là" pos="ADVgen" msd="DEGRE=-">La</w>
                <w xml:id="edB_w_001167" lemma="vëoir" pos="VERcjg" msd="MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=p">ueissies</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001168" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001168" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_001169" lemma="estor2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">estor</w>
                <w xml:id="edB_w_001170" lemma="principal" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">principel</w>
             </l>
@@ -2345,8 +2322,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_178" n="178">
                <w xml:id="edB_w_001266" lemma="o4" pos="PRE">O</w>
                <w xml:id="edB_w_001267" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">lui</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001268" lemma="trois+cent" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">III<hi rend="superscript">c</hi></w>
+               <w xml:id="edB_w_001268" lemma="trois+cent" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.III<hi rend="superscript">c</hi></w>
                <w xml:id="edB_w_001269" lemma="de" pos="PRE">de</w>
                <w xml:id="edB_w_001270" lemma="chevalier" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">
                   <choice>
@@ -2415,7 +2391,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001296" lemma="ci" pos="ADVgen" msd="DEGRE=-">ci</w>
                <w xml:id="edB_w_001297" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -2504,7 +2480,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001348" lemma="portant" pos="ADVgen" msd="DEGRE=-">porquant</w>
                <w xml:id="edB_w_001349" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -2535,15 +2511,13 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001364" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
                <w xml:id="edB_w_001365" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
                <w xml:id="edB_w_001366" lemma="plus" pos="ADVgen" msd="DEGRE=-">plus</w>
                <w xml:id="edB_w_001367" lemma="de" pos="PRE">de</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001368" lemma="cent" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">c</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001368" lemma="cent" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.c.</w>
                <w xml:id="edB_w_001369" lemma="afoler1" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=r">affoles</w>
             </l>
             <lb n="2"/>
@@ -2584,13 +2558,11 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             </l>
             <lb n="5"/>
             <l xml:id="edB_l_195" n="195">
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001392" lemma="un" pos="PROcar" msd="NOMB.=s|GENRE=m|CAS=n">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001392" lemma="un" pos="PROcar" msd="NOMB.=s|GENRE=m|CAS=n">.I.</w>
                <w xml:id="edB_w_001393" lemma="de+le" pos="PRE.DETdef|NOMB.=p|GENRE=m|CAS=r">des</w>
                <w xml:id="edB_w_001394" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -2637,7 +2609,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001423" lemma="devant" pos="PRE">Deuant</w>
                <w xml:id="edB_w_001424" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -2678,9 +2650,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_202" n="202">
                <w xml:id="edB_w_001446" lemma="et" pos="CONcoo">Et</w>
                <w xml:id="edB_w_001447" lemma="ferir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">fiert</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001448" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001448" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_001449" lemma="autre" pos="PROind" msd="NOMB.=s|GENRE=m|CAS=r">autre</w>
                <w xml:id="edB_w_001450" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
                <w xml:id="edB_w_001451" lemma="chief1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">chief</w>
@@ -2701,7 +2671,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001458" lemma="bien1" pos="ADVgen" msd="DEGRE=p">bien</w>
                <w xml:id="edB_w_001459" lemma="Malveisin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n" rend="elision">
                   <choice>
-                     <abbr><pc type="orig">.</pc>Mau ͛<pc type="orig">.</pc></abbr>
+                     <abbr>.Mau ͛.</abbr>
                      <expan>Mau<ex>voisin</ex></expan>
                   </choice>
                </w>
@@ -2714,7 +2684,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001463" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">rois</w>
                <w xml:id="edB_w_001464" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>Ger‘<pc type="orig">.</pc></abbr>
+                     <abbr>.Ger‘.</abbr>
                      <expan>Ger<ex>bert</ex></expan>
                   </choice>
                </w>
@@ -2738,7 +2708,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_206" n="206">
                <w xml:id="edB_w_001477" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>H‘<pc type="orig">.</pc></abbr>
+                     <abbr>H‘.</abbr>
                      <expan>H<ex>ernaut</ex></expan>
                   </choice>
                </w>
@@ -2849,7 +2819,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001524" lemma="gent1" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">gens</w>
                <w xml:id="edB_w_001525" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr><pc type="orig">.</pc>fro<pc type="orig">.</pc></abbr>
+                     <abbr>.fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -2931,7 +2901,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_220" n="220">
                <w xml:id="edB_w_001569" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>Frod‘<pc type="orig">.</pc></abbr>
+                     <abbr>Frod‘.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
@@ -2965,9 +2935,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <lb n="33"/>
             <l xml:id="edB_l_223" n="223">
                <w xml:id="edB_w_001590" lemma="ferir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">Fiert</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001591" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001591" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.i.</w>
                <w xml:id="edB_w_001592" lemma="gascon" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">gascoing</w>
                <w xml:id="edB_w_001593" lemma="sor2" pos="PRE">sor</w>
                <w xml:id="edB_w_001594" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
@@ -3024,9 +2992,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             </l>
             <lb n="39"/>
             <l xml:id="edB_l_229" n="229">
-               <w xml:id="edB_w_001630" lemma="jusque" pos="PRE">Jusq</w>
-               <pc type="orig">'</pc>
-               <!-- ? -->
+               <w xml:id="edB_w_001630" lemma="jusque" pos="PRE">Jusq<reg>'</reg></w>
                <w xml:id="edB_w_001631" lemma="en1+le" pos="PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">el</w>
                <w xml:id="edB_w_001632" lemma="piz" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">pis</w>
                <w xml:id="edB_w_001633" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
@@ -3185,9 +3151,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <app>
                   <witDetail wit="#fragm"><cb n="3c"/></witDetail>
                </app>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001712" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001712" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">.I.</w>
                <w xml:id="edB_w_001713" lemma="chevalier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
                      <abbr>chr‘s</abbr>
@@ -3278,9 +3242,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             </l>
             <lb n="12"/>
             <l xml:id="edB_l_248" n="248">
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001762" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=n">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001762" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=n">.I.</w>
                <w xml:id="edB_w_001763" lemma="Bordelois" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">bordelois</w>
                <w xml:id="edB_w_001764" lemma="aler" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">vait</w>
                <w xml:id="edB_w_001765" lemma="en1" pos="PRE">an</w>
@@ -3325,7 +3287,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_252" n="252">
                <w xml:id="edB_w_001793" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>Fro<pc type="orig">.</pc></abbr>
+                     <abbr>Fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -3400,7 +3362,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001838" lemma="conte1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">quens</w>
                <w xml:id="edB_w_001839" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr><pc type="orig">.</pc>h‘<pc type="orig">.</pc></abbr>
+                     <abbr>.h‘.</abbr>
                      <expan>H<ex>ernaut</ex></expan>
                   </choice>
                </w>
@@ -3436,7 +3398,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_261" n="261">
                <w xml:id="edB_w_001859" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>Fro<pc type="orig">.</pc></abbr>
+                     <abbr>Fro.</abbr>
                      <expan>Fro<ex>mon<!--din--></ex></expan>
                   </choice>
                </w>
@@ -3477,9 +3439,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <l xml:id="edB_l_264" n="264">
                <w xml:id="edB_w_001885" lemma="là" pos="ADVgen" msd="DEGRE=-">La</w>
                <w xml:id="edB_w_001886" lemma="laissier" pos="VERcjg" msd="MODE=sub|TEMPS=ipf|PERS.=2|NOMB.=p">ueissies</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001887" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001887" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.i.</w>
                <w xml:id="edB_w_001888" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">grant</w>
                <w xml:id="edB_w_001889" lemma="abatëiz" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">abateis</w>
             </l>
@@ -3503,9 +3463,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001897" lemma="et" pos="CONcoo">Et</w>
                <w xml:id="edB_w_001898" lemma="avuec" pos="ADVgen" msd="DEGRE=-">auuec</w>
                <w xml:id="edB_w_001899" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">lui</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001900" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001900" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">.i.</w>
                <w xml:id="edB_w_001901" lemma="escuier2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">escuiers</w>
                <w xml:id="edB_w_001902" lemma="gentil" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">gentis</w>
             </l>
@@ -3550,9 +3508,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
             <lb n="34"/>
             <l xml:id="edB_l_270" n="270">
                <w xml:id="edB_w_001926" lemma="vers2" pos="PRE">Vers</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001927" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001927" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_001928" lemma="boscet" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">boschet</w>
                <w xml:id="edB_w_001929" lemma="comencier" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">commancent</w>
                <w xml:id="edB_w_001930" lemma="a3" pos="PRE">a</w>
@@ -3591,9 +3547,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001945" lemma="ensemble" pos="ADVgen" msd="DEGRE=-">Ensamble</w>
                <w xml:id="edB_w_001946" lemma="o4" pos="PRE">o</w>
                <w xml:id="edB_w_001947" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">lui</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001948" lemma="cent" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">c</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001948" lemma="cent" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.c.</w>
                <w xml:id="edB_w_001949" lemma="chevalier" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">
                   <choice>
                      <abbr>chr‘s</abbr>
@@ -3610,9 +3564,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001954" lemma="ne1" pos="ADVneg">ne</w>
                <w xml:id="edB_w_001955" lemma="valoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">uaut</w>
                <w xml:id="edB_w_001956" lemma="valoir" pos="VERppa" msd="NOMB.=s|GENRE=m|CAS=r">vaillant</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001957" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">i</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001957" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">.i.</w>
                <w xml:id="edB_w_001958" lemma="angevin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">angeuin</w>
             </l>
             <lb n="39"/>
@@ -3620,7 +3572,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001959" lemma="que4" pos="CONsub">Que</w>
                <w xml:id="edB_w_001960" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>frod<pc type="orig">.</pc></abbr>
+                     <abbr>frod.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
@@ -3635,7 +3587,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001966" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">rois</w>
                <w xml:id="edB_w_001967" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>gir'<pc type="orig">.</pc></abbr>
+                     <abbr>gir'.</abbr>
                      <expan>Gir<ex>bert</ex></expan>
                   </choice>
                </w>
@@ -3667,9 +3619,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001982" lemma="ne1" pos="ADVneg" rend="elision">n</w>
                <w xml:id="edB_w_001983" lemma="en2" pos="PROadv">en</w>
                <w xml:id="edB_w_001984" lemma="eschaper" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">eschapa</w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001985" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001985" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">.I.</w>
                <w xml:id="edB_w_001986" lemma="vivre1" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">vis</w>
             </l>
             <lb n="43"/>
@@ -3677,13 +3627,11 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001987" lemma="fors1" pos="ADVgen" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">Fors</w>
                <w xml:id="edB_w_001988" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>Frod<pc type="orig">.</pc></abbr>
+                     <abbr>Frod.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
-               <pc type="orig">.</pc>
-               <w xml:id="edB_w_001989" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-               <pc type="orig">.</pc>
+               <w xml:id="edB_w_001989" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                <w xml:id="edB_w_001990" lemma="escuier2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">escuier</w>
                <w xml:id="edB_w_001991" lemma="Oli" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">oli</w>
             </l>
@@ -3693,7 +3641,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_001993" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">rois</w>
                <w xml:id="edB_w_001994" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>gir'<pc type="orig">.</pc></abbr>
+                     <abbr>gir'.</abbr>
                      <expan>Gir<ex>bert</ex></expan>
                   </choice>
                </w>
@@ -3754,7 +3702,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_002022" lemma="mie" pos="ADVneg">mie</w>
                <w xml:id="edB_w_002023" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr>frod‘<pc type="orig">.</pc></abbr>
+                     <abbr>frod‘.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
@@ -3772,7 +3720,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_002028" lemma="que4" pos="CONsub">que</w>
                <w xml:id="edB_w_002029" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                   <choice>
-                     <abbr>frod‘<pc type="orig">.</pc></abbr>
+                     <abbr>frod‘.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
@@ -3804,7 +3752,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_002044" lemma="orgoillos" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=-">orguillox</w>
                <w xml:id="edB_w_002045" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr>frod‘<pc type="orig">.</pc></abbr>
+                     <abbr>frod‘.</abbr>
                      <expan>Fro<ex>mon</ex>d<ex>in</ex></expan>
                   </choice>
                </w>
@@ -3847,7 +3795,7 @@ pour ces fragments, comme pour ceux du même lot, il faut:
                <w xml:id="edB_w_002069" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">roi</w>
                <w xml:id="edB_w_002070" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                   <choice>
-                     <abbr>gir‘<pc type="orig">.</pc></abbr>
+                     <abbr>gir‘.</abbr>
                      <expan>Gir<ex>bert</ex></expan>
                   </choice>
                </w>
