@@ -92,6 +92,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="draft">
+            <change who="#JBC" when="2020-07-17">Mise à jour de l'encodage de l'annotation linguistique, de la ponctuation, élision, tokénisation et des chiffres romains.</change>
             <change when="2018-11" who="#JBC" status="draft">Correction, renumérotation, intégration de l'étiquetage relu par Alice Cochet</change>
             <change when="201808" who="#JBC" status="draft">Correction du document</change>
             <change who="#ED" when="2018-03-12" status="draft">Encodage de la structure
@@ -142,84 +143,82 @@
 
                 <lb n="9"/>
                 <l xml:id="Meyer_2_l_1" n="1">
-                    <w xml:id="Meyer_2_w_000001" lemma="relenquir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r"><supplied resp="#Meyer" reason="damage" rend="italic">Relen</supplied>qui</w>
-                    <w xml:id="Meyer_2_w_000002" lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
-                    <w xml:id="Meyer_2_w_000003" lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n"><choice>
-                            <abbr>Fro<pc type="supplied">.</pc></abbr>
+                    <w xml:id="Meyer_2_w_000001" lemma="relenquir" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r"><supplied resp="#Meyer" reason="damage" rend="italic">Relen</supplied>qui</w>
+                    <w xml:id="Meyer_2_w_000002" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
+                    <w xml:id="Meyer_2_w_000003" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                            <abbr>Fro.</abbr>
                             <expan>Fro<ex>mont</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000004" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">lo</w>
-                    <w xml:id="Meyer_2_w_000005" lemma="pöestëif" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">poestis</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000004" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">lo</w>
+                    <w xml:id="Meyer_2_w_000005" lemma="pöestëif" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">poestis</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
                 <lb n="10"/>
                 <l xml:id="Meyer_2_l_2" n="2">
                     <supplied resp="#Meyer" reason="damage" rend="italic">
-                        <!--<w lemma="or4" type="POS=ADVgen|DEGRE=-" >-->Or<!--</w>-->
-                        <!--<w lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r" >-->vos<!--</w>-->
+                        <!--<w lemma="or4" pos="ADVgen" msd="DEGRE=-" >-->Or<!--</w>-->
+                        <!--<w lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=r" >-->vos<!--</w>-->
                     </supplied>
-                    <w xml:id="Meyer_2_w_000006" lemma="laissier" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s">lerrai</w>
-                    <w xml:id="Meyer_2_w_000007" lemma="de" type="POS=PRE">de</w>
-                    <w xml:id="Meyer_2_w_000008" lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
+                    <w xml:id="Meyer_2_w_000006" lemma="laissier" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s">lerrai</w>
+                    <w xml:id="Meyer_2_w_000007" lemma="de" pos="PRE">de</w>
+                    <w xml:id="Meyer_2_w_000008" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
                             <abbr>Gyb'</abbr>
                             <expan>Gyb<ex>ert</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000009" lemma="ester" type="POS=VERinf">ester</w>
-                    <w xml:id="Meyer_2_w_000010" lemma="ci" type="POS=ADVgen|DEGRE=-">ci</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000009" lemma="ester" pos="VERinf">ester</w>
+                    <w xml:id="Meyer_2_w_000010" lemma="ci" pos="ADVgen" msd="DEGRE=-">ci</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </l>
                 <lb n="11"/>
                 <l xml:id="Meyer_2_l_3" n="3">
                     <supplied resp="#Meyer" reason="damage" rend="italic">Quant</supplied>
-                    <w xml:id="Meyer_2_w_000011" lemma="lieu" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">leus</w>
-                    <w xml:id="Meyer_2_w_000012" lemma="en2" type="POS=PROadv">en</w>
-                    <w xml:id="Meyer_2_w_000013" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s">iert</w>
-                    <w xml:id="Meyer_2_w_000014" lemma="bien1" type="POS=ADVgen|DEGRE=p">bien</w>
-                    <w xml:id="Meyer_2_w_000015" lemma="savoir" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p">savron</w>
-                    <w xml:id="Meyer_2_w_000016" lemma="revenir" type="POS=VERinf">revenir</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000011" lemma="lieu" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">leus</w>
+                    <w xml:id="Meyer_2_w_000012" lemma="en2" pos="PROadv">en</w>
+                    <w xml:id="Meyer_2_w_000013" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s">iert</w>
+                    <w xml:id="Meyer_2_w_000014" lemma="bien1" pos="ADVgen" msd="DEGRE=p">bien</w>
+                    <w xml:id="Meyer_2_w_000015" lemma="savoir" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p">savron</w>
+                    <w xml:id="Meyer_2_w_000016" lemma="revenir" pos="VERinf">revenir</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </l>
                 <lb n="12"/>
                 <l xml:id="Meyer_2_l_4" n="4">
                     <supplied resp="#Meyer" reason="damage" rend="italic">Et</supplied>
-                    <w xml:id="Meyer_2_w_000017" lemma="chanter" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p"><supplied resp="#Meyer" reason="damage" rend="italic">cha</supplied>nterons</w>
-                    <w xml:id="Meyer_2_w_000018" lemma="de" type="POS=PRE">de</w>
-                    <w xml:id="Meyer_2_w_000019" lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr>Fro<pc type="supplied">.</pc></abbr>
+                    <w xml:id="Meyer_2_w_000017" lemma="chanter" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p"><supplied resp="#Meyer" reason="damage" rend="italic">cha</supplied>nterons</w>
+                    <w xml:id="Meyer_2_w_000018" lemma="de" pos="PRE">de</w>
+                    <w xml:id="Meyer_2_w_000019" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr>Fro.</abbr>
                             <expan>Fro<ex>mont</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000020" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000021" lemma="florir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">flori</w>
+                    <w xml:id="Meyer_2_w_000020" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000021" lemma="florir" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r">flori</w>
                 </l>
                 <lb n="13"/>
                 <l xml:id="Meyer_2_l_5" n="5">
                     <!-- JBC: segmentation -->
                     <supplied resp="#Meyer" reason="damage" rend="italic">Et de</supplied>
-                    <w xml:id="Meyer_2_w_000022" lemma="Guilaume" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr><supplied resp="#Meyer" reason="damage" rend="italic">Gui</supplied>ll<pc type="supplied">.</pc></abbr>
+                    <w xml:id="Meyer_2_w_000022" lemma="Guilaume" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr><supplied resp="#Meyer" reason="damage" rend="italic">Gui</supplied>ll.</abbr>
                             <expan>Guill<ex>aume</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000023" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000024" lemma="parent" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">parent</w>
-                    <w xml:id="Meyer_2_w_000025" lemma="Fromondin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Fromondin</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000023" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000024" lemma="parent" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">parent</w>
+                    <w xml:id="Meyer_2_w_000025" lemma="Fromondin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Fromondin</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
                 <lb n="14"/>
                 <l xml:id="Meyer_2_l_6" n="6">
                     <supplied resp="#Meyer" reason="damage" rend="italic">A
-                        <choice><abbr>Fro<pc type="orig">.</pc></abbr>
+                        <choice><abbr>Fro.</abbr>
                         <expan>Fro<ex>mont</ex></expan></choice></supplied>
-                    <w xml:id="Meyer_2_w_000026" lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint</w>
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000027" lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=n">j</w>
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000028" lemma="mes3" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">mes</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000029" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000030" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i">li</w>
-                    <w xml:id="Meyer_2_w_000031" lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
-                    <w xml:id="Meyer_2_w_000032" lemma="dire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">dit</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000026" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint</w>
+                    <w xml:id="Meyer_2_w_000027" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=n">.j.</w>
+                    <w xml:id="Meyer_2_w_000028" lemma="mes3" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">mes</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000029" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000030" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">li</w>
+                    <w xml:id="Meyer_2_w_000031" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
+                    <w xml:id="Meyer_2_w_000032" lemma="dire" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r">dit</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
 
                 <lb n="15"/>
@@ -235,125 +234,119 @@
 
                 <lb n="27"/>
                 <l xml:id="Meyer_2_l_7" n="7">
-                    <w xml:id="Meyer_2_w_000033" lemma="bien1" type="POS=ADVgen|DEGRE=p">Bien</w>
-                    <w xml:id="Meyer_2_w_000034" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                    <w xml:id="Meyer_2_w_000035" lemma="vestir" type="POS=VERppe|NOMB.=s|GENRE=f|CAS=n">vestue</w>
-                    <w xml:id="Meyer_2_w_000036" lemma="de" type="POS=PRE" rend="elision">d</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000037" lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r">un</w>
-                    <w xml:id="Meyer_2_w_000038" lemma="peliçon" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">peliçon</w>
-                    <w xml:id="Meyer_2_w_000039" lemma="ermin" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">hermin</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000033" lemma="bien1" pos="ADVgen" msd="DEGRE=p">Bien</w>
+                    <w xml:id="Meyer_2_w_000034" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                    <w xml:id="Meyer_2_w_000035" lemma="vestir" pos="VERppe" msd="NOMB.=s|GENRE=f|CAS=n">vestue</w>
+                    <w xml:id="Meyer_2_w_000036" lemma="de" pos="PRE" rend="elision">d<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000037" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">un</w>
+                    <w xml:id="Meyer_2_w_000038" lemma="peliçon" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">peliçon</w>
+                    <w xml:id="Meyer_2_w_000039" lemma="ermin" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">hermin</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </l>
                 <lb n="28"/>
                 <l xml:id="Meyer_2_l_8" n="8">
-                    <w xml:id="Meyer_2_w_000040" lemma="et" type="POS=CONcoo">Et</w>
-                    <w xml:id="Meyer_2_w_000041" lemma="par" type="POS=PRE">par</w>
-                    <w xml:id="Meyer_2_w_000042" lemma="desus" type="POS=ADVgen|DEGRE=-">desus</w>
-                    <w xml:id="Meyer_2_w_000043" lemma="de" type="POS=PRE" rend="elision">d</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000044" lemma="un" type="POS=DETndf|NOMB.=s|GENRE=m|CAS=r">un</w>
-                    <w xml:id="Meyer_2_w_000045" lemma="paile" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">paile</w>
-                    <w xml:id="Meyer_2_w_000046" lemma="alexandrin" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">alexandrin</w>
+                    <w xml:id="Meyer_2_w_000040" lemma="et" pos="CONcoo">Et</w>
+                    <w xml:id="Meyer_2_w_000041" lemma="par" pos="PRE">par</w>
+                    <w xml:id="Meyer_2_w_000042" lemma="desus" pos="ADVgen" msd="DEGRE=-">desus</w>
+                    <w xml:id="Meyer_2_w_000043" lemma="de" pos="PRE" rend="elision">d<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000044" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">un</w>
+                    <w xml:id="Meyer_2_w_000045" lemma="paile" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">paile</w>
+                    <w xml:id="Meyer_2_w_000046" lemma="alexandrin" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">alexandrin</w>
                 </l>
                 <l xml:id="Meyer_2_l_9" n="9">
-                    <w xml:id="Meyer_2_w_000047" lemma="a3" type="POS=PRE">A</w>
-                    <w xml:id="Meyer_2_w_000048" lemma="bende" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">bendes</w>
-                    <w xml:id="Meyer_2_w_000049" lemma="de" type="POS=PRE" rend="elision">d</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000050" lemma="or1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">or</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000051" lemma="mout" type="POS=ADVgen|DEGRE=-">mout</w>
-                    <w xml:id="Meyer_2_w_000052" lemma="noblement" type="POS=ADVgen|DEGRE=p">noblement</w>
-                    <w xml:id="Meyer_2_w_000053" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
-                    <w xml:id="Meyer_2_w_000054" lemma="sëoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">sist</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000047" lemma="a3" pos="PRE">A</w>
+                    <w xml:id="Meyer_2_w_000048" lemma="bende" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">bendes</w>
+                    <w xml:id="Meyer_2_w_000049" lemma="de" pos="PRE" rend="elision">d<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000050" lemma="or1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">or</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000051" lemma="mout" pos="ADVgen" msd="DEGRE=-">mout</w>
+                    <w xml:id="Meyer_2_w_000052" lemma="noblement" pos="ADVgen" msd="DEGRE=p">noblement</w>
+                    <w xml:id="Meyer_2_w_000053" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
+                    <w xml:id="Meyer_2_w_000054" lemma="sëoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">sist</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </l>
                 <l xml:id="Meyer_2_l_10" n="10">
-                    <w xml:id="Meyer_2_w_000055" lemma="frois1" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">Fresche</w>
-                    <w xml:id="Meyer_2_w_000056" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000057" lemma="vermeil1" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">vermeille</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000058" lemma="blanc" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">blanche</w>
-                    <w xml:id="Meyer_2_w_000059" lemma="come1" type="POS=CONsub">com</w>
-                    <w xml:id="Meyer_2_w_000060" lemma="flor1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">flor</w>
-                    <w xml:id="Meyer_2_w_000061" lemma="de" type="POS=PRE">de</w>
-                    <w xml:id="Meyer_2_w_000062" lemma="lis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">lis</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000055" lemma="frois1" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=n|DEGRE=p">Fresche</w>
+                    <w xml:id="Meyer_2_w_000056" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000057" lemma="vermeil1" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=n|DEGRE=p">vermeille</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000058" lemma="blanc" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=n|DEGRE=p">blanche</w>
+                    <w xml:id="Meyer_2_w_000059" lemma="come1" pos="CONsub">com</w>
+                    <w xml:id="Meyer_2_w_000060" lemma="flor1" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">flor</w>
+                    <w xml:id="Meyer_2_w_000061" lemma="de" pos="PRE">de</w>
+                    <w xml:id="Meyer_2_w_000062" lemma="lis" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">lis</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                     <note type="tradition">4 Vers qui ne se trouve que
-                            dans FG<pc type="supplied">.</pc></note>
+                            dans FG.</note>
                 </l>
                 <lb n="29"/>
                 <!-- <note type="numerotation_edition">5 </note> -->
                 <l xml:id="Meyer_2_l_11" n="11">
-                    <w xml:id="Meyer_2_w_000063" lemma="sor2" type="POS=PRE">Sor</w>
-                    <w xml:id="Meyer_2_w_000064" lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=f|CAS=r">ses</w>
-                    <w xml:id="Meyer_2_w_000065" lemma="espaule" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">espaules</w>
-                    <w xml:id="Meyer_2_w_000066" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
-                    <w xml:id="Meyer_2_w_000067" lemma="jesir" type="POS=VERcjg|MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=p">gesoient</w>
-                    <w xml:id="Meyer_2_w_000068" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000069" lemma="crin" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=n">crin</w>
+                    <w xml:id="Meyer_2_w_000063" lemma="sor2" pos="PRE">Sor</w>
+                    <w xml:id="Meyer_2_w_000064" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=p|GENRE=f|CAS=r">ses</w>
+                    <w xml:id="Meyer_2_w_000065" lemma="espaule" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">espaules</w>
+                    <w xml:id="Meyer_2_w_000066" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
+                    <w xml:id="Meyer_2_w_000067" lemma="jesir" pos="VERcjg" msd="MODE=ind|TEMPS=ipf|PERS.=3|NOMB.=p">gesoient</w>
+                    <w xml:id="Meyer_2_w_000068" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000069" lemma="crin" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=n">crin</w>
                     <!--<w/>-->
                 </l>
                 <lb n="30"/>
                 <l xml:id="Meyer_2_l_12" n="12">
-                    <w xml:id="Meyer_2_w_000070" lemma="trecier2" type="POS=VERppe|NOMB.=p|GENRE=m|CAS=n">Trecié</w>
-                    <w xml:id="Meyer_2_w_000071" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000072" lemma="bende" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">bende</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000073" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000074" lemma="come1" type="POS=CONsub">com</w>
-                    <w xml:id="Meyer_2_w_000075" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i">moi</w>
-                    <w xml:id="Meyer_2_w_000076" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
+                    <w xml:id="Meyer_2_w_000070" lemma="trecier2" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=n">Trecié</w>
+                    <w xml:id="Meyer_2_w_000071" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000072" lemma="bende" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">bende</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000073" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000074" lemma="come1" pos="CONsub">com</w>
+                    <w xml:id="Meyer_2_w_000075" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=i">moi</w>
+                    <w xml:id="Meyer_2_w_000076" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
                     <!-- JBC: non, gardons la segmentation de Meyer et étiquetons -->
-                    <w xml:id="Meyer_2_w_000077" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000078" lemma="vis2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">vis</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000077" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000078" lemma="vis2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">vis</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
                 <lb n="31"/>
                 <l xml:id="Meyer_2_l_13" n="13">
-                    <w xml:id="Meyer_2_w_000079" lemma="il" type="POS=PROimp|PERS.=0|NOMB.=s|GENRE=n|CAS=n">Il</w>
-                    <w xml:id="Meyer_2_w_000080" lemma="ne1" type="POS=ADVneg" rend="elision">n</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000081" lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
-                    <w xml:id="Meyer_2_w_000082" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000083" lemma="gent2" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p">gente</w>
-                    <w xml:id="Meyer_2_w_000084" lemma="en1" type="POS=PRE">en</w>
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000085" lemma="soissante" type="POS=DETcar|NOMB.=p|GENRE=m|CAS=r">lx</w>
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000086" lemma="päis" type="POS=NOMcom|NOMB.=p|GENRE=m|CAS=r">païs<note type="tradition">— 7 Ce vers aussi ne se
+                    <w xml:id="Meyer_2_w_000079" lemma="il" pos="PROimp" msd="PERS.=0|NOMB.=s|GENRE=n|CAS=n">Il</w>
+                    <w xml:id="Meyer_2_w_000080" lemma="ne1" pos="ADVneg" rend="elision">n<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000081" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
+                    <w xml:id="Meyer_2_w_000082" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000083" lemma="gent2" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=r|DEGRE=p">gente</w>
+                    <w xml:id="Meyer_2_w_000084" lemma="en1" pos="PRE">en</w>
+                    <w xml:id="Meyer_2_w_000085" lemma="60" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.lx.</w>
+                    <w xml:id="Meyer_2_w_000086" lemma="päis" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">païs<note type="tradition">— 7 Ce vers aussi ne se
                             trouve que dans FG.</note></w>
                 </l>
                 <lb n="32"/>
                 <l xml:id="Meyer_2_l_14" n="14">
-                    <w xml:id="Meyer_2_w_000087" lemma="de" type="POS=PRE">De</w>
-                    <w xml:id="Meyer_2_w_000088" lemma="nul" type="POS=DETind|NOMB.=s|GENRE=f|CAS=r">nule</w>
-                    <w xml:id="Meyer_2_w_000089" lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">terre</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000090" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000091" lemma="come1" type="POS=CONsub">comme</w>
-                    <w xml:id="Meyer_2_w_000092" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=n">je</w>
-                    <w xml:id="Meyer_2_w_000093" lemma="avoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">ai</w>
-                    <w xml:id="Meyer_2_w_000094" lemma="aprendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=r">apris<note type="tradition">— 8 A partir d‘ici,
+                    <w xml:id="Meyer_2_w_000087" lemma="de" pos="PRE">De</w>
+                    <w xml:id="Meyer_2_w_000088" lemma="nul" pos="DETind" msd="NOMB.=s|GENRE=f|CAS=r">nule</w>
+                    <w xml:id="Meyer_2_w_000089" lemma="terre" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">terre</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000090" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000091" lemma="come1" pos="CONsub">comme</w>
+                    <w xml:id="Meyer_2_w_000092" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">je</w>
+                    <w xml:id="Meyer_2_w_000093" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">ai</w>
+                    <w xml:id="Meyer_2_w_000094" lemma="aprendre" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r">apris<note type="tradition">— 8 A partir d‘ici,
                         jusqu‘au v. 23, comp. le fragment de
                             Troyes (col. C).</note></w>
                 </l>
                 <lb n="33"/>
                 <l xml:id="Meyer_2_l_15" n="15">
-                    <w xml:id="Meyer_2_w_000095" lemma="par" type="POS=PRE">Par</w>
-                    <w xml:id="Meyer_2_w_000096" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000097" lemma="poing" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">poing</w>
-                    <w xml:id="Meyer_2_w_000098" lemma="destre" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">dextre</w>
-                    <w xml:id="Meyer_2_w_000099" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">li</w>
-                    <w xml:id="Meyer_2_w_000100" lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">dus</w>
-                    <w xml:id="Meyer_2_w_000101" lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n"><choice>
-                            <abbr>Gyb<pc type="supplied">.</pc></abbr>
+                    <w xml:id="Meyer_2_w_000095" lemma="par" pos="PRE">Par</w>
+                    <w xml:id="Meyer_2_w_000096" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000097" lemma="poing" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">poing</w>
+                    <w xml:id="Meyer_2_w_000098" lemma="destre" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">dextre</w>
+                    <w xml:id="Meyer_2_w_000099" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">li</w>
+                    <w xml:id="Meyer_2_w_000100" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dus</w>
+                    <w xml:id="Meyer_2_w_000101" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                            <abbr>Gyb.</abbr>
                             <expan>Gyb<ex>ert</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000102" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w xml:id="Meyer_2_w_000103" lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">tint</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000102" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="Meyer_2_w_000103" lemma="tenir1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">tint</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
 
 
@@ -361,267 +354,262 @@
                 <lb n="1"/>
                 <!-- <note type="numerotation_edition">10 </note> -->
                 <l xml:id="Meyer_2_l_16" n="16">
-                    <w xml:id="Meyer_2_w_000104" lemma="atant" type="POS=ADVgen|DEGRE=-">Atant</w>
-                    <w xml:id="Meyer_2_w_000105" lemma="ez" type="POS=ADVgen|DEGRE=-">es</w>
-                    <w xml:id="Meyer_2_w_000106" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
-                    <w xml:id="Meyer_2_w_000107" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n" rend="elision">l</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000108" lemma="enfant" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">enffant</w>
-                    <w xml:id="Meyer_2_w_000109" lemma="Hernaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Herna</w>
-                    <w xml:id="Meyer_2_w_000110" lemma="où" type="POS=PROrel|NOMB.=s|GENRE=n|CAS=i">ou</w>
-                    <w xml:id="Meyer_2_w_000111" lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000104" lemma="atant" pos="ADVgen" msd="DEGRE=-">Atant</w>
+                    <w xml:id="Meyer_2_w_000105" lemma="ez" pos="ADVgen" msd="DEGRE=-">es</w>
+                    <w xml:id="Meyer_2_w_000106" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
+                    <w xml:id="Meyer_2_w_000107" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n" rend="elision">l<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000108" lemma="enfant" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">enffant</w>
+                    <w xml:id="Meyer_2_w_000109" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Herna</w>
+                    <w xml:id="Meyer_2_w_000110" lemma="où" pos="PROrel" msd="NOMB.=s|GENRE=n|CAS=i">ou</w>
+                    <w xml:id="Meyer_2_w_000111" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                     <note type="tradition">10 Hernaut dans FG; 
                         ailleurs Gibert.</note>
                 </l>
                 <lb n="2"/>
                 <l xml:id="Meyer_2_l_17" n="17">
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000112" lemma="un" type="POS=DETcar|NOMB.=s|GENRE=m|CAS=r">I</w>
-                    <pc type="supplied">.</pc>
-                    <w xml:id="Meyer_2_w_000113" lemma="esprevier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">espervier</w>
-                    <w xml:id="Meyer_2_w_000114" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w xml:id="Meyer_2_w_000115" lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">reïne</w>
-                    <w xml:id="Meyer_2_w_000116" lemma="tendre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">tendi</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000112" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
+                    <w xml:id="Meyer_2_w_000113" lemma="esprevier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">espervier</w>
+                    <w xml:id="Meyer_2_w_000114" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="Meyer_2_w_000115" lemma="röine1" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">reïne</w>
+                    <w xml:id="Meyer_2_w_000116" lemma="tendre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">tendi</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </l>
                 <lb n="3"/>
                 <l xml:id="Meyer_2_l_18" n="18">
-                    <w xml:id="Meyer_2_w_000117" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">Il</w>
-                    <w xml:id="Meyer_2_w_000118" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                    <w xml:id="Meyer_2_w_000119" lemma="mout" type="POS=ADVgen|DEGRE=-">mout</w>
-                    <w xml:id="Meyer_2_w_000120" lemma="bel1" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">beals</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000121" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n">la</w>
-                    <w xml:id="Meyer_2_w_000122" lemma="röine1" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">roïne</w>
-                    <w xml:id="Meyer_2_w_000123" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000124" lemma="prendre" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">prist</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000117" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">Il</w>
+                    <w xml:id="Meyer_2_w_000118" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                    <w xml:id="Meyer_2_w_000119" lemma="mout" pos="ADVgen" msd="DEGRE=-">mout</w>
+                    <w xml:id="Meyer_2_w_000120" lemma="bel1" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">beals</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000121" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=n">la</w>
+                    <w xml:id="Meyer_2_w_000122" lemma="röine1" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">roïne</w>
+                    <w xml:id="Meyer_2_w_000123" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000124" lemma="prendre" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">prist</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </l>
                 <lb n="4"/>
                 <l xml:id="Meyer_2_l_19" n="19">
-                    <w xml:id="Meyer_2_w_000125" lemma="par" type="POS=PRE">Par</w>
-                    <w xml:id="Meyer_2_w_000126" lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
-                    <w xml:id="Meyer_2_w_000127" lemma="chierté" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">chierté</w>
-                    <w xml:id="Meyer_2_w_000128" lemma="desor" type="POS=PRE">desor</w>
-                    <w xml:id="Meyer_2_w_000129" lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
-                    <w xml:id="Meyer_2_w_000130" lemma="poing" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">poing</w>
-                    <w xml:id="Meyer_2_w_000131" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000132" lemma="metre2" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">mist</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000125" lemma="par" pos="PRE">Par</w>
+                    <w xml:id="Meyer_2_w_000126" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
+                    <w xml:id="Meyer_2_w_000127" lemma="chierté" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">chierté</w>
+                    <w xml:id="Meyer_2_w_000128" lemma="desor" pos="PRE">desor</w>
+                    <w xml:id="Meyer_2_w_000129" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
+                    <w xml:id="Meyer_2_w_000130" lemma="poing" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">poing</w>
+                    <w xml:id="Meyer_2_w_000131" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000132" lemma="metre2" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">mist</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </l>
                 <lb n="5"/>
                 <l xml:id="Meyer_2_l_20" n="20">
-                    <w xml:id="Meyer_2_w_000133" lemma="devant" type="POS=PRE">Devant</w>
-                    <w xml:id="Meyer_2_w_000134" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000135" lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">rei</w>
-                    <w xml:id="Meyer_2_w_000136" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=n">la</w>
-                    <w xml:id="Meyer_2_w_000137" lemma="franc1" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=n|DEGRE=p">franche</w>
-                    <w xml:id="Meyer_2_w_000138" lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">dame</w>
-                    <w xml:id="Meyer_2_w_000139" lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint<note type="tradition">— 14 = FG— 19 = FG ;
+                    <w xml:id="Meyer_2_w_000133" lemma="devant" pos="PRE">Devant</w>
+                    <w xml:id="Meyer_2_w_000134" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000135" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">rei</w>
+                    <w xml:id="Meyer_2_w_000136" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=n">la</w>
+                    <w xml:id="Meyer_2_w_000137" lemma="franc1" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=n|DEGRE=p">franche</w>
+                    <w xml:id="Meyer_2_w_000138" lemma="dame" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">dame</w>
+                    <w xml:id="Meyer_2_w_000139" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">vint<note type="tradition">— 14 = FG— 19 = FG ;
                         les autres mss. ont
                                 <quote defective="false">Le me dona</quote>.</note></w>
                 </l>
                 <lb n="6"/>
                 <!-- <note type="numerotation_edition">15 </note> -->
                 <l xml:id="Meyer_2_l_21" n="21">
-                    <w xml:id="Meyer_2_w_000140" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">Li</w>
-                    <w xml:id="Meyer_2_w_000141" lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">rois</w>
-                    <w xml:id="Meyer_2_w_000142" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000143" lemma="vëoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">voit</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000144" lemma="cortoisement" type="POS=ADVgen|DEGRE=-">cortoisement</w>
-                    <w xml:id="Meyer_2_w_000145" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
-                    <w xml:id="Meyer_2_w_000146" lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dist</w>
-                    <pc type="supplied">:</pc>
+                    <w xml:id="Meyer_2_w_000140" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">Li</w>
+                    <w xml:id="Meyer_2_w_000141" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">rois</w>
+                    <w xml:id="Meyer_2_w_000142" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000143" lemma="vëoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">voit</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000144" lemma="cortoisement" pos="ADVgen" msd="DEGRE=-">cortoisement</w>
+                    <w xml:id="Meyer_2_w_000145" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=i">li</w>
+                    <w xml:id="Meyer_2_w_000146" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dist</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
                 </l>
                 <lb n="7"/>
                 <l xml:id="Meyer_2_l_22" n="22"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000147" lemma="cest" type="POS=DETdem|NOMB.=s|GENRE=m|CAS=n">Cist</w>
-                    <w xml:id="Meyer_2_w_000148" lemma="esprevier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">esperviers</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000149" lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">dame</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000150" lemma="où" type="POS=PROint|NOMB.=s|GENRE=m|CAS=r">ou</w>
-                    <w xml:id="Meyer_2_w_000151" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                    <w xml:id="Meyer_2_w_000152" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
-                    <w xml:id="Meyer_2_w_000153" lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">pris</w>
-                    <pc type="supplied">?</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000147" lemma="cest" pos="DETdem" msd="NOMB.=s|GENRE=m|CAS=n">Cist</w>
+                    <w xml:id="Meyer_2_w_000148" lemma="esprevier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">esperviers</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000149" lemma="dame" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">dame</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000150" lemma="où" pos="PROint" msd="NOMB.=s|GENRE=m|CAS=r">ou</w>
+                    <w xml:id="Meyer_2_w_000151" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                    <w xml:id="Meyer_2_w_000152" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
+                    <w xml:id="Meyer_2_w_000153" lemma="prendre" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">pris</w>
+                    <pc type="supplied" lemma="?" pos="PONfrt">?</pc>
                 </q></l>
                 <lb n="8"/>
                 <l xml:id="Meyer_2_l_23" n="23"><q>
                     <!--<w>--><!--—--><!---->
-                    <w xml:id="Meyer_2_w_000154" lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">Sire</w>
-                    <pc type="supplied">»</pc></q>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000155" lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">fet</w>
-                    <w xml:id="Meyer_2_w_000156" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=n">ele</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000154" lemma="seignor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">Sire</w>
+                    <pc type="supplied" lemma="»" pos="PONpdr">»</pc></q>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000155" lemma="faire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">fet</w>
+                    <w xml:id="Meyer_2_w_000156" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=n">ele</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                     <q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000157" lemma="ne1" type="POS=ADVneg">ne</w>
-                    <w xml:id="Meyer_2_w_000158" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
-                    <w xml:id="Meyer_2_w_000159" lemma="en2" type="POS=PROadv">en</w>
-                    <w xml:id="Meyer_2_w_000160" lemma="querre" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">quier</w>
-                    <w xml:id="Meyer_2_w_000161" lemma="mentir" type="POS=VERinf">mentir</w>
-                    <pc type="supplied">;</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000157" lemma="ne1" pos="ADVneg">ne</w>
+                    <w xml:id="Meyer_2_w_000158" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
+                    <w xml:id="Meyer_2_w_000159" lemma="en2" pos="PROadv">en</w>
+                    <w xml:id="Meyer_2_w_000160" lemma="querre" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">quier</w>
+                    <w xml:id="Meyer_2_w_000161" lemma="mentir" pos="VERinf">mentir</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </q></l>
                 <lb n="9"/>
                 <l xml:id="Meyer_2_l_24" n="24"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000162" lemma="Hernaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">Hernaut</w>
-                    <w xml:id="Meyer_2_w_000163" lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
-                    <w xml:id="Meyer_2_w_000164" lemma="nevo" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">niés</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000165" lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
-                    <w xml:id="Meyer_2_w_000166" lemma="dru1" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">druz</w>
-                    <w xml:id="Meyer_2_w_000167" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000168" lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
-                    <w xml:id="Meyer_2_w_000169" lemma="ami" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">amis</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000162" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">Hernaut</w>
+                    <w xml:id="Meyer_2_w_000163" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                    <w xml:id="Meyer_2_w_000164" lemma="nevo" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">niés</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000165" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                    <w xml:id="Meyer_2_w_000166" lemma="dru1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">druz</w>
+                    <w xml:id="Meyer_2_w_000167" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000168" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                    <w xml:id="Meyer_2_w_000169" lemma="ami" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">amis</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="10"/>
                 <l xml:id="Meyer_2_l_25" n="25"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000170" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">Le</w>
-                    <w xml:id="Meyer_2_w_000171" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=i" rend="elision">m</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000172" lemma="aporter" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">aporta</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000173" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w xml:id="Meyer_2_w_000174" lemma="suen" type="POS=ADJpos|PERS.=3|NOMB.=s|GENRE=f|CAS=r">soe</w>
-                    <w xml:id="Meyer_2_w_000175" lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
-                    <w xml:id="Meyer_2_w_000176" lemma="merci" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">merci</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000170" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">Le</w>
+                    <w xml:id="Meyer_2_w_000171" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=i" rend="elision">m<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000172" lemma="aporter" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">aporta</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000173" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="Meyer_2_w_000174" lemma="suen" pos="ADJpos" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=r">soe</w>
+                    <w xml:id="Meyer_2_w_000175" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
+                    <w xml:id="Meyer_2_w_000176" lemma="merci" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">merci</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="11"/>
                 <!-- <note type="numerotation_edition">20 </note> -->
                 <l xml:id="Meyer_2_l_26" n="26"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000177" lemma="or4" type="POS=ADVgen|DEGRE=-">Or</w>
-                    <w xml:id="Meyer_2_w_000178" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000179" lemma="prendre" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">pernez</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000180" lemma="emperëor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">emperere</w>
-                    <w xml:id="Meyer_2_w_000181" lemma="gentil" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">gentil</w>
-                    <pc type="supplied">;</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000177" lemma="or4" pos="ADVgen" msd="DEGRE=-">Or</w>
+                    <w xml:id="Meyer_2_w_000178" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000179" lemma="prendre" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">pernez</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000180" lemma="emperëor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">emperere</w>
+                    <w xml:id="Meyer_2_w_000181" lemma="gentil" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">gentil</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </q></l>
                 <lb n="12"/>
                 <l xml:id="Meyer_2_l_27" n="27"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000182" lemma="par" type="POS=PRE">Par</w>
-                    <w xml:id="Meyer_2_w_000183" lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
-                    <w xml:id="Meyer_2_w_000184" lemma="amor" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">amor</w>
-                    <w xml:id="Meyer_2_w_000185" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000186" lemma="faire" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">fetes</w>
-                    <w xml:id="Meyer_2_w_000187" lemma="recoillir" type="POS=VERinf">recoillir</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000182" lemma="par" pos="PRE">Par</w>
+                    <w xml:id="Meyer_2_w_000183" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=f|CAS=r|DEGRE=p">grant</w>
+                    <w xml:id="Meyer_2_w_000184" lemma="amor" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">amor</w>
+                    <w xml:id="Meyer_2_w_000185" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000186" lemma="faire" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">fetes</w>
+                    <w xml:id="Meyer_2_w_000187" lemma="recoillir" pos="VERinf">recoillir</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                     <note type="tradition">—— 21 = FG.
                         Ce vers est omis par plusieurs mss.</note>
                 </q></l>
                 <lb n="13"/>
                 <l xml:id="Meyer_2_l_28" n="28"><q>
                     <!--<w>—</w>-->
-                    <w xml:id="Meyer_2_w_000188" lemma="mout" type="POS=ADVgen|DEGRE=-">Mout</w>
-                    <w xml:id="Meyer_2_w_000189" lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">dites</w>
-                    <w xml:id="Meyer_2_w_000190" lemma="bien1" type="POS=ADVgen|DEGRE=p">bien</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000191" lemma="dame" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=n">dame</w>
-                    <pc type="supplied">,</pc>
-                    <pc type="supplied">»</pc></q>
-                    <w xml:id="Meyer_2_w_000192" lemma="ce1" type="POS=PROdem|NOMB.=s|GENRE=n|CAS=r">ce</w>
-                    <w xml:id="Meyer_2_w_000193" lemma="dire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dist</w>
-                    <w xml:id="Meyer_2_w_000194" lemma="Pepin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">Pepins</w>
-                    <pc type="supplied">;</pc>
+                    <w xml:id="Meyer_2_w_000188" lemma="mout" pos="ADVgen" msd="DEGRE=-">Mout</w>
+                    <w xml:id="Meyer_2_w_000189" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">dites</w>
+                    <w xml:id="Meyer_2_w_000190" lemma="bien1" pos="ADVgen" msd="DEGRE=p">bien</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000191" lemma="dame" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">dame</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied" lemma="»" pos="PONpdr">»</pc></q>
+                    <w xml:id="Meyer_2_w_000192" lemma="ce1" pos="PROdem" msd="NOMB.=s|GENRE=n|CAS=r">ce</w>
+                    <w xml:id="Meyer_2_w_000193" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dist</w>
+                    <w xml:id="Meyer_2_w_000194" lemma="Pepin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">Pepins</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </l>
                 <lb n="14"/>
                 <l xml:id="Meyer_2_l_29" n="29"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000195" lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">Qui</w>
-                    <w xml:id="Meyer_2_w_000196" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000197" lemma="refuser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">refuse</w>
-                    <w xml:id="Meyer_2_w_000198" lemma="ne1" type="POS=ADVneg">ne</w>
-                    <w xml:id="Meyer_2_w_000199" lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">doit</w>
-                    <w xml:id="Meyer_2_w_000200" lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">terre</w>
-                    <w xml:id="Meyer_2_w_000201" lemma="tenir1" type="POS=VERinf">tenir</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000195" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">Qui</w>
+                    <w xml:id="Meyer_2_w_000196" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000197" lemma="refuser" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">refuse</w>
+                    <w xml:id="Meyer_2_w_000198" lemma="ne1" pos="ADVneg">ne</w>
+                    <w xml:id="Meyer_2_w_000199" lemma="devoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">doit</w>
+                    <w xml:id="Meyer_2_w_000200" lemma="terre" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">terre</w>
+                    <w xml:id="Meyer_2_w_000201" lemma="tenir1" pos="VERinf">tenir</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="15"/>
                 <l xml:id="Meyer_2_l_30" n="30"><q>
-                    <pc type="supplied">—</pc>
-                    <w xml:id="Meyer_2_w_000202" lemma="seignor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">Sire</w>
-                    <pc type="supplied">»</pc></q>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000203" lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">fet</w>
-                    <w xml:id="Meyer_2_w_000204" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=f|CAS=n">ele</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="—" pos="PONfbl">—</pc>
+                    <w xml:id="Meyer_2_w_000202" lemma="seignor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">Sire</w>
+                    <pc type="supplied" lemma="»" pos="PONpdr">»</pc></q>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000203" lemma="faire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">fet</w>
+                    <w xml:id="Meyer_2_w_000204" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=n">ele</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                     <q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000205" lemma="por2" type="POS=PRE">por</w>
-                    <w xml:id="Meyer_2_w_000206" lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Dieu</w>
-                    <w xml:id="Meyer_2_w_000207" lemma="entendre" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">entendés</w>
-                    <w xml:id="Meyer_2_w_000208" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=f|CAS=r">mi</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000205" lemma="por2" pos="PRE">por</w>
+                    <w xml:id="Meyer_2_w_000206" lemma="dieu" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Dieu</w>
+                    <w xml:id="Meyer_2_w_000207" lemma="entendre" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">entendés</w>
+                    <w xml:id="Meyer_2_w_000208" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=f|CAS=r">mi</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="16"/>
                 <!-- <note type="numerotation_edition">25 </note> -->
                 <l xml:id="Meyer_2_l_31" n="31"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000209" lemma="mout" type="POS=ADVgen|DEGRE=-">Mout</w>
-                    <w xml:id="Meyer_2_w_000210" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=f|CAS=r">me</w>
-                    <w xml:id="Meyer_2_w_000211" lemma="merveillier" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">merveil</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000212" lemma="mout" type="POS=ADVgen|DEGRE=-">mout</w>
-                    <w xml:id="Meyer_2_w_000213" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
-                    <w xml:id="Meyer_2_w_000214" lemma="mon1" type="POS=DETpos|PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
-                    <w xml:id="Meyer_2_w_000215" lemma="cuer2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">cuers</w>
-                    <w xml:id="Meyer_2_w_000216" lemma="marrir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">mari</w>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000209" lemma="mout" pos="ADVgen" msd="DEGRE=-">Mout</w>
+                    <w xml:id="Meyer_2_w_000210" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=f|CAS=r">me</w>
+                    <w xml:id="Meyer_2_w_000211" lemma="merveillier" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">merveil</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000212" lemma="mout" pos="ADVgen" msd="DEGRE=-">mout</w>
+                    <w xml:id="Meyer_2_w_000213" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
+                    <w xml:id="Meyer_2_w_000214" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                    <w xml:id="Meyer_2_w_000215" lemma="cuer2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">cuers</w>
+                    <w xml:id="Meyer_2_w_000216" lemma="marrir" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">mari</w>
                     <note>— 25—8 = FG.</note>
                 </q></l>
                 <lb n="17"/>
                 <l xml:id="Meyer_2_l_32" n="32"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000217" lemma="de+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">Del</w>
-                    <w xml:id="Meyer_2_w_000218" lemma="vieil" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">viel</w>
-                    <w xml:id="Meyer_2_w_000219" lemma="Fromund" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr>Fro<pc type="supplied">.</pc></abbr>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000217" lemma="de+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">Del</w>
+                    <w xml:id="Meyer_2_w_000218" lemma="vieil" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">viel</w>
+                    <w xml:id="Meyer_2_w_000219" lemma="Fromund" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr>Fro.</abbr>
                             <expan>Fro<ex>mont</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000220" lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">qui</w>
-                    <w xml:id="Meyer_2_w_000221" lemma="ne1" type="POS=ADVneg">ne</w>
-                    <w xml:id="Meyer_2_w_000222" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
-                    <w xml:id="Meyer_2_w_000223" lemma="venir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">vient</w>
-                    <w xml:id="Meyer_2_w_000224" lemma="servir" type="POS=VERinf">servir</w>
-                    <pc type="supplied">.</pc>
+                    <w xml:id="Meyer_2_w_000220" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">qui</w>
+                    <w xml:id="Meyer_2_w_000221" lemma="ne1" pos="ADVneg">ne</w>
+                    <w xml:id="Meyer_2_w_000222" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
+                    <w xml:id="Meyer_2_w_000223" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">vient</w>
+                    <w xml:id="Meyer_2_w_000224" lemma="servir" pos="VERinf">servir</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="18"/>
                 <l xml:id="Meyer_2_l_33" n="33"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000225" lemma="si" type="POS=ADVgen|DEGRE=-">Si</w>
-                    <w xml:id="Meyer_2_w_000226" lemma="je" type="POS=PROper|PERS.=1|NOMB.=s|GENRE=m|CAS=r" rend="elision">m</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000227" lemma="aidier" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">aït</w>
-                    <w xml:id="Meyer_2_w_000228" lemma="dieu" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">Diex</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000229" lemma="je+il" type="POS=PROper.PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">jel</w>
-                    <w xml:id="Meyer_2_w_000230" lemma="tenir1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">tien</w>
-                    <w xml:id="Meyer_2_w_000231" lemma="en1" type="POS=PRE">en</w>
-                    <w xml:id="Meyer_2_w_000232" lemma="grant" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">grant</w>
-                    <w xml:id="Meyer_2_w_000233" lemma="despit" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">despit</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000225" lemma="si" pos="ADVgen" msd="DEGRE=-">Si</w>
+                    <w xml:id="Meyer_2_w_000226" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=r" rend="elision">m<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000227" lemma="aidier" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">aït</w>
+                    <w xml:id="Meyer_2_w_000228" lemma="dieu" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">Diex</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000229" lemma="je+il" pos="PROper.PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">jel</w>
+                    <w xml:id="Meyer_2_w_000230" lemma="tenir1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">tien</w>
+                    <w xml:id="Meyer_2_w_000231" lemma="en1" pos="PRE">en</w>
+                    <w xml:id="Meyer_2_w_000232" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">grant</w>
+                    <w xml:id="Meyer_2_w_000233" lemma="despit" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">despit</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="19"/>
                 <l xml:id="Meyer_2_l_34" n="34"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000234" lemma="vëoir" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">Vez</w>
-                    <w xml:id="Meyer_2_w_000235" lemma="ci" type="POS=ADVgen|DEGRE=-">ci</w>
-                    <w xml:id="Meyer_2_w_000236" lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n">Gybert</w>
-                    <w xml:id="Meyer_2_w_000237" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000238" lemma="Hernaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Herna</w>
-                    <w xml:id="Meyer_2_w_000239" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000240" lemma="Gerin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr>Ger<pc type="supplied">.</pc></abbr>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000234" lemma="vëoir" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">Vez</w>
+                    <w xml:id="Meyer_2_w_000235" lemma="ci" pos="ADVgen" msd="DEGRE=-">ci</w>
+                    <w xml:id="Meyer_2_w_000236" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">Gybert</w>
+                    <w xml:id="Meyer_2_w_000237" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000238" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Herna</w>
+                    <w xml:id="Meyer_2_w_000239" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000240" lemma="Gerin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr>Ger.</abbr>
                         <expan>Ger<!--<ex>bert</ex>--><ex>in</ex></expan>
                         </choice></w><!-- JBC: il faut qu'il y ait un i à la fin, sinon, ça n'assonnance pas,
                         donc je pencherais pour Gerins.
@@ -631,137 +619,131 @@
                 </q></l>
                 <lb n="20"/>
                 <l xml:id="Meyer_2_l_35" n="35"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000241" lemma="qui" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n">Qui</w>
-                    <w xml:id="Meyer_2_w_000242" lemma="tolir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">tolt</w>
-                    <w xml:id="Meyer_2_w_000243" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w xml:id="Meyer_2_w_000244" lemma="terre" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">terre</w>
-                    <w xml:id="Meyer_2_w_000245" lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=f|CAS=r">que</w>
-                    <w xml:id="Meyer_2_w_000246" lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=n">il</w>
-                    <w xml:id="Meyer_2_w_000247" lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">doivent</w>
-                    <w xml:id="Meyer_2_w_000248" lemma="tenir1" type="POS=VERinf">tenir</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000241" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">Qui</w>
+                    <w xml:id="Meyer_2_w_000242" lemma="tolir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">tolt</w>
+                    <w xml:id="Meyer_2_w_000243" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="Meyer_2_w_000244" lemma="terre" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">terre</w>
+                    <w xml:id="Meyer_2_w_000245" lemma="que2" pos="PROrel" msd="NOMB.=s|GENRE=f|CAS=r">que</w>
+                    <w xml:id="Meyer_2_w_000246" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=p|GENRE=m|CAS=n">il</w>
+                    <w xml:id="Meyer_2_w_000247" lemma="devoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">doivent</w>
+                    <w xml:id="Meyer_2_w_000248" lemma="tenir1" pos="VERinf">tenir</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                     <note type="tradition">— 29 Lire <supplied resp="#Meyer" reason="unknown">Cui t.</supplied></note>
                     <!-- JBC: on peut rendre ça par une correction avec sic 'qui', corr 'Cui' -->
                 </q></l>
                 <lb n="21"/>
                 <!-- <note type="numerotation_edition">30 </note> -->
                 <l xml:id="Meyer_2_l_36" n="36"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000249" lemma="querre" type="POS=VERinf">Quer</w>
-                    <w xml:id="Meyer_2_w_000250" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=i">li</w>
-                    <w xml:id="Meyer_2_w_000251" lemma="mander" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">mandez</w>
-                    <w xml:id="Meyer_2_w_000252" lemma="que4" type="POS=CONsub" rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000253" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
-                    <w xml:id="Meyer_2_w_000254" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
-                    <w xml:id="Meyer_2_w_000255" lemma="venir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">vienge</w>
-                    <w xml:id="Meyer_2_w_000256" lemma="servir" type="POS=VERinf">servir</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000249" lemma="querre" pos="VERinf">Quer</w>
+                    <w xml:id="Meyer_2_w_000250" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">li</w>
+                    <w xml:id="Meyer_2_w_000251" lemma="mander" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">mandez</w>
+                    <w xml:id="Meyer_2_w_000252" lemma="que4" pos="CONsub" rend="elision">qu<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000253" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
+                    <w xml:id="Meyer_2_w_000254" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=r">vos</w>
+                    <w xml:id="Meyer_2_w_000255" lemma="venir" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">vienge</w>
+                    <w xml:id="Meyer_2_w_000256" lemma="servir" pos="VERinf">servir</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="22"/>
                 <l xml:id="Meyer_2_l_37" n="37"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000257" lemma="o3" type="POS=CONcoo">Ou</w>
-                    <w xml:id="Meyer_2_w_000258" lemma="estre1" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">soit</w>
-                    <w xml:id="Meyer_2_w_000259" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000260" lemma="Chartres" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">Chartres</w>
-                    <w xml:id="Meyer_2_w_000261" lemma="o3" type="POS=CONcoo">ou</w>
-                    <w xml:id="Meyer_2_w_000262" lemma="se" type="POS=CONsub" rend="elision">s</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000263" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
-                    <w xml:id="Meyer_2_w_000264" lemma="voloir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">velt</w>
-                    <w xml:id="Meyer_2_w_000265" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000266" lemma="Paris" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">Paris</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000257" lemma="o3" pos="CONcoo">Ou</w>
+                    <w xml:id="Meyer_2_w_000258" lemma="estre1" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">soit</w>
+                    <w xml:id="Meyer_2_w_000259" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000260" lemma="Chartres" pos="NOMpro" msd="NOMB.=s|GENRE=f|CAS=r">Chartres</w>
+                    <w xml:id="Meyer_2_w_000261" lemma="o3" pos="CONcoo">ou</w>
+                    <w xml:id="Meyer_2_w_000262" lemma="se" pos="CONsub" rend="elision">s<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000263" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
+                    <w xml:id="Meyer_2_w_000264" lemma="voloir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">velt</w>
+                    <w xml:id="Meyer_2_w_000265" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000266" lemma="Paris" pos="NOMpro" msd="NOMB.=s|GENRE=f|CAS=r">Paris</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="23"/>
                 <l xml:id="Meyer_2_l_38" n="38"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000267" lemma="o3" type="POS=CONcoo">Ou</w>
-                    <w xml:id="Meyer_2_w_000268" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000269" lemma="Bealvez" type="POS=NOMpro|NOMB.=s|GENRE=x|CAS=r">Bealvez</w>
-                    <w xml:id="Meyer_2_w_000270" lemma="o3" type="POS=CONcoo">ou</w>
-                    <w xml:id="Meyer_2_w_000271" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000272" lemma="Loon" type="POS=NOMpro|NOMB.=s|GENRE=f|CAS=r">Loon</w>
-                    <w xml:id="Meyer_2_w_000273" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=f|CAS=r">la</w>
-                    <w xml:id="Meyer_2_w_000274" lemma="cité" type="POS=NOMcom|NOMB.=s|GENRE=f|CAS=r">cit</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000267" lemma="o3" pos="CONcoo">Ou</w>
+                    <w xml:id="Meyer_2_w_000268" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000269" lemma="Bealvez" pos="NOMpro" msd="NOMB.=s|GENRE=x|CAS=r">Bealvez</w>
+                    <w xml:id="Meyer_2_w_000270" lemma="o3" pos="CONcoo">ou</w>
+                    <w xml:id="Meyer_2_w_000271" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000272" lemma="Loon" pos="NOMpro" msd="NOMB.=s|GENRE=f|CAS=r">Loon</w>
+                    <w xml:id="Meyer_2_w_000273" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
+                    <w xml:id="Meyer_2_w_000274" lemma="cité" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">cit</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="24"/>
                 <l xml:id="Meyer_2_l_39" n="39"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000275" lemma="faire" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">Face</w>
-                    <w xml:id="Meyer_2_w_000276" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
-                    <w xml:id="Meyer_2_w_000277" lemma="droit" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">droit</w>
-                    <w xml:id="Meyer_2_w_000278" lemma="de" type="POS=PRE">de</w>
-                    <w xml:id="Meyer_2_w_000279" lemma="Begues" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Begon</w>
-                    <w xml:id="Meyer_2_w_000280" lemma="que2" type="POS=PROrel|NOMB.=s|GENRE=m|CAS=n" rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000281" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
-                    <w xml:id="Meyer_2_w_000282" lemma="ocire" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">ocis</w>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000275" lemma="faire" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">Face</w>
+                    <w xml:id="Meyer_2_w_000276" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
+                    <w xml:id="Meyer_2_w_000277" lemma="droit" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">droit</w>
+                    <w xml:id="Meyer_2_w_000278" lemma="de" pos="PRE">de</w>
+                    <w xml:id="Meyer_2_w_000279" lemma="Begues" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Begon</w>
+                    <w xml:id="Meyer_2_w_000280" lemma="que2" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n" rend="elision">qu<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000281" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
+                    <w xml:id="Meyer_2_w_000282" lemma="ocire" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">ocis</w>
                     <note type="tradition">—— 32—5 = FG</note>
                 </q></l>
                 <lb n="25"/>
                 <l xml:id="Meyer_2_l_40" n="40"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000283" lemma="et" type="POS=CONcoo">Et</w>
-                    <w xml:id="Meyer_2_w_000284" lemma="de" type="POS=PRE">de</w>
-                    <w xml:id="Meyer_2_w_000285" lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr>Gar<pc type="supplied">.</pc></abbr>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000283" lemma="et" pos="CONcoo">Et</w>
+                    <w xml:id="Meyer_2_w_000284" lemma="de" pos="PRE">de</w>
+                    <w xml:id="Meyer_2_w_000285" lemma="Garin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr>Gar.</abbr>
                             <expan>Gar<ex>in</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000286" lemma="que4" type="POS=CONsub" rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000287" lemma="en1+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">el</w>
-                    <w xml:id="Meyer_2_w_000288" lemma="mostier" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">mostier</w>
-                    <w xml:id="Meyer_2_w_000289" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                    <w xml:id="Meyer_2_w_000290" lemma="mordrir" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">mordriz</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000286" lemma="que4" pos="CONsub" rend="elision">qu<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000287" lemma="en1+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">el</w>
+                    <w xml:id="Meyer_2_w_000288" lemma="mostier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">mostier</w>
+                    <w xml:id="Meyer_2_w_000289" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                    <w xml:id="Meyer_2_w_000290" lemma="mordrir" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">mordriz</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="26"/>
                 <!-- <note type="numerotation_edition">35 </note> -->
                 <l xml:id="Meyer_2_l_41" n="41"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000291" lemma="devant" type="POS=PRE">Devant</w>
-                    <w xml:id="Meyer_2_w_000292" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r" rend="elision">l</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000293" lemma="autel2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">autel</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000294" lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">al</w>
-                    <w xml:id="Meyer_2_w_000295" lemma="pié" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">pié</w>
-                    <w xml:id="Meyer_2_w_000296" lemma="de+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">del</w>
-                    <w xml:id="Meyer_2_w_000297" lemma="crucefis" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">crucefiz</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000291" lemma="devant" pos="PRE">Devant</w>
+                    <w xml:id="Meyer_2_w_000292" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r" rend="elision">l<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000293" lemma="autel2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">autel</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000294" lemma="a3+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">al</w>
+                    <w xml:id="Meyer_2_w_000295" lemma="pié" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">pié</w>
+                    <w xml:id="Meyer_2_w_000296" lemma="de+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">del</w>
+                    <w xml:id="Meyer_2_w_000297" lemma="crucefis" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">crucefiz</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="27"/>
                 <l xml:id="Meyer_2_l_42" n="42"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000298" lemma="et" type="POS=CONcoo">Et</w>
-                    <w xml:id="Meyer_2_w_000299" lemma="si" type="POS=ADVgen|DEGRE=-">si</w>
-                    <w xml:id="Meyer_2_w_000300" lemma="vos" type="POS=PROper|PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
-                    <w xml:id="Meyer_2_w_000301" lemma="rendre" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">rende</w>
-                    <w xml:id="Meyer_2_w_000302" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000303" lemma="force2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">porc</w>
-                    <w xml:id="Meyer_2_w_000304" lemma="que4" type="POS=CONsub" rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000305" lemma="en1+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">el</w>
-                    <w xml:id="Meyer_2_w_000306" lemma="bois" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">bois</w>
-                    <w xml:id="Meyer_2_w_000307" lemma="estre1" type="POS=VERcjg|MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
-                    <w xml:id="Meyer_2_w_000308" lemma="prendre" type="POS=VERppe|NOMB.=s|GENRE=m|CAS=n">pris</w>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000298" lemma="et" pos="CONcoo">Et</w>
+                    <w xml:id="Meyer_2_w_000299" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                    <w xml:id="Meyer_2_w_000300" lemma="vos" pos="PROper" msd="PERS.=2|NOMB.=p|GENRE=m|CAS=i">vos</w>
+                    <w xml:id="Meyer_2_w_000301" lemma="rendre" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">rende</w>
+                    <w xml:id="Meyer_2_w_000302" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000303" lemma="force2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">porc</w>
+                    <w xml:id="Meyer_2_w_000304" lemma="que4" pos="CONsub" rend="elision">qu<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000305" lemma="en1+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">el</w>
+                    <w xml:id="Meyer_2_w_000306" lemma="bois" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">bois</w>
+                    <w xml:id="Meyer_2_w_000307" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                    <w xml:id="Meyer_2_w_000308" lemma="prendre" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=n">pris</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
                 <lb n="28"/>
                 <l xml:id="Meyer_2_l_43" n="43"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000309" lemma="si" type="POS=ADVgen|DEGRE=-">Si</w>
-                    <w xml:id="Meyer_2_w_000310" lemma="faire" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">fetes</w>
-                    <w xml:id="Meyer_2_w_000311" lemma="droit" type="POS=ADVgen|DEGRE=-">droit</w>
-                    <w xml:id="Meyer_2_w_000312" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000313" lemma="Hernaut" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r">Herna</w>
-                    <w xml:id="Meyer_2_w_000314" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000315" lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n"><choice>
-                            <abbr>Ger<pc type="supplied">.</pc></abbr>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000309" lemma="si" pos="ADVgen" msd="DEGRE=-">Si</w>
+                    <w xml:id="Meyer_2_w_000310" lemma="faire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=2|NOMB.=p">fetes</w>
+                    <w xml:id="Meyer_2_w_000311" lemma="droit" pos="ADVgen" msd="DEGRE=-">droit</w>
+                    <w xml:id="Meyer_2_w_000312" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000313" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Herna</w>
+                    <w xml:id="Meyer_2_w_000314" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000315" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                            <abbr>Ger.</abbr>
                             <expan>Ger<ex>bert</ex></expan>
                         </choice></w>
                     <note>— 37 Ici seulement FG ont une leçon
@@ -769,104 +751,101 @@
                 </q></l>
                 <lb n="29"/>
                 <l xml:id="Meyer_2_l_44" n="44"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000316" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">Lui</w>
-                    <w xml:id="Meyer_2_w_000317" lemma="et" type="POS=CONcoo">et</w>
-                    <w xml:id="Meyer_2_w_000318" lemma="Girbert" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=n"><choice>
-                            <abbr>Gyb<pc type="supplied">.</pc></abbr>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000316" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">Lui</w>
+                    <w xml:id="Meyer_2_w_000317" lemma="et" pos="CONcoo">et</w>
+                    <w xml:id="Meyer_2_w_000318" lemma="Girbert" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                            <abbr>Gyb.</abbr>
                             <expan>Gyb<ex>ert</ex></expan>
                         </choice></w>
-                    <w xml:id="Meyer_2_w_000319" lemma="le" type="POS=DETdef|NOMB.=s|GENRE=m|CAS=n">li</w>
-                    <w xml:id="Meyer_2_w_000320" lemma="fil2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">fiz</w>
-                    <w xml:id="Meyer_2_w_000321" lemma="a3+le" type="POS=PRE.DETdef|NOMB.=s|GENRE=m|CAS=r">al</w>
-                    <w xml:id="Meyer_2_w_000322" lemma="duc2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">duc</w>
-                    <w xml:id="Meyer_2_w_000323" lemma="Garin" type="POS=NOMpro|NOMB.=s|GENRE=m|CAS=r"><choice>
-                            <abbr>Gar<pc type="supplied">.</pc></abbr>
+                    <w xml:id="Meyer_2_w_000319" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">li</w>
+                    <w xml:id="Meyer_2_w_000320" lemma="fil2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">fiz</w>
+                    <w xml:id="Meyer_2_w_000321" lemma="a3+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">al</w>
+                    <w xml:id="Meyer_2_w_000322" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">duc</w>
+                    <w xml:id="Meyer_2_w_000323" lemma="Garin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                            <abbr>Gar.</abbr>
                             <expan>Gar<ex>in</ex></expan>
                         </choice></w>
                 </q></l>
                 <lb n="30"/>
                 <l xml:id="Meyer_2_l_45" n="45"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000324" lemma="se" type="POS=CONsub" rend="elision">S</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000325" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
-                    <w xml:id="Meyer_2_w_000326" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
-                    <w xml:id="Meyer_2_w_000327" lemma="refuser" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">refuse</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000328" lemma="que4" type="POS=CONsub" rend="elision">qu</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000329" lemma="il" type="POS=PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
-                    <sic><w xml:id="Meyer_2_w_000330" lemma="ne1+il" type="POS=ADVneg.PROper|PERS.=3|NOMB.=s|GENRE=m|CAS=r">nel</w></sic>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000324" lemma="se" pos="CONsub" rend="elision">S<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000325" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
+                    <w xml:id="Meyer_2_w_000326" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
+                    <w xml:id="Meyer_2_w_000327" lemma="refuser" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">refuse</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000328" lemma="que4" pos="CONsub" rend="elision">qu<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000329" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">il</w>
+                    <sic><w xml:id="Meyer_2_w_000330" lemma="ne1+il" pos="ADVneg.PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">nel</w></sic>
                     <!-- JBC: à encoder plutôt -->
                     <!--<w><supplied resp="#Meyer" reason="unknown"
                             >(sic)</supplied></w>-->
-                    <w xml:id="Meyer_2_w_000331" lemma="voloir" type="POS=VERcjg|MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">voille</w>
-                    <w xml:id="Meyer_2_w_000332" lemma="venir" type="POS=VERinf">venir</w>
-                    <pc type="supplied">,</pc>
+                    <w xml:id="Meyer_2_w_000331" lemma="voloir" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">voille</w>
+                    <w xml:id="Meyer_2_w_000332" lemma="venir" pos="VERinf">venir</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="31"/>
                 <!-- <note type="numerotation_edition">40 </note> -->
                 <l xml:id="Meyer_2_l_46" n="46"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000333" lemma="aler" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=s">Va</w>
-                    <w xml:id="Meyer_2_w_000334" lemma="desor" type="POS=PRE">desor</w>
-                    <w xml:id="Meyer_2_w_000335" lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=i">els</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000336" lemma="emperëor" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">emperere</w>
-                    <w xml:id="Meyer_2_w_000337" lemma="gentil" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=n|DEGRE=p">gentil</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000333" lemma="aler" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=s">Va</w>
+                    <w xml:id="Meyer_2_w_000334" lemma="desor" pos="PRE">desor</w>
+                    <w xml:id="Meyer_2_w_000335" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=p|GENRE=m|CAS=i">els</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000336" lemma="emperëor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">emperere</w>
+                    <w xml:id="Meyer_2_w_000337" lemma="gentil" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">gentil</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="32"/>
                 <l xml:id="Meyer_2_l_47" n="47"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000338" lemma="gaster" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">Gastez</w>
-                    <w xml:id="Meyer_2_w_000339" lemma="lor2" type="POS=DETpos|PERS.=3|NOMB.=p|GENRE=f|CAS=r">lor</w>
-                    <w xml:id="Meyer_2_w_000340" lemma="terre" type="POS=NOMcom|NOMB.=p|GENRE=f|CAS=r">terres</w>
-                    <pc type="supplied">,</pc>
-                    <w xml:id="Meyer_2_w_000341" lemma="metre2" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">metez</w>
-                    <w xml:id="Meyer_2_w_000342" lemma="tot" type="POS=PROind|NOMB.=s|GENRE=m|CAS=r">tot</w>
-                    <w xml:id="Meyer_2_w_000343" lemma="a3" type="POS=PRE">a</w>
-                    <w xml:id="Meyer_2_w_000344" lemma="declin" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">declin</w>
-                    <pc type="supplied">;</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000338" lemma="gaster" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">Gastez</w>
+                    <w xml:id="Meyer_2_w_000339" lemma="lor2" pos="DETpos" msd="PERS.=3|NOMB.=p|GENRE=f|CAS=r">lor</w>
+                    <w xml:id="Meyer_2_w_000340" lemma="terre" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">terres</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w xml:id="Meyer_2_w_000341" lemma="metre2" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">metez</w>
+                    <w xml:id="Meyer_2_w_000342" lemma="tot" pos="PROind" msd="NOMB.=s|GENRE=m|CAS=r">tot</w>
+                    <w xml:id="Meyer_2_w_000343" lemma="a3" pos="PRE">a</w>
+                    <w xml:id="Meyer_2_w_000344" lemma="declin" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">declin</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                 </q></l>
                 <lb n="33"/>
                 <l xml:id="Meyer_2_l_48" n="48"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000345" lemma="ne1" type="POS=ADVneg">Ne</w>
-                    <w xml:id="Meyer_2_w_000346" lemma="il" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=i">lor</w>
-                    <w xml:id="Meyer_2_w_000347" lemma="laissier" type="POS=VERcjg|MODE=imp|PERS.=2|NOMB.=p">lessiez</w>
-                    <w xml:id="Meyer_2_w_000348" lemma="borc" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">borc</w>
-                    <w xml:id="Meyer_2_w_000349" lemma="ne2" type="POS=CONcoo">ne</w>
-                    <w xml:id="Meyer_2_w_000350" lemma="chastel" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">chastel</w>
-                    <w xml:id="Meyer_2_w_000351" lemma="tenir1" type="POS=VERinf">tenir</w>
-                    <pc type="supplied">,</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000345" lemma="ne1" pos="ADVneg">Ne</w>
+                    <w xml:id="Meyer_2_w_000346" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=p|GENRE=m|CAS=i">lor</w>
+                    <w xml:id="Meyer_2_w_000347" lemma="laissier" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">lessiez</w>
+                    <w xml:id="Meyer_2_w_000348" lemma="borc" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">borc</w>
+                    <w xml:id="Meyer_2_w_000349" lemma="ne2" pos="CONcoo">ne</w>
+                    <w xml:id="Meyer_2_w_000350" lemma="chastel" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">chastel</w>
+                    <w xml:id="Meyer_2_w_000351" lemma="tenir1" pos="VERinf">tenir</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                 </q></l>
                 <lb n="34"/>
                 <l xml:id="Meyer_2_l_49" n="49"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000352" lemma="ainz" type="POS=ADVgen|DEGRE=-">Ainz</w>
-                    <w xml:id="Meyer_2_w_000353" lemma="soi1" type="POS=PROper|PERS.=3|NOMB.=p|GENRE=m|CAS=r" rend="elision">s</w>
-                    <pc type="supplied">'</pc>
-                    <w xml:id="Meyer_2_w_000354" lemma="en2" type="POS=PROadv">en</w>
-                    <w xml:id="Meyer_2_w_000355" lemma="aler" type="POS=VERcjg|MODE=ind|TEMPS=fut|PERS.=3|NOMB.=p">iront</w>
-                    <w xml:id="Meyer_2_w_000356" lemma="come1" type="POS=CONsub">comme</w>
-                    <w xml:id="Meyer_2_w_000357" lemma="ribaut" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">ribaut</w>
-                    <w xml:id="Meyer_2_w_000358" lemma="chaitif" type="POS=ADJqua|NOMB.=s|GENRE=m|CAS=r|DEGRE=p">chaitif</w>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000352" lemma="ainz" pos="ADVgen" msd="DEGRE=-">Ainz</w>
+                    <w xml:id="Meyer_2_w_000353" lemma="soi1" pos="PROper" msd="PERS.=3|NOMB.=p|GENRE=m|CAS=r" rend="elision">s<reg>'</reg></w>
+                    <w xml:id="Meyer_2_w_000354" lemma="en2" pos="PROadv">en</w>
+                    <w xml:id="Meyer_2_w_000355" lemma="aler" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=3|NOMB.=p">iront</w>
+                    <w xml:id="Meyer_2_w_000356" lemma="come1" pos="CONsub">comme</w>
+                    <w xml:id="Meyer_2_w_000357" lemma="ribaut" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">ribaut</w>
+                    <w xml:id="Meyer_2_w_000358" lemma="chaitif" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">chaitif</w>
                     <note type="tradition">— 43 Ce vers manque dans
                                 FG.</note>
                 </q></l>
                 <lb n="35"/>
                 <l xml:id="Meyer_2_l_50" n="50"><q>
-                    <pc type="supplied">«</pc>
-                    <w xml:id="Meyer_2_w_000359" lemma="ainsi" type="POS=ADVgen|DEGRE=-">Ensi</w>
-                    <w xml:id="Meyer_2_w_000360" lemma="devoir" type="POS=VERcjg|MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">doit</w>
-                    <w xml:id="Meyer_2_w_000361" lemma="roi2" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=n">rois</w>
-                    <w xml:id="Meyer_2_w_000362" lemma="son4" type="POS=DETpos|PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
-                    <w xml:id="Meyer_2_w_000363" lemma="roiaume" type="POS=NOMcom|NOMB.=s|GENRE=m|CAS=r">reaume</w>
-                    <w xml:id="Meyer_2_w_000364" lemma="tenir1" type="POS=VERinf">tenir</w>
-                    <pc type="supplied">»</pc>
-                    <pc type="supplied">.</pc>
+                    <pc type="supplied" lemma="«" pos="PONpga">«</pc>
+                    <w xml:id="Meyer_2_w_000359" lemma="ainsi" pos="ADVgen" msd="DEGRE=-">Ensi</w>
+                    <w xml:id="Meyer_2_w_000360" lemma="devoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">doit</w>
+                    <w xml:id="Meyer_2_w_000361" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">rois</w>
+                    <w xml:id="Meyer_2_w_000362" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
+                    <w xml:id="Meyer_2_w_000363" lemma="roiaume" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">reaume</w>
+                    <w xml:id="Meyer_2_w_000364" lemma="tenir1" pos="VERinf">tenir</w>
+                    <pc type="supplied" lemma="»" pos="PONpdr">»</pc>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                 </q></l>
             </lg> <!-- Ceci n'est peut-être pas la fin de la laisse 
             mais la métrique est cohérente -->

@@ -167,6 +167,7 @@ un peu partout. J'en ai rétabli certains.
             - une grande relecture de détail du résultat ne serait pas du luxe.
             -->
             <!-- JBC: en général par ordre plutôt antéchronologique -->
+         <change who="#JBC" when="2020-07-18">Mise à jour de l'encodage de l'annotation linguistique, de la ponctuation, élision, tokénisation et des chiffres romains.</change>
          <change when="201808" who="#JBC" status="draft">Correction du document</change>
          <!--  -->
          <change when="2018-04-17" who="#EB" status="draft"> Création de l'arborescence générale,
@@ -418,7 +419,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000044" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
                      <w xml:id="edM_w_000045" lemma="Charles" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>K<pc type="orig">.</pc>
+                           <abbr>K.
                            </abbr>
                            <expan resp="#JBC" cert="low">K<ex>arles</ex>
                            </expan>
@@ -592,10 +593,7 @@ un peu partout. J'en ai rétabli certains.
                <l n="18" xml:id="edM_l_18">
                   <w xml:id="edM_w_000122" lemma="bien1" pos="ADVgen" msd="DEGRE=p">Bien</w>
                   <w xml:id="edM_w_000123" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">sont</w>
-                  <w xml:id="edM_w_000124" lemma="vint" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">xx</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                  <w xml:id="edM_w_000125" lemma="mil1" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">m</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                  <w xml:id="edM_w_000124" lemma="20000" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">xx.m.</w>
                   <w xml:id="edM_w_000126" lemma="en1" pos="PRE" msd="MORPH=empty">en</w>
                   <w xml:id="edM_w_000127" lemma="cel" pos="DETdem" msd="NOMB.=s|GENRE=f|CAS=r">sele</w>
                   <w xml:id="edM_w_000128" lemma="compagnie" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">conpagnie</w>
@@ -689,9 +687,7 @@ un peu partout. J'en ai rétabli certains.
                   </note>
                </l>
                <l n="27" xml:id="edM_l_27">
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                  <w xml:id="edM_w_000183" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">I</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                  <w xml:id="edM_w_000183" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.I.</w>
                   <w xml:id="edM_w_000184" lemma="mes3" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">mès</w>
                   <w xml:id="edM_w_000185" lemma="soi1" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">s<reg>'</reg>
                   </w>
@@ -709,12 +705,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000193" lemma="a3" pos="PRE" msd="MORPH=empty">À</w>
                   <w xml:id="edM_w_000194" lemma="Charlemagne" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                      <choice>
-                        <abbr>Km</abbr>
+                        <abbr>Km.</abbr>
                         <expan>K<ex>arle</ex>m<ex>agne</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <w xml:id="edM_w_000195" lemma="a3" pos="PRE" msd="MORPH=empty">a</w>
                   <w xml:id="edM_w_000196" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
                   <w xml:id="edM_w_000197" lemma="barbe" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">barbe</w>
@@ -742,9 +737,7 @@ un peu partout. J'en ai rétabli certains.
                <pb n="1v" facs=""/>
                <l n="31" xml:id="edM_l_31">
                   <w xml:id="edM_w_000203" lemma="sor2" pos="PRE" msd="MORPH=empty">Sor</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                  <w xml:id="edM_w_000204" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">j</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                  <w xml:id="edM_w_000204" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.j.</w>
                   <w xml:id="edM_w_000205" lemma="cheval" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">cheval</w>
                   <w xml:id="edM_w_000206" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">qi</w>
                   <app>
@@ -887,11 +880,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000267" lemma="dont" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=r">Dont</w>
                      <w xml:id="edM_w_000268" lemma="en2" pos="PROadv" msd="MORPH=empty">en</w>
                      <w xml:id="edM_w_000269" lemma="prendre" pos="VERcjg" msd="MODE=sub|TEMPS=ipf|PERS.=3|NOMB.=s">preïst</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000270" lemma="deus" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">ij</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000271" lemma="de" pos="PRE" msd="MORPH=empty">d</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_000270" lemma="2" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.ij.</w>
+                     <w xml:id="edM_w_000271" lemma="denier" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r"><choice>
+                        <abbr>d.</abbr>
+                        <expan>deniers</expan>
+                     </choice></w>
                      <w xml:id="edM_w_000272" lemma="monëer" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=r">moneez</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <pc type="supplied" lemma="»" pos="PONpdr">»</pc>
@@ -930,13 +923,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000286" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dit</w>
                   <w xml:id="edM_w_000287" lemma="Charles" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                      <choice>
-                        <abbr>K<pc type="orig">.</pc>
-                        </abbr>
+                        <abbr>K.</abbr>
                         <expan resp="#JBC" cert="low">K<ex>arles</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <w xml:id="edM_w_000288" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">li</w>
                   <w xml:id="edM_w_000289" lemma="membré2" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">menbrez</w>
                   <pc type="supplied" lemma="," pos="PONfbl">,</pc>
@@ -968,21 +959,19 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000300" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dus</w>
                      <w xml:id="edM_w_000301" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000302" lemma="et" pos="CONcoo" msd="MORPH=empty">et</w>
                      <w xml:id="edM_w_000303" lemma="Reiner" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Ren</abbr>
+                           <abbr>Ren.</abbr>
                            <expan resp="#JBC" cert="low">Ren<ex>iers</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000304" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">li</w>
                      <w xml:id="edM_w_000305" lemma="sené2" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">senez</w>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
@@ -1095,12 +1084,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000355" lemma="entre2" pos="PRE" msd="MORPH=empty">Entre</w>
                      <w xml:id="edM_w_000356" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>art</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000357" lemma="et" pos="CONcoo" msd="MORPH=empty">et</w>
                      <w xml:id="edM_w_000358" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
                      <w xml:id="edM_w_000359" lemma="frere" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">frere</w>
@@ -1146,12 +1134,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000378" lemma="damnedeu" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dant</w>
                      <w xml:id="edM_w_000379" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>H</abbr>
+                           <abbr>H.</abbr>
                            <expan resp="#JBC" cert="low">H<ex>ernalt</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000380" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">le</w>
                      <w xml:id="edM_w_000381" lemma="franc1" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">frans</w>
                      <w xml:id="edM_w_000382" lemma="ome" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">hon</w>
@@ -1222,9 +1209,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000409" lemma="i2" pos="PROadv" msd="MORPH=empty">i</w>
                      <w xml:id="edM_w_000410" lemma="prendre" pos="VERcjg" msd="MODE=con|PERS.=1|NOMB.=s">prendroiz</w>
                      <w xml:id="edM_w_000411" lemma="valoir" pos="VERppa" msd="NOMB.=s|GENRE=m|CAS=r">vaillant</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000412" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">j</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_000412" lemma="1" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">.j.</w>
                      <w xml:id="edM_w_000413" lemma="esperon" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">esperon</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   </q>
@@ -1255,9 +1240,7 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000421" lemma="isnelement" pos="ADVgen" msd="DEGRE=-">Isnelement</w>
                   <w xml:id="edM_w_000422" lemma="monter" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">monta</w>
                   <w xml:id="edM_w_000423" lemma="sor2" pos="PRE" msd="MORPH=empty">sor</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                  <w xml:id="edM_w_000424" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">j</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                  <w xml:id="edM_w_000424" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.j.</w>
                   <w xml:id="edM_w_000425" lemma="destrier1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">destrier</w>
                   <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                </l>
@@ -1379,11 +1362,8 @@ un peu partout. J'en ai rétabli certains.
                      </w>
                      <w xml:id="edM_w_000494" lemma="en2" pos="PROadv" msd="MORPH=empty">en</w>
                      <w xml:id="edM_w_000495" lemma="faire" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s">ferai</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000496" lemma="quinze" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">xv</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000497" lemma="livre3" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">lb</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_000496" lemma="15" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">.xv.</w>
+                     <w xml:id="edM_w_000497" lemma="livre3" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">lb.</w>
                      <w xml:id="edM_w_000498" lemma="paiier" pos="VERinf" msd="MORPH=empty">poier</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <pc type="supplied" lemma="»" pos="PONpdr">»</pc>
@@ -1408,13 +1388,9 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000505" lemma="ne1+il" pos="ADVneg.PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">nel</w>
                      <w xml:id="edM_w_000506" lemma="rendre" pos="VERcjg" msd="MODE=con|PERS.=1|NOMB.=s">rendroie</w>
                      <w xml:id="edM_w_000507" lemma="por2" pos="PRE" msd="MORPH=empty">por</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000508" lemma="cent" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">c</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000509" lemma="livre3" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">lb</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000510" lemma="de" pos="PRE" msd="MORPH=empty">d<reg>'</reg>
-                     </w>
+                     <w xml:id="edM_w_000508" lemma="100" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">.c.</w>
+                     <w xml:id="edM_w_000509" lemma="livre3" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">lb.</w>
+                     <w xml:id="edM_w_000510" lemma="de" pos="PRE" msd="MORPH=empty">d<reg>'</reg></w>
                      <w xml:id="edM_w_000511" lemma="or1+mier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">ormier</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   </q>
@@ -1502,9 +1478,7 @@ un peu partout. J'en ai rétabli certains.
                <l n="79" xml:id="edM_l_79">
                   <w xml:id="edM_w_000554" lemma="par" pos="PRE" msd="MORPH=empty">Par</w>
                   <w xml:id="edM_w_000555" lemma="le" pos="DETdef" msd="NOMB.=p|GENRE=f|CAS=r">les</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                  <w xml:id="edM_w_000556" lemma="deus" pos="DETcar" msd="NOMB.=p|GENRE=f|CAS=r">ij</w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                  <w xml:id="edM_w_000556" lemma="2" pos="ADJcar" msd="NOMB.=p|GENRE=f|CAS=r">.ij.</w>
                   <w xml:id="edM_w_000557" lemma="resne2" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">resnes</w>
                   <w xml:id="edM_w_000558" lemma="aler" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">vet</w>
                   <w xml:id="edM_w_000559" lemma="saisir" pos="VERinf" msd="MORPH=empty">sesir</w>
@@ -1581,12 +1555,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000594" lemma="damnedeu" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dant</w>
                      <w xml:id="edM_w_000595" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>H</abbr>
+                           <abbr>H.</abbr>
                            <expan resp="#JBC" cert="low">H<ex>ernalt</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000596" lemma="a3+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">au</w>
                      <w xml:id="edM_w_000597" lemma="vis1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">vis</w>
                      <w xml:id="edM_w_000598" lemma="fier" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">fier</w>
@@ -1600,12 +1573,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000600" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">sui</w>
                      <w xml:id="edM_w_000601" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>art</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000602" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
                      <w xml:id="edM_w_000603" lemma="fort" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">fort</w>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
@@ -1648,12 +1620,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000619" lemma="cant1" pos="CONsub" msd="MORPH=empty">Qant</w>
                   <w xml:id="edM_w_000620" lemma="Oliver" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                      <choice>
-                        <abbr>Oliv</abbr>
+                        <abbr>Oliv.</abbr>
                         <expan resp="#JBC" cert="low">Oliv<ex>ier</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <w xml:id="edM_w_000621" lemma="öir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">oï</w>
                   <w xml:id="edM_w_000622" lemma="parler" pos="VERinf" msd="MORPH=empty">parler</w>
                   <w xml:id="edM_w_000623" lemma="Rollant" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">Rollant</w>
@@ -1785,21 +1756,19 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000675" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
                      <w xml:id="edM_w_000676" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000677" lemma="et" pos="CONcoo" msd="MORPH=empty">et</w>
                      <w xml:id="edM_w_000678" lemma="Hernaut" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Her</abbr>
+                           <abbr>Her.</abbr>
                            <expan resp="#JBC" cert="low">Her<ex>nalt</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000679" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">le</w>
                      <w xml:id="edM_w_000680" lemma="ferrant" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">ferrant</w>
                      <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
@@ -1826,7 +1795,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000690" lemma="oisel" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">oisel</w>
                      <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                      <w xml:id="edM_w_000691" lemma="ne1" pos="ADVneg" msd="MORPH=empty">ne</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
                      <w xml:id="edM_w_000692" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">le</w>
                      <w xml:id="edM_w_000693" lemma="porter" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=s">porte</w>
                      <w xml:id="edM_w_000694" lemma="en1" pos="PRE" msd="MORPH=empty">en</w>
@@ -1859,8 +1828,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000709" lemma="tolir" pos="VERcjg" msd="MODE=sub|TEMPS=pst|PERS.=3|NOMB.=s">toille</w>
                      <w xml:id="edM_w_000710" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
                      <w xml:id="edM_w_000711" lemma="monte" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">monte</w>
-                     <w xml:id="edM_w_000712" lemma="de" pos="PRE" msd="MORPH=empty">d<reg>'</reg>
-                     </w>
+                     <w xml:id="edM_w_000712" lemma="de" pos="PRE" msd="MORPH=empty">d<reg>'</reg></w>
                      <w xml:id="edM_w_000713" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">un</w>
                      <w xml:id="edM_w_000714" lemma="besant" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">besant</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
@@ -1871,12 +1839,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000715" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">Dit</w>
                   <w xml:id="edM_w_000716" lemma="Oliver" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                      <choice>
-                        <abbr>Oliv</abbr>
+                        <abbr>Oliv.</abbr>
                         <expan resp="#JBC" cert="low">Oliv<ex>ier</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
@@ -1921,9 +1888,7 @@ un peu partout. J'en ai rétabli certains.
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
                      <w xml:id="edM_w_000739" lemma="ainçois" pos="ADVgen" msd="DEGRE=-">Einçois</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000740" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">j</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_000740" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">.j.</w>
                      <w xml:id="edM_w_000741" lemma="en2" pos="PROadv" msd="MORPH=empty">an</w>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                      <w xml:id="edM_w_000742" lemma="par" pos="PRE" msd="MORPH=empty">par</w>
@@ -1980,12 +1945,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000768" lemma="öir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ot</w>
                   <w xml:id="edM_w_000769" lemma="Oliver" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                      <choice>
-                        <abbr>Oliv</abbr>
+                        <abbr>Oliv.</abbr>
                         <expan resp="#JBC" cert="low">Oliv<ex>ier</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <w xml:id="edM_w_000770" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
                   <w xml:id="edM_w_000771" lemma="parler" pos="VERinf" msd="MORPH=empty">parler</w>
                   <pc type="supplied" lemma="," pos="PONfbl">,</pc>
@@ -2116,12 +2080,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000836" lemma="dire" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">Dist</w>
                   <w xml:id="edM_w_000837" lemma="Oliver" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                      <choice>
-                        <abbr>Oliv</abbr>
+                        <abbr>Oliv.</abbr>
                         <expan resp="#JBC" cert="low">Oliv<ex>ier</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
@@ -2164,13 +2127,11 @@ un peu partout. J'en ai rétabli certains.
                   <w xml:id="edM_w_000852" lemma="dire" pos="VERppe" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">dit</w>
                   <w xml:id="edM_w_000853" lemma="Charles" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                      <choice>
-                        <abbr>K<pc type="orig">.</pc>
-                        </abbr>
+                        <abbr>K.</abbr>
                         <expan resp="#JBC" cert="low">K<ex>arles</ex>
                         </expan>
                      </choice>
                   </w>
-                  <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                   <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
@@ -2218,9 +2179,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000874" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">a</w>
                      <w xml:id="edM_w_000875" lemma="durer" pos="VERppe" msd="NOMB.=s|GENRE=m|CAS=r">duré</w>
                      <w xml:id="edM_w_000876" lemma="bien1" pos="ADVgen" msd="DEGRE=p">bien</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_000877" lemma="cinc" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">v</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_000877" lemma="5" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.v.</w>
                      <w xml:id="edM_w_000878" lemma="an" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">anz</w>
                      <w xml:id="edM_w_000879" lemma="tot" pos="ADVgen" msd="DEGRE=-">toz</w>
                      <w xml:id="edM_w_000880" lemma="entier" pos="ADJqua" msd="NOMB.=p|GENRE=m|CAS=r|DEGRE=p">entier</w>
@@ -2285,12 +2244,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000910" lemma="damnedeu" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dant</w>
                      <w xml:id="edM_w_000911" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>art</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000912" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">le</w>
                      <w xml:id="edM_w_000913" lemma="guerrier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">guerrier</w>
                   </q>
@@ -2390,12 +2348,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_000958" lemma="dan2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dant</w>
                      <w xml:id="edM_w_000959" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>art</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_000960" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">le</w>
                      <w xml:id="edM_w_000961" lemma="guerrier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">guerrier</w>
                   </q>
@@ -2544,9 +2501,7 @@ un peu partout. J'en ai rétabli certains.
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
                      <w xml:id="edM_w_001029" lemma="plus" pos="ADVgen" msd="DEGRE=-">Plus</w>
                      <w xml:id="edM_w_001030" lemma="de" pos="PRE" msd="MORPH=empty">de</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001031" lemma="cent" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">c</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001031" lemma="100" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.c.</w>
                      <w xml:id="edM_w_001032" lemma="an" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">anz</w>
                      <w xml:id="edM_w_001033" lemma="tenir1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">tint</w>
                      <w xml:id="edM_w_001034" lemma="quite" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r">qite</w>
@@ -2704,9 +2659,7 @@ un peu partout. J'en ai rétabli certains.
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
                      <w xml:id="edM_w_001097" lemma="a3" pos="PRE" msd="MORPH=empty">A</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001098" lemma="un" pos="DETcar" msd="NOMB.=s|GENRE=m|CAS=r">j</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001098" lemma="un" pos="DETndf" msd="NOMB.=s|GENRE=m|CAS=r">.j.</w>
                      <w xml:id="edM_w_001099" lemma="mien" pos="ADJpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=r">mien</w>
                      <w xml:id="edM_w_001100" lemma="oncle" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">oncle</w>
                      <w xml:id="edM_w_001101" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">qi</w>
@@ -2739,11 +2692,7 @@ un peu partout. J'en ai rétabli certains.
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
                      <w xml:id="edM_w_001113" lemma="chargier" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=3|NOMB.=s">Chargera</w>
                      <w xml:id="edM_w_001114" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=r">moi</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001115" lemma="vint" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">xx</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001116" lemma="mil1" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">M</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001115" lemma="20000" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.xx.M.</w>
                      <w xml:id="edM_w_001117" lemma="ome" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">homes</w>
                      <w xml:id="edM_w_001118" lemma="armer" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=r">armez</w>
                      <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
@@ -2771,9 +2720,7 @@ un peu partout. J'en ai rétabli certains.
                      </w>
                      <w xml:id="edM_w_001128" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=s">avrai</w>
                      <w xml:id="edM_w_001129" lemma="tot" pos="DETind" msd="NOMB.=p|GENRE=m|CAS=r">toz</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001130" lemma="catre" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">iiij</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001130" lemma="4" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=r">.iiij.</w>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                      <w xml:id="edM_w_001131" lemma="ce1" pos="PROdem" msd="NOMB.=s|GENRE=n|CAS=n">ce</w>
                      <w xml:id="edM_w_001132" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
@@ -2811,10 +2758,7 @@ un peu partout. J'en ai rétabli certains.
                <l n="162" xml:id="edM_l_162">
                   <q>
                      <pc lemma="«" pos="PONpga" type="supplied">«</pc>
-                     <w xml:id="edM_w_001148" lemma="cincante" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">L</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001149" lemma="mil1" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">M</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001148" lemma="50000" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">L.M.</w>
                      <w xml:id="edM_w_001150" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=fut|PERS.=1|NOMB.=p">seromes</w>
                      <w xml:id="edM_w_001151" lemma="adober" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=n">adobez</w>
                      <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
@@ -2908,9 +2852,7 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001194" lemma="vantance" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">vantance</w>
                      <w xml:id="edM_w_001195" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=i">me</w>
                      <w xml:id="edM_w_001196" lemma="prendre" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">pris</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
-                     <w xml:id="edM_w_001197" lemma="deus" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">ij</w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                     <w xml:id="edM_w_001197" lemma="2" pos="DETcar" msd="NOMB.=p|GENRE=m|CAS=r">.ij.</w>
                      <w xml:id="edM_w_001198" lemma="ues" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">oes</w>
                      <w xml:id="edM_w_001199" lemma="peler2" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=r">pelez</w>
                      <pc type="supplied" lemma="." pos="PONfrt">.</pc>
@@ -3067,12 +3009,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001268" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">dus</w>
                      <w xml:id="edM_w_001269" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_001270" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">qi</w>
                      <w xml:id="edM_w_001271" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=n">sa</w>
                      <w xml:id="edM_w_001272" lemma="foi" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=n">foi</w>
@@ -3119,12 +3060,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001289" lemma="seignor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">Sire</w>
                      <w xml:id="edM_w_001290" lemma="Rollant" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Roll</abbr>
+                           <abbr>Roll.</abbr>
                            <expan cert="low" resp="#JBC">Roll<ex>ant</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                      <w xml:id="edM_w_001291" lemma="laissier" pos="VERcjg" msd="MODE=imp|PERS.=2|NOMB.=p">lessiez</w>
                      <w xml:id="edM_w_001292" lemma="vostre" pos="DETpos" msd="PERS.=2|NOMB.=s|GENRE=f|CAS=r">vostre</w>
@@ -3238,12 +3178,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001342" lemma="por2" pos="PRE" msd="MORPH=empty">por</w>
                      <w xml:id="edM_w_001343" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>art</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_001344" lemma="a3" pos="PRE" msd="MORPH=empty">a</w>
                      <w xml:id="edM_w_001345" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
                      <w xml:id="edM_w_001346" lemma="char2" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">chiere</w>
@@ -3259,13 +3198,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001350" lemma="por2" pos="PRE" msd="MORPH=empty">por</w>
                      <w xml:id="edM_w_001351" lemma="Charles" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>K<pc type="orig">.</pc>
-                           </abbr>
+                           <abbr>K.</abbr>
                            <expan resp="#JBC" cert="low">K<ex>arle</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_001352" lemma="a3" pos="PRE" msd="MORPH=empty">a</w>
                      <w xml:id="edM_w_001353" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=f|CAS=r">la</w>
                      <w xml:id="edM_w_001354" lemma="barbe" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">barbe</w>
@@ -3320,12 +3257,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001376" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dus</w>
                      <w xml:id="edM_w_001377" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_001378" lemma="donc" pos="ADVint" msd="MORPH=empty">dont</w>
                      <w xml:id="edM_w_001379" lemma="ne1" pos="ADVneg" msd="MORPH=empty">n<reg>'</reg>
                      </w>
@@ -3456,12 +3392,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001437" lemma="duc2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">dus</w>
                      <w xml:id="edM_w_001438" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <w xml:id="edM_w_001439" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">est</w>
                      <w xml:id="edM_w_001440" lemma="chevalier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">chevalier</w>
                      <w xml:id="edM_w_001441" lemma="membré2" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">menbré</w>
@@ -3683,12 +3618,11 @@ un peu partout. J'en ai rétabli certains.
                      <w xml:id="edM_w_001545" lemma="por2" pos="PRE" msd="MORPH=empty">por</w>
                      <w xml:id="edM_w_001546" lemma="Girard" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">
                         <choice>
-                           <abbr>Gir</abbr>
+                           <abbr>Gir.</abbr>
                            <expan resp="#JBC" cert="low">Gir<ex>ars</ex>
                            </expan>
                         </choice>
                      </w>
-                     <pc type="supplied" lemma="." pos="PONfrt">.</pc>
                      <pc type="supplied" lemma="," pos="PONfbl">,</pc>
                      <w xml:id="edM_w_001547" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
                      <w xml:id="edM_w_001548" lemma="franc1" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">franc</w>
