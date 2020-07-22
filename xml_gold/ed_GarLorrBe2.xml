@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_GarLorrBe2" type="ed" xml:lang="fr" version="5" corresp="jns5643">
+      <teiHeader>
+            <fileDesc>
+                  <titleStmt>
+                        <title type="main">Garin le Lorrain</title>
+                        <title type="sub">Extraits du ms. de Berne 113: numérisation de l'édition Bertoni</title>
+                        <editor xml:id="Bertoni"><persName>Giulio Bertoni</persName></editor>
+                        <respStmt xml:id="AV">
+                              <resp>édition numérique</resp>
+                              <persName>Aurelia Vasile</persName>
+                        </respStmt>
+                        <respStmt xml:id="JBC">
+                              <resp>sous la direction de</resp>
+                              <persName>Jean-Baptiste Camps</persName>
+                        </respStmt>
+                  </titleStmt>
+
+                  <publicationStmt>
+                        <authority>
+                              <persName>Jean-Baptiste Camps</persName>
+                              <address>
+                                    <orgName>École nationale des chartes</orgName>
+                                    <addrLine>65 rue de Richelieu</addrLine>
+                                    <addrLine>F-75002 Paris</addrLine>
+                              </address>
+                              <email>jbcamps@hotmail.com</email>
+                        </authority>
+                        <availability status="free">
+                              <licence target="http://creativecommons.org/publicdomain/mark/1.0/">
+                                    Les textes d'auteurs médiévaux sont dans le domaine
+                                    public.</licence>
+                              <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le
+                                    travail d'encodage et d'annotation sont mis à disposition selon
+                                    les termes de la licence Creative Commons Attribution - Partage
+                                    dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).
+                              </licence>
+                        </availability>
+                        <date when="2018">2018</date>
+                  </publicationStmt>
+                  <sourceDesc>
+                        <!-- JBC: bon traitement des sources. Je raffine un peu pour le manuscrit -->
+                        <biblStruct xml:id="Bertoni_Gar" status="draft">
+                              <analytic>
+                                    <author>Giulio Bertoni</author>
+                                    <title level="a">Un nuovo frammento di "Garin le
+                                          Loherain"</title>
+                              </analytic>
+                              <monogr>
+                                    <title level="j">Zeitschrift für romanische Philologie</title>
+                                    <imprint>
+                                          <date when="1913">1913</date>
+                                    </imprint>
+                                    <biblScope unit="page" from="708" to="717">708-717</biblScope>
+                                    <biblScope unit="issue">37</biblScope>
+                              </monogr>
+                              <note resp="Arlima">Édition d'un fragment ayant appartenu à l'érudit
+                                    suisse J.-J. Combaz († 1846) puis au professeur F.
+                                    Ducrest.</note>
+                        </biblStruct>
+                        <msDesc>
+                              <msIdentifier>
+                                    <settlement>Berne</settlement>
+                                    <repository>Burgerbibliothek</repository>
+                                    <idno>113</idno>
+                              </msIdentifier>
+                              <additional>
+                                    <listBibl>
+                                          <biblStruct status="draft">
+                                                <monogr>
+                                                  <author>
+                                                  <persName>Romain Jurot</persName>
+                                                  </author>
+                                                  <title>Catalogue des manuscrits médiévaux de la
+                                                  Bibliothèque cantonale et universitaire de
+                                                  Fribourg</title>
+                                                  <ref target="http://www2.fr.ch/bcu/n/cata_medieval/Catalogue_Jurot/MS_L1715.pdf">http://www2.fr.ch/bcu/n/cata_medieval/Catalogue_Jurot/MS_L1715.pdf</ref>
+                                                  <imprint>
+                                                  <pubPlace>Dietikon-Zurich</pubPlace>
+                                                  <date>2006</date>
+                                                  </imprint>
+                                                  <biblScope unit="page" from="266" to="267">p.
+                                                  266-267</biblScope>
+                                                </monogr>
+                                          </biblStruct>
+                                    </listBibl>
+                              </additional>
+                        </msDesc>
+                  </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                  <creation>
+                        <origPlace cert="unknown" resp="DEAF" type="lieuComposition">traits champ.
+                              et pic</origPlace>
+                        <origDate cert="unknown" resp="DEAF" type="dateComposition" notBefore="1175" notAfter="1200">1175-1200</origDate>
+                        <origPlace cert="low" resp="#JBC" type="lieuManuscrit">Nord-Est de la France (Lorraine?)</origPlace>
+                        <origPlace cert="unknown" resp="#Bertoni" type="lieuManuscrit">Est de la France</origPlace>
+                        <origPlace cert="unknown" resp="#DEAF" type="lieuManuscrit">bourg., qqs. traits pic.</origPlace>
+                        <origDate cert="unknown" resp="#DEAF" type="dateManuscrit" notBefore="1280" notAfter="1300">fin XIIIe</origDate>
+                        <origDate cert="unknown" resp="#Bertoni" type="dateManuscrit" notBefore="1301" notAfter="1350">1301-1350</origDate>
+                  </creation>
+                  <langUsage>
+                        <language cert="unknown" resp="DEAF" ident="fro" usage="100">traits de l'Est
+                              de la France</language>
+                  </langUsage>
+            </profileDesc>
+            <revisionDesc status="draft">
+                  <!-- NB: Pas encore fait,
+                        - indexation des noms propres du corps du texte; 
+                        - résolution toutes abréviations;
+                        - orig/reg des i/j et u/v
+                        - la segmentation n'est peut-être pas encore parfaite.
+                        
+                        Cette édition pourrait servir de base à une transcription allographétique du fragment.
+                  -->
+                  <change who="#JBC" when="2020-07-15">Mise à jour de l'encodage de l'annotation linguistique, de la ponctuation, élision, tokénisation.</change>
+                  <change when="2019-04" who="#JBC" status="draft">Séparation en deux documents des deux éditions</change>
+                  <change when="2018-11" who="#JBC" status="draft">Correction, renumérotation, intégration de l'étiquetage relu par Alice Cochet</change>
+                  <change when="201808" who="#JBC" status="draft">Correction du document</change>
+                  <change who="#AV" when="2018-03-28" status="draft">Encodage</change>
+                  <change who="#AV" when="2018-04-10" status="draft">schema relax ng</change>
+            </revisionDesc>
+      </teiHeader>
+      <text xml:lang="fro">
+            <front xml:lang="it">
+                  <div type="Introduction">
+                        <pb n="708" facs="01.jpg"/>
+                        <!-- j'ai souhaité encoder le titre de la chanson de geste tel qu'il est utilisé dans l'intitulé de l'article. Puisque @source de l'élément quote, 
+                              qui me paraissait plus approprié de premier abord, renvoyait vers une source externe à l'aide de l'xml-id et que cette source est inexistante dans le texte, 
+                              j'ai choisi d'utiliser l'élément titre.  -->
+                        <head>Un nuovo frammento di <quote xml:lang="fro" rend="pre(„) post(“)" defective="false"><title>Garin le
+                              Loherain</title></quote></head>
+                        <p>Il frammento, che mi fornisce l‘ occasione di intrattenere brevemente i
+                              lettori sulla gesta dei „Loherains“, mi fu fatto conoscere dalla
+                              cortesia del chiarmo <persName><roleName type="honorific">prof.</roleName>
+                                    <!-- J'ai utilisé à plusieurs reprises l'élement note pour encore les notes de bas de page, mais aussi ce que j'ai pensé être des mentions de parties du manuscrit
+                 qui apparaissait entre crochets sur la partie latérale de la chanson. 
+                 J'ai essayé de distinguer les deux types de notes par la place dans la structure du texte et par le type  -->
+                                    <forename>F.</forename>
+                                    <surname>Ducrest</surname></persName>, che lo trovò
+                              fra le carte già appartenute a uno studioso di qualche rinomanza, il
+                                    Combaz<note n="1" resp="#Bertoni"><persName xml:id="JJC"><forename>J.—J.</forename>
+                                          <surname>Combaz</surname>(<date type="death" when="1846-01-30">†30 Genn. 1846</date>)</persName>,
+                                    storico svizzero, autore di qualche monografia sulla storia di <!-- JBC: indexation lieu? -->
+                                    <placeName>Friburgo</placeName>. A Friburgo in Isvizzera,
+                                    appunto, nella Bibl. Cantonale, sono conservate le sue
+                                    carte.</note> Non tardai, naturalmente, ad identificare il
+                              lacerto membranaceo della prima metà del sec. XIV, scritto nell Est
+                              della Francia (come certe particolarità quali <ref target="#Bertoni_Gar_w_000438" rend="italic">toint</ref>, <ref target="#Bertoni_Gar_w_001423" rend="italic">amoine</ref> ecc.
+                              ecc. mostrano chiaramente), avanzo d‘un prezioso codice perduto, sulla
+                              cui contenenza poco si può dire, salvo che, per lo meno, conservava
+                              una delle cinque parti della gesta dei Loherains, e cioè la seconda
+                              denominata „Garin“.</p>
+                        <p>Il frammento consta d‘un intero foglio, a quattro colonne per carta (cm
+                                    25<note n="2" type="description_fragment" resp="#Bertoni">Si badi, però, che le carte sono state tagliate
+                                    nel margine inferiore. Parmi che la lunghezza originale dovesse
+                                    essere di cm 27.</note>x18) e contiene un assai lungo brano di
+                                    <hi rend="italic">Garin</hi>, senza alcuna lacuna fra una carta
+                              e l‘ altra, perchè il foglio, per avventura, trovavasi al centro di un
+                              quaderno (o quinterno). Non v‘ ha nessuna numerazione, dalla quale si
+                              possa desumere se nel ms. precedesse, o no, qualche altra
+                              composizione. La scrittura è elegante e chiara. Le iniziali dei versi
+                              sono toccate in rosso.</p>
+                        <p>Siamo al principio della canzone di Garin, quando (morto Tierri, re
+                              d‘Arles) il protagonista si presenta a Pipino a chiedergli la figlia
+                              di Tierri già promessagli dal padre sul punto di morire. Fromont
+                              contende a Garin la mano della regale fanciulla, Blancheflour, e la
+                              disputa finisce in un combattimento.</p>
+                        <p>Il passo corrispondente al nostro frammento leggesi nell' <bibl status="draft">ediz. di
+                                    P. Paris a p. 122sgg. del vol.I (<date when="1833">1833</date>)</bibl><note n="3" resp="#Bertoni">Vedasi anche <!-- JBC: bon traitement des liens -->
+                                    <ref target="https://archive.org/details/liromansdegarinl01jean"><bibl status="draft"><title rend="italic">l'Hist. litt. de la
+                                                  France</title>, XXII, p. 606</bibl></ref>.<bibl status="draft">
+                                          <author>Gautier</author>, <title rend="italic">Bibl. d.
+                                                chans. d. G.</title>, <date when="1897">1897</date>,
+                                          p. 107.</bibl></note>. Notevoli sono le varianti, come il
+                              lettore avrà modo facilmente di vedere <note n="4" resp="#Bertoni">Ho tenuto sott‘ occhio anche il
+                                    cod. di Berna 113, di cui ho riportato qua e là, a piè di
+                                    pagina, qualche variante.</note> se vorrà esaminare la stampa
+                              diplomatica che qui segue: </p>
+                        <note resp="#JBC">Édition du fragment retirée (figure dans <idno>ed_GarLorrBe1</idno>).</note>
+                        <p> Mi mancano i materiali per poter collocare il nostro frammento nel posto
+                              che gli spetta fra gli assai numerosi mss. che ci restano della
+                              canzone di Garin. A ciò fare, occorrerebbero le copie dei passi
+                              corrispondenti in tutti i codici <note n="20" resp="#Bertoni" xml:lang="it">Ho consultati gli
+                                    studi dello Stengel, del Bonnardot, del Vietor e anche quello
+                                    del <bibl status="draft">Krüger, <title rend="italic">Über die Stellung der
+                                          Handschrift J in der Überlieferung der Geste des
+                                          Loherains</title>, <pubPlace>Marburg</pubPlace>,
+                                          <date when="1886">1886</date></bibl>; ma non ho
+                                    potuto ricavarne che un orientamento generale, che non mi
+                                    permette nessuna conclusione sicura. Pare che il Paris abbia
+                                    adoperato di preferenza il ms. parig. 1582.</note> mentre a me,
+                              in fatto di manoscritti, non è nota che la lezione di quello di Berna
+                              113. In questo ms., il brano concernente la richiesta di Blancheflour
+                              a Pipino, per parte di Garin, si legge a c. 6e sgg. e presenta una
+                              lezione in molti punti dissimigliantissima, come apparirà da questi
+                              versi corrispondenti al principio del frammento: 
+                        </p>
+                  </div>
+            </front>
+            <!-- Pour le traitement des abbréviations, je me suis inspirée de l'édition suivante de la chanson:
+"Li romans de Garin le Loherain",  par M. P. Paris, Paris, Téchener (Romans des douze pairs de France, 2-3), 1833-1835, tom [IA: t. 1,] qui se trouve en ligne : https://archive.org/details/liromansdegarinl01jean  -->
+            <!-- JBC: c'est vieux ! S'appuyer sur l'édition pour le traitement des abréviations est un très bon
+            choix, mais il faut préférer une édition plus à jour scientifiquement, par exemple celle
+            d'Anne Iker-Gittleman (1996).
+            -->
+            <body>
+                                    <lg xml:id="B_001" type="laisse" n="1" sample="initial">
+                                          <metamark>[c. 6a]</metamark>
+                                          <l n="1" xml:id="Bertoni_Gar_l_1">
+                                                <w xml:id="Bertoni_Gar_w_002399" lemma="cel" pos="PROdem" msd="NOMB.=s|GENRE=m|CAS=n">Cil</w>
+                                                <w xml:id="Bertoni_Gar_w_002400" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=i">li</w>
+                                                <w xml:id="Bertoni_Gar_w_002401" lemma="respondre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">respont</w>
+                                                <w xml:id="Bertoni_Gar_w_002402" lemma="dieu" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r">deu</w>
+                                                <w xml:id="Bertoni_Gar_w_002403" lemma="merci" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">m<ex>er</ex>ci</w>
+                                                <w xml:id="Bertoni_Gar_w_002404" lemma="belement" pos="ADVgen" msd="DEGRE=-">belement</w>
+                                          </l>
+                                          <l n="2" xml:id="Bertoni_Gar_l_2">
+                                                <w xml:id="Bertoni_Gar_w_002405" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">Io</w>
+                                                <w xml:id="Bertoni_Gar_w_002406" lemma="et" pos="CONcoo"><ex>et</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002407" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                                                <w xml:id="Bertoni_Gar_w_002408" lemma="frere" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">freres</w>
+                                                <w xml:id="Bertoni_Gar_w_002409" lemma="Begues" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                                                  <abbr>.be.</abbr>
+                                                  <expan resp="#AV" cert="low">Begues</expan>
+                                                  </choice></w>
+                                                <w xml:id="Bertoni_Gar_w_002410" lemma="a3+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">al</w>
+                                                <w xml:id="Bertoni_Gar_w_002411" lemma="cors1" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">cors</w>
+                                                <w xml:id="Bertoni_Gar_w_002412" lemma="valoir" pos="VERppa" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">uaillant</w>
+                                          </l>
+                                          <l n="3" xml:id="Bertoni_Gar_l_3">
+                                                <w xml:id="Bertoni_Gar_w_002413" lemma="le" pos="DETdef" msd="NOMB.=p|GENRE=m|CAS=r">Les</w>
+                                                <w xml:id="Bertoni_Gar_w_002414" lemma="4" pos="ADJcar" msd="NOMB.=p|GENRE=m|CAS=r">.IIIJ.</w>
+                                                <w xml:id="Bertoni_Gar_w_002415" lemma="roi2" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">rois</w>
+                                                <w xml:id="Bertoni_Gar_w_002416" lemma="avoir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=p">auons</w>
+                                                <w xml:id="Bertoni_Gar_w_002417" lemma="veintre" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=r">uanc<ex>us</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002418" lemma="en1" pos="PRE">en</w>
+                                                <w xml:id="Bertoni_Gar_w_002419" lemma="champ" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">camp</w>
+                                          </l>
+                                          <l n="4" xml:id="Bertoni_Gar_l_4">
+                                                <w xml:id="Bertoni_Gar_w_002420" lemma="2" pos="PROcar" msd="NOMB.=p|GENRE=m|CAS=n">.IJ.</w>
+                                                <w xml:id="Bertoni_Gar_w_002421" lemma="en2" pos="PROadv">en</w>
+                                                <w xml:id="Bertoni_Gar_w_002422" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=p">s<ex>un</ex>t</w>
+                                                <w xml:id="Bertoni_Gar_w_002423" lemma="morir" pos="VERppe" msd="NOMB.=p|GENRE=m|CAS=n">mort</w>
+                                                <w xml:id="Bertoni_Gar_w_002424" lemma="a3" pos="PRE" rend="aggl">a</w><w xml:id="Bertoni_Gar_w_002425" lemma="ce2" pos="DETdem" msd="NOMB.=s|GENRE=m|CAS=r">ce</w>
+                                                <w xml:id="Bertoni_Gar_w_002426" lemma="comencement" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r"><ex>com</ex>m<ex>en</ex>cement</w>
+                                          </l>
+                                          <l n="5" xml:id="Bertoni_Gar_l_5">
+                                                <w xml:id="Bertoni_Gar_w_002427" lemma="Begues" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n"><choice>
+                                                  <abbr>.Be.</abbr>
+                                                  <expan resp="#AV" cert="low">Begues</expan>
+                                                  </choice></w>
+                                                <w xml:id="Bertoni_Gar_w_002428" lemma="mon1" pos="DETpos" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n">mes</w>
+                                                <w xml:id="Bertoni_Gar_w_002429" lemma="frere" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">frere</w>
+                                                <w xml:id="Bertoni_Gar_w_002430" lemma="ocire" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ocist</w>
+                                                <w xml:id="Bertoni_Gar_w_002431" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r" rend="elision">l</w><w xml:id="Bertoni_Gar_w_002432" lemma="un" pos="PROind" msd="NOMB.=s|GENRE=m|CAS=r">u<ex>n</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002433" lemma="voirement" pos="ADVgen" msd="DEGRE=-">uoirem<ex>en</ex>t</w>
+                                          </l>
+                                          <l n="6" xml:id="Bertoni_Gar_l_6">
+                                                <w xml:id="Bertoni_Gar_w_002434" lemma="et" pos="CONcoo"><ex>Et</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002435" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=n" rend="elision">i</w><w xml:id="Bertoni_Gar_w_002436" lemma="ocire" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=1|NOMB.=s">ocis</w>
+                                                <w xml:id="Bertoni_Gar_w_002437" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r" rend="elision">l</w><w xml:id="Bertoni_Gar_w_002438" lemma="autre" pos="PROind" msd="NOMB.=s|GENRE=m|CAS=r">aut<ex>re</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002439" lemma="seignor" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">sire</w>
+                                                <w xml:id="Bertoni_Gar_w_002440" lemma="ne1" pos="ADVneg">ne</w>
+                                                <w xml:id="Bertoni_Gar_w_002441" lemma="je" pos="PROper" msd="PERS.=1|NOMB.=s|GENRE=m|CAS=r" rend="elision">m</w><w xml:id="Bertoni_Gar_w_002442" lemma="en2" pos="PROadv">e<ex>n</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002443" lemma="repentir" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=1|NOMB.=s">repent</w>
+                                                <ex>...</ex>
+                                                <gap reason="sampling"/>
+                                          </l>
+                                    </lg>
+                              
+                        <gap unit="lines" reason="sampling"/>
+                         <note>E più sotto (framm. v. 159 sgg.):</note> 
+                                    <lg xml:id="B_002" type="laisse" n="2" sample="initial">
+                                          <metamark>[c. 7b]</metamark>
+                                          <l n="7" xml:id="Bertoni_Gar_l_7">
+                                                <w xml:id="Bertoni_Gar_w_002444" lemma="a3" pos="PRE">A</w>
+                                                <w xml:id="Bertoni_Gar_w_002445" lemma="ce2" pos="DETdem" msd="NOMB.=p|GENRE=f|CAS=r">ces</w>
+                                                <w xml:id="Bertoni_Gar_w_002446" lemma="parole" pos="NOMcom" msd="NOMB.=p|GENRE=f|CAS=r">p<ex>ar</ex>oles</w>
+                                                <w xml:id="Bertoni_Gar_w_002447" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ui<ex>n</ex>t</w>
+                                                <w xml:id="Bertoni_Gar_w_002448" lemma="Hernaïs" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">h<ex>er</ex>nais</w>
+                                                <w xml:id="Bertoni_Gar_w_002449" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=n">li</w>
+                                                <w xml:id="Bertoni_Gar_w_002450" lemma="fier" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">fier</w>
+                                          </l>
+                                          <l n="8" xml:id="Bertoni_Gar_l_8">
+                                                <w xml:id="Bertoni_Gar_w_002451" lemma="icel" pos="PROdem" msd="NOMB.=s|GENRE=m|CAS=n">Icil</w>
+                                                <w xml:id="Bertoni_Gar_w_002452" lemma="estre1" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fu</w>
+                                                <w xml:id="Bertoni_Gar_w_002453" lemma="nevo" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">nies</w>
+                                                <w xml:id="Bertoni_Gar_w_002454" lemma="Garin" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=r"><choice>
+                                                  <abbr>Ga.</abbr>
+                                                  <expan resp="#AV" cert="low">Garin</expan>
+                                                  </choice></w>
+                                                <w xml:id="Bertoni_Gar_w_002455" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                                                <w xml:id="Bertoni_Gar_w_002456" lemma="droiturier2" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">droit<ex>ur</ex>ier</w>
+                                          </l>
+                                          <l n="9" xml:id="Bertoni_Gar_l_9">
+                                                <w xml:id="Bertoni_Gar_w_002457" lemma="fil2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">Fix</w>
+                                                <w xml:id="Bertoni_Gar_w_002458" lemma="Heluïs" pos="NOMpro" msd="NOMB.=s|GENRE=f|CAS=r">heluit</w>
+                                                <w xml:id="Bertoni_Gar_w_002459" lemma="si" pos="ADVgen" msd="DEGRE=-">si</w>
+                                                <w xml:id="Bertoni_Gar_w_002460" lemma="come1" pos="CONsub"><ex>com</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002461" lemma="chanter" pos="VERcjg" msd="MODE=ind|TEMPS=pst|PERS.=3|NOMB.=s">chante</w>
+                                                <w xml:id="Bertoni_Gar_w_002462" lemma="le" pos="DETdef" msd="NOMB.=p|GENRE=m|CAS=r">li</w>
+                                                <w xml:id="Bertoni_Gar_w_002463" lemma="brief" pos="NOMcom" msd="NOMB.=p|GENRE=m|CAS=r">bries</w>
+                                          </l>
+                                          <l n="10" xml:id="Bertoni_Gar_l_10">
+                                                <w xml:id="Bertoni_Gar_w_002464" lemma="et" pos="CONcoo"><ex>Et</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002465" lemma="frere" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">frere</w>
+                                                <w xml:id="Bertoni_Gar_w_002466" lemma="Vedon" pos="NOMpro" msd="NOMB.=s|GENRE=m|CAS=n">vedon</w>
+                                                <w xml:id="Bertoni_Gar_w_002467" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r" rend="elision">l</w><w xml:id="Bertoni_Gar_w_002468" lemma="evesque" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">euesq<ex>ue</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002469" lemma="droiturier2" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">droiturier</w>
+                                          </l>
+                                          <l n="11" xml:id="Bertoni_Gar_l_11">
+                                                <w xml:id="Bertoni_Gar_w_002470" lemma="qui" pos="PROrel" msd="NOMB.=s|GENRE=m|CAS=n">Q<ex>ui</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002471" lemma="faire" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">fist</w>
+                                                <w xml:id="Bertoni_Gar_w_002472" lemma="fonder2" pos="VERinf">fonder</w>
+                                                <w xml:id="Bertoni_Gar_w_002473" lemma="le" pos="DETdef" msd="NOMB.=s|GENRE=m|CAS=r">le</w>
+                                                <w xml:id="Bertoni_Gar_w_002474" lemma="grant" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=r|DEGRE=p">g<ex>ra</ex>nt</w>
+                                                <w xml:id="Bertoni_Gar_w_002475" lemma="tor2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">tor</w>
+                                                <w xml:id="Bertoni_Gar_w_002476" lemma="de" pos="PRE">de</w>
+                                                <w xml:id="Bertoni_Gar_w_002477" lemma="Peniers" pos="NOMpro" msd="NOMB.=s|GENRE=x|CAS=r">peniers</w>
+                                          </l>
+                                          <l n="12" xml:id="Bertoni_Gar_l_12">
+                                                <w xml:id="Bertoni_Gar_w_002478" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">Il</w>
+                                                <w xml:id="Bertoni_Gar_w_002479" lemma="et" pos="CONcoo"><ex>et</ex></w>
+                                                <w xml:id="Bertoni_Gar_w_002480" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=f|CAS=n">sa</w>
+                                                <w xml:id="Bertoni_Gar_w_002481" lemma="mere" pos="NOMcom" msd="NOMB.=s|GENRE=f|CAS=r">mere</w>
+                                                <w xml:id="Bertoni_Gar_w_002482" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=p">ui<ex>n</ex>rent</w>
+                                                <w xml:id="Bertoni_Gar_w_002483" lemma="sans" pos="PRE">sans</w>
+                                                <w xml:id="Bertoni_Gar_w_002484" lemma="atargier" pos="VERinf">atargier</w>
+                                          </l>
+                                          <l n="13" xml:id="Bertoni_Gar_l_13">
+                                                <w xml:id="Bertoni_Gar_w_002485" lemma="a3+le" pos="PRE.DETdef" msd="NOMB.=s|GENRE=m|CAS=r">Al</w>
+                                                <w xml:id="Bertoni_Gar_w_002486" lemma="roi2" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">roi</w>
+                                                <w xml:id="Bertoni_Gar_w_002487" lemma="de" pos="PRE">de</w>
+                                                <w xml:id="Bertoni_Gar_w_002488" lemma="France" pos="NOMpro" msd="NOMB.=s|GENRE=f|CAS=r">france</w>
+                                                <w xml:id="Bertoni_Gar_w_002489" lemma="por2" pos="PRE">por</w>
+                                                <w xml:id="Bertoni_Gar_w_002490" lemma="recevoir" pos="VERinf">receuoir</w>
+                                                <w xml:id="Bertoni_Gar_w_002491" lemma="son4" pos="DETpos" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=r">son</w>
+                                                <w xml:id="Bertoni_Gar_w_002492" lemma="fief" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=r">ﬁe</w>
+                                          </l>
+                                          <l n="14" xml:id="Bertoni_Gar_l_14">
+                                                <w xml:id="Bertoni_Gar_w_002493" lemma="il" pos="PROper" msd="PERS.=3|NOMB.=s|GENRE=m|CAS=n">Il</w>
+                                                <w xml:id="Bertoni_Gar_w_002494" lemma="ne1" pos="ADVneg">ne</w>
+                                                <w xml:id="Bertoni_Gar_w_002495" lemma="venir" pos="VERcjg" msd="MODE=ind|TEMPS=psp|PERS.=3|NOMB.=s">ui<ex>n</ex>t</w>
+                                                <w xml:id="Bertoni_Gar_w_002496" lemma="mie1" pos="ADVneg">mie</w>
+                                                <w xml:id="Bertoni_Gar_w_002497" lemma="come1" pos="CONsub"><ex>com</ex>me</w>
+                                                <w xml:id="Bertoni_Gar_w_002498" lemma="vilain" pos="ADJqua" msd="NOMB.=s|GENRE=m|CAS=n|DEGRE=p">uilai<ex>n</ex>s</w>
+                                                <w xml:id="Bertoni_Gar_w_002499" lemma="bergier" pos="NOMcom" msd="NOMB.=s|GENRE=m|CAS=n">b<ex>er</ex>giers</w>
+                                                <gap reason="sampling"/>
+                                          </l>
+                                    </lg>
+            </body>
+            <back>
+                  <pb n="717" facs="10.jpg"/>
+                  <p> Non è maraviglia che il ms. di Berna sia in più luoghi discorde. Il
+                        frammento, a quanto mi par lecito congetturare dai pochi assaggi, che
+                        ho potuto fare, proviene da un codice che si riattaccava alla famiglia
+                        I (gruppo I) del Bonnardot<note n="23" resp="#Bertoni"><bibl status="draft">Romania, III, 261</bibl></note>; mentre il
+                        ms. di Berna appartiene alla famiglia II. È tutto ciò che posso dire,
+                        co1 qualche riserva; ed è molto poco. Ma mi è parso opportuno
+                        comunicare agli eruditi, sia pure nudamente, la lezione del nuovo
+                        lacerto, lezione, che gioverà, senza dubbio, all‘illustre studioso,
+                        dal quale abbiamo già avuta l‘ edizione di Hervis de Metz<note n="24"><bibl status="draft"><title rend="italic">Hervis
+                              von Metz. Vorgedicht der Lothringer Geste … hgg. von
+                              E. Stengel</title>, in <publisher>Gesellschaft f.
+                                    roman. Lit.</publisher> vol. I (<date when="1902">1902</date>).</bibl></note> e dal quale è permesso
+                        attendere con tutta fiducia il testo della canzone di Garin. </p>
+            </back>
+      </text>
+</TEI>
