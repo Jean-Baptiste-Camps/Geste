@@ -46,9 +46,11 @@ Une version bêta de la publication en ligne est disponible sur **le serveur de 
 
 ## Organisation de l'entrepôt
 
-La représentation canonique des données est contenue dans le dossier:
+Les documents, dans leur représentation canonique, sont contenus dans les dossiers:
 
-- `xml`: textes du corpus geste: éditions numérisées (ed\_), transcriptions à nouveaux frais (transcr\_);
+- `xml_gold`: textes du corpus geste: éditions numérisées (ed\_), transcriptions à nouveaux frais (transcr\_), avec annotation linguistique revue;
+- `xml_silver`: textes du corpus geste à l'annotation linguistique non revue;
+- `xml_src`: documents de travail, notamment sources des transcriptions allographétiques.
 
 Le modèle est contenu dans le dossier:
 
