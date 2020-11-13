@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: utiliser la fonction 'normalize-unicode(), et la mettre en  œuvre dans les autres feuilles de style -->
 <!-- Sur la normalisation, voir
         https://www.w3.org/TR/2005/WD-charmod-norm-20051027/#sec-NormalizationMotivation
         En gros,
@@ -20,11 +19,6 @@
         
         => NFC me paraît également le meilleur choix.
 -->
-<!-- Problème pour la normalisation unicode, 
-que les accents se trouvent dans des balises séparées;
-il faut donc faire un premier passage pour récupérer le contenu 
-avant de le normaliser
--->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="http://www.tei-c.org/ns/1.0"
@@ -35,6 +29,8 @@ avant de le normaliser
     
     <xsl:strip-space elements="*"/>
     
+    <xsl:variable name="NoPonctMod" select="not(/descendant::tei:pc[@type='supplied'])"/>
+    
     <xsl:template match="/">
         <xsl:text>form</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -44,7 +40,7 @@ avant de le normaliser
         <xsl:text>&#9;</xsl:text>
         <xsl:text>morph</xsl:text>
         <xsl:text>&#xA;</xsl:text>
-        <xsl:apply-templates select="descendant::tei:l"/><!-- Ajouter un test pour éviter de récupérer les vers vides -->
+        <xsl:apply-templates select="descendant::tei:l"/>
     </xsl:template>
     
     <xsl:template match="tei:l">
@@ -64,6 +60,9 @@ avant de le normaliser
             | descendant::tei:pc[@type='supplied']
             "
         />
+        <xsl:if test="$NoPonctMod">
+            <xsl:text>&#xA;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:w | tei:pc">

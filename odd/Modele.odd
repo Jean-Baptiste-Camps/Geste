@@ -662,7 +662,7 @@ Ex.: orig peut etre utilisé pour des régularisations de graphie faites par l'�
                             <specDesc key="subst"/>
                             <specDesc key="del"/>
                             <specDesc key="add"/>
-                            <specDesc key="pc" atts="type"/>
+                            <specDesc key="pc" atts="type subtype"/>
                             <specDesc key="hi"/>
                             <specDesc key="handShift"/>
                             <specDesc key="gap"/>
@@ -3758,8 +3758,8 @@ CC 3778 Li casteax ne doutoit assaut
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="subtype" mode="change">
-                                <valList>
+                            <attDef ident="subtype" mode="add">
+                                <valList type="closed">
                                     <!-- Ces valeurs à remplacer par des g ou des caractères Unicode -->
                                     <!--<valItem ident="point-median"/>
                                     <valItem ident="punctus"/>
@@ -3778,6 +3778,21 @@ CC 3778 Li casteax ne doutoit assaut
                                         <desc>caractérise un signe de ponctuation utilisé comme
                                             séparateur dans la mise en page (séparateur de colonne,
                                             etc.)</desc>
+                                    </valItem>
+                                    <valItem ident="colSep">
+                                        <desc>caractérise un signe de ponctuation utilisé comme séparateur de colonne ou point final de vers</desc>
+                                    </valItem>
+                                    <valItem ident="enjambement">
+                                        <desc><!-- TODO --></desc>
+                                    </valItem>
+                                    <valItem ident="corrMetrique">
+                                        <desc><!-- TODO --></desc>
+                                    </valItem>
+                                    <valItem ident="juxtaposition">
+                                        <desc><!-- TODO --></desc>
+                                    </valItem>
+                                    <valItem ident="discours">
+                                        <desc>caractérise un signe de ponctuation annonçant un discours</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -3984,7 +3999,7 @@ CC 3778 Li casteax ne doutoit assaut
                                 <sequence>
                                     <elementRef key="country"/>
                                     <elementRef key="settlement"/>
-                                    <elementRef key="institution"/>
+                                    <elementRef key="institution" minOccurs="0"/>
                                     <elementRef key="repository"/>
                                     <elementRef key="collection"/>
                                     <elementRef key="idno"/>

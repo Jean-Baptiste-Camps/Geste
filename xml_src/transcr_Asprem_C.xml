@@ -1,0 +1,4512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: terminer la fusion avec le fichier ClermontAspremont_token.xml + traiter les q-->
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/out/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
+<!DOCTYPE TEI SYSTEM "../dtd/abreviations.dtd" [
+<!ENTITY o-suscrit-or  '<choice><abbr>&#x0366;</abbr><expan>o<ex>r</ex></expan></choice>'>
+<!ENTITY mlt-mut "<choice><expan>mut</expan><abbr>ml<c rend='apos'>&#x0303;</c>t</abbr></choice>">
+<!ENTITY bin "<choice><expan>bin</expan><abbr>bn&#x0303;</abbr></choice>">
+<!ENTITY pro-pour-por "<choice><expan>p<ex>or</ex></expan><abbr>&#xA753;</abbr></choice>">
+<!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
+<!ENTITY Girars "<choice><expan>G<ex>irars</ex></expan><abbr>.G.</abbr></choice>">
+<!ENTITY Karles "<choice><expan>K<ex>arles</ex></expan><abbr>.k.</abbr></choice>">
+<!ENTITY Karle "<choice><expan>Karl<ex>e</ex></expan><abbr>.k.</abbr></choice>">
+<!ENTITY Karlemaigne "<choice><expan>K<ex>arlemaigne</ex></expan><abbr>.k.</abbr></choice>">
+<!ENTITY Naimes "<choice><abbr>.N.</abbr><expan>N<ex>aimes</ex></expan></choice>">
+<!ENTITY x-i-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>x&#x0365;</abbr></choice>">
+<!ENTITY xpi-cresti "<choice><expan>C<ex>rest</ex>i</expan><abbr>xp&#x0303;ı</abbr></choice>">
+<!ENTITY u-suscrit-ru "<choice><expan><ex>r</ex>u</expan><abbr>&#x0367;</abbr></choice>">
+] >
+<!-- Traitement semi-automatique des q avec - et «/» à faire -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="transcr_Asprem_C" type="transcr" xml:lang="fr" corresp="jns4006">
+    <!-- transcription diplomatique et allographétique du ms de Clermont de la Chanson d'Aspremont-->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Aspremont</title>
+                <title type="sub">Transcription du fragment de Clermont</title>
+                <respStmt>
+                    <resp>transcription, encodage XML et vérification de l'annotation linguistique</resp>
+                    <persName xml:id="JBC">Jean-Baptiste Camps</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Annotation linguistique</resp>
+                    <persName xml:id="AC">Alice Cochet</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName><forename>Jean-Baptiste</forename><surname>Camps</surname></persName>
+                    <address>
+                        <orgName>École nationale des chartes</orgName>
+                        <addrLine>65 rue de Richelieu</addrLine>
+                        <addrLine>F-75002 Paris</addrLine>
+                    </address>
+                    <email>jbcamps@hotmail.com</email>
+                </authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/publicdomain/mark/1.0/"> Les textes d'auteurs médiévaux sont dans le domaine
+                        public.</licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Le travail d'encodage et d'annotation sont mis à disposition
+                        selon les termes de la licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).
+                    </licence>
+                </availability>
+                <date>2016</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc xml:id="C">
+                    <msIdentifier>
+                        <country>France</country>
+                        <settlement>Clermont-Ferrand</settlement>
+                        <repository>Archives départementales du Puy-de-Dôme</repository>
+                        <idno>1F2</idno>
+                        <msName type="sigle">C</msName>
+                    </msIdentifier>
+                    <head>
+                        <title>Chanson d'Aspremont</title>
+                        <title>Fabliau: Le Héron (Cele qui fu foutue et desfoutue II)</title>
+                        <title>Couplets sur le mariage</title>
+                    </head>
+                    <physDesc>
+                        <handDesc>
+                            <handNote xml:id="main1"> Main principale de la copie de l'Aspremont de
+                                C </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace cert="high" resp="#JBC">Angleterre</origPlace>
+                            <origDate cert="medium" resp="#JBC" notBefore="1201" notAfter="1233"
+                                >premier tiers du XIIIe siècle</origDate>
+                        </origin>
+                    </history>
+                    <!--<additional>
+                        <surrogates> Fac-similé en ligne sur Gallica: <ref target="http://gallica.bnf.fr/ark:/12148/btv1b6000371s/f21.image.r=5094.langFR.zoom">http://gallica.bnf.fr/ark:/12148/btv1b6000371s/f21.image.r=5094.langFR.zoom</ref>.
+                        </surrogates>
+                    </additional>-->
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <origDate cert="unknown" resp="#AFLL" notBefore="1170" notAfter="1190" type="dateComposition">Fin du XIIe siècle, avant 1190</origDate>
+                <origDate cert="unknown" resp="#JBC" notBefore="1200" notAfter="1233" type="dateManuscrit">premier tiers du XIIIe siècle</origDate>
+                <origPlace cert="unknown" resp="#AFLL" type="lieuComposition">Sicile?</origPlace>
+                <origPlace cert="unknown" resp="#JBC" type="lieuManuscrit">agn.</origPlace>
+                <!--<origPlace cert="medium" resp="#AFLL">Sicile?</origPlace>
+                <origDate cert="high" resp="#AFLL" notBefore="1170" notAfter="1190">Fin du XIIe
+                    siècle, avant
+                1190</origDate>--><!-- à faire: ajouter la référence bibliographique soutenant cette affirmation -->
+            </creation>
+            <langUsage>
+                <language cert="high" resp="#JBC" ident="xno" usage="100">anglo-normand du XIIIe
+                    siècle (langue du scribe ou couche principale)</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change when="2020-07-20" who="#JBC">Mise à jour de l'encodage de la ponctuation, élision, tokénisation et des chiffres romains.</change>
+            <change when="2017-02" who="#JBC">Vérification et intégration de l'annotation linguistique</change>
+            <change when="2016-09" who="#AC">Correction des résultats de l'annotation linguistique par Pandora</change>
+            <change when="2016-03-06" who="#JBC" status="draft">Création du document et mise en
+                place de la transcription</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="xno">
+        <!-- Relecture d'ensemble et de détail nécessaire -->
+        <body>
+            <pb n="8r" facs="facsimile/ADClermont_1F2-01r.JPG"/>
+            <cb n="a"/>
+            <lg type="laisse" n="520">
+                <gap reason="lacuna"/>
+                <!--<lb/><l><w><hi rend="initiale detach">E</hi>t</w> <w rend="elision">l<reg>'</reg></w><w>apostoles</w> <w>les</w> <w>prist</w> <w>a</w> <w>esgarder</w><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>
+<lb/><l><w><hi rend="initiale detach">A</hi>u</w> <w>duc</w> <w>Girart</w> <w>les</w> <w>comence</w> <w>a</w> <w>mostrer</w><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>-->
+                <lb/>
+                <l>
+                    <q>
+                    <w><hi rend="initiale detach">c</hi>e&s-long;</w>
+                    <w>c&e-suscrit-re;&a-rond;tu&r-long;e&s-rond-plongeant;</w>
+                    <w>que</w>
+                    <w>&i-pour-j;o</w>
+                    <w>&u-pour-v;e&i;</w>
+                    <w>l&a-rond;</w>
+                    <w>e&s-long;ter</w></q></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">f</hi>&i;&s-long;t</w>
+                    <w>&d-oncial;eu</w>
+                    <w>pur</w>
+                    <w>ho&tilde1-nasale-m;me</w>
+                    <w>&s-long;&tilde2-er;&u-pour-v;&i;r</w>
+                    <w>e</w>
+                    <w>hono&r-rond;e&r-long;</w></q><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>
+                <lb/>
+                <l><q><w><hi rend="initiale detach">v</hi>e&i;r</w></q>
+                    <w>&d-oncial;&i;t</w>
+                    <w>&Girars;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <q> <w>c&ed-palatalisation-cedille;o</w>
+                    <w>ne</w>
+                    <w>qu&i;e&r-long;</w>
+                    <w>&i-pour-j;o</w>
+                    <w>celer</w></q><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>
+                <lb/>
+                <l corresp="#edBrandin_I0988"><q><w><hi rend="initiale detach">e</hi>n</w>
+                    <w>nule</w>
+                    <w>t&tilde2-er;re</w>
+                    <w>que</w>
+                    <w>&s-long;e&i;t</w>
+                    <w>&d-oncial;e<space quantity="1"/>c&ed-palatalisation-cedille;&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>mer</w></q></l>
+                <lb/>
+                <l>
+                    <q><w><hi rend="initiale detach">n</hi>e</w>
+                    <w>purre&i;t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&s-long;&i;</w>
+                    <w>bele&s-rond-plongeant;</w>
+                    <w>reco&u-pour-v;ere&r-long;</w></q><pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <q><w><hi rend="initiale detach">s<!-- vérif forme--></hi>&i;<reg>'</reg></w>
+                    <w>o&r-rond;e</w>
+                    <w>&u-pour-v;eolt</w>
+                    <w>&Karles;</w>
+                    <w>p&a-rond;r</w>
+                    <w>mo&tilde1-nasale-n;</w>
+                    <w>&con-9-tironien;&s-long;e&i;l</w>
+                    <w>o&u-pour-v;ere&r-long;</w></q>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <q><w><hi rend="initiale detach">&i-long-pour-i;</hi>l</w>
+                    <w>le&s-long;</w>
+                    <w>fr&a-rond;</w>
+                    <w>tute&s-rond-plongeant;</w>
+                    <w>h&a-rond;uteme&tilde1-nasale-n;t</w>
+                    <w>m&a-rond;r&i;&ed-dierese;er</w>
+                    </q><pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="521">
+                <lb/>
+                <l corresp="#edBrandin_I0992"><w><hi rend="initiale peint 2l"
+                        >L</hi>&i-long-pour-i;</w>
+                    <w>apo&s-long;to&i;le</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;eut</w>
+                    <w>me&s-rond-plongeant;</w>
+                    <w>t&a-rond;rg&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>e&s-long;</w>
+                    <w>arche&u-pour-v;e&s-long;que&s-rond-plongeant;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>e&s-long;tre</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;ut&e-suscrit-re;</w>
+                    <w>cle&r-long;g&i;e&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">f</hi>unt</w>
+                    <w>lu&r-long;</w>
+                    <w>&a-rond;f&a-rond;&i;re</w>
+                    <w>e</w>
+                    <w>lur</w>
+                    <w>me&s-long;t&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">p</hi>&e-suscrit-re;m&i;e&r-long;ement</w>
+                    <w>le&s-rond-plongeant;</w>
+                    <w>f&i;re&tilde1-nasale-n;t</w>
+                    <w>p&i-suscrit-ri;n&s-long;e&i;&accent;gn&i;&accent;e&r-long;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l corresp="#edBrandin_I0996"><w><hi rend="initiale detach"
+                        >a</hi>p&e-suscrit-re;&ed-accent-tonique;&s-rond-plongeant;</w>
+                    <w>lur</w>
+                    <w>f&i;re&tilde1-nasale-n;t</w>
+                    <w>lu&r-long;</w>
+                    <w>m&a-rond;ntel&s-rond-plongeant;</w>
+                    <w>&d-oncial;e&s-long;l&a-rond;c&i;e&r-long;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach"
+                        >s<!-- vérif forme--></hi>engle&s-rond-plongeant;</w><!-- Y a-t-il eu un repassage de c en l? -->
+                    <w>&a-rond;&s-long;</w>
+                    <w>chem&i;&s-long;e</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;anz</w>
+                    <w>aut&e-suscrit-re;</w>
+                    <w>recon&s-long;e&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>funt</w>
+                    <w>le</w>
+                    <w>&i-pour-j;ur</w>
+                    <w>enz</w>
+                    <w>e&s-long;</w>
+                    <w>cu&u-pour-v;e&s-rond-plongeant;</w>
+                    <w>plung&i;er</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&i-long-pour-i;</hi>luec</w>
+                    <w>le&s-long;</w>
+                    <w>f&i;rent</w>
+                    <w>b&a-rond;pt&i;z&i;er</w>
+                    <w>et</w>
+                    <w>le&u-pour-v;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l corresp="#edBrandin_11000">
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>l&a-rond;</w>
+                    <w>re&i;&accent;&ed-dierese;ne</w>
+                    <w>f&i;rent</w>
+                    <w>&s-long;uen</w>
+                    <w>nun</w>
+                    <w>ch&a-rond;ng&i;e&r-long;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>l&a-rond;re&i;ce</w>
+                    <w>ot</w>
+                    <w>nun</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>me&s-long;</w>
+                    <w>mult</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w rend="aggl">a</w>
+                    <w>p&tilde2-er-pour-re;&i;&s-long;&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <!--<lb/><l><w><hi rend="initiale detach">A</hi>&i;nc</w> <w>&a-rond;</w> <w>&s-long;on</w> <w>ten&s-long;</w> <w>ne</w> <w>fu</w> <w>mel&d-oncial;re</w> <w>moll&i;er</w><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>-->
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach"
+                        >a</hi>p&e-suscrit-re;&ed-accent-tonique;&s-rond-plongeant;</w>
+                    <w>le&s-long;</w>
+                    <w>f&i;rent</w>
+                    <w>e</w>
+                    <w>&u-pour-v;e&s-long;t&i;r</w>
+                    <w>e</w>
+                    <w>chauc&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">h</hi>u&i;&accent;</w>
+                    <w>me&s-long;</w>
+                    <w>&d-oncial;e&u-pour-v;u&tilde1-nasale-m;</w>
+                    <w>&a-rond;</w>
+                    <w>&Karle;</w>
+                    <!-- Entité Karle ou Karlon ? -->
+                    <w>rep&a-rond;&i;r&i;er</w>
+                </l>
+                <lb/>
+                <l corresp="#edBrandin_11004">
+                    <w rend="aggl"><hi rend="initiale detach">k</hi>&i;</w>
+                    <w>en</w>
+                    <w>k&a-rond;l&a-rond;bre</w>
+                    <w>fure&tilde1-nasale-n;t</w>
+                    <w>du&i;&accent;</w>
+                    <w>me&i;&s-long;</w>
+                    <w>ent&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">a</hi></w>
+                    <w>&v-pour-u;ne</w>
+                    <w>&i;gl&i;&s-long;e</w>
+                    <w>f&i;&s-long;t</w>
+                    <num><w>.xxx&i-plongeant-pour-i;.</w></num>
+                    <w>ch&a-rond;rn&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&v-pour-u;</hi></w>
+                    <w>&s-long;e&s-long;</w>
+                    <w>mo&r-rond;z</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>mett&e-suscrit-re;</w>
+                    <w>e</w>
+                    <w>ap&a-rond;re&i;ll&i;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>le</w>
+                    <w>h&a-rond;ut</w>
+                    <w>ho&tilde1-nasale-m;me</w>
+                    <w>&s-long;&i;</w>
+                    <w>le</w>
+                    <w>ot</w>
+                    <w>auque&s-rond-plongeant;</w>
+                    <w>ch&i;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&i-long-pour-i;</hi>cel&s-long;</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&i;l</w>
+                    <w>enterre&r-long;</w>
+                    <w>al</w>
+                    <w>mu&s-long;t&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">t</hi>rente</w>
+                    <w>c&a-rond;no&i;ne&s-rond-plongeant;</w>
+                    <w rend="aggl">&i;</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>p&tilde3-ur;</w>
+                    <w>&d-oncial;eu</w>
+                    <w>p&tilde2-er-pour-re;&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="522">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach 2l">O</hi>ez</w>
+                    <w>que</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&Karles;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>empereur</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&p-barré-par;</hi></w>
+                    <w>tote</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>o&s-long;t</w>
+                    <w rend="aggl">en</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>c&i-suscrit-ri;e&ed-dierese;r</w>
+                    <w>un</w>
+                    <w>&i-pour-j;u&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">k</hi>&i;</w>
+                    <w>ne</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>e<del rend="exponctué">n</del></w>
+                    <w>&a-rond;ut</w>
+                    <w>ne</w>
+                    <w rend="aggl">l&i;</w>
+                    <w>gr&a-rond;nt</w>
+                    <w rend="aggl">ne</w>
+                    <w rend="aggl">l&i;</w>
+                    <w rend="aggl">menu&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">n</hi>e</w>
+                    <w>re&i;</w>
+                    <w>ne</w>
+                    <w>conte</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>che&u-pour-v;al&i;e&r-long;</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;&a-rond;&u-pour-v;&a-rond;&s-long;ur</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>r&i;che</w>
+                    <w>&d-oncial;uc</w>
+                    <w>ne</w>
+                    <w>p&i-suscrit-ri;nce</w>
+                    <w>ne</w>
+                    <w>cuntur</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">a</hi></w>
+                    <w>lur</w>
+                    <w>&con-9-tironien;&s-long;e&i;l</w>
+                    <w>&u-pour-v;out</w>
+                    <w>le&i;&s-long;&s-long;&i;er</w>
+                    <w>&s-long;on</w>
+                    <w>hono&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="523">
+                <lb/>
+                <l>
+                    <w rend="elision"><hi rend="initiale detach 2l">L</hi></w>
+                    <w>em&p-barré-per;eur</w>
+                    <w rend="elision">ne</w><!-- Vérif -->
+                    <w>&u-pour-v;out</w>
+                    <w>plu&s-long;</w>
+                    <w>&d-oncial;emo&r-rond;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&p-barré-par;</hi></w>
+                    <w>le</w>
+                    <w>&d-oncial;uc</w>
+                    <w>&Naimes;</w>
+                    <w>e</w>
+                    <w>&p-barré-par;</w>
+                    <w>le</w>
+                    <w>&u-pour-v;&i;el</w>
+                    <w>otuel</w>
+                    <note type="tradition">Var. Otuel ici, pour Otoër dans Brandin.</note>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>&i;&s-long;t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;<space/>po&s-long;to&i;le</w>
+                    <w>e</w>
+                    <w>le</w>
+                    <w>&d-oncial;uc</w>
+                    <w>m&a-rond;n&d-oncial;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
+                    <w>che&s-long;cun&s-rond-plongeant;</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>el&s-long;</w>
+                    <w>&u-pour-v;&i;enge</w>
+                    <w rend="aggl">a</w>
+                    <w>lu&i;</w>
+                    <w>&p-barré-par;ler</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&v-pour-u;</hi>nc</w>
+                    <w rend="elision">l</w>
+                    <w>a<space/>po&s-long;to&i;le</w>
+                    <w rend="elision">n</w>
+                    <w>&i;</w>
+                    <w>o&s-long;e</w>
+                    <w>are&s-long;te&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>o&r-rond;&d-oncial;enez</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&a-rond;l</w>
+                    <w>o&s-long;t</w>
+                    <w>returne&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&a-rond;&s-long;</w>
+                    <w>mo&r-rond;&s-long;</w>
+                    <w>le&s-rond-plongeant;</w>
+                    <w>&a-rond;lme&s-rond-plongeant;</w>
+                    <w>com&a-rond;n&d-oncial;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>vet</w>
+                    <w rend="elision">l</w>
+                    <w>&i;gl&i;&s-long;e</w>
+                    <w>&d-oncial;e&d-oncial;&i;er</w>
+                    <w>e</w>
+                    <w>&s-long;&a-rond;cre&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>&i;l</w>
+                    <w>me&i;̈me&s-rond-plongeant;</w>
+                    <w>&u-pour-v;et</w>
+                    <w rend="aggl">l&a-rond;</w>
+                    <w>me&s-long;&s-long;e</w>
+                    <w>ch&a-rond;nter</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&G;</hi>r&a-rond;nt</w>
+                    <w>fu</w>
+                    <w>l&a-rond;</w>
+                    <w>offeren&d-oncial;e</w>
+                    <w>p&tilde3-ur;</w>
+                    <w>le</w>
+                    <w>l&i;u</w>
+                    <w>eno&r-rond;e&r-long;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">n</hi>e</w>
+                    <w>l&i;</w>
+                    <w>e&s-long;tut</w>
+                    <w>p&tilde3-ur;</w>
+                    <w>.v&i;&i;.c.</w>
+                    <w>m&a-rond;r&s-long-plongeant;</w>
+                    <w>&d-oncial;one&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <!--<lb/><l><w><hi rend="initiale detach">S</hi>e&s-long;&s-long;&a-rond;nte</w> <w>mo&i;ne&s-long;</w> <w>&i;</w> <w>&a-rond;</w> <w>f&a-rond;&i;t</w> <w>o&r-rond;&d-oncial;ener</w></l>
+<lb/><l><w><hi rend="initiale detach">E</hi>t</w> <w>g&a-rond;r&i;&s-long;on</w> <w>&a-rond;</w> <w>lo&r-rond;</w> <w>ue&s-long;</w> <w>e&s-long;to&r-rond;er</w></l>
+<lb/><l><w><hi rend="initiale detach">D</hi>ont</w> <w>&s-long;e</w> <w>poï&s-long;&s-long;ent</w> <w>r&i;chement</w> <w>&a-rond;to&r-rond;ner</w><pc type="supplied" lemma="." pos="PONfrt">.</pc></l>-->
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e</w>
+                    <w>&d-oncial;uc</w>
+                    <w>&Girars;</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&s-long;uen</w>
+                    <w>e&i;re</w>
+                    <w>&a-rond;p&e-suscrit-re;&s-long;te&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
+                    <w>mulz</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>que</w>
+                    <w>mule&s-rond-plongeant;</w>
+                    <num><w>.xxx.v&i;&i;.</w></num>
+                    <w>&a-rond;&s-long;&s-long;emble&r-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>no&u-pour-v;ele&s-rond-plongeant;</w>
+                    <w>&x-i-cresti;&ed-dierese;ene&s-rond-plongeant;</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>aturne&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">e</hi></w>
+                    <w>&s-long;&i;</w>
+                    <w>le&s-rond-plongeant;</w>
+                    <w>funt</w>
+                    <w>&u-pour-v;e&s-long;t&i;r</w>
+                    <w>e</w>
+                    <w>&a-rond;ffuble&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&v-pour-u;</hi>ne</w>
+                    <w>c&e-suscrit-re;&a-rond;ture</w>
+                    <w>ne</w>
+                    <w>&s-long;o&r-rond;ent</w>
+                    <w>p&tilde3-ur;pen&s-long;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>que&i;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&d-oncial;e&i;&accent;&u-pour-v;e</w>
+                    <w>fr&a-rond;nche</w>
+                    <w>fe&tilde1-nasale-m;me</w>
+                    <w>eno&r-rond;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>un</w>
+                    <w>pu&s-long;t</w>
+                    <w>cono&i;&s-long;t&e-suscrit-re;</w>
+                    <w>ne</w>
+                    <w>t&u-suscrit-ru;&u-pour-v;e&r-long;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&e-suscrit-ue;</w>
+                    <w>l&a-rond;</w>
+                    <w>re&i;&ed-dierese;ne</w>
+                    <w>ne</w>
+                    <w>f&a-rond;ce</w>
+                    <w>p&e-suscrit-re;&s-long;ente&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>ur</w>
+                    <w>un</w>
+                    <w>mul</w>
+                    <w>fu&tilde1-nasale-n;t</w>
+                    <w>l&a-rond;</w>
+                    <w>re&i;&ed-dierese;ne</w>
+                    <w>mu&tilde1-nasale-n;te&r-long;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">p</hi>o&i;</w>
+                    <w>pot</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>u&tilde1-nasale-n;</w>
+                    <w>&d-oncial;e</w>
+                    <w>&s-long;&i;</w>
+                    <w>bele&s-rond-plongeant;</w>
+                    <w>tru&u-pour-v;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">&v-pour-u;</hi>nke&s-rond-plongeant;</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;uc&s-rond-plongeant;</w>
+                    <w>ne</w>
+                    <w>&s-long;e</w>
+                    <w>&u-pour-v;out</w>
+                    <w>&con-9-tironien;&s-long;e&i;ll&i;e&r-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">p</hi>&i-suscrit-ri;&s-long;t</w>
+                    <!--<w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;</w>-->
+                    <w>l&a-rond;</w><!-- À mon avis, il faut plutot segmenter ainsi -->
+                    <w>&a-rond;l</w>
+                    <w>fre&i;n</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>&com-9-tironien;e&tilde1-nasale-n;c&ed-palatalisation-cedille;a</w>
+                    <w>&a-rond;</w>
+                    <w>&p-barré-par;ler</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">s<!-- vérif forme--></hi>&a-rond;</w>
+                    <w>&d-oncial;rue&ed-dierese;r&i;e</w>
+                    <w>offr&i;</w>
+                    <w rend="aggl">a</w>
+                    <w>p&tilde2-er-pour-re;&s-long;ente&r-long;</w>
+                </l>
+                <!-- Suite à faire ; lg temporaire-->
+                </lg>
+                <!--<cb n="b"/>
+
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&i;</w>
+                    <w>l&a-rond;</w>
+                    <w>&s-long;o&i;e</w>
+                    <w>requerre</w>
+                    <w>et</w>
+                    <w>&d-oncial;em&a-rond;n&d-oncial;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>&i;l</w>
+                    <w>tot</w>
+                    <w>po&r-rond;</w>
+                    <w>&s-long;on</w>
+                    <w>&d-oncial;uel</w>
+                    <w>oblïer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;&s-long;cun&s-long;</w>
+                    <w>&d-oncial;e&s-long;</w>
+                    <w>&a-rond;utre&s-long;</w>
+                    <w>&u-pour-v;&a-rond;&i;t</w>
+                    <w>l&a-rond;</w>
+                    <w>&s-long;o&i;e</w>
+                    <w>&a-rond;&d-oncial;re&s-long;c&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>comenc&i;erent</w>
+                    <w>un</w>
+                    <w>po&i;</w>
+                    <w>&a-rond;</w>
+                    <w>ce&u-pour-v;&a-rond;lcer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <w>&d-oncial;ut</w>
+                    <w>el</w>
+                    <w>p&a-rond;&u-pour-v;ellon</w>
+                    <w>entrer</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e&u-pour-v;er&s-long;</w>
+                    <w>&s-long;ene&s-long;tre</w>
+                    <w>pr&i;&s-long;t</w>
+                    <w>&s-long;on</w>
+                    <w>c&i;ef</w>
+                    <w>&a-rond;</w>
+                    <w>to&r-rond;ner</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&u-pour-v;&i;t</w>
+                    <w>&a-rond;u</w>
+                    <w>&d-oncial;uc</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>mener</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">B</hi>l&a-rond;nce</w>
+                    <w>ot</w>
+                    <w>le</w>
+                    <w>b&a-rond;rbe</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>le</w>
+                    <w>&u-pour-v;&i;&s-long;</w>
+                    <w>&a-rond;pert</w>
+                    <w>et</w>
+                    <w>cler</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>olo&r-rond;é&s-long;</w>
+                    <w>fu</w>
+                    <w>con</w>
+                    <w>&a-rond;utre</w>
+                    <w>b&a-rond;celer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>comenc&ed-palatalisation-cedille;&a-rond;</w>
+                    <w>le</w>
+                    <w>ro&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;luër</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>Ic&i;l</w>
+                    <w>bel&s-long;</w>
+                    <w>&s-long;&i;re&s-long;</w>
+                    <w>qu&i;</w>
+                    <w>Deu</w>
+                    <w>&s-long;e</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>cl&a-rond;mer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&u-pour-v;&i;nt</w>
+                    <w>en</w>
+                    <w>tere</w>
+                    <w>po&r-rond;</w>
+                    <w>&s-long;on</w>
+                    <w>pueple</w>
+                    <w>&s-long;&a-rond;l&u-pour-v;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>en</w>
+                    <w>l&a-rond;</w>
+                    <w>&u-pour-v;&i;rgene</w>
+                    <w>&s-long;e</w>
+                    <w>&d-oncial;egn&a-rond;</w>
+                    <w>&a-rond;ombrer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>o&s-long;</w>
+                    <w>&d-oncial;o&i;n&s-long;t</w>
+                    <w>en</w>
+                    <w>tere</w>
+                    <w>cele</w>
+                    <w>&u-pour-v;&i;e</w>
+                    <w>mener</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi><reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>merc&i;</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>pu&i;&s-long;c&i;é&s-long;</w>
+                    <w>&a-rond;co&r-rond;&d-oncial;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>en</w>
+                    <w>p&a-rond;r&a-rond;&d-oncial;&i;&s-long;</w>
+                    <w>pu&i;&s-long;c&i;é&s-long;</w>
+                    <w>&d-oncial;e&d-oncial;en&s-long;</w>
+                    <w>entrer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>pu&i;&s-long;</w>
+                    <w>nul</w>
+                    <w>&d-oncial;e</w>
+                    <w>me&s-long;</w>
+                    <w>g&a-rond;&a-rond;&i;n&s-long;</w>
+                    <w>celer</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>ot</w>
+                    <w>ce</w>
+                    <w>&a-rond;&i;</w>
+                    <w>&i-pour-j;o</w>
+                    <w>g&a-rond;egn&i;é</w>
+                    <w>&a-rond;l</w>
+                    <w>&i-pour-j;o&s-long;ter</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Ç</hi>o</w>
+                    <w>e&s-long;t</w>
+                    <w>l&a-rond;</w>
+                    <w>fenme</w>
+                    <w>Agol&a-rond;nt</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>oltre</w>
+                    <w>mer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>n</w>
+                    <w>t&a-rond;nt</w>
+                    <w>&d-oncial;e</w>
+                    <w>tere</w>
+                    <w>con</w>
+                    <w>Dex</w>
+                    <w>&a-rond;</w>
+                    <w>&a-rond;</w>
+                    <w>g&a-rond;r&d-oncial;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>po&r-rond;o&i;t</w>
+                    <w>on</w>
+                    <w>&s-long;&i;</w>
+                    <w>bele</w>
+                    <w>reco&u-pour-v;rer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ueré&s-long;</w>
+                    <w>l&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>ro&i;&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>m&a-rond;r&i;t</w>
+                    <w>&a-rond;</w>
+                    <w>l&i;</w>
+                    <w>g&a-rond;r&d-oncial;er</w>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="524">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w>con</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;u&s-long;</w>
+                    <w>e&s-long;to&i;t</w>
+                    <w>el</w>
+                    <w>p&a-rond;&u-pour-v;ellon</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>l&a-rond;</w>
+                    <w>m&a-rond;&i;n</w>
+                    <w>&d-oncial;e&s-long;tre</w>
+                    <w>&a-rond;</w>
+                    <w>pr&i;&s-long;</w>
+                    <w>le</w>
+                    <w>&d-oncial;uc</w>
+                    <w>Cl&a-rond;ron</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>o&r-rond;</w>
+                    <w>une</w>
+                    <w>k&i;elte</w>
+                    <w>&d-oncial;e</w>
+                    <w>p&a-rond;&i;le</w>
+                    <w>&d-oncial;e</w>
+                    <w>&s-long;&i;pon</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;&s-long;t</w>
+                    <w>&i-pour-j;o&s-long;te</w>
+                    <w>lu&i;</w>
+                    <w>G&i;r&a-rond;r&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>l&i;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>Bue&u-pour-v;on</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>en</w>
+                    <w>&u-pour-v;&i;nt</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;u&s-long;</w>
+                    <w>N&a-rond;&i;nmon</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>ntre</w>
+                    <w>&s-long;e&s-long;</w>
+                    <w>br&a-rond;&s-long;</w>
+                    <w>le</w>
+                    <w>&d-oncial;e&s-long;cent</w>
+                    <w>&d-oncial;e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;rc&ed-palatalisation-cedille;on</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>&s-long;</w>
+                    <w>e&s-long;tr&i;er&s-long;</w>
+                    <w>&u-pour-v;&i;enent</w>
+                    <w>l&i;</w>
+                    <w>conte</w>
+                    <w>et</w>
+                    <w>l&i;</w>
+                    <w>b&a-rond;ron</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>Droë&s-long;</w>
+                    <w>et</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>S&a-rond;lemon</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>bele</w>
+                    <w>f&a-rond;c&ed-palatalisation-cedille;on</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>&s-long;g&a-rond;r&d-oncial;&a-rond;</w>
+                    <w>N&a-rond;&i;nme</w>
+                    <w>&a-rond;l</w>
+                    <w>&u-pour-v;&i;&s-long;</w>
+                    <w>et</w>
+                    <w>&a-rond;u</w>
+                    <w>menton</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;em&a-rond;n&d-oncial;e</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                    <pc type="supplied">«</pc>
+                    <w>V&a-rond;&s-long;&a-rond;l</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>con</w>
+                    <w>&a-rond;&u-pour-v;é&s-long;</w>
+                    <w>non</w>
+                    <pc type="supplied" lemma="?" pos="PONfrt">?</pc>
+                </l>
+                <lb/>
+                <l>
+                    <!-\-<w>—</w>-\->
+                    <w>D&a-rond;me</w>
+                    <pc type="supplied">»</pc>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>&i;l</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied">«</pc>
+                    <w>po&r-rond;</w>
+                    <w>qo&i;</w>
+                    <w>celerïon</w>
+                    <pc type="supplied" lemma="?" pos="PONfrt">?</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>o&s-long;</w>
+                    <w>me</w>
+                    <w>&u-pour-v;eï&s-long;te&s-long;</w>
+                    <w>o&a-rond;n</w>
+                    <w>en</w>
+                    <w>A&s-long;premon</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;nel</w>
+                    <w>me</w>
+                    <w>feï&s-long;te&s-long;</w>
+                    <w>le</w>
+                    <w>&d-oncial;on</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>le</w>
+                    <w>l&i;</w>
+                    <w>cl&i;ne</w>
+                    <w>et</w>
+                    <w>&s-long;o&s-long;p&i;re</w>
+                    <w>p&a-rond;rfon</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>S&i;re</w>
+                    <pc type="supplied">»</pc>
+                    <w>f&i;&s-long;t</w>
+                    <w>ele</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied">«</pc>
+                    <w>&a-rond;</w>
+                    <w>Deu</w>
+                    <w>beneïc&ed-palatalisation-cedille;on</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi><reg>'</reg></w>
+                    <w>o&r-rond;</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>en</w>
+                    <w>membre</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>feré&s-long;</w>
+                    <w>que</w>
+                    <w>pro&d-oncial;on</w>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="525">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>l</w>
+                    <w>p&a-rond;&u-pour-v;ellon</w>
+                    <w>&s-long;&i;&s-long;trent</w>
+                    <w>comunement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>ro&i;&s-long;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>&i;</w>
+                    <w>ot</w>
+                    <w>et</w>
+                    <w>&s-long;et</w>
+                    <w>&d-oncial;u&s-long;</w>
+                    <w>&u-pour-v;o&i;rement</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>&i;</w>
+                    <w>ot</w>
+                    <w>conte&s-long;</w>
+                    <w>et</w>
+                    <w>b&a-rond;ron&s-long;</w>
+                    <w>ne</w>
+                    <w>&s-long;&a-rond;&i;</w>
+                    <w>q&a-rond;n&s-long;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&i;r&a-rond;r&s-long;</w>
+                    <w>p&a-rond;role</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>o&i;&a-rond;nt</w>
+                    <w>to&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>h&a-rond;ltement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>R&i;ce&s-long;</w>
+                    <w>ro&i;&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;re</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&a-rond;c&i;é&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w>e&s-long;&s-long;ïent</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>&i;nc</w>
+                    <w>om</w>
+                    <w>ne</w>
+                    <w>fu</w>
+                    <w>&d-oncial;e</w>
+                    <w>&s-long;&i;</w>
+                    <w>gr&a-rond;nt</w>
+                    <w>tenement</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>onque&s-long;</w>
+                    <w>m&a-rond;&i;&s-long;</w>
+                    <w>receü&s-long;t</w>
+                    <w>tel</w>
+                    <w>pre&s-long;ent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>re&s-long;e</w>
+                    <w>roïne&s-long;</w>
+                    <w>&i;</w>
+                    <w>&a-rond;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>tot</w>
+                    <w>&u-pour-v;o&i;rement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>l&a-rond;</w>
+                    <w>plu&s-long;</w>
+                    <w>po&u-pour-v;re</w>
+                    <w>r&i;ce</w>
+                    <w>ro&i;&a-rond;me</w>
+                    <w>&a-rond;pent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&u-pour-v;&i;nt</w>
+                    <w>pucele&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>tote&s-long;</w>
+                    <w>&s-long;ont</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>un</w>
+                    <w>&i-pour-j;o&u-pour-v;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>onque&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>o&r-rond;ent</w>
+                    <w>&a-rond;</w>
+                    <w>home</w>
+                    <w>&a-rond;pro&i;&s-long;mement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>e&s-long;</w>
+                    <w>&a-rond;&i;</w>
+                    <w>conqu&i;&s-long;&s-long;e&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&d-oncial;&i;r&a-rond;&i;</w>
+                    <w>coment</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>&d-oncial;e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>e&s-long;to&r-rond;</w>
+                    <w>fu</w>
+                    <w>p&a-rond;rt&i;&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;mu&s-long;tent</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>Agol&a-rond;nt</w>
+                    <w>l&a-rond;&i;&s-long;&s-long;&a-rond;</w>
+                    <w>&u-pour-v;&i;l&a-rond;&i;nement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>&u-pour-v;&i;nt</w>
+                    <w>&a-rond;</w>
+                    <w>R&i;&s-long;&s-long;e</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>oc&i;&s-long;t</w>
+                    <w>tote</w>
+                    <w>l&a-rond;</w>
+                    <w>gent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e&s-long;te&s-long;</w>
+                    <w>meï&s-long;me&s-long;</w>
+                    <w>oce&s-long;&i;&s-long;t</w>
+                    <w>en&s-long;ement</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w>el</w>
+                    <w>&s-long;e</w>
+                    <w>m&i;&s-long;ent</w>
+                    <w>en</w>
+                    <w>l&a-rond;</w>
+                    <w>to&r-rond;</w>
+                    <w>err&a-rond;nment</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>cre&s-long;tïen</w>
+                    <w>q&a-rond;tre</w>
+                    <w>&u-pour-v;&i;n&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&u-pour-v;o&i;re</w>
+                    <w>cent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>p&a-rond;&i;en</w>
+                    <w>pr&i;&s-long;ent</w>
+                    <w>&a-rond;</w>
+                    <w>lo&r-rond;</w>
+                    <w>conquerement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&i-pour-j;ent&i;l&s-long;</w>
+                    <w>feme&s-long;</w>
+                    <w>&i;</w>
+                    <w>erent</w>
+                    <w>en&s-long;ement</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;&s-long;cun&s-long;</w>
+                    <w>&a-rond;&u-pour-v;o&i;t</w>
+                    <w>l&a-rond;</w>
+                    <w>&s-long;o&i;e</w>
+                    <w>qu&i;tement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>l&a-rond;</w>
+                    <w>&u-pour-v;&i;t&a-rond;lle</w>
+                    <w>erent</w>
+                    <w>molt</w>
+                    <w>po&u-pour-v;rement</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>eu&s-long;</w>
+                    <w>po&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>&u-pour-v;&i;n</w>
+                    <w>et</w>
+                    <w>tro&i;&s-long;</w>
+                    <w>p&a-rond;&i;n&s-long;</w>
+                    <w>en&s-long;ement</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi><reg>'</reg></w>
+                    <w>&i;</w>
+                    <w>&d-oncial;ep&a-rond;rt&i;rent</w>
+                    <w>entrele&s-long;</w>
+                    <w>&i;g&a-rond;lment</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>c&i;l</w>
+                    <w>&a-rond;f&a-rond;&i;re&s-long;</w>
+                    <w>lo&r-rond;</w>
+                    <w>&d-oncial;ur&a-rond;</w>
+                    <w>co&r-rond;tement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>&i;&s-long;</w>
+                    <w>en</w>
+                    <w>&s-long;ont</w>
+                    <w>mo&r-rond;te&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&d-oncial;ont</w>
+                    <w rend="elision">&i-pour-j;<reg>'</reg></w>
+                    <w>&a-rond;&i;</w>
+                    <w>le</w>
+                    <w>cuer</w>
+                    <w>&d-oncial;olent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>l</w>
+                    <w>&s-long;e</w>
+                    <w>ren&d-oncial;&i;rent</w>
+                    <w>molt</w>
+                    <w>p&a-rond;o&r-rond;o&s-long;ement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;po&s-long;tole&s-long;</w>
+                    <w>le</w>
+                    <w>me</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>h&a-rond;ltement</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;&s-long;</w>
+                    <w>b&a-rond;pt&i;&s-long;&s-long;&a-rond;</w>
+                    <w>&i;er</w>
+                    <w>m&a-rond;&i;n</w>
+                    <w>&i-pour-j;o&i;o&s-long;ement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>eé&s-long;</w>
+                    <w>le&s-long;</w>
+                    <w>l&a-rond;</w>
+                    <w>tote&s-long;</w>
+                    <w>&s-long;eo&i;r</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>un</w>
+                    <w>renc</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Ç</hi>o</w>
+                    <w>e&s-long;t</w>
+                    <w>G&i;r&a-rond;r&s-long;</w>
+                    <w>qu&i;</w>
+                    <w>tote&s-long;</w>
+                    <w>le&s-long;</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>rent</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>o&r-rond;&s-long;</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>me</w>
+                    <w>&d-oncial;oné&s-long;</w>
+                    <w>&s-long;olement</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e</w>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                    <pc type="supplied">«</pc>
+                    <w>Tot</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>fel</w>
+                    <w>qu&i;l</w>
+                    <w>&d-oncial;e&s-long;fent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>&a-rond;&i;re</w>
+                    <w>en</w>
+                    <w>poé&s-long;</w>
+                    <w>&u-pour-v;o&s-long;tre</w>
+                    <w>com&a-rond;n&d-oncial;ement</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&i;r&a-rond;r&s-long;</w>
+                    <w>l&i;</w>
+                    <w>cl&i;ne</w>
+                    <w>t&a-rond;nto&s-long;t</w>
+                    <w>p&a-rond;rfon&d-oncial;ement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>pré&s-long;</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>&s-long;oëf</w>
+                    <w>et</w>
+                    <w>belement</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>N<reg>'</reg></w>
+                    <w>e&s-long;t</w>
+                    <w>m&i;e</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>qu&i;</w>
+                    <w>&d-oncial;e</w>
+                    <w>ce</w>
+                    <w>&s-long;e</w>
+                    <w>&d-oncial;e&s-long;ment</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>&i-pour-j;e</w>
+                    <w>pr&i;&s-long;</w>
+                    <w>feme</w>
+                    <w>&i-pour-j;&a-rond;&d-oncial;&i;&s-long;</w>
+                    <w>en</w>
+                    <w>mon</w>
+                    <w>&i-pour-j;o&u-pour-v;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>&i;lle</w>
+                    <w>le</w>
+                    <w>ro&i;</w>
+                    <w>&a-rond;</w>
+                    <w>cu&i;</w>
+                    <w>Hongr&i;e</w>
+                    <w>&a-rond;pent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&i;</w>
+                    <w>&s-long;&i;en&s-long;</w>
+                    <w>&s-long;&a-rond;&u-pour-v;o&i;r&s-long;</w>
+                    <w>p&a-rond;&s-long;&s-long;&a-rond;</w>
+                    <w>mon</w>
+                    <w>e&s-long;&s-long;ïent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w rend="elision">&i-pour-j;<reg>'</reg></w>
+                    <w>&a-rond;&i;</w>
+                    <w>tenuë</w>
+                    <w>m&a-rond;</w>
+                    <w>tere</w>
+                    <w>qu&i;tement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Ç</hi>o</w>
+                    <w>&a-rond;</w>
+                    <w>e&s-long;té</w>
+                    <w>p&a-rond;r</w>
+                    <w>&s-long;on</w>
+                    <w>en&s-long;egnement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>o&r-rond;&s-long;</w>
+                    <w>fu</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>el</w>
+                    <w>c&a-rond;mp</w>
+                    <w>prem&i;erement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>o&s-long;</w>
+                    <w>en</w>
+                    <w>&a-rond;&u-pour-v;on&s-long;</w>
+                    <w>molt</w>
+                    <w>r&i;ce</w>
+                    <w>e&s-long;to&r-rond;ement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e</w>
+                    <w>e&s-long;t</w>
+                    <w>un&s-long;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>qu&i;</w>
+                    <w>molt</w>
+                    <w>e&s-long;t</w>
+                    <w>bel</w>
+                    <w>et</w>
+                    <w>gent</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">O</hi>r</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;oné&s-long;</w>
+                    <w>&a-rond;rme&s-long;</w>
+                    <w>et</w>
+                    <w>g&a-rond;rnement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>u&i;&s-long;</w>
+                    <w>l&i;</w>
+                    <w>ren&d-oncial;é&s-long;</w>
+                    <w>&s-long;on</w>
+                    <w>ro&i;&a-rond;l</w>
+                    <w>tenement</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>olt</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>l&i;</w>
+                    <w>pere&s-long;</w>
+                    <w>&d-oncial;e&s-long;er&u-pour-v;&i;</w>
+                    <w>r&i;cemen</w>
+                    <w>t</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;e</w>
+                    <w>l&i;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>ce&s-long;te</w>
+                    <w>feme</w>
+                    <w>ne</w>
+                    <w>prent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>&a-rond;</w>
+                    <w>m&a-rond;&i;&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;&u-pour-v;r&a-rond;</w>
+                    <w rend="elision">m<reg>'</reg></w>
+                    <w>&a-rond;mo&r-rond;</w>
+                    <w>cert&a-rond;&i;nnement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>t&a-rond;nt</w>
+                    <w>bele</w>
+                    <w>&d-oncial;e&s-long;c&i;</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>en</w>
+                    <w>Orïent</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>ne</w>
+                    <w>puet</w>
+                    <w>m&i;e</w>
+                    <w>pren&d-oncial;re</w>
+                    <w>plu&s-long;</w>
+                    <w>h&a-rond;ltement</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>ento&r-rond;</w>
+                    <w>l&i;</w>
+                    <w>po&r-rond;o&i;t</w>
+                    <w>e&s-long;tre</w>
+                    <w>&s-long;o&u-pour-v;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi><reg>'</reg></w>
+                    <w>el</w>
+                    <w>le</w>
+                    <w>&u-pour-v;olo&i;t</w>
+                    <w>&a-rond;cuell&i;r</w>
+                    <w>bonement</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>em</w>
+                    <w>peü&s-long;t</w>
+                    <w>&a-rond;&u-pour-v;o&i;r</w>
+                    <w>&a-rond;pro&i;&s-long;mement</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>en</w>
+                    <w>&d-oncial;e&u-pour-v;ro&i;t</w>
+                    <w>&u-pour-v;&i;&u-pour-v;re</w>
+                    <w>plu&s-long;</w>
+                    <w>longuement</w>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="526">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w>con</w>
+                    <w>G&i;r&a-rond;r&s-long;</w>
+                    <w>ot</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>ue&u-pour-v;re</w>
+                    <w>&d-oncial;e&u-pour-v;&i;&s-long;ee</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>otroïe</w>
+                    <w>et</w>
+                    <w>gr&a-rond;ee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi><reg>'</reg></w>
+                    <w>&a-rond;mbe&d-oncial;eu&s-long;</w>
+                    <w>p&a-rond;r&s-long;</w>
+                    <w>fu</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>ue&u-pour-v;re</w>
+                    <w>cre&a-rond;ntee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>r&i;&s-long;t</w>
+                    <w>en</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>om&a-rond;ge</w>
+                    <w>&s-long;&a-rond;n&s-long;</w>
+                    <w>nule</w>
+                    <w>tre&s-long;to&r-rond;nee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>pré&s-long;</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>feelté</w>
+                    <w>&i-pour-j;uree</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;el</w>
+                    <w>ro&i;&a-rond;me</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>c&ed-palatalisation-cedille;&a-rond;&i;nte</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>e&s-long;pee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>e&s-long;t</w>
+                    <w>en</w>
+                    <w>e&s-long;t&a-rond;nt</w>
+                    <w>le&u-pour-v;ee</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>le</w>
+                    <w>po&i;ng</w>
+                    <w>&d-oncial;e&s-long;tre</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>&d-oncial;onee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>Flo&r-rond;en&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>b&a-rond;&i;&s-long;&i;e</w>
+                    <w>et</w>
+                    <w>&a-rond;colee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;ltre</w>
+                    <w>renge</w>
+                    <w>p&a-rond;r</w>
+                    <w>fu</w>
+                    <w>&s-long;&i;</w>
+                    <w>e&s-long;g&a-rond;r&d-oncial;ee</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>on</w>
+                    <w>c&a-rond;&s-long;cune</w>
+                    <w>ert</w>
+                    <w>ro&u-pour-v;ente</w>
+                    <w>et</w>
+                    <w>colo&r-rond;ee</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w>h&a-rond;ltement</w>
+                    <w>&u-pour-v;e&s-long;tue</w>
+                    <w>et</w>
+                    <w>&a-rond;fublee</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>o&r-rond;</w>
+                    <w>gr&a-rond;n&s-long;</w>
+                    <w>b&i;&a-rond;uté&s-long;</w>
+                    <w>ne</w>
+                    <w>puet</w>
+                    <w>e&s-long;tre</w>
+                    <w>&a-rond;contee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi><reg>'</reg></w>
+                    <w>&i;</w>
+                    <w>&a-rond;</w>
+                    <w>Fr&a-rond;nc&ed-palatalisation-cedille;o&i;&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;e</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>une</w>
+                    <w>e&s-long;pou&s-long;ee</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;&i;t</w>
+                    <w>&a-rond;l</w>
+                    <w>ro&i;</w>
+                    <w>&i;&a-rond;</w>
+                    <w>&s-long;o&i;e</w>
+                    <w>&d-oncial;em&a-rond;n&d-oncial;ee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="527">
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>G&i;r&a-rond;r&s-long;</w>
+                    <pc type="supplied">»</pc>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied">«</pc>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>celer</w>
+                    <w>nel</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>qu&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>e</w>
+                    <w>ne</w>
+                    <w>&s-long;erf</w>
+                    <w>m&i;e</w>
+                    <w>&d-oncial;e</w>
+                    <w>l&a-rond;</w>
+                    <w>gent</w>
+                    <w>lo&s-long;eng&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>olt</w>
+                    <w>&d-oncial;e&u-pour-v;é&s-long;</w>
+                    <w>Deu</w>
+                    <w>&a-rond;mer</w>
+                    <w>et</w>
+                    <w>ten&i;r</w>
+                    <w>ch&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e&s-long;o&r-rond;</w>
+                    <w>to&s-long;</w>
+                    <w>&a-rond;utre&s-long;</w>
+                    <w>&a-rond;o&r-rond;er</w>
+                    <w>et</w>
+                    <w>pro&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>o&i;</w>
+                    <w>e&s-long;t</w>
+                    <w>nu&s-long;</w>
+                    <w>om</w>
+                    <w>qu&i;</w>
+                    <w>mel&s-long;</w>
+                    <w>f&a-rond;ce</w>
+                    <w>&a-rond;</w>
+                    <w>pro&i;&s-long;&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">O</hi>r</w>
+                    <w>me</w>
+                    <w>feré&s-long;</w>
+                    <w>un</w>
+                    <w>&d-oncial;e</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>b&a-rond;ll&i;er</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>ulle</w>
+                    <w>et</w>
+                    <w>Se&s-long;&i;le</w>
+                    <w>&a-rond;&u-pour-v;r&a-rond;</w>
+                    <w>&a-rond;</w>
+                    <w>&i-pour-j;u&s-long;t&i;c&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">U</hi>ne</w>
+                    <w>pucele</w>
+                    <w>metr&a-rond;&i;</w>
+                    <w>o</w>
+                    <w>l&i;</w>
+                    <w>colc&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w rend="elision">c<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>&d-oncial;etr&i;er&s-long;</w>
+                    <w>&d-oncial;ïent</w>
+                    <w>l&i;</w>
+                    <w>no&u-pour-v;el&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>tote&s-long;</w>
+                    <w>ce&s-long;te&s-long;</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;&a-rond;lent</w>
+                    <w>un</w>
+                    <w>&d-oncial;en&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>&a-rond;nt</w>
+                    <w>po&r-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>lo&i;</w>
+                    <w>ten&i;r</w>
+                    <w>et</w>
+                    <w>e&s-long;&s-long;&a-rond;uch&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>o&r-rond;</w>
+                    <w>mo&i;</w>
+                    <w>g&a-rond;r&d-oncial;er</w>
+                    <w>&d-oncial;e</w>
+                    <w>m&a-rond;l</w>
+                    <w>et</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>encombr&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>n</w>
+                    <w>&u-pour-v;&i;</w>
+                    <w>le</w>
+                    <w>pere</w>
+                    <w>t&a-rond;nt</w>
+                    <w>m&a-rond;l</w>
+                    <w>&a-rond;p&a-rond;rell&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>en</w>
+                    <w>e&s-long;tut</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;me</w>
+                    <w>&d-oncial;el</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>&u-pour-v;u&i;&d-oncial;&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w>ne</w>
+                    <w>&d-oncial;o&i;</w>
+                    <w>m&i;e</w>
+                    <w>&s-long;on</w>
+                    <w>o&i;r</w>
+                    <w>&d-oncial;e&s-long;p&a-rond;r&a-rond;g&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>lu&s-long;</w>
+                    <w>h&a-rond;ut</w>
+                    <w>&d-oncial;e</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>ne</w>
+                    <w>l&a-rond;</w>
+                    <w>pu&i;&s-long;</w>
+                    <w>&i-pour-j;e</w>
+                    <w>pu&i;er</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>u&i;&s-long;</w>
+                    <w>l&i;</w>
+                    <w>fer&a-rond;&i;</w>
+                    <w>e&s-long;pou&s-long;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>noc&ed-palatalisation-cedille;o&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>e&s-long;t&a-rond;&u-pour-v;r&a-rond;</w>
+                    <w>&a-rond;&u-pour-v;uec</w>
+                    <w>mo&i;</w>
+                    <w>co&r-rond;to&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>u&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>le</w>
+                    <w>&d-oncial;uc</w>
+                    <w>N&a-rond;mle</w>
+                    <w>et</w>
+                    <w>le</w>
+                    <w>D&a-rond;no&i;&s-long;</w>
+                    <w>Og&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&i;cé&s-long;</w>
+                    <w>tro&i;&s-long;</w>
+                    <w>me</w>
+                    <w>l&a-rond;&i;r&a-rond;&i;</w>
+                    <w>con&s-long;ell&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&u-pour-v;o&s-long;tre</w>
+                    <w>f&i;l</w>
+                    <w>&u-pour-v;uel</w>
+                    <w>&d-oncial;oner</w>
+                    <w>un</w>
+                    <w>me&s-long;t&i;er</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&a-rond;rt</w>
+                    <w>l&a-rond;</w>
+                    <w>&u-pour-v;ï&a-rond;n&d-oncial;e</w>
+                    <w>que</w>
+                    <w>&i-pour-j;e</w>
+                    <w>&d-oncial;e&u-pour-v;r&a-rond;&i;</w>
+                    <w>meng&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>&a-rond;nt</w>
+                    <w>que</w>
+                    <w>&i-pour-j;el</w>
+                    <w>pu&i;&s-long;&s-long;e</w>
+                    <w>&d-oncial;urement</w>
+                    <w>e&s-long;&s-long;&a-rond;uch&i;er</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>G&i;r&a-rond;r&s-long;</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                    <pc type="supplied">«</pc>
+                    <w>Ce</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>&a-rond;</w>
+                    <w>gr&a-rond;tïer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>tel</w>
+                    <w>b&a-rond;ron</w>
+                    <w>&s-long;e</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&a-rond;pu&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e&s-long;t</w>
+                    <w>&d-oncial;&a-rond;mo&i;&s-long;el</w>
+                    <w>&u-pour-v;uel</w>
+                    <w>un</w>
+                    <w>po&i;</w>
+                    <w>en&s-long;egn&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>u&i;</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&d-oncial;onré&s-long;</w>
+                    <w>et</w>
+                    <w>ro&i;&a-rond;me</w>
+                    <w>et</w>
+                    <w>moll&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>lo&r-rond;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>bel&s-long;</w>
+                    <w>&s-long;&i;re</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>ne</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>&a-rond;nu&i;er</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>creé&s-long;</w>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>con&s-long;el</w>
+                    <w>&d-oncial;e</w>
+                    <w>lo&s-long;eng&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&a-rond;rt</w>
+                    <w>to&i;</w>
+                    <w>ne</w>
+                    <w>fr&a-rond;gne&s-long;</w>
+                    <w>&i;gl&i;&s-long;e</w>
+                    <w>ne</w>
+                    <w>mo&s-long;t&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>po&r-rond;</w>
+                    <w>&d-oncial;ro&i;t</w>
+                    <w>f&a-rond;&i;re</w>
+                    <w>ne</w>
+                    <w>rec&ed-palatalisation-cedille;o&i;&u-pour-v;e&s-long;</w>
+                    <w>lo&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>&d-oncial;e</w>
+                    <w>prometre</w>
+                    <w>ne</w>
+                    <w>&s-long;o&i;e&s-long;</w>
+                    <w>co&s-long;tum&i;er</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w>to&s-long;</w>
+                    <w>&i-pour-j;o&r-rond;&s-long;</w>
+                    <w>&d-oncial;one</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                    <w rend="elision">c<reg>'</reg></w>
+                    <w>e&s-long;t</w>
+                    <w>l&i;</w>
+                    <w>ro&i;&a-rond;l</w>
+                    <w>me&s-long;t&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;e</w>
+                    <w>tu</w>
+                    <w>true&u-pour-v;e&s-long;</w>
+                    <w>le</w>
+                    <w>po&u-pour-v;re</w>
+                    <w>che&u-pour-v;&a-rond;l&i;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>&s-long;</w>
+                    <w>po&u-pour-v;re&s-long;</w>
+                    <w>&d-oncial;r&a-rond;&s-long;</w>
+                    <w>et</w>
+                    <w>&a-rond;l</w>
+                    <w>m&a-rond;&i;gre</w>
+                    <w>&d-oncial;e&s-long;tr&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>u</w>
+                    <w>ne</w>
+                    <w>&d-oncial;o&i;&s-long;</w>
+                    <w>m&i;e</w>
+                    <w>celu&i;</w>
+                    <w>contr&a-rond;lo&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e&d-oncial;e&u-pour-v;&a-rond;nt</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;&s-long;eé&s-long;</w>
+                    <w>&a-rond;l</w>
+                    <w>meng&i;er</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>el</w>
+                    <w>t&i;en</w>
+                    <w>l&i;</w>
+                    <w>&d-oncial;one</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;no&r-rond;e</w>
+                    <w>et</w>
+                    <w>t&i;en</w>
+                    <w>ch&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>&i;e&s-long;</w>
+                    <w>merc&i;</w>
+                    <w>&d-oncial;e</w>
+                    <w>l&a-rond;</w>
+                    <w>po&u-pour-v;re</w>
+                    <w>moll&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>u</w>
+                    <w>ne</w>
+                    <w>&d-oncial;o&i;&s-long;</w>
+                    <w>m&i;e</w>
+                    <w>le&s-long;</w>
+                    <w>o&r-rond;fen&i;n&s-long;</w>
+                    <w>c&a-rond;ch&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w>no&r-rond;&i;&s-long;</w>
+                    <w>le&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>q&a-rond;nque</w>
+                    <w>po&r-rond;&a-rond;&s-long;</w>
+                    <w>b&a-rond;ll&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>&s-long;eront</w>
+                    <w>tel</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>te</w>
+                    <w>po&r-rond;ont</w>
+                    <w>&a-rond;&i;&d-oncial;&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w>&i;l</w>
+                    <w>te</w>
+                    <w>&u-pour-v;o&i;ent</w>
+                    <w>&a-rond;</w>
+                    <w>nelu&i;</w>
+                    <w>emp&i;r&i;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>&s-long;e</w>
+                    <w>l&a-rond;&i;ront</w>
+                    <w>po&r-rond;</w>
+                    <w>to&i;</w>
+                    <w>tot</w>
+                    <w>&d-oncial;etrenc&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w/>
+                    <w>Jo</w>
+                    <w>ne</w>
+                    <w>te</w>
+                    <w>&s-long;&a-rond;&i;</w>
+                    <w>&a-rond;utrement</w>
+                    <w>con&s-long;ell&i;er</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w/>
+                    <w>I&s-long;&s-long;&i;</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>pr&i;nce&s-long;</w>
+                    <w>&s-long;on</w>
+                    <w>regne</w>
+                    <w>&i-pour-j;u&s-long;t&i;c&i;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="528">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>lo&r-rond;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>b&i;&a-rond;x</w>
+                    <w>frere</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>l&a-rond;</w>
+                    <w>&s-long;o&i;e</w>
+                    <w>gr&a-rond;nt</w>
+                    <w>merc&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">B</hi>&i;en</w>
+                    <w rend="elision">t<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>hu&i;</w>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <w>le</w>
+                    <w>&s-long;er&u-pour-v;&i;ce</w>
+                    <w>mer&i;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>qo&i;</w>
+                    <w>te&s-long;</w>
+                    <w>pere</w>
+                    <w>&a-rond;l</w>
+                    <w>be&s-long;o&i;ng</w>
+                    <w>le</w>
+                    <w>&s-long;er&u-pour-v;&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>o&r-rond;t</w>
+                    <w>en</w>
+                    <w>rec&ed-palatalisation-cedille;ut</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>c&a-rond;r</w>
+                    <w>&a-rond;</w>
+                    <w>me&s-long;</w>
+                    <w>&i;el&s-long;</w>
+                    <w>le</w>
+                    <w>&u-pour-v;&i;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&i-pour-j;el</w>
+                    <w>teno&i;e</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>q&a-rond;nt</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;me</w>
+                    <w>en</w>
+                    <w>&d-oncial;ep&a-rond;rt&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&a-rond;r</w>
+                    <w>lo&s-long;eng&i;er</w>
+                    <w>ne</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>p&a-rond;r</w>
+                    <w>to&i;</w>
+                    <w>oï</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>lo&s-long;eng&i;er&s-long;</w>
+                    <w>&s-long;ont</w>
+                    <w>fr&a-rond;nc</w>
+                    <w>ome</w>
+                    <w>hon&i;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>&i-pour-j;ent&i;l&s-long;</w>
+                    <w>ome&s-long;</w>
+                    <w>que</w>
+                    <w>te&s-long;</w>
+                    <w>pere&s-long;</w>
+                    <w>no&r-rond;&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w>tu</w>
+                    <w>ne&s-long;</w>
+                    <w>cro&i;&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&d-oncial;ont</w>
+                    <w>&s-long;er&a-rond;&s-long;</w>
+                    <w>tu</w>
+                    <w>hon&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>u</w>
+                    <w>&s-long;&a-rond;r&a-rond;&s-long;</w>
+                    <w>b&i;en</w>
+                    <w>qu&i;</w>
+                    <w>mel&s-long;</w>
+                    <w rend="elision">t<reg>'</reg></w>
+                    <w>&a-rond;r&a-rond;</w>
+                    <w>&s-long;er&u-pour-v;&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">R</hi>ent</w>
+                    <w>&a-rond;</w>
+                    <w>c&a-rond;&s-long;cun</w>
+                    <w>ce</w>
+                    <w>que</w>
+                    <w>&i;l</w>
+                    <w>lo&r-rond;</w>
+                    <w>tol&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>te</w>
+                    <w>&s-long;eront</w>
+                    <w>&d-oncial;&i;gne</w>
+                    <w>co&r-rond;&a-rond;l</w>
+                    <w>&a-rond;m&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <!-\-<w>—</w>-\->
+                    <w>Certe&s-long;</w>
+                    <pc type="supplied">»</pc>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied">«</pc>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;&u-pour-v;é&s-long;</w>
+                    <w>m&i;e</w>
+                    <w>f&a-rond;ll&i;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lb/>
+            <lg type="laisse" n="529">
+                <lb/>
+                <l>
+                    <!-\-<w>—</w>-\->
+                    <w>Flo&r-rond;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>b&i;&a-rond;x</w>
+                    <w>&s-long;&i;re</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>&a-rond;&i;</w>
+                    <w>&i-pour-j;o</w>
+                    <w>t&a-rond;</w>
+                    <w>&s-long;ero&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e</w>
+                    <w>que</w>
+                    <w rend="elision">&i-pour-j;<reg>'</reg></w>
+                    <w>&a-rond;&i;</w>
+                    <w>&d-oncial;&i;t</w>
+                    <w>ne</w>
+                    <w>t&i;en</w>
+                    <w>m&i;e</w>
+                    <w>&a-rond;</w>
+                    <w>folo&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>f&a-rond;&i;</w>
+                    <w>e&u-pour-v;e&s-long;que</w>
+                    <w>&d-oncial;e</w>
+                    <w>f&i;l</w>
+                    <w>&a-rond;</w>
+                    <w>ton</w>
+                    <w>p&a-rond;&s-long;to&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>ren</w>
+                    <w>f&i;l</w>
+                    <w>&d-oncial;e</w>
+                    <w>ro&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&d-oncial;e</w>
+                    <w>&d-oncial;uc</w>
+                    <w>ou</w>
+                    <w>&d-oncial;e</w>
+                    <w>conto&r-rond;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">U</hi></w>
+                    <w>pren</w>
+                    <w>le</w>
+                    <w>f&i;l</w>
+                    <w>&d-oncial;e</w>
+                    <w>po&u-pour-v;re</w>
+                    <w>&u-pour-v;&a-rond;&u-pour-v;&a-rond;&s-long;o&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w>tu</w>
+                    <w>ce</w>
+                    <w>true&u-pour-v;e&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>m&a-rond;r</w>
+                    <w>querr&a-rond;&s-long;</w>
+                    <w>mello&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi><reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>en</w>
+                    <w>&a-rond;</w>
+                    <w>&d-oncial;eu&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>en</w>
+                    <w>prent</w>
+                    <w>le</w>
+                    <w>meno&r-rond;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&i;ret&a-rond;ge</w>
+                    <w>l&i;</w>
+                    <w>l&a-rond;&i;&s-long;&s-long;e</w>
+                    <w>le</w>
+                    <w>gr&a-rond;gno&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>el</w>
+                    <w>f&a-rond;&i;</w>
+                    <w>&a-rond;pren&d-oncial;re</w>
+                    <w>&d-oncial;e&s-long;c&i;</w>
+                    <w>que</w>
+                    <w>&a-rond;</w>
+                    <w>un</w>
+                    <w>&i-pour-j;o&r-rond;</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>e&u-pour-v;e&s-long;que</w>
+                    <w>en</w>
+                    <w>f&a-rond;ce</w>
+                    <w>el</w>
+                    <w>non</w>
+                    <w>&d-oncial;el</w>
+                    <w>cre&a-rond;to&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&a-rond;</w>
+                    <w>tro&u-pour-v;er&a-rond;&s-long;</w>
+                    <w>fo&i;</w>
+                    <w>et</w>
+                    <w>&s-long;en&s-long;</w>
+                    <w>et</w>
+                    <w>&a-rond;mo&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>f&a-rond;&i;re</w>
+                    <w>m&i;e</w>
+                    <w>&d-oncial;e</w>
+                    <w>ton</w>
+                    <w>&s-long;erf</w>
+                    <w>ton</w>
+                    <w>&s-long;egno&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&a-rond;&i;</w>
+                    <w>le</w>
+                    <w>&u-pour-v;&i;l&a-rond;&i;n</w>
+                    <w>&a-rond;</w>
+                    <w>f&a-rond;&i;re</w>
+                    <w>&s-long;on</w>
+                    <w>l&a-rond;bo&r-rond;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;r</w>
+                    <w>l&i;</w>
+                    <w>&u-pour-v;&i;l&a-rond;&i;n&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>que</w>
+                    <w>f&a-rond;&i;re</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>ono&r-rond;</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>n&a-rond;ture</w>
+                    <w>re&u-pour-v;&i;ent</w>
+                    <w>&a-rond;l</w>
+                    <w>c&i;ef</w>
+                    <w>&d-oncial;el</w>
+                    <w>to&r-rond;</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="530">
+                <lb/>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>lo&r-rond;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>bel&s-long;</w>
+                    <w>frere</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>ne</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>en</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>pe&s-long;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e</w>
+                    <w>m&a-rond;t&i;net</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>e&s-long;t&a-rond;&u-pour-v;r&a-rond;</w>
+                    <w>&i-pour-j;urer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>f&a-rond;u&s-long;e&s-long;</w>
+                    <w>lo&i;&s-long;</w>
+                    <w>&a-rond;b&a-rond;tre</w>
+                    <w>et</w>
+                    <w>oblïer</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>ote&s-long;</w>
+                    <w>le&s-long;</w>
+                    <w>bone&s-long;</w>
+                    <w>e&s-long;&s-long;&a-rond;uc&i;er</w>
+                    <w>et</w>
+                    <w>le&u-pour-v;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&s-long;&a-rond;&i;nte</w>
+                    <w>&i;gl&i;&s-long;e</w>
+                    <w>&s-long;er&u-pour-v;&i;r</w>
+                    <w>et</w>
+                    <w>&a-rond;no&r-rond;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>o&r-rond;fen&i;n&s-long;</w>
+                    <w>no&r-rond;&i;r</w>
+                    <w>et</w>
+                    <w>&a-rond;le&u-pour-v;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>&u-pour-v;e&u-pour-v;e&s-long;</w>
+                    <w>feme&s-long;</w>
+                    <w>m&a-rond;&i;nten&i;r</w>
+                    <w>et</w>
+                    <w>g&a-rond;r&d-oncial;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>felon&s-long;</w>
+                    <w>ome&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>m&a-rond;l</w>
+                    <w>con&s-long;e&i;l</w>
+                    <w>o&s-long;ter</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>tote&s-long;</w>
+                    <w>&u-pour-v;o&i;e&s-long;</w>
+                    <w>le&s-long;</w>
+                    <w>&d-oncial;o&i;&s-long;</w>
+                    <w>fr&a-rond;&i;n&d-oncial;re</w>
+                    <w>et</w>
+                    <w>m&a-rond;ter</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>e&s-long;</w>
+                    <w>bon&s-long;</w>
+                    <w>l&i;gn&a-rond;ge&s-long;</w>
+                    <w>l&a-rond;&i;&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>to&i;</w>
+                    <w>&a-rond;g&a-rond;r&d-oncial;er</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&a-rond;</w>
+                    <w>po&r-rond;&a-rond;&s-long;</w>
+                    <w>tu</w>
+                    <w>bon</w>
+                    <w>con&s-long;e&i;l</w>
+                    <w>reco&u-pour-v;rer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>on</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;me</w>
+                    <w>et</w>
+                    <w>le</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>go&u-pour-v;erner</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>po&i;</w>
+                    <w>prometre</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&a-rond;</w>
+                    <w>l&a-rond;rgement</w>
+                    <w>&d-oncial;oner</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>uet</w>
+                    <w>b&i;en</w>
+                    <w>c&a-rond;&s-long;cun&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;me</w>
+                    <w>&d-oncial;el</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>o&s-long;ter</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>felon</w>
+                    <w>ome</w>
+                    <w>qu&i;</w>
+                    <w>eng&a-rond;ne</w>
+                    <w>&s-long;on</w>
+                    <w>per</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;on</w>
+                    <w>f&i;ef</w>
+                    <w>&u-pour-v;&i;elt</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;utru&i;</w>
+                    <w>&a-rond;to&r-rond;ner</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&u-pour-v;&i;elt</w>
+                    <w>le</w>
+                    <w>&s-long;&i;en</w>
+                    <w>empl&i;r</w>
+                    <w>et</w>
+                    <w>re&s-long;to&r-rond;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&s-long;&a-rond;&i;nte</w>
+                    <w>egl&i;&s-long;e</w>
+                    <w>&a-rond;r&d-oncial;o&i;r</w>
+                    <w>et</w>
+                    <w>&u-pour-v;ïoler</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&a-rond;</w>
+                    <w>po&u-pour-v;re</w>
+                    <w>gent</w>
+                    <w>c&a-rond;c&i;er</w>
+                    <w>et</w>
+                    <w>&d-oncial;efoler</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w>tu</w>
+                    <w>&i;</w>
+                    <w>pue&s-long;</w>
+                    <w>gr&a-rond;nt</w>
+                    <w>oqo&i;&s-long;on</w>
+                    <w>tro&u-pour-v;er</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>et</w>
+                    <w>&a-rond;n&s-long;</w>
+                    <w>to&s-long;</w>
+                    <w>pl&a-rond;&i;n&s-long;</w>
+                    <w>le</w>
+                    <w>&d-oncial;o&i;&s-long;</w>
+                    <w>&d-oncial;e&s-long;er&i;ter</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>cler&s-long;</w>
+                    <w>ne</w>
+                    <w>l&a-rond;&i;&s-long;</w>
+                    <w>ne</w>
+                    <w rend="elision">t<reg>'</reg></w>
+                    <w>en</w>
+                    <w>o&s-long;t</w>
+                    <w>&a-rond;peler</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&a-rond;l</w>
+                    <w>&s-long;eme</w>
+                    <w>&a-rond;n</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>&u-pour-v;elt</w>
+                    <w>merc&i;</w>
+                    <w>crïer</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>&d-oncial;ont</w>
+                    <w>le</w>
+                    <w>l&a-rond;&i;&s-long;&s-long;e</w>
+                    <w>&d-oncial;e&d-oncial;en&s-long;</w>
+                    <w>t&a-rond;</w>
+                    <w>tere</w>
+                    <w>entrer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>el</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;p&a-rond;relle</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>o&s-long;t</w>
+                    <w>en</w>
+                    <w>co&r-rond;t</w>
+                    <w>p&a-rond;rler</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>ne</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>o&s-long;t</w>
+                    <w>&d-oncial;e&u-pour-v;&a-rond;nt</w>
+                    <w>to&i;</w>
+                    <w>&a-rond;re&s-long;ter</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>lu&i;</w>
+                    <w>pue&s-long;</w>
+                    <w>&s-long;&i;</w>
+                    <w>le&s-long;</w>
+                    <w>&a-rond;utre&s-long;</w>
+                    <w>conreer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>m&a-rond;&i;&s-long;</w>
+                    <w>nu&s-long;</w>
+                    <w>ne</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>o&s-long;er&a-rond;</w>
+                    <w>pen&s-long;er</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>u</w>
+                    <w>&d-oncial;o&i;&s-long;</w>
+                    <w>&d-oncial;em&a-rond;&i;n</w>
+                    <w>t&a-rond;</w>
+                    <w>moll&i;er</w>
+                    <w>e&s-long;po&s-long;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;po&s-long;tole&s-long;</w>
+                    <w>te</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>&a-rond;pré&s-long;</w>
+                    <w>&s-long;&a-rond;crer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>emperere</w>
+                    <w>te</w>
+                    <w>&u-pour-v;olr&a-rond;</w>
+                    <w>co&r-rond;oner</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>tu</w>
+                    <w>&u-pour-v;olr&a-rond;&s-long;</w>
+                    <w>en</w>
+                    <w>Honger&i;e</w>
+                    <w>&a-rond;ler</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>e</w>
+                    <w>te</w>
+                    <w>fer&a-rond;&i;</w>
+                    <w>&a-rond;n&s-long;&d-oncial;eu&s-long;</w>
+                    <w>me&s-long;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>l&i;&u-pour-v;rer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>&i;</w>
+                    <w>ne&u-pour-v;eu</w>
+                    <w>&s-long;ont</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                    <w>molt</w>
+                    <w>le&s-long;</w>
+                    <w>&d-oncial;e&u-pour-v;é&s-long;</w>
+                    <w>&a-rond;mer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w rend="elision">t<reg>'</reg></w>
+                    <w>&a-rond;&i;&d-oncial;eront</w>
+                    <w>t&a-rond;</w>
+                    <w>tere</w>
+                    <w>&a-rond;</w>
+                    <w>go&u-pour-v;erner</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>rn&a-rond;uz</w>
+                    <w>&i;r&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>reïne</w>
+                    <w>&a-rond;&d-oncial;e&s-long;trer</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&s-long;e&s-long;</w>
+                    <w>pucele&s-long;</w>
+                    <w>fer&a-rond;</w>
+                    <w>o</w>
+                    <w>lu&i;</w>
+                    <w>mener</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&a-rond;</w>
+                    <w>le&s-long;</w>
+                    <w>po&r-rond;&a-rond;&s-long;</w>
+                    <w>h&a-rond;ltement</w>
+                    <w>m&a-rond;rïer</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <!-\-<w>—</w>-\->
+                    <w>Certe&s-long;</w>
+                    <pc type="supplied">»</pc>
+                    <w>&d-oncial;&i;&s-long;t</w>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <pc type="supplied">«</pc>
+                    <w>b&i;en</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>&a-rond;</w>
+                    <w>cre&a-rond;nter</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>&a-rond;</w>
+                    <w>cele</w>
+                    <w>r&i;en</w>
+                    <w>ne</w>
+                    <w>&s-long;&a-rond;&u-pour-v;r&a-rond;&s-long;</w>
+                    <w>com&a-rond;n&d-oncial;er</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>ne</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>f&a-rond;&i;te</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>que</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>&d-oncial;o&i;e</w>
+                    <w>co&s-long;ter</w>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="531">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi>l</w>
+                    <w>m&a-rond;t&i;net</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>q&a-rond;nt</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;ube</w>
+                    <w>fu</w>
+                    <w>le&u-pour-v;ee</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>&i;</w>
+                    <w>&a-rond;po&s-long;tole&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>p&a-rond;&s-long;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>ue&u-pour-v;re</w>
+                    <w>oblïee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>Flo&r-rond;ent</w>
+                    <w>fu</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>&a-rond;menee</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;&s-long;po&s-long;tole&s-long;</w>
+                    <w>l&a-rond;</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>e&s-long;po&s-long;&s-long;ee</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi>u&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;cré</w>
+                    <w>et</w>
+                    <w>pu&i;&s-long;</w>
+                    <w>l&i;e</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;cree</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>en</w>
+                    <w>&a-rond;pré&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>me&s-long;&s-long;e</w>
+                    <w>c&a-rond;ntee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>o&r-rond;one</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>o&r-rond;</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>el</w>
+                    <w>c&i;ef</w>
+                    <w>fremee</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>Agol&a-rond;n&s-long;</w>
+                    <w>ot</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>Aufr&i;que</w>
+                    <w>&a-rond;po&r-rond;tee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">K</hi>&a-rond;rle&s-long;</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>tere</w>
+                    <w>&a-rond;&s-long;eguree</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w>&d-oncial;u&s-long;</w>
+                    <w>&i;</w>
+                    <w>f&i;&s-long;t</w>
+                    <w>&i;cele</w>
+                    <w>m&a-rond;t&i;nee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>trente</w>
+                    <w>conte&s-long;</w>
+                    <w>&i;</w>
+                    <w>&a-rond;</w>
+                    <w>feme</w>
+                    <w>&d-oncial;onee</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>D&a-rond;mer&d-oncial;eu</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>&i-pour-j;ent</w>
+                    <w>com&a-rond;n&d-oncial;ee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi><reg>'</reg></w>
+                    <w>o&s-long;</w>
+                    <w>cre&s-long;tïene</w>
+                    <w>fu</w>
+                    <w>&d-oncial;e</w>
+                    <w>b&i;en</w>
+                    <w>&a-rond;&s-long;&a-rond;&s-long;ee</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">O</hi></w>
+                    <w>l&a-rond;</w>
+                    <w>r&i;ceche</w>
+                    <w>&d-oncial;el</w>
+                    <w>mont</w>
+                    <w>fu</w>
+                    <w>&a-rond;&s-long;&a-rond;nlee</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;&s-long;cun&s-long;</w>
+                    <w>empo&r-rond;te</w>
+                    <w>t&a-rond;nt</w>
+                    <w>com</w>
+                    <w>lu&i;</w>
+                    <w>&a-rond;gree</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="532">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>emperere</w>
+                    <w>&a-rond;</w>
+                    <w>Flo&r-rond;ent</w>
+                    <w>co&r-rond;oné</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>o&i;&a-rond;nt</w>
+                    <w>tu&i;t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>fu</w>
+                    <w>beneo&i;t</w>
+                    <w>et</w>
+                    <w>&s-long;&a-rond;cré</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&a-rond;</w>
+                    <w>roïne</w>
+                    <w>&s-long;&i;&s-long;t</w>
+                    <w>&i-pour-j;o&s-long;te</w>
+                    <w>&s-long;on</w>
+                    <w>co&s-long;té</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e</w>
+                    <w>&d-oncial;ïent</w>
+                    <w>c&i;l</w>
+                    <w>qu&i;</w>
+                    <w>ce</w>
+                    <w>ont</w>
+                    <w>e&s-long;g&a-rond;r&d-oncial;é</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>lu&s-long;</w>
+                    <w>bel</w>
+                    <w>p&a-rond;rel</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>ot</w>
+                    <w>en</w>
+                    <w>cre&s-long;tïenté</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">G</hi>&i;r&a-rond;r&s-long;</w>
+                    <w>p&a-rond;role</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>ne</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;</w>
+                    <w>m&i;e</w>
+                    <w>oblïé</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>Flo&r-rond;ent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>be&a-rond;x</w>
+                    <w>frere</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&i;ert</w>
+                    <w>celé</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>e</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&d-oncial;&i;r&a-rond;&i;</w>
+                    <w>&a-rond;uque&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>mon</w>
+                    <w>pen&s-long;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>oment</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>ten&i;r</w>
+                    <w>&s-long;&a-rond;</w>
+                    <w>ro&i;&a-rond;uté</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nt</w>
+                    <w>No&s-long;tre</w>
+                    <w>S&i;re&s-long;</w>
+                    <w>ot</w>
+                    <w>t&a-rond;nt</w>
+                    <w>&s-long;on</w>
+                    <w>pueple</w>
+                    <w>&a-rond;mé</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>fu</w>
+                    <w>&d-oncial;el</w>
+                    <w>c&i;el</w>
+                    <w>en</w>
+                    <w>tere</w>
+                    <w>&d-oncial;e&u-pour-v;&a-rond;lé</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>pr&i;&s-long;t</w>
+                    <w>en</w>
+                    <w>feme</w>
+                    <w>c&a-rond;r</w>
+                    <w>et</w>
+                    <w>hum&a-rond;n&i;té</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">T</hi>rente</w>
+                    <w>tro&i;&s-long;</w>
+                    <w>&a-rond;n&s-long;</w>
+                    <w>ot</w>
+                    <w>o</w>
+                    <w>no&s-long;</w>
+                    <w>con&u-pour-v;er&s-long;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>&s-long;&a-rond;&i;nt</w>
+                    <w>b&a-rond;pte&s-long;me</w>
+                    <w>&s-long;on</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>rengeneré</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>cel</w>
+                    <w>no&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w>b&a-rond;ll&i;é</w>
+                    <w>et</w>
+                    <w>com&a-rond;n&d-oncial;é</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>q&a-rond;nt</w>
+                    <w>&i;l</w>
+                    <w>fu</w>
+                    <w>&d-oncial;e</w>
+                    <w>mo&r-rond;t</w>
+                    <w>re&s-long;u&s-long;&i;té</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&i;l</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>en</w>
+                    <w>fu</w>
+                    <w>l&a-rond;</w>
+                    <w>&s-long;u&s-long;</w>
+                    <w>el</w>
+                    <w>c&i;el</w>
+                    <w>monté</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>on</w>
+                    <w>&i-pour-j;u&s-long;te</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>no&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w>&a-rond;b&a-rond;n&d-oncial;oné</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>o&i;&a-rond;nt</w>
+                    <w>no&s-long;</w>
+                    <w>&i;el&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>et</w>
+                    <w>colc&i;é</w>
+                    <w>et</w>
+                    <w>le&u-pour-v;é</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>mo&r-rond;t</w>
+                    <w>en</w>
+                    <w>puet</w>
+                    <w>e&s-long;trè</w>
+                    <w>&d-oncial;&i;&s-long;né</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>un</w>
+                    <w>pet&i;t</w>
+                    <w>en</w>
+                    <w>&a-rond;&i;t</w>
+                    <w>le</w>
+                    <w>col</w>
+                    <w>p&a-rond;&s-long;&s-long;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>c&i;l</w>
+                    <w>&s-long;er&a-rond;</w>
+                    <w>en</w>
+                    <w>&i;cel</w>
+                    <w>l&i;u</w>
+                    <w>po&s-long;&s-long;é</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>qo&i;</w>
+                    <w>&d-oncial;e&a-rond;ble&s-long;</w>
+                    <w>fu</w>
+                    <w>p&a-rond;r</w>
+                    <w>o&r-rond;guel</w>
+                    <w>geté</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>o</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;uel</w>
+                    <w>m&i;e</w>
+                    <w>ne</w>
+                    <w>ne</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;&i;</w>
+                    <w>e&s-long;g&a-rond;r&d-oncial;é</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>ue</w>
+                    <w>&i;l</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>f&i;l&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>&u-pour-v;&i;l&a-rond;&i;n</w>
+                    <w>l&i;&u-pour-v;ré</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>l</w>
+                    <w>ne</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>m&i;e</w>
+                    <w>&a-rond;&u-pour-v;o&i;r</w>
+                    <w>tel</w>
+                    <w>poë&s-long;té</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>&a-rond;</w>
+                    <w>Deu</w>
+                    <w>ne</w>
+                    <w>pl&a-rond;ce</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>en</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>encombré</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>et</w>
+                    <w>&a-rond;rce&u-pour-v;e&s-long;que&s-long;</w>
+                    <w>&a-rond;&i;</w>
+                    <w>en</w>
+                    <w>m&a-rond;</w>
+                    <w>&d-oncial;&i;gn&i;té</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi><reg>'</reg></w>
+                    <w>en</w>
+                    <w>&i;</w>
+                    <w>&a-rond;</w>
+                    <w>nul</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>molt</w>
+                    <w rend="elision">m<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&s-long;u&i;</w>
+                    <w>b&i;en</w>
+                    <w>g&a-rond;r&d-oncial;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">F</hi>o&r-rond;&s-long;</w>
+                    <w>f&i;l</w>
+                    <w>&d-oncial;e</w>
+                    <w>ro&i;</w>
+                    <w>u</w>
+                    <w>f&i;l</w>
+                    <w>&d-oncial;e</w>
+                    <w>&d-oncial;uc</w>
+                    <w>cl&a-rond;mé</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&i;nq&a-rond;nte</w>
+                    <w>q&a-rond;tre</w>
+                    <w>e&u-pour-v;e&s-long;que&s-long;</w>
+                    <w>co&r-rond;oné</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>h&a-rond;ut</w>
+                    <w>l&i;gn&a-rond;ge</w>
+                    <w>e&s-long;leü</w>
+                    <w>et</w>
+                    <w>&s-long;e&u-pour-v;ré</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;rce&u-pour-v;e&s-long;que&s-long;</w>
+                    <w>ne</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>en</w>
+                    <w>e&s-long;t</w>
+                    <w>p&a-rond;r&i-pour-j;uré</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>cu&i;t</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>&a-rond;&i;t</w>
+                    <w>un</w>
+                    <w>&s-long;eul</w>
+                    <w>pre&s-long;tre</w>
+                    <w>o&r-rond;&d-oncial;ené</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>quo&i;</w>
+                    <w>&i;l</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&a-rond;&i;t</w>
+                    <w>en&s-long;&a-rond;nle</w>
+                    <w>o</w>
+                    <w>mo&i;</w>
+                    <w>p&a-rond;rlé</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">c<reg>'</reg></w>
+                    <w>on</w>
+                    <w>ne</w>
+                    <w>&s-long;&a-rond;ce</w>
+                    <w>&d-oncial;e</w>
+                    <w>quel</w>
+                    <w>&i-pour-j;ent</w>
+                    <w>&i;l</w>
+                    <w>&s-long;ont</w>
+                    <w>né</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">M</hi>&a-rond;&i;&s-long;</w>
+                    <w>&a-rond;u</w>
+                    <w>t&i;erc&ed-palatalisation-cedille;</w>
+                    <w>&i-pour-j;o&r-rond;</w>
+                    <w rend="elision">m<reg>'</reg></w>
+                    <w>&i;erent</w>
+                    <w>tu&i;t</w>
+                    <w>&a-rond;mené</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>te&s-long;temogne</w>
+                    <w>&d-oncial;e</w>
+                    <w>lo&r-rond;</w>
+                    <w>lo&i;&a-rond;l</w>
+                    <w>&u-pour-v;&i;&s-long;né</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>&i;</w>
+                    <w>con</w>
+                    <w>&i;l</w>
+                    <w>&s-long;ont</w>
+                    <w>tu&i;t</w>
+                    <w>en&s-long;erementé</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>&i-pour-j;ent&i;l</w>
+                    <w>feme</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&d-oncial;e</w>
+                    <w>fr&a-rond;nc</w>
+                    <w>ome</w>
+                    <w>engenré</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u&i;</w>
+                    <w>&s-long;ont</w>
+                    <w>en&s-long;&a-rond;nle</w>
+                    <w>le&a-rond;ument</w>
+                    <w>e&s-long;po&s-long;&s-long;é</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&d-oncial;e&s-long;</w>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>&a-rond;&i;t</w>
+                    <w>&i-pour-j;uree</w>
+                    <w>c&a-rond;&s-long;teé</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&i;celu&i;</w>
+                    <w>&i;ert</w>
+                    <w>l&i;</w>
+                    <w>&s-long;&a-rond;&i;n&s-long;</w>
+                    <w>co&r-rond;&s-long;</w>
+                    <w>l&i;&u-pour-v;ré</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">P</hi>&a-rond;r</w>
+                    <w>cu&i;</w>
+                    <w>no&s-long;</w>
+                    <w>&s-long;ome&s-long;</w>
+                    <w>&u-pour-v;enu</w>
+                    <w>&a-rond;</w>
+                    <w>&s-long;&a-rond;l&u-pour-v;eté</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>l&i;</w>
+                    <w>&a-rond;&i;t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;n</w>
+                    <w>tot</w>
+                    <w>&s-long;on</w>
+                    <w>&u-pour-v;&i;&u-pour-v;re</w>
+                    <w>&a-rond;pre&s-long;té</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>u<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>ne</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>e&s-long;tuece</w>
+                    <w>c&a-rond;o&i;r</w>
+                    <w>en</w>
+                    <w>po&u-pour-v;erté</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi><reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>pu&i;&s-long;</w>
+                    <w>me&s-long;f&a-rond;&i;t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>b&i;en</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>e&s-long;tre</w>
+                    <w>bl&a-rond;&s-long;mé</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>tre&s-long;p&a-rond;&s-long;&s-long;e</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w rend="elision">qu<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w>en</w>
+                    <w>&s-long;o&i;t</w>
+                    <w>pr&i;&s-long;</w>
+                    <w>pro&u-pour-v;é</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">V</hi>o&i;&a-rond;nt</w>
+                    <w>mo&i;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&i;ert</w>
+                    <w>&s-long;&i;</w>
+                    <w>&u-pour-v;&i;lment</w>
+                    <w>&d-oncial;emené</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>on</w>
+                    <w rend="elision">&s-long;<reg>'</reg></w>
+                    <w>&i;l</w>
+                    <w rend="elision">m<reg>'</reg></w>
+                    <w>&a-rond;&u-pour-v;o&i;t</w>
+                    <w>tot</w>
+                    <w>mon</w>
+                    <w>tre&s-long;o&r-rond;</w>
+                    <w>emblé</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>o</w>
+                    <w>&a-rond;&i;</w>
+                    <w>me&s-long;</w>
+                    <w>cler&s-long;</w>
+                    <w>t&a-rond;nt</w>
+                    <w>&s-long;&a-rond;ge&s-long;</w>
+                    <w>et</w>
+                    <w>fon&d-oncial;é</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>&a-rond;</w>
+                    <w>&d-oncial;e</w>
+                    <w>cre&a-rond;nce</w>
+                    <w>ne</w>
+                    <w>&d-oncial;e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;uto&r-rond;&i;té</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>po&r-rond;</w>
+                    <w>b&a-rond;pte&s-long;me</w>
+                    <w>ne</w>
+                    <w>po&r-rond;</w>
+                    <w>cre&s-long;tïenté</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi><reg>'</reg></w>
+                    <w>&i;ert</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;po&s-long;tole&s-long;</w>
+                    <w>requ&i;&s-long;</w>
+                    <w>ne</w>
+                    <w>&d-oncial;em&a-rond;n&d-oncial;é</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nque</w>
+                    <w>&i-pour-j;o</w>
+                    <w>&a-rond;&i;</w>
+                    <w>en</w>
+                    <w>m&a-rond;</w>
+                    <w>pro&s-long;per&i;té</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>tenr&a-rond;&i;</w>
+                    <w>&i-pour-j;o</w>
+                    <w>&d-oncial;e</w>
+                    <w>nul</w>
+                    <w>ne</w>
+                    <w>m&a-rond;&i;&s-long;</w>
+                    <w>&d-oncial;e</w>
+                    <w>Dé</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <pc type="supplied" lemma="!" pos="PONfrt">!</pc>
+                    <w>K&a-rond;rle&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;re</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>ne</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&i;ert</w>
+                    <w>celé</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>n</w>
+                    <w>ce&s-long;t</w>
+                    <w>be&s-long;o&i;ng</w>
+                    <w>&a-rond;&u-pour-v;on&s-long;</w>
+                    <w>&d-oncial;e&s-long;u&s-long;</w>
+                    <w>e&s-long;té</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>n</w>
+                    <w>l&a-rond;</w>
+                    <w>b&a-rond;t&a-rond;lle</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>tr&a-rond;&i;&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w>&a-rond;&u-pour-v;oé</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;e</w>
+                    <w>m&a-rond;</w>
+                    <w>boce</w>
+                    <w>fu&s-long;te&s-long;</w>
+                    <w>&s-long;&i;re</w>
+                    <w>cl&a-rond;mé</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>me</w>
+                    <w>&d-oncial;o&i;t</w>
+                    <w>e&s-long;tre</w>
+                    <w>en</w>
+                    <w>gr&a-rond;nt</w>
+                    <w>co&r-rond;t</w>
+                    <w>repro&u-pour-v;é</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;nque</w>
+                    <w rend="elision">&i-pour-j;<reg>'</reg></w>
+                    <w>&a-rond;&i;</w>
+                    <w>f&a-rond;&i;t</w>
+                    <w>en</w>
+                    <w>f&i;&s-long;</w>
+                    <w>p&a-rond;r</w>
+                    <w>&a-rond;mo&r-rond;</w>
+                    <w>Dé</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>&s-long;u&i;</w>
+                    <w>&u-pour-v;o&s-long;tre</w>
+                    <w>om</w>
+                    <w>ne</w>
+                    <w>l&i;</w>
+                    <w>&u-pour-v;o&s-long;tre</w>
+                    <w>&i-pour-j;uré</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi>e</w>
+                    <w>ne</w>
+                    <w>&s-long;er&a-rond;&i;</w>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>&i-pour-j;o&r-rond;</w>
+                    <w>&d-oncial;e</w>
+                    <w>mon</w>
+                    <w>&a-rond;é</w>
+                    <pc type="supplied">»</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">A</hi></w>
+                    <w>&i;t&a-rond;nt</w>
+                    <w>&s-long;ont</w>
+                    <w>et</w>
+                    <w>p&a-rond;rt&i;</w>
+                    <w>et</w>
+                    <w>&s-long;e&u-pour-v;ré</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>e&u-pour-v;&a-rond;l</w>
+                    <w>&d-oncial;em&a-rond;n&d-oncial;e</w>
+                    <w>et</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>on</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&i;</w>
+                    <w>&a-rond;</w>
+                    <w>mené</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi><reg>'</reg></w>
+                    <w>e&s-long;tr&i;er</w>
+                    <w>l&i;</w>
+                    <w>t&i;nrent</w>
+                    <w>et</w>
+                    <w>l&i;</w>
+                    <w>&i;</w>
+                    <w>e&s-long;t</w>
+                    <w>monté</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">L</hi><reg>'</reg></w>
+                    <w>un&s-long;</w>
+                    <w>&d-oncial;e&s-long;</w>
+                    <w>Fr&a-rond;nc&ed-palatalisation-cedille;o&i;&s-long;</w>
+                    <w>&a-rond;</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>&a-rond;ltre</w>
+                    <w>reg&a-rond;r&d-oncial;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>emperere</w>
+                    <w>&a-rond;</w>
+                    <w>un</w>
+                    <w>pet&i;t</w>
+                    <w>pen&s-long;é</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">U</hi>n</w>
+                    <w>po&i;</w>
+                    <w>&s-long;o&r-rond;r&i;&s-long;t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>&a-rond;</w>
+                    <w>le</w>
+                    <w>c&i;ef</w>
+                    <w>cro&s-long;lé</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&s-long;&i;</w>
+                    <w>&a-rond;</w>
+                    <w>&d-oncial;&i;t</w>
+                    <w>entre</w>
+                    <w>&s-long;e&s-long;</w>
+                    <w>&d-oncial;en&s-long;</w>
+                    <w>&s-long;oé</w>
+                    <pc type="supplied" lemma=":" pos="PONfbl">:</pc>
+                </l>
+                <lb/>
+                <l>
+                    <pc type="supplied">«</pc>
+                    <w>Se</w>
+                    <w>&i-pour-j;e</w>
+                    <w>pu&i;&s-long;</w>
+                    <w>&u-pour-v;&i;&u-pour-v;re</w>
+                    <w>longement</w>
+                    <w>p&a-rond;r</w>
+                    <w>&a-rond;é</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>un</w>
+                    <w>&d-oncial;e</w>
+                    <w>no&s-long;</w>
+                    <w>&i;ert</w>
+                    <w rend="elision">l<reg>'</reg></w>
+                    <w>o&r-rond;guel</w>
+                    <w>&a-rond;&u-pour-v;&a-rond;lé</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                    <pc type="supplied">»</pc>
+                </l>
+            </lg>
+            <lg type="laisse" n="533">
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;nté</w>
+                    <w>&u-pour-v;o&s-long;</w>
+                    <w>&a-rond;&i;</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>Agol&a-rond;nt</w>
+                    <w>et</w>
+                    <w rend="elision">&d-oncial;<reg>'</reg></w>
+                    <w>E&a-rond;lmon</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>K&a-rond;rlem&a-rond;&i;ne</w>
+                    <w>&a-rond;</w>
+                    <w>l&a-rond;</w>
+                    <w>f&i;ere</w>
+                    <w>f&a-rond;c&ed-palatalisation-cedille;on</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;e</w>
+                    <w>G&i;r&a-rond;rt</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>le</w>
+                    <w>f&i;l</w>
+                    <w>&a-rond;u</w>
+                    <w>&d-oncial;uc</w>
+                    <w>Beu&s-long;on</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>l&a-rond;</w>
+                    <w>b&a-rond;t&a-rond;lle</w>
+                    <w>qu&i;</w>
+                    <w>fu</w>
+                    <w>en</w>
+                    <w>A&s-long;premon</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">J</hi>ent</w>
+                    <w>&i;</w>
+                    <w>mo&r-rond;urent</w>
+                    <w>&d-oncial;e</w>
+                    <w>m&a-rond;&i;nte</w>
+                    <w>legïon</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e&s-long;</w>
+                    <w>&a-rond;&u-pour-v;&a-rond;nt</w>
+                    <w>g&a-rond;r&d-oncial;e&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>&i;</w>
+                    <w>ot</w>
+                    <w>to&r-rond;</w>
+                    <w>&s-long;e</w>
+                    <w>cel</w>
+                    <w>non</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">Q</hi>&a-rond;r&a-rond;nte</w>
+                    <w>m&i;l</w>
+                    <w>furent</w>
+                    <w>l&i;</w>
+                    <w>comp&a-rond;gnon</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>eu&s-long;</w>
+                    <w>ro&i;&s-long;</w>
+                    <w>&i;</w>
+                    <w>ot</w>
+                    <w>et</w>
+                    <w>qu&i;n&s-long;e</w>
+                    <w>&d-oncial;u&s-long;</w>
+                    <w>p&a-rond;r</w>
+                    <w>non</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&i;nc</w>
+                    <w>m&i;le</w>
+                    <w>furent</w>
+                    <w>o</w>
+                    <w>le</w>
+                    <w>ro&i;&a-rond;l</w>
+                    <w>&d-oncial;r&a-rond;gon</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&d-oncial;e&u-pour-v;&a-rond;nt</w>
+                    <w>K&a-rond;rle</w>
+                    <w>&a-rond;&u-pour-v;uec</w>
+                    <w>&s-long;on</w>
+                    <w>cof&a-rond;non</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">S</hi>e&s-long;&s-long;&a-rond;nte</w>
+                    <w>m&i;le</w>
+                    <w>tu&i;t</w>
+                    <w>p&a-rond;r</w>
+                    <w>&d-oncial;e&u-pour-v;&i;&s-long;ïon</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>qu&i;n&s-long;e</w>
+                    <w>m&i;le</w>
+                    <w>G&i;r&a-rond;rt</w>
+                    <w>l&i;</w>
+                    <w>Bo&r-rond;gegnon</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi>e</w>
+                    <w>&d-oncial;o&s-long;</w>
+                    <w>p&a-rond;rt&i;e&s-long;</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>&s-long;&i;</w>
+                    <w>come</w>
+                    <w>no&s-long;</w>
+                    <w>c&a-rond;nton</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">N</hi><reg>'</reg></w>
+                    <w>en</w>
+                    <w>re&u-pour-v;&i;nt</w>
+                    <w>m&i;e</w>
+                    <w>l&i;</w>
+                    <w>mo&i;t&i;é&s-long;</w>
+                    <w>en</w>
+                    <w>m&a-rond;&i;&s-long;on</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&a-rond;r</w>
+                    <w>en</w>
+                    <w>l&a-rond;</w>
+                    <w>pl&a-rond;ce</w>
+                    <w>o&r-rond;ent</w>
+                    <w>lo&r-rond;</w>
+                    <w>guere&d-oncial;on</w>
+                    <pc type="supplied" lemma=";" pos="PONfbl">;</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">B</hi>uer</w>
+                    <w>&i;</w>
+                    <w>&a-rond;lerent</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>c&a-rond;r</w>
+                    <w>o</w>
+                    <w>D&a-rond;mer&d-oncial;eu</w>
+                    <w>&s-long;on</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">C</hi>&i;l</w>
+                    <w>D&a-rond;mer&d-oncial;ex</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>qu&i;</w>
+                    <w>&s-long;ofr&i;</w>
+                    <w>p&a-rond;&s-long;&s-long;ïon</w>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">E</hi>t</w>
+                    <w>&s-long;u&s-long;&i;t&a-rond;</w>
+                    <w>&d-oncial;e</w>
+                    <w>mo&r-rond;t</w>
+                    <w>S&a-rond;&i;nt</w>
+                    <w>L&a-rond;&s-long;&a-rond;ron</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi><reg>'</reg></w>
+                    <w>&a-rond;u&s-long;</w>
+                    <w>et</w>
+                    <w>&d-oncial;e</w>
+                    <w>no&s-long;</w>
+                    <w>&a-rond;&i;et</w>
+                    <w>merc&i;</w>
+                    <w>p&a-rond;r</w>
+                    <w>non</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">D</hi><reg>'</reg></w>
+                    <w>o&r-rond;</w>
+                    <w>en</w>
+                    <w>&a-rond;&u-pour-v;&a-rond;nt</w>
+                    <w>en</w>
+                    <w>rem&a-rond;&i;nt</w>
+                    <w>l&a-rond;</w>
+                    <w>c&a-rond;nc&ed-palatalisation-cedille;on</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+                <lb/>
+                <l>
+                    <w><hi rend="initiale detach">I</hi>c&i;</w>
+                    <w>fen&i;&s-long;t</w>
+                    <pc type="supplied" lemma="," pos="PONfbl">,</pc>
+                    <w>que</w>
+                    <w>&i-pour-j;&a-rond;</w>
+                    <w>plu&s-long;</w>
+                    <w rend="elision">n<reg>'</reg></w>
+                    <w>en</w>
+                    <w>&d-oncial;&i;ron</w>
+                    <pc type="supplied" lemma="." pos="PONfrt">.</pc>
+                </l>
+            </lg>-->
+            <!--<pb n="8v" facs="facsimile/ADClermont_1F2-01v.JPGv"/>-->
+            <!--<pb n="8v" facs="facsimile/ADClermont_1F2-02r.JPGv"/>-->
+        </body>
+    </text>
+</TEI>
