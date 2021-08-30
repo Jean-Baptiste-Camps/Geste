@@ -62,7 +62,7 @@
         <xsl:choose>
             <xsl:when test="ancestor::tei:Tei/descendant::tei:msDesc/@xml:id='M'">
                 <xsl:value-of select="
-                    count(descendant::tei:orig[. = 'a' or . = 'B' or . = 'δ' or . = 'D' or . = 'E' or . = 'G' or . = 'ȷ' or . = 'J' or . = 'L' or . = 'M' or . = 'N' or . = 'ꝛ' or . = 'R' or . = 's' or . = '' or . = '' or . = 'v'])
+                    count(descendant::tei:orig[. = 'a' or . = 'B' or . = 'ꝺ' or . = 'D' or . = 'E' or . = 'G' or . = 'ȷ' or . = 'J' or . = 'L' or . = 'M' or . = 'N' or . = 'ꝛ' or . = 'R' or . = 's' or . = '' or . = '' or . = 'v'])
                     div count($caracTotal/node())
                     "/>
             </xsl:when>

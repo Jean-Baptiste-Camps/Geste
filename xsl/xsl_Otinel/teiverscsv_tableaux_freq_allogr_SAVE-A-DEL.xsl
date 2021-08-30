@@ -12,7 +12,7 @@
         select="
         (  'a|ɑ', 
         'b|B',
-        'd|δ|D',
+        'd|ꝺ|D',
         'e|E',
         'g|G',
         'ı|J|ȷ',
@@ -28,7 +28,7 @@
         select="
         (  'a|ɑ|A|Λ', 
         'b|B',
-        'δ|D',
+        'ꝺ|D',
         'e|E',
         'f|ff|F',
         'g|G',
@@ -106,7 +106,7 @@
                             <xsl:choose>
                                 <xsl:when test="$tree/descendant::tei:msDesc/@xml:id = 'M'">
                                     <xsl:value-of select="round-half-to-even(
-                                        count($texte/descendant::node()[matches(., 'a|B|δ|D|E|G|ȷ|J|L|M|N|ꝛ|R|s|||v' )])
+                                        count($texte/descendant::node()[matches(., 'a|B|ꝺ|D|E|G|ȷ|J|L|M|N|ꝛ|R|s|||v' )])
                                         div count($texte/descendant::node()[not(. = '')])
                                         , 4)"/>
                                 </xsl:when>
@@ -152,7 +152,7 @@
                     <xsl:choose>
                         <xsl:when test="$tree/descendant::tei:msDesc/@xml:id = 'M'">
                             <xsl:value-of select="round-half-to-even(
-                                count($texte/descendant::node()[matches(., 'a|B|δ|D|E|G|ȷ|J|L|M|N|ꝛ|R|s|||v' )])
+                                count($texte/descendant::node()[matches(., 'a|B|ꝺ|D|E|G|ȷ|J|L|M|N|ꝛ|R|s|||v' )])
                                 div count($texte/descendant::node()[not(. = '')])
                                 , 4)"/>
                         </xsl:when>
@@ -219,7 +219,7 @@
                         <xsl:choose>
                             <xsl:when test="$tree/descendant::tei:msDesc/@xml:id = 'A' and $position = 1">
                                 <xsl:value-of select="round-half-to-even(
-                                    count($texte/descendant::node()[matches(., 'a|A|b|δ|e|F|l|N|r|s|||v' )])
+                                    count($texte/descendant::node()[matches(., 'a|A|b|ꝺ|e|F|l|N|r|s|||v' )])
                                     div count($texte/descendant::node()[not(. = '')])
                                     , 4)"/>
                             </xsl:when>
@@ -265,7 +265,7 @@
                     <xsl:choose>
                         <xsl:when test="$tree/descendant::tei:msDesc/@xml:id = 'M'">
                             <xsl:value-of select="round-half-to-even(
-                                count($texte/descendant::node()[matches(., 'ɑ|δ|F|g|G|m|N|P' )])
+                                count($texte/descendant::node()[matches(., 'ɑ|ꝺ|F|g|G|m|N|P' )])
                                 div count($texte/descendant::node()[not(. = '')])
                                 , 4)"/>
                         </xsl:when>
