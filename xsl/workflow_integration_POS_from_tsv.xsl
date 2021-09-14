@@ -50,11 +50,11 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tei:w">
+    <xsl:template match="tei:w | tei:pc">
         <xsl:variable name="w_position">
-            <xsl:number count="tei:w" from="tei:body" level="any"/>
+            <xsl:number count="tei:w | tei:pc" from="tei:body" level="any"/>
         </xsl:variable>
-        <xsl:variable name="w_count" select="preceding::tei:w"/>
+        <!--<xsl:variable name="w_count" select="preceding::tei:w | preceding::tei:pc"/>-->
         
         <xsl:copy>
             <xsl:attribute name="lemma" select="$myDoc/doc/token[position() = $w_position]/lemma"/>
